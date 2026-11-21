@@ -1,0 +1,107 @@
+scale 1000 1 0.5
+rnode "VSS.n0" 0 0 1456 2780 0
+rnode "VSS.n1" 0 0 1456 -112 0
+rnode "VSS.t15" 0 0 2795 2016 0
+rnode "VSS.t14" 0 0 2633 2016 0
+rnode "VSS.t13" 0 0 2471 2016 0
+rnode "VSS.t12" 0 0 2309 2016 0
+rnode "VSS.t11" 0 0 2147 2016 0
+rnode "VSS.t10" 0 0 1985 2016 0
+rnode "VSS.t9" 0 0 1823 2016 0
+rnode "VSS.t8" 0 0 1661 2016 0
+rnode "VSS" 0 0 -304 -188 0
+rnode "VSS.n2" 0 0 -228 1334 0
+rnode "VSS.t0" 0 0 117 2016 0
+rnode "VSS.t1" 0 0 279 2016 0
+rnode "VSS.t2" 0 0 441 2016 0
+rnode "VSS.t3" 0 0 603 2016 0
+rnode "VSS.t4" 0 0 765 2016 0
+rnode "VSS.t5" 0 0 927 2016 0
+rnode "VSS.t6" 0 0 1089 2016 0
+rnode "VSS.t7" 0 0 1251 2016 0
+rnode "VSS" 0 0 -267 -151 0
+resist "VSS" "VSS.n0" 2.12444
+resist "VSS.n0" "VSS.n1" 0.130939
+resist "VSS.n2" "VSS" 81.1432
+resist "VSS.t14" "VSS.t15" 172.963
+resist "VSS.t13" "VSS.t14" 172.963
+resist "VSS.t12" "VSS.t13" 172.963
+resist "VSS.t11" "VSS.t12" 172.963
+resist "VSS.t10" "VSS.t11" 172.963
+resist "VSS.t9" "VSS.t10" 172.963
+resist "VSS.t8" "VSS.t9" 172.963
+resist "VSS.t7" "VSS.t6" 172.963
+resist "VSS.t6" "VSS.t5" 172.963
+resist "VSS.t5" "VSS.t4" 172.963
+resist "VSS.t4" "VSS.t3" 172.963
+resist "VSS.t3" "VSS.t2" 172.963
+resist "VSS.t2" "VSS.t1" 172.963
+resist "VSS.t1" "VSS.t0" 172.963
+resist "VSS.n1" "VSS.n2" 2.08467
+resist "VSS.n1" "VSS.t15" 370.433
+resist "VSS.n0" "VSS.t8" 218.873
+resist "VSS.n0" "VSS.t7" 218.873
+resist "VSS.t0" "VSS.n2" 368.348
+rnode "gn" 0 194074 1626 13 0
+rnode "gn.t3" 0 61536.1 2309 652 0
+rnode "gn.t2" 0 61536.1 2471 652 0
+rnode "gn.t1" 0 61536.1 2633 652 0
+rnode "gn.t0" 0 66767.6 2795 652 0
+rnode "gn.n0" 0 74362.7 2633 102 0
+rnode "gn.n1" 0 42011.9 2471 102 0
+rnode "gn.n2" 0 36575.5 2309 102 0
+rnode "gn.t4" 0 61536.1 2147 652 0
+rnode "gn.t5" 0 61536.1 1985 652 0
+rnode "gn.t6" 0 61536.1 1823 652 0
+rnode "gn.t7" 0 66767.6 1661 652 0
+rnode "gn.n3" 0 74362.7 1823 102 0
+rnode "gn.n4" 0 42011.9 1985 102 0
+rnode "gn.n5" 0 36575.5 2147 102 0
+rnode "gn.n6" 0 59836.9 2228 51 0
+resist "gn" "gn.n6" 1.02448
+resist "gn.n6" "gn.n2" 5.79706
+resist "gn.n6" "gn.n5" 5.79706
+resist "gn.n1" "gn.n0" 11.5941
+resist "gn.n2" "gn.n1" 11.5941
+resist "gn.n5" "gn.n4" 11.5941
+resist "gn.n4" "gn.n3" 11.5941
+resist "gn.n0" "gn.t1" 71.6964
+resist "gn.n1" "gn.t2" 71.6964
+resist "gn.n2" "gn.t3" 71.6964
+resist "gn.n5" "gn.t4" 71.6964
+resist "gn.n4" "gn.t5" 71.6964
+resist "gn.n3" "gn.t6" 71.6964
+resist "gn.n0" "gn.t0" 83.2906
+resist "gn.n3" "gn.t7" 83.2906
+device msubckt nfet_03v3 89 1516 90 1517  "VSS.t0" "gn" 112 0 "s2" 1000 89000,2178 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 251 1516 252 1517  "VSS.t1" "gn" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 53000,1106
+device msubckt nfet_03v3 413 1516 414 1517  "VSS.t2" "gn" 112 0 "s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 575 1516 576 1517  "VSS.t3" "gn" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 53000,1106
+device msubckt nfet_03v3 737 1516 738 1517  "VSS.t4" "gn" 112 0 "s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 899 1516 900 1517  "VSS.t5" "gn" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 53000,1106
+device msubckt nfet_03v3 1061 1516 1062 1517  "VSS.t6" "gn" 112 0 "s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 1223 1516 1224 1517  "VSS.t7" "gn" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 89000,2178
+device msubckt nfet_03v3 1633 1516 1634 1517  "VSS.t8" "gp" 112 0 "s1" 1000 89000,2178 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 1795 1516 1796 1517  "VSS.t9" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 1957 1516 1958 1517  "VSS.t10" "gp" 112 0 "s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 2119 1516 2120 1517  "VSS.t11" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 2281 1516 2282 1517  "VSS.t12" "gp" 112 0 "s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 2443 1516 2444 1517  "VSS.t13" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 2605 1516 2606 1517  "VSS.t14" "gp" 112 0 "s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 2767 1516 2768 1517  "VSS.t15" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 89000,2178
+device msubckt nfet_03v3 89 152 90 153  "VSS.t0" "gp" 112 0 "s1" 1000 89000,2178 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 251 152 252 153  "VSS.t1" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 413 152 414 153  "VSS.t2" "gp" 112 0 "s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 575 152 576 153  "VSS.t3" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 737 152 738 153  "VSS.t4" "gp" 112 0 "s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 899 152 900 153  "VSS.t5" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 1061 152 1062 153  "VSS.t6" "gp" 112 0 "s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 1223 152 1224 153  "VSS.t7" "gp" 112 0 "OUTN" 1000 53000,1106 "s1" 1000 89000,2178
+device msubckt nfet_03v3 1633 152 1634 153  "VSS.t8" "gn.t7" 112 0 "s2" 1000 89000,2178 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 1795 152 1796 153  "VSS.t9" "gn.t6" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 53000,1106
+device msubckt nfet_03v3 1957 152 1958 153  "VSS.t10" "gn.t5" 112 0 "s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 2119 152 2120 153  "VSS.t11" "gn.t4" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 53000,1106
+device msubckt nfet_03v3 2281 152 2282 153  "VSS.t12" "gn.t3" 112 0 "s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 2443 152 2444 153  "VSS.t13" "gn.t2" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 53000,1106
+device msubckt nfet_03v3 2605 152 2606 153  "VSS.t14" "gn.t1" 112 0 "s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 2767 152 2768 153  "VSS.t15" "gn.t0" 112 0 "OUTP" 1000 53000,1106 "s2" 1000 89000,2178

@@ -1,0 +1,445 @@
+* NGSPICE file created from vco_ring4_flat.ext - technology: gf180mcuD
+
+.subckt vco_ring4_flat VSS VDD VCTRL B0 B1 LOIP LOIN LOQP LOQN VR
+X0 a_42985_65362# a_16029_36209# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X1 a_3667_65609# a_26185_44160# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X2 LOQN a_29545_52420# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 a_3785_52420# a_3667_53009# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X4 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X5 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 VR a_16029_31869# a_3667_53009# VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 a_16547_53009# a_29427_53009# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X10 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X11 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X12 a_3640_65020# a_5347_65609# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X13 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X14 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X15 a_7600_18886# a_6760_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X16 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X17 a_3667_65609# a_26185_44160# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X18 a_3785_52420# a_3667_53009# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X19 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X20 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X21 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X22 a_16105_44160# a_3667_53009# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X23 a_16105_44160# VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X24 VR a_54185_30720# LOIP VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X25 a_3785_31062# B0 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X26 a_11625_65362# a_3667_65609# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X27 a_16547_53009# a_26067_44749# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X28 a_3785_65020# a_5347_65609# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X29 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X30 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X31 VR a_16547_53009# a_16029_31869# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X32 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X33 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X34 a_7180_18886# a_8020_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X35 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X36 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X37 VR a_29545_52420# LOQN VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X38 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X39 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X40 a_35145_69220# a_3785_65020# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X41 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X42 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X43 a_16105_44160# a_16353_30749# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X44 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X45 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X46 VR a_54185_30720# LOIP VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X47 a_54185_30720# a_16105_44160# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X48 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X49 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X50 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X51 a_16547_53009# a_26067_44749# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X52 a_26109_36209# a_49145_65020# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X53 LOIP a_54185_30720# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X54 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X55 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X56 VR a_29427_53009# a_16353_30749# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X57 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X58 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X59 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X60 a_16353_30749# a_16029_31869# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X61 a_16029_31869# a_16547_53009# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X62 a_26185_44160# a_26067_44749# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X63 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X64 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X65 a_9280_18886# a_10120_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X66 a_16105_44160# a_16353_30749# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X67 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X68 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X69 a_54185_30720# a_16105_44160# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X70 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X71 VR a_29545_52420# LOQN VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X72 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X73 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X74 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X75 a_16105_44160# a_16353_30749# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X76 a_3667_53009# a_16029_31869# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X77 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X78 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X79 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X80 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X81 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X82 VR a_29427_53009# a_16353_30749# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X83 VSS a_26185_44160# a_29427_53009# VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X84 VDD a_1469_23749# a_1469_23749# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X85 VSS a_16665_52420# LOQP VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X86 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X87 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X88 a_16029_36209# a_3820_16764# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X89 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X90 a_5500_18886# a_4660_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X91 LOQP a_16665_52420# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X92 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X93 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X94 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X95 VR a_16547_53009# a_16029_31869# VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X96 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X97 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X98 a_1340_17686# VCTRL a_1469_23749# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.5u
+X99 a_49000_65020# a_4240_16764# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X100 VR a_26067_44749# a_16547_53009# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X101 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X102 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X103 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X104 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X105 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X106 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X107 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X108 a_1340_17686# VCTRL a_1469_23749# VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.5u
+X109 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X110 VSS a_26067_44749# a_16547_53009# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X111 LOQN a_29545_52420# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X112 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X113 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X114 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X115 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X116 a_16353_30749# a_29427_53009# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X117 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X118 a_3667_53009# a_16105_44160# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X119 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X120 LOQP a_16665_52420# VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X121 a_7600_18886# a_8440_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X122 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X123 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X124 VSS a_16029_36209# a_3667_53009# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X125 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X126 a_49145_65020# a_4240_16764# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X127 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X128 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X129 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X130 VR a_16029_31869# a_3667_53009# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X131 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X132 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X133 VDD a_1469_23749# a_1469_23749# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X134 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X135 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X136 LOIP a_54185_30720# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X137 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X138 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X139 a_3667_53009# a_16105_44160# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X140 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X141 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X142 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X143 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X144 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X145 a_42985_65362# a_16029_36209# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X146 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X147 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X148 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X149 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X150 a_16547_53009# a_29427_53009# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X151 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X152 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X153 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X154 a_29427_53009# a_26185_44160# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X155 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X156 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X157 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X158 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X159 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X160 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X161 VR a_16353_30749# a_16105_44160# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X162 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X163 a_10540_18886# a_9700_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X164 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X165 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X166 a_3667_53009# a_16029_36209# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X167 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X168 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X169 a_1469_23749# VCTRL a_1340_17686# VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.5u
+X170 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X171 a_3667_53009# a_16029_31869# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X172 a_1469_23749# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X173 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X174 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X175 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X176 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X177 VSS a_16029_31869# a_3667_53009# VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X178 a_3785_65020# a_3667_65609# a_3640_65020# VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X179 a_16353_30749# a_29427_53009# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X180 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X181 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X182 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X183 VDD a_1469_23749# VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X184 a_1469_23749# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X185 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X186 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X187 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X188 LOIN a_3785_52420# VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X189 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X190 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X191 a_5920_18886# a_5080_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X192 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X193 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X194 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X195 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X196 VR a_16353_30749# a_16105_44160# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X197 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X198 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X199 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X200 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X201 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X202 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X203 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X204 VSS a_3785_52420# LOIN VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X205 a_16029_36209# a_3785_65020# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X206 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X207 VSS a_16353_30749# a_16105_44160# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X208 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X209 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X210 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X211 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X212 a_3785_65020# a_3667_65609# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X213 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X214 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X215 a_16547_53009# a_26067_44749# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X216 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X217 VSS a_16547_53009# a_16029_31869# VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X218 a_5500_18886# a_6340_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X219 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X220 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X221 a_3667_53009# a_16029_31869# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X222 a_3785_31062# B0 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X223 VR a_16665_52420# LOQP VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X224 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X225 a_26109_36209# a_49145_65020# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X226 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X227 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X228 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X229 a_8860_18886# a_8020_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X230 a_4240_16764# VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X231 a_9945_31062# B1 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X232 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X233 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X234 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X235 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X236 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X237 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X238 a_5757_22600# a_3785_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X239 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X240 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X241 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X242 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X243 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X244 VDD a_1469_23749# a_1469_23749# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X245 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X246 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X247 a_19347_65609# a_16029_31869# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X248 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X249 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X250 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X251 VSS a_29427_53009# a_16353_30749# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X252 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X253 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X254 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X255 a_1469_23749# VCTRL a_1340_17686# VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.5u
+X256 a_9280_18886# a_8440_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X257 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X258 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X259 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X260 a_16029_31869# a_16547_53009# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X261 a_29427_53009# a_16547_53009# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X262 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X263 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X264 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X265 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X266 a_3820_16764# VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X267 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X268 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X269 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X270 VR a_16665_52420# LOQP VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X271 a_10960_18886# a_10120_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X272 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X273 a_19347_65609# a_16029_31869# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X274 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X275 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X276 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X277 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X278 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X279 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X280 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X281 a_27305_65362# a_21027_65609# a_27305_69220# VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X282 VDD a_1469_23749# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X283 a_3820_18886# a_3820_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X284 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X285 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X286 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X287 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X288 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X289 a_1340_17686# VSS VSS ppolyf_u_1k r_width=2u r_length=4u
+X290 a_10540_18886# a_3785_65020# VSS ppolyf_u_1k r_width=1u r_length=10u
+X291 VDD a_1469_23749# a_1469_23749# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X292 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X293 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X294 VSS VSS a_26185_44160# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X295 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X296 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X297 a_21027_65609# a_16353_30749# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X298 a_16665_52420# a_16547_53009# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X299 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X300 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X301 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X302 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X303 VSS a_26109_36209# a_26067_44749# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X304 LOQP a_16665_52420# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X305 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X306 a_4240_18886# a_4240_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X307 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X308 VR a_16105_44160# a_26067_44749# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X309 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X310 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X311 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X312 a_5920_18886# a_6760_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X313 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X314 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X315 a_11625_65362# a_5347_65609# a_11625_69220# VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X316 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X317 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X318 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X319 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X320 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X321 a_21027_65609# a_16353_30749# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X322 a_16665_52420# a_16547_53009# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X323 a_1469_23749# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X324 a_16105_44160# a_3667_53009# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X325 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X326 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X327 VDD a_1469_23749# VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X328 a_1469_23749# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X329 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X330 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X331 a_7180_18886# a_6340_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X332 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X333 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X334 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X335 a_5757_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X336 a_29427_53009# a_26185_44160# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X337 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X338 VSS a_16105_44160# a_26067_44749# VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X339 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X340 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X341 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X342 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X343 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X344 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X345 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X346 LOIN a_3785_52420# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X347 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X348 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X349 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X350 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X351 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X352 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X353 VR a_16105_44160# a_26067_44749# VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X354 VR a_3785_52420# LOIN VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X355 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X356 a_16029_31869# a_16353_30749# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X357 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X358 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X359 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X360 a_27305_69220# a_19347_65609# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X361 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X362 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X363 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X364 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X365 a_3820_18886# a_4660_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X366 a_26185_44160# VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X367 a_5347_65609# a_26067_44749# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X368 VR a_3785_52420# LOIN VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X369 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X370 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X371 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X372 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X373 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X374 a_9945_31062# B1 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X375 a_4240_18886# a_5080_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X376 a_26185_44160# a_3667_53009# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X377 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X378 a_5347_65609# a_26067_44749# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X379 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X380 a_19320_65020# a_21027_65609# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X381 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X382 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X383 a_27305_65362# a_21027_65609# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X384 VDD VR VSS ppolyf_u_1k r_width=2u r_length=5u
+X385 a_26185_44160# a_3667_53009# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X386 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X387 a_19465_65020# a_21027_65609# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X388 a_1869_22600# a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X389 a_26067_44749# a_16105_44160# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X390 a_26185_44160# a_3667_53009# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X391 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X392 a_11625_65362# a_5347_65609# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X393 VDD a_1469_23749# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X394 VSS a_54185_30720# LOIP VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X395 a_29427_53009# a_26185_44160# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X396 LOIN a_3785_52420# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X397 a_11625_69220# a_3667_65609# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X398 VR a_9945_31062# a_1869_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X399 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X400 a_26067_44749# a_26185_44160# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X401 a_16029_31869# a_16353_30749# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X402 LOIP a_54185_30720# VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X403 a_26067_44749# a_26185_44160# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X404 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X405 a_29545_52420# a_29427_53009# VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X406 a_29427_53009# a_16547_53009# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X407 a_16353_30749# a_16029_31869# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X408 VR a_26185_44160# a_29427_53009# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X409 VSS VSS a_16105_44160# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X410 VSS a_29545_52420# LOQN VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X411 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X412 VR a_3667_53009# a_26185_44160# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X413 a_27305_65362# a_19347_65609# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X414 a_26067_44749# a_26109_36209# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X415 a_26067_44749# a_16105_44160# VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X416 a_29545_52420# a_29427_53009# VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X417 a_19465_65020# a_19347_65609# a_19320_65020# VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X418 a_8860_18886# a_9700_16764# VSS ppolyf_u_1k r_width=1u r_length=10u
+X419 a_16029_36209# a_3820_16764# a_35145_69220# VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+X420 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X421 VR a_26067_44749# a_16547_53009# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X422 VR a_3785_31062# a_5757_22600# VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X423 a_16353_30749# a_29427_53009# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X424 VR a_3667_53009# a_26185_44160# VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X425 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X426 a_49145_65020# a_11625_65362# a_49000_65020# VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X427 LOQN a_29545_52420# VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X428 a_19465_65020# a_19347_65609# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X429 VSS a_3667_53009# a_26185_44160# VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X430 a_10960_18886# a_11625_65362# VSS ppolyf_u_1k r_width=1u r_length=10u
+X431 a_26185_44160# a_26067_44749# VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X432 a_26067_44749# a_16105_44160# VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X433 a_1869_22600# a_9945_31062# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X434 VR a_1469_23749# VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X435 VR VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X436 a_49145_65020# a_11625_65362# VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X437 VR a_26185_44160# a_29427_53009# VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X438 a_16029_31869# a_16547_53009# VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X439 VDD a_1469_23749# VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+

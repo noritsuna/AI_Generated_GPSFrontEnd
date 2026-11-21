@@ -1,0 +1,6 @@
+== tt_b0_i0
+RES vc_m=2.09299 vc_e=2.09283 vc_end=2.09273 vc_pp=0.00420102 flo=1.57136E+09 phase_err_s=-6.5E-11
+== ss_b3_i1
+RES vc_m=1.43085 vc_e=1.43076 vc_end=1.4308 vc_pp=0.00547447 flo=1.57141E+09 phase_err_s=6.1137E-08
+== ff_b0_i0
+RES vc_m=1.51946 vc_e=1.51939 vc_end=1.51934 vc_pp=0.0021971 flo=1.57133E+09 phase_err_s=1.8E-11

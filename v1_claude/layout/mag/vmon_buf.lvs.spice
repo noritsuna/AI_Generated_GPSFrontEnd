@@ -1,0 +1,27 @@
+* NGSPICE file created from vmon_buf.ext - technology: gf180mcuD
+
+.subckt vmon_buf_MT t NB VSS
+X0 t NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X1 VSS NB t VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt vmon_buf_M1_M2 t x OUT IN VSS
+X0 t IN x VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=1u
+X1 x IN t VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=1u
+X2 OUT OUT t VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=1u
+X3 t OUT OUT VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=1u
+.ends
+
+.subckt vmon_buf_MP1_MP2 x OUT VDD
+X0 x x VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=2u
+X1 VDD x OUT VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=2u
+X2 OUT x VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+X3 VDD x x VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=2u
+.ends
+
+.subckt vmon_buf VSS VDD IN NB OUT
+XXMT XMT/t NB VSS vmon_buf_MT
+XXM1_M2 XMT/t XM1_M2/x OUT IN VSS vmon_buf_M1_M2
+XXMP1_MP2 XM1_M2/x OUT VDD vmon_buf_MP1_MP2
+.ends
+

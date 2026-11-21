@@ -1,0 +1,49 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< metal3 >>
+rect 0 -340 10000 -160
+rect 0 10380 10000 10580
+rect 0 10380 10000 10700
+rect 0 10380 10000 10700
+rect 0 -480 10000 -160
+rect 0 -480 10000 -160
+<< metal4 >>
+rect -120 -360 10120 10120
+rect 0 -340 10000 -160
+rect 0 10380 10000 10580
+rect 0 10380 10000 10580
+<< mimcap >>
+rect 0 0 10000 10000
+<< metal5 >>
+rect 78 78 922 10480
+rect 1364 78 2208 10480
+rect 2649 78 3493 10480
+rect 3935 78 4779 10480
+rect 5220 78 6064 10480
+rect 6506 78 7350 10480
+rect 7792 78 8636 10480
+rect 9077 78 9921 10480
+rect 0 10380 10000 10580
+rect 0 10380 10000 10580
+<< via3 >>
+rect 10 -330 9990 -170
+rect 10 10390 9990 10570
+<< via4 >>
+rect 10 10390 9990 10570
+<< mimcapcontact >>
+rect 78 78 922 9922
+rect 1364 78 2208 9922
+rect 2649 78 3493 9922
+rect 3935 78 4779 9922
+rect 5220 78 6064 9922
+rect 6506 78 7350 9922
+rect 7792 78 8636 9922
+rect 9077 78 9921 9922
+<< labels >>
+flabel metal3 s 0 10380 10000 10700 0 FreeSans 80 0 0 0 thm
+port 1 nsew signal bidirectional
+flabel metal3 s 0 -480 10000 -160 0 FreeSans 80 0 0 0 VSS
+port 2 nsew signal bidirectional
+<< end >>

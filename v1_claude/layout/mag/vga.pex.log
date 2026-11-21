@@ -1,0 +1,294 @@
+
+Magic 8.3 revision 690 - Compiled on Wed Nov  4 08:33:25 PM JST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology gf180mcuD ...
+10 Magic internal units = 1 Lambda
+Input style import: scaleFactor=10, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    obsactive mvobsactive filldiff fillpoly m1hole obsm1 fillm1 obsv1 m2hole obsm2 fillm2 obsv2 m3hole obsm3 fillm3 m4hole obsm4 fillm4 m5hole obsm5 fillm5 glass fillblock lvstext obscomment 
+Scaled tech values by 10 / 1 to match internal grid scaling
+Loading gf180mcuD Device Generator Menu ...
+Using technology "gf180mcuD", version 1.0.588-105-g792ef67
+Cell vga read from current working directory
+"vga" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Processing timestamp mismatches.
+Cell vga_CCM read from current working directory
+"vga_CCM" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_RB read from current working directory
+"vga_RB" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_RL read from current working directory
+"vga_RL" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_RDB read from current working directory
+"vga_RDB" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_RD read from current working directory
+"vga_RD" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_MSW read from current working directory
+"vga_MSW" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_MDP read from current working directory
+"vga_MDP" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_MT read from current working directory
+"vga_MT" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_CC2 read from current working directory
+"vga_CC2" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Cell vga_CC1 read from current working directory
+"vga_CC1" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Timestamp mismatches found in these cells: vga_CC1, vga_CC2, vga_MT, vga_MDP, vga_MSW, vga_RD, vga_RDB, vga_RL, vga_RB, vga_CCM.
+Extracting vga_CC2 into vga_CC2.ext:
+Extracting vga_CC1 into vga_CC1.ext:
+Extracting vga_MT into vga_MT.ext:
+vga_MT: 6 warnings
+Extracting vga_CCM into vga_CCM.ext:
+Extracting vga_RB into vga_RB.ext:
+vga_RB: 6 warnings
+Extracting vga_RL into vga_RL.ext:
+vga_RL: 2 warnings
+Extracting vga_RDB into vga_RDB.ext:
+Extracting vga_RD into vga_RD.ext:
+vga_RD: 2 warnings
+Extracting vga_MSW into vga_MSW.ext:
+Extracting vga_MDP into vga_MDP.ext:
+vga_MDP: 12 warnings
+Extracting vga into vga.ext:
+Processing cell vga_CC2 for resistance extraction.
+Total Nets: 3
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_CC1 for resistance extraction.
+Total Nets: 3
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_MT for resistance extraction.
+Total Nets: 8
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_CCM for resistance extraction.
+Total Nets: 3
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_RB for resistance extraction.
+Total Nets: 55
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_RL for resistance extraction.
+Total Nets: 6
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_RDB for resistance extraction.
+Total Nets: 4
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_RD for resistance extraction.
+Total Nets: 6
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_MSW for resistance extraction.
+Total Nets: 8
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga_MDP for resistance extraction.
+Total Nets: 13
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Processing cell vga for resistance extraction.
+Total Nets: 20
+Nets extracted: 0 (0.000000)
+Nets output: 0 (0.000000)
+Total of 28 warnings.
+exttosim finished.
+Note:  This option has been deprecated and is unused.
+Extracting w_n120_n480#
+Extracting INN
+Couldn't find wire at 92 12032
+Extracting gn
+Couldn't find wire at 92 -288
+Total Nets: 3
+Nets extracted: 3 (1.000000)
+Nets output: 1 (0.333333)
+Extracting w_n120_n480#
+Extracting INP
+Couldn't find wire at 112 11892
+Extracting gp
+Couldn't find wire at 112 -288
+Total Nets: 3
+Nets extracted: 3 (1.000000)
+Nets output: 1 (0.333333)
+Extracting VSS
+Extracting NB
+Missing gate connection of device at (15775 2332) on net NB
+Missing gate connection of device at (15269 2332) on net NB
+Missing gate connection of device at (14763 2332) on net NB
+Missing gate connection of device at (14257 2332) on net NB
+Missing gate connection of device at (13751 2332) on net NB
+Missing gate connection of device at (13245 2332) on net NB
+Missing gate connection of device at (12739 2332) on net NB
+Missing gate connection of device at (12233 2332) on net NB
+Missing gate connection of device at (11727 2332) on net NB
+Missing gate connection of device at (11221 2332) on net NB
+Missing gate connection of device at (10715 2332) on net NB
+Missing gate connection of device at (10209 2332) on net NB
+Missing gate connection of device at (9703 2332) on net NB
+Missing gate connection of device at (9197 2332) on net NB
+Missing gate connection of device at (8691 2332) on net NB
+Missing gate connection of device at (8185 2332) on net NB
+Missing gate connection of device at (7679 2332) on net NB
+Missing gate connection of device at (7173 2332) on net NB
+Missing gate connection of device at (6667 2332) on net NB
+Missing gate connection of device at (6161 2332) on net NB
+Missing gate connection of device at (5655 2332) on net NB
+Missing gate connection of device at (5149 2332) on net NB
+Missing gate connection of device at (4643 2332) on net NB
+Missing gate connection of device at (4137 2332) on net NB
+Missing gate connection of device at (3631 2332) on net NB
+Missing gate connection of device at (3125 2332) on net NB
+Missing gate connection of device at (2619 2332) on net NB
+Missing gate connection of device at (2113 2332) on net NB
+Missing gate connection of device at (1607 2332) on net NB
+Missing gate connection of device at (1101 2332) on net NB
+Missing gate connection of device at (595 2332) on net NB
+Missing gate connection of device at (89 2332) on net NB
+Extracting s1
+Missing terminal connection of device at (5149 2332) on net s1
+Missing terminal connection of device at (5655 2332) on net s1
+Missing terminal connection of device at (7173 2332) on net s1
+Missing terminal connection of device at (10715 2332) on net s1
+Missing terminal connection of device at (12233 2332) on net s1
+Missing terminal connection of device at (12739 2332) on net s1
+Missing terminal connection of device at (1101 2332) on net s1
+Missing terminal connection of device at (1607 2332) on net s1
+Missing terminal connection of device at (3125 2332) on net s1
+Missing terminal connection of device at (3631 2332) on net s1
+Missing terminal connection of device at (14257 2332) on net s1
+Missing terminal connection of device at (14763 2332) on net s1
+Missing terminal connection of device at (7679 2332) on net s1
+Missing terminal connection of device at (8185 2332) on net s1
+Missing terminal connection of device at (8691 2332) on net s1
+Missing terminal connection of device at (10209 2332) on net s1
+Extracting s2
+Missing terminal connection of device at (4643 2332) on net s2
+Missing terminal connection of device at (6161 2332) on net s2
+Missing terminal connection of device at (6667 2332) on net s2
+Missing terminal connection of device at (11221 2332) on net s2
+Missing terminal connection of device at (11727 2332) on net s2
+Missing terminal connection of device at (13245 2332) on net s2
+Missing terminal connection of device at (89 2332) on net s2
+Missing terminal connection of device at (595 2332) on net s2
+Missing terminal connection of device at (2113 2332) on net s2
+Missing terminal connection of device at (2619 2332) on net s2
+Missing terminal connection of device at (4137 2332) on net s2
+Missing terminal connection of device at (13751 2332) on net s2
+Missing terminal connection of device at (15269 2332) on net s2
+Missing terminal connection of device at (15775 2332) on net s2
+Missing terminal connection of device at (9197 2332) on net s2
+Missing terminal connection of device at (9703 2332) on net s2
+Total Nets: 8
+Nets extracted: 4 (0.500000)
+Nets output: 4 (0.500000)
+Extracting w_n120_n480#
+Extracting vcm
+Couldn't find wire at 76 7288
+Extracting VSS
+Couldn't find wire at 76 -330
+Total Nets: 3
+Nets extracted: 3 (1.000000)
+Nets output: 1 (0.333333)
+Extracting gp
+Extracting gn
+Extracting VDD
+Extracting VSS
+Missing terminal connection of device at (9600 0) on net VSS
+Missing terminal connection of device at (9600 0) on net VSS
+Extracting vcm
+Total Nets: 55
+Nets extracted: 5 (0.090909)
+Nets output: 1 (0.018182)
+Extracting VSS
+Extracting OUTN
+Extracting VDD
+Extracting OUTP
+Total Nets: 6
+Nets extracted: 4 (0.666667)
+Nets output: 1 (0.166667)
+Extracting VSS
+Extracting db
+Extracting s2
+Total Nets: 4
+Nets extracted: 3 (0.750000)
+Nets output: 0 (0.000000)
+Extracting VSS
+Extracting da
+Extracting s1
+Extracting s2
+Total Nets: 6
+Nets extracted: 4 (0.666667)
+Nets output: 1 (0.166667)
+Extracting VSS
+Extracting GA
+Extracting GB
+Extracting s1
+Extracting da
+Extracting db
+Total Nets: 8
+Nets extracted: 6 (0.750000)
+Nets output: 3 (0.375000)
+Extracting VSS
+Extracting gp
+Extracting s1
+Extracting OUTN
+Extracting gn
+Missing gate connection of device at (1223 1516) on net gn
+Missing gate connection of device at (1061 1516) on net gn
+Missing gate connection of device at (899 1516) on net gn
+Missing gate connection of device at (737 1516) on net gn
+Missing gate connection of device at (575 1516) on net gn
+Missing gate connection of device at (413 1516) on net gn
+Missing gate connection of device at (251 1516) on net gn
+Missing gate connection of device at (89 1516) on net gn
+Extracting s2
+Extracting OUTP
+Total Nets: 13
+Nets extracted: 7 (0.538462)
+Nets output: 2 (0.153846)
+Extracting w_n240_n380#
+Extracting m2_1362_22590#
+Extracting m2_942_1082#
+Extracting m2_2482_17885#
+Extracting m2_2482_18302#
+Extracting m2_2482_17042#
+Extracting m2_5982_17182#
+Extracting m2_7382_17182#
+Extracting m2_26702_3211#
+Extracting m2_35942_2062#
+Extracting m2_33150_4450#
+Extracting VSS
+Extracting VDD
+Extracting OUTN
+Extracting OUTP
+Extracting GA
+Extracting GB
+Extracting INN
+Extracting INP
+Extracting NB
+Total Nets: 20
+Nets extracted: 20 (1.000000)
+Nets output: 13 (0.650000)
+exttospice finished.
+PEXRTHRESH 0.009999999776482582

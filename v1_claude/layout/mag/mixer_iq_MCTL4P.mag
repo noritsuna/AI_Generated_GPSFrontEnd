@@ -1,0 +1,62 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< pwell >>
+rect -648 -188 1226 799
+<< ndiff >>
+rect 0 60 578 320
+<< psubdiff >>
+rect -624 -164 1202 -60
+rect -624 671 1202 775
+rect -624 -60 -520 671
+rect 1098 -60 1202 671
+<< nmos >>
+rect 89 60 489 320
+<< polysilicon >>
+rect 89 320 489 509
+rect 69 509 509 611
+rect 89 0 489 60
+rect -460 0 -60 380
+rect 638 0 1038 380
+<< ndiffc >>
+rect 13 73 59 307
+rect 519 73 565 307
+<< psubdiffcont >>
+rect -611 -140 -533 751
+rect 1111 -140 1189 751
+rect -473 684 1051 762
+rect -473 -151 1051 -73
+<< polycontact >>
+rect 82 522 496 598
+<< metal1 >>
+rect 13 62 59 318
+rect 519 62 565 318
+rect -2 98 74 182
+rect 504 98 580 182
+rect 71 522 507 598
+rect -611 -151 1189 -73
+rect -611 684 1189 762
+rect -611 -151 -533 762
+rect 1111 -151 1189 762
+rect -611 -151 1189 -73
+rect -611 684 1189 762
+<< metal2 >>
+rect 82 522 496 598
+rect -611 -151 1189 -73
+rect -611 684 1189 762
+rect -611 98 1189 182
+<< via1 >>
+rect 10 110 62 170
+rect 516 110 568 170
+rect 94 534 484 586
+rect -599 -139 1177 -85
+rect -599 696 1177 750
+rect -598 110 -546 170
+rect 1124 110 1176 170
+<< labels >>
+flabel metal2 s 82 522 496 598 0 FreeSans 80 0 0 0 gl4p
+port 1 nsew signal bidirectional
+flabel metal2 s -611 -151 1189 -73 0 FreeSans 80 0 0 0 VSS
+port 2 nsew signal bidirectional
+<< end >>

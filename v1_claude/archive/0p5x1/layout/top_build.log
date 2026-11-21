@@ -1,0 +1,14 @@
+[     0s] attempt 0  chan [5.0, 5.0, 5.0, 5.0, 5.0, 5.0]  gap [4.0, 4.0, 4.0, 4.0, 4.0, 4.0]  side 12.6 (um)
+[     1s] floor gnss_afe_analog: rows 0-364 369-1198 1203-2032 2037-2938 2943-3310 3315-3665
+[    26s]   it  0    23s  fails 0 []  overlaps 11750  hot 87@(10,490) 87@(10,530) 87@(10,570) 87@(10,590) 87@(10,630) 87@(10,670)  slow nb:8s B0:2s AFC5:1s
+[    50s]   it  1    24s  fails 0 []  overlaps 91  hot 22@(570,1510) 15@(570,1570) 13@(570,730) 13@(30,-10) 12@(570,670) 6@(570,1610)  slow nb:8s AFC5:2s fs:2s
+[    75s]   it  2    25s  fails 0 []  overlaps 72  hot 24@(570,1570) 20@(570,1510) 13@(30,-10) 7@(570,730) 6@(570,670) 2@(810,650)  slow nb:8s AFC5:3s fs:2s
+[   104s]   it  3    29s  fails 0 []  overlaps 45  hot 16@(570,1570) 12@(570,1510) 8@(570,730) 6@(570,670) 1@(550,1510) 1@(550,1570)  slow nb:8s AFC5:3s min:3s
+[   134s]   it  4    30s  fails 0 []  overlaps 12  hot 8@(570,1570) 4@(570,1510)  slow nb:8s AFC5:4s min:3s
+[   164s]   it  5    30s  fails 0 []  overlaps 12  hot 8@(570,1570) 4@(570,1510)  slow nb:8s min:3s AFC5:3s
+[   193s]   it  6    30s  fails 0 []  overlaps 0  hot   slow nb:8s AFC5:3s min:3s
+route gnss_afe_analog: OK []  grid 1400x5260 nets 55
+mesh gnss_afe_analog: 695 rails, 310 stripe segments, 2000 via4 arrays
+[   260s] route=True size=979.4x3681.5um
+[   265s] DRC 0 []
+[   270s] LVS OK ['Flattening unmatched subcell gnss_afe_analog_R1u_0 in circuit gnss_afe_analog (0)(1 instance)', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.'] /home/noritsuna/GPS/layout/mag/gnss_afe_analog.lvs.rpt

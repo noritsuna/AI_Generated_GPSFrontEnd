@@ -1,0 +1,186 @@
+* NGSPICE file created from adc2b.ext - technology: gf180mcuD
+
+.subckt sa_comp_M12 x2 CLK VDD
+X0 x2 CLK VDD VDD pfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_MT t CLK VSS
+X0 VSS CLK t VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 t CLK VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_M1 t x1 INP VSS
+X0 x1 INP t VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_M2 t x2 INN VSS
+X0 x2 INN t VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_M3 t x2 REFP VSS
+X0 x2 REFP t VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_S2_MP1 S2_n1 onb VDD
+X0 S2_n1 onb VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_I1_MN opb op VSS
+X0 opb op VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_M4 t x1 REFN VSS
+X0 x1 REFN t VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_S2_MP2 S2_n1 QB Q VDD
+X0 QB Q S2_n1 VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_S2_MN1 QB onb VSS
+X0 QB onb VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_M5 x1 on op VSS
+X0 on op x1 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt sa_comp_S2_MN2 QB Q VSS
+X0 QB Q VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_I1_MP opb op VDD
+X0 opb op VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt sa_comp_M6 x2 op on VSS
+X0 op on x2 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt sa_comp_M7 on op VDD
+X0 on op VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt sa_comp_M8 op on VDD
+X0 op on VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt sa_comp_M9 on CLK VDD
+X0 on CLK VDD VDD pfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_S1_MP1 S1_n1 opb VDD
+X0 S1_n1 opb VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_S1_MP2 S1_n1 Q QB VDD
+X0 Q QB S1_n1 VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt sa_comp_S1_MN1 Q opb VSS
+X0 Q opb VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_I2_MN onb on VSS
+X0 onb on VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_S1_MN2 Q QB VSS
+X0 Q QB VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_I2_MP onb on VDD
+X0 onb on VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt sa_comp_M10 op CLK VDD
+X0 op CLK VDD VDD pfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp_M11 x1 CLK VDD
+X0 x1 CLK VDD VDD pfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt sa_comp VDD INP INN REFP REFN CLK Q QB VSS
+XXM12 XM6/x2 CLK VDD sa_comp_M12
+XXMT XMT/t CLK VSS sa_comp_MT
+XXM1 XMT/t XM5/x1 INP VSS sa_comp_M1
+XXM2 XMT/t XM6/x2 INN VSS sa_comp_M2
+XXM3 XMT/t XM6/x2 REFP VSS sa_comp_M3
+XXS2_MP1 XS2_MP2/S2_n1 XI2_MP/onb VDD sa_comp_S2_MP1
+XXI1_MN XI1_MP/opb XM8/op VSS sa_comp_I1_MN
+XXM4 XMT/t XM5/x1 REFN VSS sa_comp_M4
+XXS2_MP2 XS2_MP2/S2_n1 QB Q VDD sa_comp_S2_MP2
+XXS2_MN1 QB XI2_MP/onb VSS sa_comp_S2_MN1
+XXM5 XM5/x1 XM9/on XM8/op VSS sa_comp_M5
+XXS2_MN2 QB Q VSS sa_comp_S2_MN2
+XXI1_MP XI1_MP/opb XM8/op VDD sa_comp_I1_MP
+XXM6 XM6/x2 XM8/op XM9/on VSS sa_comp_M6
+XXM7 XM9/on XM8/op VDD sa_comp_M7
+XXM8 XM8/op XM9/on VDD sa_comp_M8
+XXM9 XM9/on CLK VDD sa_comp_M9
+XXS1_MP1 XS1_MP2/S1_n1 XI1_MP/opb VDD sa_comp_S1_MP1
+XXS1_MP2 XS1_MP2/S1_n1 Q QB VDD sa_comp_S1_MP2
+XXS1_MN1 Q XI1_MP/opb VSS sa_comp_S1_MN1
+XXI2_MN XI2_MP/onb XM9/on VSS sa_comp_I2_MN
+XXS1_MN2 Q QB VSS sa_comp_S1_MN2
+XXI2_MP XI2_MP/onb XM9/on VDD sa_comp_I2_MP
+XXM10 XM8/op CLK VDD sa_comp_M10
+XXM11 XM5/x1 CLK VDD sa_comp_M11
+.ends
+
+.subckt adc2b_CT1 thp VSS
+X0 thp VSS cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+.ends
+
+.subckt adc2b_CT2 thm VSS
+X0 thm VSS cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+.ends
+
+.subckt adc2b_CT3 thn VSS
+X0 thn VSS cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+.ends
+
+.subckt adc2b_M_MP1 MAG qhb VDD
+X0 MAG qhb VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt adc2b_M_MP2 MAG ql VDD
+X0 MAG ql VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt adc2b_M_MN1 M_n1 MAG qhb VSS
+X0 MAG qhb M_n1 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt adc2b_M_MN2 M_n1 ql VSS
+X0 M_n1 ql VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt adc2b_R10u_0 thp VDD thm thn VSS
+X0 a_3480_1690# a_1240_n36# VSS ppolyf_u_1k r_width=10u r_length=8.02u
+X1 thp thm VSS ppolyf_u_1k r_width=10u r_length=1.4u
+X2 VDD a_5720_n36# VSS ppolyf_u_1k r_width=10u r_length=8.02u
+X3 a_14680_1573# VSS VSS ppolyf_u_1k r_width=10u r_length=7.435u
+X4 a_n1000_1690# thp VSS ppolyf_u_1k r_width=10u r_length=8.02u
+X5 a_n1000_1690# a_1240_n36# VSS ppolyf_u_1k r_width=10u r_length=8.02u
+X6 a_3480_1690# a_5720_n36# VSS ppolyf_u_1k r_width=10u r_length=8.02u
+X7 thm thn VSS ppolyf_u_1k r_width=10u r_length=1.4u
+X8 thn a_16920_n36# VSS ppolyf_u_1k r_width=10u r_length=7.435u
+X9 a_14680_1573# a_16920_n36# VSS ppolyf_u_1k r_width=10u r_length=7.435u
+.ends
+
+.subckt adc2b VSS VDD INP INN CLK SIGN MAG
+XXCH VDD INP INN XCT1/thp XCT3/thn CLK XCH/Q XCH/QB VSS sa_comp
+XXCL VDD INP INN XCT3/thn XCT1/thp CLK XCL/Q XCL/QB VSS sa_comp
+XXCT1 XCT1/thp VSS adc2b_CT1
+XXCT2 XCT2/thm VSS adc2b_CT2
+XXCT3 XCT3/thn VSS adc2b_CT3
+XXCS VDD INP INN XCT2/thm XCT2/thm CLK SIGN XCS/QB VSS sa_comp
+XXM_MP1 MAG XCH/QB VDD adc2b_M_MP1
+XXM_MP2 MAG XCL/Q VDD adc2b_M_MP2
+XXM_MN1 XM_MN2/M_n1 MAG XCH/QB VSS adc2b_M_MN1
+XXM_MN2 XM_MN2/M_n1 XCL/Q VSS adc2b_M_MN2
+XXR10u_0 XCT1/thp VDD XCT2/thm XCT3/thn VSS adc2b_R10u_0
+.ends
+

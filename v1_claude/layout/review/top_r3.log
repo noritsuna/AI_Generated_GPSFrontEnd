@@ -1,0 +1,79 @@
+[     0s] attempt 0  chan [5.0, 5.0, 5.0, 5.0, 5.0]  gap [4.0, 4.0, 4.0, 4.0, 4.0]  side 7.0 (um)
+route vmon_buf: OK []  grid 72x80 nets 7
+route refbuf: OK []  grid 114x115 nets 6
+route decap: OK []  grid 480x355 nets 2
+[     5s] floor gnss_afe_analog: rows 0-192 197-794 799-1006 1011-1256 1261-1518
+[   234s]   it  0   225s  fails 1 ['BWN']  overlaps 3059  hot 58@(710,210) 58@(730,210) 57@(330,350) 57@(650,1270) 56@(510,-10) 56@(690,210)  slow BWN:76s mqn:45s IG3B:28s
+[   234s]     fail BWN        exp-limit at (776,-5) (410,745)
+[   412s]   it  1   178s  fails 0 []  overlaps 114  hot 26@(570,1270) 23@(430,1270) 21@(650,1230) 10@(730,-10) 8@(650,1250) 6@(670,730)  slow mqp:40s BWN:37s mqn:20s
+[   582s]   it  2   170s  fails 0 []  overlaps 27  hot 10@(730,-10) 6@(670,730) 6@(690,390) 3@(510,290) 1@(10,750) 1@(30,150)  slow mqp:38s BWN:35s mip:15s
+[   702s]   it  3   120s  fails 0 []  overlaps 0  hot   slow mqp:27s BWN:25s mip:11s
+route gnss_afe_analog: OK []  grid 1472x2200 nets 59
+mesh gnss_afe_analog: 284 rails, 288 stripe segments (5 VDDV stripes), 1369 via4 arrays
+[   720s] route=True size=1029.8x1539.4um
+[   727s] DRC 0 []
+[   732s] LVS OK ['Flattening unmatched subcell gnss_afe_analog_R1u_0 in circuit gnss_afe_analog (0)(1 instance)', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.'] /home/noritsuna/GPS/layout/mag/gnss_afe_analog.lvs.rpt
+route vmon_buf: OK []  grid 72x80 nets 7
+route refbuf: OK []  grid 114x115 nets 6
+route decap: OK []  grid 480x355 nets 2
+floor gnss_afe_analog: rows 0-192 197-794 799-1006 1011-1256 1261-1518
+  it  0   153s  fails 1 ['BWN']  overlaps 3059  hot 58@(710,210) 58@(730,210) 57@(330,350) 57@(650,1270) 56@(510,-10) 56@(690,210)  slow BWN:53s mqn:28s IG3B:18s
+    fail BWN        exp-limit at (776,-5) (410,745)
+  it  1   122s  fails 0 []  overlaps 114  hot 26@(570,1270) 23@(430,1270) 21@(650,1230) 10@(730,-10) 8@(650,1250) 6@(670,730)  slow mqp:28s BWN:25s mqn:14s
+  it  2   116s  fails 0 []  overlaps 27  hot 10@(730,-10) 6@(670,730) 6@(690,390) 3@(510,290) 1@(10,750) 1@(30,150)  slow mqp:24s BWN:24s mqn:13s
+  it  3   108s  fails 0 []  overlaps 0  hot   slow mqp:24s BWN:22s mip:10s
+route gnss_afe_analog: OK []  grid 1472x2200 nets 59
+nb       C   163.7 fF  R 1156.1 ohm  cc aqp:7.40 pb:4.11 BWN:1.39
+fs       C   125.4 fF  R  796.7 ohm  cc aqp:0.15 AFCOUT:0.09 aqn:0.09
+pb       C   123.6 fF  R  889.7 ohm  cc ICP2:5.01 nb:4.11 aqp:2.67
+min      C    97.3 fF  R  764.1 ohm  cc mip:28.17 nb:0.34 mqn:0.33
+mip      C    97.1 fF  R  760.2 ohm  cc min:28.17 BWN:0.26 mqn:0.16
+AFCOUT   C    96.7 fF  R  650.0 ohm  cc fs:0.09 nb:0.06 REFIN:0.04
+BWK      C    88.5 fF  R  638.1 ohm  cc BWN:14.66 ICP2:0.98 B0:0.56
+BWN      C    88.0 fF  R  676.2 ohm  cc BWK:14.66 ICP2:4.15 AFC2:2.26
+ICP2     C    84.6 fF  R  718.0 ohm  cc mqp:5.99 pb:5.01 BWN:4.15
+refck    C    79.4 fF  R  498.5 ohm  cc REFIN:0.43 pb:0.08 nb:0.04
+mqn      C    77.4 fF  R  593.0 ohm  cc mqp:14.25 ICP2:0.73 min:0.33
+IG3B     C    77.2 fF  R  505.9 ohm  cc IG3A:2.19 aip:0.16 ain:0.09
+aqn      C    74.6 fF  R  492.8 ohm  cc pb:1.29 aqp:1.25 fs:0.09
+B0       C    72.1 fF  R  544.9 ohm  cc B1:10.95 BWK:0.56 ICP2:0.08
+IG2B     C    71.2 fF  R  462.1 ohm  cc IG3A:2.65 IG2A:0.65 ain:0.09
+B1       C    71.1 fF  R  535.0 ohm  cc B0:10.95 min:0.06 ckr:0.04
+IG2A     C    70.4 fF  R  445.0 ohm  cc IG2B:0.65 ain:0.09 IG3B:0.07
+IG3A     C    69.5 fF  R  467.2 ohm  cc IG2B:2.65 IG3B:2.19 ain:0.09
+mqp      C    67.7 fF  R  576.8 ohm  cc mqn:14.25 ICP2:5.99 l2n:0.39
+ain      C    62.7 fF  R  425.6 ohm  cc IG1B:5.49 IG3B:0.09 IG2B:0.09
+IG1B     C    61.5 fF  R  414.4 ohm  cc ain:5.49 IG1A:0.67 aip:0.65
+aqp      C    58.2 fF  R  428.2 ohm  cc nb:7.40 pb:2.67 aqn:1.25
+vctrl_i  C    57.1 fF  R  358.8 ohm  cc nb:0.58 ckr:0.05 mqn:0.04
+aip      C    54.6 fF  R  361.0 ohm  cc IG1A:2.34 IG1B:0.65 IG3B:0.16
+ckr      C    53.3 fF  R  383.8 ohm  cc vctrl_i:0.05 nb:0.04 mqp:0.04
+IG1A     C    52.5 fF  R  377.4 ohm  cc aip:2.34 IG1B:0.67 mqp:0.09
+RFIN     C    41.1 fF  R    0.3 ohm  cc pb:0.03
+REFIN    C    38.7 fF  R  260.3 ohm  cc refck:0.43 AFCOUT:0.04 vmon:0.04
+vmon     C    37.0 fF  R  241.0 ohm  cc l3n:0.67 REFIN:0.04 AFCOUT:0.04
+I_MAG    C    33.9 fF  R  276.1 ohm  cc I_SIGN:3.67 ICP2:3.02 AFC2:0.59
+I_SIGN   C    29.5 fF  R  230.5 ohm  cc AFC2:3.80 I_MAG:3.67 Q_SIGN:1.07
+VCTRL    C    26.2 fF  R  169.4 ohm  cc 
+AFC0     C    25.2 fF  R  190.6 ohm  cc I_SIGN:0.73 AFC1:0.54 AFC4:0.52
+Q_MAG    C    25.1 fF  R  163.9 ohm  cc BWN:0.04 BWK:0.04 nb:0.04
+AFC3     C    24.9 fF  R  162.7 ohm  cc I_SIGN:0.75 AFC4:0.67 BWN:0.28
+AFC5     C    20.6 fF  R  140.2 ohm  cc AFC2:1.57 I_SIGN:0.32 AFC6:0.06
+AFC1     C    20.0 fF  R  180.4 ohm  cc AFC4:5.86 AFC0:0.54 I_SIGN:0.16
+AFC2     C    18.4 fF  R  170.6 ohm  cc I_SIGN:3.80 BWN:2.26 AFC5:1.57
+AFC6     C    17.6 fF  R  130.3 ohm  cc AFC2:1.30 I_SIGN:0.28 AFC5:0.06
+AFC7     C    17.2 fF  R  120.1 ohm  cc AFC0:0.04 ICP2:0.04 pb:0.04
+Q_SIGN   C    15.8 fF  R  118.3 ohm  cc I_SIGN:1.07 I_MAG:0.49 BWN:0.04
+AFC4     C    14.1 fF  R  150.4 ohm  cc AFC1:5.86 AFC3:0.67 AFC0:0.52
+l3n      C    10.8 fF  R   85.4 ohm  cc l2n:1.62 l3p:1.17 vmon:0.67
+l3p      C    10.6 fF  R   75.2 ohm  cc l3n:1.17 l2n:1.00 mqp:0.05
+l2p      C     7.4 fF  R   54.7 ohm  cc l2n:1.13 l4n:0.26 l3p:0.00
+l4n      C     6.2 fF  R   44.6 ohm  cc l2p:0.26 l4p:0.21
+l2n      C     6.2 fF  R   65.5 ohm  cc l3n:1.62 l2p:1.13 l3p:1.00
+l4p      C     5.3 fF  R   34.3 ohm  cc l4n:0.21
+l1n      C     4.0 fF  R   24.1 ohm  cc 
+l1p      C     2.3 fF  R   13.9 ohm  cc 
+rfp      C     1.6 fF  R    0.0 ohm  cc nb:0.17
+rfn      C     1.5 fF  R    0.0 ohm  cc nb:0.17
+CLKOUT   C     1.4 fF  R    8.3 ohm  cc 
+fsb      C     0.4 fF  R    2.8 ohm  cc Q_MAG:0.04

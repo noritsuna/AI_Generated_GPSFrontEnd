@@ -1,0 +1,20 @@
+a_base ['RES vc_end=1.55819 vc_pp=0.000846589 flo=1.57133E+09 phase_err_s=4E-12']
+a_vdd_0p5 ['RES vc_end=1.55824 vc_pp=0.000966744 flo=1.57133E+09 phase_err_s=5E-12']
+a_vdd_1 ['RES vc_end=1.55828 vc_pp=0.00102961 flo=1.57134E+09 phase_err_s=1.2E-11']
+a_vdd_5 ['RES vc_end=1.55819 vc_pp=0.00102862 flo=1.57132E+09 phase_err_s=7E-12']
+a_vdd_16 ['RES vc_end=1.55819 vc_pp=0.000867765 flo=1.57133E+09 phase_err_s=3E-12']
+a_vddv_0p5 ['RES vc_end=1.55821 vc_pp=0.000876095 flo=1.57133E+09 phase_err_s=6E-12']
+a_vddv_1 ['RES vc_end=1.5582 vc_pp=0.000875075 flo=1.57133E+09 phase_err_s=5E-12']
+a_vddv_5 ['RES vc_end=1.5582 vc_pp=0.0010758 flo=1.57133E+09 phase_err_s=-3E-12']
+a_vddv_16 ['RES vc_end=1.55819 vc_pp=0.000846738 flo=1.57133E+09 phase_err_s=5E-12']
+a_pkg_dec ['RES vc_end=1.55883 vc_pp=0.00962907 flo=1.57146E+09 phase_err_s=4.88768E-07']
+a_base    fLO 1571.328 MHz  VCTRL 1.5582 V  phase rms 2.42 mrad | 1 MHz: beta 3.03e-05 -> -96.4 dBc
+a_vdd_0p5 fLO 1571.329 MHz  VCTRL 1.5582 V  phase rms 34.97 mrad | 0.5 MHz: beta 5.08e-02 -> -31.9 dBc
+a_vdd_1   fLO 1571.328 MHz  VCTRL 1.5582 V  phase rms 42.71 mrad | 1 MHz: beta 6.01e-02 -> -30.4 dBc
+a_vdd_5   fLO 1571.328 MHz  VCTRL 1.5582 V  phase rms 30.49 mrad | 5 MHz: beta 4.29e-02 -> -33.4 dBc
+a_vdd_16  fLO 1571.328 MHz  VCTRL 1.5582 V  phase rms 10.34 mrad | 16.4 MHz: beta 1.46e-02 -> -42.8 dBc
+a_vddv_0p5 fLO 1571.327 MHz  VCTRL 1.5582 V  phase rms 10.55 mrad | 0.5 MHz: beta 1.62e-02 -> -41.8 dBc
+a_vddv_1  fLO 1571.328 MHz  VCTRL 1.5582 V  phase rms 16.69 mrad | 1 MHz: beta 2.36e-02 -> -38.6 dBc
+a_vddv_5  fLO 1571.328 MHz  VCTRL 1.5582 V  phase rms 17.12 mrad | 5 MHz: beta 2.35e-02 -> -38.6 dBc
+a_vddv_16 fLO 1571.328 MHz  VCTRL 1.5582 V  phase rms 3.02 mrad | 16.4 MHz: beta 3.97e-03 -> -54.1 dBc
+a_pkg_dec fLO 1571.335 MHz  VCTRL 1.5588 V  phase rms 45.28 mrad | 1 MHz: beta 1.44e-03 -> -62.8 dBc | 4.09 MHz: beta 3.35e-04 -> -75.5 dBc | 16.4 MHz: beta 2.80e-03 -> -57.1 dBc | 32.7 MHz: beta 1.08e-03 -> -65.3 dBc | VDD pp 28.4 mV, VDDV pp 3.1 mV

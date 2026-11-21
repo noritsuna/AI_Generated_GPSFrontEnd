@@ -1,0 +1,106 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< pwell >>
+rect -304 -188 1348 1219
+<< ndiff >>
+rect 0 60 1044 860
+<< psubdiff >>
+rect -280 -164 1324 -60
+rect -280 1091 1324 1195
+rect -280 -60 -176 1091
+rect 1220 -60 1324 1091
+<< nmos >>
+rect 89 60 145 860
+rect 251 60 307 860
+rect 413 60 469 860
+rect 575 60 631 860
+rect 737 60 793 860
+rect 899 60 955 860
+<< polysilicon >>
+rect 89 860 145 929
+rect 251 860 307 929
+rect 413 860 469 929
+rect 575 860 631 929
+rect 737 860 793 929
+rect 899 860 955 929
+rect 69 929 975 1031
+rect 89 0 145 60
+rect 251 0 307 60
+rect 413 0 469 60
+rect 575 0 631 60
+rect 737 0 793 60
+rect 899 0 955 60
+rect -116 0 -60 920
+rect 1104 0 1160 920
+<< ndiffc >>
+rect 13 73 59 847
+rect 175 73 221 847
+rect 337 73 383 847
+rect 499 73 545 847
+rect 661 73 707 847
+rect 823 73 869 847
+rect 985 73 1031 847
+<< psubdiffcont >>
+rect -267 -140 -189 1171
+rect 1233 -140 1311 1171
+rect -129 1104 1173 1182
+rect -129 -151 1173 -73
+<< polycontact >>
+rect 82 942 962 1018
+<< metal1 >>
+rect 13 62 59 858
+rect 175 62 221 858
+rect 337 62 383 858
+rect 499 62 545 858
+rect 661 62 707 858
+rect 823 62 869 858
+rect 985 62 1031 858
+rect -2 98 74 182
+rect 322 98 398 182
+rect 646 98 722 182
+rect 970 98 1046 182
+rect 160 238 236 322
+rect 484 378 560 462
+rect 808 518 884 602
+rect 71 942 973 1018
+rect -267 -151 1311 -73
+rect -267 1104 1311 1182
+rect -267 -151 -189 1182
+rect 1233 -151 1311 1182
+rect -267 -151 1311 -73
+rect -267 1104 1311 1182
+<< metal2 >>
+rect 160 238 236 322
+rect 484 378 560 462
+rect 808 518 884 602
+rect 82 942 962 1018
+rect -267 -151 1311 -73
+rect -267 1104 1311 1182
+rect -267 98 1311 182
+<< via1 >>
+rect 10 110 62 170
+rect 334 110 386 170
+rect 658 110 710 170
+rect 982 110 1034 170
+rect 172 250 224 310
+rect 496 390 548 450
+rect 820 530 872 590
+rect 94 954 950 1006
+rect -255 -139 1299 -85
+rect -255 1116 1299 1170
+rect -254 110 -202 170
+rect 1246 110 1298 170
+<< labels >>
+flabel metal2 s 160 238 236 322 0 FreeSans 80 0 0 0 CS_t
+port 1 nsew signal bidirectional
+flabel metal2 s 484 378 560 462 0 FreeSans 80 0 0 0 CH_t
+port 2 nsew signal bidirectional
+flabel metal2 s 808 518 884 602 0 FreeSans 80 0 0 0 CL_t
+port 3 nsew signal bidirectional
+flabel metal2 s 82 942 962 1018 0 FreeSans 80 0 0 0 CLK
+port 4 nsew signal bidirectional
+flabel metal2 s -267 -151 1311 -73 0 FreeSans 80 0 0 0 VSS
+port 5 nsew signal bidirectional
+<< end >>

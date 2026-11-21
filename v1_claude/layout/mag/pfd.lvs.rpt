@@ -1,0 +1,138 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+Flattening unmatched subcell pfd_D_6_MN3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D4_MP in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D1_MP in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_2_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_2_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_2_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_2_MP3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_R_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_2_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_3_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_5_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_R_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_2_MN3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_3_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_5_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_R_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_3_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_3_MP3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_5_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_R_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_3_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D2_MN in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_6_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_5_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_3_MN3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_6_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_6_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_6_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_6_MP3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D2_MP in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_6_MN3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_1_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_1_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_1_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_2_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_1_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_4_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_2_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_4_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_2_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_O1_MN in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_2_MP3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_4_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_4_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_2_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_5_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_5_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_2_MN3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D3_MN in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_5_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_O1_MP in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_5_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D3_MP in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_1_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_3_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_3_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_3_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_1_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_3_MP3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_1_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_1_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_3_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_4_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_6_MP1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_O2_MN in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_3_MN3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_4_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_6_MP2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D1_MN in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_6_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_4_MN1 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_6_MP3 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D4_MN in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_D_6_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_U_4_MN2 in circuit pfd (0)(1 instance)
+Flattening unmatched subcell pfd_O2_MP in circuit pfd (0)(1 instance)
+Flattening unmatched subcell dff_r in circuit pfd (1)(2 instances)
+Flattening unmatched subcell nand2 in circuit pfd (1)(7 instances)
+Flattening unmatched subcell nand3 in circuit pfd (1)(6 instances)
+Flattening unmatched subcell inv_dig in circuit pfd (1)(6 instances)
+
+Subcircuit summary:
+Circuit 1: pfd                             |Circuit 2: pfd                             
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (38)                             |nfet_03v3 (38)                             
+pfet_03v3 (38)                             |pfet_03v3 (38)                             
+Number of devices: 76                      |Number of devices: 76                      
+Number of nets: 42                         |Number of nets: 42                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: pfd                             |Circuit 2: pfd                             
+-------------------------------------------|-------------------------------------------
+UP                                         |UP                                         
+DN                                         |DN                                         
+VDD                                        |VDD                                        
+REF                                        |REF                                        
+FB                                         |FB                                         
+VSS                                        |VSS                                        
+DNB                                        |DNB                                        
+UPB                                        |UPB                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfd and pfd are equivalent.
+
+Final result: Circuits match uniquely.
+.

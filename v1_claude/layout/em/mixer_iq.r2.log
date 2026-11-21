@@ -1,0 +1,56 @@
+== tI (klayout net $43): MG1I_MG2I:sd +2.00 mA / 170 contacts = 0.012 mA each; MTI_MTQ:sd -2.00 mA / 672 contacts = 0.003 mA each
+   M1: 0.47 mA/um over a 0.2 um wide wire (0.09 mA) at 58.9,98.4 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 1.60 mA/um over a 1.1 um wide wire (1.76 mA) at 82.1,97.4 um  [limit 2.09 at 85 C / 1.00 at 110 C] over the 110 C limit
+   M3: 0.83 mA/um over a 2.4 um wide wire (2.00 mA) at 127.3,99.8 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 98 vias, max 0.060 mA per via at 80.0,98.2 um  [limit 0.58 / 0.28] OK
+   V2: 62 vias, max 0.219 mA per via at 82.6,97.7 um  [limit 0.58 / 0.28] OK
+== xpI (klayout net $22): MLApI_MLBpI:sd +1.00 mA / 90 contacts = 0.011 mA each; MG1I_MG2I:sd -1.00 mA / 80 contacts = 0.013 mA each
+   M1: 0.44 mA/um over a 0.2 um wide wire (0.09 mA) at 65.6,74.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.47 mA/um over a 0.1 um wide wire (0.05 mA) at 69.8,73.7 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.59 mA/um over a 1.7 um wide wire (1.00 mA) at 69.2,76.8 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 34 vias, max 0.063 mA per via at 80.8,99.6 um  [limit 0.58 / 0.28] OK
+   V2: 12 vias, max 0.169 mA per via at 70.5,99.1 um  [limit 0.58 / 0.28] OK
+== mpaI (klayout net $23): MU1pI_MU2pI:sd +0.50 mA / 50 contacts = 0.010 mA each; MLApI_MLBpI:sd -0.50 mA / 40 contacts = 0.013 mA each
+   M1: 0.40 mA/um over a 0.2 um wide wire (0.08 mA) at 86.6,74.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.34 mA/um over a 0.1 um wide wire (0.03 mA) at 84.0,73.7 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.45 mA/um over a 1.1 um wide wire (0.50 mA) at 73.3,74.3 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.50 mA/um over a 1.0 um wide wire (0.50 mA) at 74.4,73.3 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 18 vias, max 0.063 mA per via at 66.5,75.1 um  [limit 0.58 / 0.28] OK
+   V2: 8 vias, max 0.127 mA per via at 73.5,74.6 um  [limit 0.58 / 0.28] OK
+   V3: 8 vias, max 0.128 mA per via at 74.1,74.1 um  [limit 0.58 / 0.28] OK
+== IFIP (klayout net $67): R4u_0:poly +1.00 mA / 8 contacts = 0.125 mA each; MU1nI_MU2nI:sd -0.25 mA / 20 contacts = 0.013 mA each; MU1pI_MU2pI:sd -0.25 mA / 20 contacts = 0.013 mA each; MU3nI_MU4nI:sd -0.25 mA / 20 contacts = 0.013 mA each; MU3pI_MU4pI:sd -0.25 mA / 20 contacts = 0.013 mA each
+   M1: 0.41 mA/um over a 0.1 um wide wire (0.04 mA) at 94.2,97.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.39 mA/um over a 0.1 um wide wire (0.04 mA) at 95.5,97.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.91 mA/um over a 1.1 um wide wire (1.00 mA) at 95.7,77.3 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.68 mA/um over a 1.1 um wide wire (0.75 mA) at 99.7,76.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M5: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 4.50 at 85 C / 2.20 at 110 C] OK
+   V1: 30 vias, max 0.073 mA per via at 96.0,97.1 um  [limit 0.58 / 0.28] OK
+   V2: 46 vias, max 0.078 mA per via at 96.1,96.6 um  [limit 0.58 / 0.28] OK
+   V3: 212 vias, max 0.254 mA per via at 96.5,76.9 um  [limit 0.58 / 0.28] OK
+   V4: 180 vias, max 0.000 mA per via at 52.2,186.3 um  [limit 0.58 / 0.28] OK
+== VDD (klayout net $45): M4 rails 0 V; R4u_0:poly -4.00 mA / 32 contacts = 0.125 mA each
+   M1: 0.35 mA/um over a 0.2 um wide wire (0.07 mA) at 92.8,103.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.26 mA/um over a 3.8 um wide wire (1.00 mA) at 92.6,103.8 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 62 vias, max 0.072 mA per via at 92.9,103.3 um  [limit 0.58 / 0.28] OK
+   V2: 59 vias, max 0.072 mA per via at 92.9,103.8 um  [limit 0.58 / 0.28] OK
+   V3: 236 vias, max 0.037 mA per via at 112.8,121.9 um  [limit 0.58 / 0.28] OK
+== VSS (klayout net $1): M4 rails 0 V; MTI_MTQ:sd +4.00 mA / 1386 contacts = 0.003 mA each
+   M1: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 2322 vias, max 0.030 mA per via at 163.1,99.6 um  [limit 0.58 / 0.28] OK
+   V2: 389 vias, max 0.023 mA per via at 287.0,95.3 um  [limit 0.58 / 0.28] OK
+   V3: 2292 vias, max 0.017 mA per via at 281.5,92.3 um  [limit 0.58 / 0.28] OK
+== IFIN (klayout net $68): R4u_0:poly +1.00 mA / 8 contacts = 0.125 mA each; MU1nI_MU2nI:sd -0.25 mA / 20 contacts = 0.013 mA each; MU1pI_MU2pI:sd -0.25 mA / 20 contacts = 0.013 mA each; MU3nI_MU4nI:sd -0.25 mA / 20 contacts = 0.013 mA each; MU3pI_MU4pI:sd -0.25 mA / 20 contacts = 0.013 mA each
+   M1: 0.41 mA/um over a 0.1 um wide wire (0.04 mA) at 99.8,97.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.33 mA/um over a 0.1 um wide wire (0.03 mA) at 87.4,76.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 1.00 mA/um over a 1.0 um wide wire (1.00 mA) at 98.5,76.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] over the 110 C limit
+   M4: 0.52 mA/um over a 0.1 um wide wire (0.05 mA) at 99.3,75.4 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M5: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 4.50 at 85 C / 2.20 at 110 C] OK
+   V1: 30 vias, max 0.072 mA per via at 98.5,97.1 um  [limit 0.58 / 0.28] OK
+   V2: 54 vias, max 0.076 mA per via at 98.5,96.6 um  [limit 0.58 / 0.28] OK
+   V3: 204 vias, max 0.191 mA per via at 99.3,75.5 um  [limit 0.58 / 0.28] OK
+   V4: 180 vias, max 0.000 mA per via at 104.7,186.3 um  [limit 0.58 / 0.28] OK

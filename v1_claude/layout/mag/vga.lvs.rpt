@@ -1,0 +1,85 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell ppolyf_u_1k and Circuit 2 cell ppolyf_u_1k are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k                     |Circuit 2: ppolyf_u_1k                     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k and ppolyf_u_1k are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+Flattening unmatched subcell vga_MSW in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RDB in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_MT in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_MDP in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RB in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_CCM in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RD in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_CC1 in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_CC2 in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RL in circuit vga (0)(1 instance)
+
+Class vga (0):  Merged 102 parallel devices.
+Class vga (0):  Merged 23 series devices.
+Subcircuit summary:
+Circuit 1: vga                             |Circuit 2: vga                             
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (108->6)                         |nfet_03v3 (22->6)                          
+ppolyf_u_1k (32->9)                        |ppolyf_u_1k (9)                            
+cap_mim_2f0_m4m5_noshield (3)              |cap_mim_2f0_m4m5_noshield (3)              
+Number of devices: 18                      |Number of devices: 18                      
+Number of nets: 16                         |Number of nets: 16                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vga                             |Circuit 2: vga                             
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+INP                                        |INP                                        
+INN                                        |INN                                        
+GA                                         |GA                                         
+GB                                         |GB                                         
+OUTP                                       |OUTP                                       
+OUTN                                       |OUTN                                       
+NB                                         |NB                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vga and vga are equivalent.
+
+Final result: Circuits match uniquely.
+.

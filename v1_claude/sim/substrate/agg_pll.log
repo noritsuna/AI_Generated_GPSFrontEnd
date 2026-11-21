@@ -1,0 +1,13 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_pll.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 1250045
+Note: Simulation executed from .control section 

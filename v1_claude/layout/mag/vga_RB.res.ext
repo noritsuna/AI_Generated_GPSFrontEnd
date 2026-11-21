@@ -1,0 +1,91 @@
+scale 1000 1 0.5
+rnode "VSS.t14" 0 867.027 5300 2474 0
+rnode "VSS.n0" 0 1131.85 5300 -474 0
+rnode "VSS.t15" 0 302.817 10500 833 0
+rnode "VSS.t8" 0 341.725 10100 833 0
+rnode "VSS.t26" 0 341.725 9700 833 0
+rnode "VSS.t0" 0 341.725 9300 850 0
+rnode "VSS.t11" 0 341.725 8900 850 0
+rnode "VSS.t7" 0 341.725 8500 850 0
+rnode "VSS.t3" 0 341.725 8100 850 0
+rnode "VSS.t5" 0 341.725 7700 1000 0
+rnode "VSS.t9" 0 341.725 7300 1000 0
+rnode "VSS.t2" 0 341.725 6900 1000 0
+rnode "VSS.t10" 0 341.725 6500 1000 0
+rnode "VSS.t12" 0 341.725 6100 1000 0
+rnode "VSS.t21" 0 341.725 5700 1000 0
+rnode "VSS" 0 32.4638 -268 -550 0
+rnode "VSS.n1" 0 494.973 -192 1000 0
+rnode "VSS.t18" 0 295.592 100 1000 0
+rnode "VSS.t24" 0 341.725 500 1000 0
+rnode "VSS.t6" 0 341.725 900 1000 0
+rnode "VSS.t22" 0 341.725 1300 1000 0
+rnode "VSS.t17" 0 341.725 1700 1000 0
+rnode "VSS.t23" 0 341.725 2100 1000 0
+rnode "VSS.t4" 0 341.725 2500 1000 0
+rnode "VSS.t20" 0 341.725 2900 1000 0
+rnode "VSS.t1" 0 341.725 3300 1000 0
+rnode "VSS.t19" 0 341.725 3700 1000 0
+rnode "VSS.t13" 0 341.725 4100 1000 0
+rnode "VSS.t25" 0 341.725 4500 1000 0
+rnode "VSS.t16" 0 341.725 4900 1000 0
+rnode "VSS" 0 60.6245 -231 -513 0
+resist "VSS" "VSS.t14" 6.42438
+resist "VSS.t14" "VSS.n0" 0.0449443
+resist "VSS.n1" "VSS" 79.6774
+resist "VSS.t18" "VSS.n1" 306.129
+resist "VSS.t8" "VSS.t15" 419.355
+resist "VSS.t26" "VSS.t8" 419.355
+resist "VSS.t0" "VSS.t26" 419.355
+resist "VSS.t11" "VSS.t0" 419.355
+resist "VSS.t7" "VSS.t11" 419.355
+resist "VSS.t3" "VSS.t7" 419.355
+resist "VSS.t5" "VSS.t3" 419.355
+resist "VSS.t9" "VSS.t5" 419.355
+resist "VSS.t2" "VSS.t9" 419.355
+resist "VSS.t10" "VSS.t2" 419.355
+resist "VSS.t12" "VSS.t10" 419.355
+resist "VSS.t21" "VSS.t12" 419.355
+resist "VSS.t14" "VSS.t21" 419.355
+resist "VSS.t14" "VSS.t16" 419.355
+resist "VSS.t16" "VSS.t25" 419.355
+resist "VSS.t25" "VSS.t13" 419.355
+resist "VSS.t13" "VSS.t19" 419.355
+resist "VSS.t19" "VSS.t1" 419.355
+resist "VSS.t1" "VSS.t20" 419.355
+resist "VSS.t20" "VSS.t4" 419.355
+resist "VSS.t4" "VSS.t23" 419.355
+resist "VSS.t23" "VSS.t17" 419.355
+resist "VSS.t17" "VSS.t22" 419.355
+resist "VSS.t22" "VSS.t6" 419.355
+resist "VSS.t6" "VSS.t24" 419.355
+resist "VSS.t24" "VSS.t18" 419.355
+resist "VSS.n0" "VSS.n1" 4.25031
+resist "VSS.n0" "VSS.t15" 310.38
+device rsubckt ppolyf_u_1k 0 0 1 1  "VSS.t18" "a_0_0#" 400 0 "a_0_2000#" 2000 24400,644 "vcm" 2000 24400,644
+device rsubckt ppolyf_u_1k 400 0 401 1  "VSS.t24" "a_400_0#" 400 0 "a_400_2000#" 2000 24400,644 "vcm" 2000 24400,644
+device rsubckt ppolyf_u_1k 800 0 801 1  "VSS.t6" "a_800_0#" 400 0 "a_0_2000#" 2000 24400,644 "a_800_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 1200 0 1201 1  "VSS.t22" "a_1200_0#" 400 0 "a_400_2000#" 2000 24400,644 "a_1200_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 1600 0 1601 1  "VSS.t17" "a_1600_0#" 400 0 "a_1600_2000#" 2000 24400,644 "a_800_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 2000 0 2001 1  "VSS.t23" "a_2000_0#" 400 0 "a_2000_2000#" 2000 24400,644 "a_1200_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 2400 0 2401 1  "VSS.t4" "a_2400_0#" 400 0 "a_1600_2000#" 2000 24400,644 "a_2400_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 2800 0 2801 1  "VSS.t20" "a_2800_0#" 400 0 "a_2000_2000#" 2000 24400,644 "a_2800_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 3200 0 3201 1  "VSS.t1" "a_3200_0#" 400 0 "a_3200_2000#" 2000 24400,644 "a_2400_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 3600 0 3601 1  "VSS.t19" "a_3600_0#" 400 0 "a_3600_2000#" 2000 24400,644 "a_2800_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 4000 0 4001 1  "VSS.t13" "a_4000_0#" 400 0 "a_3200_2000#" 2000 24400,644 "a_4000_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 4400 0 4401 1  "VSS.t25" "a_4400_0#" 400 0 "a_3600_2000#" 2000 24400,644 "a_4400_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 4800 0 4801 1  "VSS.t16" "a_4800_0#" 400 0 "a_4800_2000#" 2000 24400,644 "a_4000_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 5200 0 5201 1  "VSS.t14" "a_5200_0#" 400 0 "a_5200_2000#" 2000 24400,644 "a_4400_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 5600 0 5601 1  "VSS.t21" "a_5600_0#" 400 0 "a_4800_2000#" 2000 24400,644 "a_5600_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 6000 0 6001 1  "VSS.t12" "a_6000_0#" 400 0 "a_5200_2000#" 2000 24400,644 "a_6000_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 6400 0 6401 1  "VSS.t10" "a_6400_0#" 400 0 "a_6400_2000#" 2000 24400,644 "a_5600_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 6800 0 6801 1  "VSS.t2" "a_6800_0#" 400 0 "a_6800_2000#" 2000 24400,644 "a_6000_n122#" 2000 24400,644
+device rsubckt ppolyf_u_1k 7200 0 7201 1  "VSS.t9" "a_7200_0#" 400 0 "a_6400_2000#" 2000 24400,644 "gp" 2000 24400,644
+device rsubckt ppolyf_u_1k 7600 0 7601 1  "VSS.t5" "a_7600_0#" 400 0 "a_6800_2000#" 2000 24400,644 "gn" 2000 24400,644
+device rsubckt ppolyf_u_1k 8000 0 8001 1  "VSS.t3" "a_8000_0#" 400 0 "a_8000_1700#" 1700 24400,644 "vcm" 1700 24400,644
+device rsubckt ppolyf_u_1k 8400 0 8401 1  "VSS.t7" "a_8400_0#" 400 0 "a_8000_1700#" 1700 24400,644 "a_8400_n122#" 1700 24400,644
+device rsubckt ppolyf_u_1k 8800 0 8801 1  "VSS.t11" "a_8800_0#" 400 0 "a_8800_1700#" 1700 24400,644 "a_8400_n122#" 1700 24400,644
+device rsubckt ppolyf_u_1k 9200 0 9201 1  "VSS.t0" "a_9200_0#" 400 0 "a_8800_1700#" 1700 24400,644 "VDD" 1700 24400,644
+device rsubckt ppolyf_u_1k 9600 0 9601 1  "VSS.t26" "a_9600_0#" 400 0 "a_9600_1667#" 1667 24400,644 "VSS" 1667 24400,644
+device rsubckt ppolyf_u_1k 10000 0 10001 1  "VSS.t8" "a_10000_0#" 400 0 "a_9600_1667#" 1667 24400,644 "a_10000_n122#" 1667 24400,644
+device rsubckt ppolyf_u_1k 10400 0 10401 1  "VSS.t15" "a_10400_0#" 400 0 "vcm" 1667 24400,644 "a_10000_n122#" 1667 24400,644

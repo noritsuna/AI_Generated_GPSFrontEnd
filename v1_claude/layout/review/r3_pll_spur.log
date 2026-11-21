@@ -1,0 +1,12 @@
+tt_b0_i0  VCTRL 2.0927 V  pp 4.2 mV  C2 pp 9.9 mV
+   k=1  VCTRL 0.239 mV -> est -48 dBc | LO sidebands -48.0 / -49.0 dBc
+   k=2  VCTRL 0.291 mV -> est -53 dBc | LO sidebands -55.7 / -56.7 dBc
+   k=3  VCTRL 0.110 mV -> est -65 dBc | LO sidebands -69.1 / -79.7 dBc
+ss_b3_i1  VCTRL 1.4308 V  pp 5.5 mV  C2 pp 15.6 mV
+   k=1  VCTRL 0.394 mV -> est -49 dBc | LO sidebands -43.8 / -44.2 dBc
+   k=2  VCTRL 0.486 mV -> est -53 dBc | LO sidebands -53.0 / -53.5 dBc
+   k=3  VCTRL 0.277 mV -> est -61 dBc | LO sidebands -63.7 / -64.6 dBc
+ff_b0_i0  VCTRL 1.5193 V  pp 2.2 mV  C2 pp 5.7 mV
+   k=1  VCTRL 0.202 mV -> est -45 dBc | LO sidebands -43.9 / -43.8 dBc
+   k=2  VCTRL 0.107 mV -> est -56 dBc | LO sidebands -60.0 / -60.3 dBc
+   k=3  VCTRL 0.062 mV -> est -64 dBc | LO sidebands -69.8 / -68.9 dBc

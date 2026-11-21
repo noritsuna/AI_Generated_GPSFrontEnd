@@ -1,0 +1,4 @@
+sch  fLO 2415.1 MHz  LO phase err -0.32/-0.38/-0.05  I/Q 0.01 deg
+PEX  fLO 1567.1 MHz  LO phase err 0.07/1.69/4.38  I/Q 2.76 deg
+sch  fLO 2381.5 MHz  IF 37.713 MHz  I 1.04 mV  Q 1.11 mV  CG -5.70 dB  gain imb -0.59 dB  I-Q phase 89.07 deg  (LO I/Q err -0.00)
+PEX  fLO 1556.8 MHz  IF 14.374 MHz  I 3.68 mV  Q 3.89 mV  CG 5.29 dB  gain imb -0.50 dB  I-Q phase 90.98 deg  (LO I/Q err 2.13)

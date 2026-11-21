@@ -1,0 +1,245 @@
+* NGSPICE file created from vco_core_flat.ext - technology: gf180mcuD
+
+.subckt vco_core_flat VSS VR kh p1 n1 kl p2 n2 p4 n4 p3 n3
+X0 n1 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n3 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 n1 p1 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X3 VR n3 n4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 p1 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 n1 p1 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X6 VR p3 p4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 p4 n4 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X8 VSS kl n2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X9 VSS p2 n3 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X10 VSS n2 p3 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X11 p1 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 p1 n4 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X13 VSS p1 n2 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X14 p3 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X15 p1 n1 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X16 p2 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X17 p4 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X18 VR p4 n1 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X19 n4 p4 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X20 n4 n3 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X21 n2 p2 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X22 p4 n4 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X23 VR p1 n2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X24 VR n1 p2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X25 VSS n4 p1 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X26 p4 p3 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X27 VR n2 p3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X28 VSS VSS p2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X29 n2 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X30 VSS n3 n4 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X31 n4 p4 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X32 VSS kh n1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X33 n1 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X34 n3 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X35 p2 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X36 n4 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X37 n4 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X38 VR n4 p1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X39 VR n4 p1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X40 p3 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X41 n3 p3 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X42 n2 p2 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X43 n2 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X44 VR p1 n2 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X45 VSS p4 n1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X46 p2 n1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X47 p4 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X48 VR p3 p4 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X49 p2 n2 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X50 n2 kl VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X51 n3 p2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X52 VR n1 p2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X53 p3 n3 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X54 n2 p1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X55 VR n3 n4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X56 VR p2 n3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X57 VSS n1 p2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X58 p2 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X59 p2 n2 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X60 n1 p4 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X61 n3 p3 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X62 VR p4 n1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X63 p1 n1 VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+X64 p3 n2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X65 p1 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X66 p3 n3 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+X67 VSS VSS p1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X68 VR n2 p3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X69 VR p2 n3 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X70 n1 kh VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X71 VSS p3 p4 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+C0 n1 p4 0.36711f
+C1 p1 p2 0.4718f
+C2 kl n4 0.0297f
+C3 a_10654_5740# VR 0.34967f
+C4 p1 n3 0.08706f
+C5 a_22564_5740# VR 0.36281f
+C6 n2 a_18084_5740# 0.01076f
+C7 VR p4 6.04106f
+C8 a_22974_5740# VR 0.35048f
+C9 p1 n4 0.36423f
+C10 n2 p2 2.95646f
+C11 n2 n3 0.98424f
+C12 p2 a_17860_1359# 0.01042f
+C13 a_24654_5740# p3 0.01993f
+C14 n1 a_7444_1462# 0.01104f
+C15 n2 a_2180_1359# 0.01367f
+C16 n1 p2 0.25641f
+C17 VR a_18084_5740# 0.36281f
+C18 n2 p3 0.28859f
+C19 n2 n4 0.79929f
+C20 n1 n3 0.1125f
+C21 a_10654_5740# p4 0.02195f
+C22 n4 kh 0.08075f
+C23 n4 a_12334_5740# 0.01991f
+C24 n2 a_16814_5740# 0.02821f
+C25 p2 VR 4.77029f
+C26 n1 n4 1.29254f
+C27 n3 VR 5.69119f
+C28 p1 kl 0.09007f
+C29 n4 a_10020_1359# 0.01042f
+C30 n3 a_25214_1462# 0.01296f
+C31 p3 VR 5.91036f
+C32 p1 a_5764_5740# 0.01162f
+C33 n4 VR 4.44623f
+C34 VR a_18494_5740# 0.35048f
+C35 VR a_16814_5740# 0.3476f
+C36 a_9124_1359# p4 0.01671f
+C37 n2 kl 0.08902f
+C38 kl kh 0.06787f
+C39 p1 a_6174_5740# 0.01988f
+C40 p1 a_14724_1120# 0.01877f
+C41 a_19764_5979# VR 0.49566f
+C42 a_22564_5740# n3 0.01137f
+C43 a_11924_5740# VR 0.36279f
+C44 p1 a_5764_1462# 0.01492f
+C45 n3 a_22564_1359# 0.01287f
+C46 n3 p4 0.98862f
+C47 n1 kl 0.09445f
+C48 VR a_15148_5979# 0.49566f
+C49 n1 a_4084_5740# 0.01438f
+C50 n4 a_10654_5740# 0.01265f
+C51 a_22974_5740# n3 0.02257f
+C52 n2 p1 1.34672f
+C53 p1 a_7854_1462# 0.01411f
+C54 a_22564_5740# p3 0.01152f
+C55 p2 a_16964_1359# 0.01077f
+C56 n2 a_19614_1462# 0.01297f
+C57 a_15620_1120# p2 0.01352f
+C58 p3 p4 1.62928f
+C59 p1 a_6174_1462# 0.01101f
+C60 p3 a_23460_1359# 0.01128f
+C61 n4 p4 1.09672f
+C62 a_22974_5740# p3 0.01053f
+C63 a_4084_5740# VR 0.36295f
+C64 n1 p1 3.53981f
+C65 p2 a_18084_5740# 0.01002f
+C66 p1 a_4420_1359# 0.01532f
+C67 a_13454_1462# n4 0.01149f
+C68 a_10244_5740# VR 0.36377f
+C69 a_5764_5740# VR 0.36281f
+C70 n2 kh 0.15679f
+C71 p1 VR 5.20238f
+C72 p2 a_21294_1462# 0.01149f
+C73 a_24244_5740# VR 0.36279f
+C74 n3 p2 0.60884f
+C75 n1 a_4494_5740# 0.02374f
+C76 n2 n1 0.82043f
+C77 VR a_6174_5740# 0.35048f
+C78 n1 kh 0.14216f
+C79 a_24654_5740# VR 0.35048f
+C80 n1 a_3524_1359# 0.01811f
+C81 a_8988_5979# VR 0.49417f
+C82 p3 p2 0.20677f
+C83 n1 a_6174_1462# 0.01269f
+C84 p3 n3 1.96816f
+C85 a_4494_5740# VR 0.34967f
+C86 p3 a_26894_1462# 0.01149f
+C87 n3 n4 0.42958f
+C88 n2 VR 3.89487f
+C89 p2 a_18494_5740# 0.02234f
+C90 a_13604_5979# VR 0.49566f
+C91 a_12334_5740# VR 0.35048f
+C92 a_10244_5740# p4 0.0104f
+C93 p3 n4 0.29427f
+C94 a_19764_5979# p2 0.0123f
+C95 n1 VR 4.53503f
+C96 p1 p4 1.05786f
+C97 a_11774_1462# p4 0.01371f
+C98 a_7444_5979# VR 0.49566f
+C99 n4 a_11924_5740# 0.01102f
+C100 a_16404_5740# VR 0.36665f
+C101 a_1284_5979# VR 0.49566f
+C102 n2 p4 0.90614f
+C103 a_21308_5979# VR 0.4924f
+C104 n2 a_16964_1359# 0.01937f
+C105 a_2828_5979# VR 0.49417f
+C106 kl VSS 6.06662f
+C107 kh VSS 2.56318f
+C108 p2 VSS 9.06832f
+C109 n2 VSS 11.0535f
+C110 n3 VSS 10.5902f
+C111 p3 VSS 11.2373f
+C112 p1 VSS 10.5237f
+C113 n1 VSS 10.7178f
+C114 n4 VSS 10.7651f
+C115 p4 VSS 8.97503f
+C116 VR VSS 0.11336p
+C117 a_26894_1462# VSS 0.24358f
+C118 a_26484_1462# VSS 0.25096f ; **FLOATING
+C119 a_25214_1462# VSS 0.24358f
+C120 a_24804_1462# VSS 0.25096f ; **FLOATING
+C121 a_23460_1359# VSS 0.73261f
+C122 a_22564_1359# VSS 0.73101f
+C123 a_21294_1462# VSS 0.24358f
+C124 a_20884_1462# VSS 0.25096f ; **FLOATING
+C125 a_19614_1462# VSS 0.24358f
+C126 a_19204_1462# VSS 0.25096f ; **FLOATING
+C127 a_17860_1359# VSS 0.73261f
+C128 a_16964_1359# VSS 0.72843f
+C129 a_15620_1120# VSS 0.7409f
+C130 a_14724_1120# VSS 0.74598f
+C131 a_13454_1462# VSS 0.24358f
+C132 a_13044_1462# VSS 0.25096f ; **FLOATING
+C133 a_11774_1462# VSS 0.24358f
+C134 a_11364_1462# VSS 0.25096f ; **FLOATING
+C135 a_10020_1359# VSS 0.73261f
+C136 a_9124_1359# VSS 0.72786f
+C137 a_7854_1462# VSS 0.24358f
+C138 a_7444_1462# VSS 0.25096f
+C139 a_6174_1462# VSS 0.24181f
+C140 a_5764_1462# VSS 0.25096f
+C141 a_4420_1359# VSS 0.73101f
+C142 a_3524_1359# VSS 0.72925f
+C143 a_2180_1359# VSS 0.72785f
+C144 a_1284_1359# VSS 0.73261f ; **FLOATING
+C145 a_24654_5740# VSS 0.04368f
+C146 a_24244_5740# VSS 0.04368f
+C147 a_22974_5740# VSS 0.04368f
+C148 a_22564_5740# VSS 0.04368f
+C149 a_21308_5979# VSS 0.07763f
+C150 a_19764_5979# VSS 0.07763f
+C151 a_18494_5740# VSS 0.04368f
+C152 a_18084_5740# VSS 0.04368f
+C153 a_16814_5740# VSS 0.04368f
+C154 a_16404_5740# VSS 0.04368f
+C155 a_15148_5979# VSS 0.07763f
+C156 a_13604_5979# VSS 0.07763f
+C157 a_12334_5740# VSS 0.04368f
+C158 a_11924_5740# VSS 0.04368f
+C159 a_10654_5740# VSS 0.04368f
+C160 a_10244_5740# VSS 0.04368f
+C161 a_8988_5979# VSS 0.07763f
+C162 a_7444_5979# VSS 0.07763f
+C163 a_6174_5740# VSS 0.04368f
+C164 a_5764_5740# VSS 0.04368f
+C165 a_4494_5740# VSS 0.04368f
+C166 a_4084_5740# VSS 0.04368f
+C167 a_2828_5979# VSS 0.07763f
+C168 a_1284_5979# VSS 0.07763f
+.ends

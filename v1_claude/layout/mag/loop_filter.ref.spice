@@ -1,0 +1,7 @@
+.subckt loop_filter VC VT VSS
+XRZ z VC VSS ppolyf_u_1k r_width=1u r_length=10u
+XC1 z VSS cap_mim_2f0_m4m5_noshield c_width=89.88e-6 c_length=89.88e-6 m=4
+XC2 VC VSS cap_mim_2f0_m4m5_noshield c_width=51.67e-6 c_length=51.67e-6 m=1
+XRVT VT VC VSS ppolyf_u_1k r_width=2u r_length=4u
+XC3 VT VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=15
+.ends

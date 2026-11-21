@@ -1,0 +1,1850 @@
+* NGSPICE file created from vco_ring4.ext - technology: gf180mcuD
+
+.subckt vco_ring4_CSUA fsua VSS
+X0 fsua VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt vco_ring4_CSUB fsub VSS
+X0 fsub VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt nand2_MP1 Y A VDD
+X0 Y A VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2_MP2 Y B VDD
+X0 Y B VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2_MN1 n1 Y A VSS
+X0 Y A n1 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2_MN2 n1 B VSS
+X0 n1 B VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2 VSS VDD A B Y
+XXMP1 Y A VDD nand2_MP1
+XXMP2 Y B VDD nand2_MP2
+XXMN1 XMN2/n1 Y A VSS nand2_MN1
+XXMN2 XMN2/n1 B VSS nand2_MN2
+.ends
+
+.subckt nor2_MP1 n1 A VDD
+X0 n1 A VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt nor2_MP2 n1 Y B VDD
+X0 Y B n1 VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt nor2_MN1 Y A VSS
+X0 Y A VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt nor2_MN2 Y B VSS
+X0 Y B VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt nor2 VDD A B Y VSS
+XXMP1 XMP2/n1 A VDD nor2_MP1
+XXMP2 XMP2/n1 Y B VDD nor2_MP2
+XXMN1 Y A VSS nor2_MN1
+XXMN2 Y B VSS nor2_MN2
+.ends
+
+.subckt vco_ring4_CVR VR VSS
+X0 VR VSS cap_mim_2f0_m4m5_noshield c_width=30u c_length=30u
+.ends
+
+.subckt vco_ring4_R1u_0 fsua sua fsub sub VSS
+X0 a_320_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X1 a_3260_2086# a_4100_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X2 a_7040_2086# a_6200_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X3 a_3260_2086# a_2420_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X4 a_5360_2086# a_6200_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X5 a_1580_2086# a_2420_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X6 a_5360_2086# a_4520_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X7 a_1580_2086# a_740_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X8 a_3680_2086# a_4520_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X9 a_320_2086# fsub VSS ppolyf_u_1k r_width=1u r_length=10u
+X10 a_6620_2086# sua VSS ppolyf_u_1k r_width=1u r_length=10u
+X11 a_3680_2086# a_2840_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X12 a_6620_2086# a_5780_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X13 a_2000_2086# a_2840_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X14 a_4940_2086# a_5780_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X15 a_4940_2086# a_4100_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X16 a_n100_2086# a_740_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X17 a_7040_2086# sub VSS ppolyf_u_1k r_width=1u r_length=10u
+X18 a_2000_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X19 a_n100_2086# fsua VSS ppolyf_u_1k r_width=1u r_length=10u
+.ends
+
+.subckt vco_ring4_MMIN ng NB VSS
+X0 ng NB VSS VSS nfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=2u
+X1 VSS NB ng VSS nfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=2u
+.ends
+
+.subckt vco_core_DP1 L1P ap1 L1N an1 VR
+X0 VR ap1 L1P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L1N an1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR ap1 L1P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 L1N an1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 L1P ap1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L1P ap1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L1P ap1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR an1 L1N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR an1 L1N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 L1N an1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR ap1 L1P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 L1N an1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR an1 L1N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 L1P ap1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR an1 L1N VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR ap1 L1P VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_DP2 L2P ap2 L2N an2 VR
+X0 VR ap2 L2P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L2N an2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR ap2 L2P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 L2N an2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 L2P ap2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L2P ap2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L2P ap2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR an2 L2N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR an2 L2N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 L2N an2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR ap2 L2P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 L2N an2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR an2 L2N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 L2P ap2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR an2 L2N VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR ap2 L2P VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_DP3 L3P ap3 L3N an3 VR
+X0 VR ap3 L3P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L3N an3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR ap3 L3P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 L3N an3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 L3P ap3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L3P ap3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L3P ap3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR an3 L3N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR an3 L3N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 L3N an3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR ap3 L3P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 L3N an3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR an3 L3N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 L3P ap3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR an3 L3N VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR ap3 L3P VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_DN1 L1P ap1 L1N an1 VSS
+X0 VSS ap1 L1P VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L1P ap1 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VSS an1 L1N VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 VSS an1 L1N VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 VSS ap1 L1P VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L1N an1 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L1P ap1 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 L1N an1 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_DP4 L4N an4 L4P ap4 VR
+X0 VR an4 L4N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L4P ap4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR an4 L4N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 L4P ap4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 L4N an4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L4N an4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L4N an4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR ap4 L4P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR ap4 L4P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 L4P ap4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR an4 L4N VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 L4P ap4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR ap4 L4P VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 L4N an4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR ap4 L4P VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR an4 L4N VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_DN2 L2P ap2 L2N an2 VSS
+X0 VSS ap2 L2P VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L2P ap2 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VSS an2 L2N VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 VSS an2 L2N VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 VSS ap2 L2P VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L2N an2 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L2P ap2 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 L2N an2 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_DN3 L3P ap3 L3N an3 VSS
+X0 VSS ap3 L3P VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L3P ap3 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VSS an3 L3N VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 VSS an3 L3N VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 VSS ap3 L3P VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L3N an3 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L3P ap3 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 L3N an3 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_DN4 L4N an4 L4P ap4 VSS
+X0 VSS an4 L4N VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 L4N an4 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VSS ap4 L4P VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 VSS ap4 L4P VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 VSS an4 L4N VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X5 L4P ap4 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 L4N an4 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 L4P ap4 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_P1 n1 p4 p1 n4 VR
+X0 VR p4 n1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p1 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p4 n1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 p1 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 n1 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 n1 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 n1 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR n4 p1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR n4 p1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 p1 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR p4 n1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 p1 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR n4 p1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 n1 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR n4 p1 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR p4 n1 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_P3 n3 p2 p3 n2 VR
+X0 VR p2 n3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p3 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p2 n3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 p3 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 n3 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 n3 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 n3 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR n2 p3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR n2 p3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 p3 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR p2 n3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 p3 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR n2 p3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 n3 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR n2 p3 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR p2 n3 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_P2 n2 p1 p2 n1 VR
+X0 VR p1 n2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p2 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p1 n2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 p2 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 n2 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 n2 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 n2 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR n1 p2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR n1 p2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 p2 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR p1 n2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 p2 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR n1 p2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 n2 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR n1 p2 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR p1 n2 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_N1 n1 p4 p1 n4 kh VSS
+X0 VSS p4 n1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 n1 kh VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X2 n1 p4 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X3 p1 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X4 VSS n4 p1 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X5 VSS n4 p1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X6 VSS kh n1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X7 n1 kh VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X8 VSS p4 n1 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X9 p1 n4 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X10 VSS VSS p1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X11 n1 p4 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X12 VSS kh n1 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X13 VSS VSS p1 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X14 p1 n4 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X15 p1 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_P4 p4 p3 n4 n3 VR
+X0 VR p3 p4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n4 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p3 p4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 n4 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 p4 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X5 p4 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X6 p4 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 VR n3 n4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X8 VR n3 n4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X9 n4 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X10 VR p3 p4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X11 n4 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X12 VR n3 n4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X13 p4 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X14 VR n3 n4 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X15 VR p3 p4 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_N2 n2 p1 p2 n1 kl VSS
+X0 VSS p1 n2 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 n2 kl VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X2 n2 p1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X3 p2 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X4 VSS n1 p2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X5 VSS n1 p2 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X6 VSS kl n2 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X7 n2 kl VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X8 VSS p1 n2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X9 p2 n1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X10 VSS VSS p2 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X11 n2 p1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X12 VSS kl n2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X13 VSS VSS p2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X14 p2 n1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X15 p2 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MBPp1 ap1 p1 VR
+X0 ap1 p1 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_N3 n3 p2 p3 n2 VSS
+X0 VSS p2 n3 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 n3 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X2 n3 p2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X3 p3 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X4 VSS n2 p3 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X5 VSS n2 p3 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X6 VSS VSS n3 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X7 n3 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X8 VSS p2 n3 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X9 p3 n2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X10 VSS VSS p3 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X11 n3 p2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X12 VSS VSS n3 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X13 VSS VSS p3 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X14 p3 n2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X15 p3 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MBPp2 ap2 p2 VR
+X0 ap2 p2 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_PLd1 p1 n1 VR
+X0 VR n1 p1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p1 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR n1 p1 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 p1 n1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_N4 p4 p3 n4 n3 VSS
+X0 VSS p3 p4 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 p4 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X2 p4 p3 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X3 n4 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X4 VSS n3 n4 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X5 VSS n3 n4 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X6 VSS VSS p4 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X7 p4 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X8 VSS p3 p4 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X9 n4 n3 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X10 VSS VSS n4 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X11 p4 p3 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X12 VSS VSS p4 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X13 VSS VSS n4 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X14 n4 n3 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X15 n4 VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MBPp3 ap3 p3 VR
+X0 ap3 p3 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MBPn2 an2 n2 VR
+X0 an2 n2 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_PLd2 p2 n2 VR
+X0 VR n2 p2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p2 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR n2 p2 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 p2 n2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MBPp4 ap4 p4 VR
+X0 ap4 p4 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MBPn1 an1 n1 VR
+X0 an1 n1 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_PLc1 n1 p1 VR
+X0 VR p1 n1 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n1 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p1 n1 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 n1 p1 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MBPn3 an3 n3 VR
+X0 an3 n3 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_PLd3 p3 n3 VR
+X0 VR n3 p3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p3 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR n3 p3 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 p3 n3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_PLc2 n2 p2 VR
+X0 VR p2 n2 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n2 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p2 n2 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 n2 p2 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MBNp2 ap2 p2 VSS
+X0 ap2 p2 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MBNp1 ap1 p1 VSS
+X0 ap1 p1 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_PLc3 n3 p3 VR
+X0 VR p3 n3 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n3 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p3 n3 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 n3 p3 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MBPn4 an4 n4 VR
+X0 an4 n4 VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_PLd4 n4 p4 VR
+X0 VR p4 n4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n4 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR p4 n4 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 n4 p4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MBNp3 ap3 p3 VSS
+X0 ap3 p3 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MBNn1 an1 n1 VSS
+X0 an1 n1 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_PLc4 p4 n4 VR
+X0 VR n4 p4 VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p4 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X2 VR n4 p4 VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X3 p4 n4 VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MBNn2 an2 n2 VSS
+X0 an2 n2 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MBNp4 ap4 p4 VSS
+X0 ap4 p4 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MBNn3 an3 n3 VSS
+X0 an3 n3 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MBNn4 an4 n4 VSS
+X0 an4 n4 VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MCPp1 CK L1P VR
+X0 CK L1P VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_NLd1 p1 n1 VSS
+X0 VSS n1 p1 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p1 n1 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MCPp3 ckdp3 L3P VR
+X0 ckdp3 L3P VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MCPp2 ckdp2 L2P VR
+X0 ckdp2 L2P VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MCPn1 ckdn1 L1N VR
+X0 ckdn1 L1N VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_NLd2 p2 n2 VSS
+X0 VSS n2 p2 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p2 n2 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_NLc1 n1 p1 VSS
+X0 VSS p1 n1 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n1 p1 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MCPn2 ckdn2 L2N VR
+X0 ckdn2 L2N VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MCPp4 ckdp4 L4P VR
+X0 ckdp4 L4P VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_NLd3 p3 n3 VSS
+X0 VSS n3 p3 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p3 n3 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_NLc2 n2 p2 VSS
+X0 VSS p2 n2 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n2 p2 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MCNp1 CK L1P VSS
+X0 CK L1P VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MCPn3 ckdn3 L3N VR
+X0 ckdn3 L3N VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_NLc3 n3 p3 VSS
+X0 VSS p3 n3 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n3 p3 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MCNp2 ckdp2 L2P VSS
+X0 ckdp2 L2P VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_NLd4 n4 p4 VSS
+X0 VSS p4 n4 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 n4 p4 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MCPn4 ckdn4 L4N VR
+X0 ckdn4 L4N VR VR pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_core_MCNp3 ckdp3 L3P VSS
+X0 ckdp3 L3P VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_NLc4 p4 n4 VSS
+X0 VSS n4 p4 VSS nfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 p4 n4 VSS VSS nfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt vco_core_MCNn1 ckdn1 L1N VSS
+X0 ckdn1 L1N VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MCNn2 ckdn2 L2N VSS
+X0 ckdn2 L2N VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MCNp4 ckdp4 L4P VSS
+X0 ckdp4 L4P VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MCNn3 ckdn3 L3N VSS
+X0 ckdn3 L3N VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core_MCNn4 ckdn4 L4N VSS
+X0 ckdn4 L4N VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_core VR kh kl CK ckdn1 ckdp4 ckdn4 ckdp2 ckdn2 ckdp3 ckdn3 L1P L1N L4P
++ L4N L2P L2N L3P L3N VSS
+XXDP1 L1P XDP1/ap1 L1N XDP1/an1 VR vco_core_DP1
+XXDP2 L2P XDP2/ap2 L2N XDP2/an2 VR vco_core_DP2
+XXDP3 L3P XDP3/ap3 L3N XDP3/an3 VR vco_core_DP3
+XXDN1 L1P XDP1/ap1 L1N XDP1/an1 VSS vco_core_DN1
+XXDP4 L4N XDP4/an4 L4P XDP4/ap4 VR vco_core_DP4
+XXDN2 L2P XDP2/ap2 L2N XDP2/an2 VSS vco_core_DN2
+XXDN3 L3P XDP3/ap3 L3N XDP3/an3 VSS vco_core_DN3
+XXDN4 L4N XDP4/an4 L4P XDP4/ap4 VSS vco_core_DN4
+XXP1 XP2/n1 XP4/p4 XP2/p1 XP4/n4 VR vco_core_P1
+XXP3 XP4/n3 XP3/p2 XP4/p3 XP3/n2 VR vco_core_P3
+XXP2 XP3/n2 XP2/p1 XP3/p2 XP2/n1 VR vco_core_P2
+XXN1 XP2/n1 XP4/p4 XP2/p1 XP4/n4 kh VSS vco_core_N1
+XXP4 XP4/p4 XP4/p3 XP4/n4 XP4/n3 VR vco_core_P4
+XXN2 XP3/n2 XP2/p1 XP3/p2 XP2/n1 kl VSS vco_core_N2
+XXMBPp1 XDP1/ap1 XP2/p1 VR vco_core_MBPp1
+XXN3 XP4/n3 XP3/p2 XP4/p3 XP3/n2 VSS vco_core_N3
+XXMBPp2 XDP2/ap2 XP3/p2 VR vco_core_MBPp2
+XXPLd1 XP2/p1 XP2/n1 VR vco_core_PLd1
+XXN4 XP4/p4 XP4/p3 XP4/n4 XP4/n3 VSS vco_core_N4
+XXMBPp3 XDP3/ap3 XP4/p3 VR vco_core_MBPp3
+XXMBPn2 XDP2/an2 XP3/n2 VR vco_core_MBPn2
+XXPLd2 XP3/p2 XP3/n2 VR vco_core_PLd2
+XXMBPp4 XDP4/ap4 XP4/p4 VR vco_core_MBPp4
+XXMBPn1 XDP1/an1 XP2/n1 VR vco_core_MBPn1
+XXPLc1 XP2/n1 XP2/p1 VR vco_core_PLc1
+XXMBPn3 XDP3/an3 XP4/n3 VR vco_core_MBPn3
+XXPLd3 XP4/p3 XP4/n3 VR vco_core_PLd3
+XXPLc2 XP3/n2 XP3/p2 VR vco_core_PLc2
+XXMBNp2 XDP2/ap2 XP3/p2 VSS vco_core_MBNp2
+XXMBNp1 XDP1/ap1 XP2/p1 VSS vco_core_MBNp1
+XXPLc3 XP4/n3 XP4/p3 VR vco_core_PLc3
+XXMBPn4 XDP4/an4 XP4/n4 VR vco_core_MBPn4
+XXPLd4 XP4/n4 XP4/p4 VR vco_core_PLd4
+XXMBNp3 XDP3/ap3 XP4/p3 VSS vco_core_MBNp3
+XXMBNn1 XDP1/an1 XP2/n1 VSS vco_core_MBNn1
+XXPLc4 XP4/p4 XP4/n4 VR vco_core_PLc4
+XXMBNn2 XDP2/an2 XP3/n2 VSS vco_core_MBNn2
+XXMBNp4 XDP4/ap4 XP4/p4 VSS vco_core_MBNp4
+XXMBNn3 XDP3/an3 XP4/n3 VSS vco_core_MBNn3
+XXMBNn4 XDP4/an4 XP4/n4 VSS vco_core_MBNn4
+XXMCPp1 CK L1P VR vco_core_MCPp1
+XXNLd1 XP2/p1 XP2/n1 VSS vco_core_NLd1
+XXMCPp3 ckdp3 L3P VR vco_core_MCPp3
+XXMCPp2 ckdp2 L2P VR vco_core_MCPp2
+XXMCPn1 ckdn1 L1N VR vco_core_MCPn1
+XXNLd2 XP3/p2 XP3/n2 VSS vco_core_NLd2
+XXNLc1 XP2/n1 XP2/p1 VSS vco_core_NLc1
+XXMCPn2 ckdn2 L2N VR vco_core_MCPn2
+XXMCPp4 ckdp4 L4P VR vco_core_MCPp4
+XXNLd3 XP4/p3 XP4/n3 VSS vco_core_NLd3
+XXNLc2 XP3/n2 XP3/p2 VSS vco_core_NLc2
+XXMCNp1 CK L1P VSS vco_core_MCNp1
+XXMCPn3 ckdn3 L3N VR vco_core_MCPn3
+XXNLc3 XP4/n3 XP4/p3 VSS vco_core_NLc3
+XXMCNp2 ckdp2 L2P VSS vco_core_MCNp2
+XXNLd4 XP4/n4 XP4/p4 VSS vco_core_NLd4
+XXMCPn4 ckdn4 L4N VR vco_core_MCPn4
+XXMCNp3 ckdp3 L3P VSS vco_core_MCNp3
+XXNLc4 XP4/p4 XP4/n4 VSS vco_core_NLc4
+XXMCNn1 ckdn1 L1N VSS vco_core_MCNn1
+XXMCNn2 ckdn2 L2N VSS vco_core_MCNn2
+XXMCNp4 ckdp4 L4P VSS vco_core_MCNp4
+XXMCNn3 ckdn3 L3N VSS vco_core_MCNn3
+XXMCNn4 ckdn4 L4N VSS vco_core_MCNn4
+.ends
+
+.subckt inv_dig_MN Y A VSS
+X0 Y A VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt inv_dig_MP Y A VDD
+X0 Y A VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt inv_dig VDD A Y VSS
+XXMN Y A VSS inv_dig_MN
+XXMP Y A VDD inv_dig_MP
+.ends
+
+.subckt vco_ring4_MSB0 nb0 VR b0n VDD
+X0 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X1 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X3 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X4 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X5 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X8 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X10 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X11 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X12 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X13 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X14 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X15 nb0 b0n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X16 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X17 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X18 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X19 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X20 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X21 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X22 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X23 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X24 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X25 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X26 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X27 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X28 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X29 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X30 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X31 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X32 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X33 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X34 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X35 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X36 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X37 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X38 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X39 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X40 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X41 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X42 nb0 b0n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X43 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X44 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X45 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X46 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X47 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X48 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X49 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X50 nb0 b0n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X51 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X52 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X53 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X54 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X55 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X56 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X57 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X58 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X59 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X60 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X61 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X62 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X63 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X64 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X65 nb0 b0n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X66 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X67 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X68 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X69 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X70 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X71 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X72 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X73 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X74 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X75 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X76 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X77 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X78 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X79 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X80 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X81 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X82 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X83 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X84 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X85 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X86 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X87 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X88 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X89 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X90 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X91 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X92 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X93 VR b0n nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X94 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X95 nb0 b0n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt vco_ring4_MSB1 nb1 VR b1n VDD
+X0 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X1 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X3 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X4 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X5 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X8 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X10 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X11 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X12 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X13 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X14 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X15 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X16 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X17 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X18 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X19 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X20 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X21 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X22 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X23 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X24 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X25 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X26 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X27 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X28 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X29 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X30 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X31 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X32 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X33 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X34 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X35 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X36 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X37 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X38 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X39 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X40 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X41 nb1 b1n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X42 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X43 nb1 b1n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X44 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X45 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X46 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X47 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X48 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X49 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X50 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X51 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X52 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X53 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X54 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X55 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X56 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X57 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X58 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X59 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X60 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X61 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X62 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X63 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X64 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X65 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X66 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X67 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X68 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X69 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X70 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X71 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X72 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X73 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X74 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X75 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X76 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X77 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X78 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X79 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X80 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X81 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X82 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X83 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X84 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X85 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X86 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X87 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X88 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X89 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X90 nb1 b1n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X91 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X92 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X93 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X94 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X95 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X96 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X97 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X98 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X99 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X100 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X101 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X102 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X103 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X104 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X105 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X106 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X107 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X108 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X109 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X110 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X111 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X112 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X113 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X114 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X115 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X116 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X117 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X118 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X119 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X120 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X121 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X122 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X123 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X124 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X125 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X126 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X127 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X128 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X129 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X130 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X131 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X132 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X133 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X134 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X135 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X136 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X137 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X138 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X139 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X140 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X141 nb1 b1n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X142 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X143 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X144 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X145 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X146 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X147 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X148 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X149 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X150 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X151 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X152 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X153 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X154 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X155 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X156 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X157 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X158 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X159 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X160 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X161 nb1 b1n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X162 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X163 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X164 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X165 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X166 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X167 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X168 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X169 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X170 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X171 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X172 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X173 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X174 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X175 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X176 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X177 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X178 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X179 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X180 nb1 b1n VR VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X181 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X182 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X183 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X184 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X185 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X186 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X187 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X188 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X189 VR b1n nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X190 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X191 nb1 b1n VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt vco_ring4_MVI ns ng VCTRL VSS
+X0 ng VCTRL ns VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.5u
+X1 ng VCTRL ns VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.5u
+X2 ns VCTRL ng VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.5u
+X3 ns VCTRL ng VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.5u
+.ends
+
+.subckt vco_ring4_R2u_0 VSS ns
+X0 ns VSS VSS ppolyf_u_1k r_width=2u r_length=4u
+.ends
+
+.subckt vco_ring4_MPD_MPO_MPB0_MPB1 nb1 VR nb0 ng VDD
+X0 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X1 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X2 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X3 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X4 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X5 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X6 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X7 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X8 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X9 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X10 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X11 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X12 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X13 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X14 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X15 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X16 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X17 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X18 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X19 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X20 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X21 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X22 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X23 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X24 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X25 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X26 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X27 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X28 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X29 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X30 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X31 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X32 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X33 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X34 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X35 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X36 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X37 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X38 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X39 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X40 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X41 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X42 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X43 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X44 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X45 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X46 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X47 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X48 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X49 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X50 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X51 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X52 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X53 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X54 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X55 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X56 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X57 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X58 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X59 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X60 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X61 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X62 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X63 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X64 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X65 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X66 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X67 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X68 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X69 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X70 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X71 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X72 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X73 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X74 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X75 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X76 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X77 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X78 VDD ng nb1 VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.56u
+X79 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X80 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X81 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X82 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X83 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X84 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X85 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X86 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X87 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X88 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X89 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X90 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X91 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X92 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X93 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X94 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X95 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X96 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X97 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X98 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X99 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X100 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X101 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X102 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X103 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X104 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X105 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X106 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X107 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X108 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X109 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X110 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X111 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X112 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X113 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X114 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X115 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X116 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X117 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X118 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X119 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X120 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X121 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X122 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X123 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X124 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X125 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X126 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X127 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X128 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X129 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X130 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X131 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X132 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X133 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X134 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X135 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X136 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X137 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X138 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X139 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X140 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X141 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X142 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X143 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.56u
+X144 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X145 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X146 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X147 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X148 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X149 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X150 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X151 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X152 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X153 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X154 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X155 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X156 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X157 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X158 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X159 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X160 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X161 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X162 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X163 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X164 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X165 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X166 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X167 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X168 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X169 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X170 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X171 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X172 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X173 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X174 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X175 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X176 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X177 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X178 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X179 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X180 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X181 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X182 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X183 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X184 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X185 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X186 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X187 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X188 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X189 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X190 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X191 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X192 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X193 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X194 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X195 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X196 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X197 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X198 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X199 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X200 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X201 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X202 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X203 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X204 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X205 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X206 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X207 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X208 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X209 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X210 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X211 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X212 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X213 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X214 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X215 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X216 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X217 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X218 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X219 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X220 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X221 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X222 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X223 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X224 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X225 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X226 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X227 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X228 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X229 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X230 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X231 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X232 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X233 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X234 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X235 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X236 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X237 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X238 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X239 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X240 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X241 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X242 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X243 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X244 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X245 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X246 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X247 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X248 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X249 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X250 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X251 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X252 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X253 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X254 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X255 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X256 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X257 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X258 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X259 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X260 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X261 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X262 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X263 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X264 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X265 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X266 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X267 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X268 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X269 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X270 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X271 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X272 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X273 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X274 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X275 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X276 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X277 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X278 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X279 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X280 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X281 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X282 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X283 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X284 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X285 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X286 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X287 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X288 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X289 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X290 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X291 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X292 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X293 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X294 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X295 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X296 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X297 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X298 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X299 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X300 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X301 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X302 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X303 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X304 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X305 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X306 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X307 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X308 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X309 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X310 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X311 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X312 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X313 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X314 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X315 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X316 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X317 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X318 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X319 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X320 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X321 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X322 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X323 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X324 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X325 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X326 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X327 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X328 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X329 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X330 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X331 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X332 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X333 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X334 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X335 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X336 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X337 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X338 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X339 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X340 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X341 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X342 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X343 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X344 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X345 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X346 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X347 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X348 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X349 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X350 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X351 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X352 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X353 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X354 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X355 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X356 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X357 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X358 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X359 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X360 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X361 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X362 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X363 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X364 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X365 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X366 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X367 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X368 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X369 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X370 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X371 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X372 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X373 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X374 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X375 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X376 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X377 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X378 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X379 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X380 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X381 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X382 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X383 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X384 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X385 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X386 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X387 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X388 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X389 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X390 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X391 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X392 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X393 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X394 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X395 VDD ng nb1 VDD pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.56u
+X396 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X397 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X398 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X399 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X400 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X401 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X402 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X403 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X404 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X405 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X406 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X407 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X408 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X409 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X410 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X411 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X412 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X413 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X414 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X415 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X416 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X417 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X418 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X419 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X420 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X421 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X422 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X423 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X424 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X425 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X426 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X427 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X428 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X429 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X430 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X431 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X432 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X433 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X434 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X435 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X436 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X437 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X438 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X439 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X440 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X441 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X442 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X443 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X444 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X445 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X446 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X447 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X448 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X449 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X450 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X451 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X452 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X453 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X454 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X455 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X456 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X457 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X458 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X459 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X460 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X461 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X462 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X463 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X464 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X465 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X466 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X467 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X468 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X469 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X470 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X471 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X472 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X473 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X474 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X475 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X476 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X477 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X478 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X479 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X480 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X481 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X482 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X483 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X484 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X485 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X486 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X487 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X488 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X489 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X490 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X491 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X492 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X493 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X494 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X495 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X496 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X497 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X498 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X499 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X500 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X501 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X502 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X503 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X504 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X505 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X506 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X507 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X508 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X509 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X510 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X511 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X512 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X513 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X514 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X515 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X516 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X517 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X518 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X519 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X520 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X521 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X522 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X523 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X524 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X525 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X526 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X527 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X528 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X529 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X530 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X531 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X532 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X533 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X534 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X535 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X536 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X537 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X538 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X539 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X540 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X541 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X542 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X543 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X544 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X545 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X546 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X547 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X548 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X549 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X550 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X551 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X552 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X553 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X554 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X555 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X556 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X557 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X558 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X559 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X560 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X561 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X562 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X563 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X564 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X565 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X566 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X567 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X568 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X569 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X570 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X571 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X572 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X573 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X574 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X575 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X576 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X577 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X578 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X579 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X580 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X581 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X582 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X583 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X584 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X585 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X586 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X587 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X588 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X589 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X590 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X591 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X592 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X593 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X594 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X595 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X596 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X597 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X598 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X599 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X600 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X601 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X602 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X603 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X604 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X605 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X606 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X607 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X608 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X609 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X610 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X611 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X612 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X613 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X614 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X615 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X616 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X617 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X618 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X619 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X620 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X621 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X622 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X623 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X624 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X625 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X626 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X627 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X628 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X629 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X630 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X631 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X632 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X633 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X634 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X635 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X636 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X637 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X638 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X639 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X640 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X641 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X642 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X643 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X644 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X645 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X646 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X647 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X648 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X649 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X650 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X651 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X652 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X653 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X654 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X655 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X656 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.56u
+X657 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X658 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X659 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X660 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X661 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X662 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X663 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X664 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X665 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X666 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X667 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X668 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X669 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X670 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X671 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X672 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X673 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X674 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X675 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X676 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X677 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X678 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X679 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X680 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X681 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X682 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X683 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X684 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X685 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X686 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X687 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X688 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X689 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X690 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X691 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X692 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X693 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X694 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X695 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X696 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X697 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X698 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X699 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X700 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X701 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X702 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X703 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X704 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X705 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X706 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X707 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X708 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X709 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X710 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X711 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X712 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X713 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X714 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X715 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X716 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X717 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X718 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X719 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X720 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X721 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X722 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X723 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X724 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X725 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X726 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X727 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X728 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X729 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X730 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X731 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X732 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X733 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X734 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X735 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X736 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X737 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X738 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X739 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X740 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X741 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X742 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X743 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X744 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X745 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X746 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X747 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X748 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X749 VDD ng ng VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X750 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X751 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X752 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X753 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X754 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X755 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X756 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X757 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X758 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X759 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X760 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X761 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X762 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X763 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X764 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X765 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X766 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X767 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X768 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X769 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X770 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X771 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X772 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X773 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X774 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X775 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X776 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X777 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X778 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X779 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X780 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X781 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X782 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X783 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X784 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X785 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X786 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X787 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X788 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X789 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X790 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X791 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X792 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X793 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X794 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X795 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X796 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X797 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X798 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X799 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X800 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X801 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X802 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X803 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X804 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X805 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X806 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X807 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X808 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X809 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X810 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X811 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X812 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X813 ng ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X814 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X815 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X816 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X817 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X818 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X819 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X820 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X821 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X822 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X823 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X824 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X825 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X826 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X827 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X828 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X829 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X830 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X831 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X832 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X833 nb0 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X834 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X835 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X836 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X837 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X838 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X839 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X840 VR ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X841 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X842 VDD ng VR VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X843 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X844 VDD ng nb0 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X845 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X846 VDD ng nb1 VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+X847 nb1 ng VDD VDD pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.56u
+.ends
+
+.subckt vco_ring4 VSS VDD L1P L1N L4P L4N L2P L2N L3P L3N VCTRL B0 B1 NB CK VR
+XXCSUA XSUA1/B VSS vco_ring4_CSUA
+XXCSUB XSUB1/B VSS vco_ring4_CSUB
+XXSUA VSS VR XSUB/A XSUB/B XSUA/Y nand2
+XXSUB VR XSUB/A XSUB/B XSUB/Y VSS nor2
+XXCVR VR VSS vco_ring4_CVR
+XXSUAD1 VSS VR CK XSUBD1/B XSUAD1/Y nand2
+XXR1u_0 XSUA1/B XSUA/Y XSUB1/B XSUB/Y VSS vco_ring4_R1u_0
+XXMMIN XMVI/ng NB VSS vco_ring4_MMIN
+XXCORE VR XSUA2/A XSUB2/Y CK XSUBD1/B XSUBD4/A XSUBD4/B XSUB/A XSUB/B XSUBD3/A XSUBD3/B
++ L1P L1N L4P L4N L2P L2N L3P L3N VSS vco_core
+XXSUAD3 VSS VR XSUBD3/A XSUBD3/B XSUAD3/Y nand2
+XXSUAD4 VSS VR XSUBD4/A XSUBD4/B XSUAD4/Y nand2
+XXSUB1 VSS VR XSUB/Y XSUB1/B XSUB2/A nand2
+XXSUB2 VR XSUB2/A XSUB2/Y VSS inv_dig
+XXSUA1 VR XSUA/Y XSUA1/B XSUA2/A VSS nor2
+XXMSB0 XMSB0/nb0 VR XB0/Y VDD vco_ring4_MSB0
+XXSUA2 VR XSUA2/A XSUA2/Y VSS inv_dig
+XXMSB1 XMSB1/nb1 VR XB1/Y VDD vco_ring4_MSB1
+XXMVI XMVI/ns XMVI/ng VCTRL VSS vco_ring4_MVI
+XXB0 VDD B0 XB0/Y VSS inv_dig
+XXB1 VDD B1 XB1/Y VSS inv_dig
+XXR2u_0 VSS XMVI/ns vco_ring4_R2u_0
+XXSUBD1 VR CK XSUBD1/B XSUBD1/Y VSS nor2
+XXMPD_MPO_MPB0_MPB1 XMSB1/nb1 VR XMSB0/nb0 XMVI/ng VDD vco_ring4_MPD_MPO_MPB0_MPB1
+XXSUBD3 VR XSUBD3/A XSUBD3/B XSUBD3/Y VSS nor2
+XXSUBD4 VR XSUBD4/A XSUBD4/B XSUBD4/Y VSS nor2
+.ends
+

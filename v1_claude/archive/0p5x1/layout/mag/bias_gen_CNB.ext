@@ -1,0 +1,29 @@
+timestamp 0
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+parameters cap_mim_2f0_m4m5_noshield l=c_length w=c_width
+port "VSS" 2 0 -480 4480 -160 m3
+port "NB" 1 0 4860 4480 5180 m3
+node "VSS" 2 5177.39 0 -480 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1433600 9600 7411200 19360 0 0
+node "NB" 3 8305.89 0 4860 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1433600 9600 16896000 9360 17040032 47616
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "NB" "VSS" 6824.33
+device csubckt cap_mim_2f0_m4m5_noshield 3480 0 3481 1 l=1000 w=1000 "None" "NB" 844 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 2320 0 2321 1 l=1000 w=1000 "None" "NB" 844 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 1160 0 1161 1 l=1000 w=1000 "None" "NB" 844 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 0 0 1 1 l=1000 w=1000 "None" "NB" 844 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 3480 1160 3481 1161 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 2320 1160 2321 1161 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 1160 1160 1161 1161 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 0 1160 1 1161 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 3480 2320 3481 2321 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 2320 2320 2321 2321 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 1160 2320 1161 2321 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 0 2320 1 2321 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 3480 3480 3481 3481 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 2320 3480 2321 3481 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 1160 3480 1161 3481 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680
+device csubckt cap_mim_2f0_m4m5_noshield 0 3480 1 3481 l=1000 w=1000 "None" "NB" 1688 0 "VSS" 4000 3705600,41680

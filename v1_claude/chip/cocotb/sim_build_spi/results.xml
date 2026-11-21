@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1794731458" />
+    <testcase name="test_spi" classname="gnss_spi_tb" file="/home/noritsuna/GPS/chip/cocotb/gnss_spi_tb.py" lineno="89" time="0.15938043594360352" sim_time_ns="400700.0" ratio_time="2514110.3274544124" />
+  </testsuite>
+</testsuites>

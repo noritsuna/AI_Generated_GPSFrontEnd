@@ -1,0 +1,36 @@
+route inv_dig: OK []  grid 51x40 nets 4
+route cp: OK []  grid 253x122 nets 20
+cp           route=True DRC=0 LVS=OK size=177x85um 4s 
+route loop_filter: OK []  grid 295x428 nets 4
+loop_filter  route=True DRC=0 LVS=OK size=206x299um 12s 
+route divbuf: OK []  grid 112x63 nets 6
+route tspc_dff: OK []  grid 75x97 nets 11
+route div2: OK []  grid 107x127 nets 5
+route nor2: OK []  grid 51x71 nets 6
+route div3: OK []  grid 243x127 nets 8
+route inv_lo1: OK []  grid 51x41 nets 4
+route inv_lo2: OK []  grid 56x40 nets 4
+route div48: OK []  grid 311x451 nets 14
+route nand2: OK []  grid 51x68 nets 6
+route nand3: OK []  grid 63x69 nets 8
+route dff_r: OK []  grid 231x187 nets 10
+route pfd: OK []  grid 262x572 nets 13
+route pll_core: OK []  grid 937x744 nets 20
+pll_core     route=True DRC=0 LVS=OK size=655x520um 64s 
+  retry with single-track: ['OUTP', 'VDD']
+route vga: OK []  grid 322x185 nets 16
+vga: routed=True 96.5s
+vga          route=True DRC=0 LVS=OK size=225x129um 97s 
+route vga_fix: OK []  grid 162x317 nets 12
+vga_fix      route=True DRC=0 LVS=OK size=113x221um 3s 
+route sk_lpf1: OK []  grid 342x165 nets 11
+sk_lpf1      route=True DRC=0 LVS=OK size=239x115um 5s 
+route sk_lpf2: OK []  grid 454x204 nets 11
+sk_lpf2      route=True DRC=0 LVS=OK size=317x142um 13s 
+route bias_if: OK []  grid 158x148 nets 19
+route if_chain: OK []  grid 843x757 nets 27
+if_chain     route=True DRC=0 LVS=OK size=590x529um 45s 
+route mixer_iq: OK []  grid 274x600 nets 42
+mixer_iq     route=True DRC=0 LVS=OK size=191x419um 67s 
+route decap: OK []  grid 581x295 nets 2
+decap        route=True DRC=0 LVS=OK size=406x206um 3s 

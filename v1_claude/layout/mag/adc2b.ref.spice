@@ -1,0 +1,48 @@
+.subckt inv_dig A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt nor2 A B Y VDD VSS
+XMN1 Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMN2 Y B VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP1 n1 A VDD VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+XMP2 Y B n1 VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+.ends
+.subckt sa_comp INP INN REFP REFN CLK Q QB VDD VSS
+XMT t CLK VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XM1 x1 INP t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM2 x2 INN t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM3 x2 REFP t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM4 x1 REFN t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM5 on op x1 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XM6 op on x2 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XM7 on op VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XM8 op on VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XM9 on CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XM10 op CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XM11 x1 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XM12 x2 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XI1 op opb VDD VSS inv_dig
+XI2 on onb VDD VSS inv_dig
+XS1 opb QB Q VDD VSS nor2
+XS2 onb Q QB VDD VSS nor2
+.ends
+.subckt nand2 A B Y VDD VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN2 n1 B VSS VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt adc2b INP INN CLK SIGN MAG VDD VSS
+XRL0 thp VDD VSS ppolyf_u_1k r_width=10u r_length=40.1u
+XRL1 thm thp VSS ppolyf_u_1k r_width=10u r_length=1.4u
+XRL2 thn thm VSS ppolyf_u_1k r_width=10u r_length=1.4u
+XRL3 VSS thn VSS ppolyf_u_1k r_width=10u r_length=22.3u
+XCT1 thp VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6 m=1
+XCT2 thm VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6 m=1
+XCT3 thn VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6 m=1
+XCS INP INN thm thm CLK SIGN sb VDD VSS sa_comp
+XCH INP INN thp thn CLK qh qhb VDD VSS sa_comp
+XCL INP INN thn thp CLK ql qlb VDD VSS sa_comp
+XM qhb ql MAG VDD VSS nand2
+.ends

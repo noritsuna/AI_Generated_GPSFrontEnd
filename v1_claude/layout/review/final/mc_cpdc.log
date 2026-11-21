@@ -1,0 +1,15 @@
+sim/mc/final_cpdc_tt.txt: 300 runs
+  a1.7     nom     0.137  mean     0.122  sd    1.167  min    -2.749  max     3.519
+  b1.7     nom     0.218  mean     0.182  sd    2.307  min    -5.967  max     6.680
+  u1.7     nom  -101.779  mean  -101.700  sd    2.581  min  -108.496  max   -94.488
+  d1.7     nom  -101.916  mean  -101.815  sd    2.048  min  -109.440  max   -97.234
+sim/mc/final_cpdc_ss.txt: 300 runs
+  a1.7     nom     0.721  mean     0.711  sd    1.032  min    -1.847  max     3.744
+  b1.7     nom     1.365  mean     1.338  sd    2.035  min    -4.229  max     7.160
+  u1.7     nom  -110.265  mean  -110.183  sd    2.333  min  -116.361  max  -103.812
+  d1.7     nom  -110.987  mean  -110.888  sd    1.865  min  -117.768  max  -106.684
+sim/mc/final_cpdc_ff.txt: 300 runs
+  a1.7     nom    -0.343  mean    -0.363  sd    1.364  min    -3.719  max     3.568
+  b1.7     nom    -0.732  mean    -0.779  sd    2.701  min    -7.828  max     6.718
+  u1.7     nom  -101.269  mean  -101.188  sd    2.950  min  -108.893  max   -92.814
+  d1.7     nom  -100.925  mean  -100.815  sd    2.328  min  -109.540  max   -95.644

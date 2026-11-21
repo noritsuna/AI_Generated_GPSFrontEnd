@@ -1,0 +1,4 @@
+== mixer schematic
+RES vin_pp=0.00388485 ipp=0.0185041 qpp=0.0181403 ti=3.15344E-10 tq=1.35382E-08
+== mixer PEX
+RES vin_pp=0.00551927 ipp=0.0385534 qpp=0.0171382 ti=3.22931E-10 tq=1.59609E-07

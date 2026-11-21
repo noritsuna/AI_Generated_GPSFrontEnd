@@ -1,0 +1,29 @@
+.subckt inv_dig A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt nor2 A B Y VDD VSS
+XMN1 Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMN2 Y B VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP1 n1 A VDD VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+XMP2 Y B n1 VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+.ends
+.subckt sa_comp INP INN REFP REFN CLK Q QB VDD VSS
+XMT t CLK VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XM1 x1 INP t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM2 x2 INN t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM3 x2 REFP t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM4 x1 REFN t VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XM5 on op x1 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XM6 op on x2 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XM7 on op VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XM8 op on VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XM9 on CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XM10 op CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XM11 x1 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XM12 x2 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XI1 op opb VDD VSS inv_dig
+XI2 on onb VDD VSS inv_dig
+XS1 opb QB Q VDD VSS nor2
+XS2 onb Q QB VDD VSS nor2
+.ends

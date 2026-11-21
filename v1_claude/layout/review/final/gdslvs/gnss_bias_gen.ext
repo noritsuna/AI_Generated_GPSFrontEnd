@@ -1,0 +1,77 @@
+timestamp 1623399878
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use gnss_bias_gen_MN2 XMN2 1 0 11760 0 1 15680
+use gnss_bias_gen_CPB XCPB 1 0 6160 0 1 15960
+use gnss_bias_gen_CNB XCNB 1 0 1120 0 1 15960
+use gnss_bias_gen_R1u_0 XR1u_0 1 0 13020 0 1 10780
+use gnss_bias_gen_MN3 XMN3 1 0 10080 0 1 10500
+use gnss_bias_gen_MP3 XMP3 1 0 7280 0 1 10500
+use gnss_bias_gen_MP2 XMP2 1 0 4480 0 1 10500
+use gnss_bias_gen_MP1 XMP1 1 0 1680 0 1 10500
+use gnss_bias_gen_MSN XMSN 1 0 13300 0 1 5320
+use gnss_bias_gen_MSU XMSU 1 0 11200 0 1 5320
+use gnss_bias_gen_MN4 XMN4 1 0 8680 0 1 5320
+use gnss_bias_gen_MN1 XMN1 1 0 5880 0 1 5320
+use gnss_bias_gen_MP4 XMP4 1 0 1680 0 1 5320
+use gnss_bias_gen_MSP XMSP 1 0 5320 0 1 1120
+port "PB" 10 16000 14600 16200 14800 m4
+port "VSS" 3 0 0 600 21560 m3
+port "NB" 8 16000 6620 16200 6820 m4
+port "VDD" 5 14526 0 15126 21560 m3
+node "m2_9490_1370#" 0 0 9490 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "PB" 0 0 16000 14600 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_12702_11862#" 0 0 12702 11862 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_2062_12282#" 0 0 2062 12282 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_2210_11450#" 0 0 2210 11450 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "NB" 0 0 16000 6620 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 14526 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMN2/nr" "XR1u_0/nr" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR1u_0/nr" "m2_12702_11862#"
+merge "XMN2/VSS" "XCPB/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPB/VSUBS" "XCNB/VSUBS"
+merge "XCNB/VSUBS" "XCNB/VSS"
+merge "XCNB/VSS" "XR1u_0/VSS"
+merge "XR1u_0/VSS" "XMN3/VSS"
+merge "XMN3/VSS" "XMP3/VSUBS"
+merge "XMP3/VSUBS" "XMP2/VSUBS"
+merge "XMP2/VSUBS" "XMP1/VSUBS"
+merge "XMP1/VSUBS" "XMSN/VSS"
+merge "XMSN/VSS" "XMSU/VSS"
+merge "XMSU/VSS" "XMN4/VSS"
+merge "XMN4/VSS" "XMN1/VSS"
+merge "XMN1/VSS" "XMSP/VSS"
+merge "XMSP/VSS" "VSS"
+merge "VSS" "XMP4/VSUBS"
+merge "XMP4/VSUBS" "XMSP/VSUBS"
+merge "XMSP/VSUBS" "VSUBS"
+merge "XCPB/VDD" "XMP3/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP3/VDD" "XMP2/VDD"
+merge "XMP2/VDD" "XMP1/VDD"
+merge "XMP1/VDD" "XMP4/VDD"
+merge "XMP4/VDD" "XMSP/VDD"
+merge "XMSP/VDD" "VDD"
+merge "XMN2/nbc" "XMP1/nbc" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP1/nbc" "XMSN/nbc"
+merge "XMSN/nbc" "XMN4/nbc"
+merge "XMN4/nbc" "XMN1/nbc"
+merge "XMN1/nbc" "m2_2210_11450#"
+merge "XCPB/PB" "XMN4/PB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMN4/PB" "XMP4/PB"
+merge "XMP4/PB" "PB"
+merge "XMN2/pbc" "XMP3/pbc" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP3/pbc" "XMP2/pbc"
+merge "XMP2/pbc" "XMP1/pbc"
+merge "XMP1/pbc" "XMSU/pbc"
+merge "XMSU/pbc" "m2_2062_12282#"
+merge "XMSU/st" "XMSN/st" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMSN/st" "XMSP/st"
+merge "XMSP/st" "m2_9490_1370#"
+merge "XCNB/NB" "XMN3/NB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMN3/NB" "XMP3/NB"
+merge "XMP3/NB" "NB"

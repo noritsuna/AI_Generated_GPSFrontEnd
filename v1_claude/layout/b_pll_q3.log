@@ -1,0 +1,2 @@
+route pll_core: OK []  grid 1415x299 nets 20
+pll_core     route=True DRC=0 LVS=OK size=990x208um 18s 

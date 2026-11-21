@@ -1,0 +1,141 @@
+== source shunt C 1 pF    series C 1.8 pF  connector shunt none     
+  tt wire 2.0 nH  1550 MHz S11 -12.65 gain 13.21 NF 3.00 | 1575 MHz S11 -14.12 gain 13.23 NF 2.89 | 1600 MHz S11 -15.68 gain 13.24 NF 2.80
+  tt wire 2.5 nH  1550 MHz S11 -17.93 gain 13.39 NF 2.70 | 1575 MHz S11 -19.96 gain 13.37 NF 2.62 | 1600 MHz S11 -20.50 gain 13.33 NF 2.56
+  tt wire 3.0 nH  1550 MHz S11 -22.34 gain 13.44 NF 2.50 | 1575 MHz S11 -19.16 gain 13.37 NF 2.46 | 1600 MHz S11 -16.30 gain 13.27 NF 2.45
+  tt wire 3.5 nH  1550 MHz S11 -15.95 gain 13.36 NF 2.41 | 1575 MHz S11 -13.51 gain 13.23 NF 2.43 | 1600 MHz S11 -11.67 gain 13.08 NF 2.47
+  tt wire 4.0 nH  1550 MHz S11 -11.45 gain 13.16 NF 2.45 | 1575 MHz S11  -9.91 gain 12.97 NF 2.52 | 1600 MHz S11  -8.69 gain 12.76 NF 2.63
+  ss wire 2.0 nH  1550 MHz S11 -10.26 gain 12.54 NF 3.81 | 1575 MHz S11 -11.27 gain 12.57 NF 3.67 | 1600 MHz S11 -12.27 gain 12.59 NF 3.56
+  ss wire 2.5 nH  1550 MHz S11 -13.66 gain 12.79 NF 3.42 | 1575 MHz S11 -14.81 gain 12.77 NF 3.32 | 1600 MHz S11 -15.43 gain 12.74 NF 3.24
+  ss wire 3.0 nH  1550 MHz S11 -16.93 gain 12.90 NF 3.14 | 1575 MHz S11 -16.23 gain 12.82 NF 3.09 | 1600 MHz S11 -14.74 gain 12.73 NF 3.07
+  ss wire 3.5 nH  1550 MHz S11 -15.15 gain 12.86 NF 3.00 | 1575 MHz S11 -13.09 gain 12.72 NF 3.02 | 1600 MHz S11 -11.36 gain 12.55 NF 3.07
+  ss wire 4.0 nH  1550 MHz S11 -11.43 gain 12.68 NF 3.01 | 1575 MHz S11  -9.83 gain 12.47 NF 3.11 | 1600 MHz S11  -8.55 gain 12.24 NF 3.23
+  ff wire 2.0 nH  1550 MHz S11 -16.06 gain 13.55 NF 2.46 | 1575 MHz S11 -18.47 gain 13.56 NF 2.38 | 1600 MHz S11 -21.42 gain 13.56 NF 2.31
+  ff wire 2.5 nH  1550 MHz S11 -26.63 gain 13.66 NF 2.25 | 1575 MHz S11 -29.41 gain 13.62 NF 2.20 | 1600 MHz S11 -23.75 gain 13.58 NF 2.16
+  ff wire 3.0 nH  1550 MHz S11 -21.78 gain 13.64 NF 2.13 | 1575 MHz S11 -17.76 gain 13.56 NF 2.11 | 1600 MHz S11 -15.12 gain 13.47 NF 2.12
+  ff wire 3.5 nH  1550 MHz S11 -14.25 gain 13.51 NF 2.11 | 1575 MHz S11 -12.33 gain 13.38 NF 2.14 | 1600 MHz S11 -10.83 gain 13.23 NF 2.18
+  ff wire 4.0 nH  1550 MHz S11 -10.44 gain 13.27 NF 2.19 | 1575 MHz S11  -9.20 gain 13.09 NF 2.26 | 1600 MHz S11  -8.18 gain 12.90 NF 2.36
+== source shunt L 6.8 nH  series C 1 pF    connector shunt none     
+  tt wire 2.0 nH  1550 MHz S11 -12.74 gain 13.21 NF 3.10 | 1575 MHz S11 -15.47 gain 13.28 NF 2.91 | 1600 MHz S11 -19.25 gain 13.31 NF 2.77
+  tt wire 2.5 nH  1550 MHz S11 -19.72 gain 13.41 NF 2.75 | 1575 MHz S11 -28.83 gain 13.40 NF 2.62 | 1600 MHz S11 -29.57 gain 13.36 NF 2.53
+  tt wire 3.0 nH  1550 MHz S11 -23.73 gain 13.45 NF 2.52 | 1575 MHz S11 -18.83 gain 13.36 NF 2.46 | 1600 MHz S11 -15.20 gain 13.24 NF 2.44
+  tt wire 3.5 nH  1550 MHz S11 -14.50 gain 13.31 NF 2.44 | 1575 MHz S11 -12.12 gain 13.15 NF 2.45 | 1600 MHz S11 -10.33 gain 12.96 NF 2.51
+  tt wire 4.0 nH  1550 MHz S11 -10.09 gain 13.03 NF 2.51 | 1575 MHz S11  -8.66 gain 12.80 NF 2.61 | 1600 MHz S11  -7.52 gain 12.54 NF 2.74
+  ss wire 2.0 nH  1550 MHz S11 -10.79 gain 12.59 NF 3.85 | 1575 MHz S11 -12.80 gain 12.68 NF 3.63 | 1600 MHz S11 -15.10 gain 12.72 NF 3.45
+  ss wire 2.5 nH  1550 MHz S11 -16.38 gain 12.87 NF 3.39 | 1575 MHz S11 -20.75 gain 12.88 NF 3.23 | 1600 MHz S11 -23.16 gain 12.84 NF 3.12
+  ss wire 3.0 nH  1550 MHz S11 -33.42 gain 12.98 NF 3.07 | 1575 MHz S11 -21.51 gain 12.90 NF 2.99 | 1600 MHz S11 -16.17 gain 12.77 NF 2.97
+  ss wire 3.5 nH  1550 MHz S11 -16.68 gain 12.90 NF 2.92 | 1575 MHz S11 -13.09 gain 12.72 NF 2.95 | 1600 MHz S11 -10.75 gain 12.50 NF 3.03
+  ss wire 4.0 nH  1550 MHz S11 -10.91 gain 12.63 NF 2.97 | 1575 MHz S11  -9.05 gain 12.37 NF 3.11 | 1600 MHz S11  -7.67 gain 12.08 NF 3.29
+  ff wire 2.0 nH  1550 MHz S11 -14.96 gain 13.52 NF 2.59 | 1575 MHz S11 -18.38 gain 13.56 NF 2.45 | 1600 MHz S11 -23.49 gain 13.57 NF 2.34
+  ff wire 2.5 nH  1550 MHz S11 -20.20 gain 13.62 NF 2.35 | 1575 MHz S11 -21.69 gain 13.60 NF 2.26 | 1600 MHz S11 -19.44 gain 13.54 NF 2.20
+  ff wire 3.0 nH  1550 MHz S11 -16.76 gain 13.58 NF 2.23 | 1575 MHz S11 -14.71 gain 13.49 NF 2.19 | 1600 MHz S11 -12.79 gain 13.37 NF 2.18
+  ff wire 3.5 nH  1550 MHz S11 -11.91 gain 13.39 NF 2.22 | 1575 MHz S11 -10.44 gain 13.23 NF 2.25 | 1600 MHz S11  -9.20 gain 13.05 NF 2.30
+  ff wire 4.0 nH  1550 MHz S11  -8.80 gain 13.07 NF 2.34 | 1575 MHz S11  -7.78 gain 12.86 NF 2.43 | 1600 MHz S11  -6.92 gain 12.63 NF 2.55
+== source shunt none      series C 1 pF    connector shunt none     
+  tt wire 2.0 nH  1550 MHz S11  -6.14 gain 12.24 NF 4.18 | 1575 MHz S11  -6.78 gain 12.38 NF 3.98 | 1600 MHz S11  -7.48 gain 12.50 NF 3.79
+  tt wire 2.5 nH  1550 MHz S11  -7.92 gain 12.69 NF 3.69 | 1575 MHz S11  -8.88 gain 12.81 NF 3.49 | 1600 MHz S11  -9.96 gain 12.90 NF 3.32
+  tt wire 3.0 nH  1550 MHz S11 -10.54 gain 13.06 NF 3.24 | 1575 MHz S11 -12.10 gain 13.14 NF 3.07 | 1600 MHz S11 -13.90 gain 13.19 NF 2.92
+  tt wire 3.5 nH  1550 MHz S11 -14.83 gain 13.33 NF 2.87 | 1575 MHz S11 -17.74 gain 13.35 NF 2.73 | 1600 MHz S11 -20.84 gain 13.35 NF 2.62
+  tt wire 4.0 nH  1550 MHz S11 -23.90 gain 13.46 NF 2.59 | 1575 MHz S11 -25.28 gain 13.42 NF 2.50 | 1600 MHz S11 -20.02 gain 13.35 NF 2.45
+  ss wire 2.0 nH  1550 MHz S11  -5.17 gain 11.39 NF 5.21 | 1575 MHz S11  -5.70 gain 11.55 NF 4.98 | 1600 MHz S11  -6.27 gain 11.69 NF 4.76
+  ss wire 2.5 nH  1550 MHz S11  -6.64 gain 11.91 NF 4.63 | 1575 MHz S11  -7.41 gain 12.05 NF 4.40 | 1600 MHz S11  -8.26 gain 12.16 NF 4.19
+  ss wire 3.0 nH  1550 MHz S11  -8.74 gain 12.36 NF 4.09 | 1575 MHz S11  -9.91 gain 12.46 NF 3.88 | 1600 MHz S11 -11.17 gain 12.53 NF 3.70
+  ss wire 3.5 nH  1550 MHz S11 -11.89 gain 12.70 NF 3.62 | 1575 MHz S11 -13.65 gain 12.75 NF 3.45 | 1600 MHz S11 -15.23 gain 12.75 NF 3.31
+  ss wire 4.0 nH  1550 MHz S11 -16.71 gain 12.91 NF 3.25 | 1575 MHz S11 -18.04 gain 12.88 NF 3.13 | 1600 MHz S11 -17.05 gain 12.81 NF 3.07
+  ff wire 2.0 nH  1550 MHz S11  -7.33 gain 12.77 NF 3.41 | 1575 MHz S11  -8.11 gain 12.89 NF 3.24 | 1600 MHz S11  -8.98 gain 13.00 NF 3.09
+  ff wire 2.5 nH  1550 MHz S11  -9.52 gain 13.15 NF 3.01 | 1575 MHz S11 -10.75 gain 13.25 NF 2.85 | 1600 MHz S11 -12.18 gain 13.32 NF 2.71
+  ff wire 3.0 nH  1550 MHz S11 -12.90 gain 13.44 NF 2.66 | 1575 MHz S11 -15.11 gain 13.50 NF 2.52 | 1600 MHz S11 -17.96 gain 13.53 NF 2.41
+  ff wire 3.5 nH  1550 MHz S11 -19.19 gain 13.63 NF 2.38 | 1575 MHz S11 -25.44 gain 13.63 NF 2.28 | 1600 MHz S11 -36.07 gain 13.61 NF 2.21
+  ff wire 4.0 nH  1550 MHz S11 -35.05 gain 13.68 NF 2.20 | 1575 MHz S11 -22.93 gain 13.63 NF 2.14 | 1600 MHz S11 -17.85 gain 13.54 NF 2.11
+== source shunt C 1 pF    series C 1.5 pF  connector shunt none     
+  tt wire 2.0 nH  1550 MHz S11  -9.00 gain 12.86 NF 3.51 | 1575 MHz S11 -10.04 gain 12.95 NF 3.35 | 1600 MHz S11 -11.24 gain 13.02 NF 3.20
+  tt wire 2.5 nH  1550 MHz S11 -12.35 gain 13.20 NF 3.08 | 1575 MHz S11 -14.26 gain 13.24 NF 2.94 | 1600 MHz S11 -16.64 gain 13.27 NF 2.82
+  tt wire 3.0 nH  1550 MHz S11 -18.65 gain 13.40 NF 2.74 | 1575 MHz S11 -23.67 gain 13.40 NF 2.63 | 1600 MHz S11 -29.18 gain 13.37 NF 2.55
+  tt wire 3.5 nH  1550 MHz S11 -33.85 gain 13.47 NF 2.51 | 1575 MHz S11 -22.19 gain 13.40 NF 2.45 | 1600 MHz S11 -17.38 gain 13.30 NF 2.43
+  tt wire 4.0 nH  1550 MHz S11 -16.72 gain 13.39 NF 2.40 | 1575 MHz S11 -13.71 gain 13.24 NF 2.41 | 1600 MHz S11 -11.59 gain 13.08 NF 2.46
+  ss wire 2.0 nH  1550 MHz S11  -7.55 gain 12.13 NF 4.40 | 1575 MHz S11  -8.39 gain 12.23 NF 4.20 | 1600 MHz S11  -9.33 gain 12.31 NF 4.03
+  ss wire 2.5 nH  1550 MHz S11 -10.20 gain 12.54 NF 3.87 | 1575 MHz S11 -11.58 gain 12.61 NF 3.70 | 1600 MHz S11 -13.14 gain 12.65 NF 3.54
+  ss wire 3.0 nH  1550 MHz S11 -14.49 gain 12.83 NF 3.43 | 1575 MHz S11 -16.81 gain 12.84 NF 3.29 | 1600 MHz S11 -18.76 gain 12.82 NF 3.19
+  ss wire 3.5 nH  1550 MHz S11 -21.17 gain 12.96 NF 3.11 | 1575 MHz S11 -20.25 gain 12.90 NF 3.04 | 1600 MHz S11 -17.12 gain 12.80 NF 3.00
+  ss wire 4.0 nH  1550 MHz S11 -17.49 gain 12.92 NF 2.94 | 1575 MHz S11 -14.18 gain 12.78 NF 2.95 | 1600 MHz S11 -11.82 gain 12.60 NF 3.00
+  ff wire 2.0 nH  1550 MHz S11 -10.83 gain 13.28 NF 2.87 | 1575 MHz S11 -12.17 gain 13.35 NF 2.75 | 1600 MHz S11 -13.77 gain 13.40 NF 2.63
+  ff wire 2.5 nH  1550 MHz S11 -15.19 gain 13.53 NF 2.55 | 1575 MHz S11 -17.95 gain 13.56 NF 2.44 | 1600 MHz S11 -22.01 gain 13.57 NF 2.35
+  ff wire 3.0 nH  1550 MHz S11 -24.47 gain 13.66 NF 2.31 | 1575 MHz S11 -31.33 gain 13.63 NF 2.24 | 1600 MHz S11 -24.92 gain 13.59 NF 2.19
+  ff wire 3.5 nH  1550 MHz S11 -21.39 gain 13.65 NF 2.17 | 1575 MHz S11 -17.48 gain 13.57 NF 2.14 | 1600 MHz S11 -14.74 gain 13.46 NF 2.14
+  ff wire 4.0 nH  1550 MHz S11 -13.89 gain 13.50 NF 2.14 | 1575 MHz S11 -11.91 gain 13.36 NF 2.17 | 1600 MHz S11 -10.37 gain 13.20 NF 2.22
+== source shunt C 1 pF    series C 2.2 pF  connector shunt none     
+  tt wire 2.0 nH  1550 MHz S11 -15.97 gain 13.34 NF 2.69 | 1575 MHz S11 -16.52 gain 13.30 NF 2.64 | 1600 MHz S11 -16.41 gain 13.26 NF 2.60
+  tt wire 2.5 nH  1550 MHz S11 -17.49 gain 13.38 NF 2.52 | 1575 MHz S11 -16.06 gain 13.30 NF 2.50 | 1600 MHz S11 -14.50 gain 13.21 NF 2.50
+  tt wire 3.0 nH  1550 MHz S11 -14.41 gain 13.30 NF 2.45 | 1575 MHz S11 -12.70 gain 13.18 NF 2.47 | 1600 MHz S11 -11.29 gain 13.04 NF 2.52
+  tt wire 3.5 nH  1550 MHz S11 -11.09 gain 13.12 NF 2.48 | 1575 MHz S11  -9.80 gain 12.95 NF 2.56 | 1600 MHz S11  -8.74 gain 12.76 NF 2.65
+  tt wire 4.0 nH  1550 MHz S11  -8.63 gain 12.84 NF 2.62 | 1575 MHz S11  -7.67 gain 12.62 NF 2.75 | 1600 MHz S11  -6.87 gain 12.39 NF 2.89
+  ss wire 2.0 nH  1550 MHz S11 -12.46 gain 12.71 NF 3.44 | 1575 MHz S11 -12.93 gain 12.68 NF 3.37 | 1600 MHz S11 -13.07 gain 12.63 NF 3.32
+  ss wire 2.5 nH  1550 MHz S11 -14.11 gain 12.80 NF 3.20 | 1575 MHz S11 -13.57 gain 12.72 NF 3.18 | 1600 MHz S11 -12.71 gain 12.63 NF 3.17
+  ss wire 3.0 nH  1550 MHz S11 -13.08 gain 12.77 NF 3.09 | 1575 MHz S11 -11.78 gain 12.63 NF 3.12 | 1600 MHz S11 -10.58 gain 12.48 NF 3.17
+  ss wire 3.5 nH  1550 MHz S11 -10.65 gain 12.60 NF 3.10 | 1575 MHz S11  -9.42 gain 12.41 NF 3.19 | 1600 MHz S11  -8.38 gain 12.20 NF 3.31
+  ss wire 4.0 nH  1550 MHz S11  -8.41 gain 12.33 NF 3.25 | 1575 MHz S11  -7.43 gain 12.08 NF 3.40 | 1600 MHz S11  -6.61 gain 11.82 NF 3.58
+  ff wire 2.0 nH  1550 MHz S11 -21.13 gain 13.62 NF 2.23 | 1575 MHz S11 -20.77 gain 13.59 NF 2.19 | 1600 MHz S11 -19.17 gain 13.53 NF 2.17
+  ff wire 2.5 nH  1550 MHz S11 -18.87 gain 13.61 NF 2.12 | 1575 MHz S11 -16.44 gain 13.53 NF 2.12 | 1600 MHz S11 -14.51 gain 13.44 NF 2.13
+  ff wire 3.0 nH  1550 MHz S11 -13.83 gain 13.49 NF 2.11 | 1575 MHz S11 -12.21 gain 13.37 NF 2.14 | 1600 MHz S11 -10.90 gain 13.23 NF 2.18
+  ff wire 3.5 nH  1550 MHz S11 -10.49 gain 13.27 NF 2.18 | 1575 MHz S11  -9.37 gain 13.11 NF 2.25 | 1600 MHz S11  -8.43 gain 12.94 NF 2.34
+  ff wire 4.0 nH  1550 MHz S11  -8.21 gain 12.97 NF 2.34 | 1575 MHz S11  -7.38 gain 12.77 NF 2.45 | 1600 MHz S11  -6.67 gain 12.56 NF 2.58
+== source shunt C 1.2 pF  series C 2.2 pF  connector shunt none     
+  tt wire 2.0 nH  1550 MHz S11 -17.60 gain 13.37 NF 2.70 | 1575 MHz S11 -19.26 gain 13.35 NF 2.63 | 1600 MHz S11 -19.78 gain 13.31 NF 2.58
+  tt wire 2.5 nH  1550 MHz S11 -21.35 gain 13.42 NF 2.51 | 1575 MHz S11 -18.81 gain 13.35 NF 2.47 | 1600 MHz S11 -16.30 gain 13.26 NF 2.46
+  tt wire 3.0 nH  1550 MHz S11 -15.79 gain 13.35 NF 2.42 | 1575 MHz S11 -13.54 gain 13.22 NF 2.44 | 1600 MHz S11 -11.80 gain 13.08 NF 2.48
+  tt wire 3.5 nH  1550 MHz S11 -11.46 gain 13.15 NF 2.45 | 1575 MHz S11 -10.00 gain 12.97 NF 2.53 | 1600 MHz S11  -8.82 gain 12.77 NF 2.62
+  tt wire 4.0 nH  1550 MHz S11  -8.67 gain 12.85 NF 2.60 | 1575 MHz S11  -7.64 gain 12.61 NF 2.74 | 1600 MHz S11  -6.79 gain 12.37 NF 2.89
+  ss wire 2.0 nH  1550 MHz S11 -13.46 gain 12.77 NF 3.43 | 1575 MHz S11 -14.44 gain 12.75 NF 3.34 | 1600 MHz S11 -15.00 gain 12.71 NF 3.27
+  ss wire 2.5 nH  1550 MHz S11 -16.39 gain 12.88 NF 3.16 | 1575 MHz S11 -15.81 gain 12.80 NF 3.11 | 1600 MHz S11 -14.56 gain 12.71 NF 3.10
+  ss wire 3.0 nH  1550 MHz S11 -14.83 gain 12.84 NF 3.02 | 1575 MHz S11 -12.99 gain 12.70 NF 3.04 | 1600 MHz S11 -11.40 gain 12.55 NF 3.09
+  ss wire 3.5 nH  1550 MHz S11 -11.36 gain 12.66 NF 3.03 | 1575 MHz S11  -9.86 gain 12.46 NF 3.12 | 1600 MHz S11  -8.64 gain 12.24 NF 3.24
+  ss wire 4.0 nH  1550 MHz S11  -8.64 gain 12.36 NF 3.18 | 1575 MHz S11  -7.54 gain 12.10 NF 3.35 | 1600 MHz S11  -6.63 gain 11.83 NF 3.54
+  ff wire 2.0 nH  1550 MHz S11 -25.66 gain 13.65 NF 2.25 | 1575 MHz S11 -27.48 gain 13.61 NF 2.20 | 1600 MHz S11 -23.53 gain 13.57 NF 2.17
+  ff wire 2.5 nH  1550 MHz S11 -21.53 gain 13.63 NF 2.13 | 1575 MHz S11 -17.85 gain 13.56 NF 2.12 | 1600 MHz S11 -15.32 gain 13.46 NF 2.12
+  ff wire 3.0 nH  1550 MHz S11 -14.29 gain 13.51 NF 2.11 | 1575 MHz S11 -12.45 gain 13.38 NF 2.14 | 1600 MHz S11 -11.01 gain 13.24 NF 2.18
+  ff wire 3.5 nH  1550 MHz S11 -10.51 gain 13.27 NF 2.19 | 1575 MHz S11  -9.31 gain 13.10 NF 2.26 | 1600 MHz S11  -8.33 gain 12.92 NF 2.35
+  ff wire 4.0 nH  1550 MHz S11  -8.09 gain 12.95 NF 2.36 | 1575 MHz S11  -7.22 gain 12.74 NF 2.48 | 1600 MHz S11  -6.49 gain 12.51 NF 2.61
+== source shunt C 0.82 pF series C 1.5 pF  connector shunt none     
+  tt wire 2.0 nH  1550 MHz S11  -9.50 gain 12.93 NF 3.38 | 1575 MHz S11 -10.53 gain 13.00 NF 3.24 | 1600 MHz S11 -11.67 gain 13.05 NF 3.11
+  tt wire 2.5 nH  1550 MHz S11 -12.92 gain 13.23 NF 2.99 | 1575 MHz S11 -14.68 gain 13.26 NF 2.87 | 1600 MHz S11 -16.65 gain 13.27 NF 2.77
+  tt wire 3.0 nH  1550 MHz S11 -18.94 gain 13.41 NF 2.69 | 1575 MHz S11 -21.82 gain 13.39 NF 2.60 | 1600 MHz S11 -22.17 gain 13.35 NF 2.53
+  tt wire 3.5 nH  1550 MHz S11 -24.17 gain 13.46 NF 2.48 | 1575 MHz S11 -19.46 gain 13.38 NF 2.44 | 1600 MHz S11 -16.09 gain 13.27 NF 2.43
+  tt wire 4.0 nH  1550 MHz S11 -15.85 gain 13.36 NF 2.40 | 1575 MHz S11 -13.23 gain 13.22 NF 2.42 | 1600 MHz S11 -11.32 gain 13.06 NF 2.47
+  ss wire 2.0 nH  1550 MHz S11  -7.90 gain 12.20 NF 4.27 | 1575 MHz S11  -8.70 gain 12.28 NF 4.10 | 1600 MHz S11  -9.55 gain 12.34 NF 3.94
+  ss wire 2.5 nH  1550 MHz S11 -10.49 gain 12.57 NF 3.78 | 1575 MHz S11 -11.69 gain 12.61 NF 3.63 | 1600 MHz S11 -12.91 gain 12.64 NF 3.51
+  ss wire 3.0 nH  1550 MHz S11 -14.29 gain 12.82 NF 3.39 | 1575 MHz S11 -15.75 gain 12.81 NF 3.28 | 1600 MHz S11 -16.46 gain 12.77 NF 3.19
+  ss wire 3.5 nH  1550 MHz S11 -18.16 gain 12.93 NF 3.11 | 1575 MHz S11 -17.02 gain 12.85 NF 3.05 | 1600 MHz S11 -15.01 gain 12.74 NF 3.04
+  ss wire 4.0 nH  1550 MHz S11 -15.52 gain 12.88 NF 2.97 | 1575 MHz S11 -13.09 gain 12.73 NF 2.99 | 1600 MHz S11 -11.18 gain 12.55 NF 3.05
+  ff wire 2.0 nH  1550 MHz S11 -11.57 gain 13.34 NF 2.76 | 1575 MHz S11 -12.95 gain 13.40 NF 2.65 | 1600 MHz S11 -14.58 gain 13.43 NF 2.55
+  ff wire 2.5 nH  1550 MHz S11 -16.36 gain 13.56 NF 2.46 | 1575 MHz S11 -19.31 gain 13.58 NF 2.37 | 1600 MHz S11 -23.39 gain 13.57 NF 2.30
+  ff wire 3.0 nH  1550 MHz S11 -29.32 gain 13.67 NF 2.25 | 1575 MHz S11 -33.13 gain 13.63 NF 2.19 | 1600 MHz S11 -23.37 gain 13.58 NF 2.15
+  ff wire 3.5 nH  1550 MHz S11 -21.27 gain 13.65 NF 2.13 | 1575 MHz S11 -17.20 gain 13.56 NF 2.11 | 1600 MHz S11 -14.55 gain 13.45 NF 2.12
+  ff wire 4.0 nH  1550 MHz S11 -13.86 gain 13.50 NF 2.11 | 1575 MHz S11 -11.92 gain 13.36 NF 2.15 | 1600 MHz S11 -10.42 gain 13.20 NF 2.20
+== best of the retuning set at each corner and wire (1575.42 MHz, by S11)
+  tt wire 2.0 nH  source shunt C 1.2 pF  series C 2.2 pF  connector shunt none      S11 -19.26 gain 13.35 NF 2.63
+  tt wire 2.5 nH  source shunt L 6.8 nH  series C 1 pF    connector shunt none      S11 -28.83 gain 13.40 NF 2.62
+  tt wire 3.0 nH  source shunt C 1 pF    series C 1.5 pF  connector shunt none      S11 -23.67 gain 13.40 NF 2.63
+  tt wire 3.5 nH  source shunt C 1 pF    series C 1.5 pF  connector shunt none      S11 -22.19 gain 13.40 NF 2.45
+  tt wire 4.0 nH  source shunt none      series C 1 pF    connector shunt none      S11 -25.28 gain 13.42 NF 2.50
+  ss wire 2.0 nH  source shunt C 1.2 pF  series C 2.2 pF  connector shunt none      S11 -14.44 gain 12.75 NF 3.34
+  ss wire 2.5 nH  source shunt L 6.8 nH  series C 1 pF    connector shunt none      S11 -20.75 gain 12.88 NF 3.23
+  ss wire 3.0 nH  source shunt L 6.8 nH  series C 1 pF    connector shunt none      S11 -21.51 gain 12.90 NF 2.99
+  ss wire 3.5 nH  source shunt C 1 pF    series C 1.5 pF  connector shunt none      S11 -20.25 gain 12.90 NF 3.04
+  ss wire 4.0 nH  source shunt none      series C 1 pF    connector shunt none      S11 -18.04 gain 12.88 NF 3.13
+  ff wire 2.0 nH  source shunt C 1.2 pF  series C 2.2 pF  connector shunt none      S11 -27.48 gain 13.61 NF 2.20
+  ff wire 2.5 nH  source shunt C 1 pF    series C 1.8 pF  connector shunt none      S11 -29.41 gain 13.62 NF 2.20
+  ff wire 3.0 nH  source shunt C 0.82 pF series C 1.5 pF  connector shunt none      S11 -33.13 gain 13.63 NF 2.19
+  ff wire 3.5 nH  source shunt none      series C 1 pF    connector shunt none      S11 -25.44 gain 13.63 NF 2.28
+  ff wire 4.0 nH  source shunt none      series C 1 pF    connector shunt none      S11 -22.93 gain 13.63 NF 2.14
+== 100 random sets of the assumptions (wire 2.5-3.5 nH, ground 0.25-0.75 nH, trace +/-10 %, connector 0.3-1.0 nH / 0.05-0.3 pF), 1575.42 MHz
+  source shunt C 1 pF    series C 1.8 pF  connector shunt none     
+    tt S11 median -17.06 worst  -9.32 (2 of 100 above -10 dB) | gain 12.89 ... 13.41 | NF 2.42 ... 2.95
+    ss S11 median -14.49 worst  -9.56 (2 of 100 above -10 dB) | gain 12.43 ... 12.88 | NF 2.96 ... 3.76
+    ff S11 median -16.55 worst  -8.46 (7 of 100 above -10 dB) | gain 12.98 ... 13.63 | NF 2.10 ... 2.41
+  source shunt L 6.8 nH  series C 1 pF    connector shunt none     
+    tt S11 median -17.07 worst  -7.80 (10 of 100 above -10 dB) | gain 12.64 ... 13.42 | NF 2.42 ... 2.95
+    ss S11 median -17.46 worst  -8.31 (7 of 100 above -10 dB) | gain 12.25 ... 12.92 | NF 2.94 ... 3.70
+    ff S11 median -13.62 worst  -6.95 (20 of 100 above -10 dB) | gain 12.67 ... 13.63 | NF 2.15 ... 2.58
+  source shunt none      series C 1 pF    connector shunt none     
+    tt S11 median -12.82 worst  -6.28 (20 of 100 above -10 dB) | gain 12.24 ... 13.43 | NF 2.47 ... 4.09
+    ss S11 median -10.56 worst  -5.27 (45 of 100 above -10 dB) | gain 11.38 ... 12.93 | NF 3.02 ... 5.12
+    ff S11 median -15.84 worst  -7.51 (8 of 100 above -10 dB) | gain 12.77 ... 13.65 | NF 2.17 ... 3.32

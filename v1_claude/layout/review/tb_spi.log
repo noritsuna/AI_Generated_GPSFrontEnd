@@ -1,0 +1,375 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_spi.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          0
+sclk                                         0
+sdi                                          0
+csn                                        3.3
+xs.xrpu.11                             3.29722
+xs.xrpu.21                          0.00277618
+xs.sclkb                           3.65804e-78
+xs.sck                            -1.30596e-75
+xs.xscg.n1                         4.14021e-67
+xs.pr                                        0
+xs.xrpor.11                                  0
+xs.xrpor.21                                  0
+xs.por1                            3.65804e-78
+xs.por2                             1.0119e-78
+xs.rst                            -6.32588e-80
+xs.xr0.ckb                        -1.83608e-74
+xs.xr0.m                           5.72234e-71
+xs.xr0.mb                         -3.37442e-70
+xs.xr0.xm.n1                       5.17407e-71
+xs.xr0.mf                         -5.72234e-71
+xs.xr0.sl                          4.26417e-70
+xs.r0                              1.49529e-58
+xs.xr0.xs.n1                      -2.62039e-59
+xs.xr0.sf                         -2.85806e-70
+xs.xr1.ckb                        -1.83608e-74
+xs.xr1.m                           -6.0722e-58
+xs.xr1.mb                         -3.37434e-70
+xs.xr1.xm.n1                       5.17502e-71
+xs.xr1.mf                          5.34877e-58
+xs.xr1.sl                          4.26385e-70
+xs.r1                              1.49536e-58
+xs.xr1.xs.n1                      -2.62048e-59
+xs.xr1.sf                         -2.85793e-70
+xs.xr2.ckb                        -1.83608e-74
+xs.xr2.m                          -6.07215e-58
+xs.xr2.mb                          -3.3742e-70
+xs.xr2.xm.n1                       5.17498e-71
+xs.xr2.mf                          5.34875e-58
+xs.xr2.sl                          4.26383e-70
+xs.r2                              1.49531e-58
+xs.xr2.xs.n1                      -2.62053e-59
+xs.xr2.sf                         -2.85793e-70
+xs.xr3.ckb                        -1.83608e-74
+xs.xr3.m                          -6.07208e-58
+xs.xr3.mb                         -3.37418e-70
+xs.xr3.xm.n1                       5.17492e-71
+xs.xr3.mf                          5.34871e-58
+xs.xr3.sl                          4.26382e-70
+xs.r3                              1.49533e-58
+xs.xr3.xs.n1                      -2.62051e-59
+xs.xr3.sf                         -2.85793e-70
+xs.xr4.ckb                        -1.83608e-74
+xs.xr4.m                          -6.07223e-58
+xs.xr4.mb                         -3.37434e-70
+xs.xr4.xm.n1                       5.17502e-71
+xs.xr4.mf                          5.34877e-58
+xs.xr4.sl                          4.26385e-70
+xs.r4                              1.49534e-58
+xs.xr4.xs.n1                      -2.62053e-59
+xs.xr4.sf                         -2.85793e-70
+xs.xr5.ckb                        -1.83608e-74
+xs.xr5.m                          -6.07223e-58
+xs.xr5.mb                         -3.37434e-70
+xs.xr5.xm.n1                       5.17502e-71
+xs.xr5.mf                          5.34877e-58
+xs.xr5.sl                          4.26385e-70
+xs.r5                              1.49534e-58
+xs.xr5.xs.n1                      -2.62053e-59
+xs.xr5.sf                         -2.85793e-70
+xs.xr6.ckb                        -1.83608e-74
+xs.xr6.m                          -6.07222e-58
+xs.xr6.mb                          -3.3742e-70
+xs.xr6.xm.n1                       5.17498e-71
+xs.xr6.mf                          5.34876e-58
+xs.xr6.sl                          4.26383e-70
+xs.r6                              1.49534e-58
+xs.xr6.xs.n1                      -2.62046e-59
+xs.xr6.sf                         -2.85793e-70
+xs.xr7.ckb                        -1.83608e-74
+xs.xr7.m                          -6.07222e-58
+xs.xr7.mb                          -3.3742e-70
+xs.xr7.xm.n1                       5.17498e-71
+xs.xr7.mf                          5.34877e-58
+xs.xr7.sl                          4.26383e-70
+xs.r7                              1.49534e-58
+xs.xr7.xs.n1                      -2.62052e-59
+xs.xr7.sf                         -2.85793e-70
+xs.xr8.ckb                        -1.83608e-74
+xs.xr8.m                          -6.07222e-58
+xs.xr8.mb                          -3.3742e-70
+xs.xr8.xm.n1                       5.17498e-71
+xs.xr8.mf                          5.34876e-58
+xs.xr8.sl                          4.26383e-70
+xs.r8                               1.4953e-58
+xs.xr8.xs.n1                      -2.62055e-59
+xs.xr8.sf                         -2.85793e-70
+xs.xr9.ckb                        -1.83608e-74
+xs.xr9.m                          -6.07224e-58
+xs.xr9.mb                          -3.3742e-70
+xs.xr9.xm.n1                       5.17498e-71
+xs.xr9.mf                          5.34877e-58
+xs.xr9.sl                          4.26383e-70
+xs.r9                              1.49528e-58
+xs.xr9.xs.n1                      -2.62049e-59
+xs.xr9.sf                         -2.85793e-70
+xs.xr10.ckb                       -1.83608e-74
+xs.xr10.m                         -6.07222e-58
+xs.xr10.mb                         -3.3742e-70
+xs.xr10.xm.n1                      5.17498e-71
+xs.xr10.mf                         5.34877e-58
+xs.xr10.sl                         4.26383e-70
+xs.r10                              1.4953e-58
+xs.xr10.xs.n1                     -2.62055e-59
+xs.xr10.sf                        -2.85793e-70
+xs.xr11.ckb                       -1.83608e-74
+xs.xr11.m                         -6.07224e-58
+xs.xr11.mb                         -3.3742e-70
+xs.xr11.xm.n1                      5.17498e-71
+xs.xr11.mf                         5.34877e-58
+xs.xr11.sl                         4.26383e-70
+xs.r11                              1.4953e-58
+xs.xr11.xs.n1                     -2.62055e-59
+xs.xr11.sf                        -2.85793e-70
+xs.xr12.ckb                       -1.83608e-74
+xs.xr12.m                         -6.07224e-58
+xs.xr12.mb                         -3.3742e-70
+xs.xr12.xm.n1                      5.17498e-71
+xs.xr12.mf                         5.34877e-58
+xs.xr12.sl                         4.26383e-70
+xs.r12                             1.49539e-58
+xs.xr12.xs.n1                     -2.62047e-59
+xs.xr12.sf                        -2.85793e-70
+xs.xr13.ckb                       -1.83608e-74
+xs.xr13.m                         -6.07222e-58
+xs.xr13.mb                         -3.3742e-70
+xs.xr13.xm.n1                      5.17498e-71
+xs.xr13.mf                         5.34877e-58
+xs.xr13.sl                         4.26383e-70
+xs.r13                             1.49531e-58
+xs.xr13.xs.n1                     -2.62055e-59
+xs.xr13.sf                        -2.85793e-70
+xs.xr14.ckb                       -1.83608e-74
+xs.xr14.m                         -6.07224e-58
+xs.xr14.mb                         -3.3742e-70
+xs.xr14.xm.n1                      5.17498e-71
+xs.xr14.mf                         5.34877e-58
+xs.xr14.sl                         4.26383e-70
+xs.r14                             1.49531e-58
+xs.xr14.xs.n1                     -2.62055e-59
+xs.xr14.sf                        -2.85793e-70
+xs.xr15.ckb                       -1.83608e-74
+xs.xr15.m                         -6.07224e-58
+xs.xr15.mb                         -3.3742e-70
+xs.xr15.xm.n1                      5.17498e-71
+xs.xr15.mf                         5.34877e-58
+xs.xr15.sl                         4.26383e-70
+xs.r15                             1.49533e-58
+xs.xr15.xs.n1                     -2.62061e-59
+xs.xr15.sf                        -2.85793e-70
+xs.xr16.ckb                       -1.83608e-74
+xs.xr16.m                         -6.07225e-58
+xs.xr16.mb                        -3.37415e-70
+xs.xr16.xm.n1                      5.17497e-71
+xs.xr16.mf                         5.34877e-58
+xs.xr16.sl                         4.26323e-70
+xs.r16                             1.49524e-58
+xs.xr16.xs.n1                     -2.62063e-59
+xs.xr16.sf                        -2.85812e-70
+xs.xr17.ckb                       -1.83614e-74
+xs.xr17.m                         -6.07176e-58
+xs.xr17.mb                        -3.37404e-70
+xs.xr17.xm.n1                      5.17532e-71
+xs.xr17.mf                         5.34929e-58
+xs.xr17.sl                         4.26356e-70
+xs.r17                             1.49524e-58
+xs.xr17.xs.n1                     -2.62064e-59
+xs.xr17.sf                        -2.85812e-70
+xs.xr18.ckb                       -1.83614e-74
+xs.xr18.m                         -6.07176e-58
+xs.xr18.mb                        -3.37404e-70
+xs.xr18.xm.n1                      5.17532e-71
+xs.xr18.mf                         5.34929e-58
+xs.xr18.sl                         4.26356e-70
+xs.r18                             1.49527e-58
+xs.xr18.xs.n1                      -2.6207e-59
+xs.xr18.sf                        -2.85812e-70
+xs.xr19.ckb                       -1.83614e-74
+xs.xr19.m                         -6.07177e-58
+xs.xr19.mb                        -2.50875e-70
+xs.xr19.xm.n1                      3.86479e-71
+xs.xr19.mf                         5.34929e-58
+xs.xr19.sl                         3.14965e-70
+xs.r19                            -1.45832e-70
+xs.xr19.xs.n1                      2.21711e-71
+xs.xr19.sf                        -2.09914e-70
+xs.xr20.ckb                       -1.83614e-74
+xs.xr20.m                          1.86707e-70
+xs.xr20.mb                        -2.50872e-70
+xs.xr20.xm.n1                      3.86347e-71
+xs.xr20.mf                        -1.26595e-70
+xs.xr20.sl                         3.14941e-70
+xs.r20                            -1.45838e-70
+xs.xr20.xs.n1                      2.21721e-71
+xs.xr20.sf                        -2.09902e-70
+xs.xr21.ckb                       -1.83614e-74
+xs.xr21.m                          1.86709e-70
+xs.xr21.mb                        -2.50872e-70
+xs.xr21.xm.n1                      3.86347e-71
+xs.xr21.mf                        -1.26594e-70
+xs.xr21.sl                         3.14941e-70
+xs.r21                            -1.45838e-70
+xs.xr21.xs.n1                      2.21721e-71
+xs.xr21.sf                        -2.09902e-70
+xs.xr22.ckb                       -1.83614e-74
+xs.xr22.m                          1.86709e-70
+xs.xr22.mb                        -2.50872e-70
+xs.xr22.xm.n1                      3.86347e-71
+xs.xr22.mf                        -1.26594e-70
+xs.xr22.sl                         3.14941e-70
+xs.r22                            -1.45845e-70
+xs.xr22.xs.n1                      2.21722e-71
+xs.xr22.sf                        -2.09902e-70
+xs.xr23.ckb                       -1.83614e-74
+xs.xr23.m                          1.86709e-70
+xs.xr23.mb                        -2.50886e-70
+xs.xr23.xm.n1                      3.86352e-71
+xs.xr23.mf                        -1.26593e-70
+xs.xr23.sl                         3.14954e-70
+xs.r23                            -1.68131e-75
+xs.xr23.xs.n1                      3.62164e-76
+xs.xr23.sf                        -2.09913e-70
+xs.xl0.enb                        1.14388e-197
+xs.xl0.l                           1.49529e-58
+xs.xl0.lb                           4.3116e-73
+ig1a                              -9.96791e-59
+xs.xl1.enb                        1.14388e-197
+xs.xl1.l                           1.49536e-58
+xs.xl1.lb                           4.3116e-73
+ig1b                              -9.96808e-59
+xs.xl2.enb                        1.14388e-197
+xs.xl2.l                           1.49531e-58
+xs.xl2.lb                           4.3116e-73
+ig2a                              -9.96818e-59
+xs.xl3.enb                        1.14388e-197
+xs.xl3.l                           1.49533e-58
+xs.xl3.lb                           4.3116e-73
+ig2b                              -9.96814e-59
+xs.xl4.enb                        1.14388e-197
+xs.xl4.l                           1.49534e-58
+xs.xl4.lb                           4.3116e-73
+ig3a                              -9.96818e-59
+xs.xl5.enb                        1.14388e-197
+xs.xl5.l                           1.49534e-58
+xs.xl5.lb                           4.3116e-73
+ig3b                              -9.96818e-59
+xs.xl6.enb                        1.14388e-197
+xs.xl6.l                           1.49534e-58
+xs.xl6.lb                           4.3116e-73
+b0                                -9.96805e-59
+xs.xl7.enb                        1.14388e-197
+xs.xl7.l                           1.49534e-58
+xs.xl7.lb                           4.3116e-73
+b1                                -9.96816e-59
+xs.xl8.enb                        1.14388e-197
+xs.xl8.l                            1.4953e-58
+xs.xl8.lb                           4.3116e-73
+afc0                              -9.96823e-59
+xs.xl9.enb                        1.14388e-197
+xs.xl9.l                           1.49528e-58
+xs.xl9.lb                           4.3116e-73
+afc1                              -9.96812e-59
+xs.xl10.enb                       1.14388e-197
+xs.xl10.l                           1.4953e-58
+xs.xl10.lb                          4.3116e-73
+afc2                              -9.96823e-59
+xs.xl11.enb                       1.14388e-197
+xs.xl11.l                           1.4953e-58
+xs.xl11.lb                          4.3116e-73
+afc3                              -9.96823e-59
+xs.xl12.enb                       1.14388e-197
+xs.xl12.l                          1.49539e-58
+xs.xl12.lb                          4.3116e-73
+afc4                              -9.96809e-59
+xs.xl13.enb                       1.14388e-197
+xs.xl13.l                          1.49531e-58
+xs.xl13.lb                          4.3116e-73
+afc5                              -9.96907e-59
+xs.xl14.enb                       1.14388e-197
+xs.xl14.l                          1.49531e-58
+xs.xl14.lb                          4.3116e-73
+afc6                              -9.96907e-59
+xs.xl15.enb                       1.14388e-197
+xs.xl15.l                          1.49533e-58
+xs.xl15.lb                          4.3116e-73
+xs.afc7n                          -9.96868e-59
+afc7                             -1.58203e-197
+xs.xl16.enb                       1.14388e-197
+xs.xl16.l                          1.49524e-58
+xs.xl16.lb                          4.3116e-73
+icp2                              -9.96837e-59
+xs.xl17.enb                       1.14388e-197
+xs.xl17.l                          1.49524e-58
+xs.xl17.lb                          4.3116e-73
+bww                                -9.9684e-59
+xs.xl18.enb                       1.14388e-197
+xs.xl18.l                          1.49527e-58
+xs.xl18.lb                          4.3116e-73
+bwn                               -9.96922e-59
+vcsn#branch                       -3.20292e-05
+vsdi#branch                       -7.62869e-83
+vsclk#branch                                 0
+vdd#branch                         3.20292e-05
+
+No. of Data Rows : 18208
+por_ig1a            =  1.07788e-08
+por_ig1b            =  1.07788e-08
+por_ig2a            =  1.07788e-08
+por_ig2b            =  1.07788e-08
+por_ig3a            =  1.07788e-08
+por_ig3b            =  1.07788e-08
+por_b0              =  1.07788e-08
+por_b1              =  1.07788e-08
+por_afc0            =  1.07788e-08
+por_afc1            =  1.07788e-08
+por_afc2            =  1.07788e-08
+por_afc3            =  1.07788e-08
+por_afc4            =  1.07788e-08
+por_afc5            =  1.07788e-08
+por_afc6            =  1.07788e-08
+por_afc7            =  3.30000e+00
+por_icp2            =  1.07788e-08
+por_bww             =  1.07788e-08
+por_bwn             =  1.07788e-08
+RES por IG1A=1.07788E-08 IG1B=1.07788E-08 IG2A=1.07788E-08 IG2B=1.07788E-08 IG3A=1.07788E-08 IG3B=1.07788E-08 B0=1.07788E-08 B1=1.07788E-08 AFC0=1.07788E-08 AFC1=1.07788E-08 AFC2=1.07788E-08 AFC3=1.07788E-08 AFC4=1.07788E-08 AFC5=1.07788E-08 AFC6=1.07788E-08 AFC7=3.3 ICP2=1.07788E-08 BWW=1.07788E-08 BWN=1.07788E-08
+write_ig1a          =  9.85940e-09
+write_ig1b          =  3.30000e+00
+write_ig2a          =  3.30000e+00
+write_ig2b          =  9.85978e-09
+write_ig3a          =  3.30000e+00
+write_ig3b          =  9.84387e-09
+write_b0            =  9.85992e-09
+write_b1            =  3.30000e+00
+write_afc0          =  9.85979e-09
+write_afc1          =  3.30000e+00
+write_afc2          =  9.85925e-09
+write_afc3          =  3.30000e+00
+write_afc4          =  3.30000e+00
+write_afc5          =  3.30000e+00
+write_afc6          =  9.84386e-09
+write_afc7          =  3.30000e+00
+write_icp2          =  3.30000e+00
+write_bww           =  9.85979e-09
+write_bwn           =  3.30000e+00
+RES write IG1A=9.8594E-09 IG1B=3.3 IG2A=3.3 IG2B=9.85978E-09 IG3A=3.3 IG3B=9.84387E-09 B0=9.85992E-09 B1=3.3 AFC0=9.85979E-09 AFC1=3.3 AFC2=9.85925E-09 AFC3=3.3 AFC4=3.3 AFC5=3.3 AFC6=9.84386E-09 AFC7=3.3 ICP2=3.3 BWW=9.85979E-09 BWN=3.3
+rstw                =  1.78663e-06
+RES por_release=1.78663E-06
+Note: Simulation executed from .control section 
+
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed

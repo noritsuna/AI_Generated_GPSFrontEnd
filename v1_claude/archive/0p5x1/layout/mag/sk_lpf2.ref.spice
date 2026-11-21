@@ -1,0 +1,14 @@
+.subckt sk_lpf2 INP INN PB OUTP OUTN VDD VSS
+XR1P xP INP VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2P yP xP VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1P xP OUTP cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=367
+XC2P yP VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=21
+XMFP VSS yP OUTP OUTP pfet_03v3 L=0.28u W=40u nf=8  m=1
+XMIP OUTP PB VDD VDD pfet_03v3 L=2u W=40u nf=4  m=16
+XR1N xN INN VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2N yN xN VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1N xN OUTN cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=367
+XC2N yN VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=21
+XMFN VSS yN OUTN OUTN pfet_03v3 L=0.28u W=40u nf=8  m=1
+XMIN OUTN PB VDD VDD pfet_03v3 L=2u W=40u nf=4  m=16
+.ends

@@ -1,0 +1,174 @@
+* NGSPICE file created from vga_fix.ext - technology: gf180mcuD
+
+.subckt vga_fix_M1 s1 OUTN gp VSS
+X0 s1 gp OUTN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X1 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X3 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X4 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X5 s1 gp OUTN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 s1 gp OUTN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 s1 gp OUTN VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X8 s1 gp OUTN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X10 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X11 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X12 s1 gp OUTN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X13 s1 gp OUTN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X14 s1 gp OUTN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X15 OUTN gp s1 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt vga_fix_M2 s2 OUTP gn VSS
+X0 s2 gn OUTP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X1 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X3 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X4 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X5 s2 gn OUTP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 s2 gn OUTP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 s2 gn OUTP VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X8 s2 gn OUTP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X10 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X11 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X12 s2 gn OUTP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X13 s2 gn OUTP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X14 s2 gn OUTP VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X15 OUTP gn s2 VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt vga_fix_R1u_0 vcm gp gn VDD VSS
+X0 a_320_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X1 a_3260_2086# a_4100_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X2 a_7040_2086# a_6200_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X3 a_3260_2086# a_2420_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X4 a_5360_2086# a_6200_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X5 a_1580_2086# a_2420_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X6 a_9140_1786# a_8720_n36# VSS ppolyf_u_1k r_width=1u r_length=8.5u
+X7 a_5360_2086# a_4520_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X8 a_8300_1786# vcm VSS ppolyf_u_1k r_width=1u r_length=8.5u
+X9 a_1580_2086# a_740_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X10 a_3680_2086# a_4520_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X11 a_320_2086# vcm VSS ppolyf_u_1k r_width=1u r_length=10u
+X12 a_6620_2086# gp VSS ppolyf_u_1k r_width=1u r_length=10u
+X13 a_3680_2086# a_2840_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X14 a_6620_2086# a_5780_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X15 a_2000_2086# a_2840_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X16 a_9140_1786# VDD VSS ppolyf_u_1k r_width=1u r_length=8.5u
+X17 a_4940_2086# a_5780_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X18 a_8300_1786# a_8720_n36# VSS ppolyf_u_1k r_width=1u r_length=8.5u
+X19 a_4940_2086# a_4100_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X20 a_n100_2086# a_740_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X21 a_7040_2086# gn VSS ppolyf_u_1k r_width=1u r_length=10u
+X22 a_2000_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X23 a_n100_2086# vcm VSS ppolyf_u_1k r_width=1u r_length=10u
+.ends
+
+.subckt vga_fix_R1u_1 VSS vcm
+X0 a_n100_1753# a_320_n36# VSS ppolyf_u_1k r_width=1u r_length=8.335u
+X1 vcm a_320_n36# VSS ppolyf_u_1k r_width=1u r_length=8.335u
+X2 a_n100_1753# VSS VSS ppolyf_u_1k r_width=1u r_length=8.335u
+.ends
+
+.subckt vga_fix_MT1_MT2 s1 s2 NB VSS
+X0 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X1 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X2 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X3 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X4 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X5 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X6 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X7 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=4.45p ps=20.89u w=10u l=2u
+X8 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X9 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X10 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X11 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X12 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X13 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X14 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X15 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X16 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X17 VSS NB s1 VSS nfet_03v3 ad=4.45p pd=20.89u as=2.65p ps=10.53u w=10u l=2u
+X18 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X19 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X20 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X21 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=4.45p ps=20.89u w=10u l=2u
+X22 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X23 VSS NB s1 VSS nfet_03v3 ad=4.45p pd=20.89u as=2.65p ps=10.53u w=10u l=2u
+X24 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X25 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X26 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X27 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X28 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X29 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X30 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X31 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X32 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X33 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X34 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X35 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X36 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X37 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X38 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X39 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X40 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X41 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X42 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X43 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X44 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X45 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X46 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X47 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X48 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X49 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X50 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X51 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X52 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X53 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X54 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X55 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X56 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X57 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X58 VSS NB s2 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X59 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X60 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X61 VSS NB s1 VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X62 s2 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X63 s1 NB VSS VSS nfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+.ends
+
+.subckt vga_fix_R10p6u_0 s2 s1 VSS
+X0 s1 s2 VSS ppolyf_u_1k r_width=10.6u r_length=1u
+.ends
+
+.subckt vga_fix_CCM vcm VSS
+X0 vcm VSS cap_mim_2f0_m4m5_noshield c_width=30u c_length=30u
+.ends
+
+.subckt vga_fix_R2u_0 OUTN VDD OUTP VSS
+X0 VDD OUTN VSS ppolyf_u_1k r_width=2u r_length=4.23u
+X1 VDD OUTP VSS ppolyf_u_1k r_width=2u r_length=4.23u
+.ends
+
+.subckt vga_fix_CC1 INP gp
+X0 INP gp cap_mim_2f0_m4m5_noshield c_width=52.2u c_length=52.2u
+.ends
+
+.subckt vga_fix_CC2 INN gn
+X0 INN gn cap_mim_2f0_m4m5_noshield c_width=52.2u c_length=52.2u
+.ends
+
+.subckt vga_fix VSS VDD INP INN NB OUTP OUTN
+XXM1 XM1/s1 OUTN XM1/gp VSS vga_fix_M1
+XXM2 XM2/s2 OUTP XM2/gn VSS vga_fix_M2
+XXR1u_0 XCCM/vcm XM1/gp XM2/gn VDD VSS vga_fix_R1u_0
+XXR1u_1 VSS XCCM/vcm vga_fix_R1u_1
+XXMT1_MT2 XM1/s1 XM2/s2 NB VSS vga_fix_MT1_MT2
+XXR10p6u_0 XM2/s2 XM1/s1 VSS vga_fix_R10p6u_0
+XXCCM XCCM/vcm VSS vga_fix_CCM
+XXR2u_0 OUTN VDD OUTP VSS vga_fix_R2u_0
+XXCC1 INP XM1/gp vga_fix_CC1
+XXCC2 INN XM2/gn vga_fix_CC2
+.ends
+

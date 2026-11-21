@@ -1,0 +1,41 @@
+* NGSPICE file created from divbuf.ext - technology: gf180mcuD
+
+.subckt divbuf_MP1 b a VDD
+X0 b a VDD VDD pfet_03v3 ad=3.56p pd=16.89u as=3.56p ps=16.89u w=8u l=0.28u
+.ends
+
+.subckt divbuf_MP2 OUT b VDD
+X0 OUT b VDD VDD pfet_03v3 ad=3.56p pd=16.89u as=3.56p ps=16.89u w=8u l=0.28u
+.ends
+
+.subckt divbuf_MN1 b a VSS
+X0 b a VSS VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt divbuf_MN2 OUT b VSS
+X0 OUT b VSS VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt divbuf_R1u_0 b a VSS
+X0 a_n100_2086# a VSS ppolyf_u_1k r_width=1u r_length=10u
+X1 a_n100_2086# b VSS ppolyf_u_1k r_width=1u r_length=10u
+.ends
+
+.subckt divbuf_CIN IN a
+X0 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt divbuf VSS VDD IN OUT
+XXMP1 XMP2/b XMP1/a VDD divbuf_MP1
+XXMP2 OUT XMP2/b VDD divbuf_MP2
+XXMN1 XMP2/b XMP1/a VSS divbuf_MN1
+XXMN2 OUT XMP2/b VSS divbuf_MN2
+XXR1u_0 XMP2/b XMP1/a VSS divbuf_R1u_0
+XXCIN IN XMP1/a divbuf_CIN
+.ends
+

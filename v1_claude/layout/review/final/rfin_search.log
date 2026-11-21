@@ -1,0 +1,59 @@
+== tt: best by NF among S11 < -10 dB (47 of 230)
+  source shunt C 1.5 pF  series C 2.2 pF  connector shunt none       Zin  75.0   -6.7j  S11 -13.69 dB  gain 13.23 dB  NF 2.43 dB
+  source shunt L 6.8 nH  series C 1 pF    connector shunt none       Zin  43.2   +8.3j  S11 -18.83 dB  gain 13.36 dB  NF 2.46 dB
+  source shunt C 1 pF    series C 1.8 pF  connector shunt none       Zin  55.4  +10.3j  S11 -19.16 dB  gain 13.37 dB  NF 2.46 dB
+  source shunt C 1.2 pF  series C 1.8 pF  connector shunt none       Zin  57.1   +4.1j  S11 -22.34 dB  gain 13.39 dB  NF 2.46 dB
+  source shunt C 1.2 pF  series C 2.2 pF  connector shunt none       Zin  74.2  +10.0j  S11 -13.54 dB  gain 13.22 dB  NF 2.44 dB
+  source shunt L 8.2 nH  series C 1 pF    connector shunt none       Zin  44.5   +3.5j  S11 -23.27 dB  gain 13.40 dB  NF 2.47 dB
+  source shunt C 0.82 pF series C 1.8 pF  connector shunt none       Zin  53.0  +15.3j  S11 -16.51 dB  gain 13.32 dB  NF 2.48 dB
+  source shunt C 1.5 pF  series C 1.8 pF  connector shunt none       Zin  56.8   -5.6j  S11 -21.70 dB  gain 13.39 dB  NF 2.50 dB
+== ss: best by NF among S11 < -10 dB (46 of 230)
+  source shunt C 1.8 pF  series C 2.2 pF  connector shunt none       Zin  72.2  -10.3j  S11 -14.00 dB  gain 12.75 dB  NF 2.95 dB
+  source shunt L 5.6 nH  series C 1 pF    connector shunt none       Zin  41.3   +6.7j  S11 -18.40 dB  gain 12.87 dB  NF 2.97 dB
+  source shunt C 1.5 pF  series C 2.2 pF  connector shunt none       Zin  73.3   +5.6j  S11 -14.25 dB  gain 12.76 dB  NF 2.97 dB
+  source shunt L 6.8 nH  series C 1 pF    connector shunt none       Zin  42.3   +1.2j  S11 -21.51 dB  gain 12.90 dB  NF 2.99 dB
+  source shunt L 4.7 nH  series C 1 pF    connector shunt none       Zin  38.7  +11.9j  S11 -14.71 dB  gain 12.78 dB  NF 3.02 dB
+  source shunt C 1.5 pF  series C 1.8 pF  connector shunt none       Zin  53.0   +2.8j  S11 -27.99 dB  gain 12.92 dB  NF 3.04 dB
+  source shunt C 1.8 pF  series C 1.8 pF  connector shunt none       Zin  52.6   -5.5j  S11 -24.55 dB  gain 12.91 dB  NF 3.06 dB
+  source shunt L 8.2 nH  series C 1 pF    connector shunt none       Zin  42.1   -3.4j  S11 -20.60 dB  gain 12.89 dB  NF 3.06 dB
+== ff: best by NF among S11 < -10 dB (46 of 230)
+  source shunt C 0.82 pF series C 1.8 pF  connector shunt none       Zin  61.7  +12.2j  S11 -16.43 dB  gain 13.54 dB  NF 2.11 dB
+  source shunt C 1 pF    series C 1.8 pF  connector shunt none       Zin  63.7   +5.4j  S11 -17.76 dB  gain 13.56 dB  NF 2.11 dB
+  source shunt C 0.68 pF series C 1.8 pF  connector shunt none       Zin  59.3  +17.0j  S11 -15.12 dB  gain 13.50 dB  NF 2.11 dB
+  source shunt C 1.2 pF  series C 1.8 pF  connector shunt none       Zin  64.0   -2.8j  S11 -18.03 dB  gain 13.57 dB  NF 2.14 dB
+  source shunt L 15 nH   series C 1.2 pF  connector shunt none       Zin  38.0  +13.0j  S11 -14.04 dB  gain 13.46 dB  NF 2.12 dB
+  source shunt C 0.5 pF  series C 1.5 pF  connector shunt none       Zin  49.0   +9.9j  S11 -20.03 dB  gain 13.59 dB  NF 2.14 dB
+  source shunt L 10 nH   series C 1 pF    connector shunt none       Zin  46.4   +6.3j  S11 -22.53 dB  gain 13.61 dB  NF 2.15 dB
+  source shunt L 8.2 nH  series C 1 pF    connector shunt none       Zin  44.7  +10.7j  S11 -18.03 dB  gain 13.57 dB  NF 2.15 dB
+== same parts at all three corners: best by the worst S11
+  source shunt L 10 nH   series C 1 pF    connector shunt none       tt S11 -25.00 gain 13.40 NF 2.51 | ss S11 -18.08 gain 12.86 NF 3.15 | ff S11 -22.53 gain 13.61 NF 2.15
+  source shunt L 8.2 nH  series C 1 pF    connector shunt none       tt S11 -23.27 gain 13.40 NF 2.47 | ss S11 -20.60 gain 12.89 NF 3.06 | ff S11 -18.03 gain 13.57 NF 2.15
+  source shunt C 1.2 pF  series C 1.8 pF  connector shunt none       tt S11 -22.34 gain 13.39 NF 2.46 | ss S11 -19.49 gain 12.88 NF 3.06 | ff S11 -18.03 gain 13.57 NF 2.14
+  source shunt C 1.2 pF  series C 1.5 pF  connector shunt none       tt S11 -22.36 gain 13.39 NF 2.69 | ss S11 -17.50 gain 12.85 NF 3.33 | ff S11 -22.42 gain 13.61 NF 2.30
+  source shunt C 1 pF    series C 1.5 pF  connector shunt none       tt S11 -23.67 gain 13.40 NF 2.63 | ss S11 -16.81 gain 12.84 NF 3.29 | ff S11 -31.33 gain 13.63 NF 2.24
+  source shunt C 1.5 pF  series C 1.5 pF  connector shunt none       tt S11 -17.98 gain 13.35 NF 2.79 | ss S11 -16.99 gain 12.84 NF 3.40 | ff S11 -16.54 gain 13.54 NF 2.43
+  source shunt C 1 pF    series C 1.8 pF  connector shunt none       tt S11 -19.16 gain 13.37 NF 2.46 | ss S11 -16.23 gain 12.82 NF 3.09 | ff S11 -17.76 gain 13.56 NF 2.11
+  source shunt C 1.5 pF  series C 1.8 pF  connector shunt none       tt S11 -21.70 gain 13.39 NF 2.50 | ss S11 -27.99 gain 12.92 NF 3.04 | ff S11 -15.92 gain 13.52 NF 2.21
+  source shunt C 0.82 pF series C 1.5 pF  connector shunt none       tt S11 -21.82 gain 13.39 NF 2.60 | ss S11 -15.75 gain 12.81 NF 3.28 | ff S11 -33.13 gain 13.63 NF 2.19
+  source shunt C 0.68 pF series C 1.5 pF  connector shunt none       tt S11 -19.70 gain 13.37 NF 2.58 | ss S11 -14.81 gain 12.78 NF 3.27 | ff S11 -25.11 gain 13.62 NF 2.16
+  source shunt L 6.8 nH  series C 1 pF    connector shunt none       tt S11 -18.83 gain 13.36 NF 2.46 | ss S11 -21.51 gain 12.90 NF 2.99 | ff S11 -14.71 gain 13.49 NF 2.19
+  source shunt L 15 nH   series C 1 pF    connector shunt none       tt S11 -19.51 gain 13.37 NF 2.64 | ss S11 -14.54 gain 12.77 NF 3.34 | ff S11 -30.20 gain 13.63 NF 2.21
+== same parts at all three corners: best by the worst NF among worst S11 < -8 dB
+  source shunt C 1.8 pF  series C 2.2 pF  connector shunt none       tt S11 -12.50 gain 13.17 NF 2.47 | ss S11 -14.00 gain 12.75 NF 2.95 | ff S11 -10.54 gain 13.23 NF 2.28
+  source shunt C 1.5 pF  series C 2.2 pF  connector shunt none       tt S11 -13.69 gain 13.23 NF 2.43 | ss S11 -14.25 gain 12.76 NF 2.97 | ff S11 -11.86 gain 13.34 NF 2.18
+  source shunt L 5.6 nH  series C 1 pF    connector shunt none       tt S11 -14.81 gain 13.27 NF 2.50 | ss S11 -18.40 gain 12.87 NF 2.97 | ff S11 -11.87 gain 13.34 NF 2.29
+  source shunt L 6.8 nH  series C 1 pF    connector shunt none       tt S11 -18.83 gain 13.36 NF 2.46 | ss S11 -21.51 gain 12.90 NF 2.99 | ff S11 -14.71 gain 13.49 NF 2.19
+  source shunt C 2.2 pF  series C 2.2 pF  connector shunt none       tt S11 -10.20 gain 12.98 NF 2.61 | ss S11 -11.84 gain 12.63 NF 3.00 | ff S11  -8.58 gain 12.99 NF 2.48
+  source shunt L 4.7 nH  series C 1 pF    connector shunt none       tt S11 -11.86 gain 13.13 NF 2.62 | ss S11 -14.71 gain 12.78 NF 3.02 | ff S11  -9.68 gain 13.14 NF 2.47
+  source shunt none      series C 1 pF    connector shunt C 0.5 pF   tt S11  -9.63 gain 12.92 NF 2.66 | ss S11 -11.23 gain 12.59 NF 3.03 | ff S11  -8.10 gain 12.91 NF 2.55
+  source shunt C 1.5 pF  series C 1.8 pF  connector shunt none       tt S11 -21.70 gain 13.39 NF 2.50 | ss S11 -27.99 gain 12.92 NF 3.04 | ff S11 -15.92 gain 13.52 NF 2.21
+== no matching parts (10 pF only): impedance at the connector, and process / temperature / supply separately with the TT parts
+  tt               no parts Zin  36.6  +73.6j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  55.4  +10.3j S11 -19.16 gain 13.37 NF 2.46
+  ss               no parts Zin  31.1  +72.2j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  48.3  +15.3j S11 -16.23 gain 12.82 NF 3.09
+  ff               no parts Zin  42.3  +76.4j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  63.7   +5.4j S11 -17.76 gain 13.56 NF 2.11
+  ss process only  no parts Zin  31.6  +72.1j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  48.8  +14.6j S11 -16.64 gain 13.46 NF 2.55
+  85 C only        no parts Zin  35.9  +73.4j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  54.5  +11.0j S11 -18.93 gain 12.69 NF 2.98
+  3.135 V only     no parts Zin  36.4  +73.6j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  55.2  +10.6j S11 -19.06 gain 13.31 NF 2.47
+  ff process only  no parts Zin  42.1  +76.5j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  63.7   +5.7j S11 -17.73 gain 12.78 NF 2.53
+  -20 C only       no parts Zin  36.3  +73.2j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  54.8  +10.3j S11 -19.35 gain 13.97 NF 2.07
+  3.465 V only     no parts Zin  36.8  +73.6j | source shunt C 1 pF    series C 1.8 pF  connector shunt none: Zin  55.6  +10.1j S11 -19.26 gain 13.42 NF 2.45

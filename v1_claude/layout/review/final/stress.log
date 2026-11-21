@@ -1,0 +1,48 @@
+== tb_full, ff, -20 C, VDD = VDDV = 3.63 V, 300-340 ns (8001 points, 1155 vectors)
+== nodes outside -0.3 .. VDD + 0.3 V: 10
+  xdut.xpll.xdiv.xd5.q1b                    -0.145 ..  3.986 V
+  xdut.xpll.xdiv.xd5.q2b                    -0.129 ..  3.981 V
+  xdut.xpll.xdiv.xd6.xf.a1                   0.920 ..  3.964 V
+  xdut.xpll.xdiv.xd3.xf.a1                   0.972 ..  3.989 V
+  xdut.xpll.xdiv.xd5.xf1.a1                  0.965 ..  3.975 V
+  xdut.xpll.xdiv.xd2.xf.a1                   1.003 ..  3.992 V
+  xdut.xpll.xdiv.xd1.xf.a1                   1.087 ..  4.005 V
+  xdut.xadq.xch.xs1.n1                       3.624 ..  3.995 V
+  xdut.xadq.xcs.xs1.n1                       3.624 ..  3.994 V
+  xdut.xadq.xcl.xs1.n1                       3.625 ..  3.992 V
+== FETs: 1435 checked (2 without node data); terminal pairs above VDD: 288; above VDD + 0.3 V: 16
+  xdut.xpll.xdiv.xd5.xf1.xmn4                  nfet_03v3  |Vgd| max 4.016 V
+  xdut.xpll.xdiv.xd5.xf2.xmn4                  nfet_03v3  |Vgd| max 4.010 V
+  xdut.xpll.xdiv.xd1.xf.xmp2                   pfet_03v3  |Vds| max 4.005 V
+  xdut.xadq.xch.xs1.xmp2                       pfet_03v3  |Vds| max 3.995 V
+  xdut.xadq.xcs.xs1.xmp2                       pfet_03v3  |Vds| max 3.993 V
+  xdut.xadq.xcl.xs1.xmp2                       pfet_03v3  |Vds| max 3.992 V
+  xdut.xpll.xdiv.xd2.xf.xmp2                   pfet_03v3  |Vds| max 3.991 V
+  xdut.xpll.xdiv.xd3.xf.xmp2                   pfet_03v3  |Vds| max 3.989 V
+  xdut.xpll.xdiv.xd5.xf1.xmn6                  nfet_03v3  |Vgs| max 3.986 V
+  xdut.xpll.xdiv.xd5.xf1.xmp5                  pfet_03v3  |Vgd| max 3.983 V
+  xdut.xpll.xdiv.xd5.xf2.xmn6                  nfet_03v3  |Vgs| max 3.981 V
+  xdut.xpll.xdiv.xd5.xf2.xmp5                  pfet_03v3  |Vgd| max 3.980 V
+  xdut.xpll.xdiv.xd5.xf1.xmp2                  pfet_03v3  |Vds| max 3.975 V
+  xdut.xpll.xdiv.xd2.xf.xmn4                   nfet_03v3  |Vgd| max 3.970 V
+  xdut.xpll.xdiv.xd3.xf.xmn4                   nfet_03v3  |Vgd| max 3.968 V
+  xdut.xpll.xdiv.xd6.xf.xmp2                   pfet_03v3  |Vds| max 3.964 V
+  xdut.xpll.xdiv.xd2.xf.xmn6                   nfet_03v3  |Vgs| max 3.926 V
+  xdut.xpll.xdiv.xd2.xf.xmn1                   nfet_03v3  |Vgs| max 3.926 V
+  xdut.xpll.xdiv.xd2.xf.xmp5                   pfet_03v3  |Vgd| max 3.926 V
+  xdut.xpll.xdiv.xd3.xf.xmn6                   nfet_03v3  |Vgs| max 3.925 V
+  xdut.xpll.xdiv.xd3.xf.xmn1                   nfet_03v3  |Vgs| max 3.925 V
+  xdut.xpll.xdiv.xd3.xf.xmp5                   pfet_03v3  |Vgd| max 3.925 V
+  xdut.xpll.xdiv.xd1.xf.xmn2                   nfet_03v3  |Vgd| max 3.923 V
+  xdut.xpll.xdiv.xd1.xf.xmn6                   nfet_03v3  |Vgs| max 3.921 V
+  xdut.xpll.xdiv.xd1.xf.xmn1                   nfet_03v3  |Vgs| max 3.921 V
+== last log lines
+Note: Simulation executed from .control section 
+
+   Please check line .ic v(xdut.vctrl)=1.7 v(xdut.xpll.xlf.z)=1.7 v(xdut.xpll.vcp)=1.7 v(xdut.xvco.xcore.p4)=0 v(xdut.xvco.xcore.n4)=1
+== time above VDD (fraction of 300-340 ns) for the nodes that go highest, and the VCO / LO nodes
+  xdut.xpll.xdiv.xd1.xf.a1       max 4.005 V; above VDD 43.3 %, above VDD+0.2 V 17.7 %, above VDD+0.3 V 15.5 % of the time
+  xdut.xpll.xdiv.xd5.q1b         max 3.986 V; above VDD 31.7 %, above VDD+0.2 V 30.5 %, above VDD+0.3 V 30.3 % of the time
+  xdut.xadq.xch.xs1.n1           max 3.995 V; above VDD 57.1 %, above VDD+0.2 V 17.6 %, above VDD+0.3 V 17.5 % of the time
+  xdut.xmix.gl1p                 0.788 .. 2.081 V
+  xdut.xmix.gl3p                 0.383 .. 1.634 V

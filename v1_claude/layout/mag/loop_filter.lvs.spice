@@ -1,0 +1,51 @@
+* NGSPICE file created from loop_filter.ext - technology: gf180mcuD
+
+.subckt loop_filter_R1u_0 z VC VSS
+X0 VC z VSS ppolyf_u_1k r_width=1u r_length=10u
+.ends
+
+.subckt loop_filter_C2 VC VSS
+X0 VC VSS cap_mim_2f0_m4m5_noshield c_width=51.67u c_length=51.67u
+.ends
+
+.subckt loop_filter_C3 VT VSS
+X0 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X7 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X9 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 VT VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt loop_filter_R2u_0 VT VC VSS
+X0 VC VT VSS ppolyf_u_1k r_width=2u r_length=4u
+.ends
+
+.subckt loop_filter_C1_1 z VSS
+X0 z VSS cap_mim_2f0_m4m5_noshield c_width=89.88u c_length=89.88u
+X1 z VSS cap_mim_2f0_m4m5_noshield c_width=89.88u c_length=89.88u
+.ends
+
+.subckt loop_filter_C1_0 z VSS
+X0 z VSS cap_mim_2f0_m4m5_noshield c_width=89.88u c_length=89.88u
+X1 z VSS cap_mim_2f0_m4m5_noshield c_width=89.88u c_length=89.88u
+.ends
+
+.subckt loop_filter VSS VC VT
+XXR1u_0 XC1_1/z VC VSS loop_filter_R1u_0
+XXC2 VC VSS loop_filter_C2
+XXC3 VT VSS loop_filter_C3
+XXR2u_0 VT VC VSS loop_filter_R2u_0
+XXC1_1 XC1_1/z VSS loop_filter_C1_1
+XXC1_0 XC1_1/z VSS loop_filter_C1_0
+.ends
+

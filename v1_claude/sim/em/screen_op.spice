@@ -1,0 +1,3941 @@
+** sch_path: /home/noritsuna/GPS/xschem/tb_full.sch
+**.subckt tb_full
+VDD vdd 0 3.3
+VREF refin 0 sin(1.65 0.4 16.368e6)
+VRFP sp0 0 sin(0 11.2u 1575.42e6)
+VRNP sp sp0 dc 0
+RSP sp sps 50
+CCP sps rfin 10p
+VSCLK sclk 0 pwl(0 0 2.6e-06 0 2.602e-06 3.3 2.65e-06 3.3 2.652e-06 0 2.7e-06 0 2.702e-06 3.3 2.75e-06 3.3 2.752e-06 0 2.8e-06 0  2.802e-06 3.3 2.85e-06 3.3 2.852e-06 0 2.9e-06 0 2.902e-06 3.3 2.95e-06 3.3 2.952e-06 0 3e-06 0 3.002e-06 3.3 3.05e-06 3.3 3.052e-06 0  3.1e-06 0 3.102e-06 3.3 3.15e-06 3.3 3.152e-06 0 3.2e-06 0 3.202e-06 3.3 3.25e-06 3.3 3.252e-06 0 3.3e-06 0 3.302e-06 3.3 3.35e-06 3.3  3.352e-06 0 3.4e-06 0 3.402e-06 3.3 3.45e-06 3.3 3.452e-06 0 3.5e-06 0 3.502e-06 3.3 3.55e-06 3.3 3.552e-06 0 3.6e-06 0 3.602e-06 3.3  3.65e-06 3.3 3.652e-06 0 3.7e-06 0 3.702e-06 3.3 3.75e-06 3.3 3.752e-06 0 3.8e-06 0 3.802e-06 3.3 3.85e-06 3.3 3.852e-06 0 3.9e-06 0  3.902e-06 3.3 3.95e-06 3.3 3.952e-06 0 4e-06 0 4.002e-06 3.3 4.05e-06 3.3 4.052e-06 0 4.1e-06 0 4.102e-06 3.3 4.15e-06 3.3 4.152e-06 0  4.2e-06 0 4.202e-06 3.3 4.25e-06 3.3 4.252e-06 0 4.3e-06 0 4.302e-06 3.3 4.35e-06 3.3 4.352e-06 0 4.4e-06 0 4.402e-06 3.3 4.45e-06 3.3  4.452e-06 0 4.5e-06 0 4.502e-06 3.3 4.55e-06 3.3 4.552e-06 0 4.6e-06 0 4.602e-06 3.3 4.65e-06 3.3 4.652e-06 0 4.7e-06 0 4.702e-06 3.3  4.75e-06 3.3 4.752e-06 0 4.8e-06 0 4.802e-06 3.3 4.85e-06 3.3 4.852e-06 0 4.9e-06 0 4.902e-06 3.3 4.95e-06 3.3 4.952e-06 0)
+VSDI sdi 0 pwl(0 0 2.55e-06 0 2.552e-06 0 2.65e-06 0 2.652e-06 0 2.75e-06 0 2.752e-06 0 2.85e-06 0 2.852e-06 0 2.95e-06 0  2.952e-06 0 3.05e-06 0 3.052e-06 0 3.15e-06 0 3.152e-06 0 3.25e-06 0 3.252e-06 0 3.35e-06 0 3.352e-06 0 3.45e-06 0 3.452e-06 0 3.55e-06 0  3.552e-06 0 3.65e-06 0 3.652e-06 0 3.75e-06 0 3.752e-06 0 3.85e-06 0 3.852e-06 0 3.95e-06 0 3.952e-06 0 4.05e-06 0 4.052e-06 0 4.15e-06 0  4.152e-06 0 4.25e-06 0 4.252e-06 0 4.35e-06 0 4.352e-06 0 4.45e-06 0 4.452e-06 3.3 4.55e-06 3.3 4.552e-06 0 4.65e-06 0 4.652e-06 3.3  4.75e-06 3.3 4.752e-06 0 4.85e-06 0 4.852e-06 3.3)
+VCSN csn 0 pwl(0 3.3 2.5e-06 3.3 2.502e-06 0 5e-06 0 5.002e-06 3.3)
+XDUT rfin refin sclk sdi csn isign imag qsign qmag clkout afcout vctrl vddv vdd 0 gnss_afe_top
+VDDV vdd vddv 0
+CPisign isign 0 2p
+CPimag imag 0 2p
+CPqsign qsign 0 2p
+CPqmag qmag 0 2p
+CPclkout clkout 0 2p
+RAFC afcout 0 100k
+**** begin user architecture code
+ .include /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+
+.option method=gear reltol=2e-4 minbreak=1e-12
+.ic v(vctrl)=1.7 v(xdut.xpll.xlf.z)=1.7 v(xdut.xpll.vcp)=1.7 v(xdut.xvco.xcore.p4)=0 v(xdut.xvco.xcore.n4)=1
+.control
+set num_threads=1
+op
+let i0 = @m.xdut.xspi.xscb.xmn.m0[id]
+print i0
+let i1 = @m.xdut.xspi.xscb.xmp.m0[id]
+print i1
+let i2 = @m.xdut.xspi.xscg.xmn1.m0[id]
+print i2
+let i3 = @m.xdut.xspi.xscg.xmn2.m0[id]
+print i3
+let i4 = @m.xdut.xspi.xscg.xmp1.m0[id]
+print i4
+let i5 = @m.xdut.xspi.xscg.xmp2.m0[id]
+print i5
+let i6 = @m.xdut.xspi.xp1.xmn.m0[id]
+print i6
+let i7 = @m.xdut.xspi.xp1.xmp.m0[id]
+print i7
+let i8 = @m.xdut.xspi.xp2.xmn.m0[id]
+print i8
+let i9 = @m.xdut.xspi.xp2.xmp.m0[id]
+print i9
+let i10 = @m.xdut.xspi.xp3.xmn.m0[id]
+print i10
+let i11 = @m.xdut.xspi.xp3.xmp.m0[id]
+print i11
+let i12 = @m.xdut.xspi.xr0.xci.xmn.m0[id]
+print i12
+let i13 = @m.xdut.xspi.xr0.xci.xmp.m0[id]
+print i13
+let i14 = @m.xdut.xspi.xr0.xt1n.m0[id]
+print i14
+let i15 = @m.xdut.xspi.xr0.xt1p.m0[id]
+print i15
+let i16 = @m.xdut.xspi.xr0.xm.xmn1.m0[id]
+print i16
+let i17 = @m.xdut.xspi.xr0.xm.xmn2.m0[id]
+print i17
+let i18 = @m.xdut.xspi.xr0.xm.xmp1.m0[id]
+print i18
+let i19 = @m.xdut.xspi.xr0.xm.xmp2.m0[id]
+print i19
+let i20 = @m.xdut.xspi.xr0.xmf.xmn.m0[id]
+print i20
+let i21 = @m.xdut.xspi.xr0.xmf.xmp.m0[id]
+print i21
+let i22 = @m.xdut.xspi.xr0.xt2n.m0[id]
+print i22
+let i23 = @m.xdut.xspi.xr0.xt2p.m0[id]
+print i23
+let i24 = @m.xdut.xspi.xr0.xt3n.m0[id]
+print i24
+let i25 = @m.xdut.xspi.xr0.xt3p.m0[id]
+print i25
+let i26 = @m.xdut.xspi.xr0.xs.xmn1.m0[id]
+print i26
+let i27 = @m.xdut.xspi.xr0.xs.xmn2.m0[id]
+print i27
+let i28 = @m.xdut.xspi.xr0.xs.xmp1.m0[id]
+print i28
+let i29 = @m.xdut.xspi.xr0.xs.xmp2.m0[id]
+print i29
+let i30 = @m.xdut.xspi.xr0.xsf.xmn.m0[id]
+print i30
+let i31 = @m.xdut.xspi.xr0.xsf.xmp.m0[id]
+print i31
+let i32 = @m.xdut.xspi.xr0.xt4n.m0[id]
+print i32
+let i33 = @m.xdut.xspi.xr0.xt4p.m0[id]
+print i33
+let i34 = @m.xdut.xspi.xr1.xci.xmn.m0[id]
+print i34
+let i35 = @m.xdut.xspi.xr1.xci.xmp.m0[id]
+print i35
+let i36 = @m.xdut.xspi.xr1.xt1n.m0[id]
+print i36
+let i37 = @m.xdut.xspi.xr1.xt1p.m0[id]
+print i37
+let i38 = @m.xdut.xspi.xr1.xm.xmn1.m0[id]
+print i38
+let i39 = @m.xdut.xspi.xr1.xm.xmn2.m0[id]
+print i39
+let i40 = @m.xdut.xspi.xr1.xm.xmp1.m0[id]
+print i40
+let i41 = @m.xdut.xspi.xr1.xm.xmp2.m0[id]
+print i41
+let i42 = @m.xdut.xspi.xr1.xmf.xmn.m0[id]
+print i42
+let i43 = @m.xdut.xspi.xr1.xmf.xmp.m0[id]
+print i43
+let i44 = @m.xdut.xspi.xr1.xt2n.m0[id]
+print i44
+let i45 = @m.xdut.xspi.xr1.xt2p.m0[id]
+print i45
+let i46 = @m.xdut.xspi.xr1.xt3n.m0[id]
+print i46
+let i47 = @m.xdut.xspi.xr1.xt3p.m0[id]
+print i47
+let i48 = @m.xdut.xspi.xr1.xs.xmn1.m0[id]
+print i48
+let i49 = @m.xdut.xspi.xr1.xs.xmn2.m0[id]
+print i49
+let i50 = @m.xdut.xspi.xr1.xs.xmp1.m0[id]
+print i50
+let i51 = @m.xdut.xspi.xr1.xs.xmp2.m0[id]
+print i51
+let i52 = @m.xdut.xspi.xr1.xsf.xmn.m0[id]
+print i52
+let i53 = @m.xdut.xspi.xr1.xsf.xmp.m0[id]
+print i53
+let i54 = @m.xdut.xspi.xr1.xt4n.m0[id]
+print i54
+let i55 = @m.xdut.xspi.xr1.xt4p.m0[id]
+print i55
+let i56 = @m.xdut.xspi.xr2.xci.xmn.m0[id]
+print i56
+let i57 = @m.xdut.xspi.xr2.xci.xmp.m0[id]
+print i57
+let i58 = @m.xdut.xspi.xr2.xt1n.m0[id]
+print i58
+let i59 = @m.xdut.xspi.xr2.xt1p.m0[id]
+print i59
+let i60 = @m.xdut.xspi.xr2.xm.xmn1.m0[id]
+print i60
+let i61 = @m.xdut.xspi.xr2.xm.xmn2.m0[id]
+print i61
+let i62 = @m.xdut.xspi.xr2.xm.xmp1.m0[id]
+print i62
+let i63 = @m.xdut.xspi.xr2.xm.xmp2.m0[id]
+print i63
+let i64 = @m.xdut.xspi.xr2.xmf.xmn.m0[id]
+print i64
+let i65 = @m.xdut.xspi.xr2.xmf.xmp.m0[id]
+print i65
+let i66 = @m.xdut.xspi.xr2.xt2n.m0[id]
+print i66
+let i67 = @m.xdut.xspi.xr2.xt2p.m0[id]
+print i67
+let i68 = @m.xdut.xspi.xr2.xt3n.m0[id]
+print i68
+let i69 = @m.xdut.xspi.xr2.xt3p.m0[id]
+print i69
+let i70 = @m.xdut.xspi.xr2.xs.xmn1.m0[id]
+print i70
+let i71 = @m.xdut.xspi.xr2.xs.xmn2.m0[id]
+print i71
+let i72 = @m.xdut.xspi.xr2.xs.xmp1.m0[id]
+print i72
+let i73 = @m.xdut.xspi.xr2.xs.xmp2.m0[id]
+print i73
+let i74 = @m.xdut.xspi.xr2.xsf.xmn.m0[id]
+print i74
+let i75 = @m.xdut.xspi.xr2.xsf.xmp.m0[id]
+print i75
+let i76 = @m.xdut.xspi.xr2.xt4n.m0[id]
+print i76
+let i77 = @m.xdut.xspi.xr2.xt4p.m0[id]
+print i77
+let i78 = @m.xdut.xspi.xr3.xci.xmn.m0[id]
+print i78
+let i79 = @m.xdut.xspi.xr3.xci.xmp.m0[id]
+print i79
+let i80 = @m.xdut.xspi.xr3.xt1n.m0[id]
+print i80
+let i81 = @m.xdut.xspi.xr3.xt1p.m0[id]
+print i81
+let i82 = @m.xdut.xspi.xr3.xm.xmn1.m0[id]
+print i82
+let i83 = @m.xdut.xspi.xr3.xm.xmn2.m0[id]
+print i83
+let i84 = @m.xdut.xspi.xr3.xm.xmp1.m0[id]
+print i84
+let i85 = @m.xdut.xspi.xr3.xm.xmp2.m0[id]
+print i85
+let i86 = @m.xdut.xspi.xr3.xmf.xmn.m0[id]
+print i86
+let i87 = @m.xdut.xspi.xr3.xmf.xmp.m0[id]
+print i87
+let i88 = @m.xdut.xspi.xr3.xt2n.m0[id]
+print i88
+let i89 = @m.xdut.xspi.xr3.xt2p.m0[id]
+print i89
+let i90 = @m.xdut.xspi.xr3.xt3n.m0[id]
+print i90
+let i91 = @m.xdut.xspi.xr3.xt3p.m0[id]
+print i91
+let i92 = @m.xdut.xspi.xr3.xs.xmn1.m0[id]
+print i92
+let i93 = @m.xdut.xspi.xr3.xs.xmn2.m0[id]
+print i93
+let i94 = @m.xdut.xspi.xr3.xs.xmp1.m0[id]
+print i94
+let i95 = @m.xdut.xspi.xr3.xs.xmp2.m0[id]
+print i95
+let i96 = @m.xdut.xspi.xr3.xsf.xmn.m0[id]
+print i96
+let i97 = @m.xdut.xspi.xr3.xsf.xmp.m0[id]
+print i97
+let i98 = @m.xdut.xspi.xr3.xt4n.m0[id]
+print i98
+let i99 = @m.xdut.xspi.xr3.xt4p.m0[id]
+print i99
+let i100 = @m.xdut.xspi.xr4.xci.xmn.m0[id]
+print i100
+let i101 = @m.xdut.xspi.xr4.xci.xmp.m0[id]
+print i101
+let i102 = @m.xdut.xspi.xr4.xt1n.m0[id]
+print i102
+let i103 = @m.xdut.xspi.xr4.xt1p.m0[id]
+print i103
+let i104 = @m.xdut.xspi.xr4.xm.xmn1.m0[id]
+print i104
+let i105 = @m.xdut.xspi.xr4.xm.xmn2.m0[id]
+print i105
+let i106 = @m.xdut.xspi.xr4.xm.xmp1.m0[id]
+print i106
+let i107 = @m.xdut.xspi.xr4.xm.xmp2.m0[id]
+print i107
+let i108 = @m.xdut.xspi.xr4.xmf.xmn.m0[id]
+print i108
+let i109 = @m.xdut.xspi.xr4.xmf.xmp.m0[id]
+print i109
+let i110 = @m.xdut.xspi.xr4.xt2n.m0[id]
+print i110
+let i111 = @m.xdut.xspi.xr4.xt2p.m0[id]
+print i111
+let i112 = @m.xdut.xspi.xr4.xt3n.m0[id]
+print i112
+let i113 = @m.xdut.xspi.xr4.xt3p.m0[id]
+print i113
+let i114 = @m.xdut.xspi.xr4.xs.xmn1.m0[id]
+print i114
+let i115 = @m.xdut.xspi.xr4.xs.xmn2.m0[id]
+print i115
+let i116 = @m.xdut.xspi.xr4.xs.xmp1.m0[id]
+print i116
+let i117 = @m.xdut.xspi.xr4.xs.xmp2.m0[id]
+print i117
+let i118 = @m.xdut.xspi.xr4.xsf.xmn.m0[id]
+print i118
+let i119 = @m.xdut.xspi.xr4.xsf.xmp.m0[id]
+print i119
+let i120 = @m.xdut.xspi.xr4.xt4n.m0[id]
+print i120
+let i121 = @m.xdut.xspi.xr4.xt4p.m0[id]
+print i121
+let i122 = @m.xdut.xspi.xr5.xci.xmn.m0[id]
+print i122
+let i123 = @m.xdut.xspi.xr5.xci.xmp.m0[id]
+print i123
+let i124 = @m.xdut.xspi.xr5.xt1n.m0[id]
+print i124
+let i125 = @m.xdut.xspi.xr5.xt1p.m0[id]
+print i125
+let i126 = @m.xdut.xspi.xr5.xm.xmn1.m0[id]
+print i126
+let i127 = @m.xdut.xspi.xr5.xm.xmn2.m0[id]
+print i127
+let i128 = @m.xdut.xspi.xr5.xm.xmp1.m0[id]
+print i128
+let i129 = @m.xdut.xspi.xr5.xm.xmp2.m0[id]
+print i129
+let i130 = @m.xdut.xspi.xr5.xmf.xmn.m0[id]
+print i130
+let i131 = @m.xdut.xspi.xr5.xmf.xmp.m0[id]
+print i131
+let i132 = @m.xdut.xspi.xr5.xt2n.m0[id]
+print i132
+let i133 = @m.xdut.xspi.xr5.xt2p.m0[id]
+print i133
+let i134 = @m.xdut.xspi.xr5.xt3n.m0[id]
+print i134
+let i135 = @m.xdut.xspi.xr5.xt3p.m0[id]
+print i135
+let i136 = @m.xdut.xspi.xr5.xs.xmn1.m0[id]
+print i136
+let i137 = @m.xdut.xspi.xr5.xs.xmn2.m0[id]
+print i137
+let i138 = @m.xdut.xspi.xr5.xs.xmp1.m0[id]
+print i138
+let i139 = @m.xdut.xspi.xr5.xs.xmp2.m0[id]
+print i139
+let i140 = @m.xdut.xspi.xr5.xsf.xmn.m0[id]
+print i140
+let i141 = @m.xdut.xspi.xr5.xsf.xmp.m0[id]
+print i141
+let i142 = @m.xdut.xspi.xr5.xt4n.m0[id]
+print i142
+let i143 = @m.xdut.xspi.xr5.xt4p.m0[id]
+print i143
+let i144 = @m.xdut.xspi.xr6.xci.xmn.m0[id]
+print i144
+let i145 = @m.xdut.xspi.xr6.xci.xmp.m0[id]
+print i145
+let i146 = @m.xdut.xspi.xr6.xt1n.m0[id]
+print i146
+let i147 = @m.xdut.xspi.xr6.xt1p.m0[id]
+print i147
+let i148 = @m.xdut.xspi.xr6.xm.xmn1.m0[id]
+print i148
+let i149 = @m.xdut.xspi.xr6.xm.xmn2.m0[id]
+print i149
+let i150 = @m.xdut.xspi.xr6.xm.xmp1.m0[id]
+print i150
+let i151 = @m.xdut.xspi.xr6.xm.xmp2.m0[id]
+print i151
+let i152 = @m.xdut.xspi.xr6.xmf.xmn.m0[id]
+print i152
+let i153 = @m.xdut.xspi.xr6.xmf.xmp.m0[id]
+print i153
+let i154 = @m.xdut.xspi.xr6.xt2n.m0[id]
+print i154
+let i155 = @m.xdut.xspi.xr6.xt2p.m0[id]
+print i155
+let i156 = @m.xdut.xspi.xr6.xt3n.m0[id]
+print i156
+let i157 = @m.xdut.xspi.xr6.xt3p.m0[id]
+print i157
+let i158 = @m.xdut.xspi.xr6.xs.xmn1.m0[id]
+print i158
+let i159 = @m.xdut.xspi.xr6.xs.xmn2.m0[id]
+print i159
+let i160 = @m.xdut.xspi.xr6.xs.xmp1.m0[id]
+print i160
+let i161 = @m.xdut.xspi.xr6.xs.xmp2.m0[id]
+print i161
+let i162 = @m.xdut.xspi.xr6.xsf.xmn.m0[id]
+print i162
+let i163 = @m.xdut.xspi.xr6.xsf.xmp.m0[id]
+print i163
+let i164 = @m.xdut.xspi.xr6.xt4n.m0[id]
+print i164
+let i165 = @m.xdut.xspi.xr6.xt4p.m0[id]
+print i165
+let i166 = @m.xdut.xspi.xr7.xci.xmn.m0[id]
+print i166
+let i167 = @m.xdut.xspi.xr7.xci.xmp.m0[id]
+print i167
+let i168 = @m.xdut.xspi.xr7.xt1n.m0[id]
+print i168
+let i169 = @m.xdut.xspi.xr7.xt1p.m0[id]
+print i169
+let i170 = @m.xdut.xspi.xr7.xm.xmn1.m0[id]
+print i170
+let i171 = @m.xdut.xspi.xr7.xm.xmn2.m0[id]
+print i171
+let i172 = @m.xdut.xspi.xr7.xm.xmp1.m0[id]
+print i172
+let i173 = @m.xdut.xspi.xr7.xm.xmp2.m0[id]
+print i173
+let i174 = @m.xdut.xspi.xr7.xmf.xmn.m0[id]
+print i174
+let i175 = @m.xdut.xspi.xr7.xmf.xmp.m0[id]
+print i175
+let i176 = @m.xdut.xspi.xr7.xt2n.m0[id]
+print i176
+let i177 = @m.xdut.xspi.xr7.xt2p.m0[id]
+print i177
+let i178 = @m.xdut.xspi.xr7.xt3n.m0[id]
+print i178
+let i179 = @m.xdut.xspi.xr7.xt3p.m0[id]
+print i179
+let i180 = @m.xdut.xspi.xr7.xs.xmn1.m0[id]
+print i180
+let i181 = @m.xdut.xspi.xr7.xs.xmn2.m0[id]
+print i181
+let i182 = @m.xdut.xspi.xr7.xs.xmp1.m0[id]
+print i182
+let i183 = @m.xdut.xspi.xr7.xs.xmp2.m0[id]
+print i183
+let i184 = @m.xdut.xspi.xr7.xsf.xmn.m0[id]
+print i184
+let i185 = @m.xdut.xspi.xr7.xsf.xmp.m0[id]
+print i185
+let i186 = @m.xdut.xspi.xr7.xt4n.m0[id]
+print i186
+let i187 = @m.xdut.xspi.xr7.xt4p.m0[id]
+print i187
+let i188 = @m.xdut.xspi.xr8.xci.xmn.m0[id]
+print i188
+let i189 = @m.xdut.xspi.xr8.xci.xmp.m0[id]
+print i189
+let i190 = @m.xdut.xspi.xr8.xt1n.m0[id]
+print i190
+let i191 = @m.xdut.xspi.xr8.xt1p.m0[id]
+print i191
+let i192 = @m.xdut.xspi.xr8.xm.xmn1.m0[id]
+print i192
+let i193 = @m.xdut.xspi.xr8.xm.xmn2.m0[id]
+print i193
+let i194 = @m.xdut.xspi.xr8.xm.xmp1.m0[id]
+print i194
+let i195 = @m.xdut.xspi.xr8.xm.xmp2.m0[id]
+print i195
+let i196 = @m.xdut.xspi.xr8.xmf.xmn.m0[id]
+print i196
+let i197 = @m.xdut.xspi.xr8.xmf.xmp.m0[id]
+print i197
+let i198 = @m.xdut.xspi.xr8.xt2n.m0[id]
+print i198
+let i199 = @m.xdut.xspi.xr8.xt2p.m0[id]
+print i199
+let i200 = @m.xdut.xspi.xr8.xt3n.m0[id]
+print i200
+let i201 = @m.xdut.xspi.xr8.xt3p.m0[id]
+print i201
+let i202 = @m.xdut.xspi.xr8.xs.xmn1.m0[id]
+print i202
+let i203 = @m.xdut.xspi.xr8.xs.xmn2.m0[id]
+print i203
+let i204 = @m.xdut.xspi.xr8.xs.xmp1.m0[id]
+print i204
+let i205 = @m.xdut.xspi.xr8.xs.xmp2.m0[id]
+print i205
+let i206 = @m.xdut.xspi.xr8.xsf.xmn.m0[id]
+print i206
+let i207 = @m.xdut.xspi.xr8.xsf.xmp.m0[id]
+print i207
+let i208 = @m.xdut.xspi.xr8.xt4n.m0[id]
+print i208
+let i209 = @m.xdut.xspi.xr8.xt4p.m0[id]
+print i209
+let i210 = @m.xdut.xspi.xr9.xci.xmn.m0[id]
+print i210
+let i211 = @m.xdut.xspi.xr9.xci.xmp.m0[id]
+print i211
+let i212 = @m.xdut.xspi.xr9.xt1n.m0[id]
+print i212
+let i213 = @m.xdut.xspi.xr9.xt1p.m0[id]
+print i213
+let i214 = @m.xdut.xspi.xr9.xm.xmn1.m0[id]
+print i214
+let i215 = @m.xdut.xspi.xr9.xm.xmn2.m0[id]
+print i215
+let i216 = @m.xdut.xspi.xr9.xm.xmp1.m0[id]
+print i216
+let i217 = @m.xdut.xspi.xr9.xm.xmp2.m0[id]
+print i217
+let i218 = @m.xdut.xspi.xr9.xmf.xmn.m0[id]
+print i218
+let i219 = @m.xdut.xspi.xr9.xmf.xmp.m0[id]
+print i219
+let i220 = @m.xdut.xspi.xr9.xt2n.m0[id]
+print i220
+let i221 = @m.xdut.xspi.xr9.xt2p.m0[id]
+print i221
+let i222 = @m.xdut.xspi.xr9.xt3n.m0[id]
+print i222
+let i223 = @m.xdut.xspi.xr9.xt3p.m0[id]
+print i223
+let i224 = @m.xdut.xspi.xr9.xs.xmn1.m0[id]
+print i224
+let i225 = @m.xdut.xspi.xr9.xs.xmn2.m0[id]
+print i225
+let i226 = @m.xdut.xspi.xr9.xs.xmp1.m0[id]
+print i226
+let i227 = @m.xdut.xspi.xr9.xs.xmp2.m0[id]
+print i227
+let i228 = @m.xdut.xspi.xr9.xsf.xmn.m0[id]
+print i228
+let i229 = @m.xdut.xspi.xr9.xsf.xmp.m0[id]
+print i229
+let i230 = @m.xdut.xspi.xr9.xt4n.m0[id]
+print i230
+let i231 = @m.xdut.xspi.xr9.xt4p.m0[id]
+print i231
+let i232 = @m.xdut.xspi.xr10.xci.xmn.m0[id]
+print i232
+let i233 = @m.xdut.xspi.xr10.xci.xmp.m0[id]
+print i233
+let i234 = @m.xdut.xspi.xr10.xt1n.m0[id]
+print i234
+let i235 = @m.xdut.xspi.xr10.xt1p.m0[id]
+print i235
+let i236 = @m.xdut.xspi.xr10.xm.xmn1.m0[id]
+print i236
+let i237 = @m.xdut.xspi.xr10.xm.xmn2.m0[id]
+print i237
+let i238 = @m.xdut.xspi.xr10.xm.xmp1.m0[id]
+print i238
+let i239 = @m.xdut.xspi.xr10.xm.xmp2.m0[id]
+print i239
+let i240 = @m.xdut.xspi.xr10.xmf.xmn.m0[id]
+print i240
+let i241 = @m.xdut.xspi.xr10.xmf.xmp.m0[id]
+print i241
+let i242 = @m.xdut.xspi.xr10.xt2n.m0[id]
+print i242
+let i243 = @m.xdut.xspi.xr10.xt2p.m0[id]
+print i243
+let i244 = @m.xdut.xspi.xr10.xt3n.m0[id]
+print i244
+let i245 = @m.xdut.xspi.xr10.xt3p.m0[id]
+print i245
+let i246 = @m.xdut.xspi.xr10.xs.xmn1.m0[id]
+print i246
+let i247 = @m.xdut.xspi.xr10.xs.xmn2.m0[id]
+print i247
+let i248 = @m.xdut.xspi.xr10.xs.xmp1.m0[id]
+print i248
+let i249 = @m.xdut.xspi.xr10.xs.xmp2.m0[id]
+print i249
+let i250 = @m.xdut.xspi.xr10.xsf.xmn.m0[id]
+print i250
+let i251 = @m.xdut.xspi.xr10.xsf.xmp.m0[id]
+print i251
+let i252 = @m.xdut.xspi.xr10.xt4n.m0[id]
+print i252
+let i253 = @m.xdut.xspi.xr10.xt4p.m0[id]
+print i253
+let i254 = @m.xdut.xspi.xr11.xci.xmn.m0[id]
+print i254
+let i255 = @m.xdut.xspi.xr11.xci.xmp.m0[id]
+print i255
+let i256 = @m.xdut.xspi.xr11.xt1n.m0[id]
+print i256
+let i257 = @m.xdut.xspi.xr11.xt1p.m0[id]
+print i257
+let i258 = @m.xdut.xspi.xr11.xm.xmn1.m0[id]
+print i258
+let i259 = @m.xdut.xspi.xr11.xm.xmn2.m0[id]
+print i259
+let i260 = @m.xdut.xspi.xr11.xm.xmp1.m0[id]
+print i260
+let i261 = @m.xdut.xspi.xr11.xm.xmp2.m0[id]
+print i261
+let i262 = @m.xdut.xspi.xr11.xmf.xmn.m0[id]
+print i262
+let i263 = @m.xdut.xspi.xr11.xmf.xmp.m0[id]
+print i263
+let i264 = @m.xdut.xspi.xr11.xt2n.m0[id]
+print i264
+let i265 = @m.xdut.xspi.xr11.xt2p.m0[id]
+print i265
+let i266 = @m.xdut.xspi.xr11.xt3n.m0[id]
+print i266
+let i267 = @m.xdut.xspi.xr11.xt3p.m0[id]
+print i267
+let i268 = @m.xdut.xspi.xr11.xs.xmn1.m0[id]
+print i268
+let i269 = @m.xdut.xspi.xr11.xs.xmn2.m0[id]
+print i269
+let i270 = @m.xdut.xspi.xr11.xs.xmp1.m0[id]
+print i270
+let i271 = @m.xdut.xspi.xr11.xs.xmp2.m0[id]
+print i271
+let i272 = @m.xdut.xspi.xr11.xsf.xmn.m0[id]
+print i272
+let i273 = @m.xdut.xspi.xr11.xsf.xmp.m0[id]
+print i273
+let i274 = @m.xdut.xspi.xr11.xt4n.m0[id]
+print i274
+let i275 = @m.xdut.xspi.xr11.xt4p.m0[id]
+print i275
+let i276 = @m.xdut.xspi.xr12.xci.xmn.m0[id]
+print i276
+let i277 = @m.xdut.xspi.xr12.xci.xmp.m0[id]
+print i277
+let i278 = @m.xdut.xspi.xr12.xt1n.m0[id]
+print i278
+let i279 = @m.xdut.xspi.xr12.xt1p.m0[id]
+print i279
+let i280 = @m.xdut.xspi.xr12.xm.xmn1.m0[id]
+print i280
+let i281 = @m.xdut.xspi.xr12.xm.xmn2.m0[id]
+print i281
+let i282 = @m.xdut.xspi.xr12.xm.xmp1.m0[id]
+print i282
+let i283 = @m.xdut.xspi.xr12.xm.xmp2.m0[id]
+print i283
+let i284 = @m.xdut.xspi.xr12.xmf.xmn.m0[id]
+print i284
+let i285 = @m.xdut.xspi.xr12.xmf.xmp.m0[id]
+print i285
+let i286 = @m.xdut.xspi.xr12.xt2n.m0[id]
+print i286
+let i287 = @m.xdut.xspi.xr12.xt2p.m0[id]
+print i287
+let i288 = @m.xdut.xspi.xr12.xt3n.m0[id]
+print i288
+let i289 = @m.xdut.xspi.xr12.xt3p.m0[id]
+print i289
+let i290 = @m.xdut.xspi.xr12.xs.xmn1.m0[id]
+print i290
+let i291 = @m.xdut.xspi.xr12.xs.xmn2.m0[id]
+print i291
+let i292 = @m.xdut.xspi.xr12.xs.xmp1.m0[id]
+print i292
+let i293 = @m.xdut.xspi.xr12.xs.xmp2.m0[id]
+print i293
+let i294 = @m.xdut.xspi.xr12.xsf.xmn.m0[id]
+print i294
+let i295 = @m.xdut.xspi.xr12.xsf.xmp.m0[id]
+print i295
+let i296 = @m.xdut.xspi.xr12.xt4n.m0[id]
+print i296
+let i297 = @m.xdut.xspi.xr12.xt4p.m0[id]
+print i297
+let i298 = @m.xdut.xspi.xr13.xci.xmn.m0[id]
+print i298
+let i299 = @m.xdut.xspi.xr13.xci.xmp.m0[id]
+print i299
+let i300 = @m.xdut.xspi.xr13.xt1n.m0[id]
+print i300
+let i301 = @m.xdut.xspi.xr13.xt1p.m0[id]
+print i301
+let i302 = @m.xdut.xspi.xr13.xm.xmn1.m0[id]
+print i302
+let i303 = @m.xdut.xspi.xr13.xm.xmn2.m0[id]
+print i303
+let i304 = @m.xdut.xspi.xr13.xm.xmp1.m0[id]
+print i304
+let i305 = @m.xdut.xspi.xr13.xm.xmp2.m0[id]
+print i305
+let i306 = @m.xdut.xspi.xr13.xmf.xmn.m0[id]
+print i306
+let i307 = @m.xdut.xspi.xr13.xmf.xmp.m0[id]
+print i307
+let i308 = @m.xdut.xspi.xr13.xt2n.m0[id]
+print i308
+let i309 = @m.xdut.xspi.xr13.xt2p.m0[id]
+print i309
+let i310 = @m.xdut.xspi.xr13.xt3n.m0[id]
+print i310
+let i311 = @m.xdut.xspi.xr13.xt3p.m0[id]
+print i311
+let i312 = @m.xdut.xspi.xr13.xs.xmn1.m0[id]
+print i312
+let i313 = @m.xdut.xspi.xr13.xs.xmn2.m0[id]
+print i313
+let i314 = @m.xdut.xspi.xr13.xs.xmp1.m0[id]
+print i314
+let i315 = @m.xdut.xspi.xr13.xs.xmp2.m0[id]
+print i315
+let i316 = @m.xdut.xspi.xr13.xsf.xmn.m0[id]
+print i316
+let i317 = @m.xdut.xspi.xr13.xsf.xmp.m0[id]
+print i317
+let i318 = @m.xdut.xspi.xr13.xt4n.m0[id]
+print i318
+let i319 = @m.xdut.xspi.xr13.xt4p.m0[id]
+print i319
+let i320 = @m.xdut.xspi.xr14.xci.xmn.m0[id]
+print i320
+let i321 = @m.xdut.xspi.xr14.xci.xmp.m0[id]
+print i321
+let i322 = @m.xdut.xspi.xr14.xt1n.m0[id]
+print i322
+let i323 = @m.xdut.xspi.xr14.xt1p.m0[id]
+print i323
+let i324 = @m.xdut.xspi.xr14.xm.xmn1.m0[id]
+print i324
+let i325 = @m.xdut.xspi.xr14.xm.xmn2.m0[id]
+print i325
+let i326 = @m.xdut.xspi.xr14.xm.xmp1.m0[id]
+print i326
+let i327 = @m.xdut.xspi.xr14.xm.xmp2.m0[id]
+print i327
+let i328 = @m.xdut.xspi.xr14.xmf.xmn.m0[id]
+print i328
+let i329 = @m.xdut.xspi.xr14.xmf.xmp.m0[id]
+print i329
+let i330 = @m.xdut.xspi.xr14.xt2n.m0[id]
+print i330
+let i331 = @m.xdut.xspi.xr14.xt2p.m0[id]
+print i331
+let i332 = @m.xdut.xspi.xr14.xt3n.m0[id]
+print i332
+let i333 = @m.xdut.xspi.xr14.xt3p.m0[id]
+print i333
+let i334 = @m.xdut.xspi.xr14.xs.xmn1.m0[id]
+print i334
+let i335 = @m.xdut.xspi.xr14.xs.xmn2.m0[id]
+print i335
+let i336 = @m.xdut.xspi.xr14.xs.xmp1.m0[id]
+print i336
+let i337 = @m.xdut.xspi.xr14.xs.xmp2.m0[id]
+print i337
+let i338 = @m.xdut.xspi.xr14.xsf.xmn.m0[id]
+print i338
+let i339 = @m.xdut.xspi.xr14.xsf.xmp.m0[id]
+print i339
+let i340 = @m.xdut.xspi.xr14.xt4n.m0[id]
+print i340
+let i341 = @m.xdut.xspi.xr14.xt4p.m0[id]
+print i341
+let i342 = @m.xdut.xspi.xr15.xci.xmn.m0[id]
+print i342
+let i343 = @m.xdut.xspi.xr15.xci.xmp.m0[id]
+print i343
+let i344 = @m.xdut.xspi.xr15.xt1n.m0[id]
+print i344
+let i345 = @m.xdut.xspi.xr15.xt1p.m0[id]
+print i345
+let i346 = @m.xdut.xspi.xr15.xm.xmn1.m0[id]
+print i346
+let i347 = @m.xdut.xspi.xr15.xm.xmn2.m0[id]
+print i347
+let i348 = @m.xdut.xspi.xr15.xm.xmp1.m0[id]
+print i348
+let i349 = @m.xdut.xspi.xr15.xm.xmp2.m0[id]
+print i349
+let i350 = @m.xdut.xspi.xr15.xmf.xmn.m0[id]
+print i350
+let i351 = @m.xdut.xspi.xr15.xmf.xmp.m0[id]
+print i351
+let i352 = @m.xdut.xspi.xr15.xt2n.m0[id]
+print i352
+let i353 = @m.xdut.xspi.xr15.xt2p.m0[id]
+print i353
+let i354 = @m.xdut.xspi.xr15.xt3n.m0[id]
+print i354
+let i355 = @m.xdut.xspi.xr15.xt3p.m0[id]
+print i355
+let i356 = @m.xdut.xspi.xr15.xs.xmn1.m0[id]
+print i356
+let i357 = @m.xdut.xspi.xr15.xs.xmn2.m0[id]
+print i357
+let i358 = @m.xdut.xspi.xr15.xs.xmp1.m0[id]
+print i358
+let i359 = @m.xdut.xspi.xr15.xs.xmp2.m0[id]
+print i359
+let i360 = @m.xdut.xspi.xr15.xsf.xmn.m0[id]
+print i360
+let i361 = @m.xdut.xspi.xr15.xsf.xmp.m0[id]
+print i361
+let i362 = @m.xdut.xspi.xr15.xt4n.m0[id]
+print i362
+let i363 = @m.xdut.xspi.xr15.xt4p.m0[id]
+print i363
+let i364 = @m.xdut.xspi.xr16.xci.xmn.m0[id]
+print i364
+let i365 = @m.xdut.xspi.xr16.xci.xmp.m0[id]
+print i365
+let i366 = @m.xdut.xspi.xr16.xt1n.m0[id]
+print i366
+let i367 = @m.xdut.xspi.xr16.xt1p.m0[id]
+print i367
+let i368 = @m.xdut.xspi.xr16.xm.xmn1.m0[id]
+print i368
+let i369 = @m.xdut.xspi.xr16.xm.xmn2.m0[id]
+print i369
+let i370 = @m.xdut.xspi.xr16.xm.xmp1.m0[id]
+print i370
+let i371 = @m.xdut.xspi.xr16.xm.xmp2.m0[id]
+print i371
+let i372 = @m.xdut.xspi.xr16.xmf.xmn.m0[id]
+print i372
+let i373 = @m.xdut.xspi.xr16.xmf.xmp.m0[id]
+print i373
+let i374 = @m.xdut.xspi.xr16.xt2n.m0[id]
+print i374
+let i375 = @m.xdut.xspi.xr16.xt2p.m0[id]
+print i375
+let i376 = @m.xdut.xspi.xr16.xt3n.m0[id]
+print i376
+let i377 = @m.xdut.xspi.xr16.xt3p.m0[id]
+print i377
+let i378 = @m.xdut.xspi.xr16.xs.xmn1.m0[id]
+print i378
+let i379 = @m.xdut.xspi.xr16.xs.xmn2.m0[id]
+print i379
+let i380 = @m.xdut.xspi.xr16.xs.xmp1.m0[id]
+print i380
+let i381 = @m.xdut.xspi.xr16.xs.xmp2.m0[id]
+print i381
+let i382 = @m.xdut.xspi.xr16.xsf.xmn.m0[id]
+print i382
+let i383 = @m.xdut.xspi.xr16.xsf.xmp.m0[id]
+print i383
+let i384 = @m.xdut.xspi.xr16.xt4n.m0[id]
+print i384
+let i385 = @m.xdut.xspi.xr16.xt4p.m0[id]
+print i385
+let i386 = @m.xdut.xspi.xr17.xci.xmn.m0[id]
+print i386
+let i387 = @m.xdut.xspi.xr17.xci.xmp.m0[id]
+print i387
+let i388 = @m.xdut.xspi.xr17.xt1n.m0[id]
+print i388
+let i389 = @m.xdut.xspi.xr17.xt1p.m0[id]
+print i389
+let i390 = @m.xdut.xspi.xr17.xm.xmn1.m0[id]
+print i390
+let i391 = @m.xdut.xspi.xr17.xm.xmn2.m0[id]
+print i391
+let i392 = @m.xdut.xspi.xr17.xm.xmp1.m0[id]
+print i392
+let i393 = @m.xdut.xspi.xr17.xm.xmp2.m0[id]
+print i393
+let i394 = @m.xdut.xspi.xr17.xmf.xmn.m0[id]
+print i394
+let i395 = @m.xdut.xspi.xr17.xmf.xmp.m0[id]
+print i395
+let i396 = @m.xdut.xspi.xr17.xt2n.m0[id]
+print i396
+let i397 = @m.xdut.xspi.xr17.xt2p.m0[id]
+print i397
+let i398 = @m.xdut.xspi.xr17.xt3n.m0[id]
+print i398
+let i399 = @m.xdut.xspi.xr17.xt3p.m0[id]
+print i399
+let i400 = @m.xdut.xspi.xr17.xs.xmn1.m0[id]
+print i400
+let i401 = @m.xdut.xspi.xr17.xs.xmn2.m0[id]
+print i401
+let i402 = @m.xdut.xspi.xr17.xs.xmp1.m0[id]
+print i402
+let i403 = @m.xdut.xspi.xr17.xs.xmp2.m0[id]
+print i403
+let i404 = @m.xdut.xspi.xr17.xsf.xmn.m0[id]
+print i404
+let i405 = @m.xdut.xspi.xr17.xsf.xmp.m0[id]
+print i405
+let i406 = @m.xdut.xspi.xr17.xt4n.m0[id]
+print i406
+let i407 = @m.xdut.xspi.xr17.xt4p.m0[id]
+print i407
+let i408 = @m.xdut.xspi.xr18.xci.xmn.m0[id]
+print i408
+let i409 = @m.xdut.xspi.xr18.xci.xmp.m0[id]
+print i409
+let i410 = @m.xdut.xspi.xr18.xt1n.m0[id]
+print i410
+let i411 = @m.xdut.xspi.xr18.xt1p.m0[id]
+print i411
+let i412 = @m.xdut.xspi.xr18.xm.xmn1.m0[id]
+print i412
+let i413 = @m.xdut.xspi.xr18.xm.xmn2.m0[id]
+print i413
+let i414 = @m.xdut.xspi.xr18.xm.xmp1.m0[id]
+print i414
+let i415 = @m.xdut.xspi.xr18.xm.xmp2.m0[id]
+print i415
+let i416 = @m.xdut.xspi.xr18.xmf.xmn.m0[id]
+print i416
+let i417 = @m.xdut.xspi.xr18.xmf.xmp.m0[id]
+print i417
+let i418 = @m.xdut.xspi.xr18.xt2n.m0[id]
+print i418
+let i419 = @m.xdut.xspi.xr18.xt2p.m0[id]
+print i419
+let i420 = @m.xdut.xspi.xr18.xt3n.m0[id]
+print i420
+let i421 = @m.xdut.xspi.xr18.xt3p.m0[id]
+print i421
+let i422 = @m.xdut.xspi.xr18.xs.xmn1.m0[id]
+print i422
+let i423 = @m.xdut.xspi.xr18.xs.xmn2.m0[id]
+print i423
+let i424 = @m.xdut.xspi.xr18.xs.xmp1.m0[id]
+print i424
+let i425 = @m.xdut.xspi.xr18.xs.xmp2.m0[id]
+print i425
+let i426 = @m.xdut.xspi.xr18.xsf.xmn.m0[id]
+print i426
+let i427 = @m.xdut.xspi.xr18.xsf.xmp.m0[id]
+print i427
+let i428 = @m.xdut.xspi.xr18.xt4n.m0[id]
+print i428
+let i429 = @m.xdut.xspi.xr18.xt4p.m0[id]
+print i429
+let i430 = @m.xdut.xspi.xr19.xci.xmn.m0[id]
+print i430
+let i431 = @m.xdut.xspi.xr19.xci.xmp.m0[id]
+print i431
+let i432 = @m.xdut.xspi.xr19.xt1n.m0[id]
+print i432
+let i433 = @m.xdut.xspi.xr19.xt1p.m0[id]
+print i433
+let i434 = @m.xdut.xspi.xr19.xm.xmn1.m0[id]
+print i434
+let i435 = @m.xdut.xspi.xr19.xm.xmn2.m0[id]
+print i435
+let i436 = @m.xdut.xspi.xr19.xm.xmp1.m0[id]
+print i436
+let i437 = @m.xdut.xspi.xr19.xm.xmp2.m0[id]
+print i437
+let i438 = @m.xdut.xspi.xr19.xmf.xmn.m0[id]
+print i438
+let i439 = @m.xdut.xspi.xr19.xmf.xmp.m0[id]
+print i439
+let i440 = @m.xdut.xspi.xr19.xt2n.m0[id]
+print i440
+let i441 = @m.xdut.xspi.xr19.xt2p.m0[id]
+print i441
+let i442 = @m.xdut.xspi.xr19.xt3n.m0[id]
+print i442
+let i443 = @m.xdut.xspi.xr19.xt3p.m0[id]
+print i443
+let i444 = @m.xdut.xspi.xr19.xs.xmn1.m0[id]
+print i444
+let i445 = @m.xdut.xspi.xr19.xs.xmn2.m0[id]
+print i445
+let i446 = @m.xdut.xspi.xr19.xs.xmp1.m0[id]
+print i446
+let i447 = @m.xdut.xspi.xr19.xs.xmp2.m0[id]
+print i447
+let i448 = @m.xdut.xspi.xr19.xsf.xmn.m0[id]
+print i448
+let i449 = @m.xdut.xspi.xr19.xsf.xmp.m0[id]
+print i449
+let i450 = @m.xdut.xspi.xr19.xt4n.m0[id]
+print i450
+let i451 = @m.xdut.xspi.xr19.xt4p.m0[id]
+print i451
+let i452 = @m.xdut.xspi.xr20.xci.xmn.m0[id]
+print i452
+let i453 = @m.xdut.xspi.xr20.xci.xmp.m0[id]
+print i453
+let i454 = @m.xdut.xspi.xr20.xt1n.m0[id]
+print i454
+let i455 = @m.xdut.xspi.xr20.xt1p.m0[id]
+print i455
+let i456 = @m.xdut.xspi.xr20.xm.xmn1.m0[id]
+print i456
+let i457 = @m.xdut.xspi.xr20.xm.xmn2.m0[id]
+print i457
+let i458 = @m.xdut.xspi.xr20.xm.xmp1.m0[id]
+print i458
+let i459 = @m.xdut.xspi.xr20.xm.xmp2.m0[id]
+print i459
+let i460 = @m.xdut.xspi.xr20.xmf.xmn.m0[id]
+print i460
+let i461 = @m.xdut.xspi.xr20.xmf.xmp.m0[id]
+print i461
+let i462 = @m.xdut.xspi.xr20.xt2n.m0[id]
+print i462
+let i463 = @m.xdut.xspi.xr20.xt2p.m0[id]
+print i463
+let i464 = @m.xdut.xspi.xr20.xt3n.m0[id]
+print i464
+let i465 = @m.xdut.xspi.xr20.xt3p.m0[id]
+print i465
+let i466 = @m.xdut.xspi.xr20.xs.xmn1.m0[id]
+print i466
+let i467 = @m.xdut.xspi.xr20.xs.xmn2.m0[id]
+print i467
+let i468 = @m.xdut.xspi.xr20.xs.xmp1.m0[id]
+print i468
+let i469 = @m.xdut.xspi.xr20.xs.xmp2.m0[id]
+print i469
+let i470 = @m.xdut.xspi.xr20.xsf.xmn.m0[id]
+print i470
+let i471 = @m.xdut.xspi.xr20.xsf.xmp.m0[id]
+print i471
+let i472 = @m.xdut.xspi.xr20.xt4n.m0[id]
+print i472
+let i473 = @m.xdut.xspi.xr20.xt4p.m0[id]
+print i473
+let i474 = @m.xdut.xspi.xr21.xci.xmn.m0[id]
+print i474
+let i475 = @m.xdut.xspi.xr21.xci.xmp.m0[id]
+print i475
+let i476 = @m.xdut.xspi.xr21.xt1n.m0[id]
+print i476
+let i477 = @m.xdut.xspi.xr21.xt1p.m0[id]
+print i477
+let i478 = @m.xdut.xspi.xr21.xm.xmn1.m0[id]
+print i478
+let i479 = @m.xdut.xspi.xr21.xm.xmn2.m0[id]
+print i479
+let i480 = @m.xdut.xspi.xr21.xm.xmp1.m0[id]
+print i480
+let i481 = @m.xdut.xspi.xr21.xm.xmp2.m0[id]
+print i481
+let i482 = @m.xdut.xspi.xr21.xmf.xmn.m0[id]
+print i482
+let i483 = @m.xdut.xspi.xr21.xmf.xmp.m0[id]
+print i483
+let i484 = @m.xdut.xspi.xr21.xt2n.m0[id]
+print i484
+let i485 = @m.xdut.xspi.xr21.xt2p.m0[id]
+print i485
+let i486 = @m.xdut.xspi.xr21.xt3n.m0[id]
+print i486
+let i487 = @m.xdut.xspi.xr21.xt3p.m0[id]
+print i487
+let i488 = @m.xdut.xspi.xr21.xs.xmn1.m0[id]
+print i488
+let i489 = @m.xdut.xspi.xr21.xs.xmn2.m0[id]
+print i489
+let i490 = @m.xdut.xspi.xr21.xs.xmp1.m0[id]
+print i490
+let i491 = @m.xdut.xspi.xr21.xs.xmp2.m0[id]
+print i491
+let i492 = @m.xdut.xspi.xr21.xsf.xmn.m0[id]
+print i492
+let i493 = @m.xdut.xspi.xr21.xsf.xmp.m0[id]
+print i493
+let i494 = @m.xdut.xspi.xr21.xt4n.m0[id]
+print i494
+let i495 = @m.xdut.xspi.xr21.xt4p.m0[id]
+print i495
+let i496 = @m.xdut.xspi.xr22.xci.xmn.m0[id]
+print i496
+let i497 = @m.xdut.xspi.xr22.xci.xmp.m0[id]
+print i497
+let i498 = @m.xdut.xspi.xr22.xt1n.m0[id]
+print i498
+let i499 = @m.xdut.xspi.xr22.xt1p.m0[id]
+print i499
+let i500 = @m.xdut.xspi.xr22.xm.xmn1.m0[id]
+print i500
+let i501 = @m.xdut.xspi.xr22.xm.xmn2.m0[id]
+print i501
+let i502 = @m.xdut.xspi.xr22.xm.xmp1.m0[id]
+print i502
+let i503 = @m.xdut.xspi.xr22.xm.xmp2.m0[id]
+print i503
+let i504 = @m.xdut.xspi.xr22.xmf.xmn.m0[id]
+print i504
+let i505 = @m.xdut.xspi.xr22.xmf.xmp.m0[id]
+print i505
+let i506 = @m.xdut.xspi.xr22.xt2n.m0[id]
+print i506
+let i507 = @m.xdut.xspi.xr22.xt2p.m0[id]
+print i507
+let i508 = @m.xdut.xspi.xr22.xt3n.m0[id]
+print i508
+let i509 = @m.xdut.xspi.xr22.xt3p.m0[id]
+print i509
+let i510 = @m.xdut.xspi.xr22.xs.xmn1.m0[id]
+print i510
+let i511 = @m.xdut.xspi.xr22.xs.xmn2.m0[id]
+print i511
+let i512 = @m.xdut.xspi.xr22.xs.xmp1.m0[id]
+print i512
+let i513 = @m.xdut.xspi.xr22.xs.xmp2.m0[id]
+print i513
+let i514 = @m.xdut.xspi.xr22.xsf.xmn.m0[id]
+print i514
+let i515 = @m.xdut.xspi.xr22.xsf.xmp.m0[id]
+print i515
+let i516 = @m.xdut.xspi.xr22.xt4n.m0[id]
+print i516
+let i517 = @m.xdut.xspi.xr22.xt4p.m0[id]
+print i517
+let i518 = @m.xdut.xspi.xr23.xci.xmn.m0[id]
+print i518
+let i519 = @m.xdut.xspi.xr23.xci.xmp.m0[id]
+print i519
+let i520 = @m.xdut.xspi.xr23.xt1n.m0[id]
+print i520
+let i521 = @m.xdut.xspi.xr23.xt1p.m0[id]
+print i521
+let i522 = @m.xdut.xspi.xr23.xm.xmn1.m0[id]
+print i522
+let i523 = @m.xdut.xspi.xr23.xm.xmn2.m0[id]
+print i523
+let i524 = @m.xdut.xspi.xr23.xm.xmp1.m0[id]
+print i524
+let i525 = @m.xdut.xspi.xr23.xm.xmp2.m0[id]
+print i525
+let i526 = @m.xdut.xspi.xr23.xmf.xmn.m0[id]
+print i526
+let i527 = @m.xdut.xspi.xr23.xmf.xmp.m0[id]
+print i527
+let i528 = @m.xdut.xspi.xr23.xt2n.m0[id]
+print i528
+let i529 = @m.xdut.xspi.xr23.xt2p.m0[id]
+print i529
+let i530 = @m.xdut.xspi.xr23.xt3n.m0[id]
+print i530
+let i531 = @m.xdut.xspi.xr23.xt3p.m0[id]
+print i531
+let i532 = @m.xdut.xspi.xr23.xs.xmn1.m0[id]
+print i532
+let i533 = @m.xdut.xspi.xr23.xs.xmn2.m0[id]
+print i533
+let i534 = @m.xdut.xspi.xr23.xs.xmp1.m0[id]
+print i534
+let i535 = @m.xdut.xspi.xr23.xs.xmp2.m0[id]
+print i535
+let i536 = @m.xdut.xspi.xr23.xsf.xmn.m0[id]
+print i536
+let i537 = @m.xdut.xspi.xr23.xsf.xmp.m0[id]
+print i537
+let i538 = @m.xdut.xspi.xr23.xt4n.m0[id]
+print i538
+let i539 = @m.xdut.xspi.xr23.xt4p.m0[id]
+print i539
+let i540 = @m.xdut.xspi.xl0.xei.xmn.m0[id]
+print i540
+let i541 = @m.xdut.xspi.xl0.xei.xmp.m0[id]
+print i541
+let i542 = @m.xdut.xspi.xl0.xtin.m0[id]
+print i542
+let i543 = @m.xdut.xspi.xl0.xtip.m0[id]
+print i543
+let i544 = @m.xdut.xspi.xl0.x1.xmn.m0[id]
+print i544
+let i545 = @m.xdut.xspi.xl0.x1.xmp.m0[id]
+print i545
+let i546 = @m.xdut.xspi.xl0.x2.xmn.m0[id]
+print i546
+let i547 = @m.xdut.xspi.xl0.x2.xmp.m0[id]
+print i547
+let i548 = @m.xdut.xspi.xl0.xtfn.m0[id]
+print i548
+let i549 = @m.xdut.xspi.xl0.xtfp.m0[id]
+print i549
+let i550 = @m.xdut.xspi.xl1.xei.xmn.m0[id]
+print i550
+let i551 = @m.xdut.xspi.xl1.xei.xmp.m0[id]
+print i551
+let i552 = @m.xdut.xspi.xl1.xtin.m0[id]
+print i552
+let i553 = @m.xdut.xspi.xl1.xtip.m0[id]
+print i553
+let i554 = @m.xdut.xspi.xl1.x1.xmn.m0[id]
+print i554
+let i555 = @m.xdut.xspi.xl1.x1.xmp.m0[id]
+print i555
+let i556 = @m.xdut.xspi.xl1.x2.xmn.m0[id]
+print i556
+let i557 = @m.xdut.xspi.xl1.x2.xmp.m0[id]
+print i557
+let i558 = @m.xdut.xspi.xl1.xtfn.m0[id]
+print i558
+let i559 = @m.xdut.xspi.xl1.xtfp.m0[id]
+print i559
+let i560 = @m.xdut.xspi.xl2.xei.xmn.m0[id]
+print i560
+let i561 = @m.xdut.xspi.xl2.xei.xmp.m0[id]
+print i561
+let i562 = @m.xdut.xspi.xl2.xtin.m0[id]
+print i562
+let i563 = @m.xdut.xspi.xl2.xtip.m0[id]
+print i563
+let i564 = @m.xdut.xspi.xl2.x1.xmn.m0[id]
+print i564
+let i565 = @m.xdut.xspi.xl2.x1.xmp.m0[id]
+print i565
+let i566 = @m.xdut.xspi.xl2.x2.xmn.m0[id]
+print i566
+let i567 = @m.xdut.xspi.xl2.x2.xmp.m0[id]
+print i567
+let i568 = @m.xdut.xspi.xl2.xtfn.m0[id]
+print i568
+let i569 = @m.xdut.xspi.xl2.xtfp.m0[id]
+print i569
+let i570 = @m.xdut.xspi.xl3.xei.xmn.m0[id]
+print i570
+let i571 = @m.xdut.xspi.xl3.xei.xmp.m0[id]
+print i571
+let i572 = @m.xdut.xspi.xl3.xtin.m0[id]
+print i572
+let i573 = @m.xdut.xspi.xl3.xtip.m0[id]
+print i573
+let i574 = @m.xdut.xspi.xl3.x1.xmn.m0[id]
+print i574
+let i575 = @m.xdut.xspi.xl3.x1.xmp.m0[id]
+print i575
+let i576 = @m.xdut.xspi.xl3.x2.xmn.m0[id]
+print i576
+let i577 = @m.xdut.xspi.xl3.x2.xmp.m0[id]
+print i577
+let i578 = @m.xdut.xspi.xl3.xtfn.m0[id]
+print i578
+let i579 = @m.xdut.xspi.xl3.xtfp.m0[id]
+print i579
+let i580 = @m.xdut.xspi.xl4.xei.xmn.m0[id]
+print i580
+let i581 = @m.xdut.xspi.xl4.xei.xmp.m0[id]
+print i581
+let i582 = @m.xdut.xspi.xl4.xtin.m0[id]
+print i582
+let i583 = @m.xdut.xspi.xl4.xtip.m0[id]
+print i583
+let i584 = @m.xdut.xspi.xl4.x1.xmn.m0[id]
+print i584
+let i585 = @m.xdut.xspi.xl4.x1.xmp.m0[id]
+print i585
+let i586 = @m.xdut.xspi.xl4.x2.xmn.m0[id]
+print i586
+let i587 = @m.xdut.xspi.xl4.x2.xmp.m0[id]
+print i587
+let i588 = @m.xdut.xspi.xl4.xtfn.m0[id]
+print i588
+let i589 = @m.xdut.xspi.xl4.xtfp.m0[id]
+print i589
+let i590 = @m.xdut.xspi.xl5.xei.xmn.m0[id]
+print i590
+let i591 = @m.xdut.xspi.xl5.xei.xmp.m0[id]
+print i591
+let i592 = @m.xdut.xspi.xl5.xtin.m0[id]
+print i592
+let i593 = @m.xdut.xspi.xl5.xtip.m0[id]
+print i593
+let i594 = @m.xdut.xspi.xl5.x1.xmn.m0[id]
+print i594
+let i595 = @m.xdut.xspi.xl5.x1.xmp.m0[id]
+print i595
+let i596 = @m.xdut.xspi.xl5.x2.xmn.m0[id]
+print i596
+let i597 = @m.xdut.xspi.xl5.x2.xmp.m0[id]
+print i597
+let i598 = @m.xdut.xspi.xl5.xtfn.m0[id]
+print i598
+let i599 = @m.xdut.xspi.xl5.xtfp.m0[id]
+print i599
+let i600 = @m.xdut.xspi.xl6.xei.xmn.m0[id]
+print i600
+let i601 = @m.xdut.xspi.xl6.xei.xmp.m0[id]
+print i601
+let i602 = @m.xdut.xspi.xl6.xtin.m0[id]
+print i602
+let i603 = @m.xdut.xspi.xl6.xtip.m0[id]
+print i603
+let i604 = @m.xdut.xspi.xl6.x1.xmn.m0[id]
+print i604
+let i605 = @m.xdut.xspi.xl6.x1.xmp.m0[id]
+print i605
+let i606 = @m.xdut.xspi.xl6.x2.xmn.m0[id]
+print i606
+let i607 = @m.xdut.xspi.xl6.x2.xmp.m0[id]
+print i607
+let i608 = @m.xdut.xspi.xl6.xtfn.m0[id]
+print i608
+let i609 = @m.xdut.xspi.xl6.xtfp.m0[id]
+print i609
+let i610 = @m.xdut.xspi.xl7.xei.xmn.m0[id]
+print i610
+let i611 = @m.xdut.xspi.xl7.xei.xmp.m0[id]
+print i611
+let i612 = @m.xdut.xspi.xl7.xtin.m0[id]
+print i612
+let i613 = @m.xdut.xspi.xl7.xtip.m0[id]
+print i613
+let i614 = @m.xdut.xspi.xl7.x1.xmn.m0[id]
+print i614
+let i615 = @m.xdut.xspi.xl7.x1.xmp.m0[id]
+print i615
+let i616 = @m.xdut.xspi.xl7.x2.xmn.m0[id]
+print i616
+let i617 = @m.xdut.xspi.xl7.x2.xmp.m0[id]
+print i617
+let i618 = @m.xdut.xspi.xl7.xtfn.m0[id]
+print i618
+let i619 = @m.xdut.xspi.xl7.xtfp.m0[id]
+print i619
+let i620 = @m.xdut.xspi.xl8.xei.xmn.m0[id]
+print i620
+let i621 = @m.xdut.xspi.xl8.xei.xmp.m0[id]
+print i621
+let i622 = @m.xdut.xspi.xl8.xtin.m0[id]
+print i622
+let i623 = @m.xdut.xspi.xl8.xtip.m0[id]
+print i623
+let i624 = @m.xdut.xspi.xl8.x1.xmn.m0[id]
+print i624
+let i625 = @m.xdut.xspi.xl8.x1.xmp.m0[id]
+print i625
+let i626 = @m.xdut.xspi.xl8.x2.xmn.m0[id]
+print i626
+let i627 = @m.xdut.xspi.xl8.x2.xmp.m0[id]
+print i627
+let i628 = @m.xdut.xspi.xl8.xtfn.m0[id]
+print i628
+let i629 = @m.xdut.xspi.xl8.xtfp.m0[id]
+print i629
+let i630 = @m.xdut.xspi.xl9.xei.xmn.m0[id]
+print i630
+let i631 = @m.xdut.xspi.xl9.xei.xmp.m0[id]
+print i631
+let i632 = @m.xdut.xspi.xl9.xtin.m0[id]
+print i632
+let i633 = @m.xdut.xspi.xl9.xtip.m0[id]
+print i633
+let i634 = @m.xdut.xspi.xl9.x1.xmn.m0[id]
+print i634
+let i635 = @m.xdut.xspi.xl9.x1.xmp.m0[id]
+print i635
+let i636 = @m.xdut.xspi.xl9.x2.xmn.m0[id]
+print i636
+let i637 = @m.xdut.xspi.xl9.x2.xmp.m0[id]
+print i637
+let i638 = @m.xdut.xspi.xl9.xtfn.m0[id]
+print i638
+let i639 = @m.xdut.xspi.xl9.xtfp.m0[id]
+print i639
+let i640 = @m.xdut.xspi.xl10.xei.xmn.m0[id]
+print i640
+let i641 = @m.xdut.xspi.xl10.xei.xmp.m0[id]
+print i641
+let i642 = @m.xdut.xspi.xl10.xtin.m0[id]
+print i642
+let i643 = @m.xdut.xspi.xl10.xtip.m0[id]
+print i643
+let i644 = @m.xdut.xspi.xl10.x1.xmn.m0[id]
+print i644
+let i645 = @m.xdut.xspi.xl10.x1.xmp.m0[id]
+print i645
+let i646 = @m.xdut.xspi.xl10.x2.xmn.m0[id]
+print i646
+let i647 = @m.xdut.xspi.xl10.x2.xmp.m0[id]
+print i647
+let i648 = @m.xdut.xspi.xl10.xtfn.m0[id]
+print i648
+let i649 = @m.xdut.xspi.xl10.xtfp.m0[id]
+print i649
+let i650 = @m.xdut.xspi.xl11.xei.xmn.m0[id]
+print i650
+let i651 = @m.xdut.xspi.xl11.xei.xmp.m0[id]
+print i651
+let i652 = @m.xdut.xspi.xl11.xtin.m0[id]
+print i652
+let i653 = @m.xdut.xspi.xl11.xtip.m0[id]
+print i653
+let i654 = @m.xdut.xspi.xl11.x1.xmn.m0[id]
+print i654
+let i655 = @m.xdut.xspi.xl11.x1.xmp.m0[id]
+print i655
+let i656 = @m.xdut.xspi.xl11.x2.xmn.m0[id]
+print i656
+let i657 = @m.xdut.xspi.xl11.x2.xmp.m0[id]
+print i657
+let i658 = @m.xdut.xspi.xl11.xtfn.m0[id]
+print i658
+let i659 = @m.xdut.xspi.xl11.xtfp.m0[id]
+print i659
+let i660 = @m.xdut.xspi.xl12.xei.xmn.m0[id]
+print i660
+let i661 = @m.xdut.xspi.xl12.xei.xmp.m0[id]
+print i661
+let i662 = @m.xdut.xspi.xl12.xtin.m0[id]
+print i662
+let i663 = @m.xdut.xspi.xl12.xtip.m0[id]
+print i663
+let i664 = @m.xdut.xspi.xl12.x1.xmn.m0[id]
+print i664
+let i665 = @m.xdut.xspi.xl12.x1.xmp.m0[id]
+print i665
+let i666 = @m.xdut.xspi.xl12.x2.xmn.m0[id]
+print i666
+let i667 = @m.xdut.xspi.xl12.x2.xmp.m0[id]
+print i667
+let i668 = @m.xdut.xspi.xl12.xtfn.m0[id]
+print i668
+let i669 = @m.xdut.xspi.xl12.xtfp.m0[id]
+print i669
+let i670 = @m.xdut.xspi.xl13.xei.xmn.m0[id]
+print i670
+let i671 = @m.xdut.xspi.xl13.xei.xmp.m0[id]
+print i671
+let i672 = @m.xdut.xspi.xl13.xtin.m0[id]
+print i672
+let i673 = @m.xdut.xspi.xl13.xtip.m0[id]
+print i673
+let i674 = @m.xdut.xspi.xl13.x1.xmn.m0[id]
+print i674
+let i675 = @m.xdut.xspi.xl13.x1.xmp.m0[id]
+print i675
+let i676 = @m.xdut.xspi.xl13.x2.xmn.m0[id]
+print i676
+let i677 = @m.xdut.xspi.xl13.x2.xmp.m0[id]
+print i677
+let i678 = @m.xdut.xspi.xl13.xtfn.m0[id]
+print i678
+let i679 = @m.xdut.xspi.xl13.xtfp.m0[id]
+print i679
+let i680 = @m.xdut.xspi.xl14.xei.xmn.m0[id]
+print i680
+let i681 = @m.xdut.xspi.xl14.xei.xmp.m0[id]
+print i681
+let i682 = @m.xdut.xspi.xl14.xtin.m0[id]
+print i682
+let i683 = @m.xdut.xspi.xl14.xtip.m0[id]
+print i683
+let i684 = @m.xdut.xspi.xl14.x1.xmn.m0[id]
+print i684
+let i685 = @m.xdut.xspi.xl14.x1.xmp.m0[id]
+print i685
+let i686 = @m.xdut.xspi.xl14.x2.xmn.m0[id]
+print i686
+let i687 = @m.xdut.xspi.xl14.x2.xmp.m0[id]
+print i687
+let i688 = @m.xdut.xspi.xl14.xtfn.m0[id]
+print i688
+let i689 = @m.xdut.xspi.xl14.xtfp.m0[id]
+print i689
+let i690 = @m.xdut.xspi.xl15.xei.xmn.m0[id]
+print i690
+let i691 = @m.xdut.xspi.xl15.xei.xmp.m0[id]
+print i691
+let i692 = @m.xdut.xspi.xl15.xtin.m0[id]
+print i692
+let i693 = @m.xdut.xspi.xl15.xtip.m0[id]
+print i693
+let i694 = @m.xdut.xspi.xl15.x1.xmn.m0[id]
+print i694
+let i695 = @m.xdut.xspi.xl15.x1.xmp.m0[id]
+print i695
+let i696 = @m.xdut.xspi.xl15.x2.xmn.m0[id]
+print i696
+let i697 = @m.xdut.xspi.xl15.x2.xmp.m0[id]
+print i697
+let i698 = @m.xdut.xspi.xl15.xtfn.m0[id]
+print i698
+let i699 = @m.xdut.xspi.xl15.xtfp.m0[id]
+print i699
+let i700 = @m.xdut.xspi.xafc7.xmn.m0[id]
+print i700
+let i701 = @m.xdut.xspi.xafc7.xmp.m0[id]
+print i701
+let i702 = @m.xdut.xspi.xl16.xei.xmn.m0[id]
+print i702
+let i703 = @m.xdut.xspi.xl16.xei.xmp.m0[id]
+print i703
+let i704 = @m.xdut.xspi.xl16.xtin.m0[id]
+print i704
+let i705 = @m.xdut.xspi.xl16.xtip.m0[id]
+print i705
+let i706 = @m.xdut.xspi.xl16.x1.xmn.m0[id]
+print i706
+let i707 = @m.xdut.xspi.xl16.x1.xmp.m0[id]
+print i707
+let i708 = @m.xdut.xspi.xl16.x2.xmn.m0[id]
+print i708
+let i709 = @m.xdut.xspi.xl16.x2.xmp.m0[id]
+print i709
+let i710 = @m.xdut.xspi.xl16.xtfn.m0[id]
+print i710
+let i711 = @m.xdut.xspi.xl16.xtfp.m0[id]
+print i711
+let i712 = @m.xdut.xbias.xmn1.m0[id]
+print i712
+let i713 = @m.xdut.xbias.xmn2.m0[id]
+print i713
+let i714 = @m.xdut.xbias.xmp1.m0[id]
+print i714
+let i715 = @m.xdut.xbias.xmp2.m0[id]
+print i715
+let i716 = @m.xdut.xbias.xmsp.m0[id]
+print i716
+let i717 = @m.xdut.xbias.xmsn.m0[id]
+print i717
+let i718 = @m.xdut.xbias.xmsu.m0[id]
+print i718
+let i719 = @m.xdut.xbias.xmp3.m0[id]
+print i719
+let i720 = @m.xdut.xbias.xmn3.m0[id]
+print i720
+let i721 = @m.xdut.xbias.xmn4.m0[id]
+print i721
+let i722 = @m.xdut.xbias.xmp4.m0[id]
+print i722
+let i723 = @m.xdut.xvco.xmvi.m0[id]
+print i723
+let i724 = @m.xdut.xvco.xmpd.m0[id]
+print i724
+let i725 = @m.xdut.xvco.xmpo.m0[id]
+print i725
+let i726 = @m.xdut.xvco.xmmin.m0[id]
+print i726
+let i727 = @m.xdut.xvco.xb0.xmn.m0[id]
+print i727
+let i728 = @m.xdut.xvco.xb0.xmp.m0[id]
+print i728
+let i729 = @m.xdut.xvco.xb1.xmn.m0[id]
+print i729
+let i730 = @m.xdut.xvco.xb1.xmp.m0[id]
+print i730
+let i731 = @m.xdut.xvco.xmpb0.m0[id]
+print i731
+let i732 = @m.xdut.xvco.xmsb0.m0[id]
+print i732
+let i733 = @m.xdut.xvco.xmpb1.m0[id]
+print i733
+let i734 = @m.xdut.xvco.xmsb1.m0[id]
+print i734
+let i735 = @m.xdut.xvco.xcore.xmna1.m0[id]
+print i735
+let i736 = @m.xdut.xvco.xcore.xmnb1.m0[id]
+print i736
+let i737 = @m.xdut.xvco.xcore.xmpa1.m0[id]
+print i737
+let i738 = @m.xdut.xvco.xcore.xmpb1.m0[id]
+print i738
+let i739 = @m.xdut.xvco.xcore.xmnc1.m0[id]
+print i739
+let i740 = @m.xdut.xvco.xcore.xmnd1.m0[id]
+print i740
+let i741 = @m.xdut.xvco.xcore.xmpc1.m0[id]
+print i741
+let i742 = @m.xdut.xvco.xcore.xmpd1.m0[id]
+print i742
+let i743 = @m.xdut.xvco.xcore.xmna2.m0[id]
+print i743
+let i744 = @m.xdut.xvco.xcore.xmnb2.m0[id]
+print i744
+let i745 = @m.xdut.xvco.xcore.xmpa2.m0[id]
+print i745
+let i746 = @m.xdut.xvco.xcore.xmpb2.m0[id]
+print i746
+let i747 = @m.xdut.xvco.xcore.xmnc2.m0[id]
+print i747
+let i748 = @m.xdut.xvco.xcore.xmnd2.m0[id]
+print i748
+let i749 = @m.xdut.xvco.xcore.xmpc2.m0[id]
+print i749
+let i750 = @m.xdut.xvco.xcore.xmpd2.m0[id]
+print i750
+let i751 = @m.xdut.xvco.xcore.xmna3.m0[id]
+print i751
+let i752 = @m.xdut.xvco.xcore.xmnb3.m0[id]
+print i752
+let i753 = @m.xdut.xvco.xcore.xmpa3.m0[id]
+print i753
+let i754 = @m.xdut.xvco.xcore.xmpb3.m0[id]
+print i754
+let i755 = @m.xdut.xvco.xcore.xmnc3.m0[id]
+print i755
+let i756 = @m.xdut.xvco.xcore.xmnd3.m0[id]
+print i756
+let i757 = @m.xdut.xvco.xcore.xmpc3.m0[id]
+print i757
+let i758 = @m.xdut.xvco.xcore.xmpd3.m0[id]
+print i758
+let i759 = @m.xdut.xvco.xcore.xmna4.m0[id]
+print i759
+let i760 = @m.xdut.xvco.xcore.xmnb4.m0[id]
+print i760
+let i761 = @m.xdut.xvco.xcore.xmpa4.m0[id]
+print i761
+let i762 = @m.xdut.xvco.xcore.xmpb4.m0[id]
+print i762
+let i763 = @m.xdut.xvco.xcore.xmnc4.m0[id]
+print i763
+let i764 = @m.xdut.xvco.xcore.xmnd4.m0[id]
+print i764
+let i765 = @m.xdut.xvco.xcore.xmpc4.m0[id]
+print i765
+let i766 = @m.xdut.xvco.xcore.xmpd4.m0[id]
+print i766
+let i767 = @m.xdut.xvco.xcore.xmbnp1.m0[id]
+print i767
+let i768 = @m.xdut.xvco.xcore.xmbpp1.m0[id]
+print i768
+let i769 = @m.xdut.xvco.xcore.xmdnp1.m0[id]
+print i769
+let i770 = @m.xdut.xvco.xcore.xmdpp1.m0[id]
+print i770
+let i771 = @m.xdut.xvco.xcore.xmcnp1.m0[id]
+print i771
+let i772 = @m.xdut.xvco.xcore.xmcpp1.m0[id]
+print i772
+let i773 = @m.xdut.xvco.xcore.xmbnn1.m0[id]
+print i773
+let i774 = @m.xdut.xvco.xcore.xmbpn1.m0[id]
+print i774
+let i775 = @m.xdut.xvco.xcore.xmdnn1.m0[id]
+print i775
+let i776 = @m.xdut.xvco.xcore.xmdpn1.m0[id]
+print i776
+let i777 = @m.xdut.xvco.xcore.xmcnn1.m0[id]
+print i777
+let i778 = @m.xdut.xvco.xcore.xmcpn1.m0[id]
+print i778
+let i779 = @m.xdut.xvco.xcore.xmbnp2.m0[id]
+print i779
+let i780 = @m.xdut.xvco.xcore.xmbpp2.m0[id]
+print i780
+let i781 = @m.xdut.xvco.xcore.xmdnp2.m0[id]
+print i781
+let i782 = @m.xdut.xvco.xcore.xmdpp2.m0[id]
+print i782
+let i783 = @m.xdut.xvco.xcore.xmcnp2.m0[id]
+print i783
+let i784 = @m.xdut.xvco.xcore.xmcpp2.m0[id]
+print i784
+let i785 = @m.xdut.xvco.xcore.xmbnn2.m0[id]
+print i785
+let i786 = @m.xdut.xvco.xcore.xmbpn2.m0[id]
+print i786
+let i787 = @m.xdut.xvco.xcore.xmdnn2.m0[id]
+print i787
+let i788 = @m.xdut.xvco.xcore.xmdpn2.m0[id]
+print i788
+let i789 = @m.xdut.xvco.xcore.xmcnn2.m0[id]
+print i789
+let i790 = @m.xdut.xvco.xcore.xmcpn2.m0[id]
+print i790
+let i791 = @m.xdut.xvco.xcore.xmbnp3.m0[id]
+print i791
+let i792 = @m.xdut.xvco.xcore.xmbpp3.m0[id]
+print i792
+let i793 = @m.xdut.xvco.xcore.xmdnp3.m0[id]
+print i793
+let i794 = @m.xdut.xvco.xcore.xmdpp3.m0[id]
+print i794
+let i795 = @m.xdut.xvco.xcore.xmcnp3.m0[id]
+print i795
+let i796 = @m.xdut.xvco.xcore.xmcpp3.m0[id]
+print i796
+let i797 = @m.xdut.xvco.xcore.xmbnn3.m0[id]
+print i797
+let i798 = @m.xdut.xvco.xcore.xmbpn3.m0[id]
+print i798
+let i799 = @m.xdut.xvco.xcore.xmdnn3.m0[id]
+print i799
+let i800 = @m.xdut.xvco.xcore.xmdpn3.m0[id]
+print i800
+let i801 = @m.xdut.xvco.xcore.xmcnn3.m0[id]
+print i801
+let i802 = @m.xdut.xvco.xcore.xmcpn3.m0[id]
+print i802
+let i803 = @m.xdut.xvco.xcore.xmbnp4.m0[id]
+print i803
+let i804 = @m.xdut.xvco.xcore.xmbpp4.m0[id]
+print i804
+let i805 = @m.xdut.xvco.xcore.xmdnp4.m0[id]
+print i805
+let i806 = @m.xdut.xvco.xcore.xmdpp4.m0[id]
+print i806
+let i807 = @m.xdut.xvco.xcore.xmcnp4.m0[id]
+print i807
+let i808 = @m.xdut.xvco.xcore.xmcpp4.m0[id]
+print i808
+let i809 = @m.xdut.xvco.xcore.xmbnn4.m0[id]
+print i809
+let i810 = @m.xdut.xvco.xcore.xmbpn4.m0[id]
+print i810
+let i811 = @m.xdut.xvco.xcore.xmdnn4.m0[id]
+print i811
+let i812 = @m.xdut.xvco.xcore.xmdpn4.m0[id]
+print i812
+let i813 = @m.xdut.xvco.xcore.xmcnn4.m0[id]
+print i813
+let i814 = @m.xdut.xvco.xcore.xmcpn4.m0[id]
+print i814
+let i815 = @m.xdut.xvco.xcore.xmk1.m0[id]
+print i815
+let i816 = @m.xdut.xvco.xcore.xmkd1.m0[id]
+print i816
+let i817 = @m.xdut.xvco.xcore.xmk2.m0[id]
+print i817
+let i818 = @m.xdut.xvco.xcore.xmkd2.m0[id]
+print i818
+let i819 = @m.xdut.xvco.xcore.xmk3.m0[id]
+print i819
+let i820 = @m.xdut.xvco.xcore.xmkd3.m0[id]
+print i820
+let i821 = @m.xdut.xvco.xcore.xmk4.m0[id]
+print i821
+let i822 = @m.xdut.xvco.xcore.xmkd4.m0[id]
+print i822
+let i823 = @m.xdut.xvco.xsua.xmn1.m0[id]
+print i823
+let i824 = @m.xdut.xvco.xsua.xmn2.m0[id]
+print i824
+let i825 = @m.xdut.xvco.xsua.xmp1.m0[id]
+print i825
+let i826 = @m.xdut.xvco.xsua.xmp2.m0[id]
+print i826
+let i827 = @m.xdut.xvco.xsub.xmn1.m0[id]
+print i827
+let i828 = @m.xdut.xvco.xsub.xmn2.m0[id]
+print i828
+let i829 = @m.xdut.xvco.xsub.xmp1.m0[id]
+print i829
+let i830 = @m.xdut.xvco.xsub.xmp2.m0[id]
+print i830
+let i831 = @m.xdut.xvco.xsuad1.xmn1.m0[id]
+print i831
+let i832 = @m.xdut.xvco.xsuad1.xmn2.m0[id]
+print i832
+let i833 = @m.xdut.xvco.xsuad1.xmp1.m0[id]
+print i833
+let i834 = @m.xdut.xvco.xsuad1.xmp2.m0[id]
+print i834
+let i835 = @m.xdut.xvco.xsubd1.xmn1.m0[id]
+print i835
+let i836 = @m.xdut.xvco.xsubd1.xmn2.m0[id]
+print i836
+let i837 = @m.xdut.xvco.xsubd1.xmp1.m0[id]
+print i837
+let i838 = @m.xdut.xvco.xsubd1.xmp2.m0[id]
+print i838
+let i839 = @m.xdut.xvco.xsuad3.xmn1.m0[id]
+print i839
+let i840 = @m.xdut.xvco.xsuad3.xmn2.m0[id]
+print i840
+let i841 = @m.xdut.xvco.xsuad3.xmp1.m0[id]
+print i841
+let i842 = @m.xdut.xvco.xsuad3.xmp2.m0[id]
+print i842
+let i843 = @m.xdut.xvco.xsubd3.xmn1.m0[id]
+print i843
+let i844 = @m.xdut.xvco.xsubd3.xmn2.m0[id]
+print i844
+let i845 = @m.xdut.xvco.xsubd3.xmp1.m0[id]
+print i845
+let i846 = @m.xdut.xvco.xsubd3.xmp2.m0[id]
+print i846
+let i847 = @m.xdut.xvco.xsuad4.xmn1.m0[id]
+print i847
+let i848 = @m.xdut.xvco.xsuad4.xmn2.m0[id]
+print i848
+let i849 = @m.xdut.xvco.xsuad4.xmp1.m0[id]
+print i849
+let i850 = @m.xdut.xvco.xsuad4.xmp2.m0[id]
+print i850
+let i851 = @m.xdut.xvco.xsubd4.xmn1.m0[id]
+print i851
+let i852 = @m.xdut.xvco.xsubd4.xmn2.m0[id]
+print i852
+let i853 = @m.xdut.xvco.xsubd4.xmp1.m0[id]
+print i853
+let i854 = @m.xdut.xvco.xsubd4.xmp2.m0[id]
+print i854
+let i855 = @m.xdut.xvco.xsua1.xmn1.m0[id]
+print i855
+let i856 = @m.xdut.xvco.xsua1.xmn2.m0[id]
+print i856
+let i857 = @m.xdut.xvco.xsua1.xmp1.m0[id]
+print i857
+let i858 = @m.xdut.xvco.xsua1.xmp2.m0[id]
+print i858
+let i859 = @m.xdut.xvco.xsua2.xmn.m0[id]
+print i859
+let i860 = @m.xdut.xvco.xsua2.xmp.m0[id]
+print i860
+let i861 = @m.xdut.xvco.xsub1.xmn1.m0[id]
+print i861
+let i862 = @m.xdut.xvco.xsub1.xmn2.m0[id]
+print i862
+let i863 = @m.xdut.xvco.xsub1.xmp1.m0[id]
+print i863
+let i864 = @m.xdut.xvco.xsub1.xmp2.m0[id]
+print i864
+let i865 = @m.xdut.xvco.xsub2.xmn.m0[id]
+print i865
+let i866 = @m.xdut.xvco.xsub2.xmp.m0[id]
+print i866
+let i867 = @m.xdut.xrb.xmn1.m0[id]
+print i867
+let i868 = @m.xdut.xrb.xmp1.m0[id]
+print i868
+let i869 = @m.xdut.xrb.xmn2.m0[id]
+print i869
+let i870 = @m.xdut.xrb.xmp2.m0[id]
+print i870
+let i871 = @m.xdut.xpll.xdb.xmn1.m0[id]
+print i871
+let i872 = @m.xdut.xpll.xdb.xmp1.m0[id]
+print i872
+let i873 = @m.xdut.xpll.xdb.xmn2.m0[id]
+print i873
+let i874 = @m.xdut.xpll.xdb.xmp2.m0[id]
+print i874
+let i875 = @m.xdut.xpll.xdiv.xd1.xf.xmp1.m0[id]
+print i875
+let i876 = @m.xdut.xpll.xdiv.xd1.xf.xmp2.m0[id]
+print i876
+let i877 = @m.xdut.xpll.xdiv.xd1.xf.xmn1.m0[id]
+print i877
+let i878 = @m.xdut.xpll.xdiv.xd1.xf.xmp3.m0[id]
+print i878
+let i879 = @m.xdut.xpll.xdiv.xd1.xf.xmn2.m0[id]
+print i879
+let i880 = @m.xdut.xpll.xdiv.xd1.xf.xmn3.m0[id]
+print i880
+let i881 = @m.xdut.xpll.xdiv.xd1.xf.xmp4.m0[id]
+print i881
+let i882 = @m.xdut.xpll.xdiv.xd1.xf.xmn4.m0[id]
+print i882
+let i883 = @m.xdut.xpll.xdiv.xd1.xf.xmn5.m0[id]
+print i883
+let i884 = @m.xdut.xpll.xdiv.xd1.xf.xmp5.m0[id]
+print i884
+let i885 = @m.xdut.xpll.xdiv.xd1.xf.xmn6.m0[id]
+print i885
+let i886 = @m.xdut.xpll.xdiv.xd2.xf.xmp1.m0[id]
+print i886
+let i887 = @m.xdut.xpll.xdiv.xd2.xf.xmp2.m0[id]
+print i887
+let i888 = @m.xdut.xpll.xdiv.xd2.xf.xmn1.m0[id]
+print i888
+let i889 = @m.xdut.xpll.xdiv.xd2.xf.xmp3.m0[id]
+print i889
+let i890 = @m.xdut.xpll.xdiv.xd2.xf.xmn2.m0[id]
+print i890
+let i891 = @m.xdut.xpll.xdiv.xd2.xf.xmn3.m0[id]
+print i891
+let i892 = @m.xdut.xpll.xdiv.xd2.xf.xmp4.m0[id]
+print i892
+let i893 = @m.xdut.xpll.xdiv.xd2.xf.xmn4.m0[id]
+print i893
+let i894 = @m.xdut.xpll.xdiv.xd2.xf.xmn5.m0[id]
+print i894
+let i895 = @m.xdut.xpll.xdiv.xd2.xf.xmp5.m0[id]
+print i895
+let i896 = @m.xdut.xpll.xdiv.xd2.xf.xmn6.m0[id]
+print i896
+let i897 = @m.xdut.xpll.xdiv.xd3.xf.xmp1.m0[id]
+print i897
+let i898 = @m.xdut.xpll.xdiv.xd3.xf.xmp2.m0[id]
+print i898
+let i899 = @m.xdut.xpll.xdiv.xd3.xf.xmn1.m0[id]
+print i899
+let i900 = @m.xdut.xpll.xdiv.xd3.xf.xmp3.m0[id]
+print i900
+let i901 = @m.xdut.xpll.xdiv.xd3.xf.xmn2.m0[id]
+print i901
+let i902 = @m.xdut.xpll.xdiv.xd3.xf.xmn3.m0[id]
+print i902
+let i903 = @m.xdut.xpll.xdiv.xd3.xf.xmp4.m0[id]
+print i903
+let i904 = @m.xdut.xpll.xdiv.xd3.xf.xmn4.m0[id]
+print i904
+let i905 = @m.xdut.xpll.xdiv.xd3.xf.xmn5.m0[id]
+print i905
+let i906 = @m.xdut.xpll.xdiv.xd3.xf.xmp5.m0[id]
+print i906
+let i907 = @m.xdut.xpll.xdiv.xd3.xf.xmn6.m0[id]
+print i907
+let i908 = @m.xdut.xpll.xdiv.xd5.xf1.xmp1.m0[id]
+print i908
+let i909 = @m.xdut.xpll.xdiv.xd5.xf1.xmp2.m0[id]
+print i909
+let i910 = @m.xdut.xpll.xdiv.xd5.xf1.xmn1.m0[id]
+print i910
+let i911 = @m.xdut.xpll.xdiv.xd5.xf1.xmp3.m0[id]
+print i911
+let i912 = @m.xdut.xpll.xdiv.xd5.xf1.xmn2.m0[id]
+print i912
+let i913 = @m.xdut.xpll.xdiv.xd5.xf1.xmn3.m0[id]
+print i913
+let i914 = @m.xdut.xpll.xdiv.xd5.xf1.xmp4.m0[id]
+print i914
+let i915 = @m.xdut.xpll.xdiv.xd5.xf1.xmn4.m0[id]
+print i915
+let i916 = @m.xdut.xpll.xdiv.xd5.xf1.xmn5.m0[id]
+print i916
+let i917 = @m.xdut.xpll.xdiv.xd5.xf1.xmp5.m0[id]
+print i917
+let i918 = @m.xdut.xpll.xdiv.xd5.xf1.xmn6.m0[id]
+print i918
+let i919 = @m.xdut.xpll.xdiv.xd5.xf2.xmp1.m0[id]
+print i919
+let i920 = @m.xdut.xpll.xdiv.xd5.xf2.xmp2.m0[id]
+print i920
+let i921 = @m.xdut.xpll.xdiv.xd5.xf2.xmn1.m0[id]
+print i921
+let i922 = @m.xdut.xpll.xdiv.xd5.xf2.xmp3.m0[id]
+print i922
+let i923 = @m.xdut.xpll.xdiv.xd5.xf2.xmn2.m0[id]
+print i923
+let i924 = @m.xdut.xpll.xdiv.xd5.xf2.xmn3.m0[id]
+print i924
+let i925 = @m.xdut.xpll.xdiv.xd5.xf2.xmp4.m0[id]
+print i925
+let i926 = @m.xdut.xpll.xdiv.xd5.xf2.xmn4.m0[id]
+print i926
+let i927 = @m.xdut.xpll.xdiv.xd5.xf2.xmn5.m0[id]
+print i927
+let i928 = @m.xdut.xpll.xdiv.xd5.xf2.xmp5.m0[id]
+print i928
+let i929 = @m.xdut.xpll.xdiv.xd5.xf2.xmn6.m0[id]
+print i929
+let i930 = @m.xdut.xpll.xdiv.xd5.xn.xmn1.m0[id]
+print i930
+let i931 = @m.xdut.xpll.xdiv.xd5.xn.xmn2.m0[id]
+print i931
+let i932 = @m.xdut.xpll.xdiv.xd5.xn.xmp1.m0[id]
+print i932
+let i933 = @m.xdut.xpll.xdiv.xd5.xn.xmp2.m0[id]
+print i933
+let i934 = @m.xdut.xpll.xdiv.xd6.xf.xmp1.m0[id]
+print i934
+let i935 = @m.xdut.xpll.xdiv.xd6.xf.xmp2.m0[id]
+print i935
+let i936 = @m.xdut.xpll.xdiv.xd6.xf.xmn1.m0[id]
+print i936
+let i937 = @m.xdut.xpll.xdiv.xd6.xf.xmp3.m0[id]
+print i937
+let i938 = @m.xdut.xpll.xdiv.xd6.xf.xmn2.m0[id]
+print i938
+let i939 = @m.xdut.xpll.xdiv.xd6.xf.xmn3.m0[id]
+print i939
+let i940 = @m.xdut.xpll.xdiv.xd6.xf.xmp4.m0[id]
+print i940
+let i941 = @m.xdut.xpll.xdiv.xd6.xf.xmn4.m0[id]
+print i941
+let i942 = @m.xdut.xpll.xdiv.xd6.xf.xmn5.m0[id]
+print i942
+let i943 = @m.xdut.xpll.xdiv.xd6.xf.xmp5.m0[id]
+print i943
+let i944 = @m.xdut.xpll.xdiv.xd6.xf.xmn6.m0[id]
+print i944
+let i945 = @m.xdut.xpll.xdiv.xfb1.xmn.m0[id]
+print i945
+let i946 = @m.xdut.xpll.xdiv.xfb1.xmp.m0[id]
+print i946
+let i947 = @m.xdut.xpll.xdiv.xfb2.xmn.m0[id]
+print i947
+let i948 = @m.xdut.xpll.xdiv.xfb2.xmp.m0[id]
+print i948
+let i949 = @m.xdut.xpll.xmcln.m0[id]
+print i949
+let i950 = @m.xdut.xpll.xmclp.m0[id]
+print i950
+let i951 = @m.xdut.xpll.xmtx.m0[id]
+print i951
+let i952 = @m.xdut.xpll.xmthi.m0[id]
+print i952
+let i953 = @m.xdut.xpll.xmtlo.m0[id]
+print i953
+let i954 = @m.xdut.xpll.xpfd.xu.x1.xmn1.m0[id]
+print i954
+let i955 = @m.xdut.xpll.xpfd.xu.x1.xmn2.m0[id]
+print i955
+let i956 = @m.xdut.xpll.xpfd.xu.x1.xmp1.m0[id]
+print i956
+let i957 = @m.xdut.xpll.xpfd.xu.x1.xmp2.m0[id]
+print i957
+let i958 = @m.xdut.xpll.xpfd.xu.x2.xmn1.m0[id]
+print i958
+let i959 = @m.xdut.xpll.xpfd.xu.x2.xmn2.m0[id]
+print i959
+let i960 = @m.xdut.xpll.xpfd.xu.x2.xmn3.m0[id]
+print i960
+let i961 = @m.xdut.xpll.xpfd.xu.x2.xmp1.m0[id]
+print i961
+let i962 = @m.xdut.xpll.xpfd.xu.x2.xmp2.m0[id]
+print i962
+let i963 = @m.xdut.xpll.xpfd.xu.x2.xmp3.m0[id]
+print i963
+let i964 = @m.xdut.xpll.xpfd.xu.x3.xmn1.m0[id]
+print i964
+let i965 = @m.xdut.xpll.xpfd.xu.x3.xmn2.m0[id]
+print i965
+let i966 = @m.xdut.xpll.xpfd.xu.x3.xmn3.m0[id]
+print i966
+let i967 = @m.xdut.xpll.xpfd.xu.x3.xmp1.m0[id]
+print i967
+let i968 = @m.xdut.xpll.xpfd.xu.x3.xmp2.m0[id]
+print i968
+let i969 = @m.xdut.xpll.xpfd.xu.x3.xmp3.m0[id]
+print i969
+let i970 = @m.xdut.xpll.xpfd.xu.x4.xmn1.m0[id]
+print i970
+let i971 = @m.xdut.xpll.xpfd.xu.x4.xmn2.m0[id]
+print i971
+let i972 = @m.xdut.xpll.xpfd.xu.x4.xmp1.m0[id]
+print i972
+let i973 = @m.xdut.xpll.xpfd.xu.x4.xmp2.m0[id]
+print i973
+let i974 = @m.xdut.xpll.xpfd.xu.x5.xmn1.m0[id]
+print i974
+let i975 = @m.xdut.xpll.xpfd.xu.x5.xmn2.m0[id]
+print i975
+let i976 = @m.xdut.xpll.xpfd.xu.x5.xmp1.m0[id]
+print i976
+let i977 = @m.xdut.xpll.xpfd.xu.x5.xmp2.m0[id]
+print i977
+let i978 = @m.xdut.xpll.xpfd.xu.x6.xmn1.m0[id]
+print i978
+let i979 = @m.xdut.xpll.xpfd.xu.x6.xmn2.m0[id]
+print i979
+let i980 = @m.xdut.xpll.xpfd.xu.x6.xmn3.m0[id]
+print i980
+let i981 = @m.xdut.xpll.xpfd.xu.x6.xmp1.m0[id]
+print i981
+let i982 = @m.xdut.xpll.xpfd.xu.x6.xmp2.m0[id]
+print i982
+let i983 = @m.xdut.xpll.xpfd.xu.x6.xmp3.m0[id]
+print i983
+let i984 = @m.xdut.xpll.xpfd.xd.x1.xmn1.m0[id]
+print i984
+let i985 = @m.xdut.xpll.xpfd.xd.x1.xmn2.m0[id]
+print i985
+let i986 = @m.xdut.xpll.xpfd.xd.x1.xmp1.m0[id]
+print i986
+let i987 = @m.xdut.xpll.xpfd.xd.x1.xmp2.m0[id]
+print i987
+let i988 = @m.xdut.xpll.xpfd.xd.x2.xmn1.m0[id]
+print i988
+let i989 = @m.xdut.xpll.xpfd.xd.x2.xmn2.m0[id]
+print i989
+let i990 = @m.xdut.xpll.xpfd.xd.x2.xmn3.m0[id]
+print i990
+let i991 = @m.xdut.xpll.xpfd.xd.x2.xmp1.m0[id]
+print i991
+let i992 = @m.xdut.xpll.xpfd.xd.x2.xmp2.m0[id]
+print i992
+let i993 = @m.xdut.xpll.xpfd.xd.x2.xmp3.m0[id]
+print i993
+let i994 = @m.xdut.xpll.xpfd.xd.x3.xmn1.m0[id]
+print i994
+let i995 = @m.xdut.xpll.xpfd.xd.x3.xmn2.m0[id]
+print i995
+let i996 = @m.xdut.xpll.xpfd.xd.x3.xmn3.m0[id]
+print i996
+let i997 = @m.xdut.xpll.xpfd.xd.x3.xmp1.m0[id]
+print i997
+let i998 = @m.xdut.xpll.xpfd.xd.x3.xmp2.m0[id]
+print i998
+let i999 = @m.xdut.xpll.xpfd.xd.x3.xmp3.m0[id]
+print i999
+let i1000 = @m.xdut.xpll.xpfd.xd.x4.xmn1.m0[id]
+print i1000
+let i1001 = @m.xdut.xpll.xpfd.xd.x4.xmn2.m0[id]
+print i1001
+let i1002 = @m.xdut.xpll.xpfd.xd.x4.xmp1.m0[id]
+print i1002
+let i1003 = @m.xdut.xpll.xpfd.xd.x4.xmp2.m0[id]
+print i1003
+let i1004 = @m.xdut.xpll.xpfd.xd.x5.xmn1.m0[id]
+print i1004
+let i1005 = @m.xdut.xpll.xpfd.xd.x5.xmn2.m0[id]
+print i1005
+let i1006 = @m.xdut.xpll.xpfd.xd.x5.xmp1.m0[id]
+print i1006
+let i1007 = @m.xdut.xpll.xpfd.xd.x5.xmp2.m0[id]
+print i1007
+let i1008 = @m.xdut.xpll.xpfd.xd.x6.xmn1.m0[id]
+print i1008
+let i1009 = @m.xdut.xpll.xpfd.xd.x6.xmn2.m0[id]
+print i1009
+let i1010 = @m.xdut.xpll.xpfd.xd.x6.xmn3.m0[id]
+print i1010
+let i1011 = @m.xdut.xpll.xpfd.xd.x6.xmp1.m0[id]
+print i1011
+let i1012 = @m.xdut.xpll.xpfd.xd.x6.xmp2.m0[id]
+print i1012
+let i1013 = @m.xdut.xpll.xpfd.xd.x6.xmp3.m0[id]
+print i1013
+let i1014 = @m.xdut.xpll.xpfd.xr.xmn1.m0[id]
+print i1014
+let i1015 = @m.xdut.xpll.xpfd.xr.xmn2.m0[id]
+print i1015
+let i1016 = @m.xdut.xpll.xpfd.xr.xmp1.m0[id]
+print i1016
+let i1017 = @m.xdut.xpll.xpfd.xr.xmp2.m0[id]
+print i1017
+let i1018 = @m.xdut.xpll.xpfd.xd1.xmn.m0[id]
+print i1018
+let i1019 = @m.xdut.xpll.xpfd.xd1.xmp.m0[id]
+print i1019
+let i1020 = @m.xdut.xpll.xpfd.xd2.xmn.m0[id]
+print i1020
+let i1021 = @m.xdut.xpll.xpfd.xd2.xmp.m0[id]
+print i1021
+let i1022 = @m.xdut.xpll.xpfd.xd3.xmn.m0[id]
+print i1022
+let i1023 = @m.xdut.xpll.xpfd.xd3.xmp.m0[id]
+print i1023
+let i1024 = @m.xdut.xpll.xpfd.xd4.xmn.m0[id]
+print i1024
+let i1025 = @m.xdut.xpll.xpfd.xd4.xmp.m0[id]
+print i1025
+let i1026 = @m.xdut.xpll.xpfd.xo1.xmn.m0[id]
+print i1026
+let i1027 = @m.xdut.xpll.xpfd.xo1.xmp.m0[id]
+print i1027
+let i1028 = @m.xdut.xpll.xpfd.xo2.xmn.m0[id]
+print i1028
+let i1029 = @m.xdut.xpll.xpfd.xo2.xmp.m0[id]
+print i1029
+let i1030 = @m.xdut.xpll.xcp.xud.xmn.m0[id]
+print i1030
+let i1031 = @m.xdut.xpll.xcp.xud.xmp.m0[id]
+print i1031
+let i1032 = @m.xdut.xpll.xcp.xmpc.m0[id]
+print i1032
+let i1033 = @m.xdut.xpll.xcp.xmps.m0[id]
+print i1033
+let i1034 = @m.xdut.xpll.xcp.xmpd.m0[id]
+print i1034
+let i1035 = @m.xdut.xpll.xcp.xmns.m0[id]
+print i1035
+let i1036 = @m.xdut.xpll.xcp.xmnd.m0[id]
+print i1036
+let i1037 = @m.xdut.xpll.xcp.xmnc.m0[id]
+print i1037
+let i1038 = @m.xdut.xpll.xcp.xhi.xmn.m0[id]
+print i1038
+let i1039 = @m.xdut.xpll.xcp.xhi.xmp.m0[id]
+print i1039
+let i1040 = @m.xdut.xpll.xcp.xmpc2.m0[id]
+print i1040
+let i1041 = @m.xdut.xpll.xcp.xmpe2.m0[id]
+print i1041
+let i1042 = @m.xdut.xpll.xcp.xmps2.m0[id]
+print i1042
+let i1043 = @m.xdut.xpll.xcp.xmpd2.m0[id]
+print i1043
+let i1044 = @m.xdut.xpll.xcp.xmns2.m0[id]
+print i1044
+let i1045 = @m.xdut.xpll.xcp.xmnd2.m0[id]
+print i1045
+let i1046 = @m.xdut.xpll.xcp.xmne2.m0[id]
+print i1046
+let i1047 = @m.xdut.xpll.xcp.xmnc2.m0[id]
+print i1047
+let i1048 = @m.xdut.xpll.xcp.xmbt.m0[id]
+print i1048
+let i1049 = @m.xdut.xpll.xcp.xmb1.m0[id]
+print i1049
+let i1050 = @m.xdut.xpll.xcp.xmb2.m0[id]
+print i1050
+let i1051 = @m.xdut.xpll.xcp.xmbl1.m0[id]
+print i1051
+let i1052 = @m.xdut.xpll.xcp.xmbl2.m0[id]
+print i1052
+let i1053 = @m.xdut.xlna.xm1.m0[id]
+print i1053
+let i1054 = @m.xdut.xlna.xm2.m0[id]
+print i1054
+let i1055 = @m.xdut.xlna.xmp1.m0[id]
+print i1055
+let i1056 = @m.xdut.xlna.xm1r.m0[id]
+print i1056
+let i1057 = @m.xdut.xlna.xmp2.m0[id]
+print i1057
+let i1058 = @m.xdut.xlna.xm2r.m0[id]
+print i1058
+let i1059 = @m.xdut.xmix.xmctl1p.m0[id]
+print i1059
+let i1060 = @m.xdut.xmix.xmctl1n.m0[id]
+print i1060
+let i1061 = @m.xdut.xmix.xmctl2p.m0[id]
+print i1061
+let i1062 = @m.xdut.xmix.xmctl2n.m0[id]
+print i1062
+let i1063 = @m.xdut.xmix.xmctl3p.m0[id]
+print i1063
+let i1064 = @m.xdut.xmix.xmctl3n.m0[id]
+print i1064
+let i1065 = @m.xdut.xmix.xmctl4p.m0[id]
+print i1065
+let i1066 = @m.xdut.xmix.xmctl4n.m0[id]
+print i1066
+let i1067 = @m.xdut.xmix.xmti.m0[id]
+print i1067
+let i1068 = @m.xdut.xmix.xmg1i.m0[id]
+print i1068
+let i1069 = @m.xdut.xmix.xmg2i.m0[id]
+print i1069
+let i1070 = @m.xdut.xmix.xmlapi.m0[id]
+print i1070
+let i1071 = @m.xdut.xmix.xmlbpi.m0[id]
+print i1071
+let i1072 = @m.xdut.xmix.xmu1pi.m0[id]
+print i1072
+let i1073 = @m.xdut.xmix.xmu2pi.m0[id]
+print i1073
+let i1074 = @m.xdut.xmix.xmu3pi.m0[id]
+print i1074
+let i1075 = @m.xdut.xmix.xmu4pi.m0[id]
+print i1075
+let i1076 = @m.xdut.xmix.xmlani.m0[id]
+print i1076
+let i1077 = @m.xdut.xmix.xmlbni.m0[id]
+print i1077
+let i1078 = @m.xdut.xmix.xmu1ni.m0[id]
+print i1078
+let i1079 = @m.xdut.xmix.xmu2ni.m0[id]
+print i1079
+let i1080 = @m.xdut.xmix.xmu3ni.m0[id]
+print i1080
+let i1081 = @m.xdut.xmix.xmu4ni.m0[id]
+print i1081
+let i1082 = @m.xdut.xmix.xmtq.m0[id]
+print i1082
+let i1083 = @m.xdut.xmix.xmg1q.m0[id]
+print i1083
+let i1084 = @m.xdut.xmix.xmg2q.m0[id]
+print i1084
+let i1085 = @m.xdut.xmix.xmlapq.m0[id]
+print i1085
+let i1086 = @m.xdut.xmix.xmlbpq.m0[id]
+print i1086
+let i1087 = @m.xdut.xmix.xmu1pq.m0[id]
+print i1087
+let i1088 = @m.xdut.xmix.xmu2pq.m0[id]
+print i1088
+let i1089 = @m.xdut.xmix.xmu3pq.m0[id]
+print i1089
+let i1090 = @m.xdut.xmix.xmu4pq.m0[id]
+print i1090
+let i1091 = @m.xdut.xmix.xmlanq.m0[id]
+print i1091
+let i1092 = @m.xdut.xmix.xmlbnq.m0[id]
+print i1092
+let i1093 = @m.xdut.xmix.xmu1nq.m0[id]
+print i1093
+let i1094 = @m.xdut.xmix.xmu2nq.m0[id]
+print i1094
+let i1095 = @m.xdut.xmix.xmu3nq.m0[id]
+print i1095
+let i1096 = @m.xdut.xmix.xmu4nq.m0[id]
+print i1096
+let i1097 = @m.xdut.xifi.xbif.xmot.m0[id]
+print i1097
+let i1098 = @m.xdut.xifi.xbif.xmi1.m0[id]
+print i1098
+let i1099 = @m.xdut.xifi.xbif.xmi2.m0[id]
+print i1099
+let i1100 = @m.xdut.xifi.xbif.xml1.m0[id]
+print i1100
+let i1101 = @m.xdut.xifi.xbif.xml2.m0[id]
+print i1101
+let i1102 = @m.xdut.xifi.xbif.xmv.m0[id]
+print i1102
+let i1103 = @m.xdut.xifi.xbif.xmpd.m0[id]
+print i1103
+let i1104 = @m.xdut.xifi.xbif.xmpm.m0[id]
+print i1104
+let i1105 = @m.xdut.xifi.xbif.xmnd.m0[id]
+print i1105
+let i1106 = @m.xdut.xifi.xbif.xmnp.m0[id]
+print i1106
+let i1107 = @m.xdut.xifi.xbif.xmpp.m0[id]
+print i1107
+let i1108 = @m.xdut.xifi.xv1.xm1.m0[id]
+print i1108
+let i1109 = @m.xdut.xifi.xv1.xm2.m0[id]
+print i1109
+let i1110 = @m.xdut.xifi.xv1.xmt1.m0[id]
+print i1110
+let i1111 = @m.xdut.xifi.xv1.xmt2.m0[id]
+print i1111
+let i1112 = @m.xdut.xifi.xv1.xmsa.m0[id]
+print i1112
+let i1113 = @m.xdut.xifi.xv1.xmsb.m0[id]
+print i1113
+let i1114 = @m.xdut.xifi.xf1.xmfp.m0[id]
+print i1114
+let i1115 = @m.xdut.xifi.xf1.xmip.m0[id]
+print i1115
+let i1116 = @m.xdut.xifi.xf1.xmfn.m0[id]
+print i1116
+let i1117 = @m.xdut.xifi.xf1.xmin.m0[id]
+print i1117
+let i1118 = @m.xdut.xifi.xv2.xm1.m0[id]
+print i1118
+let i1119 = @m.xdut.xifi.xv2.xm2.m0[id]
+print i1119
+let i1120 = @m.xdut.xifi.xv2.xmt1.m0[id]
+print i1120
+let i1121 = @m.xdut.xifi.xv2.xmt2.m0[id]
+print i1121
+let i1122 = @m.xdut.xifi.xv2.xmsa.m0[id]
+print i1122
+let i1123 = @m.xdut.xifi.xv2.xmsb.m0[id]
+print i1123
+let i1124 = @m.xdut.xifi.xf2.xmfp.m0[id]
+print i1124
+let i1125 = @m.xdut.xifi.xf2.xmip.m0[id]
+print i1125
+let i1126 = @m.xdut.xifi.xf2.xmfn.m0[id]
+print i1126
+let i1127 = @m.xdut.xifi.xf2.xmin.m0[id]
+print i1127
+let i1128 = @m.xdut.xifi.xv3.xm1.m0[id]
+print i1128
+let i1129 = @m.xdut.xifi.xv3.xm2.m0[id]
+print i1129
+let i1130 = @m.xdut.xifi.xv3.xmt1.m0[id]
+print i1130
+let i1131 = @m.xdut.xifi.xv3.xmt2.m0[id]
+print i1131
+let i1132 = @m.xdut.xifi.xv3.xmsa.m0[id]
+print i1132
+let i1133 = @m.xdut.xifi.xv3.xmsb.m0[id]
+print i1133
+let i1134 = @m.xdut.xifi.xv4.xm1.m0[id]
+print i1134
+let i1135 = @m.xdut.xifi.xv4.xm2.m0[id]
+print i1135
+let i1136 = @m.xdut.xifi.xv4.xmt1.m0[id]
+print i1136
+let i1137 = @m.xdut.xifi.xv4.xmt2.m0[id]
+print i1137
+let i1138 = @m.xdut.xifi.xv5.xm1.m0[id]
+print i1138
+let i1139 = @m.xdut.xifi.xv5.xm2.m0[id]
+print i1139
+let i1140 = @m.xdut.xifi.xv5.xmt1.m0[id]
+print i1140
+let i1141 = @m.xdut.xifi.xv5.xmt2.m0[id]
+print i1141
+let i1142 = @m.xdut.xifq.xbif.xmot.m0[id]
+print i1142
+let i1143 = @m.xdut.xifq.xbif.xmi1.m0[id]
+print i1143
+let i1144 = @m.xdut.xifq.xbif.xmi2.m0[id]
+print i1144
+let i1145 = @m.xdut.xifq.xbif.xml1.m0[id]
+print i1145
+let i1146 = @m.xdut.xifq.xbif.xml2.m0[id]
+print i1146
+let i1147 = @m.xdut.xifq.xbif.xmv.m0[id]
+print i1147
+let i1148 = @m.xdut.xifq.xbif.xmpd.m0[id]
+print i1148
+let i1149 = @m.xdut.xifq.xbif.xmpm.m0[id]
+print i1149
+let i1150 = @m.xdut.xifq.xbif.xmnd.m0[id]
+print i1150
+let i1151 = @m.xdut.xifq.xbif.xmnp.m0[id]
+print i1151
+let i1152 = @m.xdut.xifq.xbif.xmpp.m0[id]
+print i1152
+let i1153 = @m.xdut.xifq.xv1.xm1.m0[id]
+print i1153
+let i1154 = @m.xdut.xifq.xv1.xm2.m0[id]
+print i1154
+let i1155 = @m.xdut.xifq.xv1.xmt1.m0[id]
+print i1155
+let i1156 = @m.xdut.xifq.xv1.xmt2.m0[id]
+print i1156
+let i1157 = @m.xdut.xifq.xv1.xmsa.m0[id]
+print i1157
+let i1158 = @m.xdut.xifq.xv1.xmsb.m0[id]
+print i1158
+let i1159 = @m.xdut.xifq.xf1.xmfp.m0[id]
+print i1159
+let i1160 = @m.xdut.xifq.xf1.xmip.m0[id]
+print i1160
+let i1161 = @m.xdut.xifq.xf1.xmfn.m0[id]
+print i1161
+let i1162 = @m.xdut.xifq.xf1.xmin.m0[id]
+print i1162
+let i1163 = @m.xdut.xifq.xv2.xm1.m0[id]
+print i1163
+let i1164 = @m.xdut.xifq.xv2.xm2.m0[id]
+print i1164
+let i1165 = @m.xdut.xifq.xv2.xmt1.m0[id]
+print i1165
+let i1166 = @m.xdut.xifq.xv2.xmt2.m0[id]
+print i1166
+let i1167 = @m.xdut.xifq.xv2.xmsa.m0[id]
+print i1167
+let i1168 = @m.xdut.xifq.xv2.xmsb.m0[id]
+print i1168
+let i1169 = @m.xdut.xifq.xf2.xmfp.m0[id]
+print i1169
+let i1170 = @m.xdut.xifq.xf2.xmip.m0[id]
+print i1170
+let i1171 = @m.xdut.xifq.xf2.xmfn.m0[id]
+print i1171
+let i1172 = @m.xdut.xifq.xf2.xmin.m0[id]
+print i1172
+let i1173 = @m.xdut.xifq.xv3.xm1.m0[id]
+print i1173
+let i1174 = @m.xdut.xifq.xv3.xm2.m0[id]
+print i1174
+let i1175 = @m.xdut.xifq.xv3.xmt1.m0[id]
+print i1175
+let i1176 = @m.xdut.xifq.xv3.xmt2.m0[id]
+print i1176
+let i1177 = @m.xdut.xifq.xv3.xmsa.m0[id]
+print i1177
+let i1178 = @m.xdut.xifq.xv3.xmsb.m0[id]
+print i1178
+let i1179 = @m.xdut.xifq.xv4.xm1.m0[id]
+print i1179
+let i1180 = @m.xdut.xifq.xv4.xm2.m0[id]
+print i1180
+let i1181 = @m.xdut.xifq.xv4.xmt1.m0[id]
+print i1181
+let i1182 = @m.xdut.xifq.xv4.xmt2.m0[id]
+print i1182
+let i1183 = @m.xdut.xifq.xv5.xm1.m0[id]
+print i1183
+let i1184 = @m.xdut.xifq.xv5.xm2.m0[id]
+print i1184
+let i1185 = @m.xdut.xifq.xv5.xmt1.m0[id]
+print i1185
+let i1186 = @m.xdut.xifq.xv5.xmt2.m0[id]
+print i1186
+let i1187 = @m.xdut.xadi.xcs.xmt.m0[id]
+print i1187
+let i1188 = @m.xdut.xadi.xcs.xm1.m0[id]
+print i1188
+let i1189 = @m.xdut.xadi.xcs.xm2.m0[id]
+print i1189
+let i1190 = @m.xdut.xadi.xcs.xm3.m0[id]
+print i1190
+let i1191 = @m.xdut.xadi.xcs.xm4.m0[id]
+print i1191
+let i1192 = @m.xdut.xadi.xcs.xm5.m0[id]
+print i1192
+let i1193 = @m.xdut.xadi.xcs.xm6.m0[id]
+print i1193
+let i1194 = @m.xdut.xadi.xcs.xm7.m0[id]
+print i1194
+let i1195 = @m.xdut.xadi.xcs.xm8.m0[id]
+print i1195
+let i1196 = @m.xdut.xadi.xcs.xm9.m0[id]
+print i1196
+let i1197 = @m.xdut.xadi.xcs.xm10.m0[id]
+print i1197
+let i1198 = @m.xdut.xadi.xcs.xm11.m0[id]
+print i1198
+let i1199 = @m.xdut.xadi.xcs.xm12.m0[id]
+print i1199
+let i1200 = @m.xdut.xadi.xcs.xi1.xmn.m0[id]
+print i1200
+let i1201 = @m.xdut.xadi.xcs.xi1.xmp.m0[id]
+print i1201
+let i1202 = @m.xdut.xadi.xcs.xi2.xmn.m0[id]
+print i1202
+let i1203 = @m.xdut.xadi.xcs.xi2.xmp.m0[id]
+print i1203
+let i1204 = @m.xdut.xadi.xcs.xs1.xmn1.m0[id]
+print i1204
+let i1205 = @m.xdut.xadi.xcs.xs1.xmn2.m0[id]
+print i1205
+let i1206 = @m.xdut.xadi.xcs.xs1.xmp1.m0[id]
+print i1206
+let i1207 = @m.xdut.xadi.xcs.xs1.xmp2.m0[id]
+print i1207
+let i1208 = @m.xdut.xadi.xcs.xs2.xmn1.m0[id]
+print i1208
+let i1209 = @m.xdut.xadi.xcs.xs2.xmn2.m0[id]
+print i1209
+let i1210 = @m.xdut.xadi.xcs.xs2.xmp1.m0[id]
+print i1210
+let i1211 = @m.xdut.xadi.xcs.xs2.xmp2.m0[id]
+print i1211
+let i1212 = @m.xdut.xadi.xch.xmt.m0[id]
+print i1212
+let i1213 = @m.xdut.xadi.xch.xm1.m0[id]
+print i1213
+let i1214 = @m.xdut.xadi.xch.xm2.m0[id]
+print i1214
+let i1215 = @m.xdut.xadi.xch.xm3.m0[id]
+print i1215
+let i1216 = @m.xdut.xadi.xch.xm4.m0[id]
+print i1216
+let i1217 = @m.xdut.xadi.xch.xm5.m0[id]
+print i1217
+let i1218 = @m.xdut.xadi.xch.xm6.m0[id]
+print i1218
+let i1219 = @m.xdut.xadi.xch.xm7.m0[id]
+print i1219
+let i1220 = @m.xdut.xadi.xch.xm8.m0[id]
+print i1220
+let i1221 = @m.xdut.xadi.xch.xm9.m0[id]
+print i1221
+let i1222 = @m.xdut.xadi.xch.xm10.m0[id]
+print i1222
+let i1223 = @m.xdut.xadi.xch.xm11.m0[id]
+print i1223
+let i1224 = @m.xdut.xadi.xch.xm12.m0[id]
+print i1224
+let i1225 = @m.xdut.xadi.xch.xi1.xmn.m0[id]
+print i1225
+let i1226 = @m.xdut.xadi.xch.xi1.xmp.m0[id]
+print i1226
+let i1227 = @m.xdut.xadi.xch.xi2.xmn.m0[id]
+print i1227
+let i1228 = @m.xdut.xadi.xch.xi2.xmp.m0[id]
+print i1228
+let i1229 = @m.xdut.xadi.xch.xs1.xmn1.m0[id]
+print i1229
+let i1230 = @m.xdut.xadi.xch.xs1.xmn2.m0[id]
+print i1230
+let i1231 = @m.xdut.xadi.xch.xs1.xmp1.m0[id]
+print i1231
+let i1232 = @m.xdut.xadi.xch.xs1.xmp2.m0[id]
+print i1232
+let i1233 = @m.xdut.xadi.xch.xs2.xmn1.m0[id]
+print i1233
+let i1234 = @m.xdut.xadi.xch.xs2.xmn2.m0[id]
+print i1234
+let i1235 = @m.xdut.xadi.xch.xs2.xmp1.m0[id]
+print i1235
+let i1236 = @m.xdut.xadi.xch.xs2.xmp2.m0[id]
+print i1236
+let i1237 = @m.xdut.xadi.xcl.xmt.m0[id]
+print i1237
+let i1238 = @m.xdut.xadi.xcl.xm1.m0[id]
+print i1238
+let i1239 = @m.xdut.xadi.xcl.xm2.m0[id]
+print i1239
+let i1240 = @m.xdut.xadi.xcl.xm3.m0[id]
+print i1240
+let i1241 = @m.xdut.xadi.xcl.xm4.m0[id]
+print i1241
+let i1242 = @m.xdut.xadi.xcl.xm5.m0[id]
+print i1242
+let i1243 = @m.xdut.xadi.xcl.xm6.m0[id]
+print i1243
+let i1244 = @m.xdut.xadi.xcl.xm7.m0[id]
+print i1244
+let i1245 = @m.xdut.xadi.xcl.xm8.m0[id]
+print i1245
+let i1246 = @m.xdut.xadi.xcl.xm9.m0[id]
+print i1246
+let i1247 = @m.xdut.xadi.xcl.xm10.m0[id]
+print i1247
+let i1248 = @m.xdut.xadi.xcl.xm11.m0[id]
+print i1248
+let i1249 = @m.xdut.xadi.xcl.xm12.m0[id]
+print i1249
+let i1250 = @m.xdut.xadi.xcl.xi1.xmn.m0[id]
+print i1250
+let i1251 = @m.xdut.xadi.xcl.xi1.xmp.m0[id]
+print i1251
+let i1252 = @m.xdut.xadi.xcl.xi2.xmn.m0[id]
+print i1252
+let i1253 = @m.xdut.xadi.xcl.xi2.xmp.m0[id]
+print i1253
+let i1254 = @m.xdut.xadi.xcl.xs1.xmn1.m0[id]
+print i1254
+let i1255 = @m.xdut.xadi.xcl.xs1.xmn2.m0[id]
+print i1255
+let i1256 = @m.xdut.xadi.xcl.xs1.xmp1.m0[id]
+print i1256
+let i1257 = @m.xdut.xadi.xcl.xs1.xmp2.m0[id]
+print i1257
+let i1258 = @m.xdut.xadi.xcl.xs2.xmn1.m0[id]
+print i1258
+let i1259 = @m.xdut.xadi.xcl.xs2.xmn2.m0[id]
+print i1259
+let i1260 = @m.xdut.xadi.xcl.xs2.xmp1.m0[id]
+print i1260
+let i1261 = @m.xdut.xadi.xcl.xs2.xmp2.m0[id]
+print i1261
+let i1262 = @m.xdut.xadi.xm.xmn1.m0[id]
+print i1262
+let i1263 = @m.xdut.xadi.xm.xmn2.m0[id]
+print i1263
+let i1264 = @m.xdut.xadi.xm.xmp1.m0[id]
+print i1264
+let i1265 = @m.xdut.xadi.xm.xmp2.m0[id]
+print i1265
+let i1266 = @m.xdut.xadq.xcs.xmt.m0[id]
+print i1266
+let i1267 = @m.xdut.xadq.xcs.xm1.m0[id]
+print i1267
+let i1268 = @m.xdut.xadq.xcs.xm2.m0[id]
+print i1268
+let i1269 = @m.xdut.xadq.xcs.xm3.m0[id]
+print i1269
+let i1270 = @m.xdut.xadq.xcs.xm4.m0[id]
+print i1270
+let i1271 = @m.xdut.xadq.xcs.xm5.m0[id]
+print i1271
+let i1272 = @m.xdut.xadq.xcs.xm6.m0[id]
+print i1272
+let i1273 = @m.xdut.xadq.xcs.xm7.m0[id]
+print i1273
+let i1274 = @m.xdut.xadq.xcs.xm8.m0[id]
+print i1274
+let i1275 = @m.xdut.xadq.xcs.xm9.m0[id]
+print i1275
+let i1276 = @m.xdut.xadq.xcs.xm10.m0[id]
+print i1276
+let i1277 = @m.xdut.xadq.xcs.xm11.m0[id]
+print i1277
+let i1278 = @m.xdut.xadq.xcs.xm12.m0[id]
+print i1278
+let i1279 = @m.xdut.xadq.xcs.xi1.xmn.m0[id]
+print i1279
+let i1280 = @m.xdut.xadq.xcs.xi1.xmp.m0[id]
+print i1280
+let i1281 = @m.xdut.xadq.xcs.xi2.xmn.m0[id]
+print i1281
+let i1282 = @m.xdut.xadq.xcs.xi2.xmp.m0[id]
+print i1282
+let i1283 = @m.xdut.xadq.xcs.xs1.xmn1.m0[id]
+print i1283
+let i1284 = @m.xdut.xadq.xcs.xs1.xmn2.m0[id]
+print i1284
+let i1285 = @m.xdut.xadq.xcs.xs1.xmp1.m0[id]
+print i1285
+let i1286 = @m.xdut.xadq.xcs.xs1.xmp2.m0[id]
+print i1286
+let i1287 = @m.xdut.xadq.xcs.xs2.xmn1.m0[id]
+print i1287
+let i1288 = @m.xdut.xadq.xcs.xs2.xmn2.m0[id]
+print i1288
+let i1289 = @m.xdut.xadq.xcs.xs2.xmp1.m0[id]
+print i1289
+let i1290 = @m.xdut.xadq.xcs.xs2.xmp2.m0[id]
+print i1290
+let i1291 = @m.xdut.xadq.xch.xmt.m0[id]
+print i1291
+let i1292 = @m.xdut.xadq.xch.xm1.m0[id]
+print i1292
+let i1293 = @m.xdut.xadq.xch.xm2.m0[id]
+print i1293
+let i1294 = @m.xdut.xadq.xch.xm3.m0[id]
+print i1294
+let i1295 = @m.xdut.xadq.xch.xm4.m0[id]
+print i1295
+let i1296 = @m.xdut.xadq.xch.xm5.m0[id]
+print i1296
+let i1297 = @m.xdut.xadq.xch.xm6.m0[id]
+print i1297
+let i1298 = @m.xdut.xadq.xch.xm7.m0[id]
+print i1298
+let i1299 = @m.xdut.xadq.xch.xm8.m0[id]
+print i1299
+let i1300 = @m.xdut.xadq.xch.xm9.m0[id]
+print i1300
+let i1301 = @m.xdut.xadq.xch.xm10.m0[id]
+print i1301
+let i1302 = @m.xdut.xadq.xch.xm11.m0[id]
+print i1302
+let i1303 = @m.xdut.xadq.xch.xm12.m0[id]
+print i1303
+let i1304 = @m.xdut.xadq.xch.xi1.xmn.m0[id]
+print i1304
+let i1305 = @m.xdut.xadq.xch.xi1.xmp.m0[id]
+print i1305
+let i1306 = @m.xdut.xadq.xch.xi2.xmn.m0[id]
+print i1306
+let i1307 = @m.xdut.xadq.xch.xi2.xmp.m0[id]
+print i1307
+let i1308 = @m.xdut.xadq.xch.xs1.xmn1.m0[id]
+print i1308
+let i1309 = @m.xdut.xadq.xch.xs1.xmn2.m0[id]
+print i1309
+let i1310 = @m.xdut.xadq.xch.xs1.xmp1.m0[id]
+print i1310
+let i1311 = @m.xdut.xadq.xch.xs1.xmp2.m0[id]
+print i1311
+let i1312 = @m.xdut.xadq.xch.xs2.xmn1.m0[id]
+print i1312
+let i1313 = @m.xdut.xadq.xch.xs2.xmn2.m0[id]
+print i1313
+let i1314 = @m.xdut.xadq.xch.xs2.xmp1.m0[id]
+print i1314
+let i1315 = @m.xdut.xadq.xch.xs2.xmp2.m0[id]
+print i1315
+let i1316 = @m.xdut.xadq.xcl.xmt.m0[id]
+print i1316
+let i1317 = @m.xdut.xadq.xcl.xm1.m0[id]
+print i1317
+let i1318 = @m.xdut.xadq.xcl.xm2.m0[id]
+print i1318
+let i1319 = @m.xdut.xadq.xcl.xm3.m0[id]
+print i1319
+let i1320 = @m.xdut.xadq.xcl.xm4.m0[id]
+print i1320
+let i1321 = @m.xdut.xadq.xcl.xm5.m0[id]
+print i1321
+let i1322 = @m.xdut.xadq.xcl.xm6.m0[id]
+print i1322
+let i1323 = @m.xdut.xadq.xcl.xm7.m0[id]
+print i1323
+let i1324 = @m.xdut.xadq.xcl.xm8.m0[id]
+print i1324
+let i1325 = @m.xdut.xadq.xcl.xm9.m0[id]
+print i1325
+let i1326 = @m.xdut.xadq.xcl.xm10.m0[id]
+print i1326
+let i1327 = @m.xdut.xadq.xcl.xm11.m0[id]
+print i1327
+let i1328 = @m.xdut.xadq.xcl.xm12.m0[id]
+print i1328
+let i1329 = @m.xdut.xadq.xcl.xi1.xmn.m0[id]
+print i1329
+let i1330 = @m.xdut.xadq.xcl.xi1.xmp.m0[id]
+print i1330
+let i1331 = @m.xdut.xadq.xcl.xi2.xmn.m0[id]
+print i1331
+let i1332 = @m.xdut.xadq.xcl.xi2.xmp.m0[id]
+print i1332
+let i1333 = @m.xdut.xadq.xcl.xs1.xmn1.m0[id]
+print i1333
+let i1334 = @m.xdut.xadq.xcl.xs1.xmn2.m0[id]
+print i1334
+let i1335 = @m.xdut.xadq.xcl.xs1.xmp1.m0[id]
+print i1335
+let i1336 = @m.xdut.xadq.xcl.xs1.xmp2.m0[id]
+print i1336
+let i1337 = @m.xdut.xadq.xcl.xs2.xmn1.m0[id]
+print i1337
+let i1338 = @m.xdut.xadq.xcl.xs2.xmn2.m0[id]
+print i1338
+let i1339 = @m.xdut.xadq.xcl.xs2.xmp1.m0[id]
+print i1339
+let i1340 = @m.xdut.xadq.xcl.xs2.xmp2.m0[id]
+print i1340
+let i1341 = @m.xdut.xadq.xm.xmn1.m0[id]
+print i1341
+let i1342 = @m.xdut.xadq.xm.xmn2.m0[id]
+print i1342
+let i1343 = @m.xdut.xadq.xm.xmp1.m0[id]
+print i1343
+let i1344 = @m.xdut.xadq.xm.xmp2.m0[id]
+print i1344
+let i1345 = @m.xdut.xcko1.xmn.m0[id]
+print i1345
+let i1346 = @m.xdut.xcko1.xmp.m0[id]
+print i1346
+let i1347 = @m.xdut.xcko2.xmn.m0[id]
+print i1347
+let i1348 = @m.xdut.xcko2.xmp.m0[id]
+print i1348
+let i1349 = @m.xdut.xafc.xa0.xmn.m0[id]
+print i1349
+let i1350 = @m.xdut.xafc.xa0.xmp.m0[id]
+print i1350
+let i1351 = @m.xdut.xafc.xb0.xmn.m0[id]
+print i1351
+let i1352 = @m.xdut.xafc.xb0.xmp.m0[id]
+print i1352
+let i1353 = @m.xdut.xafc.xa1.xmn.m0[id]
+print i1353
+let i1354 = @m.xdut.xafc.xa1.xmp.m0[id]
+print i1354
+let i1355 = @m.xdut.xafc.xb1.xmn.m0[id]
+print i1355
+let i1356 = @m.xdut.xafc.xb1.xmp.m0[id]
+print i1356
+let i1357 = @m.xdut.xafc.xa2.xmn.m0[id]
+print i1357
+let i1358 = @m.xdut.xafc.xa2.xmp.m0[id]
+print i1358
+let i1359 = @m.xdut.xafc.xb2.xmn.m0[id]
+print i1359
+let i1360 = @m.xdut.xafc.xb2.xmp.m0[id]
+print i1360
+let i1361 = @m.xdut.xafc.xa3.xmn.m0[id]
+print i1361
+let i1362 = @m.xdut.xafc.xa3.xmp.m0[id]
+print i1362
+let i1363 = @m.xdut.xafc.xb3.xmn.m0[id]
+print i1363
+let i1364 = @m.xdut.xafc.xb3.xmp.m0[id]
+print i1364
+let i1365 = @m.xdut.xafc.xa4.xmn.m0[id]
+print i1365
+let i1366 = @m.xdut.xafc.xa4.xmp.m0[id]
+print i1366
+let i1367 = @m.xdut.xafc.xb4.xmn.m0[id]
+print i1367
+let i1368 = @m.xdut.xafc.xb4.xmp.m0[id]
+print i1368
+let i1369 = @m.xdut.xafc.xa5.xmn.m0[id]
+print i1369
+let i1370 = @m.xdut.xafc.xa5.xmp.m0[id]
+print i1370
+let i1371 = @m.xdut.xafc.xb5.xmn.m0[id]
+print i1371
+let i1372 = @m.xdut.xafc.xb5.xmp.m0[id]
+print i1372
+let i1373 = @m.xdut.xafc.xa6.xmn.m0[id]
+print i1373
+let i1374 = @m.xdut.xafc.xa6.xmp.m0[id]
+print i1374
+let i1375 = @m.xdut.xafc.xb6.xmn.m0[id]
+print i1375
+let i1376 = @m.xdut.xafc.xb6.xmp.m0[id]
+print i1376
+let i1377 = @m.xdut.xafc.xa7.xmn.m0[id]
+print i1377
+let i1378 = @m.xdut.xafc.xa7.xmp.m0[id]
+print i1378
+let i1379 = @m.xdut.xafc.xb7.xmn.m0[id]
+print i1379
+let i1380 = @m.xdut.xafc.xb7.xmp.m0[id]
+print i1380
+let i1381 = @m.xdut.xdec.xmd0.m0[id]
+print i1381
+let i1382 = @m.xdut.xdec.xmd1.m0[id]
+print i1382
+let i1383 = @m.xdut.xdec.xmd2.m0[id]
+print i1383
+let i1384 = @m.xdut.xdec.xmd3.m0[id]
+print i1384
+let i1385 = @m.xdut.xdec.xmd4.m0[id]
+print i1385
+let i1386 = @m.xdut.xdec.xmd5.m0[id]
+print i1386
+let i1387 = @m.xdut.xdec.xmd6.m0[id]
+print i1387
+let i1388 = @m.xdut.xdec.xmd7.m0[id]
+print i1388
+let i1389 = @m.xdut.xdec.xmd8.m0[id]
+print i1389
+let i1390 = @m.xdut.xdec.xmd9.m0[id]
+print i1390
+let i1391 = @m.xdut.xdec.xmd10.m0[id]
+print i1391
+let i1392 = @m.xdut.xdec.xmd11.m0[id]
+print i1392
+let i1393 = @m.xdut.xdec.xmd12.m0[id]
+print i1393
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  gnss_afe_top.sym # of pins=15
+** sym_path: /home/noritsuna/GPS/xschem/gnss_afe_top.sym
+** sch_path: /home/noritsuna/GPS/xschem/gnss_afe_top.sch
+.subckt gnss_afe_top RFIN REFIN SCLK SDI CS_N I_SIGN I_MAG Q_SIGN Q_MAG CLKOUT AFCOUT VCTRL VDDV VDD VSS
+*.ipin RFIN
+*.ipin REFIN
+*.ipin SCLK
+*.ipin SDI
+*.ipin CS_N
+*.opin I_SIGN
+*.opin I_MAG
+*.opin Q_SIGN
+*.opin Q_MAG
+*.opin CLKOUT
+*.opin AFCOUT
+*.opin VCTRL
+*.iopin VDDV
+*.iopin VDD
+*.iopin VSS
+XSPI SCLK SDI CS_N IG1A IG1B IG2A IG2B IG3A IG3B B0 B1 AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 ICP2 VDD VSS spi_regs
+XBIAS nb pb VDD VSS bias_gen
+XVCO VCTRL B0 B1 nb l1p l1n l2p l2n l3p l3n l4p l4n ckr vr VDDV VSS vco_ring4
+XRB REFIN refck VDDV VSS refbuf
+XPLL refck ckr nb pb ICP2 VCTRL fs fb VDD VSS pll_core
+XLNA RFIN pb rfp rfn VDD VSS lna_nc
+XMIX rfp rfn l1p l1n l2p l2n l3p l3n l4p l4n nb mip min mqp mqn VDD VSS mixer_iq
+XIFI mip min IG1A IG1B IG2A IG2B IG3A IG3B pb aip ain VDD VSS if_chain
+XIFQ mqp mqn IG1A IG1B IG2A IG2B IG3A IG3B pb aqp aqn VDD VSS if_chain
+XADI aip ain fs I_SIGN I_MAG VDD VSS adc2b
+XADQ aqp aqn fs Q_SIGN Q_MAG VDD VSS adc2b
+XCKO1 fs fsb VDD VSS inv_lo2
+XCKO2 fsb CLKOUT VDD VSS inv_lo2
+XAFC AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 AFCOUT VDD VSS afc_dac
+XDEC VDD VSS decap
+.ends
+
+
+* expanding   symbol:  spi_regs.sym # of pins=22
+** sym_path: /home/noritsuna/GPS/xschem/spi_regs.sym
+** sch_path: /home/noritsuna/GPS/xschem/spi_regs.sch
+.subckt spi_regs SCLK SDI CS_N IG1A IG1B IG2A IG2B IG3A IG3B B0 B1 AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 ICP2 VDD VSS
+*.ipin SCLK
+*.ipin SDI
+*.ipin CS_N
+*.opin IG1A
+*.opin IG1B
+*.opin IG2A
+*.opin IG2B
+*.opin IG3A
+*.opin IG3B
+*.opin B0
+*.opin B1
+*.opin AFC0
+*.opin AFC1
+*.opin AFC2
+*.opin AFC3
+*.opin AFC4
+*.opin AFC5
+*.opin AFC6
+*.opin AFC7
+*.opin ICP2
+*.iopin VDD
+*.iopin VSS
+XRPU CS_N VDD VSS ppolyf_u_1k r_width=1u r_length=100u
+XSCB SCLK sclkb VDD VSS inv_dig
+XSCG CS_N sclkb sck VDD VSS nor2
+XRPOR pr VDD VSS ppolyf_u_1k r_width=1u r_length=200u
+XCPOR pr VSS cap_mim_2f0_m4m5_noshield c_width=70e-6 c_length=70e-6
+XP1 pr por1 VDD VSS inv_dig
+XP2 por1 por2 VDD VSS inv_dig
+XP3 por2 rst VDD VSS inv_dig
+XR0 SDI sck rst r0 VDD VSS dffr_s
+XR1 r0 sck rst r1 VDD VSS dffr_s
+XR2 r1 sck rst r2 VDD VSS dffr_s
+XR3 r2 sck rst r3 VDD VSS dffr_s
+XR4 r3 sck rst r4 VDD VSS dffr_s
+XR5 r4 sck rst r5 VDD VSS dffr_s
+XR6 r5 sck rst r6 VDD VSS dffr_s
+XR7 r6 sck rst r7 VDD VSS dffr_s
+XR8 r7 sck rst r8 VDD VSS dffr_s
+XR9 r8 sck rst r9 VDD VSS dffr_s
+XR10 r9 sck rst r10 VDD VSS dffr_s
+XR11 r10 sck rst r11 VDD VSS dffr_s
+XR12 r11 sck rst r12 VDD VSS dffr_s
+XR13 r12 sck rst r13 VDD VSS dffr_s
+XR14 r13 sck rst r14 VDD VSS dffr_s
+XR15 r14 sck rst r15 VDD VSS dffr_s
+XR16 r15 sck rst r16 VDD VSS dffr_s
+XR17 r16 sck rst r17 VDD VSS dffr_s
+XR18 r17 sck rst r18 VDD VSS dffr_s
+XR19 r18 sck rst r19 VDD VSS dffr_s
+XR20 r19 sck rst r20 VDD VSS dffr_s
+XR21 r20 sck rst r21 VDD VSS dffr_s
+XR22 r21 sck rst r22 VDD VSS dffr_s
+XR23 r22 sck rst r23 VDD VSS dffr_s
+XL0 r0 CS_N IG1A VDD VSS latch_s
+XL1 r1 CS_N IG1B VDD VSS latch_s
+XL2 r2 CS_N IG2A VDD VSS latch_s
+XL3 r3 CS_N IG2B VDD VSS latch_s
+XL4 r4 CS_N IG3A VDD VSS latch_s
+XL5 r5 CS_N IG3B VDD VSS latch_s
+XL6 r6 CS_N B0 VDD VSS latch_s
+XL7 r7 CS_N B1 VDD VSS latch_s
+XL8 r8 CS_N AFC0 VDD VSS latch_s
+XL9 r9 CS_N AFC1 VDD VSS latch_s
+XL10 r10 CS_N AFC2 VDD VSS latch_s
+XL11 r11 CS_N AFC3 VDD VSS latch_s
+XL12 r12 CS_N AFC4 VDD VSS latch_s
+XL13 r13 CS_N AFC5 VDD VSS latch_s
+XL14 r14 CS_N AFC6 VDD VSS latch_s
+XL15 r15 CS_N afc7n VDD VSS latch_s
+XAFC7 afc7n AFC7 VDD VSS inv_dig
+XL16 r16 CS_N ICP2 VDD VSS latch_s
+.ends
+
+
+* expanding   symbol:  bias_gen.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/bias_gen.sym
+** sch_path: /home/noritsuna/GPS/xschem/bias_gen.sch
+.subckt bias_gen NB PB VDD VSS
+*.opin NB
+*.opin PB
+*.iopin VDD
+*.iopin VSS
+XMN1 nbc nbc VSS VSS nfet_03v3 L=2u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN2 pbc nbc nr VSS nfet_03v3 L=2u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRB VSS nr VSS ppolyf_u_1k r_width=1u r_length=4.6u
+XMP1 nbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP2 pbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMSP st VSS VDD VDD pfet_03v3 L=20u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMSN st nbc VSS VSS nfet_03v3 L=1u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMSU pbc st VSS VSS nfet_03v3 L=1u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP3 NB pbc VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN3 NB NB VSS VSS nfet_03v3 L=2u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN4 PB nbc VSS VSS nfet_03v3 L=2u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP4 PB PB VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XCNB NB VSS cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+XCPB VDD PB cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+.ends
+
+
+* expanding   symbol:  vco_ring4.sym # of pins=16
+** sym_path: /home/noritsuna/GPS/xschem/vco_ring4.sym
+** sch_path: /home/noritsuna/GPS/xschem/vco_ring4.sch
+.subckt vco_ring4 VCTRL B0 B1 NB L1P L1N L2P L2N L3P L3N L4P L4N CK VR VDD VSS
+*.ipin VCTRL
+*.ipin B0
+*.ipin B1
+*.ipin NB
+*.opin L1P
+*.opin L1N
+*.opin L2P
+*.opin L2N
+*.opin L3P
+*.opin L3N
+*.opin L4P
+*.opin L4N
+*.opin CK
+*.opin VR
+*.iopin VDD
+*.iopin VSS
+XMVI ng VCTRL ns VSS nfet_03v3 L=0.5u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRDEG VSS ns VSS ppolyf_u_1k r_width=2u r_length=4u
+XMPD ng ng VDD VDD pfet_03v3 L=0.56u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPO VR ng VDD VDD pfet_03v3 L=0.56u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16 par=16
+XMMIN ng NB VSS VSS nfet_03v3 L=2u W=12u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XB0 B0 b0n VDD VSS inv_dig
+XB1 B1 b1n VDD VSS inv_dig
+XMPB0 nb0 ng VDD VDD pfet_03v3 L=0.56u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=12 par=12
+XMSB0 VR b0n nb0 VDD pfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=12 par=12
+XMPB1 nb1 ng VDD VDD pfet_03v3 L=0.56u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=24 par=24
+XMSB1 VR b1n nb1 VDD pfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=24 par=24
+XCVR VR VSS cap_mim_2f0_m4m5_noshield c_width=30e-6 c_length=30e-6
+XCORE L1P L1N L2P L2N L3P L3N L4P L4N CK ckdn1 ckdp2 ckdn2 ckdp3 ckdn3 ckdp4 ckdn4 kh kl VR VSS vco_core
+XSUA ckdp2 ckdn2 sua VR VSS nand2
+XSUB ckdp2 ckdn2 sub VR VSS nor2
+XSUAD1 CK ckdn1 suad1 VR VSS nand2
+XSUBD1 CK ckdn1 subd1 VR VSS nor2
+XSUAD3 ckdp3 ckdn3 suad3 VR VSS nand2
+XSUBD3 ckdp3 ckdn3 subd3 VR VSS nor2
+XSUAD4 ckdp4 ckdn4 suad4 VR VSS nand2
+XSUBD4 ckdp4 ckdn4 subd4 VR VSS nor2
+XRSUA fsua sua VSS ppolyf_u_1k r_width=1u r_length=100u
+XCSUA fsua VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6
+XRSUB fsub sub VSS ppolyf_u_1k r_width=1u r_length=100u
+XCSUB fsub VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6
+XSUA1 sua fsua kh VR VSS nor2
+XSUA2 kh khn VR VSS inv_dig
+XSUB1 sub fsub kln VR VSS nand2
+XSUB2 kln kl VR VSS inv_dig
+.ends
+
+
+* expanding   symbol:  refbuf.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/refbuf.sym
+** sch_path: /home/noritsuna/GPS/xschem/refbuf.sch
+.subckt refbuf IN OUT VDD VSS
+*.ipin IN
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XCIN IN a cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+XRF b a VSS ppolyf_u_1k r_width=1u r_length=200u
+XMN1 b a VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP1 b a VDD VDD pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN2 OUT b VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP2 OUT b VDD VDD pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  pll_core.sym # of pins=10
+** sym_path: /home/noritsuna/GPS/xschem/pll_core.sym
+** sch_path: /home/noritsuna/GPS/xschem/pll_core.sch
+.subckt pll_core REFCK LO NB PB ICP2 VCTRL FS FB VDD VSS
+*.ipin REFCK
+*.ipin LO
+*.ipin NB
+*.ipin PB
+*.ipin ICP2
+*.opin VCTRL
+*.opin FS
+*.opin FB
+*.iopin VDD
+*.iopin VSS
+XDB LO ck VDD VSS divbuf
+XDIV ck FS FB VDD VSS div48
+XRREF refck_i REFCK VSS ppolyf_u_1k r_width=2u r_length=2u
+XMCLN refck_i tlo VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCLP refck_i thi VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMTX tx tx VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMTHI thi tx VDD VDD pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMTLO tlo thi VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XPFD refck_i FB up upb dn dnb VDD VSS pfd
+XCP upb dn dnb PB NB ICP2 vcp VDD VSS cp
+XLF vcp VCTRL VSS loop_filter
+.ends
+
+
+* expanding   symbol:  lna_nc.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/lna_nc.sym
+** sch_path: /home/noritsuna/GPS/xschem/lna_nc.sch
+.subckt lna_nc RFIN PB OUTP OUTN VDD VSS
+*.ipin RFIN
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XM1 op_i vb1 RFIN VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=3 par=3
+XRS VSS RFIN VSS ppolyf_u_1k r_width=10u r_length=3u
+XR1 op_i VDD VSS ppolyf_u_1k r_width=10u r_length=2u
+XCC2 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XRB2 vb2 g2 VSS ppolyf_u_1k r_width=1u r_length=10u
+XM2 on_i g2 VSS VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8 par=8
+XR2 on_i VDD VSS ppolyf_u_1k r_width=15u r_length=1u
+XMP1 vb1 PB VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=6 par=6
+XM1R vb1 vb1 s1r VSS nfet_03v3 L=0.28u W=12u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRSR VSS s1r VSS ppolyf_u_1k r_width=1u r_length=3u
+XMP2 vb2 PB VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=5 par=5
+XM2R vb2 vb2 VSS VSS nfet_03v3 L=0.28u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XCB1 vb1 VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCB2 vb2 VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCOP op_i OUTP cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCON on_i OUTN cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+.ends
+
+
+* expanding   symbol:  mixer_iq.sym # of pins=17
+** sym_path: /home/noritsuna/GPS/xschem/mixer_iq.sym
+** sch_path: /home/noritsuna/GPS/xschem/mixer_iq.sch
+.subckt mixer_iq RFP RFN L1P L1N L2P L2N L3P L3N L4P L4N NB IFIP IFIN IFQP IFQN VDD VSS
+*.ipin RFP
+*.ipin RFN
+*.ipin L1P
+*.ipin L1N
+*.ipin L2P
+*.ipin L2N
+*.ipin L3P
+*.ipin L3N
+*.ipin L4P
+*.ipin L4N
+*.ipin NB
+*.opin IFIP
+*.opin IFIN
+*.opin IFQP
+*.opin IFQN
+*.iopin VDD
+*.iopin VSS
+XRT1 vbrf RFP VSS ppolyf_u_1k r_width=1u r_length=5u
+XRT2 vbrf RFN VSS ppolyf_u_1k r_width=1u r_length=5u
+XRBA vbrf VDD VSS ppolyf_u_1k r_width=1u r_length=20u
+XRBB VSS vbrf VSS ppolyf_u_1k r_width=1u r_length=13u
+XCBRF vbrf VSS cap_mim_2f0_m4m5_noshield c_width=70e-6 c_length=70e-6
+XRLUA vlou VDD VSS ppolyf_u_1k r_width=1u r_length=47u
+XRLUB VSS vlou VSS ppolyf_u_1k r_width=1u r_length=56u
+XCLOU vlou VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XRLLA vlol VDD VSS ppolyf_u_1k r_width=1u r_length=65u
+XRLLB VSS vlol VSS ppolyf_u_1k r_width=1u r_length=37u
+XCLOL vlol VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCACL1P L1P gl1p cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL1P vlou gl1p VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACL1N L1N gl1n cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL1N vlou gl1n VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACL2P L2P gl2p cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL2P vlou gl2p VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACL2N L2N gl2n cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL2N vlou gl2n VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACL3P L3P gl3p cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL3P vlol gl3p VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACL3N L3N gl3n cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL3N vlol gl3n VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACL4P L4P gl4p cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL4P vlol gl4p VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACL4N L4N gl4n cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACL4N vlol gl4n VSS ppolyf_u_1k r_width=1u r_length=20u
+XMCTL1P VSS gl1p VSS VSS nfet_03v3 L=2u W=4.96u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCTL1N VSS gl1n VSS VSS nfet_03v3 L=2u W=6.08u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCTL2P VSS gl2p VSS VSS nfet_03v3 L=2u W=3.97u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCTL2N VSS gl2n VSS VSS nfet_03v3 L=2u W=4.25u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCTL3P VSS gl3p VSS VSS nfet_03v3 L=2u W=0.83u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCTL3N VSS gl3n VSS VSS nfet_03v3 L=2u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCTL4P VSS gl4p VSS VSS nfet_03v3 L=2u W=1.3u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCTL4N VSS gl4n VSS VSS nfet_03v3 L=2u W=1.65u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMTI tI NB VSS VSS nfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16 par=16
+XMG1I xpI RFP tI VSS nfet_03v3 L=0.28u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMG2I xnI RFN tI VSS nfet_03v3 L=0.28u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLApI mpaI gl3n xpI VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLBpI mpbI gl3p xpI VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU1pI IFIP gl1p mpaI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU2pI IFIN gl1n mpaI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU3pI IFIN gl1p mpbI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU4pI IFIP gl1n mpbI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLAnI mnaI gl3n xnI VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLBnI mnbI gl3p xnI VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU1nI IFIN gl1p mnaI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU2nI IFIP gl1n mnaI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU3nI IFIP gl1p mnbI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU4nI IFIN gl1n mnbI VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRL1I IFIP VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XRL2I IFIN VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XCL1I IFIP VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCL2I IFIN VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XMTQ tQ NB VSS VSS nfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16 par=16
+XMG1Q xpQ RFP tQ VSS nfet_03v3 L=0.28u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMG2Q xnQ RFN tQ VSS nfet_03v3 L=0.28u W=80u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLApQ mpaQ gl4n xpQ VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLBpQ mpbQ gl4p xpQ VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU1pQ IFQP gl2p mpaQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU2pQ IFQN gl2n mpaQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU3pQ IFQN gl2p mpbQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU4pQ IFQP gl2n mpbQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLAnQ mnaQ gl4n xnQ VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMLBnQ mnbQ gl4p xnQ VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU1nQ IFQN gl2p mnaQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU2nQ IFQP gl2n mnaQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU3nQ IFQP gl2p mnbQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMU4nQ IFQN gl2n mnbQ VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRL1Q IFQP VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XRL2Q IFQN VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XCL1Q IFQP VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCL2Q IFQN VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+.ends
+
+
+* expanding   symbol:  if_chain.sym # of pins=13
+** sym_path: /home/noritsuna/GPS/xschem/if_chain.sym
+** sch_path: /home/noritsuna/GPS/xschem/if_chain.sch
+.subckt if_chain INP INN G1A G1B G2A G2B G3A G3B PB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin G1A
+*.ipin G1B
+*.ipin G2A
+*.ipin G2B
+*.ipin G3A
+*.ipin G3B
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XBIF PB nbif pbif VDD VSS bias_if
+XV1 INP INN G1A G1B nbif a1p a1n VDD VSS vga
+XF1 a1p a1n pbif f1p f1n VDD VSS sk_lpf1
+XV2 f1p f1n G2A G2B nbif a2p a2n VDD VSS vga
+XF2 a2p a2n pbif f2p f2n VDD VSS sk_lpf2
+XV3 f2p f2n G3A G3B nbif a3p a3n VDD VSS vga
+XV4 a3p a3n nbif a4p a4n VDD VSS vga_fix
+XV5 a4p a4n nbif OUTP OUTN VDD VSS vga_fix
+.ends
+
+
+* expanding   symbol:  adc2b.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/adc2b.sym
+** sch_path: /home/noritsuna/GPS/xschem/adc2b.sch
+.subckt adc2b INP INN CLK SIGN MAG VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin CLK
+*.opin SIGN
+*.opin MAG
+*.iopin VDD
+*.iopin VSS
+XRL0 thp VDD VSS ppolyf_u_1k r_width=10u r_length=40.1u
+XRL1 thm thp VSS ppolyf_u_1k r_width=10u r_length=1.4u
+XRL2 thn thm VSS ppolyf_u_1k r_width=10u r_length=1.4u
+XRL3 VSS thn VSS ppolyf_u_1k r_width=10u r_length=22.3u
+XCT1 thp VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCT2 thm VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCT3 thn VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCS INP INN thm thm CLK SIGN sb VDD VSS sa_comp
+XCH INP INN thp thn CLK qh qhb VDD VSS sa_comp
+XCL INP INN thn thp CLK ql qlb VDD VSS sa_comp
+XM qhb ql MAG VDD VSS nand2
+.ends
+
+
+* expanding   symbol:  inv_lo2.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/inv_lo2.sym
+** sch_path: /home/noritsuna/GPS/xschem/inv_lo2.sch
+.subckt inv_lo2 A Y VDD VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  afc_dac.sym # of pins=11
+** sym_path: /home/noritsuna/GPS/xschem/afc_dac.sym
+** sch_path: /home/noritsuna/GPS/xschem/afc_dac.sch
+.subckt afc_dac D0 D1 D2 D3 D4 D5 D6 D7 OUT VDD VSS
+*.ipin D0
+*.ipin D1
+*.ipin D2
+*.ipin D3
+*.ipin D4
+*.ipin D5
+*.ipin D6
+*.ipin D7
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XRT VSS n0 VSS ppolyf_u_1k r_width=1u r_length=20u
+XA0 D0 db0 VDD VSS inv_dig
+XB0 db0 dr0 VDD VSS inv_dac
+XR2_0 n0 dr0 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_0 n1 n0 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA1 D1 db1 VDD VSS inv_dig
+XB1 db1 dr1 VDD VSS inv_dac
+XR2_1 n1 dr1 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_1 n2 n1 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA2 D2 db2 VDD VSS inv_dig
+XB2 db2 dr2 VDD VSS inv_dac
+XR2_2 n2 dr2 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_2 n3 n2 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA3 D3 db3 VDD VSS inv_dig
+XB3 db3 dr3 VDD VSS inv_dac
+XR2_3 n3 dr3 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_3 n4 n3 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA4 D4 db4 VDD VSS inv_dig
+XB4 db4 dr4 VDD VSS inv_dac
+XR2_4 n4 dr4 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_4 n5 n4 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA5 D5 db5 VDD VSS inv_dig
+XB5 db5 dr5 VDD VSS inv_dac
+XR2_5 n5 dr5 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_5 n6 n5 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA6 D6 db6 VDD VSS inv_dig
+XB6 db6 dr6 VDD VSS inv_dac
+XR2_6 n6 dr6 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_6 OUT n6 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA7 D7 db7 VDD VSS inv_dig
+XB7 db7 dr7 VDD VSS inv_dac
+XR2_7 OUT dr7 VSS ppolyf_u_1k r_width=1u r_length=20u
+.ends
+
+
+* expanding   symbol:  decap.sym # of pins=2
+** sym_path: /home/noritsuna/GPS/xschem/decap.sym
+** sch_path: /home/noritsuna/GPS/xschem/decap.sch
+.subckt decap VDD VSS
+*.iopin VDD
+*.iopin VSS
+XMD0 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD1 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD2 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD3 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD4 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD5 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD6 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD7 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD8 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD9 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD10 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD11 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMD12 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  inv_dig.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/inv_dig.sym
+** sch_path: /home/noritsuna/GPS/xschem/inv_dig.sch
+.subckt inv_dig A Y VDD VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  nor2.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/nor2.sym
+** sch_path: /home/noritsuna/GPS/xschem/nor2.sch
+.subckt nor2 A B Y VDD VSS
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XMN1 Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN2 Y B VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP1 n1 A VDD VDD pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP2 Y B n1 VDD pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  dffr_s.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/dffr_s.sym
+** sch_path: /home/noritsuna/GPS/xschem/dffr_s.sch
+.subckt dffr_s D CK RST Q VDD VSS
+*.ipin D
+*.ipin CK
+*.ipin RST
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+XCI CK ckb VDD VSS inv_dig
+XT1N D ckb m VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XT1P D CK m VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM m RST mb VDD VSS nor2
+XMF mb mf VDD VSS inv_dig
+XT2N mf CK m VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XT2P mf ckb m VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XT3N mb CK sl VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XT3P mb ckb sl VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XS sl RST Q VDD VSS nor2
+XSF Q sf VDD VSS inv_dig
+XT4N sf ckb sl VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XT4P sf CK sl VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  latch_s.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/latch_s.sym
+** sch_path: /home/noritsuna/GPS/xschem/latch_s.sch
+.subckt latch_s D EN Q VDD VSS
+*.ipin D
+*.ipin EN
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+XEI EN enb VDD VSS inv_dig
+XTIN D EN l VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XTIP D enb l VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+X1 l lb VDD VSS inv_dig
+X2 lb Q VDD VSS inv_dig
+XTFN Q enb l VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XTFP Q EN l VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  vco_core.sym # of pins=20
+** sym_path: /home/noritsuna/GPS/xschem/vco_core.sym
+** sch_path: /home/noritsuna/GPS/xschem/vco_core.sch
+.subckt vco_core L1P L1N L2P L2N L3P L3N L4P L4N CK ckdn1 ckdp2 ckdn2 ckdp3 ckdn3 ckdp4 ckdn4 kh kl VR VSS
+*.opin L1P
+*.opin L1N
+*.opin L2P
+*.opin L2N
+*.opin L3P
+*.opin L3N
+*.opin L4P
+*.opin L4N
+*.opin CK
+*.opin ckdn1
+*.opin ckdp2
+*.opin ckdn2
+*.opin ckdp3
+*.opin ckdn3
+*.opin ckdp4
+*.opin ckdn4
+*.ipin kh
+*.ipin kl
+*.iopin VR
+*.iopin VSS
+XMNa1 n1 p4 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNb1 p1 n4 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPa1 n1 p4 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPb1 p1 n4 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNc1 n1 p1 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNd1 p1 n1 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPc1 n1 p1 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPd1 p1 n1 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNa2 n2 p1 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNb2 p2 n1 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPa2 n2 p1 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPb2 p2 n1 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNc2 n2 p2 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNd2 p2 n2 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPc2 n2 p2 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPd2 p2 n2 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNa3 n3 p2 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNb3 p3 n2 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPa3 n3 p2 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPb3 p3 n2 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNc3 n3 p3 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNd3 p3 n3 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPc3 n3 p3 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPd3 p3 n3 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNa4 p4 p3 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNb4 n4 n3 VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPa4 p4 p3 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPb4 n4 n3 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNc4 p4 n4 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNd4 n4 p4 VSS VSS nfet_03v3 L=0.28u W=6u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPc4 p4 n4 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPd4 n4 p4 VR VR pfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNp1 ap1 p1 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPp1 ap1 p1 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNp1 L1P ap1 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPp1 L1P ap1 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNp1 CK L1P VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPp1 CK L1P VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNn1 an1 n1 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPn1 an1 n1 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNn1 L1N an1 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPn1 L1N an1 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNn1 ckdn1 L1N VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPn1 ckdn1 L1N VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNp2 ap2 p2 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPp2 ap2 p2 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNp2 L2P ap2 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPp2 L2P ap2 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNp2 ckdp2 L2P VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPp2 ckdp2 L2P VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNn2 an2 n2 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPn2 an2 n2 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNn2 L2N an2 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPn2 L2N an2 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNn2 ckdn2 L2N VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPn2 ckdn2 L2N VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNp3 ap3 p3 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPp3 ap3 p3 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNp3 L3P ap3 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPp3 L3P ap3 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNp3 ckdp3 L3P VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPp3 ckdp3 L3P VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNn3 an3 n3 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPn3 an3 n3 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNn3 L3N an3 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPn3 L3N an3 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNn3 ckdn3 L3N VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPn3 ckdn3 L3N VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNp4 ap4 p4 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPp4 ap4 p4 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNp4 L4P ap4 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPp4 L4P ap4 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNp4 ckdp4 L4P VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPp4 ckdp4 L4P VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBNn4 an4 n4 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBPn4 an4 n4 VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDNn4 L4N an4 VSS VSS nfet_03v3 L=0.28u W=12u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMDPn4 L4N an4 VR VR pfet_03v3 L=0.28u W=24u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCNn4 ckdn4 L4N VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMCPn4 ckdn4 L4N VR VR pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMK1 n1 kh VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMKD1 p1 VSS VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMK2 n2 kl VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMKD2 p2 VSS VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMK3 n3 VSS VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMKD3 p3 VSS VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMK4 p4 VSS VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMKD4 n4 VSS VSS VSS nfet_03v3 L=0.28u W=16u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  nand2.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/nand2.sym
+** sch_path: /home/noritsuna/GPS/xschem/nand2.sch
+.subckt nand2 A B Y VDD VSS
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN2 n1 B VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  divbuf.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/divbuf.sym
+** sch_path: /home/noritsuna/GPS/xschem/divbuf.sch
+.subckt divbuf IN OUT VDD VSS
+*.ipin IN
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XCIN IN a cap_mim_2f0_m4m5_noshield c_width=12e-6 c_length=12e-6
+XRF b a VSS ppolyf_u_1k r_width=1u r_length=20u
+XMN1 b a VSS VSS nfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP1 b a VDD VDD pfet_03v3 L=0.28u W=8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN2 OUT b VSS VSS nfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP2 OUT b VDD VDD pfet_03v3 L=0.28u W=8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  div48.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/div48.sym
+** sch_path: /home/noritsuna/GPS/xschem/div48.sch
+.subckt div48 CK FS FB VDD VSS
+*.ipin CK
+*.opin FS
+*.opin FB
+*.iopin VDD
+*.iopin VSS
+XD1 CK c2 c2b VDD VSS div2
+XD2 c2 c4 c4b VDD VSS div2
+XD3 c4 c8 c8b VDD VSS div2
+XD5 c8 c24 VDD VSS div3
+XD6 c24 FB c48b VDD VSS div2
+XFB1 FB fbi VDD VSS inv_lo1
+XFB2 fbi FS VDD VSS inv_lo2
+.ends
+
+
+* expanding   symbol:  pfd.sym # of pins=8
+** sym_path: /home/noritsuna/GPS/xschem/pfd.sym
+** sch_path: /home/noritsuna/GPS/xschem/pfd.sch
+.subckt pfd REF FB UP UPB DN DNB VDD VSS
+*.ipin REF
+*.ipin FB
+*.opin UP
+*.opin UPB
+*.opin DN
+*.opin DNB
+*.iopin VDD
+*.iopin VSS
+XU REF rb UP VDD VSS dff_r
+XD FB rb DN VDD VSS dff_r
+XR UP DN r0 VDD VSS nand2
+XD1 r0 r1 VDD VSS inv_dig
+XD2 r1 r2 VDD VSS inv_dig
+XD3 r2 r3 VDD VSS inv_dig
+XD4 r3 rb VDD VSS inv_dig
+XO1 UP UPB VDD VSS inv_dig
+XO2 DN DNB VDD VSS inv_dig
+.ends
+
+
+* expanding   symbol:  cp.sym # of pins=9
+** sym_path: /home/noritsuna/GPS/xschem/cp.sym
+** sch_path: /home/noritsuna/GPS/xschem/cp.sch
+.subckt cp UPB DN DNB PB NB HI OUT VDD VSS
+*.ipin UPB
+*.ipin DN
+*.ipin DNB
+*.ipin PB
+*.ipin NB
+*.ipin HI
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XUD UPB upd VDD VSS inv_dig
+XMPC pc PB VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XMPS OUT UPB pc VDD pfet_03v3 L=0.28u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPD vd upd pc VDD pfet_03v3 L=0.28u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNS OUT DN nc VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMND vd DNB nc VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNC nc NB VSS VSS nfet_03v3 L=2u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XHI HI hib VDD VSS inv_dig
+XMPC2 pc2 PB VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XMPE2 pe2 hib pc2 VDD pfet_03v3 L=0.28u W=24u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPS2 OUT UPB pe2 VDD pfet_03v3 L=0.28u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPD2 vd upd pe2 VDD pfet_03v3 L=0.28u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNS2 OUT DN ne2 VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMND2 vd DNB ne2 VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNE2 ne2 HI nc2 VSS nfet_03v3 L=0.28u W=4u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMNC2 nc2 NB VSS VSS nfet_03v3 L=2u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XMBT bt NB VSS VSS nfet_03v3 L=2u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMB1 b1 OUT bt VSS nfet_03v3 L=1u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMB2 vd vd bt VSS nfet_03v3 L=1u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBL1 b1 b1 VDD VDD pfet_03v3 L=1u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMBL2 vd b1 VDD VDD pfet_03v3 L=1u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XCVD vd VSS cap_mim_2f0_m4m5_noshield c_width=32e-6 c_length=32e-6
+.ends
+
+
+* expanding   symbol:  loop_filter.sym # of pins=3
+** sym_path: /home/noritsuna/GPS/xschem/loop_filter.sym
+** sch_path: /home/noritsuna/GPS/xschem/loop_filter.sch
+.subckt loop_filter VC VT VSS
+*.iopin VC
+*.opin VT
+*.iopin VSS
+XRZ z VC VSS ppolyf_u_1k r_width=1u r_length=10u
+XC1 z VSS cap_mim_2f0_m4m5_noshield c_width=77e-6 c_length=77e-6 m=5
+XC2 VC VSS cap_mim_2f0_m4m5_noshield c_width=49.5e-6 c_length=49.5e-6
+XRVT VT VC VSS ppolyf_u_1k r_width=2u r_length=4u
+XC3 VT VSS cap_mim_2f0_m4m5_noshield c_width=19.45e-6 c_length=19.45e-6
+.ends
+
+
+* expanding   symbol:  bias_if.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/bias_if.sym
+** sch_path: /home/noritsuna/GPS/xschem/bias_if.sch
+.subckt bias_if PB NBIF PBIF VDD VSS
+*.ipin PB
+*.opin NBIF
+*.opin PBIF
+*.iopin VDD
+*.iopin VSS
+XRDA vdiv VDD VSS ppolyf_u_1k r_width=1u r_length=70u
+XRDB VSS vdiv VSS ppolyf_u_1k r_width=1u r_length=28.3u
+XMOT ot PB VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMI1 o1 vdiv ot VDD pfet_03v3 L=1u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMI2 og x ot VDD pfet_03v3 L=1u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XML1 o1 o1 VSS VSS nfet_03v3 L=2u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XML2 og o1 VSS VSS nfet_03v3 L=2u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XCC og VSS cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+XMV dp og x VSS nfet_03v3 L=1u W=20u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRREF0 r1 x VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF1 r2 r1 VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF2 r3 r2 VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF3 r4 r3 VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF4 r5 r4 VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF5 r6 r5 VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF6 r7 r6 VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF7 r8 r7 VSS ppolyf_u_1k r_width=1u r_length=2u
+XRREF8 VSS r8 VSS ppolyf_u_1k r_width=1u r_length=2u
+XMPD dp dp VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPM NBIF dp VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMND NBIF NBIF VSS VSS nfet_03v3 L=2u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XCNB NBIF VSS cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+XMNP PBIF NBIF VSS VSS nfet_03v3 L=2u W=16u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMPP PBIF PBIF VDD VDD pfet_03v3 L=2u W=32u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XCPB VDD PBIF cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+.ends
+
+
+* expanding   symbol:  vga.sym # of pins=9
+** sym_path: /home/noritsuna/GPS/xschem/vga.sym
+** sch_path: /home/noritsuna/GPS/xschem/vga.sch
+.subckt vga INP INN GA GB NB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin GA
+*.ipin GB
+*.ipin NB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XCC1 INP gp cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCC2 INN gn cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XRB1 vcm gp VSS ppolyf_u_1k r_width=1u r_length=100u
+XRB2 vcm gn VSS ppolyf_u_1k r_width=1u r_length=100u
+XRCA vcm VDD VSS ppolyf_u_1k r_width=1u r_length=34u
+XRCB VSS vcm VSS ppolyf_u_1k r_width=1u r_length=25u
+XCCM vcm VSS cap_mim_2f0_m4m5_noshield c_width=30e-6 c_length=30e-6
+XM1 OUTN gp s1 VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XM2 OUTP gn s2 VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XMT1 s1 NB VSS VSS nfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8 par=8
+XMT2 s2 NB VSS VSS nfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8 par=8
+XRL1 OUTN VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRL2 OUTP VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRD0 s2 s1 VSS ppolyf_u_1k r_width=1u r_length=2u
+XMSA s1 GA da VSS nfet_03v3 L=0.28u W=20u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRDA s2 da VSS ppolyf_u_1k r_width=1u r_length=3u
+XMSB s1 GB db VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XRDB s2 db VSS ppolyf_u_1k r_width=2u r_length=1.8u
+.ends
+
+
+* expanding   symbol:  sk_lpf1.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/sk_lpf1.sym
+** sch_path: /home/noritsuna/GPS/xschem/sk_lpf1.sch
+.subckt sk_lpf1 INP INN PB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XR1P xP INP VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2P yP xP VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1P xP OUTP cap_mim_2f0_m4m5_noshield c_width=42.6e-6 c_length=42.6e-6
+XC2P yP VSS cap_mim_2f0_m4m5_noshield c_width=45.8e-6 c_length=45.8e-6
+XMFP VSS yP OUTP OUTP pfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMIP OUTP PB VDD VDD pfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16 par=16
+XR1N xN INN VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2N yN xN VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1N xN OUTN cap_mim_2f0_m4m5_noshield c_width=42.6e-6 c_length=42.6e-6
+XC2N yN VSS cap_mim_2f0_m4m5_noshield c_width=45.8e-6 c_length=45.8e-6
+XMFN VSS yN OUTN OUTN pfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMIN OUTN PB VDD VDD pfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16 par=16
+.ends
+
+
+* expanding   symbol:  sk_lpf2.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/sk_lpf2.sym
+** sch_path: /home/noritsuna/GPS/xschem/sk_lpf2.sch
+.subckt sk_lpf2 INP INN PB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XR1P xP INP VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2P yP xP VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1P xP OUTP cap_mim_2f0_m4m5_noshield c_width=95.8e-6 c_length=95.8e-6
+XC2P yP VSS cap_mim_2f0_m4m5_noshield c_width=23.0e-6 c_length=23.0e-6
+XMFP VSS yP OUTP OUTP pfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMIP OUTP PB VDD VDD pfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16 par=16
+XR1N xN INN VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2N yN xN VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1N xN OUTN cap_mim_2f0_m4m5_noshield c_width=95.8e-6 c_length=95.8e-6
+XC2N yN VSS cap_mim_2f0_m4m5_noshield c_width=23.0e-6 c_length=23.0e-6
+XMFN VSS yN OUTN OUTN pfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMIN OUTN PB VDD VDD pfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=16 par=16
+.ends
+
+
+* expanding   symbol:  vga_fix.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/vga_fix.sym
+** sch_path: /home/noritsuna/GPS/xschem/vga_fix.sch
+.subckt vga_fix INP INN NB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin NB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XCC1 INP gp cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCC2 INN gn cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XRB1 vcm gp VSS ppolyf_u_1k r_width=1u r_length=100u
+XRB2 vcm gn VSS ppolyf_u_1k r_width=1u r_length=100u
+XRCA vcm VDD VSS ppolyf_u_1k r_width=1u r_length=34u
+XRCB VSS vcm VSS ppolyf_u_1k r_width=1u r_length=25u
+XCCM vcm VSS cap_mim_2f0_m4m5_noshield c_width=30e-6 c_length=30e-6
+XM1 OUTN gp s1 VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XM2 OUTP gn s2 VSS nfet_03v3 L=0.28u W=40u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=2 par=2
+XMT1 s1 NB VSS VSS nfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8 par=8
+XMT2 s2 NB VSS VSS nfet_03v3 L=2u W=40u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=8 par=8
+XRL1 OUTN VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRL2 OUTP VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRDF s2 s1 VSS ppolyf_u_1k r_width=10.6u r_length=1u
+.ends
+
+
+* expanding   symbol:  sa_comp.sym # of pins=9
+** sym_path: /home/noritsuna/GPS/xschem/sa_comp.sym
+** sch_path: /home/noritsuna/GPS/xschem/sa_comp.sch
+.subckt sa_comp INP INN REFP REFN CLK Q QB VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin REFP
+*.ipin REFN
+*.ipin CLK
+*.opin Q
+*.opin QB
+*.iopin VDD
+*.iopin VSS
+XMT t CLK VSS VSS nfet_03v3 L=0.28u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM1 x1 INP t VSS nfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM2 x2 INN t VSS nfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM3 x2 REFP t VSS nfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM4 x1 REFN t VSS nfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM5 on op x1 VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM6 op on x2 VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM7 on op VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM8 op on VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM9 on CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM10 op CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM11 x1 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XM12 x2 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XI1 op opb VDD VSS inv_dig
+XI2 on onb VDD VSS inv_dig
+XS1 opb QB Q VDD VSS nor2
+XS2 onb Q QB VDD VSS nor2
+.ends
+
+
+* expanding   symbol:  inv_dac.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/inv_dac.sym
+** sch_path: /home/noritsuna/GPS/xschem/inv_dac.sch
+.subckt inv_dac A Y VDD VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=8u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=24u nf=4 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  div2.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/div2.sym
+** sch_path: /home/noritsuna/GPS/xschem/div2.sch
+.subckt div2 CK Q QB VDD VSS
+*.ipin CK
+*.opin Q
+*.opin QB
+*.iopin VDD
+*.iopin VSS
+XF QB CK Q QB VDD VSS tspc_dff
+.ends
+
+
+* expanding   symbol:  div3.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/div3.sym
+** sch_path: /home/noritsuna/GPS/xschem/div3.sch
+.subckt div3 CK Q VDD VSS
+*.ipin CK
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+XF1 d1 CK Q q1b VDD VSS tspc_dff
+XF2 Q CK q2 q2b VDD VSS tspc_dff
+XN Q q2 d1 VDD VSS nor2
+.ends
+
+
+* expanding   symbol:  inv_lo1.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/inv_lo1.sym
+** sch_path: /home/noritsuna/GPS/xschem/inv_lo1.sch
+.subckt inv_lo1 A Y VDD VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=4u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  dff_r.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/dff_r.sym
+** sch_path: /home/noritsuna/GPS/xschem/dff_r.sch
+.subckt dff_r CK RB Q VDD VSS
+*.ipin CK
+*.ipin RB
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+X1 n4 n2 n1 VDD VSS nand2
+X2 n1 CK RB n2 VDD VSS nand3
+X3 n2 CK n4 n3 VDD VSS nand3
+X4 n3 RB n4 VDD VSS nand2
+X5 n2 qb Q VDD VSS nand2
+X6 Q n3 RB qb VDD VSS nand3
+.ends
+
+
+* expanding   symbol:  tspc_dff.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/tspc_dff.sym
+** sch_path: /home/noritsuna/GPS/xschem/tspc_dff.sch
+.subckt tspc_dff D CK Q QB VDD VSS
+*.ipin D
+*.ipin CK
+*.opin Q
+*.opin QB
+*.iopin VDD
+*.iopin VSS
+XMP1 a1 D VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP2 x CK a1 VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN1 x D VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP3 y CK VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN2 y x b2 VSS nfet_03v3 L=0.28u W=1.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN3 b2 CK VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP4 QB y VDD VDD pfet_03v3 L=0.28u W=3u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN4 QB CK c3 VSS nfet_03v3 L=0.28u W=1.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN5 c3 y VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP5 Q QB VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN6 Q QB VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+
+* expanding   symbol:  nand3.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/nand3.sym
+** sch_path: /home/noritsuna/GPS/xschem/nand3.sch
+.subckt nand3 A B C Y VDD VSS
+*.ipin A
+*.ipin B
+*.ipin C
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=3u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN2 n1 B n2 VSS nfet_03v3 L=0.28u W=3u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMN3 n2 C VSS VSS nfet_03v3 L=0.28u W=3u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+XMP3 Y C VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'  ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1 par=1
+.ends
+
+.end

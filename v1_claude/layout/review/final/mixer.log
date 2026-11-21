@@ -1,0 +1,45 @@
+== tt (typical, 27 C, VDD 3.3 V, LO high 2 V)
+  xmti     margin avg  0.135 V, min  0.127 V   Id avg  2007.5 uA  Vds avg 0.397 V  Vdsat avg 0.262 V
+  xmg1i    margin avg  0.656 V, min  0.375 V   Id avg  1003.6 uA  Vds avg 0.860 V  Vdsat avg 0.203 V
+  xmg2i    margin avg  0.656 V, min  0.370 V   Id avg  1003.5 uA  Vds avg 0.860 V  Vdsat avg 0.203 V
+  xmtq     margin avg  0.135 V, min  0.127 V   Id avg  2007.5 uA  Vds avg 0.396 V  Vdsat avg 0.262 V
+  xmg1q    margin avg  0.655 V, min  0.372 V   Id avg  1003.6 uA  Vds avg 0.858 V  Vdsat avg 0.203 V
+  xmg2q    margin avg  0.655 V, min  0.371 V   Id avg  1003.6 uA  Vds avg 0.858 V  Vdsat avg 0.203 V
+  xmlapi   margin avg  0.371 V, min -0.229 V   Id avg   496.9 uA  Vds avg 0.543 V  Vdsat avg 0.172 V
+  xmu1pi   margin avg  0.015 V, min -0.188 V   Id avg   277.7 uA  Vds avg 0.193 V  Vdsat avg 0.178 V
+  node xm.ti    avg 0.397 V, min 0.389, max 0.400
+  node xm.xpi   avg 1.256 V, min 0.965, max 1.316
+  node xm.mpai  avg 1.799 V, min 1.318, max 2.120
+  node ifip     avg 1.993 V, min 1.990, max 1.999
+  node xm.gl1p  avg 2.114 V, min 1.136, max 3.092
+  node xm.gl3p  avg 1.515 V, min 0.512, max 2.502
+== ss (ss, 85 C, VDD 3.135 V, LO high 2.85 V)
+  xmti     margin avg -0.063 V, min -0.067 V   Id avg  2050.9 uA  Vds avg 0.265 V  Vdsat avg 0.328 V
+  xmg1i    margin avg  0.762 V, min  0.489 V   Id avg  1025.2 uA  Vds avg 1.011 V  Vdsat avg 0.249 V
+  xmg2i    margin avg  0.762 V, min  0.485 V   Id avg  1025.2 uA  Vds avg 1.011 V  Vdsat avg 0.249 V
+  xmtq     margin avg -0.063 V, min -0.067 V   Id avg  2050.9 uA  Vds avg 0.265 V  Vdsat avg 0.328 V
+  xmg1q    margin avg  0.762 V, min  0.489 V   Id avg  1025.2 uA  Vds avg 1.011 V  Vdsat avg 0.249 V
+  xmg2q    margin avg  0.762 V, min  0.486 V   Id avg  1025.2 uA  Vds avg 1.011 V  Vdsat avg 0.249 V
+  xmlapi   margin avg -0.062 V, min -0.573 V   Id avg   507.9 uA  Vds avg 0.248 V  Vdsat avg 0.310 V
+  xmu1pi   margin avg -0.280 V, min -0.690 V   Id avg   293.8 uA  Vds avg 0.103 V  Vdsat avg 0.383 V
+  node xm.ti    avg 0.265 V, min 0.260, max 0.267
+  node xm.xpi   avg 1.276 V, min 0.993, max 1.319
+  node xm.mpai  avg 1.524 V, min 1.279, max 1.722
+  node ifip     avg 1.627 V, min 1.622, max 1.631
+  node xm.gl1p  avg 2.226 V, min 0.844, max 3.611
+  node xm.gl3p  avg 1.661 V, min 0.241, max 3.060
+== ff (ff, -20 C, VDD 3.465 V, LO high 1.6 V)
+  xmti     margin avg  0.310 V, min  0.301 V   Id avg  1996.0 uA  Vds avg 0.528 V  Vdsat avg 0.218 V
+  xmg1i    margin avg  0.468 V, min  0.200 V   Id avg   997.9 uA  Vds avg 0.636 V  Vdsat avg 0.168 V
+  xmg2i    margin avg  0.468 V, min  0.194 V   Id avg   997.8 uA  Vds avg 0.636 V  Vdsat avg 0.168 V
+  xmtq     margin avg  0.310 V, min  0.301 V   Id avg  1996.0 uA  Vds avg 0.528 V  Vdsat avg 0.218 V
+  xmg1q    margin avg  0.466 V, min  0.197 V   Id avg   997.9 uA  Vds avg 0.634 V  Vdsat avg 0.168 V
+  xmg2q    margin avg  0.466 V, min  0.196 V   Id avg   997.8 uA  Vds avg 0.634 V  Vdsat avg 0.168 V
+  xmlapi   margin avg  0.526 V, min -0.117 V   Id avg   494.2 uA  Vds avg 0.663 V  Vdsat avg 0.137 V
+  xmu1pi   margin avg  0.395 V, min  0.102 V   Id avg   273.1 uA  Vds avg 0.519 V  Vdsat avg 0.124 V
+  node xm.ti    avg 0.528 V, min 0.519, max 0.532
+  node xm.xpi   avg 1.164 V, min 0.885, max 1.213
+  node xm.mpai  avg 1.827 V, min 1.275, max 2.200
+  node ifip     avg 2.346 V, min 2.343, max 2.353
+  node xm.gl1p  avg 2.086 V, min 1.303, max 2.872
+  node xm.gl3p  avg 1.458 V, min 0.654, max 2.248

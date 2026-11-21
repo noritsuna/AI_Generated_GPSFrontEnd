@@ -1,0 +1,9 @@
+route afc_dac: OK []  grid 169x201 nets 34
+afc_dac: routed=True 14.1s
+  DRC 0
+  LVS OK ['Flattening unmatched subcell inv_dac in circuit afc_dac (1)(8 instances)', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.']
+route vga: OK []  grid 322x185 nets 16
+route if_chain: OK []  grid 709x855 nets 29
+if_chain: routed=True 309.2s
+  DRC 0
+  LVS OK ['Netlists match uniquely.', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.']

@@ -1,0 +1,40 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_if.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 1
+RES sig gd=1973.57
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 1
+RES sub sd=12.4105 sc=4.77232
+Note: Simulation executed from .control section 
+
+
+Note: Starting dynamic gmin stepping
+
+Note: Starting true gmin stepping
+
+
+
+
+Note: Starting source stepping
+Note: Transient op started
+Note: Transient op finished successfully
+Note: Starting dynamic gmin stepping
+
+Note: Starting true gmin stepping
+
+
+
+
+
+Note: Starting source stepping
+Note: Transient op started
+Note: Transient op finished successfully

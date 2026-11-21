@@ -1,0 +1,76 @@
+== pex tt serL6n_shC2p7
+RES op idd=-0.0205419 vpad=1.00485
+RES f0 s11=-24.9986 gd=13.8007 bal=-0.39526 ph=-197.114
+RES stab rsmin=0.2163 frsmin=2E+10 gmax=13.9312 fgmax=4.7385E+08
+RES nf=2.18919
+  F = 1.654 (NF 2.19 dB); extracted wire resistors together 7.74 % of the source noise
+     4.39 %  r.xlna.xpex.r142
+     0.85 %  r.xlna.xpex.r112
+     0.80 %  r.xlna.xpex.r111
+     0.75 %  m.xlna.xpex.x98.m0
+     0.75 %  m.xlna.xpex.x97.m0
+     0.75 %  m.xlna.xpex.x94.m0
+     0.75 %  m.xlna.xpex.x93.m0
+     0.75 %  m.xlna.xpex.x88.m0
+     0.75 %  m.xlna.xpex.x87.m0
+     0.75 %  m.xlna.xpex.x85.m0
+     0.75 %  m.xlna.xpex.x83.m0
+     0.75 %  m.xlna.xpex.x80.m0
+== pex ss serL6n_shC2p7
+RES op idd=-0.0195444 vpad=1.18794
+RES f0 s11=-18.4467 gd=13.3125 bal=-0.78204 ph=-197.941
+RES stab rsmin=0.184343 frsmin=2E+10 gmax=13.7752 fgmax=4.22307E+08
+RES nf=3.11903
+== pex ff serL6n_shC2p7
+RES op idd=-0.0221935 vpad=0.894574
+RES f0 s11=-20.219 gd=13.9745 bal=-0.107682 ph=-195.667
+RES stab rsmin=0.255139 frsmin=2E+10 gmax=13.9397 fgmax=5.31683E+08
+RES nf=1.40375
+== pex tt85 serL6n_shC2p7
+RES op idd=-0.0280545 vpad=1.38299
+RES f0 s11=-24.412 gd=13.1217 bal=-0.416194 ph=-195.873
+RES stab rsmin=0.21267 frsmin=2E+10 gmax=13.1963 fgmax=4.7385E+08
+RES nf=3.10506
+== pex ttm20 serL6n_shC2p7
+RES op idd=-0.0150851 vpad=0.746456
+RES f0 s11=-25.3502 gd=14.4104 bal=-0.695238 ph=-198.311
+RES stab rsmin=0.213045 frsmin=2E+10 gmax=14.7158 fgmax=4.7385E+08
+RES nf=1.36355
+== pex tt shL3n3_w1n
+RES op idd=-0.0205657 vpad=1.00487
+RES f0 s11=-23.6862 gd=13.7955 bal=-0.395914 ph=-197.114
+RES stab rsmin=0.2163 frsmin=2E+10 gmax=13.9312 fgmax=4.7385E+08
+RES nf=2.37432
+  F = 1.726 (NF 2.37 dB); extracted wire resistors together 11.35 % of the source noise
+     4.40 %  r.xlna.xpex.r142
+     1.76 %  r.xlna.xpex.r112
+     1.66 %  r.xlna.xpex.r111
+     0.76 %  m.xlna.xpex.x98.m0
+     0.76 %  m.xlna.xpex.x97.m0
+     0.76 %  m.xlna.xpex.x94.m0
+     0.76 %  m.xlna.xpex.x93.m0
+     0.76 %  m.xlna.xpex.x88.m0
+     0.76 %  m.xlna.xpex.x87.m0
+     0.76 %  m.xlna.xpex.x85.m0
+     0.76 %  m.xlna.xpex.x83.m0
+     0.76 %  m.xlna.xpex.x80.m0
+== pex ss shL3n3_w1n
+RES op idd=-0.0195207 vpad=1.18797
+RES f0 s11=-19.0511 gd=13.3207 bal=-0.78204 ph=-197.941
+RES stab rsmin=0.184343 frsmin=2E+10 gmax=13.7752 fgmax=4.22307E+08
+RES nf=3.28027
+== pex ff shL3n3_w1n
+RES op idd=-0.0222037 vpad=0.894602
+RES f0 s11=-19.7593 gd=13.9699 bal=-0.107682 ph=-195.667
+RES stab rsmin=0.255139 frsmin=2E+10 gmax=13.9397 fgmax=5.31683E+08
+RES nf=1.59588
+== pex tt85 shL3n3_w1n
+RES op idd=-0.0280606 vpad=1.383
+RES f0 s11=-23.582 gd=13.1306 bal=-0.416475 ph=-195.873
+RES stab rsmin=0.21267 frsmin=2E+10 gmax=13.1963 fgmax=4.7385E+08
+RES nf=3.28126
+== pex ttm20 shL3n3_w1n
+RES op idd=-0.0150972 vpad=0.746471
+RES f0 s11=-23.1341 gd=14.4028 bal=-0.695755 ph=-198.312
+RES stab rsmin=0.213045 frsmin=2E+10 gmax=14.7158 fgmax=4.7385E+08
+RES nf=1.50807

@@ -1,0 +1,66 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+Flattening unmatched subcell vco_cellk_MK in circuit vco_cellk (0)(1 instance)
+Flattening unmatched subcell vco_cellk_MP3 in circuit vco_cellk (0)(1 instance)
+Flattening unmatched subcell vco_cellk_MP4 in circuit vco_cellk (0)(1 instance)
+Flattening unmatched subcell vco_cellk_MN3 in circuit vco_cellk (0)(1 instance)
+Flattening unmatched subcell vco_cellk_MN4 in circuit vco_cellk (0)(1 instance)
+Flattening unmatched subcell vco_cellk_MN1_MN2 in circuit vco_cellk (0)(1 instance)
+Flattening unmatched subcell vco_cellk_MP1_MP2 in circuit vco_cellk (0)(1 instance)
+Flattening unmatched subcell vco_cellk_MKD in circuit vco_cellk (0)(1 instance)
+
+Class vco_cellk (0):  Merged 10 parallel devices.
+Subcircuit summary:
+Circuit 1: vco_cellk                       |Circuit 2: vco_cellk                       
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (10->6)                          |nfet_03v3 (6)                              
+pfet_03v3 (10->4)                          |pfet_03v3 (4)                              
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_cellk                       |Circuit 2: vco_cellk                       
+-------------------------------------------|-------------------------------------------
+IN                                         |IN                                         
+IP                                         |IP                                         
+VR                                         |VR                                         
+VSS                                        |VSS                                        
+FK                                         |FK                                         
+ON                                         |ON                                         
+OP                                         |OP                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_cellk and vco_cellk are equivalent.
+
+Final result: Circuits match uniquely.
+.

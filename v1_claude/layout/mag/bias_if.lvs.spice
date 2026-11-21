@@ -1,0 +1,100 @@
+* NGSPICE file created from bias_if.ext - technology: gf180mcuD
+
+.subckt bias_if_CPB VDD PBIF
+X0 VDD PBIF cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u
+.ends
+
+.subckt bias_if_CNB NBIF VSS
+X0 NBIF VSS cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u
+.ends
+
+.subckt bias_if_CC og VSS
+X0 og VSS cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u
+.ends
+
+.subckt bias_if_MI1_MI2 ot o1 og vdiv x VDD
+X0 ot vdiv o1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=1u
+X1 o1 vdiv ot VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=1u
+X2 og x ot VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=1u
+X3 ot x og VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=1u
+.ends
+
+.subckt bias_if_MOT_MPP ot PBIF PB VDD
+X0 VDD PBIF PBIF VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X1 ot PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X2 PBIF PBIF VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 ot PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X4 PBIF PBIF VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X5 VDD PB ot VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X6 VDD PB ot VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X7 VDD PBIF PBIF VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt bias_if_ML1 o1 VSS
+X0 o1 o1 VSS VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=2u
+.ends
+
+.subckt bias_if_ML2 og o1 VSS
+X0 og o1 VSS VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=2u
+.ends
+
+.subckt bias_if_MV x dp og VSS
+X0 dp og x VSS nfet_03v3 ad=2.65p pd=10.53u as=4.45p ps=20.89u w=10u l=1u
+X1 x og dp VSS nfet_03v3 ad=4.45p pd=20.89u as=2.65p ps=10.53u w=10u l=1u
+.ends
+
+.subckt bias_if_R1u_0 vdiv VDD VSS r1 x r2 r3 r4 r5 r6 r7 r8
+X0 a_740_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X1 x r1 VSS ppolyf_u_1k r_width=1u r_length=2u
+X2 r7 r8 VSS ppolyf_u_1k r_width=1u r_length=2u
+X3 a_2840_1973# a_3260_n36# VSS ppolyf_u_1k r_width=1u r_length=9.435u
+X4 r5 r6 VSS ppolyf_u_1k r_width=1u r_length=2u
+X5 VDD a_2000_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X6 r3 r4 VSS ppolyf_u_1k r_width=1u r_length=2u
+X7 a_1580_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X8 r1 r2 VSS ppolyf_u_1k r_width=1u r_length=2u
+X9 a_n100_2086# a_320_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X10 r8 VSS VSS ppolyf_u_1k r_width=1u r_length=2u
+X11 vdiv a_3260_n36# VSS ppolyf_u_1k r_width=1u r_length=9.435u
+X12 r6 r7 VSS ppolyf_u_1k r_width=1u r_length=2u
+X13 a_2840_1973# VSS VSS ppolyf_u_1k r_width=1u r_length=9.435u
+X14 r4 r5 VSS ppolyf_u_1k r_width=1u r_length=2u
+X15 r2 r3 VSS ppolyf_u_1k r_width=1u r_length=2u
+X16 a_740_2086# a_320_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X17 a_1580_2086# a_2000_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X18 a_n100_2086# vdiv VSS ppolyf_u_1k r_width=1u r_length=10u
+.ends
+
+.subckt bias_if_MND_MNP NBIF PBIF VSS
+X0 NBIF NBIF VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X1 VSS NBIF PBIF VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X2 PBIF NBIF VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 VSS NBIF NBIF VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt bias_if_MPD_MPM dp NBIF VDD
+X0 VDD dp NBIF VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X1 dp dp VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X2 VDD dp NBIF VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 dp dp VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X4 VDD dp dp VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X5 NBIF dp VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X6 NBIF dp VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X7 VDD dp dp VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt bias_if VSS VDD PB NBIF PBIF
+XXCPB VDD PBIF bias_if_CPB
+XXCNB NBIF VSS bias_if_CNB
+XXCC XMV/og VSS bias_if_CC
+XXMI1_MI2 XMOT_MPP/ot XML2/o1 XMV/og XR1u_0/vdiv XMV/x VDD bias_if_MI1_MI2
+XXMOT_MPP XMOT_MPP/ot PBIF PB VDD bias_if_MOT_MPP
+XXML1 XML2/o1 VSS bias_if_ML1
+XXML2 XMV/og XML2/o1 VSS bias_if_ML2
+XXMV XMV/x XMV/dp XMV/og VSS bias_if_MV
+XXR1u_0 XR1u_0/vdiv VDD VSS XR1u_0/r1 XMV/x XR1u_0/r2 XR1u_0/r3 XR1u_0/r4 XR1u_0/r5
++ XR1u_0/r6 XR1u_0/r7 XR1u_0/r8 bias_if_R1u_0
+XXMND_MNP NBIF PBIF VSS bias_if_MND_MNP
+XXMPD_MPM XMV/dp NBIF VDD bias_if_MPD_MPM
+.ends
+

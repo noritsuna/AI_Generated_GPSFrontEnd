@@ -1,0 +1,51 @@
+timestamp 1623399878
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use gnss_decap_MD2 XMD2 1 0 44660 0 1 39760
+use gnss_decap_MD1 XMD1 1 0 23520 0 1 39760
+use gnss_decap_MD0 XMD0 1 0 2380 0 1 39760
+use gnss_decap_MD5 XMD5 1 0 44660 0 1 30100
+use gnss_decap_MD4 XMD4 1 0 23520 0 1 30100
+use gnss_decap_MD3 XMD3 1 0 2380 0 1 30100
+use gnss_decap_MD8 XMD8 1 0 44660 0 1 20440
+use gnss_decap_MD7 XMD7 1 0 23520 0 1 20440
+use gnss_decap_MD6 XMD6 1 0 2380 0 1 20440
+use gnss_decap_MD11 XMD11 1 0 44660 0 1 10780
+use gnss_decap_MD10 XMD10 1 0 23520 0 1 10780
+use gnss_decap_MD9 XMD9 1 0 2380 0 1 10780
+use gnss_decap_MD12 XMD12 1 0 2380 0 1 1120
+port "VSS" 3 0 0 600 47199 m3
+port "VDD" 5 64076 0 64676 47199 m3
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 64076 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMD2/VSS" "XMD1/VSS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMD1/VSS" "XMD0/VSS"
+merge "XMD0/VSS" "XMD5/VSS"
+merge "XMD5/VSS" "XMD4/VSS"
+merge "XMD4/VSS" "XMD3/VSS"
+merge "XMD3/VSS" "XMD8/VSS"
+merge "XMD8/VSS" "XMD7/VSS"
+merge "XMD7/VSS" "XMD6/VSS"
+merge "XMD6/VSS" "XMD11/VSS"
+merge "XMD11/VSS" "XMD10/VSS"
+merge "XMD10/VSS" "XMD9/VSS"
+merge "XMD9/VSS" "XMD12/VSS"
+merge "XMD12/VSS" "VSUBS"
+merge "VSUBS" "VSS"
+merge "XMD2/VDD" "XMD1/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMD1/VDD" "XMD0/VDD"
+merge "XMD0/VDD" "XMD5/VDD"
+merge "XMD5/VDD" "XMD4/VDD"
+merge "XMD4/VDD" "XMD3/VDD"
+merge "XMD3/VDD" "XMD8/VDD"
+merge "XMD8/VDD" "XMD7/VDD"
+merge "XMD7/VDD" "XMD6/VDD"
+merge "XMD6/VDD" "XMD11/VDD"
+merge "XMD11/VDD" "XMD10/VDD"
+merge "XMD10/VDD" "XMD9/VDD"
+merge "XMD9/VDD" "XMD12/VDD"
+merge "XMD12/VDD" "VDD"

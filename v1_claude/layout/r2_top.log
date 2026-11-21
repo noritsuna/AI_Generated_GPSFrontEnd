@@ -1,0 +1,99 @@
+[     0s] attempt 0  chan [5.0, 5.0, 5.0, 5.0, 5.0]  gap [4.0, 4.0, 4.0, 4.0, 4.0]  side 7.0 (um)
+route refbuf: OK []  grid 114x115 nets 6
+route decap: OK []  grid 480x355 nets 2
+[     3s] floor gnss_afe_analog: rows 0-192 197-790 795-1002 1007-1252 1257-1514
+[    54s]   it  0    50s  fails 0 []  overlaps 934  hot 29@(490,1270) 29@(530,1270) 29@(570,1270) 29@(590,1270) 29@(630,1270) 29@(710,1270)  slow mip:18s mqn:17s mqp:2s
+[   110s]   it  1    56s  fails 0 []  overlaps 150  hot 26@(570,1270) 23@(650,1230) 23@(430,1270) 13@(670,690) 10@(690,870) 9@(670,970)  slow mip:18s mqn:14s mqp:12s
+[   166s]   it  2    56s  fails 0 []  overlaps 10  hot 10@(670,690)  slow mip:19s mqn:15s mqp:11s
+[   222s]   it  3    56s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:18s mqn:14s mqp:11s
+[   280s]   it  4    58s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:19s mqn:15s mqp:11s
+[   339s]   it  5    58s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:18s mqn:15s mqp:12s
+[   398s]   it  6    59s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:18s mqn:15s mqp:12s
+[   457s]   it  7    60s  fails 0 []  overlaps 0  hot   slow mip:18s mqn:14s mqp:12s
+route gnss_afe_analog: OK []  grid 1465x2194 nets 56
+mesh gnss_afe_analog: 272 rails, 274 stripe segments (4 VDDV stripes), 1343 via4 arrays
+[   471s] route=True size=1024.8x1535.2um
+[   476s] DRC 0 []
+[   480s] LVS OK ['Flattening unmatched subcell gnss_afe_analog_R1u_0 in circuit gnss_afe_analog (0)(1 instance)', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.'] /home/noritsuna/GPS/layout/mag/gnss_afe_analog.lvs.rpt
+route refbuf: OK []  grid 114x115 nets 6
+route decap: OK []  grid 480x355 nets 2
+floor gnss_afe_analog: rows 0-192 197-790 795-1002 1007-1252 1257-1514
+  it  0    54s  fails 0 []  overlaps 934  hot 29@(490,1270) 29@(530,1270) 29@(570,1270) 29@(590,1270) 29@(630,1270) 29@(710,1270)  slow mip:19s mqn:19s mqp:2s
+  it  1    58s  fails 0 []  overlaps 150  hot 26@(570,1270) 23@(650,1230) 23@(430,1270) 13@(670,690) 10@(690,870) 9@(670,970)  slow mip:19s mqn:15s mqp:13s
+  it  2    57s  fails 0 []  overlaps 10  hot 10@(670,690)  slow mip:19s mqn:15s mqp:11s
+  it  3    58s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:19s mqn:15s mqp:12s
+  it  4    59s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:19s mqn:16s mqp:11s
+  it  5    58s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:18s mqn:15s mqp:12s
+  it  6    60s  fails 0 []  overlaps 6  hot 6@(670,690)  slow mip:19s mqn:15s mqp:12s
+  it  7    61s  fails 0 []  overlaps 0  hot   slow mip:19s mqn:16s mqp:12s
+route gnss_afe_analog: OK []  grid 1465x2194 nets 56
+nb       C   152.5 fF  R 1016.4 ohm  cc aqp:1.17 mqp:0.71 aqn:0.29
+pb       C   137.3 fF  R  887.2 ohm  cc nb:0.10 ICP2:0.08 refck:0.05
+fs       C   124.3 fF  R  793.3 ohm  cc Q_SIGN:0.58 AFCOUT:0.09 aqn:0.08
+min      C   105.0 fF  R  747.0 ohm  cc mip:14.76 mqn:1.11 mqp:0.29
+mip      C   104.9 fF  R  751.5 ohm  cc min:14.76 ICP2:1.48 B1:0.34
+ICP2     C   100.8 fF  R  736.6 ohm  cc B0:8.06 AFC7:1.64 mip:1.48
+AFCOUT   C    97.9 fF  R  659.6 ohm  cc fs:0.09 aqn:0.08 Q_MAG:0.04
+vctrl    C    86.8 fF  R  573.4 ohm  cc VCTRL:0.11 mqn:0.04 REFIN:0.04
+refck    C    81.1 fF  R  497.9 ohm  cc nb:0.09 pb:0.05 ckr:0.04
+B1       C    79.5 fF  R  526.6 ohm  cc mip:0.34 aqp:0.09 ckr:0.04
+mqp      C    75.9 fF  R  596.9 ohm  cc mqn:19.92 nb:0.71 l2n:0.39
+IG3B     C    75.9 fF  R  505.3 ohm  cc mip:0.13 B0:0.04 IG2B:0.04
+mqn      C    74.3 fF  R  588.8 ohm  cc mqp:19.92 min:1.11 nb:0.09
+IG2B     C    73.6 fF  R  466.6 ohm  cc mip:0.10 ain:0.09 IG3B:0.04
+IG3A     C    72.7 fF  R  477.6 ohm  cc mip:0.10 B0:0.04 min:0.04
+B0       C    72.1 fF  R  517.6 ohm  cc ICP2:8.06 IG1B:0.10 min:0.09
+IG2A     C    68.9 fF  R  436.6 ohm  cc mip:0.13 ain:0.09 IG3A:0.04
+ain      C    66.0 fF  R  422.0 ohm  cc aip:0.09 IG2A:0.09 IG2B:0.09
+IG1B     C    64.4 fF  R  411.4 ohm  cc mip:0.15 B0:0.10 ain:0.09
+IG1A     C    61.6 fF  R  388.2 ohm  cc mip:0.07 aip:0.05 ain:0.05
+aip      C    56.8 fF  R  358.0 ohm  cc ain:0.09 IG1A:0.05 fs:0.04
+aqn      C    56.5 fF  R  487.4 ohm  cc aqp:22.41 nb:0.29 fs:0.08
+ckr      C    53.3 fF  R  383.8 ohm  cc B1:0.04 mqp:0.04 min:0.04
+aqp      C    46.4 fF  R  423.4 ohm  cc aqn:22.41 nb:1.17 I_SIGN:0.69
+RFIN     C    41.1 fF  R    0.3 ohm  cc pb:0.03
+REFIN    C    38.8 fF  R  260.3 ohm  cc AFCOUT:0.04 vctrl:0.04
+I_MAG    C    36.1 fF  R  268.3 ohm  cc I_SIGN:3.80 AFC3:0.59 AFC2:0.04
+I_SIGN   C    28.3 fF  R  221.2 ohm  cc AFC0:4.94 I_MAG:3.80 AFC3:0.96
+VCTRL    C    25.6 fF  R  174.2 ohm  cc l3n:0.67 vctrl:0.11
+AFC1     C    22.7 fF  R  160.9 ohm  cc I_SIGN:0.28 AFC7:0.25 AFC2:0.21
+Q_MAG    C    22.4 fF  R  158.8 ohm  cc nb:0.04 AFCOUT:0.04 pb:0.04
+AFC0     C    19.9 fF  R  174.7 ohm  cc I_SIGN:4.94 AFC2:1.87 AFC1:0.15
+AFC2     C    19.1 fF  R  146.8 ohm  cc AFC0:1.87 AFC1:0.21 AFC3:0.07
+AFC3     C    18.0 fF  R  132.7 ohm  cc I_SIGN:0.96 I_MAG:0.59 AFC6:0.14
+AFC4     C    16.9 fF  R  119.8 ohm  cc AFC3:0.11 I_SIGN:0.08 AFC0:0.05
+AFC5     C    16.9 fF  R  104.8 ohm  cc AFC2:0.04 AFC1:0.04 Q_SIGN:0.04
+Q_SIGN   C    15.2 fF  R  111.7 ohm  cc fs:0.58 AFC5:0.04 nb:0.04
+AFC6     C    12.9 fF  R   90.7 ohm  cc AFC3:0.14 I_SIGN:0.09 nb:0.04
+l3n      C    10.8 fF  R   85.4 ohm  cc l2n:1.62 l3p:1.17 VCTRL:0.67
+l3p      C    10.6 fF  R   75.2 ohm  cc l3n:1.17 l2n:1.00 mqp:0.05
+AFC7     C     9.8 fF  R   76.6 ohm  cc ICP2:1.64 AFC1:0.25 pb:0.04
+l2p      C     7.4 fF  R   54.7 ohm  cc l2n:1.13 l4n:0.26 l3p:0.00
+l4n      C     6.2 fF  R   44.6 ohm  cc l2p:0.26 l4p:0.21
+l2n      C     6.2 fF  R   65.5 ohm  cc l3n:1.62 l2p:1.13 l3p:1.00
+l4p      C     5.3 fF  R   34.3 ohm  cc l4n:0.21
+l1n      C     4.0 fF  R   24.1 ohm  cc 
+l1p      C     2.3 fF  R   13.9 ohm  cc 
+CLKOUT   C     1.7 fF  R   10.9 ohm  cc 
+rfp      C     1.6 fF  R    0.0 ohm  cc nb:0.17
+rfn      C     1.5 fF  R    0.0 ohm  cc nb:0.17
+fsb      C     0.4 fF  R    2.8 ohm  cc Q_MAG:0.04
+mp_M2" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"sa_comp_MT" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"sa_comp_M1" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"sa_comp_M4" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_R10u_0" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_CT3" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_CT2" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_CT1" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Total of 216 warnings.
+
+macro ports: VSS VDDA RFIN VDDV VCTRL AFCOUT REFIN IG1A IG1B IG2A IG2B

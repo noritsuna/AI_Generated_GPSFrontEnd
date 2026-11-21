@@ -1,0 +1,99 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< pwell >>
+rect -304 -188 700 1639
+<< nwell >>
+rect -592 -476 988 -292
+rect -592 1743 988 1927
+rect -592 -292 -408 1743
+rect 804 -292 988 1743
+<< ndiff >>
+rect 0 60 396 1260
+<< psubdiff >>
+rect -280 -164 676 -60
+rect -280 1511 676 1615
+rect -280 -60 -176 1511
+rect 572 -60 676 1511
+<< nsubdiff >>
+rect -552 -436 948 -332
+rect -552 1783 948 1887
+rect -552 -332 -448 1783
+rect 844 -332 948 1783
+<< nmos >>
+rect 89 60 145 1260
+rect 251 60 307 1260
+<< polysilicon >>
+rect 89 1260 145 1349
+rect 251 1260 307 1349
+rect 69 1349 327 1451
+rect 89 0 145 60
+rect 251 0 307 60
+rect -116 0 -60 1320
+rect 456 0 512 1320
+<< ndiffc >>
+rect 13 73 59 1247
+rect 175 73 221 1247
+rect 337 73 383 1247
+<< psubdiffcont >>
+rect -267 -140 -189 1591
+rect 585 -140 663 1591
+rect -129 1524 525 1602
+rect -129 -151 525 -73
+<< nsubdiffcont >>
+rect -539 -412 -461 1863
+rect 857 -412 935 1863
+rect -401 1796 797 1874
+rect -401 -423 797 -345
+<< polycontact >>
+rect 82 1362 314 1438
+<< metal1 >>
+rect 13 62 59 1258
+rect 175 62 221 1258
+rect 337 62 383 1258
+rect -2 448 74 672
+rect 322 448 398 672
+rect 160 728 236 952
+rect 71 1362 325 1438
+rect -267 -151 663 -73
+rect -267 1524 663 1602
+rect -267 -151 -189 1602
+rect 585 -151 663 1602
+rect -267 -151 663 -73
+rect -267 1524 663 1602
+rect -539 -423 935 -345
+rect -539 1796 935 1874
+rect -539 -423 -461 1874
+rect 857 -423 935 1874
+rect -539 -423 935 -345
+rect -539 1796 935 1874
+<< metal2 >>
+rect -2 448 398 672
+rect 160 728 236 952
+rect 82 1362 314 1438
+rect -267 -151 663 -73
+rect -267 1524 663 1602
+rect -539 -423 935 -345
+rect -539 1796 935 1874
+<< via1 >>
+rect 10 460 62 660
+rect 334 460 386 660
+rect 172 740 224 940
+rect 94 1374 302 1426
+rect -255 -139 651 -85
+rect -255 1536 651 1590
+rect -527 -411 923 -357
+rect -527 1808 923 1862
+<< labels >>
+flabel metal2 s -2 448 398 672 0 FreeSans 80 0 0 0 s1r
+port 1 nsew signal bidirectional
+flabel metal2 s 160 728 236 952 0 FreeSans 80 0 0 0 vb1
+port 2 nsew signal bidirectional
+flabel metal2 s 82 1362 314 1438 0 FreeSans 80 0 0 0 vb1
+port 2 nsew signal bidirectional
+flabel metal2 s -267 -151 663 -73 0 FreeSans 80 0 0 0 VSS
+port 3 nsew signal bidirectional
+flabel metal2 s -539 1796 935 1874 0 FreeSans 80 0 0 0 VDD
+port 4 nsew signal bidirectional
+<< end >>

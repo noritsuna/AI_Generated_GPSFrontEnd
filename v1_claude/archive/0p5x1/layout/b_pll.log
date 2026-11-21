@@ -1,0 +1,5 @@
+route div48: OK []  grid 450x339 nets 14
+route pll_core: OK []  grid 793x1291 nets 16
+pll_core: routed=True 465.3s
+  DRC 0
+  LVS OK ['Netlists match uniquely.', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.']

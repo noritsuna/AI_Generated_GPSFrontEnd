@@ -1,0 +1,155 @@
+timestamp 1623399878
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use gnss_sa_comp_S1_MN1 XS1_MN1 1 0 14140 0 1 18060
+use gnss_sa_comp_S1_MN2 XS1_MN2 1 0 12460 0 1 18060
+use gnss_sa_comp_S1_MP1 XS1_MP1 1 0 10780 0 1 18060
+use gnss_sa_comp_S1_MP2 XS1_MP2 1 0 9100 0 1 18060
+use gnss_sa_comp_S2_MP2 XS2_MP2 1 0 6440 0 1 18060
+use gnss_sa_comp_S2_MP1 XS2_MP1 1 0 4760 0 1 18060
+use gnss_sa_comp_S2_MN2 XS2_MN2 1 0 3080 0 1 18060
+use gnss_sa_comp_S2_MN1 XS2_MN1 1 0 1400 0 1 18060
+use gnss_sa_comp_I1_MN XI1_MN 1 0 7420 0 1 13860
+use gnss_sa_comp_I1_MP XI1_MP 1 0 5740 0 1 13860
+use gnss_sa_comp_I2_MP XI2_MP 1 0 3080 0 1 13860
+use gnss_sa_comp_I2_MN XI2_MN 1 0 1400 0 1 13860
+use gnss_sa_comp_M10 XM10 1 0 7420 0 1 9660
+use gnss_sa_comp_M8 XM8 1 0 5740 0 1 9660
+use gnss_sa_comp_M7 XM7 1 0 3080 0 1 9660
+use gnss_sa_comp_M9 XM9 1 0 1400 0 1 9660
+use gnss_sa_comp_M12 XM12 1 0 7420 0 1 5460
+use gnss_sa_comp_M6 XM6 1 0 5740 0 1 5460
+use gnss_sa_comp_M5 XM5 1 0 3080 0 1 5460
+use gnss_sa_comp_M11 XM11 1 0 1400 0 1 5460
+use gnss_sa_comp_M3 XM3 1 0 8260 0 1 1120
+use gnss_sa_comp_M2 XM2 1 0 6580 0 1 1120
+use gnss_sa_comp_MT XMT 1 0 4760 0 1 1120
+use gnss_sa_comp_M1 XM1 1 0 3080 0 1 1120
+use gnss_sa_comp_M4 XM4 1 0 1400 0 1 1120
+port "REFP" 12 -1220 9980 -1020 10180 m4
+port "INN" 10 -1220 6200 -1020 6400 m4
+port "INP" 8 -1220 2420 -1020 2620 m4
+port "REFN" 14 -1220 13760 -1020 13960 m4
+port "CLK" 16 -1220 17540 -1020 17740 m4
+port "VSS" 3 0 0 600 20179 m3
+port "QB" 20 16560 13760 16760 13960 m4
+port "Q" 18 16560 6200 16760 6400 m4
+port "VDD" 5 15078 0 15678 20179 m3
+node "m2_1370_1370#" 0 0 1370 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "REFP" 0 0 -1220 9980 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "INN" 0 0 -1220 6200 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "INP" 0 0 -1220 2420 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "REFN" 0 0 -1220 13760 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_5710_5570#" 0 0 5710 5570 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_1650#" 0 0 1510 1650 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLK" 0 0 -1220 17540 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_3182_10322#" 0 0 3182 10322 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_9910#" 0 0 1510 9910 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_9070_18310#" 0 0 9070 18310 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_4870_18590#" 0 0 4870 18590 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_5850_14110#" 0 0 5850 14110 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "QB" 0 0 16560 13760 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Q" 0 0 16560 6200 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_14110#" 0 0 1510 14110 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 15078 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XM2/INN" "INN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS1_MN1/VSS" "XS1_MN2/VSS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS1_MN2/VSS" "XS1_MP1/VSUBS"
+merge "XS1_MP1/VSUBS" "XS1_MP2/VSUBS"
+merge "XS1_MP2/VSUBS" "XS2_MP2/VSUBS"
+merge "XS2_MP2/VSUBS" "XS2_MP1/VSUBS"
+merge "XS2_MP1/VSUBS" "XS2_MN2/VSS"
+merge "XS2_MN2/VSS" "XS2_MN1/VSS"
+merge "XS2_MN1/VSS" "XI1_MN/VSS"
+merge "XI1_MN/VSS" "XI1_MP/VSUBS"
+merge "XI1_MP/VSUBS" "XI2_MP/VSUBS"
+merge "XI2_MP/VSUBS" "XI2_MN/VSS"
+merge "XI2_MN/VSS" "XM10/VSUBS"
+merge "XM10/VSUBS" "XM8/VSUBS"
+merge "XM8/VSUBS" "XM7/VSUBS"
+merge "XM7/VSUBS" "XM9/VSUBS"
+merge "XM9/VSUBS" "XM12/VSUBS"
+merge "XM12/VSUBS" "XM6/VSS"
+merge "XM6/VSS" "XM5/VSS"
+merge "XM5/VSS" "XM11/VSUBS"
+merge "XM11/VSUBS" "XM3/VSS"
+merge "XM3/VSS" "XM2/VSS"
+merge "XM2/VSS" "XMT/VSS"
+merge "XMT/VSS" "XM1/VSS"
+merge "XM1/VSS" "XM4/VSS"
+merge "XM4/VSS" "VSUBS"
+merge "VSUBS" "VSS"
+merge "XM4/REFN" "REFN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XI1_MN/op" "XI1_MP/op" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XI1_MP/op" "XM10/op"
+merge "XM10/op" "XM8/op"
+merge "XM8/op" "XM7/op"
+merge "XM7/op" "XM6/op"
+merge "XM6/op" "XM5/op"
+merge "XM5/op" "m2_3182_10322#"
+merge "XM12/x2" "XM6/x2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XM6/x2" "XM3/x2"
+merge "XM3/x2" "XM2/x2"
+merge "XM2/x2" "m2_5710_5570#"
+merge "XS2_MP1/onb" "XS2_MN1/onb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS2_MN1/onb" "XI2_MP/onb"
+merge "XI2_MP/onb" "XI2_MN/onb"
+merge "XI2_MN/onb" "m2_1510_14110#"
+merge "XS1_MN2/QB" "XS1_MP2/QB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS1_MP2/QB" "XS2_MP2/QB"
+merge "XS2_MP2/QB" "XS2_MN2/QB"
+merge "XS2_MN2/QB" "XS2_MN1/QB"
+merge "XS2_MN1/QB" "QB"
+merge "XM10/CLK" "XM9/CLK" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XM9/CLK" "XM12/CLK"
+merge "XM12/CLK" "XM11/CLK"
+merge "XM11/CLK" "XMT/CLK"
+merge "XMT/CLK" "CLK"
+merge "XS1_MP1/VDD" "XS1_MP2/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS1_MP2/VDD" "XS2_MP2/VDD"
+merge "XS2_MP2/VDD" "XS2_MP1/VDD"
+merge "XS2_MP1/VDD" "XI1_MP/VDD"
+merge "XI1_MP/VDD" "XI2_MP/VDD"
+merge "XI2_MP/VDD" "XM10/VDD"
+merge "XM10/VDD" "XM8/VDD"
+merge "XM8/VDD" "XM7/VDD"
+merge "XM7/VDD" "XM9/VDD"
+merge "XM9/VDD" "XM12/VDD"
+merge "XM12/VDD" "XM11/VDD"
+merge "XM11/VDD" "VDD"
+merge "XM11/x1" "XM5/x1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XM5/x1" "XM1/x1"
+merge "XM1/x1" "XM4/x1"
+merge "XM4/x1" "m2_1510_1650#"
+merge "XS1_MN1/opb" "XS1_MP1/opb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS1_MP1/opb" "XI1_MN/opb"
+merge "XI1_MN/opb" "XI1_MP/opb"
+merge "XI1_MP/opb" "m2_5850_14110#"
+merge "XS1_MP1/S1_n1" "XS1_MP2/S1_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS1_MP2/S1_n1" "m2_9070_18310#"
+merge "XS1_MN1/Q" "XS1_MN2/Q" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS1_MN2/Q" "XS1_MP2/Q"
+merge "XS1_MP2/Q" "XS2_MP2/Q"
+merge "XS2_MP2/Q" "XS2_MN2/Q"
+merge "XS2_MN2/Q" "Q"
+merge "XI2_MP/on" "XI2_MN/on" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XI2_MN/on" "XM8/on"
+merge "XM8/on" "XM7/on"
+merge "XM7/on" "XM9/on"
+merge "XM9/on" "XM6/on"
+merge "XM6/on" "XM5/on"
+merge "XM5/on" "m2_1510_9910#"
+merge "XMT/t" "XM3/t" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XM3/t" "XM2/t"
+merge "XM2/t" "XM1/t"
+merge "XM1/t" "XM4/t"
+merge "XM4/t" "m2_1370_1370#"
+merge "XS2_MP2/S2_n1" "XS2_MP1/S2_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XS2_MP1/S2_n1" "m2_4870_18590#"
+merge "XM1/INP" "INP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XM3/REFP" "REFP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

@@ -1,0 +1,4 @@
+{"cell": "vga_fix",
+ "nets": {"s1": {"MT1_MT2:sd": 0.525, "M1:sd": -0.525},
+          "OUTN": {"R2u_0:poly": 0.525, "M1:sd": -0.525}},
+ "opts": {"s1": {"pick": "$4"}, "OUTN": {"pick": "$10"}}}

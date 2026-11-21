@@ -1,0 +1,6 @@
+.subckt nand2 A B Y VDD VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN2 n1 B VSS VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends

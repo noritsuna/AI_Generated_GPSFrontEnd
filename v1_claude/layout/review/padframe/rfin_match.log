@@ -1,0 +1,317 @@
+== no pad (macro pin, as in tb_lna)
+RES op vpad=1.00483 idd=-0.0205189
+ shunt at the source: none
+   LS    0 nH  Zin   46.7  -27.1j  S11 -11.32 dB  gain 13.41 dB  NF 2.40 dB
+   LS    1 nH  Zin   46.7  -17.2j  S11 -14.97 dB  gain 13.60 dB  NF 2.28 dB
+   LS  1.5 nH  Zin   46.7  -12.3j  S11 -17.71 dB  gain 13.67 dB  NF 2.24 dB
+   LS    2 nH  Zin   46.7   -7.3j  S11 -21.66 dB  gain 13.71 dB  NF 2.22 dB
+   LS  2.5 nH  Zin   46.7   -2.4j  S11 -27.57 dB  gain 13.73 dB  NF 2.21 dB
+   LS    3 nH  Zin   46.7   +2.6j  S11 -27.28 dB  gain 13.73 dB  NF 2.22 dB
+   LS    4 nH  Zin   46.7  +12.5j  S11 -17.56 dB  gain 13.66 dB  NF 2.28 dB
+   LS    5 nH  Zin   46.7  +22.4j  S11 -12.84 dB  gain 13.51 dB  NF 2.41 dB
+   LS    6 nH  Zin   46.7  +32.3j  S11  -9.94 dB  gain 13.28 dB  NF 2.58 dB
+   LS    7 nH  Zin   46.7  +42.2j  S11  -7.94 dB  gain 12.98 dB  NF 2.81 dB
+   LS    8 nH  Zin   46.7  +52.1j  S11  -6.46 dB  gain 12.63 dB  NF 3.07 dB
+ shunt at the source: L 2.7 nH
+   LS    0 nH  Zin   15.3  +26.8j  S11  -4.13 dB  gain 11.62 dB  NF 5.28 dB
+   LS    1 nH  Zin   14.7  +23.7j  S11  -4.19 dB  gain 11.65 dB  NF 5.29 dB
+   LS  1.5 nH  Zin   14.0  +22.4j  S11  -4.06 dB  gain 11.58 dB  NF 5.35 dB
+   LS    2 nH  Zin   13.0  +21.3j  S11  -3.86 dB  gain 11.44 dB  NF 5.45 dB
+   LS  2.5 nH  Zin   12.0  +20.5j  S11  -3.60 dB  gain 11.25 dB  NF 5.57 dB
+   LS    3 nH  Zin   11.0  +19.8j  S11  -3.31 dB  gain 11.01 dB  NF 5.72 dB
+   LS    4 nH  Zin    9.0  +19.2j  S11  -2.73 dB  gain 10.43 dB  NF 6.10 dB
+   LS    5 nH  Zin    7.3  +19.1j  S11  -2.21 dB  gain  9.75 dB  NF 6.54 dB
+   LS    6 nH  Zin    5.9  +19.3j  S11  -1.78 dB  gain  9.02 dB  NF 7.04 dB
+   LS    7 nH  Zin    4.8  +19.6j  S11  -1.45 dB  gain  8.28 dB  NF 7.57 dB
+   LS    8 nH  Zin    4.0  +20.0j  S11  -1.19 dB  gain  7.54 dB  NF 8.12 dB
+ shunt at the source: L 3.3 nH
+   LS    0 nH  Zin   22.5  +30.0j  S11  -5.71 dB  gain 12.38 dB  NF 4.39 dB
+   LS    1 nH  Zin   20.6  +25.9j  S11  -5.66 dB  gain 12.37 dB  NF 4.43 dB
+   LS  1.5 nH  Zin   19.2  +24.3j  S11  -5.43 dB  gain 12.28 dB  NF 4.50 dB
+   LS    2 nH  Zin   17.6  +23.1j  S11  -5.10 dB  gain 12.13 dB  NF 4.60 dB
+   LS  2.5 nH  Zin   16.1  +22.2j  S11  -4.70 dB  gain 11.95 dB  NF 4.72 dB
+   LS    3 nH  Zin   14.6  +21.7j  S11  -4.29 dB  gain 11.72 dB  NF 4.87 dB
+   LS    4 nH  Zin   11.8  +21.3j  S11  -3.50 dB  gain 11.17 dB  NF 5.23 dB
+   LS    5 nH  Zin    9.6  +21.4j  S11  -2.82 dB  gain 10.53 dB  NF 5.66 dB
+   LS    6 nH  Zin    7.8  +21.8j  S11  -2.28 dB  gain  9.85 dB  NF 6.14 dB
+   LS    7 nH  Zin    6.4  +22.4j  S11  -1.86 dB  gain  9.15 dB  NF 6.64 dB
+   LS    8 nH  Zin    5.3  +23.0j  S11  -1.53 dB  gain  8.46 dB  NF 7.16 dB
+ shunt at the source: L 3.9 nH
+   LS    0 nH  Zin   30.1  +31.2j  S11  -7.32 dB  gain 12.85 dB  NF 3.80 dB
+   LS    1 nH  Zin   26.4  +26.5j  S11  -7.14 dB  gain 12.81 dB  NF 3.86 dB
+   LS  1.5 nH  Zin   24.2  +25.0j  S11  -6.77 dB  gain 12.72 dB  NF 3.93 dB
+   LS    2 nH  Zin   22.0  +23.9j  S11  -6.29 dB  gain 12.58 dB  NF 4.02 dB
+   LS  2.5 nH  Zin   19.9  +23.2j  S11  -5.76 dB  gain 12.40 dB  NF 4.14 dB
+   LS    3 nH  Zin   17.9  +22.8j  S11  -5.21 dB  gain 12.19 dB  NF 4.29 dB
+   LS    4 nH  Zin   14.5  +22.7j  S11  -4.21 dB  gain 11.67 dB  NF 4.63 dB
+   LS    5 nH  Zin   11.8  +23.2j  S11  -3.39 dB  gain 11.08 dB  NF 5.04 dB
+   LS    6 nH  Zin    9.7  +23.9j  S11  -2.74 dB  gain 10.44 dB  NF 5.49 dB
+   LS    7 nH  Zin    8.0  +24.8j  S11  -2.23 dB  gain  9.78 dB  NF 5.97 dB
+   LS    8 nH  Zin    6.7  +25.6j  S11  -1.84 dB  gain  9.13 dB  NF 6.46 dB
+ shunt at the source: L 4.7 nH
+   LS    0 nH  Zin   39.5  +30.1j  S11  -9.43 dB  gain 13.22 dB  NF 3.30 dB
+   LS    1 nH  Zin   33.2  +25.7j  S11  -9.07 dB  gain 13.17 dB  NF 3.36 dB
+   LS  1.5 nH  Zin   30.1  +24.4j  S11  -8.50 dB  gain 13.08 dB  NF 3.43 dB
+   LS    2 nH  Zin   27.2  +23.7j  S11  -7.80 dB  gain 12.95 dB  NF 3.52 dB
+   LS  2.5 nH  Zin   24.5  +23.4j  S11  -7.06 dB  gain 12.79 dB  NF 3.63 dB
+   LS    3 nH  Zin   22.0  +23.4j  S11  -6.34 dB  gain 12.59 dB  NF 3.76 dB
+   LS    4 nH  Zin   17.8  +24.0j  S11  -5.08 dB  gain 12.13 dB  NF 4.08 dB
+   LS    5 nH  Zin   14.6  +25.0j  S11  -4.07 dB  gain 11.58 dB  NF 4.46 dB
+   LS    6 nH  Zin   12.0  +26.2j  S11  -3.29 dB  gain 10.99 dB  NF 4.89 dB
+   LS    7 nH  Zin   10.1  +27.4j  S11  -2.69 dB  gain 10.38 dB  NF 5.34 dB
+   LS    8 nH  Zin    8.5  +28.6j  S11  -2.22 dB  gain  9.77 dB  NF 5.80 dB
+ shunt at the source: L 5.6 nH
+   LS    0 nH  Zin   48.1  +26.3j  S11 -11.72 dB  gain 13.44 dB  NF 2.96 dB
+   LS    1 nH  Zin   39.4  +23.2j  S11 -11.18 dB  gain 13.40 dB  NF 3.01 dB
+   LS  1.5 nH  Zin   35.5  +22.6j  S11 -10.34 dB  gain 13.32 dB  NF 3.07 dB
+   LS    2 nH  Zin   31.9  +22.6j  S11  -9.36 dB  gain 13.21 dB  NF 3.15 dB
+   LS  2.5 nH  Zin   28.7  +22.8j  S11  -8.39 dB  gain 13.06 dB  NF 3.26 dB
+   LS    3 nH  Zin   25.9  +23.3j  S11  -7.48 dB  gain 12.89 dB  NF 3.38 dB
+   LS    4 nH  Zin   21.1  +24.7j  S11  -5.94 dB  gain 12.46 dB  NF 3.67 dB
+   LS    5 nH  Zin   17.4  +26.4j  S11  -4.74 dB  gain 11.97 dB  NF 4.03 dB
+   LS    6 nH  Zin   14.5  +28.1j  S11  -3.83 dB  gain 11.42 dB  NF 4.42 dB
+   LS    7 nH  Zin   12.3  +29.8j  S11  -3.14 dB  gain 10.85 dB  NF 4.84 dB
+   LS    8 nH  Zin   10.4  +31.4j  S11  -2.60 dB  gain 10.28 dB  NF 5.28 dB
+ shunt at the source: L 6.8 nH
+   LS    0 nH  Zin   55.7  +19.4j  S11 -14.53 dB  gain 13.59 dB  NF 2.70 dB
+   LS    1 nH  Zin   45.1  +18.9j  S11 -13.91 dB  gain 13.56 dB  NF 2.74 dB
+   LS  1.5 nH  Zin   40.6  +19.5j  S11 -12.64 dB  gain 13.50 dB  NF 2.79 dB
+   LS    2 nH  Zin   36.6  +20.3j  S11 -11.26 dB  gain 13.40 dB  NF 2.86 dB
+   LS  2.5 nH  Zin   33.1  +21.3j  S11  -9.96 dB  gain 13.28 dB  NF 2.95 dB
+   LS    3 nH  Zin   29.9  +22.5j  S11  -8.80 dB  gain 13.13 dB  NF 3.06 dB
+   LS    4 nH  Zin   24.8  +25.0j  S11  -6.92 dB  gain 12.75 dB  NF 3.32 dB
+   LS    5 nH  Zin   20.7  +27.6j  S11  -5.51 dB  gain 12.31 dB  NF 3.64 dB
+   LS    6 nH  Zin   17.5  +30.0j  S11  -4.45 dB  gain 11.81 dB  NF 4.01 dB
+   LS    7 nH  Zin   14.9  +32.3j  S11  -3.64 dB  gain 11.28 dB  NF 4.40 dB
+   LS    8 nH  Zin   12.9  +34.4j  S11  -3.02 dB  gain 10.74 dB  NF 4.81 dB
+ shunt at the source: L 10 nH
+   LS    0 nH  Zin   62.3   +3.2j  S11 -18.95 dB  gain 13.69 dB  NF 2.42 dB
+   LS    1 nH  Zin   51.6   +8.6j  S11 -21.29 dB  gain 13.71 dB  NF 2.43 dB
+   LS  1.5 nH  Zin   47.2  +11.4j  S11 -18.40 dB  gain 13.68 dB  NF 2.46 dB
+   LS    2 nH  Zin   43.2  +14.1j  S11 -15.59 dB  gain 13.62 dB  NF 2.50 dB
+   LS  2.5 nH  Zin   39.7  +16.8j  S11 -13.33 dB  gain 13.53 dB  NF 2.57 dB
+   LS    3 nH  Zin   36.6  +19.4j  S11 -11.53 dB  gain 13.42 dB  NF 2.65 dB
+   LS    4 nH  Zin   31.3  +24.2j  S11  -8.87 dB  gain 13.14 dB  NF 2.86 dB
+   LS    5 nH  Zin   27.1  +28.7j  S11  -7.00 dB  gain 12.77 dB  NF 3.13 dB
+   LS    6 nH  Zin   23.6  +32.7j  S11  -5.64 dB  gain 12.36 dB  NF 3.44 dB
+   LS    7 nH  Zin   20.7  +36.4j  S11  -4.62 dB  gain 11.90 dB  NF 3.78 dB
+   LS    8 nH  Zin   18.3  +39.8j  S11  -3.83 dB  gain 11.42 dB  NF 4.15 dB
+ shunt at the source: L 15 nH
+   LS    0 nH  Zin   60.9   -9.7j  S11 -17.65 dB  gain 13.67 dB  NF 2.32 dB
+   LS    1 nH  Zin   53.0   -0.6j  S11 -30.43 dB  gain 13.74 dB  NF 2.29 dB
+   LS  1.5 nH  Zin   49.7   +3.7j  S11 -28.65 dB  gain 13.73 dB  NF 2.30 dB
+   LS    2 nH  Zin   46.6   +7.7j  S11 -21.19 dB  gain 13.71 dB  NF 2.33 dB
+   LS  2.5 nH  Zin   43.8  +11.6j  S11 -17.12 dB  gain 13.66 dB  NF 2.38 dB
+   LS    3 nH  Zin   41.2  +15.3j  S11 -14.39 dB  gain 13.58 dB  NF 2.44 dB
+   LS    4 nH  Zin   36.7  +22.2j  S11 -10.78 dB  gain 13.36 dB  NF 2.60 dB
+   LS    5 nH  Zin   32.8  +28.4j  S11  -8.42 dB  gain 13.07 dB  NF 2.82 dB
+   LS    6 nH  Zin   29.5  +34.2j  S11  -6.75 dB  gain 12.71 dB  NF 3.09 dB
+   LS    7 nH  Zin   26.7  +39.4j  S11  -5.51 dB  gain 12.30 dB  NF 3.39 dB
+   LS    8 nH  Zin   24.3  +44.2j  S11  -4.56 dB  gain 11.87 dB  NF 3.72 dB
+ shunt at the source: C 1.5 pF
+   LS    0 nH  Zin   19.1  -28.8j  S11  -4.97 dB  gain 12.08 dB  NF 3.62 dB
+   LS    1 nH  Zin   22.7  -26.2j  S11  -6.20 dB  gain 12.55 dB  NF 3.31 dB
+   LS  1.5 nH  Zin   24.9  -25.0j  S11  -6.96 dB  gain 12.76 dB  NF 3.17 dB
+   LS    2 nH  Zin   27.3  -23.7j  S11  -7.84 dB  gain 12.96 dB  NF 3.04 dB
+   LS  2.5 nH  Zin   30.1  -22.4j  S11  -8.86 dB  gain 13.14 dB  NF 2.94 dB
+   LS    3 nH  Zin   33.2  -21.3j  S11 -10.02 dB  gain 13.29 dB  NF 2.85 dB
+   LS    4 nH  Zin   40.8  -19.4j  S11 -12.72 dB  gain 13.50 dB  NF 2.73 dB
+   LS    5 nH  Zin   50.4  -18.8j  S11 -14.69 dB  gain 13.59 dB  NF 2.70 dB
+   LS    6 nH  Zin   62.1  -20.7j  S11 -13.53 dB  gain 13.54 dB  NF 2.75 dB
+   LS    7 nH  Zin   75.3  -26.8j  S11 -10.83 dB  gain 13.37 dB  NF 2.89 dB
+   LS    8 nH  Zin   87.7  -38.7j  S11  -8.46 dB  gain 13.07 dB  NF 3.10 dB
+ shunt at the source: C 2.2 pF
+   LS    0 nH  Zin   13.1  -25.4j  S11  -3.63 dB  gain 11.27 dB  NF 4.48 dB
+   LS    1 nH  Zin   16.0  -24.3j  S11  -4.51 dB  gain 11.84 dB  NF 4.10 dB
+   LS  1.5 nH  Zin   17.7  -23.9j  S11  -5.04 dB  gain 12.11 dB  NF 3.93 dB
+   LS    2 nH  Zin   19.6  -23.5j  S11  -5.64 dB  gain 12.36 dB  NF 3.78 dB
+   LS  2.5 nH  Zin   21.8  -23.4j  S11  -6.29 dB  gain 12.58 dB  NF 3.65 dB
+   LS    3 nH  Zin   24.3  -23.4j  S11  -7.00 dB  gain 12.77 dB  NF 3.54 dB
+   LS    4 nH  Zin   29.9  -24.6j  S11  -8.40 dB  gain 13.06 dB  NF 3.39 dB
+   LS    5 nH  Zin   36.0  -27.8j  S11  -9.26 dB  gain 13.19 dB  NF 3.33 dB
+   LS    6 nH  Zin   41.6  -33.8j  S11  -8.96 dB  gain 13.15 dB  NF 3.39 dB
+   LS    7 nH  Zin   44.9  -42.3j  S11  -7.73 dB  gain 12.94 dB  NF 3.54 dB
+   LS    8 nH  Zin   44.4  -51.8j  S11  -6.31 dB  gain 12.58 dB  NF 3.79 dB
+ shunt at the source: C 2.7 pF
+   LS    0 nH  Zin   10.3  -23.2j  S11  -2.96 dB  gain 10.68 dB  NF 5.12 dB
+   LS    1 nH  Zin   12.7  -22.6j  S11  -3.67 dB  gain 11.30 dB  NF 4.71 dB
+   LS  1.5 nH  Zin   14.1  -22.5j  S11  -4.09 dB  gain 11.60 dB  NF 4.53 dB
+   LS    2 nH  Zin   15.6  -22.4j  S11  -4.56 dB  gain 11.87 dB  NF 4.37 dB
+   LS  2.5 nH  Zin   17.4  -22.6j  S11  -5.06 dB  gain 12.12 dB  NF 4.23 dB
+   LS    3 nH  Zin   19.3  -23.1j  S11  -5.57 dB  gain 12.33 dB  NF 4.11 dB
+   LS    4 nH  Zin   23.3  -25.0j  S11  -6.53 dB  gain 12.65 dB  NF 3.95 dB
+   LS    5 nH  Zin   27.2  -28.7j  S11  -7.02 dB  gain 12.78 dB  NF 3.90 dB
+   LS    6 nH  Zin   29.6  -34.2j  S11  -6.76 dB  gain 12.71 dB  NF 3.97 dB
+   LS    7 nH  Zin   29.7  -40.4j  S11  -5.90 dB  gain 12.45 dB  NF 4.16 dB
+   LS    8 nH  Zin   27.3  -46.0j  S11  -4.88 dB  gain 12.03 dB  NF 4.44 dB
+ shunt at the source: C 3.3 pF
+   LS    0 nH  Zin    7.9  -20.8j  S11  -2.36 dB  gain  9.96 dB  NF 5.90 dB
+   LS    1 nH  Zin    9.8  -20.6j  S11  -2.92 dB  gain 10.64 dB  NF 5.47 dB
+   LS  1.5 nH  Zin   10.9  -20.6j  S11  -3.25 dB  gain 10.96 dB  NF 5.28 dB
+   LS    2 nH  Zin   12.1  -20.8j  S11  -3.61 dB  gain 11.25 dB  NF 5.11 dB
+   LS  2.5 nH  Zin   13.4  -21.2j  S11  -3.98 dB  gain 11.52 dB  NF 4.96 dB
+   LS    3 nH  Zin   14.8  -21.8j  S11  -4.34 dB  gain 11.75 dB  NF 4.84 dB
+   LS    4 nH  Zin   17.4  -23.8j  S11  -4.97 dB  gain 12.08 dB  NF 4.69 dB
+   LS    5 nH  Zin   19.5  -27.2j  S11  -5.22 dB  gain 12.19 dB  NF 4.66 dB
+   LS    6 nH  Zin   20.0  -31.3j  S11  -4.96 dB  gain 12.07 dB  NF 4.76 dB
+   LS    7 nH  Zin   18.9  -35.3j  S11  -4.33 dB  gain 11.74 dB  NF 4.98 dB
+   LS    8 nH  Zin   16.6  -38.2j  S11  -3.59 dB  gain 11.24 dB  NF 5.30 dB
+== with the pad (metal C + ESD diodes)
+RES op vpad=1.00476 idd=-0.02049
+ shunt at the source: none
+   LS    0 nH  Zin   16.6  -34.6j  S11  -3.87 dB  gain 11.44 dB  NF 4.56 dB
+   LS    1 nH  Zin   16.7  -24.6j  S11  -4.68 dB  gain 11.90 dB  NF 4.05 dB
+   LS  1.5 nH  Zin   16.8  -19.4j  S11  -5.13 dB  gain 12.05 dB  NF 3.86 dB
+   LS    2 nH  Zin   16.6  -14.8j  S11  -5.43 dB  gain 12.27 dB  NF 3.63 dB
+   LS  2.5 nH  Zin   16.6   -9.9j  S11  -5.74 dB  gain 12.38 dB  NF 3.47 dB
+   LS    3 nH  Zin   16.6   -4.9j  S11  -5.94 dB  gain 12.45 dB  NF 3.35 dB
+   LS    4 nH  Zin   16.6   +5.0j  S11  -5.93 dB  gain 12.45 dB  NF 3.24 dB
+   LS    5 nH  Zin   16.6  +14.9j  S11  -5.43 dB  gain 12.26 dB  NF 3.32 dB
+   LS    6 nH  Zin   16.9  +25.5j  S11  -4.68 dB  gain 11.71 dB  NF 3.64 dB
+   LS    7 nH  Zin   16.6  +34.7j  S11  -3.87 dB  gain 11.44 dB  NF 3.96 dB
+   LS    8 nH  Zin   16.6  +44.6j  S11  -3.17 dB  gain 10.87 dB  NF 4.47 dB
+ shunt at the source: L 2.7 nH
+   LS    0 nH  Zin   35.1  +43.4j  S11  -6.37 dB  gain 12.59 dB  NF 4.08 dB
+   LS    1 nH  Zin   42.4  +21.6j  S11 -12.32 dB  gain 13.47 dB  NF 2.91 dB
+   LS  1.5 nH  Zin   36.5  +11.4j  S11 -13.85 dB  gain 13.53 dB  NF 2.58 dB
+   LS    2 nH  Zin   28.4   +6.4j  S11 -10.87 dB  gain 13.36 dB  NF 2.45 dB
+   LS  2.5 nH  Zin   20.9   +5.4j  S11  -7.63 dB  gain 12.85 dB  NF 2.59 dB
+   LS    3 nH  Zin   15.8   +6.0j  S11  -5.59 dB  gain 12.33 dB  NF 2.92 dB
+   LS    4 nH  Zin    9.3   +9.1j  S11  -3.15 dB  gain 10.85 dB  NF 4.10 dB
+   LS    5 nH  Zin    5.9  +12.0j  S11  -1.94 dB  gain  9.27 dB  NF 5.54 dB
+   LS    6 nH  Zin    4.1  +14.2j  S11  -1.31 dB  gain  7.88 dB  NF 6.98 dB
+   LS    7 nH  Zin    2.9  +15.9j  S11  -0.93 dB  gain  6.57 dB  NF 8.33 dB
+   LS    8 nH  Zin    2.2  +17.2j  S11  -0.69 dB  gain  5.39 dB  NF 9.56 dB
+ shunt at the source: L 3.3 nH
+   LS    0 nH  Zin   63.3  +40.0j  S11  -9.11 dB  gain 13.15 dB  NF 3.32 dB
+   LS    1 nH  Zin   52.3   +7.7j  S11 -22.12 dB  gain 13.71 dB  NF 2.45 dB
+   LS  1.5 nH  Zin   40.0   +1.6j  S11 -18.98 dB  gain 13.67 dB  NF 2.25 dB
+   LS    2 nH  Zin   29.8   +0.7j  S11 -11.94 dB  gain 13.44 dB  NF 2.24 dB
+   LS  2.5 nH  Zin   22.3   +2.1j  S11  -8.31 dB  gain 13.04 dB  NF 2.42 dB
+   LS    3 nH  Zin   17.0   +4.4j  S11  -6.08 dB  gain 12.50 dB  NF 2.76 dB
+   LS    4 nH  Zin   10.5   +8.9j  S11  -3.57 dB  gain 11.22 dB  NF 3.81 dB
+   LS    5 nH  Zin    7.0  +12.7j  S11  -2.30 dB  gain  9.87 dB  NF 5.08 dB
+   LS    6 nH  Zin    5.0  +15.5j  S11  -1.58 dB  gain  8.56 dB  NF 6.37 dB
+   LS    7 nH  Zin    3.7  +17.7j  S11  -1.14 dB  gain  7.36 dB  NF 7.60 dB
+   LS    8 nH  Zin    2.8  +19.5j  S11  -0.86 dB  gain  6.26 dB  NF 8.74 dB
+ shunt at the source: L 3.9 nH
+   LS    0 nH  Zin   84.7  +18.2j  S11 -10.81 dB  gain 13.35 dB  NF 2.96 dB
+   LS    1 nH  Zin   50.8   -5.1j  S11 -25.87 dB  gain 13.54 dB  NF 2.40 dB
+   LS  1.5 nH  Zin   39.3   -5.9j  S11 -17.30 dB  gain 13.65 dB  NF 2.18 dB
+   LS    2 nH  Zin   29.4   -3.5j  S11 -11.62 dB  gain 13.42 dB  NF 2.21 dB
+   LS  2.5 nH  Zin   22.5   -0.3j  S11  -8.42 dB  gain 13.06 dB  NF 2.40 dB
+   LS    3 nH  Zin   17.6   +3.0j  S11  -6.35 dB  gain 12.59 dB  NF 2.63 dB
+   LS    4 nH  Zin   11.4   +8.8j  S11  -3.90 dB  gain 11.46 dB  NF 3.64 dB
+   LS    5 nH  Zin    7.9  +13.2j  S11  -2.58 dB  gain 10.25 dB  NF 4.77 dB
+   LS    6 nH  Zin    5.8  +16.6j  S11  -1.81 dB  gain  9.06 dB  NF 5.94 dB
+   LS    7 nH  Zin    4.4  +19.3j  S11  -1.33 dB  gain  7.94 dB  NF 7.07 dB
+   LS    8 nH  Zin    3.4  +21.4j  S11  -1.01 dB  gain  6.91 dB  NF 8.13 dB
+ shunt at the source: L 4.7 nH
+   LS    0 nH  Zin   86.1  -15.1j  S11 -10.88 dB  gain 13.36 dB  NF 2.79 dB
+   LS    1 nH  Zin   47.0  -15.6j  S11 -15.84 dB  gain 13.51 dB  NF 2.38 dB
+   LS  1.5 nH  Zin   36.2  -11.8j  S11 -13.63 dB  gain 13.53 dB  NF 2.24 dB
+   LS    2 nH  Zin   28.1   -7.0j  S11 -10.64 dB  gain 13.33 dB  NF 2.29 dB
+   LS  2.5 nH  Zin   22.2   -2.4j  S11  -8.27 dB  gain 13.03 dB  NF 2.45 dB
+   LS    3 nH  Zin   17.9   +1.7j  S11  -6.51 dB  gain 12.63 dB  NF 2.72 dB
+   LS    4 nH  Zin   12.3   +8.5j  S11  -4.23 dB  gain 11.67 dB  NF 3.51 dB
+   LS    5 nH  Zin    8.9  +13.7j  S11  -2.89 dB  gain 10.56 dB  NF 4.49 dB
+   LS    6 nH  Zin    6.7  +17.7j  S11  -2.08 dB  gain  9.53 dB  NF 5.53 dB
+   LS    7 nH  Zin    5.2  +20.9j  S11  -1.55 dB  gain  8.51 dB  NF 6.56 dB
+   LS    8 nH  Zin    4.2  +23.5j  S11  -1.19 dB  gain  7.53 dB  NF 7.54 dB
+ shunt at the source: L 5.6 nH
+   LS    0 nH  Zin   71.9  -34.6j  S11  -9.81 dB  gain 13.24 dB  NF 2.85 dB
+   LS    1 nH  Zin   41.9  -22.0j  S11 -12.12 dB  gain 13.46 dB  NF 2.43 dB
+   LS  1.5 nH  Zin   33.0  -15.4j  S11 -11.33 dB  gain 13.40 dB  NF 2.36 dB
+   LS    2 nH  Zin   26.5   -9.4j  S11  -9.69 dB  gain 13.24 dB  NF 2.39 dB
+   LS  2.5 nH  Zin   21.7   -4.1j  S11  -8.01 dB  gain 12.98 dB  NF 2.53 dB
+   LS    3 nH  Zin   18.0   +0.8j  S11  -6.55 dB  gain 12.59 dB  NF 2.77 dB
+   LS    4 nH  Zin   13.0   +8.2j  S11  -4.49 dB  gain 11.82 dB  NF 3.42 dB
+   LS    5 nH  Zin    9.8  +14.0j  S11  -3.18 dB  gain 10.88 dB  NF 4.27 dB
+   LS    6 nH  Zin    7.6  +18.7j  S11  -2.33 dB  gain  9.91 dB  NF 5.20 dB
+   LS    7 nH  Zin    6.1  +22.5j  S11  -1.76 dB  gain  8.96 dB  NF 6.14 dB
+   LS    8 nH  Zin    5.0  +25.5j  S11  -1.37 dB  gain  8.05 dB  NF 7.06 dB
+ shunt at the source: L 6.8 nH
+   LS    0 nH  Zin   56.0  -42.8j  S11  -8.45 dB  gain 13.06 dB  NF 2.97 dB
+   LS    1 nH  Zin   36.0  -25.0j  S11  -9.92 dB  gain 13.26 dB  NF 2.60 dB
+   LS  1.5 nH  Zin   29.7  -17.6j  S11  -9.65 dB  gain 13.23 dB  NF 2.53 dB
+   LS    2 nH  Zin   24.9  -11.1j  S11  -8.79 dB  gain 13.12 dB  NF 2.54 dB
+   LS  2.5 nH  Zin   21.1   -5.5j  S11  -7.68 dB  gain 12.92 dB  NF 2.64 dB
+   LS    3 nH  Zin   18.1   -0.5j  S11  -6.58 dB  gain 12.65 dB  NF 2.81 dB
+   LS    4 nH  Zin   13.7   +7.8j  S11  -4.75 dB  gain 11.95 dB  NF 3.36 dB
+   LS    5 nH  Zin   10.7  +14.3j  S11  -3.47 dB  gain 11.14 dB  NF 4.08 dB
+   LS    6 nH  Zin    8.6  +19.7j  S11  -2.60 dB  gain 10.27 dB  NF 4.90 dB
+   LS    7 nH  Zin    7.1  +24.0j  S11  -1.99 dB  gain  9.38 dB  NF 5.76 dB
+   LS    8 nH  Zin    5.9  +27.7j  S11  -1.57 dB  gain  8.54 dB  NF 6.61 dB
+ shunt at the source: L 10 nH
+   LS    0 nH  Zin   35.1  -36.1j  S11  -7.49 dB  gain 11.93 dB  NF 3.82 dB
+   LS    1 nH  Zin   28.1  -26.6j  S11  -7.59 dB  gain 12.90 dB  NF 2.97 dB
+   LS  1.5 nH  Zin   24.9  -19.3j  S11  -7.75 dB  gain 12.89 dB  NF 2.84 dB
+   LS    2 nH  Zin   22.1  -13.1j  S11  -7.54 dB  gain 12.89 dB  NF 2.83 dB
+   LS  2.5 nH  Zin   19.8   -7.2j  S11  -7.10 dB  gain 12.76 dB  NF 2.86 dB
+   LS    3 nH  Zin   17.9   -2.0j  S11  -6.48 dB  gain 12.62 dB  NF 2.94 dB
+   LS    4 nH  Zin   14.7   +7.1j  S11  -5.14 dB  gain 12.14 dB  NF 3.28 dB
+   LS    5 nH  Zin   12.3  +14.8j  S11  -3.98 dB  gain 11.50 dB  NF 3.81 dB
+   LS    6 nH  Zin   10.5  +21.3j  S11  -3.09 dB  gain 10.78 dB  NF 4.47 dB
+   LS    7 nH  Zin    9.0  +26.8j  S11  -2.43 dB  gain 10.05 dB  NF 5.18 dB
+   LS    8 nH  Zin    7.8  +31.6j  S11  -1.93 dB  gain  9.29 dB  NF 5.92 dB
+ shunt at the source: L 15 nH
+   LS    0 nH  Zin   27.7  -41.1j  S11  -5.48 dB  gain 12.29 dB  NF 3.69 dB
+   LS    1 nH  Zin   23.5  -26.5j  S11  -6.38 dB  gain 12.60 dB  NF 3.29 dB
+   LS  1.5 nH  Zin   21.8  -20.0j  S11  -6.66 dB  gain 12.68 dB  NF 3.15 dB
+   LS    2 nH  Zin   20.2  -14.0j  S11  -6.75 dB  gain 12.70 dB  NF 3.06 dB
+   LS  2.5 nH  Zin   18.8   -8.3j  S11  -6.64 dB  gain 12.67 dB  NF 3.03 dB
+   LS    3 nH  Zin   17.6   -3.1j  S11  -6.34 dB  gain 12.58 dB  NF 3.05 dB
+   LS    4 nH  Zin   15.4   +6.5j  S11  -5.42 dB  gain 12.26 dB  NF 3.25 dB
+   LS    5 nH  Zin   13.6  +14.9j  S11  -4.41 dB  gain 11.78 dB  NF 3.63 dB
+   LS    6 nH  Zin   12.1  +22.4j  S11  -3.52 dB  gain 11.18 dB  NF 4.15 dB
+   LS    7 nH  Zin   10.9  +29.3j  S11  -2.81 dB  gain 10.44 dB  NF 4.78 dB
+   LS    8 nH  Zin    9.8  +35.1j  S11  -2.27 dB  gain  9.81 dB  NF 5.43 dB
+ shunt at the source: C 1.5 pF
+   LS    0 nH  Zin    7.1  -24.0j  S11  -2.00 dB  gain  9.40 dB  NF 6.76 dB
+   LS    1 nH  Zin    8.6  -19.6j  S11  -2.61 dB  gain 10.27 dB  NF 5.90 dB
+   LS  1.5 nH  Zin    9.6  -17.1j  S11  -3.00 dB  gain 10.71 dB  NF 5.48 dB
+   LS    2 nH  Zin   10.8  -14.3j  S11  -3.49 dB  gain 11.14 dB  NF 5.04 dB
+   LS  2.5 nH  Zin   12.1  -11.2j  S11  -4.07 dB  gain 11.56 dB  NF 4.63 dB
+   LS    3 nH  Zin   13.7   -7.7j  S11  -4.76 dB  gain 11.97 dB  NF 4.22 dB
+   LS    4 nH  Zin   18.1   +0.5j  S11  -6.58 dB  gain 12.66 dB  NF 3.47 dB
+   LS    5 nH  Zin   25.0  +11.3j  S11  -8.84 dB  gain 13.10 dB  NF 2.90 dB
+   LS    6 nH  Zin   36.1  +25.1j  S11  -9.90 dB  gain 13.26 dB  NF 2.56 dB
+   LS    7 nH  Zin   56.2  +42.9j  S11  -8.44 dB  gain 13.05 dB  NF 2.57 dB
+   LS    8 nH  Zin   95.2  +62.5j  S11  -6.23 dB  gain 12.53 dB  NF 2.89 dB
+ shunt at the source: C 2.2 pF
+   LS    0 nH  Zin    5.2  -20.8j  S11  -1.54 dB  gain  8.47 dB  NF 7.76 dB
+   LS    1 nH  Zin    6.8  -17.5j  S11  -2.11 dB  gain  9.46 dB  NF 6.79 dB
+   LS  1.5 nH  Zin    7.6  -15.8j  S11  -2.42 dB  gain 10.04 dB  NF 6.25 dB
+   LS    2 nH  Zin    8.8  -13.6j  S11  -2.88 dB  gain 10.58 dB  NF 5.74 dB
+   LS  2.5 nH  Zin   10.4  -11.2j  S11  -3.46 dB  gain 11.13 dB  NF 5.22 dB
+   LS    3 nH  Zin   12.4   -8.4j  S11  -4.25 dB  gain 11.64 dB  NF 4.71 dB
+   LS    4 nH  Zin   18.0   -1.7j  S11  -6.52 dB  gain 12.63 dB  NF 3.69 dB
+   LS    5 nH  Zin   28.3   +6.9j  S11 -10.75 dB  gain 13.35 dB  NF 2.84 dB
+   LS    6 nH  Zin   48.4  +15.7j  S11 -16.01 dB  gain 13.62 dB  NF 2.32 dB
+   LS    7 nH  Zin   87.0  +13.0j  S11 -10.91 dB  gain 13.37 dB  NF 2.27 dB
+   LS    8 nH  Zin  125.9  -35.9j  S11  -6.60 dB  gain 12.65 dB  NF 2.70 dB
+ shunt at the source: C 2.7 pF
+   LS    0 nH  Zin    4.3  -19.0j  S11  -1.30 dB  gain  7.84 dB  NF 8.45 dB
+   LS    1 nH  Zin    5.6  -16.4j  S11  -1.77 dB  gain  8.98 dB  NF 7.36 dB
+   LS  1.5 nH  Zin    6.6  -14.8j  S11  -2.10 dB  gain  9.57 dB  NF 6.80 dB
+   LS    2 nH  Zin    7.7  -13.1j  S11  -2.53 dB  gain 10.18 dB  NF 6.23 dB
+   LS  2.5 nH  Zin    9.3  -11.1j  S11  -3.10 dB  gain 10.80 dB  NF 5.64 dB
+   LS    3 nH  Zin   11.2   -8.8j  S11  -3.85 dB  gain 11.42 dB  NF 5.04 dB
+   LS    4 nH  Zin   17.5   -3.2j  S11  -6.32 dB  gain 12.58 dB  NF 3.87 dB
+   LS    5 nH  Zin   30.0   +2.8j  S11 -11.95 dB  gain 13.40 dB  NF 2.89 dB
+   LS    6 nH  Zin   53.3   +3.1j  S11 -27.05 dB  gain 13.72 dB  NF 2.26 dB
+   LS    7 nH  Zin   82.0  -23.8j  S11 -10.54 dB  gain 13.33 dB  NF 2.25 dB
+   LS    8 nH  Zin   71.0  -68.0j  S11  -5.80 dB  gain 12.40 dB  NF 2.84 dB
+ shunt at the source: C 3.3 pF
+   LS    0 nH  Zin    3.4  -17.1j  S11  -1.07 dB  gain  7.12 dB  NF 9.22 dB
+   LS    1 nH  Zin    4.7  -15.1j  S11  -1.49 dB  gain  8.36 dB  NF 8.04 dB
+   LS  1.5 nH  Zin    5.5  -13.8j  S11  -1.79 dB  gain  9.02 dB  NF 7.43 dB
+   LS    2 nH  Zin    6.7  -12.4j  S11  -2.19 dB  gain  9.70 dB  NF 6.80 dB
+   LS  2.5 nH  Zin    8.1  -10.8j  S11  -2.72 dB  gain 10.41 dB  NF 6.14 dB
+   LS    3 nH  Zin   10.1   -9.0j  S11  -3.45 dB  gain 11.12 dB  NF 5.47 dB
+   LS    4 nH  Zin   16.7   -4.9j  S11  -5.96 dB  gain 12.46 dB  NF 4.13 dB
+   LS    5 nH  Zin   29.7   -2.5j  S11 -11.82 dB  gain 13.44 dB  NF 2.97 dB
+   LS    6 nH  Zin   50.2  -13.0j  S11 -17.83 dB  gain 13.66 dB  NF 2.31 dB
+   LS    7 nH  Zin   53.1  -43.6j  S11  -8.16 dB  gain 13.01 dB  NF 2.44 dB
+   LS    8 nH  Zin   33.1  -58.4j  S11  -4.46 dB  gain 11.80 dB  NF 3.29 dB
+rc=0

@@ -1,0 +1,9 @@
+.subckt decap VDD VSS
+XCD0 VDD VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=361
+XCD1 VDD VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=361
+XCD2 VDD VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=361
+XCD3 VDD VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=361
+XCD4 VDD VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=361
+XCD5 VDD VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=361
+XCD6 VDD VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=361
+.ends

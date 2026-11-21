@@ -1,0 +1,51 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+Flattening unmatched subcell decap_MD10 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD11 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD12 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD0 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD1 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD2 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD3 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD4 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD5 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD6 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD7 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD8 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_MD9 in circuit decap (0)(1 instance)
+
+Class decap (0):  Merged 207 parallel devices.
+Class decap (1):  Merged 12 parallel devices.
+Subcircuit summary:
+Circuit 1: decap                           |Circuit 2: decap                           
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (208->1)                         |nfet_03v3 (13->1)                          
+Number of devices: 1                       |Number of devices: 1                       
+Number of nets: 2                          |Number of nets: 2                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: decap                           |Circuit 2: decap                           
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes decap and decap are equivalent.
+
+Final result: Circuits match uniquely.
+.

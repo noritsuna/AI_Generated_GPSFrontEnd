@@ -1,0 +1,125 @@
+* NGSPICE file created from cp.ext - technology: gf180mcuD
+
+.subckt cp_MPE2 pc2 pe2 hib VDD
+X0 pc2 hib pe2 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X1 pe2 hib pc2 VDD pfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=0.28u
+X2 pc2 hib pe2 VDD pfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=0.28u
+X3 pe2 hib pc2 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+.ends
+
+.subckt cp_MNS nc OUT DN VSS
+X0 OUT DN nc VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt inv_dig_MN Y A VSS
+X0 Y A VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt inv_dig_MP Y A VDD
+X0 Y A VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt inv_dig VDD A Y VSS
+XXMN Y A VSS inv_dig_MN
+XXMP Y A VDD inv_dig_MP
+.ends
+
+.subckt cp_MNE2 nc2 ne2 HI VSS
+X0 nc2 HI ne2 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.53p ps=2.53u w=2u l=0.28u
+X1 ne2 HI nc2 VSS nfet_03v3 ad=0.53p pd=2.53u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt cp_MND2 ne2 vd DNB VSS
+X0 vd DNB ne2 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt cp_MBL1_MBL2 b1 vd VDD
+X0 b1 b1 VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=1u
+X1 VDD b1 b1 VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=1u
+X2 VDD b1 vd VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=1u
+X3 vd b1 VDD VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=1u
+.ends
+
+.subckt cp_MB1_MB2 bt b1 vd OUT VSS
+X0 bt OUT b1 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=1u
+X1 b1 OUT bt VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=1u
+X2 vd vd bt VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=1u
+X3 bt vd vd VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=1u
+.ends
+
+.subckt cp_MNC_MNC2_MBT nc nc2 bt NB VSS
+X0 VSS NB bt VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X1 nc NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X2 nc NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 VSS NB nc VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X4 VSS NB nc2 VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X5 nc2 NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X6 VSS NB nc2 VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X7 bt NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X8 nc2 NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X9 VSS NB nc VSS nfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt cp_MND nc vd DNB VSS
+X0 vd DNB nc VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt cp_MPC_MPC2 pc pc2 PB VDD
+X0 pc PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X1 VDD PB pc VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X2 VDD PB pc VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 pc PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X4 pc PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X5 pc2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X6 VDD PB pc2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X7 VDD PB pc2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X8 pc2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X9 pc2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X10 VDD PB pc2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X11 pc PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X12 VDD PB pc VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X13 pc2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X14 VDD PB pc2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X15 VDD PB pc VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt cp_MNS2 ne2 OUT DN VSS
+X0 OUT DN ne2 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt cp_MPS_MPD pc OUT vd UPB upd VDD
+X0 pc upd vd VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 OUT UPB pc VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 vd upd pc VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X3 pc UPB OUT VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt cp_MPS2_MPD2 pe2 OUT vd UPB upd VDD
+X0 pe2 upd vd VDD pfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 OUT UPB pe2 VDD pfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 vd upd pe2 VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X3 pe2 UPB OUT VDD pfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt cp_CVD vd VSS
+X0 vd VSS cap_mim_2f0_m4m5_noshield c_width=32.01u c_length=32.01u
+.ends
+
+.subckt cp VSS VDD UPB DN DNB PB NB HI OUT
+XXMPE2 XMPE2/pc2 XMPE2/pe2 XHI/Y VDD cp_MPE2
+XXMNS XMNS/nc OUT DN VSS cp_MNS
+XXHI VDD HI XHI/Y VSS inv_dig
+XXMNE2 XMNE2/nc2 XMNS2/ne2 HI VSS cp_MNE2
+XXMND2 XMNS2/ne2 XMND/vd DNB VSS cp_MND2
+XXMBL1_MBL2 XMB1_MB2/b1 XMND/vd VDD cp_MBL1_MBL2
+XXMB1_MB2 XMB1_MB2/bt XMB1_MB2/b1 XMND/vd OUT VSS cp_MB1_MB2
+XXMNC_MNC2_MBT XMNS/nc XMNE2/nc2 XMB1_MB2/bt NB VSS cp_MNC_MNC2_MBT
+XXUD VDD UPB XUD/Y VSS inv_dig
+XXMND XMNS/nc XMND/vd DNB VSS cp_MND
+XXMPC_MPC2 XMPS_MPD/pc XMPE2/pc2 PB VDD cp_MPC_MPC2
+XXMNS2 XMNS2/ne2 OUT DN VSS cp_MNS2
+XXMPS_MPD XMPS_MPD/pc OUT XMND/vd UPB XUD/Y VDD cp_MPS_MPD
+XXMPS2_MPD2 XMPE2/pe2 OUT XMND/vd UPB XUD/Y VDD cp_MPS2_MPD2
+XXCVD XMND/vd VSS cp_CVD
+.ends
+

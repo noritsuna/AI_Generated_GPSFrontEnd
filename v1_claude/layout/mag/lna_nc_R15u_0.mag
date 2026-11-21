@@ -1,0 +1,53 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< pwell >>
+rect -1768 -464 1768 836
+<< psubdiff >>
+rect -1744 -440 1744 -336
+rect -1744 708 1744 812
+rect -1744 -336 -1640 708
+rect 1640 -336 1744 708
+<< polysilicon >>
+rect -1500 286 1500 408
+rect -1500 -36 1500 86
+<< nhighres >>
+rect -1500 86 1500 286
+<< psubdiffcont >>
+rect -1731 -416 -1653 788
+rect 1653 -416 1731 788
+rect -1593 721 1593 799
+rect -1593 -427 1593 -349
+<< polycontact >>
+rect -1487 349 1487 395
+rect -1487 -23 1487 23
+<< metal1 >>
+rect -1498 349 1498 395
+rect -1498 -23 1498 23
+rect -1498 -197 1498 23
+rect -1498 349 1498 569
+rect -1731 -427 1731 -349
+rect -1731 721 1731 799
+rect -1731 -427 -1653 799
+rect 1653 -427 1731 799
+rect -1731 -427 1731 -349
+rect -1731 721 1731 799
+<< metal2 >>
+rect -1498 -197 1498 23
+rect -1498 349 1498 569
+rect -1731 -427 1731 -349
+rect -1731 721 1731 799
+<< via1 >>
+rect -1486 -185 1486 11
+rect -1486 361 1486 557
+rect -1719 -415 1719 -361
+rect -1719 733 1719 787
+<< labels >>
+flabel metal2 s -1498 -197 1498 23 0 FreeSans 80 0 0 0 on_i
+port 1 nsew signal bidirectional
+flabel metal2 s -1498 349 1498 569 0 FreeSans 80 0 0 0 VDD
+port 2 nsew signal bidirectional
+flabel metal2 s -1731 -427 1731 -349 0 FreeSans 80 0 0 0 VSS
+port 3 nsew signal bidirectional
+<< end >>

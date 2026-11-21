@@ -1,0 +1,289 @@
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+
+Circuit 1 cell ppolyf_u_1k and Circuit 2 cell ppolyf_u_1k are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k                     |Circuit 2: ppolyf_u_1k                     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k and ppolyf_u_1k are equivalent.
+Flattening unmatched subcell nand2_MP1 in circuit nand2 (0)(1 instance)
+Flattening unmatched subcell nand2_MP2 in circuit nand2 (0)(1 instance)
+Flattening unmatched subcell nand2_MN1 in circuit nand2 (0)(1 instance)
+Flattening unmatched subcell nand2_MN2 in circuit nand2 (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: nand2                           |Circuit 2: nand2                           
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (2)                              |pfet_03v3 (2)                              
+nfet_03v3 (2)                              |nfet_03v3 (2)                              
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: nand2                           |Circuit 2: nand2                           
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+B                                          |B                                          
+A                                          |A                                          
+Y                                          |Y                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nand2 and nand2 are equivalent.
+Flattening unmatched subcell nor2_MP1 in circuit nor2 (0)(1 instance)
+Flattening unmatched subcell nor2_MP2 in circuit nor2 (0)(1 instance)
+Flattening unmatched subcell nor2_MN1 in circuit nor2 (0)(1 instance)
+Flattening unmatched subcell nor2_MN2 in circuit nor2 (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: nor2                            |Circuit 2: nor2                            
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (2)                              |pfet_03v3 (2)                              
+nfet_03v3 (2)                              |nfet_03v3 (2)                              
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: nor2                            |Circuit 2: nor2                            
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+Y                                          |Y                                          
+VDD                                        |VDD                                        
+B                                          |B                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nor2 and nor2 are equivalent.
+Flattening unmatched subcell vco_core_DP1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_DP2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_DP3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_DN1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_DP4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_DN2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_DN3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_DN4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_P1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_P3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_P2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_N1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_P4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_N2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPp1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_N3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPp2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLd1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_N4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPp3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPn2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLd2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPp4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPn1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLc1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPn3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLd3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLc2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNp2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNp1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLc3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBPn4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLd4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNp3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNn1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_PLc4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNn2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNp4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNn3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MBNn4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPp1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLd1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPp3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPp2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPn1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLd2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLc1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPn2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPp4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLd3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLc2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNp1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPn3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLc3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNp2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLd4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCPn4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNp3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_NLc4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNn1 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNn2 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNp4 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNn3 in circuit vco_core (0)(1 instance)
+Flattening unmatched subcell vco_core_MCNn4 in circuit vco_core (0)(1 instance)
+
+Class vco_core (0):  Merged 216 parallel devices.
+Subcircuit summary:
+Circuit 1: vco_core                        |Circuit 2: vco_core                        
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (176->40)                        |pfet_03v3 (40)                             
+nfet_03v3 (128->48)                        |nfet_03v3 (48)                             
+Number of devices: 88                      |Number of devices: 88                      
+Number of nets: 36                         |Number of nets: 36                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_core                        |Circuit 2: vco_core                        
+-------------------------------------------|-------------------------------------------
+ckdn2                                      |ckdn2                                      
+ckdn1                                      |ckdn1                                      
+CK                                         |CK                                         
+ckdp2                                      |ckdp2                                      
+ckdp3                                      |ckdp3                                      
+ckdp4                                      |ckdp4                                      
+ckdn4                                      |ckdn4                                      
+ckdn3                                      |ckdn3                                      
+kl                                         |kl                                         
+kh                                         |kh                                         
+VSS                                        |VSS                                        
+VR                                         |VR                                         
+L1N                                        |L1N                                        
+L2N                                        |L2N                                        
+L4P                                        |L4P                                        
+L3N                                        |L3N                                        
+L4N                                        |L4N                                        
+L3P                                        |L3P                                        
+L2P                                        |L2P                                        
+L1P                                        |L1P                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_core and vco_core are equivalent.
+Flattening unmatched subcell inv_dig_MN in circuit inv_dig (0)(1 instance)
+Flattening unmatched subcell inv_dig_MP in circuit inv_dig (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: inv_dig                         |Circuit 2: inv_dig                         
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (1)                              |nfet_03v3 (1)                              
+pfet_03v3 (1)                              |pfet_03v3 (1)                              
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: inv_dig                         |Circuit 2: inv_dig                         
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes inv_dig and inv_dig are equivalent.
+Flattening unmatched subcell vco_ring4_CSUA in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_CSUB in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_CVR in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_R1u_0 in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_MMIN in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_MSB0 in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_MSB1 in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_MVI in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_R2u_0 in circuit vco_ring4 (0)(1 instance)
+Flattening unmatched subcell vco_ring4_MPD_MPO_MPB0_MPB1 in circuit vco_ring4 (0)(1 instance)
+
+Class vco_ring4 (0):  Merged 1169 parallel devices.
+Class vco_ring4 (0):  Merged 18 series devices.
+Subcircuit summary:
+Circuit 1: vco_ring4                       |Circuit 2: vco_ring4                       
+-------------------------------------------|-------------------------------------------
+cap_mim_2f0_m4m5_noshield (38->3)          |cap_mim_2f0_m4m5_noshield (38->3)          
+nand2 (5)                                  |nand2 (5)                                  
+nor2 (5)                                   |nor2 (5)                                   
+ppolyf_u_1k (21->3)                        |ppolyf_u_1k (3)                            
+vco_core (1)                               |vco_core (1)                               
+nfet_03v3 (6->2)                           |nfet_03v3 (2)                              
+inv_dig (4)                                |inv_dig (4)                                
+pfet_03v3 (1136->6)                        |pfet_03v3 (89->6)                          
+Number of devices: 29                      |Number of devices: 29                      
+Number of nets: 43                         |Number of nets: 43                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_ring4                       |Circuit 2: vco_ring4                       
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VCTRL                                      |VCTRL                                      
+NB                                         |NB                                         
+B0                                         |B0                                         
+B1                                         |B1                                         
+L1P                                        |L1P                                        
+L1N                                        |L1N                                        
+L2P                                        |L2P                                        
+L2N                                        |L2N                                        
+L3P                                        |L3P                                        
+L3N                                        |L3N                                        
+L4P                                        |L4P                                        
+L4N                                        |L4N                                        
+VR                                         |VR                                         
+VSS                                        |VSS                                        
+CK                                         |CK                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_ring4 and vco_ring4 are equivalent.
+
+Final result: Circuits match uniquely.
+.

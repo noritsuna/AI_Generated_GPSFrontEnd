@@ -1,0 +1,53 @@
+timestamp 0
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+parameters cap_mim_2f0_m4m5_noshield l=c_length w=c_width
+port "gl3p" 2 0 -480 5640 -160 m3
+port "L3P" 1 0 9500 5640 9820 m3
+node "gl3p" 3 8773.07 0 -480 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1804800 11920 16448000 30960 0 0
+node "L3P" 4 15132.2 0 9500 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1804800 11920 41128000 11680 40888840 105900
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "L3P" "gl3p" 15078.5
+device csubckt cap_mim_2f0_m4m5_noshield 4640 0 4641 1 l=1000 w=1000 "None" "L3P" 844 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 0 3481 1 l=1000 w=1000 "None" "L3P" 844 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 0 2321 1 l=1000 w=1000 "None" "L3P" 844 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 0 1161 1 l=1000 w=1000 "None" "L3P" 844 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 0 1 1 l=1000 w=1000 "None" "L3P" 844 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 4640 1160 4641 1161 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 1160 3481 1161 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 1160 2321 1161 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 1160 1161 1161 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 1160 1 1161 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 4640 2320 4641 2321 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 2320 3481 2321 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 2320 2321 2321 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 2320 1161 2321 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 2320 1 2321 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 4640 3480 4641 3481 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 3480 3481 3481 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 3480 2321 3481 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 3480 1161 3481 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 3480 1 3481 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 4640 4640 4641 4641 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 4640 3481 4641 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 4640 2321 4641 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 4640 1161 4641 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 4640 1 4641 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 4640 5800 4641 5801 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 5800 3481 5801 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 5800 2321 5801 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 5800 1161 5801 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 5800 1 5801 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 4640 6960 4641 6961 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 6960 3481 6961 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 6960 2321 6961 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 6960 1161 6961 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 6960 1 6961 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 4640 8120 4641 8121 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 3480 8120 3481 8121 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 2320 8120 2321 8121 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 1160 8120 1161 8121 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480
+device csubckt cap_mim_2f0_m4m5_noshield 0 8120 1 8121 l=1000 w=1000 "None" "L3P" 1688 0 "gl3p" 4000 8224000,95480

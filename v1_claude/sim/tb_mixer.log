@@ -1,0 +1,179 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_mixer.sch
+
+Reset re-loads circuit ** sch_path: /home/noritsuna/gps/xschem/tb_mixer.sch
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_mixer.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        3.3
+nb                                     1.29731
+pb                                     1.54495
+xb.nr                                 0.248121
+xb.xrb.11                           0.00438481
+xb.xrb.21                             0.243737
+xb.st                                0.0200383
+loip                                         0
+loqp                                         0
+loin                                         0
+loqn                                         0
+sp                                           3
+sn                                           3
+rfp_s                                        3
+rfn_s                                        3
+rfp                                    1.60051
+rfn                                    1.60051
+xm.vbrf                                1.60051
+xm.xrt1.11                             1.60051
+xm.xrt1.21                             1.60051
+xm.xrt2.11                             1.60051
+xm.xrt2.21                             1.60051
+xm.xrba.11                             1.60885
+xm.xrba.21                             3.29166
+xm.xrbb.11                          0.00834167
+xm.xrbb.21                             1.59216
+xm.ti                              4.41576e-09
+xm.xpi                              6.6815e-09
+xm.xni                              6.6815e-09
+ifip                                       3.3
+ifin                                       3.3
+xm.xrl1i.11                                3.3
+xm.xrl1i.21                                3.3
+xm.xrl2i.11                                3.3
+xm.xrl2i.21                                3.3
+xm.tq                              4.41576e-09
+xm.xpq                              6.6815e-09
+xm.xnq                              6.6815e-09
+ifqp                                       3.3
+ifqn                                       3.3
+xm.xrl1q.11                                3.3
+xm.xrl1q.21                                3.3
+xm.xrl2q.11                                3.3
+xm.xrl2q.21                                3.3
+vrfn#branch                                  0
+vrfp#branch                                  0
+vloqn#branch                                 0
+vloin#branch                                 0
+vloqp#branch                                 0
+vloip#branch                                 0
+vdd#branch                        -0.000200863
+
+No. of Data Rows : 361413
+vin_pp              =  9.26362e-03 from=  1.00000e-06 to=  1.25000e-06
+Fourier analysis for v(ifip):
+  No. Harmonics: 10, THD: 7379.71 %, Gridsize: 200, Interpolation Degree: 1, No. Periods: 1
+
+Harmonic Frequency   Magnitude   Phase       Norm. Mag   Norm. Phase
+-------- ---------   ---------   -----       ---------   -----------
+ 0       0           2.09706     0           0           0          
+ 1       4.092e+06   1.16212e-05 -171.51     1           0          
+ 2       8.184e+06   1.29625e-06 -122.41     0.111542    49.1048    
+ 3       1.2276e+07  7.52704e-07 78.552      0.06477     250.062    
+ 4       1.6368e+07  3.8135e-07  -178.61     0.0328151   -7.1018    
+ 5       2.046e+07   5.18497e-07 -166.51     0.0446165   4.99585    
+ 6       2.4552e+07  2.84385e-07 -134.37     0.0244713   37.1402    
+ 7       2.8644e+07  5.22471e-06 157.45      0.449585    328.96     
+ 8       3.2736e+07  0.000857592 -160.4      73.7956     11.1077    
+ 9       3.6828e+07  5.86728e-07 -17.254     0.0504878   154.256    
+
+Fourier analysis for v(ifqp):
+  No. Harmonics: 10, THD: 11888.3 %, Gridsize: 200, Interpolation Degree: 1, No. Periods: 1
+
+Harmonic Frequency   Magnitude   Phase       Norm. Mag   Norm. Phase
+-------- ---------   ---------   -----       ---------   -----------
+ 0       0           2.09705     0           0           0          
+ 1       4.092e+06   7.1969e-06  -162.05     1           0          
+ 2       8.184e+06   1.32141e-06 -151.83     0.183608    10.2271    
+ 3       1.2276e+07  1.68266e-06 -179.5      0.233803    -17.445    
+ 4       1.6368e+07  1.54357e-06 -147.88     0.214477    14.17      
+ 5       2.046e+07   2.03944e-06 171.099     0.283377    333.153    
+ 6       2.4552e+07  1.50705e-06 -166.92     0.209403    -4.8698    
+ 7       2.8644e+07  1.99697e-06 -59.032     0.277477    103.022    
+ 8       3.2736e+07  0.000855562 -160.08     118.879     1.9724     
+ 9       3.6828e+07  5.41938e-06 46.9553     0.753016    209.009    
+
+ipp                 =  2.67735e-09 from=  5.00000e-07 to=  1.24400e-06
+qpp                 =  2.99878e-09 from=  5.00000e-07 to=  1.24400e-06
+ti                  =  7.87879e-11
+RES arf=1m vin_pp=0.00926362 ipp=2.67735E-09 qpp=2.99878E-09 ti=7.87879E-11 tq=
+Reset re-loads circuit ** sch_path: /home/noritsuna/gps/xschem/tb_mixer.sch
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_mixer.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        3.3
+nb                                     1.29731
+pb                                     1.54495
+xb.nr                                 0.248121
+xb.xrb.11                           0.00438481
+xb.xrb.21                             0.243737
+xb.st                                0.0200383
+loip                                         0
+loqp                                         0
+loin                                         0
+loqn                                         0
+sp                                           3
+sn                                           3
+rfp_s                                        3
+rfn_s                                        3
+rfp                                    1.60051
+rfn                                    1.60051
+xm.vbrf                                1.60051
+xm.xrt1.11                             1.60051
+xm.xrt1.21                             1.60051
+xm.xrt2.11                             1.60051
+xm.xrt2.21                             1.60051
+xm.xrba.11                             1.60885
+xm.xrba.21                             3.29166
+xm.xrbb.11                          0.00834167
+xm.xrbb.21                             1.59216
+xm.ti                              4.41576e-09
+xm.xpi                              6.6815e-09
+xm.xni                              6.6815e-09
+ifip                                       3.3
+ifin                                       3.3
+xm.xrl1i.11                                3.3
+xm.xrl1i.21                                3.3
+xm.xrl2i.11                                3.3
+xm.xrl2i.21                                3.3
+xm.tq                              4.41576e-09
+xm.xpq                              6.6815e-09
+xm.xnq                              6.6815e-09
+ifqp                                       3.3
+ifqn                                       3.3
+xm.xrl1q.11                                3.3
+xm.xrl1q.21                                3.3
+xm.xrl2q.11                                3.3
+xm.xrl2q.21                                3.3
+vrfn#branch                                  0
+vrfp#branch                                  0
+vloqn#branch                                 0
+vloin#branch                                 0
+vloqp#branch                                 0
+vloip#branch                                 0
+vdd#branch                        -0.000200863
+
+
+Error: measure  tq  when(WHEN) : out of interval
+ meas tran tq when vq=0 rise=3 failed!
+
+Error: &tq: no such variable.

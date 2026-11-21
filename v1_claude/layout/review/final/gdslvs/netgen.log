@@ -1,0 +1,157 @@
+Netgen 1.5.327 compiled on Sun Nov  1 10:46:47 PM JST 2026
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file gds.lvs.spice for gds.lvs.spice gnss_afe_analog
+Call to undefined subcircuit nfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit ppolyf_u_1k
+Creating placeholder cell definition.
+Call to undefined subcircuit cap_mim_2f0_m4m5_noshield
+Creating placeholder cell definition.
+Reading netlist file ref.spice for ref.spice gnss_afe_analog
+Call to undefined subcircuit nfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit ppolyf_u_1k
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit cap_mim_2f0_m4m5_noshield
+Creating placeholder cell definition.
+Call to undefined subcircuit inv_dig
+Creating placeholder cell definition.
+Call to undefined subcircuit nand2
+Creating placeholder cell definition.
+Call to undefined subcircuit nor2
+Creating placeholder cell definition.
+Call to undefined subcircuit tspc_dff
+Creating placeholder cell definition.
+Call to undefined subcircuit inv_lo2
+Creating placeholder cell definition.
+
+Reading setup file /home/noritsuna/pdk/gf180mcuD/libs.tech/netgen/gf180mcuD_setup.tcl
+
+Model ppolyf_u_1k pin 1 == 2
+No property par1 found for device ppolyf_u_1k
+No property pm found for device ppolyf_u_1k
+No property par found for device ppolyf_u_1k
+No property r found for device ppolyf_u_1k
+Model ppolyf_u_1k pin 1 == 2
+No property par1 found for device ppolyf_u_1k
+No property pm found for device ppolyf_u_1k
+No property par found for device ppolyf_u_1k
+No property r found for device ppolyf_u_1k
+Model nfet_03v3 pin 1 == 3
+No property par1 found for device nfet_03v3
+No property NRD found for device nfet_03v3
+No property NRS found for device nfet_03v3
+No property par found for device nfet_03v3
+No property sa found for device nfet_03v3
+No property sb found for device nfet_03v3
+No property sd found for device nfet_03v3
+No property par found for device nfet_03v3
+No property dtemp found for device nfet_03v3
+No property nf found for device nfet_03v3
+No property $D found for device nfet_03v3
+No property $X found for device nfet_03v3
+No property $Y found for device nfet_03v3
+Model nfet_03v3 pin 1 == 3
+No property par1 found for device nfet_03v3
+No property NRD found for device nfet_03v3
+No property NRS found for device nfet_03v3
+No property par found for device nfet_03v3
+No property sa found for device nfet_03v3
+No property sb found for device nfet_03v3
+No property sd found for device nfet_03v3
+No property par found for device nfet_03v3
+No property dtemp found for device nfet_03v3
+No property as found for device nfet_03v3
+No property ad found for device nfet_03v3
+No property ps found for device nfet_03v3
+No property pd found for device nfet_03v3
+No property $D found for device nfet_03v3
+No property $X found for device nfet_03v3
+No property $Y found for device nfet_03v3
+Model pfet_03v3 pin 1 == 3
+No property par1 found for device pfet_03v3
+No property NRD found for device pfet_03v3
+No property NRS found for device pfet_03v3
+No property par found for device pfet_03v3
+No property sa found for device pfet_03v3
+No property sb found for device pfet_03v3
+No property sd found for device pfet_03v3
+No property par found for device pfet_03v3
+No property dtemp found for device pfet_03v3
+No property nf found for device pfet_03v3
+No property $D found for device pfet_03v3
+No property $X found for device pfet_03v3
+No property $Y found for device pfet_03v3
+Model pfet_03v3 pin 1 == 3
+No property par1 found for device pfet_03v3
+No property NRD found for device pfet_03v3
+No property NRS found for device pfet_03v3
+No property par found for device pfet_03v3
+No property sa found for device pfet_03v3
+No property sb found for device pfet_03v3
+No property sd found for device pfet_03v3
+No property par found for device pfet_03v3
+No property dtemp found for device pfet_03v3
+No property as found for device pfet_03v3
+No property ad found for device pfet_03v3
+No property ps found for device pfet_03v3
+No property pd found for device pfet_03v3
+No property $D found for device pfet_03v3
+No property $X found for device pfet_03v3
+No property $Y found for device pfet_03v3
+No property par1 found for device cap_mim_2f0_m4m5_noshield
+No property par1 found for device cap_mim_2f0_m4m5_noshield
+Comparison output logged to file lvs.rpt
+Logging to file "lvs.rpt" enabled
+Circuit nfet_03v3 contains no devices.
+Circuit pfet_03v3 contains no devices.
+Circuit ppolyf_u_1k contains no devices.
+Circuit cap_mim_2f0_m4m5_noshield contains no devices.
+
+Contents of circuit 1:  Circuit: 'gnss_afe_analog'
+Circuit gnss_afe_analog contains 5593 device instances.
+  Class: cap_mim_2f0_m4m5_noshield instances: 698
+  Class: nfet_03v3             instances: 2104
+  Class: ppolyf_u_1k           instances: 544
+  Class: pfet_03v3             instances: 2247
+Circuit contains 863 nets.
+Contents of circuit 2:  Circuit: 'gnss_afe_analog'
+Circuit gnss_afe_analog contains 987 device instances.
+  Class: cap_mim_2f0_m4m5_noshield instances: 105
+  Class: nfet_03v3             instances: 413
+  Class: ppolyf_u_1k           instances: 179
+  Class: pfet_03v3             instances: 290
+Circuit contains 498 nets.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'gnss_afe_analog'
+Circuit gnss_afe_analog contains 959 device instances.
+  Class: cap_mim_2f0_m4m5_noshield instances: 105
+  Class: nfet_03v3             instances: 401
+  Class: ppolyf_u_1k           instances: 163
+  Class: pfet_03v3             instances: 290
+Circuit contains 482 nets.
+Contents of circuit 2:  Circuit: 'gnss_afe_analog'
+Circuit gnss_afe_analog contains 959 device instances.
+  Class: cap_mim_2f0_m4m5_noshield instances: 105
+  Class: nfet_03v3             instances: 401
+  Class: ppolyf_u_1k           instances: 163
+  Class: pfet_03v3             instances: 290
+Circuit contains 482 nets.
+
+Circuit 1 contains 959 devices, Circuit 2 contains 959 devices.
+Circuit 1 contains 482 nets,    Circuit 2 contains 482 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "lvs.rpt" disabled
+LVS Done.

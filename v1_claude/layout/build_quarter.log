@@ -1,0 +1,99 @@
+route inv_dig: OK []  grid 51x40 nets 4
+inv_dig      route=True DRC=0 LVS=OK size=35x27um 1s 
+route inv_lo1: OK []  grid 51x41 nets 4
+inv_lo1      route=True DRC=0 LVS=OK size=35x28um 1s 
+route inv_lo2: OK []  grid 56x40 nets 4
+inv_lo2      route=True DRC=0 LVS=OK size=38x27um 1s 
+route nand2: OK []  grid 51x68 nets 6
+nand2        route=True DRC=0 LVS=OK size=35x47um 1s 
+route nand3: OK []  grid 63x69 nets 8
+nand3        route=True DRC=0 LVS=OK size=43x48um 1s 
+route nor2: OK []  grid 51x71 nets 6
+nor2         route=True DRC=0 LVS=OK size=35x49um 1s 
+route tspc_dff: OK []  grid 75x97 nets 11
+tspc_dff     route=True DRC=0 LVS=OK size=52x67um 1s 
+route div2: OK []  grid 107x127 nets 5
+div2         route=True DRC=0 LVS=OK size=74x88um 1s 
+route div3: OK []  grid 243x127 nets 8
+div3         route=True DRC=0 LVS=OK size=169x88um 1s 
+Traceback (most recent call last):
+  File "/home/noritsuna/GPS/scripts/layout/build_all.py", line 15, in <module>
+    m = auto._built.get(c) or (build.build(c, check=False) if c in build.cells.BUILD else auto.build(c))
+                                                                                          ^^^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/auto.py", line 350, in build
+    ports, dirs, devs, cells = parse(cell)
+                               ^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/auto.py", line 44, in parse
+    lines = cells[cell]
+            ~~~~~^^^^^^
+KeyError: 'div96'
+div96        ERROR KeyError('div96')
+route dff_r: OK []  grid 231x187 nets 10
+dff_r        route=True DRC=0 LVS=OK size=161x130um 2s 
+route pfd: OK []  grid 262x572 nets 13
+pfd          route=True DRC=0 LVS=OK size=183x400um 5s 
+route cp: OK []  grid 212x159 nets 20
+cp           route=True DRC=0 LVS=OK size=148x111um 4s 
+route loop_filter: OK []  grid 625x343 nets 4
+loop_filter  route=True DRC=0 LVS=OK size=437x239um 3s 
+route refbuf: OK []  grid 114x115 nets 6
+refbuf       route=True DRC=0 LVS=OK size=79x80um 1s 
+route divbuf: OK []  grid 112x63 nets 6
+divbuf       route=True DRC=0 LVS=OK size=78x44um 1s 
+route div48: OK []  grid 311x451 nets 14
+route pll_core: OK []  grid 657x1143 nets 20
+pll_core     route=True DRC=0 LVS=OK size=459x800um 146s 
+Traceback (most recent call last):
+  File "/home/noritsuna/GPS/scripts/layout/build_all.py", line 15, in <module>
+    m = auto._built.get(c) or (build.build(c, check=False) if c in build.cells.BUILD else auto.build(c))
+                                                                                          ^^^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/auto.py", line 350, in build
+    ports, dirs, devs, cells = parse(cell)
+                               ^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/auto.py", line 44, in parse
+    lines = cells[cell]
+            ~~~~~^^^^^^
+KeyError: 'vco_cell'
+vco_cell     ERROR KeyError('vco_cell')
+Traceback (most recent call last):
+  File "/home/noritsuna/GPS/scripts/layout/build_all.py", line 15, in <module>
+    m = auto._built.get(c) or (build.build(c, check=False) if c in build.cells.BUILD else auto.build(c))
+                                                                                          ^^^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/auto.py", line 350, in build
+    ports, dirs, devs, cells = parse(cell)
+                               ^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/auto.py", line 44, in parse
+    lines = cells[cell]
+            ~~~~~^^^^^^
+KeyError: 'vco_cellk'
+vco_cellk    ERROR KeyError('vco_cellk')
+route vco_core: OK []  grid 448x132 nets 36
+route vco_ring4: OK []  grid 898x499 nets 43
+vco_ring4    route=True DRC=0 LVS=OK size=628x349um 56s 
+route sa_comp: OK []  grid 163x192 nets 16
+sa_comp      route=True DRC=0 LVS=OK size=113x134um 2s 
+route adc2b: OK []  grid 531x322 nets 15
+adc2b        route=True DRC=0 LVS=OK size=371x225um 14s 
+route inv_dac: OK []  grid 56x44 nets 4
+route afc_dac: OK []  grid 205x386 nets 34
+afc_dac      route=True DRC=0 LVS=OK size=143x270um 55s 
+route bias_gen: OK []  grid 126x172 nets 8
+bias_gen     route=True DRC=0 LVS=OK size=88x120um 1s 
+route bias_if: OK []  grid 158x148 nets 19
+bias_if      route=True DRC=0 LVS=OK size=110x103um 6s 
+  retry with single-track: ['OUTP', 'VDD']
+route vga: OK []  grid 337x193 nets 16
+vga: routed=True 109.3s
+vga          route=True DRC=0 LVS=OK size=235x135um 110s 
+route sk_lpf1: OK []  grid 334x195 nets 11
+sk_lpf1      route=True DRC=0 LVS=OK size=233x136um 5s 
+route sk_lpf2: OK []  grid 375x306 nets 11
+sk_lpf2      route=True DRC=0 LVS=OK size=262x214um 3s 
+route if_chain: OK []  grid 1053x762 nets 29
+if_chain     route=True DRC=0 LVS=OK size=736x533um 39s 
+route lna_nc: OK []  grid 319x265 nets 12
+lna_nc       route=True DRC=0 LVS=OK size=222x185um 10s 
+route mixer_iq: OK []  grid 520x332 nets 42
+mixer_iq     route=True DRC=0 LVS=OK size=364x231um 68s 
+route decap: OK []  grid 602x340 nets 2
+decap        route=True DRC=0 LVS=OK size=421x238um 2s 

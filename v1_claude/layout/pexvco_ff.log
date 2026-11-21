@@ -1,0 +1,5 @@
+== ff  band B1B0=0
+vc=0.90  sch fLO  1332.1 MHz  I/Q err -0.00 deg  phase err 0.0/0.0/0.0  duty 0.501/0.500/0.499/0.502  swing 1.19 V  2.60 mA  VR 1.17
+          pex fLO   981.2 MHz  I/Q err -1.67 deg  phase err -0.3/2.5/1.1  duty 0.500/0.499/0.505/0.500  swing 1.21 V  2.59 mA  VR 1.21
+vc=1.20  sch fLO  1869.4 MHz  I/Q err -0.00 deg  phase err 0.0/-0.0/-0.0  duty 0.500/0.500/0.500/0.501  swing 1.36 V  4.36 mA  VR 1.36
+          pex fLO  1355.5 MHz  I/Q err -1.50 deg  phase err -0.1/2.6/1.2  duty 0.499/0.498/0.503/0.500  swing 1.38 V  4.24 mA  VR 1.41

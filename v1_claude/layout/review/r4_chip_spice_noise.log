@@ -1,0 +1,26 @@
+simulated: ns_ser 9.412 us, nz_ser 11.000 us, ns_iso 9.858 us, nz_iso 11.000 us, nz_ref 11.000 us, cw_ref 11.000 us
+window 4.500 ... 9.407 us (4.91 us, 80 ADC samples), noise band 4.092 +- 1.5 MHz
+source: CW 11.2 uV, noise 8.05e-17 V^2/Hz -> C/N0 at the source 58.9 dB-Hz
+== ref  (signal from cw_ref, noise from nz_ref)
+  ifI: signal 45.7 mV, noise total 146.9 mV rms, in band 63.9 mV rms, N0 2.668e-09 V^2/Hz -> C/N0 55.9 dB-Hz; rest of the signal response in band 0.08 mV rms
+  ifQ: signal 45.1 mV, noise total 141.2 mV rms, in band 55.0 mV rms, N0 1.980e-09 V^2/Hz -> C/N0 57.1 dB-Hz; rest of the signal response in band 0.09 mV rms
+  I + jQ: Q - I phase -91.3 deg, wanted sideband 45.4 mV, image 0.6 mV (-37.6 dB), N0 2.653e-09 V^2/Hz -> C/N0 58.9 dB-Hz (loss from the source 0.0 dB); rest in band 0.12 mV rms
+  pads, noise only: 81 samples, MAG duty I 0.23 Q 0.23
+== iso  (signal from ns_iso - nz_iso, noise from nz_iso)
+  ifI: signal 45.2 mV, noise total 146.7 mV rms, in band 62.0 mV rms, N0 2.517e-09 V^2/Hz -> C/N0 56.1 dB-Hz; rest of the signal response in band 3.96 mV rms
+  ifQ: signal 46.0 mV, noise total 147.3 mV rms, in band 61.1 mV rms, N0 2.440e-09 V^2/Hz -> C/N0 56.4 dB-Hz; rest of the signal response in band 5.37 mV rms
+  I + jQ: Q - I phase -93.4 deg, wanted sideband 45.6 mV, image 1.4 mV (-30.1 dB), N0 2.911e-09 V^2/Hz -> C/N0 58.5 dB-Hz (loss from the source 0.4 dB); rest in band 5.53 mV rms
+  pads, noise only: 81 samples, MAG duty I 0.23 Q 0.23; with CW 10 of 81 I and 9 Q samples change, correlation of the change with the IF tone 0.09 LSB (of noise only 0.32, of CW + noise 0.30)
+== ser  (signal from ns_ser - nz_ser, noise from nz_ser)
+  ifI: signal 57.6 mV, noise total 157.7 mV rms, in band 68.1 mV rms, N0 3.032e-09 V^2/Hz -> C/N0 57.4 dB-Hz; rest of the signal response in band 15.87 mV rms
+  ifQ: signal 51.3 mV, noise total 143.1 mV rms, in band 50.3 mV rms, N0 1.653e-09 V^2/Hz -> C/N0 59.0 dB-Hz; rest of the signal response in band 10.94 mV rms
+  I + jQ: Q - I phase -91.9 deg, wanted sideband 54.5 mV, image 3.3 mV (-24.4 dB), N0 2.665e-09 V^2/Hz -> C/N0 60.5 dB-Hz (loss from the source -1.5 dB); rest in band 19.66 mV rms
+  pads, noise only: 81 samples, MAG duty I 0.27 Q 0.26; with CW 18 of 81 I and 21 Q samples change, correlation of the change with the IF tone 0.06 LSB (of noise only 0.27, of CW + noise 0.29)
+== noise-only runs against the reference, 4.500 ... 10.995 us, I + jQ, band 4.092 +- 1.5 MHz, blocks of 8 bins (1.23 MHz)
+  check of the method: reference * 1.15 delayed 40 ns + image -27.2 dB + new noise -18.2 dB (both relative to the gain part) -> found gain 1.134, image -22.7 dB, new noise -15.4 dB
+  (so the new noise comes out up to about 3 dB too high and the image has a floor near new noise / 8: the losses below are on the high side)
+  iso: gain change +0.53 dB (signal measured above +0.04 dB), image noise -23.6 dB, new noise -20.4 dB -> C/N0 -0.06 dB
+  ser: gain change +0.38 dB (signal measured above +1.58 dB), image noise -21.2 dB, new noise -9.7 dB -> C/N0 -0.47 dB
+== C/N0 of I + jQ relative to the reference from the signal amplitude and the band noise (each uncertain by about 1 dB in this short window)
+  iso: signal +0.04 dB, noise +0.40 dB -> C/N0 -0.37 dB
+  ser: signal +1.58 dB, noise +0.02 dB -> C/N0 +1.57 dB

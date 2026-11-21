@@ -1,0 +1,2 @@
+a_pkg_156 ['RES vc_end=1.55883 vc_pp=0.0105497 flo=1.57144E+09 phase_err_s=6.10956E-07']
+a_pkg_156 fLO 1571.334 MHz  VCTRL 1.5588 V  phase rms 38.60 mrad | 1 MHz: beta 2.08e-03 -> -59.7 dBc | 4.09 MHz: beta 2.62e-04 -> -77.7 dBc | 16.4 MHz: beta 2.78e-03 -> -57.1 dBc | 32.7 MHz: beta 1.10e-03 -> -65.2 dBc | VDD pp 31.5 mV, VDDV pp 3.2 mV

@@ -1,0 +1,6 @@
+{
+  "name": "gnss-afe-schem",
+  "private": true,
+  "description": "ELK layout for scripts/schem/wired.py (npm install)",
+  "dependencies": { "elkjs": "0.9.3" }
+}

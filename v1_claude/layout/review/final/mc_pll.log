@@ -1,0 +1,30 @@
+sim/mc/final_pll_tt.txt: 8 runs
+  vctrl    nom     1.558  mean     1.560  sd    0.002  min     1.557  max     1.562
+  drift_mV nom     0.000  mean     0.000  sd    0.000  min     0.000  max     0.000
+  vc_pp_mV nom     1.140  mean     1.127  sd    0.029  min     1.100  max     1.170
+  v1_mV    nom     0.067  mean     0.066  sd    0.002  min     0.064  max     0.068
+  flo      nom   785.664  mean   785.664  sd    0.001  min   785.663  max   785.664
+  pe_ps    nom     8.900  mean    12.012  sd   14.266  min   -13.300  max    28.300
+  sb1      nom   -60.700  mean   -60.775  sd    0.219  min   -61.000  max   -60.400
+  sb2      nom   -69.800  mean   -69.938  sd    0.239  min   -70.200  max   -69.600
+  sb3      nom   -76.300  mean   -76.400  sd    0.251  min   -76.700  max   -76.000
+sim/mc/final_pll_ss.txt: 5 runs
+  vctrl    nom     1.092  mean     1.094  sd    0.002  min     1.091  max     1.096
+  drift_mV nom     0.000  mean     0.000  sd    0.000  min     0.000  max     0.000
+  vc_pp_mV nom     1.790  mean     1.752  sd    0.054  min     1.690  max     1.820
+  v1_mV    nom     0.135  mean     0.131  sd    0.004  min     0.126  max     0.137
+  flo      nom   785.663  mean   785.664  sd    0.001  min   785.663  max   785.664
+  pe_ps    nom    57.800  mean    65.880  sd   10.718  min    50.000  max    75.000
+  sb1      nom   -54.100  mean   -54.340  sd    0.297  min   -54.600  max   -53.900
+  sb2      nom   -65.000  mean   -65.300  sd    0.332  min   -65.600  max   -64.800
+  sb3      nom   -72.200  mean   -72.560  sd    0.313  min   -72.900  max   -72.100
+sim/mc/final_pll_ff.txt: 5 runs
+  vctrl    nom     1.185  mean     1.186  sd    0.002  min     1.185  max     1.189
+  drift_mV nom     0.000  mean     0.000  sd    0.000  min     0.000  max     0.000
+  vc_pp_mV nom     0.550  mean     0.534  sd    0.013  min     0.520  max     0.550
+  v1_mV    nom     0.025  mean     0.025  sd    0.001  min     0.024  max     0.025
+  flo      nom   785.664  mean   785.664  sd    0.000  min   785.663  max   785.664
+  pe_ps    nom    28.900  mean    36.000  sd    8.216  min    25.000  max    45.000
+  sb1      nom   -65.200  mean   -65.420  sd    0.205  min   -65.600  max   -65.100
+  sb2      nom   -74.200  mean   -74.420  sd    0.205  min   -74.600  max   -74.100
+  sb3      nom   -80.500  mean   -80.720  sd    0.192  min   -80.900  max   -80.400

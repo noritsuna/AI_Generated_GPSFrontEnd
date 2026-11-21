@@ -1,0 +1,54 @@
+resistors (ppolyf_u_1k): W, L (um), sheet estimate, model at typical 27 C (ratio), range over 3 corners x 3 temperatures, users
+  W  1.00 L   1.00  sheet     1000  model    1201.8 ohm (x1.202)  min     904.7 (-24.7 %) max    1549.1 (+28.9 %)  4: sk_lpf1.XR1P sk_lpf1.XR1N sk_lpf2.XR1P sk_lpf2.XR1N
+  W  1.00 L   2.00  sheet     2000  model    2230.4 ohm (x1.115)  min    1690.1 (-24.2 %) max    2844.2 (+27.5 %)  10: bias_if.XRREF0 bias_if.XRREF1 bias_if.XRREF2 bias_if.XRREF3
+  W  1.00 L   3.00  sheet     3000  model    3259.0 ohm (x1.086)  min    2475.5 (-24.0 %) max    4139.4 (+27.0 %)  6: lna_nc.XRSR vga.XRDA sk_lpf1.XR2P sk_lpf1.XR2N
+  W  1.00 L   4.60  sheet     4600  model    4904.7 ohm (x1.066)  min    3732.2 (-23.9 %) max    6211.6 (+26.6 %)  1: bias_gen.XRB
+  W  1.00 L   5.00  sheet     5000  model    5316.2 ohm (x1.063)  min    4046.3 (-23.9 %) max    6729.6 (+26.6 %)  2: mixer_iq.XRT1 mixer_iq.XRT2
+  W  1.00 L  10.00  sheet    10000  model   10459.1 ohm (x1.046)  min    7973.4 (-23.8 %) max   13205.4 (+26.3 %)  3: gnss_afe_top.XRMON lna_nc.XRB2 loop_filter.XRZ
+  W  1.00 L  13.00  sheet    13000  model   13544.8 ohm (x1.042)  min   10329.6 (-23.7 %) max   17090.8 (+26.2 %)  1: mixer_iq.XRBB
+  W  1.00 L  20.00  sheet    20000  model   20744.8 ohm (x1.037)  min   15827.4 (-23.7 %) max   26156.8 (+26.1 %)  10: mixer_iq.XRBA mixer_iq.XRACL1P mixer_iq.XRACL1N mixer_iq.XRACL2P
+  W  1.00 L  25.00  sheet    25000  model   25887.7 ohm (x1.036)  min   19754.4 (-23.7 %) max   32632.5 (+26.1 %)  2: vga.XRCB vga_fix.XRCB
+  W  1.00 L  28.30  sheet    28300  model   29282.0 ohm (x1.035)  min   22346.3 (-23.7 %) max   36906.4 (+26.0 %)  1: bias_if.XRDB
+  W  1.00 L  34.00  sheet    34000  model   35144.9 ohm (x1.034)  min   26823.1 (-23.7 %) max   44288.7 (+26.0 %)  2: vga.XRCA vga_fix.XRCA
+  W  1.00 L  37.00  sheet    37000  model   38230.7 ohm (x1.033)  min   29179.3 (-23.7 %) max   48174.2 (+26.0 %)  1: mixer_iq.XRLLB
+  W  1.00 L  47.00  sheet    47000  model   48516.4 ohm (x1.032)  min   37033.3 (-23.7 %) max   61125.6 (+26.0 %)  1: mixer_iq.XRLUA
+  W  1.00 L  56.00  sheet    56000  model   57773.6 ohm (x1.032)  min   44102.0 (-23.7 %) max   72781.9 (+26.0 %)  1: mixer_iq.XRLUB
+  W  1.00 L  65.00  sheet    65000  model   67030.8 ohm (x1.031)  min   51170.6 (-23.7 %) max   84438.1 (+26.0 %)  1: mixer_iq.XRLLA
+  W  1.00 L  70.00  sheet    70000  model   72173.7 ohm (x1.031)  min   55097.6 (-23.7 %) max   90913.8 (+26.0 %)  1: bias_if.XRDA
+  W  1.00 L 100.00  sheet   100000  model  103031.0 ohm (x1.030)  min   78659.8 (-23.7 %) max  129768.0 (+26.0 %)  7: spi_regs.XRPU vco_ring4.XRSUA vco_ring4.XRSUB vga.XRB1
+  W  1.00 L 200.00  sheet   200000  model  205889.0 ohm (x1.029)  min  157200.0 (-23.6 %) max  259282.0 (+25.9 %)  2: spi_regs.XRPOR refbuf.XRF
+  W  2.00 L   1.80  sheet      900  model     997.1 ohm (x1.108)  min     755.0 (-24.3 %) max    1273.2 (+27.7 %)  1: vga.XRDB
+  W  2.00 L   2.00  sheet     1000  model    1098.5 ohm (x1.098)  min     832.4 (-24.2 %) max    1400.8 (+27.5 %)  1: pll_core.XRREF
+  W  2.00 L   4.00  sheet     2000  model    2111.6 ohm (x1.056)  min    1606.0 (-23.9 %) max    2676.4 (+26.7 %)  2: vco_ring4.XRDEG loop_filter.XRVT
+  W  2.00 L   4.23  sheet     2115  model    2228.1 ohm (x1.053)  min    1694.9 (-23.9 %) max    2823.1 (+26.7 %)  4: vga.XRL1 vga.XRL2 vga_fix.XRL1 vga_fix.XRL2
+  W  2.00 L  20.10  sheet    10050  model   10267.3 ohm (x1.022)  min    7833.5 (-23.7 %) max   12945.7 (+26.1 %)  7: afc_dac.XR1_0 afc_dac.XR1_1 afc_dac.XR1_2 afc_dac.XR1_3
+  W  2.00 L  40.00  sheet    20000  model   20347.9 ohm (x1.017)  min   15530.9 (-23.7 %) max   25638.8 (+26.0 %)  9: afc_dac.XRT afc_dac.XR2_0 afc_dac.XR2_1 afc_dac.XR2_2
+  W  4.00 L   5.00  sheet     1250  model    1299.3 ohm (x1.039)  min     989.0 (-23.9 %) max    1644.8 (+26.6 %)  4: mixer_iq.XRL1I mixer_iq.XRL2I mixer_iq.XRL1Q mixer_iq.XRL2Q
+  W 10.00 L   1.40  sheet      140  model     157.0 ohm (x1.122)  min     118.6 (-24.4 %) max     201.2 (+28.1 %)  2: adc2b.XRL1 adc2b.XRL2
+  W 10.00 L   2.00  sheet      200  model     217.1 ohm (x1.085)  min     164.5 (-24.2 %) max     276.8 (+27.5 %)  1: lna_nc.XR1
+  W 10.00 L   3.00  sheet      300  model     317.2 ohm (x1.057)  min     240.9 (-24.0 %) max     402.9 (+27.0 %)  1: lna_nc.XRS
+  W 10.00 L  22.30  sheet     2230  model    2249.3 ohm (x1.009)  min    1716.3 (-23.7 %) max    2835.7 (+26.1 %)  1: adc2b.XRL3
+  W 10.00 L  40.10  sheet     4010  model    4031.3 ohm (x1.005)  min    3076.9 (-23.7 %) max    5079.5 (+26.0 %)  1: adc2b.XRL0
+  W 10.60 L   1.00  sheet       94  model     110.3 ohm (x1.170)  min      83.1 (-24.7 %) max     142.2 (+28.9 %)  1: vga_fix.XRDF
+  W 30.00 L   2.17  sheet       72  model      77.9 ohm (x1.077)  min      59.0 (-24.2 %) max      99.2 (+27.4 %)  1: lna_nc.XR2
+MIM capacitors (cap_mim_2f0_m4m5_noshield)
+    5.0 x   5.0  sheet   0.050 pF  model   0.055 pF (x1.090)  min -10.1 % max +10.1 %  2: vco_ring4.XCSUA vco_ring4.XCSUB
+   12.0 x  12.0  sheet   0.288 pF  model   0.298 pF (x1.035)  min -10.1 % max +10.1 %  1: divbuf.XCIN
+   13.8 x  13.8  sheet   0.381 pF  model   0.392 pF (x1.030)  min -10.1 % max +10.1 %  2: sk_lpf2.XC2WP sk_lpf2.XC2WN
+   17.8 x  17.8  sheet   0.635 pF  model   0.649 pF (x1.022)  min -10.1 % max +10.1 %  2: sk_lpf2.XC2NP sk_lpf2.XC2NN
+   18.4 x  18.4  sheet   0.677 pF  model   0.691 pF (x1.021)  min -10.1 % max +10.1 %  2: sk_lpf2.XC2P sk_lpf2.XC2N
+   19.4 x  19.4  sheet   0.757 pF  model   0.771 pF (x1.020)  min -10.1 % max +10.1 %  1: loop_filter.XC3
+   20.0 x  20.0  sheet   0.800 pF  model   0.815 pF (x1.019)  min -10.1 % max +10.1 %  6: bias_gen.XCNB bias_gen.XCPB refbuf.XCIN bias_if.XCC
+   27.5 x  27.5  sheet   1.510 pF  model   1.529 pF (x1.012)  min -10.1 % max +10.1 %  2: sk_lpf1.XC2WP sk_lpf1.XC2WN
+   30.0 x  30.0  sheet   1.800 pF  model   1.820 pF (x1.011)  min -10.1 % max +10.1 %  3: vco_ring4.XCVR vga.XCCM vga_fix.XCCM
+   31.6 x  31.6  sheet   1.997 pF  model   2.017 pF (x1.010)  min -10.1 % max +10.1 %  8: mixer_iq.XCACL1P mixer_iq.XCACL1N mixer_iq.XCACL2P mixer_iq.XCACL2N
+   32.0 x  32.0  sheet   2.048 pF  model   2.068 pF (x1.010)  min -10.1 % max +10.1 %  1: cp.XCVD
+   35.5 x  35.5  sheet   2.518 pF  model   2.539 pF (x1.008)  min -10.1 % max +10.1 %  2: sk_lpf1.XC2NP sk_lpf1.XC2NN
+   36.6 x  36.6  sheet   2.685 pF  model   2.707 pF (x1.008)  min -10.1 % max +10.1 %  2: sk_lpf1.XC2P sk_lpf1.XC2N
+   42.6 x  42.6  sheet   3.630 pF  model   3.652 pF (x1.006)  min -10.1 % max +10.1 %  2: sk_lpf1.XC1P sk_lpf1.XC1N
+   45.0 x  45.0  sheet   4.050 pF  model   4.073 pF (x1.006)  min -10.1 % max +10.1 %  7: lna_nc.XCC2 lna_nc.XCOP lna_nc.XCON mixer_iq.XCL1I
+   49.5 x  49.5  sheet   4.901 pF  model   4.923 pF (x1.005)  min -10.1 % max +10.1 %  1: loop_filter.XC2
+   50.0 x  50.0  sheet   5.000 pF  model   5.023 pF (x1.005)  min -10.1 % max +10.1 %  11: lna_nc.XCB1 lna_nc.XCB2 mixer_iq.XCLOU mixer_iq.XCLOL
+   70.0 x  70.0  sheet   9.800 pF  model   9.818 pF (x1.002)  min -10.1 % max +10.1 %  2: spi_regs.XCPOR mixer_iq.XCBRF
+   77.0 x  77.0  sheet  11.858 pF  model  11.873 pF (x1.001)  min -10.1 % max +10.1 %  1: loop_filter.XC1
+   95.8 x  95.8  sheet  18.355 pF  model  18.355 pF (x1.000)  min -10.1 % max +10.1 %  2: sk_lpf2.XC1P sk_lpf2.XC1N

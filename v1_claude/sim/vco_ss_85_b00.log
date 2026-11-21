@@ -1,0 +1,9 @@
+RES vc=0.75 f= qerr= ivdd=-0.00057394 vr=1.32147
+RES vc=1 f= qerr= ivdd=-0.000792266 vr=1.39306
+RES vc=1.25 f= qerr= ivdd=-0.00135191 vr=1.63713
+RES vc=1.5 f= qerr= ivdd=-0.00182354 vr=1.81738
+RES vc=1.75 f= qerr= ivdd=-0.00229244 vr=1.97235
+RES vc=2 f=1.1489E+09 qerr=2.66083 ivdd=-0.00276361 vr=2.11498
+RES vc=2.25 f=1.24795E+09 qerr=2.57467 ivdd=-0.00323203 vr=2.24783
+RES vc=2.5 f=1.33544E+09 qerr=2.47825 ivdd=-0.00369065 vr=2.37092
+RES vc=2.75 f=1.41071E+09 qerr=2.2969 ivdd=-0.00412249 vr=2.48125

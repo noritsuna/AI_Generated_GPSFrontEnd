@@ -1,0 +1,7 @@
+.subckt vmon_buf IN NB OUT VDD VSS
+XMT t NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=1
+XM1 x IN t VSS nfet_03v3 L=1u W=16u nf=2  m=1
+XM2 OUT OUT t VSS nfet_03v3 L=1u W=16u nf=2  m=1
+XMP1 x x VDD VDD pfet_03v3 L=2u W=8u nf=2  m=1
+XMP2 OUT x VDD VDD pfet_03v3 L=2u W=8u nf=2  m=1
+.ends

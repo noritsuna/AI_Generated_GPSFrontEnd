@@ -1,0 +1,163 @@
+inv_dig      route=True DRC=0 LVS=OK size=27x48um 1s 
+inv_lo1      route=True DRC=0 LVS=OK size=27x48um 1s 
+inv_lo2      route=True DRC=0 LVS=OK size=29x48um 1s 
+nand2        route=True DRC=0 LVS=OK size=35x47um 1s 
+nand3        route=True DRC=0 LVS=OK size=35x89um 6s 
+nor2         route=True DRC=0 LVS=OK size=35x49um 1s 
+tspc_dff     route=True DRC=0 LVS=OK size=43x90um 28s 
+div2         ERROR AttributeError("'Router' object has no attribute 'fp_of'")
+div3         ERROR AttributeError("'Router' object has no attribute 'fp_of'")
+div96        ERROR AttributeError("'Router' object has no attribute 'fp_of'")
+dff_r        ERROR AttributeError("'Router' object has no attribute 'fp_of'")
+pfd          ERROR AttributeError("'Router' object has no attribute 'fp_of'")
+div2         route=False DRC=0 LVS=OK size=66x111um 28s 
+div3         route=False DRC=0 LVS=OK size=152x111um 1s 
+div96        route=False DRC=0 LVS=OK size=309x257um 339s 
+dff_r        route=False DRC=0 LVS=OK size=175x214um 6s 
+pfd          route=False DRC=0 LVS=OK size=416x297um 697s 
+cp           route=False DRC=0 LVS=OK size=136x16104um 1796s 
+loop_filter  route=False DRC=0 LVS=FAIL size=132x3490um 199s ['Final result: Top level cell failed pin matching.']
+refbuf       route=True DRC=0 LVS=OK size=66x121um 4s 
+divbuf       route=True DRC=0 LVS=OK size=35x121um 2s 
+pll_core     route=False DRC=0 LVS=OK size=1137x16125um 1307s 
+vco_cell     route=True DRC=0 LVS=FAIL size=41x92um 2s ['Port matching may fail to disambiguate symmetries.']
+vco_cellk    route=True DRC=0 LVS=FAIL size=46x93um 3s ['Port matching may fail to disambiguate symmetries.']
+vco_ring4    route=False DRC=0 LVS=OK size=948x10240um 1921s 
+sa_comp      route=False DRC=0 LVS=OK size=119x177um 179s 
+adc2b        route=False DRC=0 LVS=OK size=387x365um 921s 
+afc_dac      route=False DRC=0 LVS=OK size=203x223um 766s 
+bias_gen     route=True DRC=0 LVS=OK size=86x194um 7s 
+bias_if      route=False DRC=0 LVS=FAIL size=102x16115um 1175s ['Final result: Top level cell failed pin matching.']
+vga          route=True DRC=0 LVS=OK size=235x170um 345s 
+sk_lpf1      route=False DRC=0 LVS=FAIL size=219x20155um 1119s ['Final result: Top level cell failed pin matching.']
+cp           route=False DRC=0 LVS=OK size=110x142um 149s 
+loop_filter  route=False DRC=0 LVS=FAIL size=393x335um 161s ['Final result: Top level cell failed pin matching.']
+refbuf       route=True DRC=0 LVS=OK size=66x121um 4s 
+divbuf       route=True DRC=0 LVS=OK size=35x121um 2s 
+pll_core     route=False DRC=0 LVS=OK size=861x668um 1643s 
+vco_cell     route=True DRC=0 LVS=FAIL size=41x92um 2s ['Port matching may fail to disambiguate symmetries.']
+vco_cellk    route=True DRC=0 LVS=FAIL size=46x93um 3s ['Port matching may fail to disambiguate symmetries.']
+vco_cell     route=True DRC=0 LVS=OK size=41x93um 13s 
+vco_cellk    route=True DRC=0 LVS=OK size=46x94um 19s 
+loop_filter  route=False DRC=0 LVS=FAIL size=393x335um 179s ['Final result: Top level cell failed pin matching.']
+loop_filter  route=True DRC=0 LVS=OK size=393x335um 7s 
+=== rebuild Thu Nov  5 04:10:21 AM JST 2026
+inv_dig      route=True DRC=0 LVS=OK size=27x48um 1s 
+inv_lo1      route=True DRC=0 LVS=OK size=27x48um 1s 
+inv_lo2      route=True DRC=0 LVS=OK size=29x48um 1s 
+nand2        route=True DRC=0 LVS=OK size=35x47um 1s 
+nand3        route=True DRC=0 LVS=OK size=35x89um 5s 
+nor2         route=True DRC=0 LVS=OK size=35x49um 1s 
+tspc_dff     route=True DRC=0 LVS=OK size=43x90um 25s 
+div2         route=False DRC=0 LVS=OK size=66x111um 1s 
+div3         route=False DRC=0 LVS=OK size=152x111um 1s 
+div96        route=False DRC=0 LVS=OK size=309x257um 314s 
+dff_r        route=False DRC=0 LVS=OK size=175x214um 1s 
+pfd          route=False DRC=0 LVS=OK size=416x297um 1212s 
+cp           route=False DRC=0 LVS=OK size=110x142um 139s 
+loop_filter  route=True DRC=0 LVS=OK size=393x335um 7s 
+refbuf       route=True DRC=0 LVS=OK size=66x121um 3s 
+divbuf       route=True DRC=0 LVS=OK size=35x121um 2s 
+pll_core     route=False DRC=0 LVS=OK size=861x668um 5525s 
+vco_cell     route=True DRC=0 LVS=OK size=41x93um 11s 
+vco_cellk    route=True DRC=0 LVS=OK size=46x94um 16s 
+vco_ring4    route=False DRC=0 LVS=OK size=334x379um 2195s 
+sa_comp      route=False DRC=0 LVS=OK size=119x177um 168s 
+adc2b        route=False DRC=0 LVS=OK size=387x365um 1616s 
+afc_dac      route=False DRC=0 LVS=OK size=203x223um 761s 
+bias_gen     route=True DRC=0 LVS=OK size=86x194um 7s 
+bias_if      route=True DRC=0 LVS=FAIL size=102x135um 29s ['Final result: Circuits match uniquely.']
+vga          route=True DRC=0 LVS=OK size=235x170um 299s 
+sk_lpf1      route=True DRC=0 LVS=OK size=205x270um 158s 
+sk_lpf2      route=True DRC=0 LVS=OK size=292x245um 96s 
+if_chain     route=False DRC=0 LVS=OK size=812x736um 11026s 
+lna_nc       route=True DRC=0 LVS=OK size=200x251um 15s 
+mixer_iq     route=True DRC=0 LVS=OK size=278x273um 173s 
+bias_if      route=True DRC=0 LVS=OK size=102x135um 31s 
+lna_nc       route=True DRC=123 LVS=OK size=200x254um 6s 
+lna_nc       route=True DRC=0 LVS=OK size=200x254um 6s 
+div2         route=False DRC=0 LVS=FAIL size=66x111um 25s ['Final result: Top level cell failed pin matching.']
+div2         route=True DRC=0 LVS=FAIL size=66x111um 2s ['Port matching may fail to disambiguate symmetries.']
+tspc_dff     route=True DRC=0 LVS=FAIL size=43x90um 2s ['Port matching may fail to disambiguate symmetries.']
+tspc_dff     route=True DRC=0 LVS=OK size=43x90um 2s 
+div2         route=True DRC=0 LVS=OK size=66x111um 1s 
+=== rebuild2 Thu Nov  5 11:03:54 AM JST 2026 (pad exits, tree fix, LVS final-result check)
+div3         route=True DRC=0 LVS=OK size=152x111um 3s 
+div96        route=True DRC=0 LVS=OK size=309x257um 6s 
+dff_r        route=True DRC=0 LVS=OK size=175x214um 12s 
+pfd          route=True DRC=0 LVS=OK size=416x297um 32s 
+cp           route=True DRC=0 LVS=OK size=110x142um 3s 
+lna_nc       route=True DRC=6 LVS=OK size=200x254um 238s 
+lna_nc       route=True DRC=0 LVS=OK size=200x254um 236s 
+lna_nc       route=True DRC=0 LVS=OK size=200x254um 222s 
+lna_nc       route=True DRC=0 LVS=OK size=222x191um 221s 
+lna_nc       route=True DRC=0 LVS=OK size=222x191um 35s 
+mixer_iq     route=True DRC=0 LVS=OK size=278x273um 297s 
+mixer_iq     route=True DRC=0 LVS=OK size=278x273um 284s 
+pll_core     route=False DRC=0 LVS=FAIL size=861x668um 5583s ['Final result: Top level cell failed pin matching.']
+vco_ring4    route=True DRC=0 LVS=OK size=334x379um 211s 
+sa_comp      route=True DRC=0 LVS=OK size=119x177um 17s 
+adc2b        route=True DRC=0 LVS=OK size=387x365um 43s 
+afc_dac      route=True DRC=0 LVS=FAIL size=203x223um 100s ['Port matching may fail to disambiguate symmetries.']
+if_chain     route=False DRC=0 LVS=FAIL size=812x736um 3426s ['Final result: Top level cell failed pin matching.']
+=== rebuild3 Thu Nov  5 01:43:45 PM JST 2026 (afc_dac net-name fix)
+afc_dac      route=True DRC=0 LVS=FAIL size=203x223um 105s ['Port matching may fail to disambiguate symmetries.']
+=== rebuild3 Thu Nov  5 01:50:49 PM JST 2026 (magload pin-net ownership, REUSE subs)
+afc_dac      route=True DRC=0 LVS=OK size=211x236um 131s 
+pll_core     route=True DRC=0 LVS=OK size=554x914um 299s 
+=== rebuild3 Thu Nov  5 02:07:00 PM JST 2026 (vco_ring4 2x2 ring floorplan)
+vco_ring4    route=True DRC=0 LVS=OK size=315x529um 723s 
+=== rebuild3 Thu Nov  5 02:29:58 PM JST 2026 (vco_cell 2-row floor)
+vco_ring4    route=True DRC=0 LVS=OK size=315x446um 579s 
+=== rebuild3 Thu Nov  5 02:44:44 PM JST 2026 (vco tap buffers next to their stage)
+if_chain     route=False DRC=0 LVS=FAIL size=813x715um 3687s ['Final result: Top level cell failed pin matching.']
+vco_ring4    route=True DRC=0 LVS=OK size=234x510um 467s 
+=== rebuild3 Thu Nov  5 02:55:21 PM JST 2026 (if_chain, netof for fresh sub-modules)
+=== rebuild3 Thu Nov  5 02:57:21 PM JST 2026 (vco_core: flat 2-row ring core)
+vco_ring4    route=True DRC=0 LVS=OK size=234x466um 101s 
+=== rebuild3 Thu Nov  5 03:03:51 PM JST 2026 (vco_core kick order fix)
+vco_ring4    route=True DRC=0 LVS=OK size=234x443um 103s 
+if_chain     route=True DRC=12 LVS=OK size=813x715um 630s 
+=== rebuild3 Thu Nov  5 03:07:35 PM JST 2026 (if_chain, drop vias on sub vias)
+if_chain     route=True DRC=0 LVS=OK size=813x715um 547s 
+=== rebuild3 Thu Nov  5 04:50:29 PM JST 2026 (vco_ring4 rev D: ring at LO/2 + XOR combiners)
+vco_ring4    route=True DRC=0 LVS=FAIL size=365x586um 646s ['Port matching may fail to disambiguate symmetries.']
+=== rebuild3 Thu Nov  5 05:02:12 PM JST 2026 (vco rev D, kick devices ungrouped)
+vco_ring4    route=True DRC=0 LVS=FAIL size=365x559um 470s ['Port matching may fail to disambiguate symmetries.']
+=== rebuild3 Thu Nov  5 05:12:18 PM JST 2026 (vco rev D, vmap allows own keep-out ring)
+vco_ring4    route=True DRC=22 LVS=OK size=365x559um 370s 
+=== rebuild3 Thu Nov  5 05:25:36 PM JST 2026 (vco rev D, custom compact core)
+vco_ring4    route=True DRC=0 LVS=OK size=365x556um 212s 
+=== rebuild3 Thu Nov  5 05:34:29 PM JST 2026 (vco rev D, tap buffers inside the core)
+vco_ring4    route=True DRC=0 LVS=OK size=365x557um 213s 
+=== rebuild3 Thu Nov  5 05:54:25 PM JST 2026 (vco: 2x2 core + lo_comb, into mag_vco)
+vco_ring4    route=True DRC=0 LVS=OK size=502x366um 169s 
+=== rebuild3 Thu Nov  5 06:01:47 PM JST 2026 (vco: column core, mag_vco)
+vco_ring4    route=True DRC=0 LVS=OK size=502x365um 177s 
+=== rebuild3 Thu Nov  5 06:13:38 PM JST 2026 (vco: ring x2, L=0.35, mag_vco)
+vco_ring4    route=True DRC=0 LVS=OK size=502x364um 187s 
+sk_lpf1      route=True DRC=0 LVS=OK size=191x270um 162s 
+sk_lpf2      route=True DRC=0 LVS=OK size=219x340um 6s 
+if_chain     route=True DRC=0 LVS=OK size=799x830um 157s 
+mixer_iq     route=True DRC=0 LVS=OK size=323x345um 134s 
+loop_filter  route=True DRC=0 LVS=OK size=393x335um 4s 
+pll_core     route=True DRC=0 LVS=OK size=554x898um 77s 
+loop_filter  route=True DRC=0 LVS=OK size=421x335um 8s 
+pll_core     route=True DRC=0 LVS=OK size=554x898um 78s 
+loop_filter  route=True DRC=0 LVS=OK size=450x335um 8s 
+pll_core     route=True DRC=0 LVS=OK size=861x668um 104s 
+pll_core     route=True DRC=0 LVS=OK size=472x1096um 74s 
+pll_core     route=True DRC=0 LVS=OK size=552x940um 89s 
+cp           route=True DRC=0 LVS=OK size=134x202um 5s 
+pll_core     route=True DRC=0 LVS=OK size=576x940um 50s 
+pll_core     route=True DRC=0 LVS=OK size=576x940um 58s 
+cp           route=True DRC=0 LVS=OK size=133x205um 5s 
+loop_filter  route=True DRC=0 LVS=OK size=427x335um 8s 
+pll_core     route=True DRC=0 LVS=OK size=575x940um 53s 
+vco_ring4    route=True DRC=0 LVS=OK size=611x357um 68s 
+loop_filter  route=True DRC=0 LVS=OK size=438x335um 8s 
+pll_core     route=True DRC=0 LVS=OK size=575x940um 58s 
+refbuf       route=True DRC=0 LVS=OK size=66x121um 2s 
+pll_core     route=True DRC=0 LVS=OK size=575x940um 128s 
+pll_core     route=True DRC=0 LVS=OK size=575x1002um 252s 
+pll_core     route=True DRC=0 LVS=OK size=575x1003um 75s 

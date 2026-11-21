@@ -1,0 +1,3 @@
+{"cell": "divbuf",
+ "nets": {"b": {"MP1:sd": 0.38, "MN1:sd": -0.38}},
+ "opts": {"b": {"pick": "$4"}}}

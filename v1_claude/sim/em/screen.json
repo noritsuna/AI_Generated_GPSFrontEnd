@@ -1,0 +1,392 @@
+[
+ {
+  "net": "xdut.xlna.on_i",
+  "cell": "lna_nc",
+  "local": "on_i",
+  "mA": 13.077
+ },
+ {
+  "net": "xdut.vr",
+  "cell": "vco_ring4",
+  "local": "VR",
+  "mA": 3.311
+ },
+ {
+  "net": "xdut.xlna.op_i",
+  "cell": "lna_nc",
+  "local": "op_i",
+  "mA": 3.171
+ },
+ {
+  "net": "rfin",
+  "cell": "lna_nc",
+  "local": "RFIN",
+  "mA": 3.171
+ },
+ {
+  "net": "xdut.xmix.tQ",
+  "cell": "mixer_iq",
+  "local": "tQ",
+  "mA": 1.928
+ },
+ {
+  "net": "xdut.xmix.tI",
+  "cell": "mixer_iq",
+  "local": "tI",
+  "mA": 1.926
+ },
+ {
+  "net": "xdut.xmix.xnQ",
+  "cell": "mixer_iq",
+  "local": "xnQ",
+  "mA": 0.975
+ },
+ {
+  "net": "xdut.xmix.xnI",
+  "cell": "mixer_iq",
+  "local": "xnI",
+  "mA": 0.974
+ },
+ {
+  "net": "xdut.mqp",
+  "cell": "mixer_iq",
+  "local": "IFQP",
+  "mA": 0.966
+ },
+ {
+  "net": "xdut.mip",
+  "cell": "mixer_iq",
+  "local": "IFIP",
+  "mA": 0.964
+ },
+ {
+  "net": "xdut.min",
+  "cell": "mixer_iq",
+  "local": "IFIN",
+  "mA": 0.963
+ },
+ {
+  "net": "xdut.mqn",
+  "cell": "mixer_iq",
+  "local": "IFQN",
+  "mA": 0.963
+ },
+ {
+  "net": "xdut.xmix.xpQ",
+  "cell": "mixer_iq",
+  "local": "xpQ",
+  "mA": 0.953
+ },
+ {
+  "net": "xdut.xmix.xpI",
+  "cell": "mixer_iq",
+  "local": "xpI",
+  "mA": 0.953
+ },
+ {
+  "net": "xdut.xifq.xv5.s2",
+  "cell": "vga_fix",
+  "local": "s2",
+  "mA": 0.525
+ },
+ {
+  "net": "xdut.aqp",
+  "cell": "vga_fix",
+  "local": "OUTP",
+  "mA": 0.525
+ },
+ {
+  "net": "xdut.xmix.mnaI",
+  "cell": "mixer_iq",
+  "local": "mnaI",
+  "mA": 0.489
+ },
+ {
+  "net": "xdut.xmix.mnbQ",
+  "cell": "mixer_iq",
+  "local": "mnbQ",
+  "mA": 0.488
+ },
+ {
+  "net": "xdut.xmix.mnaQ",
+  "cell": "mixer_iq",
+  "local": "mnaQ",
+  "mA": 0.487
+ },
+ {
+  "net": "xdut.xmix.mnbI",
+  "cell": "mixer_iq",
+  "local": "mnbI",
+  "mA": 0.485
+ },
+ {
+  "net": "xdut.xmix.mpaI",
+  "cell": "mixer_iq",
+  "local": "mpaI",
+  "mA": 0.479
+ },
+ {
+  "net": "xdut.xmix.mpbQ",
+  "cell": "mixer_iq",
+  "local": "mpbQ",
+  "mA": 0.477
+ },
+ {
+  "net": "xdut.xmix.mpaQ",
+  "cell": "mixer_iq",
+  "local": "mpaQ",
+  "mA": 0.476
+ },
+ {
+  "net": "xdut.xmix.mpbI",
+  "cell": "mixer_iq",
+  "local": "mpbI",
+  "mA": 0.474
+ },
+ {
+  "net": "xdut.xifi.xv5.s1",
+  "cell": "vga_fix",
+  "local": "s1",
+  "mA": 0.464
+ },
+ {
+  "net": "xdut.ain",
+  "cell": "vga_fix",
+  "local": "OUTN",
+  "mA": 0.464
+ },
+ {
+  "net": "xdut.xifq.xv1.s2",
+  "cell": "vga",
+  "local": "s2",
+  "mA": 0.462
+ },
+ {
+  "net": "xdut.xifq.a1p",
+  "cell": "vga",
+  "local": "OUTP",
+  "mA": 0.462
+ },
+ {
+  "net": "xdut.xifq.xv3.s2",
+  "cell": "vga",
+  "local": "s2",
+  "mA": 0.462
+ },
+ {
+  "net": "xdut.xifq.a3p",
+  "cell": "vga",
+  "local": "OUTP",
+  "mA": 0.462
+ },
+ {
+  "net": "xdut.xifi.xv3.s1",
+  "cell": "vga",
+  "local": "s1",
+  "mA": 0.461
+ },
+ {
+  "net": "xdut.xifi.xv3.s2",
+  "cell": "vga",
+  "local": "s2",
+  "mA": 0.461
+ },
+ {
+  "net": "xdut.xifq.xv3.s1",
+  "cell": "vga",
+  "local": "s1",
+  "mA": 0.461
+ },
+ {
+  "net": "xdut.xifi.xv1.s1",
+  "cell": "vga",
+  "local": "s1",
+  "mA": 0.46
+ },
+ {
+  "net": "xdut.xifi.xv1.s2",
+  "cell": "vga",
+  "local": "s2",
+  "mA": 0.46
+ },
+ {
+  "net": "xdut.xifq.xv1.s1",
+  "cell": "vga",
+  "local": "s1",
+  "mA": 0.46
+ },
+ {
+  "net": "xdut.xifi.a1n",
+  "cell": "vga",
+  "local": "OUTN",
+  "mA": 0.46
+ },
+ {
+  "net": "xdut.xifi.a3n",
+  "cell": "vga",
+  "local": "OUTN",
+  "mA": 0.46
+ },
+ {
+  "net": "xdut.xifi.xv5.s2",
+  "cell": "vga_fix",
+  "local": "s2",
+  "mA": 0.458
+ },
+ {
+  "net": "xdut.xifq.xv5.s1",
+  "cell": "vga_fix",
+  "local": "s1",
+  "mA": 0.458
+ },
+ {
+  "net": "xdut.xifi.a3p",
+  "cell": "vga",
+  "local": "OUTP",
+  "mA": 0.458
+ },
+ {
+  "net": "xdut.xifi.a1p",
+  "cell": "vga",
+  "local": "OUTP",
+  "mA": 0.458
+ },
+ {
+  "net": "xdut.xifq.a1n",
+  "cell": "vga",
+  "local": "OUTN",
+  "mA": 0.456
+ },
+ {
+  "net": "xdut.xifq.a3n",
+  "cell": "vga",
+  "local": "OUTN",
+  "mA": 0.456
+ },
+ {
+  "net": "xdut.aip",
+  "cell": "vga_fix",
+  "local": "OUTP",
+  "mA": 0.449
+ },
+ {
+  "net": "xdut.xifq.xv4.s2",
+  "cell": "vga_fix",
+  "local": "s2",
+  "mA": 0.437
+ },
+ {
+  "net": "xdut.xifq.a4p",
+  "cell": "vga_fix",
+  "local": "OUTP",
+  "mA": 0.437
+ },
+ {
+  "net": "xdut.xifi.xv4.s2",
+  "cell": "vga_fix",
+  "local": "s2",
+  "mA": 0.426
+ },
+ {
+  "net": "xdut.xifi.xv4.s1",
+  "cell": "vga_fix",
+  "local": "s1",
+  "mA": 0.426
+ },
+ {
+  "net": "xdut.xifi.a4n",
+  "cell": "vga_fix",
+  "local": "OUTN",
+  "mA": 0.426
+ },
+ {
+  "net": "xdut.xifq.xv4.s1",
+  "cell": "vga_fix",
+  "local": "s1",
+  "mA": 0.426
+ },
+ {
+  "net": "xdut.xifi.a4p",
+  "cell": "vga_fix",
+  "local": "OUTP",
+  "mA": 0.42
+ },
+ {
+  "net": "xdut.xifq.a4n",
+  "cell": "vga_fix",
+  "local": "OUTN",
+  "mA": 0.41
+ },
+ {
+  "net": "xdut.aqn",
+  "cell": "vga_fix",
+  "local": "OUTN",
+  "mA": 0.388
+ },
+ {
+  "net": "xdut.xpll.xdb.b",
+  "cell": "divbuf",
+  "local": "b",
+  "mA": 0.38
+ },
+ {
+  "net": "xdut.xifq.xv2.s2",
+  "cell": "vga",
+  "local": "s2",
+  "mA": 0.333
+ },
+ {
+  "net": "xdut.xifi.xv2.s1",
+  "cell": "vga",
+  "local": "s1",
+  "mA": 0.332
+ },
+ {
+  "net": "xdut.xifq.a2p",
+  "cell": "vga",
+  "local": "OUTP",
+  "mA": 0.332
+ },
+ {
+  "net": "xdut.xifi.xv2.s2",
+  "cell": "vga",
+  "local": "s2",
+  "mA": 0.331
+ },
+ {
+  "net": "xdut.xifq.xv2.s1",
+  "cell": "vga",
+  "local": "s1",
+  "mA": 0.33
+ },
+ {
+  "net": "xdut.xifi.a2n",
+  "cell": "vga",
+  "local": "OUTN",
+  "mA": 0.33
+ },
+ {
+  "net": "xdut.xifi.a2p",
+  "cell": "vga",
+  "local": "OUTP",
+  "mA": 0.328
+ },
+ {
+  "net": "xdut.xifq.a2n",
+  "cell": "vga",
+  "local": "OUTN",
+  "mA": 0.326
+ },
+ {
+  "net": "xdut.xlna.vb1",
+  "cell": "lna_nc",
+  "local": "vb1",
+  "mA": 0.305
+ },
+ {
+  "net": "xdut.xlna.s1r",
+  "cell": "lna_nc",
+  "local": "s1r",
+  "mA": 0.305
+ }
+]

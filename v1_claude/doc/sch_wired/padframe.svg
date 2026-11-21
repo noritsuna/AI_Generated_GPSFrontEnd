@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1668" height="1525" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="34" font-size="24" font-weight="bold">chip_top pad frame (slot 0p5x0p5, 1936 x 2531 um, physical order)</text>
+<text x="20" y="56" font-size="12" fill="#444">Ring: DVDD / DVSS (I/O), VDD = DVDD, VSS = DVSS (core); the afe_rf block breaks the DVDD and VDD rings so that VDDA and VDDV get their own sections.</text>
+<text x="20" y="72" font-size="12" fill="#444">Corners: gf180mcu_fd_io__cor x4; gaps: fill1/5/10/nc. NC = unused pad (asig_5p0 cell, no core connection); all 56 pads sit at the template bond positions.</text>
+<rect x="350" y="120" width="968" height="1265.5" fill="#fbfbfb" stroke="#333" stroke-width="2"/>
+<rect x="571" y="341" width="526" height="823.5" fill="#f4f7fc" stroke="#1f3a93" stroke-dasharray="6 4"/>
+<rect x="576" y="354.7" width="514.9" height="769.7" fill="#eaf2e3" stroke="#1e7b34" stroke-width="1.5"/>
+<text x="833.45" y="384.7" font-size="16" text-anchor="middle" fill="#1e7b34" font-weight="bold">gnss_afe_analog</text>
+<text x="833.45" y="402.7" font-size="12" text-anchor="middle" fill="#1e7b34">1029.8 x 1539.4 um</text>
+<text x="834" y="1149.4" font-size="13" text-anchor="middle" fill="#1f3a93">core: SPI registers (std cells)</text>
+<rect x="427.636" y="1315.5" width="60" height="70" fill="#2e86c1" fill-opacity="0.25" stroke="#2e86c1"/>
+<text x="457.636" y="1401.5" font-size="11" text-anchor="middle" fill="#2e86c1" font-weight="bold">SCLK</text>
+<text x="457.636" y="1413.5" font-size="9" text-anchor="middle" fill="#333">clk_pad</text>
+<rect x="502.909" y="1315.5" width="60" height="70" fill="#2e86c1" fill-opacity="0.25" stroke="#2e86c1"/>
+<text x="532.909" y="1401.5" font-size="11" text-anchor="middle" fill="#2e86c1" font-weight="bold">RST_N</text>
+<text x="532.909" y="1413.5" font-size="9" text-anchor="middle" fill="#333">rst_n_pad</text>
+<rect x="578.182" y="1315.5" width="60" height="70" fill="#566573" fill-opacity="0.25" stroke="#566573"/>
+<text x="608.182" y="1401.5" font-size="11" text-anchor="middle" fill="#566573" font-weight="bold">DVSS</text>
+<text x="608.182" y="1413.5" font-size="9" text-anchor="middle" fill="#333">dvss_pads[0]</text>
+<rect x="653.455" y="1315.5" width="60" height="70" fill="#7d3c98" fill-opacity="0.25" stroke="#7d3c98"/>
+<text x="683.455" y="1401.5" font-size="11" text-anchor="middle" fill="#7d3c98" font-weight="bold">DVDD</text>
+<text x="683.455" y="1413.5" font-size="9" text-anchor="middle" fill="#333">dvdd_pads[0]</text>
+<rect x="728.727" y="1315.5" width="60" height="70" fill="#2e86c1" fill-opacity="0.25" stroke="#2e86c1"/>
+<text x="758.727" y="1401.5" font-size="11" text-anchor="middle" fill="#2e86c1" font-weight="bold">SDI</text>
+<text x="758.727" y="1413.5" font-size="9" text-anchor="middle" fill="#333">inputs[0]</text>
+<rect x="804" y="1315.5" width="60" height="70" fill="#2e86c1" fill-opacity="0.25" stroke="#2e86c1"/>
+<text x="834" y="1401.5" font-size="11" text-anchor="middle" fill="#2e86c1" font-weight="bold">CS_N</text>
+<text x="834" y="1413.5" font-size="9" text-anchor="middle" fill="#333">inputs[1]</text>
+<rect x="879.273" y="1315.5" width="60" height="70" fill="#28b463" fill-opacity="0.25" stroke="#28b463"/>
+<text x="909.273" y="1401.5" font-size="11" text-anchor="middle" fill="#28b463" font-weight="bold">I_SIGN</text>
+<text x="909.273" y="1413.5" font-size="9" text-anchor="middle" fill="#333">bidir[0]</text>
+<rect x="954.545" y="1315.5" width="60" height="70" fill="#28b463" fill-opacity="0.25" stroke="#28b463"/>
+<text x="984.545" y="1401.5" font-size="11" text-anchor="middle" fill="#28b463" font-weight="bold">I_MAG</text>
+<text x="984.545" y="1413.5" font-size="9" text-anchor="middle" fill="#333">bidir[1]</text>
+<rect x="1029.82" y="1315.5" width="60" height="70" fill="#28b463" fill-opacity="0.25" stroke="#28b463"/>
+<text x="1059.82" y="1401.5" font-size="11" text-anchor="middle" fill="#28b463" font-weight="bold">Q_SIGN</text>
+<text x="1059.82" y="1413.5" font-size="9" text-anchor="middle" fill="#333">bidir[2]</text>
+<rect x="1105.09" y="1315.5" width="60" height="70" fill="#28b463" fill-opacity="0.25" stroke="#28b463"/>
+<text x="1135.09" y="1401.5" font-size="11" text-anchor="middle" fill="#28b463" font-weight="bold">Q_MAG</text>
+<text x="1135.09" y="1413.5" font-size="9" text-anchor="middle" fill="#333">bidir[3]</text>
+<rect x="1180.36" y="1315.5" width="60" height="70" fill="#28b463" fill-opacity="0.25" stroke="#28b463"/>
+<text x="1210.36" y="1401.5" font-size="11" text-anchor="middle" fill="#28b463" font-weight="bold">CLKOUT</text>
+<text x="1210.36" y="1413.5" font-size="9" text-anchor="middle" fill="#333">bidir[4]</text>
+<rect x="1248" y="1262.4" width="70" height="40" fill="#28b463" fill-opacity="0.25" stroke="#28b463"/>
+<text x="1326" y="1286.4" font-size="11" fill="#28b463" font-weight="bold">SDO</text>
+<text x="1388" y="1286.4" font-size="9" fill="#333">bidir[5]</text>
+<rect x="1248" y="1196.19" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="1220.19" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="1220.19" font-size="9" fill="#333">nc[0]</text>
+<rect x="1248" y="1129.99" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="1153.99" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="1153.99" font-size="9" fill="#333">nc[1]</text>
+<rect x="1248" y="1063.78" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="1087.78" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="1087.78" font-size="9" fill="#333">nc[2]</text>
+<rect x="1248" y="997.574" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="1021.57" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="1021.57" font-size="9" fill="#333">nc[3]</text>
+<rect x="1248" y="931.368" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="955.368" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="955.368" font-size="9" fill="#333">nc[4]</text>
+<rect x="1248" y="865.162" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="889.162" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="889.162" font-size="9" fill="#333">nc[5]</text>
+<rect x="1248" y="798.956" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="822.956" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="822.956" font-size="9" fill="#333">nc[6]</text>
+<rect x="1248" y="732.75" width="70" height="40" fill="#566573" fill-opacity="0.25" stroke="#566573"/>
+<text x="1326" y="756.75" font-size="11" fill="#566573" font-weight="bold">DVSS</text>
+<text x="1388" y="756.75" font-size="9" fill="#333">dvss_pads[1]</text>
+<rect x="1248" y="666.544" width="70" height="40" fill="#7d3c98" fill-opacity="0.25" stroke="#7d3c98"/>
+<text x="1326" y="690.544" font-size="11" fill="#7d3c98" font-weight="bold">DVDD</text>
+<text x="1388" y="690.544" font-size="9" fill="#333">dvdd_pads[1]</text>
+<rect x="1248" y="600.338" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="624.338" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="624.338" font-size="9" fill="#333">nc[7]</text>
+<rect x="1248" y="534.132" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="558.132" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="558.132" font-size="9" fill="#333">nc[8]</text>
+<rect x="1248" y="467.926" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="491.926" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="491.926" font-size="9" fill="#333">nc[9]</text>
+<rect x="1248" y="401.721" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="425.721" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="425.721" font-size="9" fill="#333">nc[10]</text>
+<rect x="1248" y="335.515" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="359.515" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="359.515" font-size="9" fill="#333">nc[11]</text>
+<rect x="1248" y="269.309" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="293.309" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="293.309" font-size="9" fill="#333">nc[12]</text>
+<rect x="1248" y="203.103" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="1326" y="227.103" font-size="11" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="1388" y="227.103" font-size="9" fill="#333">nc[13]</text>
+<rect x="427.636" y="120" width="60" height="70" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="457.636" y="112" font-size="11" text-anchor="middle" fill="#ca6f1e" font-weight="bold">REFIN</text>
+<text x="457.636" y="99" font-size="9" text-anchor="middle" fill="#333">analog[0]</text>
+<rect x="502.909" y="120" width="60" height="70" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="532.909" y="112" font-size="11" text-anchor="middle" fill="#ca6f1e" font-weight="bold">AFCOUT</text>
+<text x="532.909" y="99" font-size="9" text-anchor="middle" fill="#333">analog[1]</text>
+<rect x="578.182" y="120" width="60" height="70" fill="#566573" fill-opacity="0.25" stroke="#566573"/>
+<text x="608.182" y="112" font-size="11" text-anchor="middle" fill="#566573" font-weight="bold">DVSS</text>
+<text x="608.182" y="99" font-size="9" text-anchor="middle" fill="#333">dvss_pads[2]</text>
+<rect x="653.455" y="120" width="60" height="70" fill="#7d3c98" fill-opacity="0.25" stroke="#7d3c98"/>
+<text x="683.455" y="112" font-size="11" text-anchor="middle" fill="#7d3c98" font-weight="bold">DVDD</text>
+<text x="683.455" y="99" font-size="9" text-anchor="middle" fill="#333">dvdd_pads[2]</text>
+<rect x="728.727" y="120" width="60" height="70" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="758.727" y="112" font-size="11" text-anchor="middle" fill="#ca6f1e" font-weight="bold">VCTRL</text>
+<text x="758.727" y="99" font-size="9" text-anchor="middle" fill="#333">analog[2]</text>
+<rect x="804" y="120" width="60" height="70" fill="#c0392b" fill-opacity="0.25" stroke="#c0392b"/>
+<text x="834" y="112" font-size="11" text-anchor="middle" fill="#c0392b" font-weight="bold">VDDV</text>
+<text x="834" y="99" font-size="9" text-anchor="middle" fill="#333">afe_rf.VDDV</text>
+<rect x="879.273" y="120" width="60" height="70" fill="#c0392b" fill-opacity="0.25" stroke="#c0392b"/>
+<text x="909.273" y="112" font-size="11" text-anchor="middle" fill="#c0392b" font-weight="bold">VSS</text>
+<text x="909.273" y="99" font-size="9" text-anchor="middle" fill="#333">afe_rf.VSS</text>
+<rect x="954.545" y="120" width="60" height="70" fill="#c0392b" fill-opacity="0.25" stroke="#c0392b"/>
+<text x="984.545" y="112" font-size="11" text-anchor="middle" fill="#c0392b" font-weight="bold">VDDA</text>
+<text x="984.545" y="99" font-size="9" text-anchor="middle" fill="#333">afe_rf.VDDA</text>
+<rect x="1029.82" y="120" width="60" height="70" fill="#c0392b" fill-opacity="0.25" stroke="#c0392b"/>
+<text x="1059.82" y="112" font-size="11" text-anchor="middle" fill="#c0392b" font-weight="bold">VSS</text>
+<text x="1059.82" y="99" font-size="9" text-anchor="middle" fill="#333">afe_rf.VSS</text>
+<rect x="1105.09" y="120" width="60" height="70" fill="#c0392b" fill-opacity="0.25" stroke="#c0392b"/>
+<text x="1135.09" y="112" font-size="11" text-anchor="middle" fill="#c0392b" font-weight="bold">RFIN</text>
+<text x="1135.09" y="99" font-size="9" text-anchor="middle" fill="#333">afe_rf.RF</text>
+<rect x="1180.36" y="120" width="60" height="70" fill="#c0392b" fill-opacity="0.25" stroke="#c0392b"/>
+<text x="1210.36" y="112" font-size="11" text-anchor="middle" fill="#c0392b" font-weight="bold">VSS</text>
+<text x="1210.36" y="99" font-size="9" text-anchor="middle" fill="#333">afe_rf.VSS</text>
+<rect x="350" y="1262.4" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="1286.4" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="1286.4" font-size="9" text-anchor="end" fill="#333">nc[14]</text>
+<rect x="350" y="1196.19" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="1220.19" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="1220.19" font-size="9" text-anchor="end" fill="#333">nc[15]</text>
+<rect x="350" y="1129.99" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="1153.99" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="1153.99" font-size="9" text-anchor="end" fill="#333">nc[16]</text>
+<rect x="350" y="1063.78" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="1087.78" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="1087.78" font-size="9" text-anchor="end" fill="#333">nc[17]</text>
+<rect x="350" y="997.574" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="1021.57" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="1021.57" font-size="9" text-anchor="end" fill="#333">nc[18]</text>
+<rect x="350" y="931.368" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="955.368" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="955.368" font-size="9" text-anchor="end" fill="#333">nc[19]</text>
+<rect x="350" y="865.162" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="889.162" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="889.162" font-size="9" text-anchor="end" fill="#333">nc[20]</text>
+<rect x="350" y="798.956" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="822.956" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="822.956" font-size="9" text-anchor="end" fill="#333">nc[21]</text>
+<rect x="350" y="732.75" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="756.75" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="756.75" font-size="9" text-anchor="end" fill="#333">nc[22]</text>
+<rect x="350" y="666.544" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="690.544" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="690.544" font-size="9" text-anchor="end" fill="#333">nc[23]</text>
+<rect x="350" y="600.338" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="624.338" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="624.338" font-size="9" text-anchor="end" fill="#333">nc[24]</text>
+<rect x="350" y="534.132" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="558.132" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="558.132" font-size="9" text-anchor="end" fill="#333">nc[25]</text>
+<rect x="350" y="467.926" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="491.926" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="491.926" font-size="9" text-anchor="end" fill="#333">nc[26]</text>
+<rect x="350" y="401.721" width="70" height="40" fill="#566573" fill-opacity="0.25" stroke="#566573"/>
+<text x="342" y="425.721" font-size="11" text-anchor="end" fill="#566573" font-weight="bold">DVSS</text>
+<text x="290" y="425.721" font-size="9" text-anchor="end" fill="#333">vss_pads[0]</text>
+<rect x="350" y="335.515" width="70" height="40" fill="#7d3c98" fill-opacity="0.25" stroke="#7d3c98"/>
+<text x="342" y="359.515" font-size="11" text-anchor="end" fill="#7d3c98" font-weight="bold">DVDD</text>
+<text x="290" y="359.515" font-size="9" text-anchor="end" fill="#333">vdd_pads[0]</text>
+<rect x="350" y="269.309" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="293.309" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="293.309" font-size="9" text-anchor="end" fill="#333">nc[27]</text>
+<rect x="350" y="203.103" width="70" height="40" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="342" y="227.103" font-size="11" text-anchor="end" fill="#ca6f1e" font-weight="bold">NC</text>
+<text x="290" y="227.103" font-size="9" text-anchor="end" fill="#333">nc[28]</text>
+<rect x="350" y="120" width="70" height="70" fill="#999" fill-opacity="0.4" stroke="#555"/>
+<rect x="1248" y="120" width="70" height="70" fill="#999" fill-opacity="0.4" stroke="#555"/>
+<rect x="350" y="1315.5" width="70" height="70" fill="#999" fill-opacity="0.4" stroke="#555"/>
+<rect x="1248" y="1315.5" width="70" height="70" fill="#999" fill-opacity="0.4" stroke="#555"/>
+<rect x="40" y="1445.5" width="16" height="12" fill="#2e86c1" fill-opacity="0.25" stroke="#2e86c1"/>
+<text x="62" y="1456.5" font-size="12">in_s</text>
+<rect x="190" y="1445.5" width="16" height="12" fill="#2e86c1" fill-opacity="0.25" stroke="#2e86c1"/>
+<text x="212" y="1456.5" font-size="12">in_c</text>
+<rect x="340" y="1445.5" width="16" height="12" fill="#28b463" fill-opacity="0.25" stroke="#28b463"/>
+<text x="362" y="1456.5" font-size="12">bi_24t</text>
+<rect x="490" y="1445.5" width="16" height="12" fill="#ca6f1e" fill-opacity="0.25" stroke="#ca6f1e"/>
+<text x="512" y="1456.5" font-size="12">asig_5p0</text>
+<rect x="640" y="1445.5" width="16" height="12" fill="#c0392b" fill-opacity="0.25" stroke="#c0392b"/>
+<text x="662" y="1456.5" font-size="12">afe_rf</text>
+<rect x="790" y="1445.5" width="16" height="12" fill="#7d3c98" fill-opacity="0.25" stroke="#7d3c98"/>
+<text x="812" y="1456.5" font-size="12">dvdd</text>
+<rect x="940" y="1445.5" width="16" height="12" fill="#566573" fill-opacity="0.25" stroke="#566573"/>
+<text x="962" y="1456.5" font-size="12">dvss</text>
+</svg>

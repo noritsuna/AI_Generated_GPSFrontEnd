@@ -1,0 +1,110 @@
+* NGSPICE file created from bias_gen.ext - technology: gf180mcuD
+
+.subckt bias_gen_MSU pbc st VSS
+X0 pbc st VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=1u
+.ends
+
+.subckt bias_gen_CPB VDD PB
+X0 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X7 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X9 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X15 VDD PB cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt bias_gen_CNB NB VSS
+X0 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X7 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X9 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X15 NB VSS cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt bias_gen_MP1 nbc pbc VDD
+X0 nbc pbc VDD VDD pfet_03v3 ad=3.56p pd=16.89u as=3.56p ps=16.89u w=8u l=2u
+.ends
+
+.subckt bias_gen_MP2 pbc VDD
+X0 pbc pbc VDD VDD pfet_03v3 ad=3.56p pd=16.89u as=3.56p ps=16.89u w=8u l=2u
+.ends
+
+.subckt bias_gen_MP3 NB pbc VDD
+X0 NB pbc VDD VDD pfet_03v3 ad=3.56p pd=16.89u as=3.56p ps=16.89u w=8u l=2u
+.ends
+
+.subckt bias_gen_MN1 nbc VSS
+X0 nbc nbc VSS VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=2u
+.ends
+
+.subckt bias_gen_MP4 PB VDD
+X0 PB PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X1 VDD PB PB VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X2 PB PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 VDD PB PB VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt bias_gen_MN2 nr pbc nbc VSS
+X0 pbc nbc nr VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X1 nr nbc pbc VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt bias_gen_MN3 NB VSS
+X0 NB NB VSS VSS nfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X1 VSS NB NB VSS nfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt bias_gen_MN4 PB nbc VSS
+X0 PB nbc VSS VSS nfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=2u
+.ends
+
+.subckt bias_gen_R1u_0 VSS nr
+X0 nr VSS VSS ppolyf_u_1k r_width=1u r_length=4.6u
+.ends
+
+.subckt bias_gen_MSN st nbc VSS
+X0 st nbc VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=1u
+.ends
+
+.subckt bias_gen_MSP st VSS VDD
+X0 st VSS VDD VDD pfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=20u
+.ends
+
+.subckt bias_gen VSS VDD NB PB
+XXMSU XMSU/pbc XMSU/st VSS bias_gen_MSU
+XXCPB VDD PB bias_gen_CPB
+XXCNB NB VSS bias_gen_CNB
+XXMP1 XMSN/nbc XMSU/pbc VDD bias_gen_MP1
+XXMP2 XMSU/pbc VDD bias_gen_MP2
+XXMP3 NB XMSU/pbc VDD bias_gen_MP3
+XXMN1 XMSN/nbc VSS bias_gen_MN1
+XXMP4 PB VDD bias_gen_MP4
+XXMN2 XMN2/nr XMSU/pbc XMSN/nbc VSS bias_gen_MN2
+XXMN3 NB VSS bias_gen_MN3
+XXMN4 PB XMSN/nbc VSS bias_gen_MN4
+XXR1u_0 VSS XMN2/nr bias_gen_R1u_0
+XXMSN XMSU/st XMSN/nbc VSS bias_gen_MSN
+XXMSP XMSU/st VSS VDD bias_gen_MSP
+.ends
+

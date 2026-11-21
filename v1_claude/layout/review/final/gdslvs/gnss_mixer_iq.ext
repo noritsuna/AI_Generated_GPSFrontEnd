@@ -1,0 +1,282 @@
+timestamp 1623399878
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use gnss_mixer_iq_CL2Q XCL2Q 1 0 69860 0 1 27440
+use gnss_mixer_iq_CL1Q XCL1Q 1 0 59360 0 1 27440
+use gnss_mixer_iq_CLOL XCLOL 1 0 48300 0 1 27440
+use gnss_mixer_iq_CBRF XCBRF 1 0 33180 0 1 27440
+use gnss_mixer_iq_CLOU XCLOU 1 0 22120 0 1 27440
+use gnss_mixer_iq_CL2I XCL2I 1 0 11620 0 1 27440
+use gnss_mixer_iq_CL1I XCL1I 1 0 1120 0 1 27440
+use gnss_mixer_iq_R1u_1 XR1u_1 1 0 65660 0 1 19460
+use gnss_mixer_iq_MG1Q_MG2Q XMG1Q_MG2Q 1 0 58800 0 1 19180
+use gnss_mixer_iq_MTI_MTQ XMTI_MTQ 1 0 24500 0 1 19180
+use gnss_mixer_iq_R4u_0 XR4u_0 1 0 18900 0 1 19460
+use gnss_mixer_iq_MG1I_MG2I XMG1I_MG2I 1 0 11760 0 1 19180
+use gnss_mixer_iq_R1u_0 XR1u_0 1 0 1400 0 1 19460
+use gnss_mixer_iq_MCTL4N XMCTL4N 1 0 60480 0 1 14280
+use gnss_mixer_iq_MCTL4P XMCTL4P 1 0 57680 0 1 14280
+use gnss_mixer_iq_MCTL2N XMCTL2N 1 0 54880 0 1 14280
+use gnss_mixer_iq_MCTL2P XMCTL2P 1 0 52080 0 1 14280
+use gnss_mixer_iq_MU3nQ_MU4nQ XMU3nQ_MU4nQ 1 0 48860 0 1 14280
+use gnss_mixer_iq_MU1nQ_MU2nQ XMU1nQ_MU2nQ 1 0 46060 0 1 14280
+use gnss_mixer_iq_MLAnQ_MLBnQ XMLAnQ_MLBnQ 1 0 41860 0 1 14280
+use gnss_mixer_iq_MU3pQ_MU4pQ XMU3pQ_MU4pQ 1 0 39060 0 1 14280
+use gnss_mixer_iq_MU1pQ_MU2pQ XMU1pQ_MU2pQ 1 0 36260 0 1 14280
+use gnss_mixer_iq_MLApQ_MLBpQ XMLApQ_MLBpQ 1 0 32060 0 1 14280
+use gnss_mixer_iq_MU3nI_MU4nI XMU3nI_MU4nI 1 0 29260 0 1 14280
+use gnss_mixer_iq_MU1nI_MU2nI XMU1nI_MU2nI 1 0 26460 0 1 14280
+use gnss_mixer_iq_MLAnI_MLBnI XMLAnI_MLBnI 1 0 22260 0 1 14280
+use gnss_mixer_iq_MU3pI_MU4pI XMU3pI_MU4pI 1 0 19460 0 1 14280
+use gnss_mixer_iq_MU1pI_MU2pI XMU1pI_MU2pI 1 0 16660 0 1 14280
+use gnss_mixer_iq_MLApI_MLBpI XMLApI_MLBpI 1 0 12460 0 1 14280
+use gnss_mixer_iq_MCTL3N XMCTL3N 1 0 10080 0 1 14280
+use gnss_mixer_iq_MCTL3P XMCTL3P 1 0 7280 0 1 14280
+use gnss_mixer_iq_MCTL1N XMCTL1N 1 0 4480 0 1 14280
+use gnss_mixer_iq_MCTL1P XMCTL1P 1 0 1680 0 1 14280
+use gnss_mixer_iq_CACL3N XCACL3N 1 0 70840 0 1 1400
+use gnss_mixer_iq_CACL3P XCACL3P 1 0 61460 0 1 1400
+use gnss_mixer_iq_CACL2N XCACL2N 1 0 52080 0 1 1400
+use gnss_mixer_iq_CACL2P XCACL2P 1 0 42700 0 1 1400
+use gnss_mixer_iq_CACL4N XCACL4N 1 0 33320 0 1 1400
+use gnss_mixer_iq_CACL4P XCACL4P 1 0 23940 0 1 1400
+use gnss_mixer_iq_CACL1N XCACL1N 1 0 14560 0 1 1400
+use gnss_mixer_iq_CACL1P XCACL1P 1 0 5180 0 1 1400
+port "L3N" 21 72280 -1220 72480 -1020 m3
+port "L3P" 19 63040 -1220 63240 -1020 m3
+port "L2N" 17 53800 -1220 54000 -1020 m3
+port "L2P" 15 44560 -1220 44760 -1020 m3
+port "L4N" 13 35460 -1220 35660 -1020 m3
+port "L4P" 11 26220 -1220 26420 -1020 m3
+port "L1N" 9 16980 -1220 17180 -1020 m3
+port "L1P" 7 7740 -1220 7940 -1020 m3
+port "RFP" 24 -1220 9980 -740 10460 m4
+port "VDD" 5 79776 0 80376 43040 m3
+port "RFN" 26 -1220 21460 -740 21940 m4
+port "NB" 28 -1220 32800 -1020 33000 m4
+port "VSS" 3 0 0 600 43040 m3
+port "IFQN" 36 81240 35040 81580 35380 m4
+port "IFQP" 34 81240 25940 81580 26280 m4
+port "IFIN" 32 81240 16840 81580 17180 m4
+port "IFIP" 30 81240 7740 81580 8080 m4
+node "L3N" 0 0 72280 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L3P" 0 0 63040 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L2N" 0 0 53800 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L2P" 0 0 44560 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L4N" 0 0 35460 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L4P" 0 0 26220 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L1N" 0 0 16980 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L1P" 0 0 7740 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_43642_14868#" 0 0 43642 14868 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_33842_14868#" 0 0 33842 14868 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_24462_14868#" 0 0 24462 14868 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_14662_14868#" 0 0 14662 14868 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_43222_15148#" 0 0 43222 15148 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_33422_15148#" 0 0 33422 15148 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_24182_15148#" 0 0 24182 15148 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_14382_15148#" 0 0 14382 15148 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_9342_19422#" 0 0 9342 19422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_8502_19422#" 0 0 8502 19422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_8082_19422#" 0 0 8082 19422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6822_19282#" 0 0 6822 19282 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6402_17742#" 0 0 6402 17742 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_5142_19422#" 0 0 5142 19422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_4722_15642#" 0 0 4722 15642 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_2062_1082#" 0 0 2062 1082 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_34262_14588#" 0 0 34262 14588 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_13822_14588#" 0 0 13822 14588 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_44062_14588#" 0 0 44062 14588 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_16062_20048#" 0 0 16062 20048 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "RFP" 0 0 -1220 9980 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 79776 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "RFN" 0 0 -1220 21460 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_16482_18442#" 0 0 16482 18442 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_43362_22708#" 0 0 43362 22708 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "NB" 0 0 -1220 32800 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IFQN" 0 0 81240 35040 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IFQP" 0 0 81240 25940 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IFIN" 0 0 81240 16840 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IFIP" 0 0 81240 7740 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_5982_19422#" 0 0 5982 19422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_2622_19422#" 0 0 2622 19422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1362_19422#" 0 0 1362 19422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMG1Q_MG2Q/xpQ" "XMLApQ_MLBpQ/xpQ" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLApQ_MLBpQ/xpQ" "m2_34262_14588#"
+merge "XMU1pQ_MU2pQ/mpaQ" "XMLApQ_MLBpQ/mpaQ" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLApQ_MLBpQ/mpaQ" "m2_33842_14868#"
+merge "XMU3pI_MU4pI/mpbI" "XMLApI_MLBpI/mpbI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLApI_MLBpI/mpbI" "m2_14382_15148#"
+merge "XCL2Q/VSUBS" "XCL2Q/VSS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCL2Q/VSS" "XCL1Q/VSUBS"
+merge "XCL1Q/VSUBS" "XCL1Q/VSS"
+merge "XCL1Q/VSS" "XCLOL/VSUBS"
+merge "XCLOL/VSUBS" "XCLOL/VSS"
+merge "XCLOL/VSS" "XCBRF/VSUBS"
+merge "XCBRF/VSUBS" "XCBRF/VSS"
+merge "XCBRF/VSS" "XCLOU/VSUBS"
+merge "XCLOU/VSUBS" "XCLOU/VSS"
+merge "XCLOU/VSS" "XCL2I/VSUBS"
+merge "XCL2I/VSUBS" "XCL2I/VSS"
+merge "XCL2I/VSS" "XCL1I/VSUBS"
+merge "XCL1I/VSUBS" "XCL1I/VSS"
+merge "XCL1I/VSS" "XR1u_1/VSS"
+merge "XR1u_1/VSS" "XMG1Q_MG2Q/VSS"
+merge "XMG1Q_MG2Q/VSS" "XMTI_MTQ/VSS"
+merge "XMTI_MTQ/VSS" "XR4u_0/VSS"
+merge "XR4u_0/VSS" "XMG1I_MG2I/VSS"
+merge "XMG1I_MG2I/VSS" "XR1u_0/VSS"
+merge "XR1u_0/VSS" "XMCTL4N/VSS"
+merge "XMCTL4N/VSS" "XMCTL4P/VSS"
+merge "XMCTL4P/VSS" "XMCTL2N/VSS"
+merge "XMCTL2N/VSS" "XMCTL2P/VSS"
+merge "XMCTL2P/VSS" "XMU3nQ_MU4nQ/VSS"
+merge "XMU3nQ_MU4nQ/VSS" "XMU1nQ_MU2nQ/VSS"
+merge "XMU1nQ_MU2nQ/VSS" "XMLAnQ_MLBnQ/VSS"
+merge "XMLAnQ_MLBnQ/VSS" "XMU3pQ_MU4pQ/VSS"
+merge "XMU3pQ_MU4pQ/VSS" "XMU1pQ_MU2pQ/VSS"
+merge "XMU1pQ_MU2pQ/VSS" "XMLApQ_MLBpQ/VSS"
+merge "XMLApQ_MLBpQ/VSS" "XMU3nI_MU4nI/VSS"
+merge "XMU3nI_MU4nI/VSS" "XMU1nI_MU2nI/VSS"
+merge "XMU1nI_MU2nI/VSS" "XMLAnI_MLBnI/VSS"
+merge "XMLAnI_MLBnI/VSS" "XMU3pI_MU4pI/VSS"
+merge "XMU3pI_MU4pI/VSS" "XMU1pI_MU2pI/VSS"
+merge "XMU1pI_MU2pI/VSS" "XMLApI_MLBpI/VSS"
+merge "XMLApI_MLBpI/VSS" "XMCTL3N/VSS"
+merge "XMCTL3N/VSS" "XMCTL3P/VSS"
+merge "XMCTL3P/VSS" "XMCTL1N/VSS"
+merge "XMCTL1N/VSS" "XMCTL1P/VSS"
+merge "XMCTL1P/VSS" "VSS"
+merge "VSS" "XCACL3N/VSUBS"
+merge "XCACL3N/VSUBS" "XCACL3P/VSUBS"
+merge "XCACL3P/VSUBS" "XCACL2N/VSUBS"
+merge "XCACL2N/VSUBS" "XCACL2P/VSUBS"
+merge "XCACL2P/VSUBS" "XCACL4N/VSUBS"
+merge "XCACL4N/VSUBS" "XCACL4P/VSUBS"
+merge "XCACL4P/VSUBS" "XCACL1N/VSUBS"
+merge "XCACL1N/VSUBS" "XCACL1P/VSUBS"
+merge "XCACL1P/VSUBS" "VSUBS"
+merge "XCLOL/vlol" "XR1u_1/vlol" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR1u_1/vlol" "XR1u_0/vlol"
+merge "XR1u_0/vlol" "m2_5982_19422#"
+merge "XCL2Q/IFQN" "XR4u_0/IFQN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR4u_0/IFQN" "XMU3nQ_MU4nQ/IFQN"
+merge "XMU3nQ_MU4nQ/IFQN" "XMU1nQ_MU2nQ/IFQN"
+merge "XMU1nQ_MU2nQ/IFQN" "XMU3pQ_MU4pQ/IFQN"
+merge "XMU3pQ_MU4pQ/IFQN" "XMU1pQ_MU2pQ/IFQN"
+merge "XMU1pQ_MU2pQ/IFQN" "IFQN"
+merge "XMG1Q_MG2Q/xnQ" "XMLAnQ_MLBnQ/xnQ" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnQ_MLBnQ/xnQ" "m2_44062_14588#"
+merge "XCL1Q/IFQP" "XR4u_0/IFQP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR4u_0/IFQP" "XMU3nQ_MU4nQ/IFQP"
+merge "XMU3nQ_MU4nQ/IFQP" "XMU1nQ_MU2nQ/IFQP"
+merge "XMU1nQ_MU2nQ/IFQP" "XMU3pQ_MU4pQ/IFQP"
+merge "XMU3pQ_MU4pQ/IFQP" "XMU1pQ_MU2pQ/IFQP"
+merge "XMU1pQ_MU2pQ/IFQP" "IFQP"
+merge "XR1u_1/VDD" "XR4u_0/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR4u_0/VDD" "XR1u_0/VDD"
+merge "XR1u_0/VDD" "VDD"
+merge "XR1u_0/gl3n" "XMLAnI_MLBnI/gl3n" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnI_MLBnI/gl3n" "XMLApI_MLBpI/gl3n"
+merge "XMLApI_MLBpI/gl3n" "XMCTL3N/gl3n"
+merge "XMCTL3N/gl3n" "XCACL3N/gl3n"
+merge "XCACL3N/gl3n" "m2_8082_19422#"
+merge "XCLOU/vlou" "XR1u_1/vlou" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR1u_1/vlou" "XR1u_0/vlou"
+merge "XR1u_0/vlou" "m2_2622_19422#"
+merge "XMTI_MTQ/tQ" "XMG1Q_MG2Q/tQ" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMG1Q_MG2Q/tQ" "m2_43362_22708#"
+merge "XR1u_0/gl4n" "XMLAnQ_MLBnQ/gl4n" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnQ_MLBnQ/gl4n" "XMLApQ_MLBpQ/gl4n"
+merge "XMLApQ_MLBpQ/gl4n" "XMCTL4N/gl4n"
+merge "XMCTL4N/gl4n" "XCACL4N/gl4n"
+merge "XCACL4N/gl4n" "m2_9342_19422#"
+merge "XMU3nI_MU4nI/mnbI" "XMLAnI_MLBnI/mnbI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnI_MLBnI/mnbI" "m2_24182_15148#"
+merge "XMU3nQ_MU4nQ/mnbQ" "XMLAnQ_MLBnQ/mnbQ" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnQ_MLBnQ/mnbQ" "m2_43222_15148#"
+merge "XMU1nI_MU2nI/mnaI" "XMLAnI_MLBnI/mnaI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnI_MLBnI/mnaI" "m2_24462_14868#"
+merge "XCL2I/IFIN" "XR4u_0/IFIN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR4u_0/IFIN" "XMU3nI_MU4nI/IFIN"
+merge "XMU3nI_MU4nI/IFIN" "XMU1nI_MU2nI/IFIN"
+merge "XMU1nI_MU2nI/IFIN" "XMU3pI_MU4pI/IFIN"
+merge "XMU3pI_MU4pI/IFIN" "XMU1pI_MU2pI/IFIN"
+merge "XMU1pI_MU2pI/IFIN" "IFIN"
+merge "XMU1nQ_MU2nQ/mnaQ" "XMLAnQ_MLBnQ/mnaQ" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnQ_MLBnQ/mnaQ" "m2_43642_14868#"
+merge "XCACL2N/L2N" "L2N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCBRF/vbrf" "XR1u_0/vbrf" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR1u_0/vbrf" "m2_1362_19422#"
+merge "XR1u_0/gl4p" "XMCTL4P/gl4p" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCTL4P/gl4p" "XMLAnQ_MLBnQ/gl4p"
+merge "XMLAnQ_MLBnQ/gl4p" "XMLApQ_MLBpQ/gl4p"
+merge "XMLApQ_MLBpQ/gl4p" "XCACL4P/gl4p"
+merge "XCACL4P/gl4p" "m2_8502_19422#"
+merge "XMU1pI_MU2pI/mpaI" "XMLApI_MLBpI/mpaI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLApI_MLBpI/mpaI" "m2_14662_14868#"
+merge "XR1u_0/gl2n" "XMCTL2N/gl2n" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCTL2N/gl2n" "XMU3nQ_MU4nQ/gl2n"
+merge "XMU3nQ_MU4nQ/gl2n" "XMU1nQ_MU2nQ/gl2n"
+merge "XMU1nQ_MU2nQ/gl2n" "XMU3pQ_MU4pQ/gl2n"
+merge "XMU3pQ_MU4pQ/gl2n" "XMU1pQ_MU2pQ/gl2n"
+merge "XMU1pQ_MU2pQ/gl2n" "XCACL2N/gl2n"
+merge "XCACL2N/gl2n" "m2_6402_17742#"
+merge "XR1u_0/gl3p" "XMLAnI_MLBnI/gl3p" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnI_MLBnI/gl3p" "XMLApI_MLBpI/gl3p"
+merge "XMLApI_MLBpI/gl3p" "XMCTL3P/gl3p"
+merge "XMCTL3P/gl3p" "XCACL3P/gl3p"
+merge "XCACL3P/gl3p" "m2_6822_19282#"
+merge "XCL1I/IFIP" "XR4u_0/IFIP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR4u_0/IFIP" "XMU3nI_MU4nI/IFIP"
+merge "XMU3nI_MU4nI/IFIP" "XMU1nI_MU2nI/IFIP"
+merge "XMU1nI_MU2nI/IFIP" "XMU3pI_MU4pI/IFIP"
+merge "XMU3pI_MU4pI/IFIP" "XMU1pI_MU2pI/IFIP"
+merge "XMU1pI_MU2pI/IFIP" "IFIP"
+merge "XMU3pQ_MU4pQ/mpbQ" "XMLApQ_MLBpQ/mpbQ" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLApQ_MLBpQ/mpbQ" "m2_33422_15148#"
+merge "XCACL3P/L3P" "L3P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR1u_0/gl1n" "XMCTL1N/gl1n" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCTL1N/gl1n" "XMU3nI_MU4nI/gl1n"
+merge "XMU3nI_MU4nI/gl1n" "XMU1nI_MU2nI/gl1n"
+merge "XMU1nI_MU2nI/gl1n" "XMU3pI_MU4pI/gl1n"
+merge "XMU3pI_MU4pI/gl1n" "XMU1pI_MU2pI/gl1n"
+merge "XMU1pI_MU2pI/gl1n" "XCACL1N/gl1n"
+merge "XCACL1N/gl1n" "m2_4722_15642#"
+merge "XR1u_0/gl2p" "XMU3nQ_MU4nQ/gl2p" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMU3nQ_MU4nQ/gl2p" "XMU1nQ_MU2nQ/gl2p"
+merge "XMU1nQ_MU2nQ/gl2p" "XMU3pQ_MU4pQ/gl2p"
+merge "XMU3pQ_MU4pQ/gl2p" "XMU1pQ_MU2pQ/gl2p"
+merge "XMU1pQ_MU2pQ/gl2p" "XMCTL2P/gl2p"
+merge "XMCTL2P/gl2p" "XCACL2P/gl2p"
+merge "XCACL2P/gl2p" "m2_5142_19422#"
+merge "XCACL4N/L4N" "L4N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCACL3N/L3N" "L3N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR1u_0/gl1p" "XMU3nI_MU4nI/gl1p" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMU3nI_MU4nI/gl1p" "XMU1nI_MU2nI/gl1p"
+merge "XMU1nI_MU2nI/gl1p" "XMU3pI_MU4pI/gl1p"
+merge "XMU3pI_MU4pI/gl1p" "XMU1pI_MU2pI/gl1p"
+merge "XMU1pI_MU2pI/gl1p" "XMCTL1P/gl1p"
+merge "XMCTL1P/gl1p" "XCACL1P/gl1p"
+merge "XCACL1P/gl1p" "m2_2062_1082#"
+merge "XMTI_MTQ/tI" "XMG1I_MG2I/tI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMG1I_MG2I/tI" "m2_16482_18442#"
+merge "XCACL4P/L4P" "L4P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCACL1N/L1N" "L1N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCACL2P/L2P" "L2P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCACL1P/L1P" "L1P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR1u_0/RFN" "XMG1Q_MG2Q/RFN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMG1Q_MG2Q/RFN" "XMG1I_MG2I/RFN"
+merge "XMG1I_MG2I/RFN" "RFN"
+merge "XMG1I_MG2I/xpI" "XMLApI_MLBpI/xpI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLApI_MLBpI/xpI" "m2_13822_14588#"
+merge "XMG1Q_MG2Q/RFP" "XMG1I_MG2I/RFP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMG1I_MG2I/RFP" "XR1u_0/RFP"
+merge "XR1u_0/RFP" "RFP"
+merge "XMTI_MTQ/NB" "NB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMG1I_MG2I/xnI" "XMLAnI_MLBnI/xnI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMLAnI_MLBnI/xnI" "m2_16062_20048#"

@@ -1,0 +1,210 @@
+timestamp 0
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use lo_comb_GN1 XGN1 1 0 1400 0 1 1120
+use lo_comb_GN3 XGN3 1 0 3360 0 1 1120
+use lo_comb_CNIP XCNIP 1 0 5320 0 1 1120
+use lo_comb_CNIN XCNIN 1 0 7560 0 1 1120
+use lo_comb_LNI XLNI 1 0 9800 0 1 1120
+use lo_comb_GN2 XGN2 1 0 11760 0 1 1120
+use lo_comb_GN4 XGN4 1 0 13720 0 1 1120
+use lo_comb_CNQP XCNQP 1 0 15680 0 1 1120
+use lo_comb_CNQN XCNQN 1 0 17920 0 1 1120
+use lo_comb_LNQ XLNQ 1 0 20160 0 1 1120
+use lo_comb_GP1 XGP1 1 0 1400 0 1 5740
+use lo_comb_GP3 XGP3 1 0 4060 0 1 5740
+use lo_comb_CPaIP XCPaIP 1 0 6720 0 1 5740
+use lo_comb_CPcIP XCPcIP 1 0 8400 0 1 5740
+use lo_comb_CPaIN XCPaIN 1 0 10080 0 1 5740
+use lo_comb_CPcIN XCPcIN 1 0 11760 0 1 5740
+use lo_comb_LPI XLPI 1 0 13440 0 1 5740
+use lo_comb_GP2 XGP2 1 0 16100 0 1 5740
+use lo_comb_GP4 XGP4 1 0 18760 0 1 5740
+use lo_comb_CPaQP XCPaQP 1 0 21420 0 1 5740
+use lo_comb_CPcQP XCPcQP 1 0 23100 0 1 5740
+use lo_comb_CPaQN XCPaQN 1 0 24780 0 1 5740
+use lo_comb_CPcQN XCPcQN 1 0 26460 0 1 5740
+use lo_comb_LPQ XLPQ 1 0 28140 0 1 5740
+port "VSS" 1 0 0 600 8979 m3
+port "an4" 10 28180 -1220 28380 -1020 m3
+port "an2" 8 20760 -1220 20960 -1020 m3
+port "an3" 6 13340 -1220 13540 -1020 m3
+port "an1" 4 5920 -1220 6120 -1020 m3
+port "LOIP" 11 5220 9840 5420 10040 m3
+port "LOIN" 12 11940 9840 12140 10040 m3
+port "ap4" 9 24540 -1220 24740 -1020 m3
+port "ap2" 7 17120 -1220 17320 -1020 m3
+port "ap3" 5 9700 -1220 9900 -1020 m3
+port "ap1" 3 2280 -1220 2480 -1020 m3
+port "VR" 2 30212 0 30812 8979 m3
+port "LOQP" 14 25240 9840 25440 10040 m3
+port "LOQN" 13 18520 9840 18720 10040 m3
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "an4" 0 0 28180 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "an2" 0 0 20760 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "an3" 0 0 13340 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "an1" 0 0 5920 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_13830_1650#" 0 0 13830 1650 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOIP" 0 0 5220 9840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_3470_1650#" 0 0 3470 1650 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_14250_1790#" 0 0 14250 1790 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOIN" 0 0 11940 9840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_3890_1790#" 0 0 3890 1790 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_17890_1510#" 0 0 17890 1510 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_24890_6830#" 0 0 24890 6830 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_15650_1510#" 0 0 15650 1510 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_21530_6830#" 0 0 21530 6830 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ap4" 0 0 24540 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ap2" 0 0 17120 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_7530_1510#" 0 0 7530 1510 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_10190_6830#" 0 0 10190 6830 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_5290_1510#" 0 0 5290 1510 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6830_6830#" 0 0 6830 6830 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ap3" 0 0 9700 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ap1" 0 0 2280 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_12290_1790#" 0 0 12290 1790 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_11870_1650#" 0 0 11870 1650 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1930_1790#" 0 0 1930 1790 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_1650#" 0 0 1510 1650 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VR" 0 0 30212 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOQP" 0 0 25240 9840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOQN" 0 0 18520 9840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XLPI/xIN" "XCPcIN/xIN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcIN/xIN" "XLNI/xIN"
+merge "XLNI/xIN" "XCNIN/xIN"
+merge "XCNIN/xIN" "m2_7530_1510#"
+merge "XLPQ/VSUBS" "XCPcQN/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcQN/VSUBS" "XCPaQN/VSUBS"
+merge "XCPaQN/VSUBS" "XCPcQP/VSUBS"
+merge "XCPcQP/VSUBS" "XCPaQP/VSUBS"
+merge "XCPaQP/VSUBS" "XGP4/VSUBS"
+merge "XGP4/VSUBS" "XGP2/VSUBS"
+merge "XGP2/VSUBS" "XLPI/VSUBS"
+merge "XLPI/VSUBS" "XCPcIN/VSUBS"
+merge "XCPcIN/VSUBS" "XCPaIN/VSUBS"
+merge "XCPaIN/VSUBS" "XCPcIP/VSUBS"
+merge "XCPcIP/VSUBS" "XCPaIP/VSUBS"
+merge "XCPaIP/VSUBS" "XGP3/VSUBS"
+merge "XGP3/VSUBS" "XGP1/VSUBS"
+merge "XGP1/VSUBS" "XLNQ/VSS"
+merge "XLNQ/VSS" "XCNQN/VSS"
+merge "XCNQN/VSS" "XCNQP/VSS"
+merge "XCNQP/VSS" "XGN4/VSS"
+merge "XGN4/VSS" "XGN2/VSS"
+merge "XGN2/VSS" "XLNI/VSS"
+merge "XLNI/VSS" "XCNIN/VSS"
+merge "XCNIN/VSS" "XCNIP/VSS"
+merge "XCNIP/VSS" "XGN3/VSS"
+merge "XGN3/VSS" "XGN1/VSS"
+merge "XGN1/VSS" "VSUBS"
+merge "VSUBS" "VSS"
+merge "XLPI/LOIP" "XLNI/LOIP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XLNI/LOIP" "LOIP"
+merge "XCPcQN/gn2" "XCPcQP/gn2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcQP/gn2" "XGP2/gn2"
+merge "XGP2/gn2" "XCNQN/gn2"
+merge "XCNQN/gn2" "XCNQP/gn2"
+merge "XCNQP/gn2" "XGN2/gn2"
+merge "XGN2/gn2" "m2_12290_1790#"
+merge "XCPcQN/pmQN" "XCPaQN/pmQN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaQN/pmQN" "m2_24890_6830#"
+merge "XCPcIN/gn1" "XCPcIP/gn1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcIP/gn1" "XGP1/gn1"
+merge "XGP1/gn1" "XCNIN/gn1"
+merge "XCNIN/gn1" "XCNIP/gn1"
+merge "XCNIP/gn1" "XGN1/gn1"
+merge "XGN1/gn1" "m2_1930_1790#"
+merge "XLPQ/xQN" "XCPcQN/xQN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcQN/xQN" "XLNQ/xQN"
+merge "XLNQ/xQN" "XCNQN/xQN"
+merge "XCNQN/xQN" "m2_17890_1510#"
+merge "XCPcQN/gn4" "XCPaQP/gn4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaQP/gn4" "XGP4/gn4"
+merge "XGP4/gn4" "XGN4/gn4"
+merge "XGN4/gn4" "XCNQN/gn4"
+merge "XCNQN/gn4" "XCNQP/gn4"
+merge "XCNQP/gn4" "m2_14250_1790#"
+merge "XGP4/ap4" "XGN4/ap4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN4/ap4" "ap4"
+merge "XCPcQN/VR" "XCPaQN/VR" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaQN/VR" "XCPcQP/VR"
+merge "XCPcQP/VR" "XCPaQP/VR"
+merge "XCPaQP/VR" "XCPcIN/VR"
+merge "XCPcIN/VR" "XCPaIN/VR"
+merge "XCPaIN/VR" "XCPcIP/VR"
+merge "XCPcIP/VR" "XCPaIP/VR"
+merge "XCPaIP/VR" "XLPQ/VR"
+merge "XLPQ/VR" "XGP4/VR"
+merge "XGP4/VR" "XGP2/VR"
+merge "XGP2/VR" "XLPI/VR"
+merge "XLPI/VR" "XGP3/VR"
+merge "XGP3/VR" "XGP1/VR"
+merge "XGP1/VR" "VR"
+merge "XCPaIN/gp1" "XCPaIP/gp1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaIP/gp1" "XGP1/gp1"
+merge "XGP1/gp1" "XCNIN/gp1"
+merge "XCNIN/gp1" "XCNIP/gp1"
+merge "XCNIP/gp1" "XGN1/gp1"
+merge "XGN1/gp1" "m2_1510_1650#"
+merge "XLPI/xIP" "XCPcIP/xIP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcIP/xIP" "XLNI/xIP"
+merge "XLNI/xIP" "XCNIP/xIP"
+merge "XCNIP/xIP" "m2_5290_1510#"
+merge "XCPaIN/gp3" "XCPcIP/gp3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcIP/gp3" "XGP3/gp3"
+merge "XGP3/gp3" "XGN3/gp3"
+merge "XGN3/gp3" "XCNIN/gp3"
+merge "XCNIN/gp3" "XCNIP/gp3"
+merge "XCNIP/gp3" "m2_3470_1650#"
+merge "XLPQ/xQP" "XCPcQP/xQP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcQP/xQP" "XLNQ/xQP"
+merge "XLNQ/xQP" "XCNQP/xQP"
+merge "XCNQP/xQP" "m2_15650_1510#"
+merge "XCPcIN/gn3" "XCPaIP/gn3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaIP/gn3" "XGP3/gn3"
+merge "XGP3/gn3" "XGN3/gn3"
+merge "XGN3/gn3" "XCNIN/gn3"
+merge "XCNIN/gn3" "XCNIP/gn3"
+merge "XCNIP/gn3" "m2_3890_1790#"
+merge "XGP4/an4" "XGN4/an4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN4/an4" "an4"
+merge "XCPcIN/pmIN" "XCPaIN/pmIN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaIN/pmIN" "m2_10190_6830#"
+merge "XCPcQP/pmQP" "XCPaQP/pmQP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaQP/pmQP" "m2_21530_6830#"
+merge "XCPaQN/gp4" "XCPcQP/gp4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPcQP/gp4" "XGP4/gp4"
+merge "XGP4/gp4" "XGN4/gp4"
+merge "XGN4/gp4" "XCNQN/gp4"
+merge "XCNQN/gp4" "XCNQP/gp4"
+merge "XCNQP/gp4" "m2_13830_1650#"
+merge "XLPI/LOIN" "XLNI/LOIN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XLNI/LOIN" "LOIN"
+merge "XGP2/ap2" "XGN2/ap2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN2/ap2" "ap2"
+merge "XGP2/an2" "XGN2/an2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN2/an2" "an2"
+merge "XCPaQN/gp2" "XCPaQP/gp2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaQP/gp2" "XGP2/gp2"
+merge "XGP2/gp2" "XCNQN/gp2"
+merge "XCNQN/gp2" "XCNQP/gp2"
+merge "XCNQP/gp2" "XGN2/gp2"
+merge "XGN2/gp2" "m2_11870_1650#"
+merge "XGP3/ap3" "XGN3/ap3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN3/ap3" "ap3"
+merge "XGP3/an3" "XGN3/an3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN3/an3" "an3"
+merge "XGP1/ap1" "XGN1/ap1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN1/ap1" "ap1"
+merge "XLPQ/LOQN" "XLNQ/LOQN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XLNQ/LOQN" "LOQN"
+merge "XGP1/an1" "XGN1/an1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XGN1/an1" "an1"
+merge "XLPQ/LOQP" "XLNQ/LOQP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XLNQ/LOQP" "LOQP"
+merge "XCPcIP/pmIP" "XCPaIP/pmIP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCPaIP/pmIP" "m2_6830_6830#"

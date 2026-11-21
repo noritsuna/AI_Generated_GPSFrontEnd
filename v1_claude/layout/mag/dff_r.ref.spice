@@ -1,0 +1,22 @@
+.subckt nand2 A B Y VDD VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN2 n1 B VSS VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt nand3 A B C Y VDD VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=3u nf=1  m=1
+XMN2 n1 B n2 VSS nfet_03v3 L=0.28u W=3u nf=1  m=1
+XMN3 n2 C VSS VSS nfet_03v3 L=0.28u W=3u nf=1  m=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP3 Y C VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt dff_r CK RB Q VDD VSS
+X1 n4 n2 n1 VDD VSS nand2
+X2 n1 CK RB n2 VDD VSS nand3
+X3 n2 CK n4 n3 VDD VSS nand3
+X4 n3 RB n4 VDD VSS nand2
+X5 n2 qb Q VDD VSS nand2
+X6 Q n3 RB qb VDD VSS nand3
+.ends

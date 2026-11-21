@@ -1,0 +1,79 @@
+== ser_330l  (SDO load 30 pF, simulated 10.00 us)
+  frame 1: sent 008015, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 22.8 ns; least margin before the rising edge 27.2 ns
+           control inputs of the macro 100 ns after CS_N rises: 08015 (expected 08015) OK
+  -> digital PASS
+  1.00-2.00 us: vctrl 1.4446 V (pp 55.07 mV)  CLKOUT pad 16.3296 MHz  IF tone I 11.59 mV Q 9.15 mV  rest pp I 147.41 mV Q 233.92 mV  I(VDDA+VDDV) 53.95 mA  I(VDD digital) 1.020 mA
+                 pp: VSS analog 35.59 mV  VSS digital 41.52 mV  VDDA 38.96 mV  VDDV 37.88 mV  VDD digital 47.13 mV
+  2.00-3.00 us: vctrl 1.4467 V (pp 38.20 mV)  CLKOUT pad 16.3614 MHz  IF tone I 27.81 mV Q 40.80 mV  rest pp I 1711.35 mV Q 1718.17 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 0.888 mA
+                 pp: VSS analog 35.93 mV  VSS digital 38.11 mV  VDDA 41.06 mV  VDDV 41.68 mV  VDD digital 41.20 mV
+  3.20-4.20 us: vctrl 1.4471 V (pp 19.43 mV)  CLKOUT pad 16.3673 MHz  IF tone I 53.84 mV Q 55.14 mV  rest pp I 263.66 mV Q 236.70 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 0.995 mA
+                 pp: VSS analog 19.48 mV  VSS digital 23.82 mV  VDDA 31.90 mV  VDDV 11.04 mV  VDD digital 39.25 mV
+  4.20-6.70 us: vctrl 1.4471 V (pp 19.30 mV)  CLKOUT pad 16.3679 MHz  IF tone I 78.16 mV Q 47.61 mV  rest pp I 193.90 mV Q 156.43 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 1.093 mA
+                 pp: VSS analog 19.46 mV  VSS digital 23.75 mV  VDDA 31.85 mV  VDDV 10.54 mV  VDD digital 38.85 mV
+  6.70-6.90 us: vctrl 1.4472 V (pp 17.48 mV)  CLKOUT pad 16.3677 MHz  IF tone I 116.82 mV Q 55.33 mV  rest pp I 152.53 mV Q 136.83 mV  I(VDDA+VDDV) 54.04 mA  I(VDD digital) 1.047 mA
+                 pp: VSS analog 17.10 mV  VSS digital 21.24 mV  VDDA 29.25 mV  VDDV 9.95 mV  VDD digital 38.53 mV
+  6.90-9.90 us: vctrl 1.4471 V (pp 19.28 mV)  CLKOUT pad 16.3679 MHz  IF tone I 77.32 mV Q 51.61 mV  rest pp I 190.20 mV Q 141.73 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 1.098 mA
+                 pp: VSS analog 19.46 mV  VSS digital 23.68 mV  VDDA 31.85 mV  VDDV 10.53 mV  VDD digital 38.64 mV
+== ser_1kl  (SDO load 30 pF, simulated 10.00 us)
+  frame 1: sent 008015, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 46.3 ns; least margin before the rising edge 3.7 ns
+           control inputs of the macro 100 ns after CS_N rises: 08015 (expected 08015) OK
+  -> digital PASS
+  1.00-2.00 us: vctrl 1.4446 V (pp 55.76 mV)  CLKOUT pad 16.3298 MHz  IF tone I 10.81 mV Q 8.73 mV  rest pp I 145.28 mV Q 231.13 mV  I(VDDA+VDDV) 53.95 mA  I(VDD digital) 1.016 mA
+                 pp: VSS analog 35.71 mV  VSS digital 40.25 mV  VDDA 40.52 mV  VDDV 37.39 mV  VDD digital 54.16 mV
+  2.00-3.00 us: vctrl 1.4467 V (pp 38.31 mV)  CLKOUT pad 16.3614 MHz  IF tone I 27.66 mV Q 40.96 mV  rest pp I 1711.19 mV Q 1718.08 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 0.869 mA
+                 pp: VSS analog 36.04 mV  VSS digital 38.10 mV  VDDA 41.14 mV  VDDV 41.28 mV  VDD digital 44.01 mV
+  3.20-4.20 us: vctrl 1.4471 V (pp 18.91 mV)  CLKOUT pad 16.3672 MHz  IF tone I 56.57 mV Q 51.13 mV  rest pp I 258.41 mV Q 237.38 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 0.993 mA
+                 pp: VSS analog 18.93 mV  VSS digital 24.39 mV  VDDA 32.22 mV  VDDV 11.48 mV  VDD digital 44.93 mV
+  4.20-6.70 us: vctrl 1.4471 V (pp 18.66 mV)  CLKOUT pad 16.3679 MHz  IF tone I 78.33 mV Q 39.49 mV  rest pp I 190.67 mV Q 159.36 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 1.091 mA
+                 pp: VSS analog 18.87 mV  VSS digital 24.12 mV  VDDA 31.88 mV  VDDV 10.92 mV  VDD digital 44.28 mV
+  6.70-6.90 us: vctrl 1.4471 V (pp 17.71 mV)  CLKOUT pad 16.3677 MHz  IF tone I 108.27 mV Q 54.23 mV  rest pp I 156.09 mV Q 134.27 mV  I(VDDA+VDDV) 54.04 mA  I(VDD digital) 1.045 mA
+                 pp: VSS analog 17.56 mV  VSS digital 21.43 mV  VDDA 30.48 mV  VDDV 9.93 mV  VDD digital 43.79 mV
+  6.90-9.90 us: vctrl 1.4471 V (pp 18.60 mV)  CLKOUT pad 16.3680 MHz  IF tone I 78.21 mV Q 41.92 mV  rest pp I 188.48 mV Q 140.54 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 1.096 mA
+                 pp: VSS analog 18.83 mV  VSS digital 24.04 mV  VDDA 31.71 mV  VDDV 10.91 mV  VDD digital 43.85 mV
+== iso_l  (SDO load 30 pF, simulated 9.19 us)
+  frame 1: sent 008015, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 12.6 ns; least margin before the rising edge 37.4 ns
+           control inputs of the macro 100 ns after CS_N rises: 08015 (expected 08015) OK
+  -> digital PASS
+  1.00-2.00 us: vctrl 1.4448 V (pp 47.15 mV)  CLKOUT pad 16.3298 MHz  IF tone I 6.01 mV Q 8.60 mV  rest pp I 100.97 mV Q 188.82 mV  I(VDDA+VDDV) 53.94 mA  I(VDD digital) 0.996 mA
+                 pp: VSS analog 18.93 mV  VSS digital 73.73 mV  VDDA 23.65 mV  VDDV 30.22 mV  VDD digital 77.65 mV
+  2.00-3.00 us: vctrl 1.4469 V (pp 17.99 mV)  CLKOUT pad 16.3614 MHz  IF tone I 32.64 mV Q 35.75 mV  rest pp I 1720.50 mV Q 1709.71 mV  I(VDDA+VDDV) 54.04 mA  I(VDD digital) 0.866 mA
+                 pp: VSS analog 19.28 mV  VSS digital 62.00 mV  VDDA 24.89 mV  VDDV 31.11 mV  VDD digital 48.74 mV
+  3.20-4.20 us: vctrl 1.4473 V (pp 18.53 mV)  CLKOUT pad 16.3673 MHz  IF tone I 45.44 mV Q 60.09 mV  rest pp I 190.16 mV Q 184.99 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 1.007 mA
+                 pp: VSS analog 19.03 mV  VSS digital 65.76 mV  VDDA 25.10 mV  VDDV 31.54 mV  VDD digital 49.43 mV
+  4.20-6.70 us: vctrl 1.4473 V (pp 18.57 mV)  CLKOUT pad 16.3680 MHz  IF tone I 44.44 mV Q 68.42 mV  rest pp I 131.66 mV Q 139.47 mV  I(VDDA+VDDV) 54.05 mA  I(VDD digital) 1.058 mA
+                 pp: VSS analog 18.99 mV  VSS digital 63.56 mV  VDDA 25.23 mV  VDDV 31.61 mV  VDD digital 49.26 mV
+  6.70-6.90 us: vctrl 1.4473 V (pp 18.47 mV)  CLKOUT pad 16.3681 MHz  IF tone I 42.93 mV Q 64.93 mV  rest pp I 122.32 mV Q 123.35 mV  I(VDDA+VDDV) 54.04 mA  I(VDD digital) 1.015 mA
+                 pp: VSS analog 18.88 mV  VSS digital 61.82 mV  VDDA 25.16 mV  VDDV 31.61 mV  VDD digital 49.23 mV
+== ser_330l end 10.00 us
+  3.2-4.20 us: ifI tone 53.8 mV -89 deg rest 37.5 (harm5+poly3: 26.3) mV rms ; ifQ tone 55.1 mV 34 deg rest 36.2 (harm5+poly3: 20.9) mV rms | mix I/Q 0.70/0.81 mV  vssa 1.53 vssd 1.82 mV rms
+  4.2-5.20 us: ifI tone 78.9 mV -132 deg rest 29.9 (harm5+poly3: 11.3) mV rms ; ifQ tone 46.5 mV -7 deg rest 16.4 (harm5+poly3: 11.3) mV rms | mix I/Q 0.73/0.82 mV  vssa 1.59 vssd 1.90 mV rms
+  5.2-6.20 us: ifI tone 78.1 mV -165 deg rest 29.6 (harm5+poly3: 10.2) mV rms ; ifQ tone 46.8 mV -41 deg rest 15.8 (harm5+poly3: 10.5) mV rms | mix I/Q 0.72/0.81 mV  vssa 1.56 vssd 1.86 mV rms
+  6.2-7.20 us: ifI tone 76.8 mV 165 deg rest 30.2 (harm5+poly3: 10.3) mV rms ; ifQ tone 52.0 mV -73 deg rest 15.9 (harm5+poly3: 10.6) mV rms | mix I/Q 0.73/0.83 mV  vssa 1.59 vssd 1.90 mV rms
+  7.2-8.20 us: ifI tone 77.8 mV 132 deg rest 29.9 (harm5+poly3: 10.2) mV rms ; ifQ tone 52.4 mV -107 deg rest 15.6 (harm5+poly3: 10.5) mV rms | mix I/Q 0.72/0.82 mV  vssa 1.57 vssd 1.87 mV rms
+  8.2-9.20 us: ifI tone 78.3 mV 99 deg rest 30.1 (harm5+poly3: 10.2) mV rms ; ifQ tone 51.8 mV -140 deg rest 15.7 (harm5+poly3: 10.6) mV rms | mix I/Q 0.73/0.83 mV  vssa 1.58 vssd 1.89 mV rms
+  3.2-9.90 us: ifI tone 73.0 mV -96 deg rest 35.4 (harm5+poly3: 22.4) mV rms ; ifQ tone 50.9 mV 28 deg rest 22.7 (harm5+poly3: 19.3) mV rms | mix I/Q 0.72/0.82 mV  vssa 1.57 vssd 1.87 mV rms
+  5.2-9.90 us: ifI tone 77.6 mV -163 deg rest 30.2 (harm5+poly3: 10.3) mV rms ; ifQ tone 50.6 mV -40 deg rest 16.1 (harm5+poly3: 10.7) mV rms | mix I/Q 0.73/0.82 mV  vssa 1.57 vssd 1.88 mV rms
+  ifI rest spectrum share: 0-1MHz 1% 1-3MHz 0% 3-5MHz 0% 5-9MHz 84% 9-20MHz 5% 20-250MHz 11% ; peaks MHz [ 8.09  8.3  12.34  7.87 12.13  8.51]
+  ifQ rest spectrum share: 0-1MHz 3% 1-3MHz 0% 3-5MHz 1% 5-9MHz 3% 9-20MHz 53% 20-250MHz 40% ; peaks MHz [16.38 16.17 16.6  12.34 12.13 56.6 ]
+== ser_1kl end 10.00 us
+  3.2-4.20 us: ifI tone 56.6 mV -89 deg rest 33.8 (harm5+poly3: 24.0) mV rms ; ifQ tone 51.1 mV 29 deg rest 33.5 (harm5+poly3: 17.0) mV rms | mix I/Q 0.72/0.80 mV  vssa 1.62 vssd 1.92 mV rms
+  4.2-5.20 us: ifI tone 78.9 mV -131 deg rest 25.7 (harm5+poly3: 11.4) mV rms ; ifQ tone 38.4 mV -16 deg rest 15.3 (harm5+poly3: 11.7) mV rms | mix I/Q 0.75/0.81 mV  vssa 1.68 vssd 2.00 mV rms
+  5.2-6.20 us: ifI tone 78.0 mV -164 deg rest 25.6 (harm5+poly3: 11.1) mV rms ; ifQ tone 39.2 mV -50 deg rest 14.8 (harm5+poly3: 11.4) mV rms | mix I/Q 0.74/0.80 mV  vssa 1.66 vssd 1.96 mV rms
+  6.2-7.20 us: ifI tone 78.0 mV 164 deg rest 26.5 (harm5+poly3: 11.2) mV rms ; ifQ tone 42.0 mV -81 deg rest 14.9 (harm5+poly3: 11.6) mV rms | mix I/Q 0.75/0.82 mV  vssa 1.68 vssd 2.00 mV rms
+  7.2-8.20 us: ifI tone 78.6 mV 131 deg rest 26.3 (harm5+poly3: 11.1) mV rms ; ifQ tone 42.3 mV -116 deg rest 14.5 (harm5+poly3: 11.4) mV rms | mix I/Q 0.74/0.81 mV  vssa 1.66 vssd 1.97 mV rms
+  8.2-9.20 us: ifI tone 79.0 mV 98 deg rest 26.3 (harm5+poly3: 11.2) mV rms ; ifQ tone 42.2 mV -149 deg rest 14.7 (harm5+poly3: 11.5) mV rms | mix I/Q 0.75/0.81 mV  vssa 1.68 vssd 1.99 mV rms
+  3.2-9.90 us: ifI tone 74.0 mV -96 deg rest 31.4 (harm5+poly3: 21.0) mV rms ; ifQ tone 42.4 mV 20 deg rest 21.7 (harm5+poly3: 19.3) mV rms | mix I/Q 0.74/0.81 mV  vssa 1.66 vssd 1.97 mV rms
+  5.2-9.90 us: ifI tone 78.3 mV -163 deg rest 26.4 (harm5+poly3: 11.2) mV rms ; ifQ tone 41.3 mV -49 deg rest 14.9 (harm5+poly3: 11.5) mV rms | mix I/Q 0.75/0.81 mV  vssa 1.67 vssd 1.98 mV rms
+  ifI rest spectrum share: 0-1MHz 1% 1-3MHz 0% 3-5MHz 0% 5-9MHz 76% 9-20MHz 7% 20-250MHz 16% ; peaks MHz [ 8.09  8.3  12.34 12.13  7.87  8.51]
+  ifQ rest spectrum share: 0-1MHz 3% 1-3MHz 0% 3-5MHz 0% 5-9MHz 12% 9-20MHz 29% 20-250MHz 55% ; peaks MHz [16.38 16.17  8.09  8.3  16.6  56.6 ]
+== iso_l end 9.19 us
+  3.2-4.20 us: ifI tone 45.4 mV -70 deg rest 21.1 (harm5+poly3: 13.4) mV rms ; ifQ tone 60.1 mV -1 deg rest 23.7 (harm5+poly3: 18.0) mV rms | mix I/Q 0.33/0.46 mV  vssa 0.78 vssd 5.40 mV rms
+  4.2-5.20 us: ifI tone 44.6 mV -120 deg rest 13.3 (harm5+poly3: 12.0) mV rms ; ifQ tone 68.1 mV -50 deg rest 15.9 (harm5+poly3: 11.8) mV rms | mix I/Q 0.33/0.48 mV  vssa 0.79 vssd 5.50 mV rms
+  5.2-6.20 us: ifI tone 44.2 mV -156 deg rest 13.0 (harm5+poly3: 11.8) mV rms ; ifQ tone 68.2 mV -84 deg rest 15.8 (harm5+poly3: 11.6) mV rms | mix I/Q 0.33/0.47 mV  vssa 0.78 vssd 5.41 mV rms
+  6.2-7.20 us: ifI tone 44.1 mV 171 deg rest 13.1 (harm5+poly3: 12.0) mV rms ; ifQ tone 68.5 mV -118 deg rest 16.0 (harm5+poly3: 11.8) mV rms | mix I/Q 0.33/0.47 mV  vssa 0.78 vssd 5.51 mV rms
+  7.2-8.20 us: ifI tone 44.3 mV 138 deg rest 13.0 (harm5+poly3: 11.9) mV rms ; ifQ tone 67.5 mV -150 deg rest 15.9 (harm5+poly3: 11.7) mV rms | mix I/Q 0.34/0.48 mV  vssa 0.79 vssd 5.41 mV rms
+  8.2-9.17 us: ifI tone 44.1 mV 105 deg rest 13.1 (harm5+poly3: 12.0) mV rms ; ifQ tone 68.3 mV 176 deg rest 15.8 (harm5+poly3: 11.7) mV rms | mix I/Q 0.34/0.47 mV  vssa 0.79 vssd 5.48 mV rms
+  3.2-9.17 us: ifI tone 43.3 mV -86 deg rest 17.3 (harm5+poly3: 15.3) mV rms ; ifQ tone 66.2 mV -15 deg rest 19.2 (harm5+poly3: 15.7) mV rms | mix I/Q 0.33/0.47 mV  vssa 0.78 vssd 5.45 mV rms
+  5.2-9.17 us: ifI tone 44.1 mV -156 deg rest 13.2 (harm5+poly3: 11.9) mV rms ; ifQ tone 68.1 mV -84 deg rest 15.9 (harm5+poly3: 11.7) mV rms | mix I/Q 0.33/0.47 mV  vssa 0.79 vssd 5.45 mV rms
+  ifI rest spectrum share: 0-1MHz 3% 1-3MHz 0% 3-5MHz 2% 5-9MHz 12% 9-20MHz 25% 20-250MHz 58% ; peaks MHz [ 16.36   9.06 172.71   7.3    8.81  25.43]
+  ifQ rest spectrum share: 0-1MHz 2% 1-3MHz 0% 3-5MHz 1% 5-9MHz 8% 9-20MHz 51% 20-250MHz 38% ; peaks MHz [16.36 12.34 16.62 16.11 12.08  9.06]

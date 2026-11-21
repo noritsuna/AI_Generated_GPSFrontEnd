@@ -1,0 +1,69 @@
+* NGSPICE file created from refbuf.ext - technology: gf180mcuD
+
+.subckt refbuf_MP1 b a VDD
+X0 b a VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt refbuf_MP2 OUT b VDD
+X0 OUT b VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt refbuf_MN1 b a VSS
+X0 b a VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt refbuf_MN2 OUT b VSS
+X0 OUT b VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt refbuf_R1u_0 b a VSS
+X0 a_740_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X1 a_4100_2086# a_3680_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X2 a_6620_2086# a_7040_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X3 a_3260_2086# a_2840_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X4 a_5780_2086# a_6200_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X5 a_2420_2086# a_2000_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X6 a_4940_2086# a_5360_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X7 a_1580_2086# a_1160_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X8 a_4100_2086# a_4520_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X9 a_n100_2086# a_320_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X10 a_7460_2086# a_7040_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X11 a_3260_2086# a_3680_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X12 a_6620_2086# a_6200_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X13 a_2420_2086# a_2840_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X14 a_5780_2086# a_5360_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X15 a_4940_2086# a_4520_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X16 a_740_2086# a_320_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X17 a_7460_2086# a VSS ppolyf_u_1k r_width=1u r_length=10u
+X18 a_1580_2086# a_2000_n36# VSS ppolyf_u_1k r_width=1u r_length=10u
+X19 a_n100_2086# b VSS ppolyf_u_1k r_width=1u r_length=10u
+.ends
+
+.subckt refbuf_CIN IN a
+X0 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X7 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X9 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X15 IN a cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt refbuf VSS VDD IN OUT
+XXMP1 XMP2/b XMP1/a VDD refbuf_MP1
+XXMP2 OUT XMP2/b VDD refbuf_MP2
+XXMN1 XMP2/b XMP1/a VSS refbuf_MN1
+XXMN2 OUT XMP2/b VSS refbuf_MN2
+XXR1u_0 XMP2/b XMP1/a VSS refbuf_R1u_0
+XXCIN IN XMP1/a refbuf_CIN
+.ends
+

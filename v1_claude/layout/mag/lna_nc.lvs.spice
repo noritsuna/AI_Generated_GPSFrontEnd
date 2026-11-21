@@ -1,0 +1,443 @@
+* NGSPICE file created from lna_nc.ext - technology: gf180mcuD
+
+.subckt lna_nc_R30u_0 on_i VDD VSS
+X0 VDD on_i VSS ppolyf_u_1k r_width=30u r_length=2.17u
+.ends
+
+.subckt lna_nc_M1 RFIN op_i vb1 VSS VDD
+X0 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X1 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X3 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X4 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X5 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X8 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X10 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X11 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X12 RFIN vb1 op_i VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X13 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X14 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X15 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X16 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X17 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X18 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X19 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X20 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X21 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X22 RFIN vb1 op_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X23 op_i vb1 RFIN VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt lna_nc_R1u_0 vb2 g2 VSS s1r
+X0 s1r VSS VSS ppolyf_u_1k r_width=1u r_length=3u
+X1 g2 vb2 VSS ppolyf_u_1k r_width=1u r_length=10u
+.ends
+
+.subckt lna_nc_M2 on_i g2 VSS VDD
+X0 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X1 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X3 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X4 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X5 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X8 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X9 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X10 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X11 VSS g2 on_i VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X12 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X13 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X14 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X15 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X16 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X17 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X18 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X19 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X20 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X21 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X22 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X23 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X24 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X25 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X26 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X27 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X28 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X29 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X30 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X31 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X32 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X33 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X34 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X35 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X36 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X37 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X38 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X39 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X40 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X41 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X42 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X43 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X44 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X45 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X46 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X47 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X48 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X49 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X50 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X51 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X52 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X53 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X54 VSS g2 on_i VSS nfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+X55 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X56 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X57 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X58 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X59 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X60 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X61 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X62 VSS g2 on_i VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X63 on_i g2 VSS VSS nfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt lna_nc_CON on_i OUTN
+X0 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X7 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X9 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X15 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X16 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X17 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X18 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X19 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X20 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X21 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X22 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X23 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X24 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X25 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X26 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X27 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X28 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X29 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X30 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X31 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X32 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X33 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X34 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X35 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X36 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X37 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X38 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X39 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X40 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X41 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X42 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X43 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X44 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X45 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X46 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X47 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X48 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X49 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X50 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X51 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X52 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X53 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X54 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X55 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X56 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X57 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X58 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X59 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X60 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X61 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X62 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X63 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X64 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X65 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X66 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X67 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X68 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X69 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X70 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X71 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X72 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X73 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X74 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X75 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X76 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X77 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X78 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X79 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X80 on_i OUTN cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt lna_nc_COP op_i OUTP
+X0 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X7 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X9 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X15 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X16 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X17 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X18 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X19 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X20 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X21 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X22 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X23 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X24 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X25 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X26 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X27 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X28 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X29 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X30 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X31 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X32 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X33 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X34 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X35 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X36 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X37 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X38 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X39 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X40 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X41 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X42 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X43 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X44 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X45 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X46 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X47 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X48 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X49 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X50 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X51 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X52 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X53 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X54 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X55 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X56 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X57 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X58 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X59 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X60 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X61 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X62 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X63 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X64 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X65 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X66 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X67 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X68 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X69 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X70 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X71 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X72 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X73 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X74 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X75 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X76 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X77 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X78 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X79 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X80 op_i OUTP cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt lna_nc_MP1_MP2 vb1 vb2 PB VDD
+X0 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X1 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X2 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X3 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X4 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X5 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X6 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X7 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X8 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X9 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X10 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X11 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X12 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X13 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X14 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X15 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X16 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X17 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=3.56p ps=16.89u w=8u l=2u
+X18 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X19 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X20 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X21 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X22 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X23 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X24 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X25 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X26 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X27 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X28 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X29 VDD PB vb1 VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X30 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X31 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X32 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X33 VDD PB vb1 VDD pfet_03v3 ad=3.56p pd=16.89u as=2.12p ps=8.53u w=8u l=2u
+X34 vb1 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X35 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X36 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X37 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X38 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X39 VDD PB vb2 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X40 vb2 PB VDD VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X41 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X42 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+X43 VDD PB vb1 VDD pfet_03v3 ad=2.12p pd=8.53u as=2.12p ps=8.53u w=8u l=2u
+.ends
+
+.subckt lna_nc_R10u_0 RFIN VSS op_i VDD
+X0 VSS RFIN VSS ppolyf_u_1k r_width=10u r_length=3u
+X1 VDD op_i VSS ppolyf_u_1k r_width=10u r_length=2u
+.ends
+
+.subckt lna_nc_M2R vb2 VSS VDD
+X0 VSS vb2 vb2 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 vb2 vb2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt lna_nc_M1R s1r vb1 VSS VDD
+X0 s1r vb1 vb1 VSS nfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=0.28u
+X1 vb1 vb1 s1r VSS nfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=0.28u
+.ends
+
+.subckt lna_nc_CC2 RFIN g2
+X0 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X1 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X2 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X3 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X4 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X5 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X6 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X7 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X8 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X9 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X10 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X11 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X12 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X13 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X14 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X15 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X16 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X17 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X18 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X19 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X20 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X21 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X22 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X23 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X24 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X25 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X26 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X27 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X28 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X29 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X30 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X31 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X32 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X33 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X34 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X35 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X36 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X37 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X38 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X39 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X40 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X41 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X42 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X43 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X44 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X45 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X46 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X47 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X48 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X49 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X50 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X51 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X52 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X53 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X54 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X55 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X56 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X57 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X58 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X59 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X60 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X61 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X62 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X63 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X64 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X65 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X66 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X67 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X68 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X69 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X70 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X71 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X72 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X73 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X74 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X75 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X76 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X77 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X78 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X79 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+X80 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u
+.ends
+
+.subckt lna_nc_CB1 vb1 VSS
+X0 vb1 VSS cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+.ends
+
+.subckt lna_nc_CB2 vb2 VSS
+X0 vb2 VSS cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u
+.ends
+
+.subckt lna_nc VSS VDD RFIN PB OUTP OUTN
+XXR30u_0 XM2/on_i VDD VSS lna_nc_R30u_0
+XXM1 RFIN XM1/op_i XM1/vb1 VSS VDD lna_nc_M1
+XXR1u_0 XM2R/vb2 XM2/g2 VSS XM1R/s1r lna_nc_R1u_0
+XXM2 XM2/on_i XM2/g2 VSS VDD lna_nc_M2
+XXCON XM2/on_i OUTN lna_nc_CON
+XXCOP XM1/op_i OUTP lna_nc_COP
+XXMP1_MP2 XM1/vb1 XM2R/vb2 PB VDD lna_nc_MP1_MP2
+XXR10u_0 RFIN VSS XM1/op_i VDD lna_nc_R10u_0
+XXM2R XM2R/vb2 VSS VDD lna_nc_M2R
+XXM1R XM1R/s1r XM1/vb1 VSS VDD lna_nc_M1R
+XXCC2 RFIN XM2/g2 lna_nc_CC2
+XXCB1 XM1/vb1 VSS lna_nc_CB1
+XXCB2 XM2R/vb2 VSS lna_nc_CB2
+.ends
+

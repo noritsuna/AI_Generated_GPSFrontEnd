@@ -1,0 +1,57 @@
+v {xschem version=3.4.5 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+B 4 -80 -110 80 110 {}
+B 5 -102.5 -92.5 -97.5 -87.5 {name=RFIN dir=in}
+B 5 -102.5 -72.5 -97.5 -67.5 {name=REFIN dir=in}
+B 5 -102.5 -52.5 -97.5 -47.5 {name=SCLK dir=in}
+B 5 -102.5 -32.5 -97.5 -27.5 {name=SDI dir=in}
+B 5 -102.5 -12.5 -97.5 -7.5 {name=CS_N dir=in}
+B 5 97.5 -92.5 102.5 -87.5 {name=I_SIGN dir=out}
+B 5 97.5 -72.5 102.5 -67.5 {name=I_MAG dir=out}
+B 5 97.5 -52.5 102.5 -47.5 {name=Q_SIGN dir=out}
+B 5 97.5 -32.5 102.5 -27.5 {name=Q_MAG dir=out}
+B 5 97.5 -12.5 102.5 -7.5 {name=CLKOUT dir=out}
+B 5 97.5 7.5 102.5 12.5 {name=AFCOUT dir=out}
+B 5 97.5 27.5 102.5 32.5 {name=VCTRL dir=out}
+B 5 97.5 47.5 102.5 52.5 {name=VDDV dir=inout}
+B 5 97.5 67.5 102.5 72.5 {name=VDD dir=inout}
+B 5 97.5 87.5 102.5 92.5 {name=VSS dir=inout}
+L 4 -100 -90 -80 -90 {}
+T {RFIN} -75 -96 0 0 0.2 0.2 {}
+L 4 -100 -70 -80 -70 {}
+T {REFIN} -75 -76 0 0 0.2 0.2 {}
+L 4 -100 -50 -80 -50 {}
+T {SCLK} -75 -56 0 0 0.2 0.2 {}
+L 4 -100 -30 -80 -30 {}
+T {SDI} -75 -36 0 0 0.2 0.2 {}
+L 4 -100 -10 -80 -10 {}
+T {CS_N} -75 -16 0 0 0.2 0.2 {}
+L 4 100 -90 80 -90 {}
+T {I_SIGN} 75 -96 0 1 0.2 0.2 {}
+L 4 100 -70 80 -70 {}
+T {I_MAG} 75 -76 0 1 0.2 0.2 {}
+L 4 100 -50 80 -50 {}
+T {Q_SIGN} 75 -56 0 1 0.2 0.2 {}
+L 4 100 -30 80 -30 {}
+T {Q_MAG} 75 -36 0 1 0.2 0.2 {}
+L 4 100 -10 80 -10 {}
+T {CLKOUT} 75 -16 0 1 0.2 0.2 {}
+L 4 100 10 80 10 {}
+T {AFCOUT} 75 4 0 1 0.2 0.2 {}
+L 4 100 30 80 30 {}
+T {VCTRL} 75 24 0 1 0.2 0.2 {}
+L 4 100 50 80 50 {}
+T {VDDV} 75 44 0 1 0.2 0.2 {}
+L 4 100 70 80 70 {}
+T {VDD} 75 64 0 1 0.2 0.2 {}
+L 4 100 90 80 90 {}
+T {VSS} 75 84 0 1 0.2 0.2 {}
+T {@symname} 0 -140 0 0 0.25 0.25 {hcenter=true}
+T {@name} 0 115 0 0 0.25 0.25 {hcenter=true}

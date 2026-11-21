@@ -1,0 +1,35 @@
+== tt  
+  code 0: G(4.092) 41.2 dB, -3 dB 0.67-7.08 MHz, GPS band ripple 0.8 dB, Galileo band ripple 2.3 dB, G(11.25) -11.8 dB, G(16.37) -23.6 dB rel.; aliasing loss GPS 0.18 dB, Galileo 0.27 dB
+  code 1: G(4.092) 51.7 dB, -3 dB 0.67-7.08 MHz, GPS band ripple 0.8 dB, Galileo band ripple 2.2 dB, G(11.25) -11.6 dB, G(16.37) -23.4 dB rel.; aliasing loss GPS 0.19 dB, Galileo 0.28 dB
+  code 2: G(4.092) 63.2 dB, -3 dB 0.67-7.08 MHz, GPS band ripple 0.7 dB, Galileo band ripple 2.1 dB, G(11.25) -11.2 dB, G(16.37) -22.9 dB rel.; aliasing loss GPS 0.20 dB, Galileo 0.30 dB
+  code 3: G(4.092) 66.2 dB, -3 dB 0.67-7.08 MHz, GPS band ripple 0.7 dB, Galileo band ripple 2.1 dB, G(11.25) -11.1 dB, G(16.37) -22.7 dB rel.; aliasing loss GPS 0.21 dB, Galileo 0.31 dB
+== ss85  
+  code 0: G(4.092) 40.6 dB, -3 dB 0.53-5.62 MHz, GPS band ripple 1.8 dB, Galileo band ripple 5.2 dB, G(11.25) -17.7 dB, G(16.37) -30.5 dB rel.; aliasing loss GPS 0.05 dB, Galileo 0.11 dB
+  code 1: G(4.092) 50.5 dB, -3 dB 0.53-5.62 MHz, GPS band ripple 1.8 dB, Galileo band ripple 5.1 dB, G(11.25) -17.5 dB, G(16.37) -30.3 dB rel.; aliasing loss GPS 0.05 dB, Galileo 0.11 dB
+  code 2: G(4.092) 61.5 dB, -3 dB 0.53-5.62 MHz, GPS band ripple 1.7 dB, Galileo band ripple 4.9 dB, G(11.25) -17.1 dB, G(16.37) -29.9 dB rel.; aliasing loss GPS 0.06 dB, Galileo 0.11 dB
+  code 3: G(4.092) 64.4 dB, -3 dB 0.53-5.62 MHz, GPS band ripple 1.7 dB, Galileo band ripple 4.8 dB, G(11.25) -17.0 dB, G(16.37) -29.8 dB rel.; aliasing loss GPS 0.06 dB, Galileo 0.11 dB
+== ssm20  
+  code 0: G(4.092) 43.3 dB, -3 dB 0.47-5.31 MHz, GPS band ripple 2.2 dB, Galileo band ripple 6.6 dB, G(11.25) -21.0 dB, G(16.37) -34.6 dB rel.; aliasing loss GPS 0.02 dB, Galileo 0.06 dB
+  code 1: G(4.092) 54.1 dB, -3 dB 0.47-5.31 MHz, GPS band ripple 2.1 dB, Galileo band ripple 6.4 dB, G(11.25) -20.7 dB, G(16.37) -34.4 dB rel.; aliasing loss GPS 0.02 dB, Galileo 0.06 dB
+  code 2: G(4.092) 66.0 dB, -3 dB 0.47-5.31 MHz, GPS band ripple 2.0 dB, Galileo band ripple 6.1 dB, G(11.25) -20.3 dB, G(16.37) -34.0 dB rel.; aliasing loss GPS 0.03 dB, Galileo 0.06 dB
+  code 3: G(4.092) 69.2 dB, -3 dB 0.47-5.31 MHz, GPS band ripple 2.0 dB, Galileo band ripple 6.0 dB, G(11.25) -20.2 dB, G(16.37) -33.8 dB rel.; aliasing loss GPS 0.03 dB, Galileo 0.06 dB
+== ff85  
+  code 0: G(4.092) 37.5 dB, -3 dB 0.94-9.44 MHz, GPS band ripple 0.2 dB, Galileo band ripple 0.8 dB, G(11.25) -4.7 dB, G(16.37) -13.0 dB rel.; aliasing loss GPS 1.00 dB, Galileo 1.12 dB
+  code 1: G(4.092) 47.5 dB, -3 dB 0.94-9.44 MHz, GPS band ripple 0.2 dB, Galileo band ripple 0.8 dB, G(11.25) -4.6 dB, G(16.37) -12.7 dB rel.; aliasing loss GPS 1.03 dB, Galileo 1.15 dB
+  code 2: G(4.092) 58.1 dB, -3 dB 0.94-10.00 MHz, GPS band ripple 0.2 dB, Galileo band ripple 0.8 dB, G(11.25) -4.4 dB, G(16.37) -12.3 dB rel.; aliasing loss GPS 1.09 dB, Galileo 1.20 dB
+  code 3: G(4.092) 60.9 dB, -3 dB 0.94-10.00 MHz, GPS band ripple 0.2 dB, Galileo band ripple 0.8 dB, G(11.25) -4.3 dB, G(16.37) -12.2 dB rel.; aliasing loss GPS 1.11 dB, Galileo 1.22 dB
+== ffm20  
+  code 0: G(4.092) 41.2 dB, -3 dB 0.84-8.91 MHz, GPS band ripple 0.3 dB, Galileo band ripple 0.9 dB, G(11.25) -6.2 dB, G(16.37) -16.2 dB rel.; aliasing loss GPS 0.67 dB, Galileo 0.80 dB
+  code 1: G(4.092) 52.0 dB, -3 dB 0.84-8.91 MHz, GPS band ripple 0.3 dB, Galileo band ripple 0.8 dB, G(11.25) -6.0 dB, G(16.37) -15.9 dB rel.; aliasing loss GPS 0.69 dB, Galileo 0.83 dB
+  code 2: G(4.092) 63.4 dB, -3 dB 0.84-8.91 MHz, GPS band ripple 0.3 dB, Galileo band ripple 0.8 dB, G(11.25) -5.7 dB, G(16.37) -15.4 dB rel.; aliasing loss GPS 0.75 dB, Galileo 0.88 dB
+  code 3: G(4.092) 66.6 dB, -3 dB 0.84-8.91 MHz, GPS band ripple 0.3 dB, Galileo band ripple 0.8 dB, G(11.25) -5.6 dB, G(16.37) -15.3 dB rel.; aliasing loss GPS 0.77 dB, Galileo 0.90 dB
+== tt85  
+  code 0: G(4.092) 39.3 dB, -3 dB 0.71-7.08 MHz, GPS band ripple 0.8 dB, Galileo band ripple 2.1 dB, G(11.25) -10.7 dB, G(16.37) -21.9 dB rel.; aliasing loss GPS 0.24 dB, Galileo 0.34 dB
+  code 1: G(4.092) 49.4 dB, -3 dB 0.71-7.08 MHz, GPS band ripple 0.7 dB, Galileo band ripple 2.0 dB, G(11.25) -10.4 dB, G(16.37) -21.6 dB rel.; aliasing loss GPS 0.25 dB, Galileo 0.36 dB
+  code 2: G(4.092) 60.5 dB, -3 dB 0.71-7.08 MHz, GPS band ripple 0.7 dB, Galileo band ripple 2.0 dB, G(11.25) -10.1 dB, G(16.37) -21.2 dB rel.; aliasing loss GPS 0.27 dB, Galileo 0.38 dB
+  code 3: G(4.092) 63.3 dB, -3 dB 0.71-7.50 MHz, GPS band ripple 0.7 dB, Galileo band ripple 1.9 dB, G(11.25) -10.0 dB, G(16.37) -21.0 dB rel.; aliasing loss GPS 0.28 dB, Galileo 0.39 dB
+== ttm20  
+  code 0: G(4.092) 42.7 dB, -3 dB 0.63-6.68 MHz, GPS band ripple 0.9 dB, Galileo band ripple 2.6 dB, G(11.25) -13.4 dB, G(16.37) -25.7 dB rel.; aliasing loss GPS 0.12 dB, Galileo 0.20 dB
+  code 1: G(4.092) 53.5 dB, -3 dB 0.63-6.68 MHz, GPS band ripple 0.8 dB, Galileo band ripple 2.5 dB, G(11.25) -13.1 dB, G(16.37) -25.4 dB rel.; aliasing loss GPS 0.13 dB, Galileo 0.21 dB
+  code 2: G(4.092) 65.3 dB, -3 dB 0.63-6.68 MHz, GPS band ripple 0.8 dB, Galileo band ripple 2.4 dB, G(11.25) -12.7 dB, G(16.37) -25.0 dB rel.; aliasing loss GPS 0.14 dB, Galileo 0.22 dB
+  code 3: G(4.092) 68.5 dB, -3 dB 0.63-7.08 MHz, GPS band ripple 0.8 dB, Galileo band ripple 2.3 dB, G(11.25) -12.6 dB, G(16.37) -24.8 dB rel.; aliasing loss GPS 0.15 dB, Galileo 0.23 dB

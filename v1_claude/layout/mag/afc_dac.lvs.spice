@@ -1,0 +1,236 @@
+* NGSPICE file created from afc_dac.ext - technology: gf180mcuD
+
+.subckt afc_dac_A2_MN db2 D2 VSS
+X0 db2 D2 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_A5_MN db5 D5 VSS
+X0 db5 D5 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_A2_MP db2 D2 VDD
+X0 db2 D2 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac_A5_MP db5 D5 VDD
+X0 db5 D5 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac_A0_MN db0 D0 VSS
+X0 db0 D0 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_A3_MN db3 D3 VSS
+X0 db3 D3 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_A0_MP db0 D0 VDD
+X0 db0 D0 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac_A6_MN db6 D6 VSS
+X0 db6 D6 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_A3_MP db3 D3 VDD
+X0 db3 D3 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac_B0_MP_B1_MP dr0 dr1 db0 db1 VDD
+X0 VDD db0 dr0 VDD pfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=0.28u
+X1 VDD db1 dr1 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X2 dr0 db0 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X3 VDD db1 dr1 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X4 dr0 db0 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=0.28u
+X5 dr1 db1 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X6 VDD db0 dr0 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X7 dr1 db1 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+.ends
+
+.subckt afc_dac_A6_MP db6 D6 VDD
+X0 db6 D6 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac_B0_MN_B1_MN dr0 dr1 db0 db1 VSS
+X0 VSS db1 dr1 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 dr0 db0 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 dr1 db1 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X3 VSS db0 dr0 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt afc_dac_R2u_0 VSS n0 dr0 n1 dr1 n2 dr2 n3 dr3 n4 dr4
+X0 a_11000_2086# a_12400_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X1 a_5400_2086# n1 VSS ppolyf_u_1k r_width=2u r_length=10u
+X2 a_6100_2086# a_7500_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X3 a_14500_2086# a_13100_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X4 a_8200_2086# dr1 VSS ppolyf_u_1k r_width=2u r_length=10u
+X5 a_2600_2086# n0 VSS ppolyf_u_1k r_width=2u r_length=10u
+X6 a_11000_2086# n3 VSS ppolyf_u_1k r_width=2u r_length=10u
+X7 a_2600_2086# a_1200_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X8 a_n200_2086# VSS VSS ppolyf_u_1k r_width=2u r_length=10u
+X9 a_11700_2086# a_13100_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X10 a_6100_2086# n2 VSS ppolyf_u_1k r_width=2u r_length=10u
+X11 a_11700_2086# n4 VSS ppolyf_u_1k r_width=2u r_length=10u
+X12 a_3300_2086# dr0 VSS ppolyf_u_1k r_width=2u r_length=10u
+X13 a_500_2086# n0 VSS ppolyf_u_1k r_width=2u r_length=10u
+X14 a_8200_2086# a_6800_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X15 a_13800_2086# dr3 VSS ppolyf_u_1k r_width=2u r_length=10u
+X16 a_5400_2086# a_6800_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X17 a_13800_2086# a_12400_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X18 a_n200_2086# a_1200_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X19 a_8900_2086# a_7500_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X20 a_14500_2086# dr4 VSS ppolyf_u_1k r_width=2u r_length=10u
+X21 a_3300_2086# a_1900_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X22 a_8900_2086# dr2 VSS ppolyf_u_1k r_width=2u r_length=10u
+X23 a_500_2086# a_1900_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+.ends
+
+.subckt afc_dac_R2u_1 n5 dr5 n6 dr6 OUT dr7 n1 n0 n2 n3 n4 VSS
+X0 a_12400_1426# n3 VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X1 a_5400_2086# OUT VSS ppolyf_u_1k r_width=2u r_length=10u
+X2 a_6800_2086# dr7 VSS ppolyf_u_1k r_width=2u r_length=10u
+X3 a_13100_1426# a_14500_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X4 a_8200_1426# a_9600_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X5 a_2600_2086# dr5 VSS ppolyf_u_1k r_width=2u r_length=10u
+X6 n0 a_9600_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X7 a_2600_2086# a_1200_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X8 a_n200_2086# n5 VSS ppolyf_u_1k r_width=2u r_length=10u
+X9 a_13100_1426# n4 VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X10 a_5400_2086# a_6100_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X11 n1 a_10300_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X12 a_3300_2086# dr6 VSS ppolyf_u_1k r_width=2u r_length=10u
+X13 a_500_2086# n6 VSS ppolyf_u_1k r_width=2u r_length=10u
+X14 a_8200_1426# n1 VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X15 n2 a_13800_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X16 a_6800_2086# a_6100_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X17 a_12400_1426# a_13800_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X18 a_n200_2086# a_1200_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X19 a_8900_1426# n2 VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X20 n3 a_14500_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X21 a_3300_2086# a_1900_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+X22 a_8900_1426# a_10300_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X23 a_500_2086# a_1900_n36# VSS ppolyf_u_1k r_width=2u r_length=10u
+.ends
+
+.subckt afc_dac_R2u_2 n5 n4 n6 OUT VSS
+X0 n6 a_4700_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X1 a_4000_1426# OUT VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X2 n4 a_1200_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X3 a_n200_1426# n5 VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X4 a_4000_1426# a_4700_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X5 a_500_1426# n6 VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X6 a_n200_1426# a_1200_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X7 n5 a_1900_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+X8 a_500_1426# a_1900_n36# VSS ppolyf_u_1k r_width=2u r_length=6.7u
+.ends
+
+.subckt afc_dac_B2_MP_B3_MP dr2 dr3 db2 db3 VDD
+X0 VDD db2 dr2 VDD pfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=0.28u
+X1 VDD db3 dr3 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X2 dr2 db2 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X3 VDD db3 dr3 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X4 dr2 db2 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=0.28u
+X5 dr3 db3 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X6 VDD db2 dr2 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X7 dr3 db3 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+.ends
+
+.subckt afc_dac_B2_MN_B3_MN dr2 dr3 db2 db3 VSS
+X0 VSS db3 dr3 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 dr2 db2 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 dr3 db3 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X3 VSS db2 dr2 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt afc_dac_B4_MP_B5_MP dr4 dr5 db4 db5 VDD
+X0 VDD db4 dr4 VDD pfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=0.28u
+X1 VDD db5 dr5 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X2 dr4 db4 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X3 VDD db5 dr5 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X4 dr4 db4 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=0.28u
+X5 dr5 db5 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X6 VDD db4 dr4 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X7 dr5 db5 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+.ends
+
+.subckt afc_dac_B4_MN_B5_MN dr4 dr5 db4 db5 VSS
+X0 VSS db5 dr5 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 dr4 db4 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 dr5 db5 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X3 VSS db4 dr4 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt afc_dac_A1_MN db1 D1 VSS
+X0 db1 D1 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_B6_MP_B7_MP dr6 dr7 db6 db7 VDD
+X0 VDD db6 dr6 VDD pfet_03v3 ad=2.67p pd=12.89u as=1.59p ps=6.53u w=6u l=0.28u
+X1 VDD db7 dr7 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X2 dr6 db6 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X3 VDD db7 dr7 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X4 dr6 db6 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=2.67p ps=12.89u w=6u l=0.28u
+X5 dr7 db7 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X6 VDD db6 dr6 VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+X7 dr7 db7 VDD VDD pfet_03v3 ad=1.59p pd=6.53u as=1.59p ps=6.53u w=6u l=0.28u
+.ends
+
+.subckt afc_dac_B6_MN_B7_MN dr6 dr7 db6 db7 VSS
+X0 VSS db7 dr7 VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 dr6 db6 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 dr7 db7 VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X3 VSS db6 dr6 VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt afc_dac_A4_MN db4 D4 VSS
+X0 db4 D4 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_A1_MP db1 D1 VDD
+X0 db1 D1 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac_A7_MN db7 D7 VSS
+X0 db7 D7 VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt afc_dac_A4_MP db4 D4 VDD
+X0 db4 D4 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac_A7_MP db7 D7 VDD
+X0 db7 D7 VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt afc_dac VSS VDD D0 D1 D2 D3 D4 D5 D6 D7 OUT
+XXA2_MN XA2_MP/db2 D2 VSS afc_dac_A2_MN
+XXA5_MN XA5_MP/db5 D5 VSS afc_dac_A5_MN
+XXA2_MP XA2_MP/db2 D2 VDD afc_dac_A2_MP
+XXA5_MP XA5_MP/db5 D5 VDD afc_dac_A5_MP
+XXA0_MN XA0_MP/db0 D0 VSS afc_dac_A0_MN
+XXA3_MN XA3_MP/db3 D3 VSS afc_dac_A3_MN
+XXA0_MP XA0_MP/db0 D0 VDD afc_dac_A0_MP
+XXA6_MN XA6_MP/db6 D6 VSS afc_dac_A6_MN
+XXA3_MP XA3_MP/db3 D3 VDD afc_dac_A3_MP
+XXB0_MP_B1_MP XR2u_0/dr0 XR2u_0/dr1 XA0_MP/db0 XA1_MP/db1 VDD afc_dac_B0_MP_B1_MP
+XXA6_MP XA6_MP/db6 D6 VDD afc_dac_A6_MP
+XXB0_MN_B1_MN XR2u_0/dr0 XR2u_0/dr1 XA0_MP/db0 XA1_MP/db1 VSS afc_dac_B0_MN_B1_MN
+XXR2u_0 VSS XR2u_1/n0 XR2u_0/dr0 XR2u_1/n1 XR2u_0/dr1 XR2u_1/n2 XR2u_0/dr2 XR2u_1/n3
++ XR2u_0/dr3 XR2u_2/n4 XR2u_0/dr4 afc_dac_R2u_0
+XXR2u_1 XR2u_2/n5 XR2u_1/dr5 XR2u_2/n6 XR2u_1/dr6 OUT XR2u_1/dr7 XR2u_1/n1 XR2u_1/n0
++ XR2u_1/n2 XR2u_1/n3 XR2u_2/n4 VSS afc_dac_R2u_1
+XXR2u_2 XR2u_2/n5 XR2u_2/n4 XR2u_2/n6 OUT VSS afc_dac_R2u_2
+XXB2_MP_B3_MP XR2u_0/dr2 XR2u_0/dr3 XA2_MP/db2 XA3_MP/db3 VDD afc_dac_B2_MP_B3_MP
+XXB2_MN_B3_MN XR2u_0/dr2 XR2u_0/dr3 XA2_MP/db2 XA3_MP/db3 VSS afc_dac_B2_MN_B3_MN
+XXB4_MP_B5_MP XR2u_0/dr4 XR2u_1/dr5 XA4_MP/db4 XA5_MP/db5 VDD afc_dac_B4_MP_B5_MP
+XXB4_MN_B5_MN XR2u_0/dr4 XR2u_1/dr5 XA4_MP/db4 XA5_MP/db5 VSS afc_dac_B4_MN_B5_MN
+XXA1_MN XA1_MP/db1 D1 VSS afc_dac_A1_MN
+XXB6_MP_B7_MP XR2u_1/dr6 XR2u_1/dr7 XA6_MP/db6 XA7_MP/db7 VDD afc_dac_B6_MP_B7_MP
+XXB6_MN_B7_MN XR2u_1/dr6 XR2u_1/dr7 XA6_MP/db6 XA7_MP/db7 VSS afc_dac_B6_MN_B7_MN
+XXA4_MN XA4_MP/db4 D4 VSS afc_dac_A4_MN
+XXA1_MP XA1_MP/db1 D1 VDD afc_dac_A1_MP
+XXA7_MN XA7_MP/db7 D7 VSS afc_dac_A7_MN
+XXA4_MP XA4_MP/db4 D4 VDD afc_dac_A4_MP
+XXA7_MP XA7_MP/db7 D7 VDD afc_dac_A7_MP
+.ends
+

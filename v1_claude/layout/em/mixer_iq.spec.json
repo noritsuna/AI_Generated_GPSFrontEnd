@@ -1,0 +1,62 @@
+{
+ "cell": "mixer_iq",
+ "nets": {
+  "tI": {
+   "MG1I_MG2I:sd": 2.0,
+   "MTI_MTQ:sd": -2.0
+  },
+  "xpI": {
+   "MLApI_MLBpI:sd": 1.0,
+   "MG1I_MG2I:sd": -1.0
+  },
+  "mpaI": {
+   "MU1pI_MU2pI:sd": 0.5,
+   "MLApI_MLBpI:sd": -0.5
+  },
+  "IFIP": {
+   "R4u_0:poly": 1.0,
+   "MU1nI_MU2nI:sd": -0.25,
+   "MU1pI_MU2pI:sd": -0.25,
+   "MU3nI_MU4nI:sd": -0.25,
+   "MU3pI_MU4pI:sd": -0.25
+  },
+  "VDD": {
+   "M4": 0,
+   "R4u_0:poly": -4.0
+  },
+  "VSS": {
+   "M4": 0,
+   "MTI_MTQ:sd": 4.0
+  },
+  "IFIN": {
+   "R4u_0:poly": 1.0,
+   "MU1nI_MU2nI:sd": -0.25,
+   "MU1pI_MU2pI:sd": -0.25,
+   "MU3nI_MU4nI:sd": -0.25,
+   "MU3pI_MU4pI:sd": -0.25
+  }
+ },
+ "opts": {
+  "tI": {
+   "pick": "$43"
+  },
+  "xpI": {
+   "pick": "$22"
+  },
+  "mpaI": {
+   "pick": "$23"
+  },
+  "IFIP": {
+   "pick": "$67"
+  },
+  "IFIN": {
+   "pick": "$68"
+  },
+  "VDD": {
+   "pick": "$45"
+  },
+  "VSS": {
+   "pick": "$1"
+  }
+ }
+}

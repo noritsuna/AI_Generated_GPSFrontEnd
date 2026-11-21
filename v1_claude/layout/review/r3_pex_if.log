@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/home/noritsuna/GPS/scripts/layout/pex_blocks.py", line 47, in <module>
+    main()
+  File "/home/noritsuna/GPS/scripts/layout/pex_blocks.py", line 40, in main
+    outs = list(ex.map(lambda j: run.ngspice(deck(*j), "rp_%s_%s" % (j[0], "pex" if j[1] else "sch"), timeout=40000), jobs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/pex_blocks.py", line 40, in <lambda>
+    outs = list(ex.map(lambda j: run.ngspice(deck(*j), "rp_%s_%s" % (j[0], "pex" if j[1] else "sch"), timeout=40000), jobs))
+                                             ^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/pex_blocks.py", line 24, in deck
+    t = pexsim.swap(t, c)
+        ^^^^^^^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/pexsim.py", line 20, in swap
+    sch_ports = ports(text, cell)
+                ^^^^^^^^^^^^^^^^^
+  File "/home/noritsuna/GPS/scripts/layout/pexsim.py", line 14, in ports
+    return m.group(1).replace("\n+", " ").split()
+           ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'

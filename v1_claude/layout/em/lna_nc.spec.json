@@ -1,0 +1,7 @@
+{"cell": "lna_nc",
+ "nets": {"on_i": {"R30u_0:poly": 13.2, "M2:sd": -13.2},
+          "op_i": {"R10u_0:poly": 3.1, "M1:sd": -3.1},
+          "RFIN": {"M1:sd": 3.1, "R10u_0:poly": -3.1},
+          "VDD": {"M4": 0, "R30u_0:poly": -13.2, "R10u_0:poly": -3.1},
+          "VSS": {"M4": 0, "M2:sd": 13.2, "R10u_0:poly": 3.1}},
+ "opts": {"op_i": {"pick": "$8"}, "RFIN": {"pick": "$6"}, "on_i": {"pick": "$9"}, "VDD": {"pick": "$12"}, "VSS": {"pick": "$1"}}}

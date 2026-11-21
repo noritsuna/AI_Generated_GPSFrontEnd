@@ -1,0 +1,15 @@
+* NGSPICE file created from inv_lo1.ext - technology: gf180mcuD
+
+.subckt inv_lo1_MN Y A VSS
+X0 Y A VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt inv_lo1_MP Y A VDD
+X0 Y A VDD VDD pfet_03v3 ad=1.78p pd=8.89u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt inv_lo1 VSS VDD A Y
+XXMN Y A VSS inv_lo1_MN
+XXMP Y A VDD inv_lo1_MP
+.ends
+

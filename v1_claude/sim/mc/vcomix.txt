@@ -1,0 +1,12 @@
+seed=0 flo=1578.739 lo_iq=1.264 lo_err=2.09/3.58/2.75 fif=4.092 ai=0.7597 aq=1.8180 imb=7.579 dphi=-152.731 lopp=1.605
+seed=1 flo=1580.060 lo_iq=0.443 lo_err=1.00/3.36/2.80 fif=4.092 ai=0.8811 aq=2.1079 imb=7.577 dphi=-119.486 lopp=1.605
+seed=2 flo=1577.822 lo_iq=2.961 lo_err=3.03/3.61/3.54 fif=4.092 ai=1.0010 aq=1.7892 imb=5.045 dphi=-154.941 lopp=1.590
+seed=3 flo=1576.715 lo_iq=0.707 lo_err=2.46/4.18/2.43 fif=4.092 ai=1.8473 aq=1.0740 imb=-4.710 dphi=-140.278 lopp=1.603
+seed=4 flo=1576.814 lo_iq=-0.476 lo_err=1.04/3.64/2.12 fif=4.092 ai=1.5381 aq=1.2722 imb=-1.648 dphi=-161.615 lopp=1.601
+seed=5 flo=1575.099 lo_iq=3.141 lo_err=3.32/3.67/3.50 fif=4.092 ai=1.6583 aq=1.6661 imb=0.041 dphi=-39.529 lopp=1.601
+seed=6 flo=1576.190 lo_iq=1.662 lo_err=2.75/4.05/2.96 fif=4.092 ai=1.9525 aq=0.7683 imb=-8.102 dphi=-56.124 lopp=1.599
+seed=7 flo=1576.929 lo_iq=1.817 lo_err=2.20/3.60/3.21 fif=4.092 ai=1.4399 aq=1.4285 imb=-0.069 dphi=-157.058 lopp=1.605
+seed=8 flo=1579.993 lo_iq=0.174 lo_err=1.63/3.76/2.30 fif=4.092 ai=0.3288 aq=1.9480 imb=15.452 dphi=-58.368 lopp=1.592
+seed=9 flo=1575.610 lo_iq=1.051 lo_err=1.51/2.99/2.53 fif=4.092 ai=0.7906 aq=1.8749 imb=7.500 dphi=-21.978 lopp=1.614
+seed=10 flo=1579.141 lo_iq=0.108 lo_err=1.77/3.89/2.23 fif=4.092 ai=1.8299 aq=0.6608 imb=-8.847 dphi=-28.407 lopp=1.610
+seed=11 flo=1580.222 lo_iq=1.234 lo_err=2.63/3.99/2.59 fif=4.092 ai=1.5798 aq=1.2451 imb=-2.069 dphi=-157.206 lopp=1.607

@@ -1,0 +1,10 @@
+== tt_b0_i0
+RES vc_m=2.13492 vc_e=2.13483 vc_end=2.1348 vc_pp=0.0041982 flo=1.57139E+09 phase_err_s=-6.7E-11
+fLO 1571.369 MHz  IF 4.051 MHz | RFIN 98.1 uV (source 100.0 uV available)  LNA out 423.0 uV (gain 12.5 dB from the port) | I 1.612 mV  Q 1.581 mV  gain port->IF 24.1 / 24.0 dB  imb 0.17 dB  I-Q 91.2 deg
+== ss_b3_i1
+RES vc_m=1.45737 vc_e=1.45731 vc_end=1.45734 vc_pp=0.00528862 flo=1.57144E+09 phase_err_s=6.115E-08
+fLO 1571.379 MHz  IF 4.041 MHz | RFIN 106.2 uV (source 100.0 uV available)  LNA out 401.8 uV (gain 12.1 dB from the port) | I 1.004 mV  Q 0.993 mV  gain port->IF 20.0 / 19.9 dB  imb 0.09 dB  I-Q 91.7 deg
+== ff_b0_i0
+RES vc_m=1.5445 vc_e=1.54449 vc_end=1.54448 vc_pp=0.00212561 flo=1.57134E+09 phase_err_s=1.2E-11
+fLO 1571.339 MHz  IF 4.081 MHz | RFIN 94.4 uV (source 100.0 uV available)  LNA out 536.3 uV (gain 14.6 dB from the port) | I 1.835 mV  Q 1.797 mV  gain port->IF 25.3 / 25.1 dB  imb 0.18 dB  I-Q 90.2 deg
+rc=0

@@ -1,0 +1,1106 @@
+
+Magic 8.3 revision 690 - Compiled on Wed Nov  4 08:33:25 PM JST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology gf180mcuD ...
+10 Magic internal units = 1 Lambda
+Input style import: scaleFactor=10, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    obsactive mvobsactive filldiff fillpoly m1hole obsm1 fillm1 obsv1 m2hole obsm2 fillm2 obsv2 m3hole obsm3 fillm3 m4hole obsm4 fillm4 m5hole obsm5 fillm5 glass fillblock lvstext obscomment 
+Scaled tech values by 10 / 1 to match internal grid scaling
+Loading gf180mcuD Device Generator Menu ...
+Using technology "gf180mcuD", version 1.0.588-105-g792ef67
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "gnss_inv_dig_MP".
+Reading "gnss_inv_dig_MN".
+Reading "gnss_cp_MNC_MNC2_MBT".
+Reading "gnss_cp_CVD".
+Reading "gnss_cp_MNE2".
+Reading "gnss_cp_MND2".
+Reading "gnss_cp_MNS2".
+Reading "gnss_cp_MND".
+Reading "gnss_cp_MNS".
+Reading "gnss_cp_MBL1_MBL2".
+Reading "gnss_cp_MB1_MB2".
+Reading "gnss_cp_MPS2_MPD2".
+Reading "gnss_cp_MPS_MPD".
+Reading "gnss_cp_MPE2".
+Reading "gnss_cp_MPC_MPC2".
+Reading "gnss_loop_filter_R2u_0".
+Reading "gnss_loop_filter_R1u_0".
+Reading "gnss_loop_filter_C3".
+Reading "gnss_loop_filter_C2".
+Reading "gnss_loop_filter_C1_1".
+Reading "gnss_loop_filter_C1_0".
+Reading "gnss_div48_D5_F1_MP4".
+Reading "gnss_div48_D5_F1_MN1".
+Reading "gnss_div48_D3_F_MN6".
+Reading "gnss_div48_D3_F_MP4".
+Reading "gnss_div48_D3_F_MN1".
+Reading "gnss_div48_D2_F_MN6".
+Reading "gnss_div48_D2_F_MP4".
+Reading "gnss_div48_D2_F_MN1".
+Reading "gnss_div48_D1_F_MN6".
+Reading "gnss_div48_D1_F_MP4".
+Reading "gnss_div48_D1_F_MN1".
+Reading "gnss_div48_FB1_MP".
+Reading "gnss_div48_D5_N_MP2".
+Reading "gnss_div48_D5_N_MP1".
+Reading "gnss_div48_D1_F_MP2".
+Reading "gnss_div48_D1_F_MP1".
+Reading "gnss_div48_FB2_MP".
+Reading "gnss_div48_FB2_MN".
+Reading "gnss_div48_D6_F_MN6".
+Reading "gnss_div48_D6_F_MP4".
+Reading "gnss_div48_D6_F_MN1".
+Reading "gnss_div48_D5_N_MN2".
+Reading "gnss_div48_D5_N_MN1".
+Reading "gnss_div48_D5_F2_MN6".
+Reading "gnss_div48_D5_F2_MP4".
+Reading "gnss_div48_D5_F2_MN1".
+Reading "gnss_div48_D5_F1_MN6".
+Reading "gnss_div48_D5_F1_MP5".
+Reading "gnss_div48_D5_F1_MP3".
+Reading "gnss_div48_D5_F1_MP2".
+Reading "gnss_div48_D5_F1_MP1".
+Reading "gnss_div48_D3_F_MP5".
+Reading "gnss_div48_D3_F_MP3".
+Reading "gnss_div48_D3_F_MP2".
+Reading "gnss_div48_D3_F_MP1".
+Reading "gnss_div48_D2_F_MP5".
+Reading "gnss_div48_D2_F_MP3".
+Reading "gnss_div48_D2_F_MP2".
+Reading "gnss_div48_D2_F_MP1".
+Reading "gnss_div48_D1_F_MP5".
+Reading "gnss_div48_D1_F_MP3".
+Reading "gnss_div48_D2_F_MN2".
+Reading "gnss_div48_D1_F_MN5".
+Reading "gnss_div48_D1_F_MN4".
+Reading "gnss_div48_D1_F_MN3".
+Reading "gnss_div48_D1_F_MN2".
+Reading "gnss_div48_FB1_MN".
+Reading "gnss_div48_D6_F_MP5".
+Reading "gnss_div48_D6_F_MP3".
+Reading "gnss_div48_D6_F_MP2".
+Reading "gnss_div48_D6_F_MP1".
+Reading "gnss_div48_D5_F2_MP5".
+Reading "gnss_div48_D5_F2_MP3".
+Reading "gnss_div48_D5_F2_MP2".
+Reading "gnss_div48_D5_F2_MP1".
+Reading "gnss_div48_D5_F2_MN4".
+Reading "gnss_div48_D5_F2_MN3".
+Reading "gnss_div48_D5_F2_MN2".
+Reading "gnss_div48_D5_F1_MN5".
+Reading "gnss_div48_D5_F1_MN4".
+Reading "gnss_div48_D5_F1_MN3".
+Reading "gnss_div48_D5_F1_MN2".
+Reading "gnss_div48_D3_F_MN5".
+Reading "gnss_div48_D3_F_MN4".
+Reading "gnss_div48_D3_F_MN3".
+Reading "gnss_div48_D3_F_MN2".
+Reading "gnss_div48_D2_F_MN5".
+Reading "gnss_div48_D2_F_MN4".
+Reading "gnss_div48_D2_F_MN3".
+Reading "gnss_div48_D6_F_MN5".
+Reading "gnss_div48_D6_F_MN4".
+Reading "gnss_div48_D6_F_MN3".
+Reading "gnss_div48_D6_F_MN2".
+Reading "gnss_div48_D5_F2_MN5".
+Reading "gnss_pfd_D_3_MN1".
+Reading "gnss_pfd_D_2_MN3".
+Reading "gnss_pfd_D_2_MN2".
+Reading "gnss_pfd_D_2_MN1".
+Reading "gnss_pfd_U_6_MN3".
+Reading "gnss_pfd_U_6_MN2".
+Reading "gnss_pfd_U_6_MN1".
+Reading "gnss_pfd_U_3_MN3".
+Reading "gnss_pfd_U_3_MN2".
+Reading "gnss_pfd_U_3_MN1".
+Reading "gnss_pfd_U_2_MN3".
+Reading "gnss_pfd_U_2_MN2".
+Reading "gnss_pfd_U_2_MN1".
+Reading "gnss_pfd_U_1_MN2".
+Reading "gnss_pfd_U_1_MN1".
+Reading "gnss_pfd_O2_MN".
+Reading "gnss_pfd_O1_MN".
+Reading "gnss_pfd_D4_MN".
+Reading "gnss_pfd_D3_MN".
+Reading "gnss_pfd_D2_MN".
+Reading "gnss_pfd_D1_MN".
+Reading "gnss_pfd_D_6_MN3".
+Reading "gnss_pfd_D_6_MN2".
+Reading "gnss_pfd_D_6_MN1".
+Reading "gnss_pfd_D_3_MN3".
+Reading "gnss_pfd_D_3_MN2".
+Reading "gnss_pfd_U_5_MN1".
+Reading "gnss_pfd_U_4_MP2".
+Reading "gnss_pfd_U_4_MP1".
+Reading "gnss_pfd_U_4_MN2".
+Reading "gnss_pfd_U_4_MN1".
+Reading "gnss_pfd_U_3_MP3".
+Reading "gnss_pfd_U_3_MP2".
+Reading "gnss_pfd_U_3_MP1".
+Reading "gnss_pfd_U_2_MP3".
+Reading "gnss_pfd_U_2_MP2".
+Reading "gnss_pfd_U_2_MP1".
+Reading "gnss_pfd_U_1_MP2".
+Reading "gnss_pfd_U_1_MP1".
+Reading "gnss_pfd_D_2_MP3".
+Reading "gnss_pfd_D_2_MP2".
+Reading "gnss_pfd_D_2_MP1".
+Reading "gnss_pfd_D_1_MP2".
+Reading "gnss_pfd_D_1_MP1".
+Reading "gnss_pfd_D_1_MN2".
+Reading "gnss_pfd_D_1_MN1".
+Reading "gnss_pfd_U_6_MP3".
+Reading "gnss_pfd_U_6_MP2".
+Reading "gnss_pfd_U_6_MP1".
+Reading "gnss_pfd_U_5_MP2".
+Reading "gnss_pfd_U_5_MP1".
+Reading "gnss_pfd_U_5_MN2".
+Reading "gnss_pfd_D_6_MP2".
+Reading "gnss_pfd_D_6_MP1".
+Reading "gnss_pfd_D_5_MP2".
+Reading "gnss_pfd_D_5_MP1".
+Reading "gnss_pfd_D_5_MN2".
+Reading "gnss_pfd_D_5_MN1".
+Reading "gnss_pfd_D_4_MP2".
+Reading "gnss_pfd_D_4_MP1".
+Reading "gnss_pfd_D_4_MN2".
+Reading "gnss_pfd_D_4_MN1".
+Reading "gnss_pfd_D_3_MP3".
+Reading "gnss_pfd_D_3_MP2".
+Reading "gnss_pfd_D_3_MP1".
+Reading "gnss_pfd_O2_MP".
+Reading "gnss_pfd_O1_MP".
+Reading "gnss_pfd_D4_MP".
+Reading "gnss_pfd_D3_MP".
+Reading "gnss_pfd_D2_MP".
+Reading "gnss_pfd_D1_MP".
+Reading "gnss_pfd_R_MP2".
+Reading "gnss_pfd_R_MP1".
+Reading "gnss_pfd_R_MN2".
+Reading "gnss_pfd_R_MN1".
+Reading "gnss_pfd_D_6_MP3".
+Reading "gnss_divbuf_MN2".
+Reading "gnss_divbuf_MN1".
+Reading "gnss_divbuf_MP2".
+Reading "gnss_divbuf_MP1".
+Reading "gnss_divbuf_R1u_0".
+Reading "gnss_divbuf_CIN".
+Reading "gnss_vco_core_DP3".
+Reading "gnss_vco_core_MCPn3".
+Reading "gnss_vco_core_MCPp3".
+Reading "gnss_vco_core_MBPn3".
+Reading "gnss_vco_core_MBPp3".
+Reading "gnss_vco_core_PLd3".
+Reading "gnss_vco_core_PLc3".
+Reading "gnss_vco_core_DP2".
+Reading "gnss_vco_core_MCPn2".
+Reading "gnss_vco_core_MCPp2".
+Reading "gnss_vco_core_MBPn2".
+Reading "gnss_vco_core_MBPp2".
+Reading "gnss_vco_core_PLd2".
+Reading "gnss_vco_core_PLc2".
+Reading "gnss_vco_core_DP4".
+Reading "gnss_vco_core_MCPp4".
+Reading "gnss_vco_core_MCPn4".
+Reading "gnss_vco_core_MBPp4".
+Reading "gnss_vco_core_MBPn4".
+Reading "gnss_vco_core_PLd4".
+Reading "gnss_vco_core_PLc4".
+Reading "gnss_vco_core_DP1".
+Reading "gnss_vco_core_MCPn1".
+Reading "gnss_vco_core_MCPp1".
+Reading "gnss_vco_core_MBPn1".
+Reading "gnss_vco_core_MBPp1".
+Reading "gnss_vco_core_PLd1".
+Reading "gnss_vco_core_PLc1".
+Reading "gnss_vco_core_P3".
+Reading "gnss_vco_core_P2".
+Reading "gnss_vco_core_P4".
+Reading "gnss_vco_core_P1".
+Reading "gnss_vco_core_N3".
+Reading "gnss_vco_core_N2".
+Reading "gnss_vco_core_N4".
+Reading "gnss_vco_core_N1".
+Reading "gnss_vco_core_DN3".
+Reading "gnss_vco_core_MCNn3".
+Reading "gnss_vco_core_MCNp3".
+Reading "gnss_vco_core_MBNn3".
+Reading "gnss_vco_core_MBNp3".
+Reading "gnss_vco_core_NLd3".
+Reading "gnss_vco_core_NLc3".
+Reading "gnss_vco_core_DN2".
+Reading "gnss_vco_core_MCNn2".
+Reading "gnss_vco_core_MCNp2".
+Reading "gnss_vco_core_MBNn2".
+Reading "gnss_vco_core_MBNp2".
+Reading "gnss_vco_core_NLd2".
+Reading "gnss_vco_core_NLc2".
+Reading "gnss_vco_core_DN4".
+Reading "gnss_vco_core_MCNp4".
+Reading "gnss_vco_core_MCNn4".
+Reading "gnss_vco_core_MBNp4".
+Reading "gnss_vco_core_MBNn4".
+Reading "gnss_vco_core_NLd4".
+Reading "gnss_vco_core_NLc4".
+Reading "gnss_vco_core_DN1".
+Reading "gnss_vco_core_MCNn1".
+Reading "gnss_vco_core_MCNp1".
+Reading "gnss_vco_core_MBNn1".
+Reading "gnss_vco_core_MBNp1".
+Reading "gnss_vco_core_NLd1".
+Reading "gnss_vco_core_NLc1".
+Reading "gnss_inv_dig".
+CIF file read warning: CIF style import: units rescaled by factor of 5 / 1
+Reading "gnss_nand2_MN2".
+Reading "gnss_nand2_MN1".
+Reading "gnss_nand2_MP2".
+Reading "gnss_nand2_MP1".
+Reading "gnss_nor2_MP2".
+Reading "gnss_nor2_MP1".
+Reading "gnss_nor2_MN2".
+Reading "gnss_nor2_MN1".
+Reading "gnss_sa_comp_S1_MN1".
+Reading "gnss_sa_comp_S1_MN2".
+Reading "gnss_sa_comp_S1_MP1".
+Reading "gnss_sa_comp_S1_MP2".
+Reading "gnss_sa_comp_S2_MP2".
+Reading "gnss_sa_comp_S2_MP1".
+Reading "gnss_sa_comp_S2_MN2".
+Reading "gnss_sa_comp_S2_MN1".
+Reading "gnss_sa_comp_I1_MN".
+Reading "gnss_sa_comp_I1_MP".
+Reading "gnss_sa_comp_I2_MP".
+Reading "gnss_sa_comp_I2_MN".
+Reading "gnss_sa_comp_M10".
+Reading "gnss_sa_comp_M8".
+Reading "gnss_sa_comp_M7".
+Reading "gnss_sa_comp_M9".
+Reading "gnss_sa_comp_M12".
+Reading "gnss_sa_comp_M6".
+Reading "gnss_sa_comp_M5".
+Reading "gnss_sa_comp_M11".
+Reading "gnss_sa_comp_M3".
+Reading "gnss_sa_comp_M2".
+Reading "gnss_sa_comp_MT".
+Reading "gnss_sa_comp_M1".
+Reading "gnss_sa_comp_M4".
+Reading "gnss_vga_CCM".
+Reading "gnss_vga_RB".
+Reading "gnss_vga_RL".
+Reading "gnss_vga_RDB".
+Reading "gnss_vga_RD".
+Reading "gnss_vga_MSW".
+Reading "gnss_vga_MDP".
+Reading "gnss_vga_MT".
+Reading "gnss_vga_CC2".
+Reading "gnss_vga_CC1".
+Reading "gnss_sk_lpf1_R1u_0".
+Reading "gnss_sk_lpf1_C2N".
+Reading "gnss_sk_lpf1_C2P".
+Reading "gnss_sk_lpf1_C1N".
+Reading "gnss_sk_lpf1_C1P".
+Reading "gnss_sk_lpf1_MSNP_MSNN".
+Reading "gnss_sk_lpf1_MSWP_MSWN".
+Reading "gnss_sk_lpf1_MFN".
+Reading "gnss_sk_lpf1_MFP".
+Reading "gnss_sk_lpf1_C2WN".
+Reading "gnss_sk_lpf1_C2WP".
+Reading "gnss_sk_lpf1_C2NN".
+Reading "gnss_sk_lpf1_C2NP".
+Reading "gnss_sk_lpf1_MIP_MIN".
+Reading "gnss_bias_if_MV".
+Reading "gnss_bias_if_CPB".
+Reading "gnss_bias_if_CNB".
+Reading "gnss_bias_if_CC".
+Reading "gnss_bias_if_MI1_MI2".
+Reading "gnss_bias_if_MOT_MPP".
+Reading "gnss_bias_if_R1u_0".
+Reading "gnss_bias_if_ML2".
+Reading "gnss_bias_if_ML1".
+Reading "gnss_bias_if_MND_MNP".
+Reading "gnss_bias_if_MPD_MPM".
+Reading "gnss_sk_lpf2_R1u_0".
+Reading "gnss_sk_lpf2_C2P".
+Reading "gnss_sk_lpf2_C1N".
+Reading "gnss_sk_lpf2_C1P".
+Reading "gnss_sk_lpf2_MSNP_MSNN".
+Reading "gnss_sk_lpf2_MSWP_MSWN".
+Reading "gnss_sk_lpf2_MFN".
+Reading "gnss_sk_lpf2_MFP".
+Reading "gnss_sk_lpf2_C2WN".
+Reading "gnss_sk_lpf2_C2WP".
+Reading "gnss_sk_lpf2_C2NN".
+Reading "gnss_sk_lpf2_C2NP".
+Reading "gnss_sk_lpf2_MIP_MIN".
+Reading "gnss_sk_lpf2_C2N".
+Reading "gnss_vga_fix_CCM".
+Reading "gnss_vga_fix_R1u_0".
+Reading "gnss_vga_fix_R1u_1".
+Reading "gnss_vga_fix_R2u_0".
+Reading "gnss_vga_fix_R10p6u_0".
+Reading "gnss_vga_fix_M2".
+Reading "gnss_vga_fix_M1".
+Reading "gnss_vga_fix_MT1_MT2".
+Reading "gnss_vga_fix_CC2".
+Reading "gnss_vga_fix_CC1".
+Reading "gnss_lna_nc_MP1_MP2".
+Reading "gnss_lna_nc_R30u_0".
+Reading "gnss_lna_nc_R1u_0".
+Reading "gnss_lna_nc_R10u_0".
+Reading "gnss_lna_nc_CON".
+Reading "gnss_lna_nc_COP".
+Reading "gnss_lna_nc_M2R".
+Reading "gnss_lna_nc_M1R".
+Reading "gnss_lna_nc_M2".
+Reading "gnss_lna_nc_M1".
+Reading "gnss_lna_nc_CB2".
+Reading "gnss_lna_nc_CB1".
+Reading "gnss_lna_nc_CC2".
+Reading "gnss_mixer_iq_CL2Q".
+Reading "gnss_mixer_iq_CL1Q".
+Reading "gnss_mixer_iq_CLOL".
+Reading "gnss_mixer_iq_CBRF".
+Reading "gnss_mixer_iq_CLOU".
+Reading "gnss_mixer_iq_CL2I".
+Reading "gnss_mixer_iq_CL1I".
+Reading "gnss_mixer_iq_R1u_1".
+Reading "gnss_mixer_iq_MG1Q_MG2Q".
+Reading "gnss_mixer_iq_MTI_MTQ".
+Reading "gnss_mixer_iq_R4u_0".
+Reading "gnss_mixer_iq_MG1I_MG2I".
+Reading "gnss_mixer_iq_R1u_0".
+Reading "gnss_mixer_iq_MCTL4N".
+Reading "gnss_mixer_iq_MCTL4P".
+Reading "gnss_mixer_iq_MCTL2N".
+Reading "gnss_mixer_iq_MCTL2P".
+Reading "gnss_mixer_iq_MU3nQ_MU4nQ".
+Reading "gnss_mixer_iq_MU1nQ_MU2nQ".
+Reading "gnss_mixer_iq_MLAnQ_MLBnQ".
+Reading "gnss_mixer_iq_MU3pQ_MU4pQ".
+Reading "gnss_mixer_iq_MU1pQ_MU2pQ".
+Reading "gnss_mixer_iq_MLApQ_MLBpQ".
+Reading "gnss_mixer_iq_MU3nI_MU4nI".
+Reading "gnss_mixer_iq_MU1nI_MU2nI".
+Reading "gnss_mixer_iq_MLAnI_MLBnI".
+Reading "gnss_mixer_iq_MU3pI_MU4pI".
+Reading "gnss_mixer_iq_MU1pI_MU2pI".
+Reading "gnss_mixer_iq_MLApI_MLBpI".
+Reading "gnss_mixer_iq_MCTL3N".
+Reading "gnss_mixer_iq_MCTL3P".
+Reading "gnss_mixer_iq_MCTL1N".
+Reading "gnss_mixer_iq_MCTL1P".
+Reading "gnss_mixer_iq_CACL3N".
+Reading "gnss_mixer_iq_CACL3P".
+Reading "gnss_mixer_iq_CACL2N".
+Reading "gnss_mixer_iq_CACL2P".
+Reading "gnss_mixer_iq_CACL4N".
+Reading "gnss_mixer_iq_CACL4P".
+Reading "gnss_mixer_iq_CACL1N".
+Reading "gnss_mixer_iq_CACL1P".
+Reading "gnss_decap_MD2".
+Reading "gnss_decap_MD1".
+Reading "gnss_decap_MD0".
+Reading "gnss_decap_MD5".
+Reading "gnss_decap_MD4".
+Reading "gnss_decap_MD3".
+Reading "gnss_decap_MD8".
+Reading "gnss_decap_MD7".
+Reading "gnss_decap_MD6".
+Reading "gnss_decap_MD11".
+Reading "gnss_decap_MD10".
+Reading "gnss_decap_MD9".
+Reading "gnss_decap_MD12".
+Reading "gnss_cp".
+Reading "gnss_loop_filter".
+Reading "gnss_div48".
+Reading "gnss_pfd".
+Reading "gnss_pll_core_R2u_0".
+Reading "gnss_pll_core_MTLO".
+Reading "gnss_pll_core_MTHI".
+Reading "gnss_pll_core_MTX".
+Reading "gnss_pll_core_MCLN".
+Reading "gnss_pll_core_MCLP".
+Reading "gnss_divbuf".
+Reading "gnss_vco_ring4_CSUB".
+Reading "gnss_vco_ring4_CSUA".
+Reading "gnss_vco_core".
+Reading "gnss_vco_ring4_R1u_0".
+Reading "gnss_vco_ring4_R2u_0".
+Reading "gnss_vco_ring4_MMIN".
+Reading "gnss_vco_ring4_MVI".
+Reading "gnss_vco_ring4_CVR".
+Reading "gnss_nand2".
+Reading "gnss_nor2".
+Reading "gnss_vco_ring4_MSB1".
+Reading "gnss_vco_ring4_MSB0".
+Reading "gnss_vco_ring4_MPD_MPO_MPB0_MPB1".
+Reading "gnss_refbuf_MN2".
+Reading "gnss_refbuf_MN1".
+Reading "gnss_refbuf_MP2".
+Reading "gnss_refbuf_MP1".
+Reading "gnss_refbuf_CIN".
+Reading "gnss_refbuf_R1u_0".
+Reading "gnss_vmon_buf_MP1_MP2".
+Reading "gnss_vmon_buf_M1_M2".
+Reading "gnss_vmon_buf_MT".
+Reading "gnss_adc2b_M_MP2".
+Reading "gnss_adc2b_M_MP1".
+Reading "gnss_adc2b_M_MN2".
+Reading "gnss_adc2b_M_MN1".
+Reading "gnss_sa_comp".
+Reading "gnss_adc2b_R10u_0".
+Reading "gnss_adc2b_CT3".
+Reading "gnss_adc2b_CT2".
+Reading "gnss_adc2b_CT1".
+Reading "gnss_bias_gen_MN2".
+Reading "gnss_bias_gen_CPB".
+Reading "gnss_bias_gen_CNB".
+Reading "gnss_bias_gen_R1u_0".
+Reading "gnss_bias_gen_MN3".
+Reading "gnss_bias_gen_MP3".
+Reading "gnss_bias_gen_MP2".
+Reading "gnss_bias_gen_MP1".
+Reading "gnss_bias_gen_MSN".
+Reading "gnss_bias_gen_MSU".
+Reading "gnss_bias_gen_MN4".
+Reading "gnss_bias_gen_MN1".
+Reading "gnss_bias_gen_MP4".
+Reading "gnss_bias_gen_MSP".
+Reading "gnss_afc_dac_R2u_0".
+Reading "gnss_afc_dac_R2u_1".
+Reading "gnss_afc_dac_B0_MN_B1_MN".
+Reading "gnss_afc_dac_B4_MP_B5_MP".
+Reading "gnss_afc_dac_B2_MP_B3_MP".
+Reading "gnss_afc_dac_B0_MP_B1_MP".
+Reading "gnss_afc_dac_R2u_2".
+Reading "gnss_afc_dac_A4_MN".
+Reading "gnss_afc_dac_A3_MN".
+Reading "gnss_afc_dac_A2_MN".
+Reading "gnss_afc_dac_A1_MN".
+Reading "gnss_afc_dac_A0_MN".
+Reading "gnss_afc_dac_B6_MN_B7_MN".
+Reading "gnss_afc_dac_B4_MN_B5_MN".
+Reading "gnss_afc_dac_B2_MN_B3_MN".
+Reading "gnss_afc_dac_B6_MP_B7_MP".
+Reading "gnss_afc_dac_A6_MP".
+Reading "gnss_afc_dac_A5_MP".
+Reading "gnss_afc_dac_A4_MP".
+Reading "gnss_afc_dac_A3_MP".
+Reading "gnss_afc_dac_A2_MP".
+Reading "gnss_afc_dac_A1_MP".
+Reading "gnss_afc_dac_A0_MP".
+Reading "gnss_afc_dac_A7_MN".
+Reading "gnss_afc_dac_A6_MN".
+Reading "gnss_afc_dac_A5_MN".
+Reading "gnss_afc_dac_A7_MP".
+Reading "gnss_inv_lo2_MP".
+Reading "gnss_inv_lo2_MN".
+Reading "gnss_vga".
+Reading "gnss_sk_lpf1".
+Reading "gnss_bias_if".
+Reading "gnss_sk_lpf2".
+Reading "gnss_vga_fix".
+Reading "gnss_lna_nc".
+Reading "gnss_mixer_iq".
+Reading "gnss_afe_analog_R1u_0".
+Reading "gnss_decap".
+Reading "gnss_pll_core".
+Reading "gnss_vco_ring4".
+Reading "gnss_refbuf".
+Reading "gnss_vmon_buf".
+Reading "gnss_adc2b".
+Reading "gnss_bias_gen".
+Reading "gnss_afc_dac".
+Reading "gnss_inv_lo2".
+Reading "gnss_if_chain".
+Reading "gnss_afe_analog".
+Extracting gnss_vga_CCM into gnss_vga_CCM.ext:
+Extracting gnss_vga_RB into gnss_vga_RB.ext:
+gnss_vga_RB: 6 warnings
+Extracting gnss_vga_RL into gnss_vga_RL.ext:
+gnss_vga_RL: 2 warnings
+Extracting gnss_vga_RDB into gnss_vga_RDB.ext:
+Extracting gnss_vga_RD into gnss_vga_RD.ext:
+gnss_vga_RD: 2 warnings
+Extracting gnss_vga_MSW into gnss_vga_MSW.ext:
+Extracting gnss_vga_MDP into gnss_vga_MDP.ext:
+gnss_vga_MDP: 12 warnings
+Extracting gnss_vga_MT into gnss_vga_MT.ext:
+gnss_vga_MT: 6 warnings
+Extracting gnss_vga_CC2 into gnss_vga_CC2.ext:
+Extracting gnss_vga_CC1 into gnss_vga_CC1.ext:
+Extracting gnss_vga into gnss_vga.ext:
+Extracting gnss_sk_lpf1_R1u_0 into gnss_sk_lpf1_R1u_0.ext:
+gnss_sk_lpf1_R1u_0: 4 warnings
+Extracting gnss_sk_lpf1_C2N into gnss_sk_lpf1_C2N.ext:
+Extracting gnss_sk_lpf1_C2P into gnss_sk_lpf1_C2P.ext:
+Extracting gnss_sk_lpf1_C1N into gnss_sk_lpf1_C1N.ext:
+Extracting gnss_sk_lpf1_C1P into gnss_sk_lpf1_C1P.ext:
+Extracting gnss_sk_lpf1_MSNP_MSNN into gnss_sk_lpf1_MSNP_MSNN.ext:
+Extracting gnss_sk_lpf1_MSWP_MSWN into gnss_sk_lpf1_MSWP_MSWN.ext:
+Extracting gnss_sk_lpf1_MFN into gnss_sk_lpf1_MFN.ext:
+Extracting gnss_sk_lpf1_MFP into gnss_sk_lpf1_MFP.ext:
+Extracting gnss_sk_lpf1_C2WN into gnss_sk_lpf1_C2WN.ext:
+Extracting gnss_sk_lpf1_C2WP into gnss_sk_lpf1_C2WP.ext:
+Extracting gnss_sk_lpf1_C2NN into gnss_sk_lpf1_C2NN.ext:
+Extracting gnss_sk_lpf1_C2NP into gnss_sk_lpf1_C2NP.ext:
+Extracting gnss_sk_lpf1_MIP_MIN into gnss_sk_lpf1_MIP_MIN.ext:
+gnss_sk_lpf1_MIP_MIN: 6 warnings
+Extracting gnss_sk_lpf1 into gnss_sk_lpf1.ext:
+Extracting gnss_bias_if_MV into gnss_bias_if_MV.ext:
+Extracting gnss_bias_if_CPB into gnss_bias_if_CPB.ext:
+Extracting gnss_bias_if_CNB into gnss_bias_if_CNB.ext:
+Extracting gnss_bias_if_CC into gnss_bias_if_CC.ext:
+Extracting gnss_bias_if_MI1_MI2 into gnss_bias_if_MI1_MI2.ext:
+Extracting gnss_bias_if_MOT_MPP into gnss_bias_if_MOT_MPP.ext:
+gnss_bias_if_MOT_MPP: 2 warnings
+Extracting gnss_bias_if_R1u_0 into gnss_bias_if_R1u_0.ext:
+gnss_bias_if_R1u_0: 21 warnings
+Extracting gnss_bias_if_ML2 into gnss_bias_if_ML2.ext:
+Extracting gnss_bias_if_ML1 into gnss_bias_if_ML1.ext:
+gnss_bias_if_ML1: 2 warnings
+Extracting gnss_bias_if_MND_MNP into gnss_bias_if_MND_MNP.ext:
+gnss_bias_if_MND_MNP: 2 warnings
+Extracting gnss_bias_if_MPD_MPM into gnss_bias_if_MPD_MPM.ext:
+gnss_bias_if_MPD_MPM: 2 warnings
+Extracting gnss_bias_if into gnss_bias_if.ext:
+Extracting gnss_sk_lpf2_R1u_0 into gnss_sk_lpf2_R1u_0.ext:
+gnss_sk_lpf2_R1u_0: 4 warnings
+Extracting gnss_sk_lpf2_C2P into gnss_sk_lpf2_C2P.ext:
+Extracting gnss_sk_lpf2_C1N into gnss_sk_lpf2_C1N.ext:
+Extracting gnss_sk_lpf2_C1P into gnss_sk_lpf2_C1P.ext:
+Extracting gnss_sk_lpf2_MSNP_MSNN into gnss_sk_lpf2_MSNP_MSNN.ext:
+Extracting gnss_sk_lpf2_MSWP_MSWN into gnss_sk_lpf2_MSWP_MSWN.ext:
+Extracting gnss_sk_lpf2_MFN into gnss_sk_lpf2_MFN.ext:
+Extracting gnss_sk_lpf2_MFP into gnss_sk_lpf2_MFP.ext:
+Extracting gnss_sk_lpf2_C2WN into gnss_sk_lpf2_C2WN.ext:
+Extracting gnss_sk_lpf2_C2WP into gnss_sk_lpf2_C2WP.ext:
+Extracting gnss_sk_lpf2_C2NN into gnss_sk_lpf2_C2NN.ext:
+Extracting gnss_sk_lpf2_C2NP into gnss_sk_lpf2_C2NP.ext:
+Extracting gnss_sk_lpf2_MIP_MIN into gnss_sk_lpf2_MIP_MIN.ext:
+gnss_sk_lpf2_MIP_MIN: 6 warnings
+Extracting gnss_sk_lpf2_C2N into gnss_sk_lpf2_C2N.ext:
+Extracting gnss_sk_lpf2 into gnss_sk_lpf2.ext:
+Extracting gnss_vga_fix_CCM into gnss_vga_fix_CCM.ext:
+Extracting gnss_vga_fix_R1u_0 into gnss_vga_fix_R1u_0.ext:
+gnss_vga_fix_R1u_0: 3 warnings
+Extracting gnss_vga_fix_R1u_1 into gnss_vga_fix_R1u_1.ext:
+gnss_vga_fix_R1u_1: 2 warnings
+Extracting gnss_vga_fix_R2u_0 into gnss_vga_fix_R2u_0.ext:
+gnss_vga_fix_R2u_0: 2 warnings
+Extracting gnss_vga_fix_R10p6u_0 into gnss_vga_fix_R10p6u_0.ext:
+Extracting gnss_vga_fix_M2 into gnss_vga_fix_M2.ext:
+Extracting gnss_vga_fix_M1 into gnss_vga_fix_M1.ext:
+Extracting gnss_vga_fix_MT1_MT2 into gnss_vga_fix_MT1_MT2.ext:
+gnss_vga_fix_MT1_MT2: 6 warnings
+Extracting gnss_vga_fix_CC2 into gnss_vga_fix_CC2.ext:
+Extracting gnss_vga_fix_CC1 into gnss_vga_fix_CC1.ext:
+Extracting gnss_vga_fix into gnss_vga_fix.ext:
+Extracting gnss_if_chain into gnss_if_chain.ext:
+Extracting gnss_inv_lo2_MP into gnss_inv_lo2_MP.ext:
+Extracting gnss_inv_lo2_MN into gnss_inv_lo2_MN.ext:
+Extracting gnss_inv_lo2 into gnss_inv_lo2.ext:
+Extracting gnss_afc_dac_R2u_0 into gnss_afc_dac_R2u_0.ext:
+gnss_afc_dac_R2u_0: 4 warnings
+Extracting gnss_afc_dac_R2u_1 into gnss_afc_dac_R2u_1.ext:
+gnss_afc_dac_R2u_1: 6 warnings
+Extracting gnss_afc_dac_B0_MN_B1_MN into gnss_afc_dac_B0_MN_B1_MN.ext:
+Extracting gnss_afc_dac_B4_MP_B5_MP into gnss_afc_dac_B4_MP_B5_MP.ext:
+Extracting gnss_afc_dac_B2_MP_B3_MP into gnss_afc_dac_B2_MP_B3_MP.ext:
+Extracting gnss_afc_dac_B0_MP_B1_MP into gnss_afc_dac_B0_MP_B1_MP.ext:
+Extracting gnss_afc_dac_R2u_2 into gnss_afc_dac_R2u_2.ext:
+gnss_afc_dac_R2u_2: 4 warnings
+Extracting gnss_afc_dac_A4_MN into gnss_afc_dac_A4_MN.ext:
+Extracting gnss_afc_dac_A3_MN into gnss_afc_dac_A3_MN.ext:
+Extracting gnss_afc_dac_A2_MN into gnss_afc_dac_A2_MN.ext:
+Extracting gnss_afc_dac_A1_MN into gnss_afc_dac_A1_MN.ext:
+Extracting gnss_afc_dac_A0_MN into gnss_afc_dac_A0_MN.ext:
+Extracting gnss_afc_dac_B6_MN_B7_MN into gnss_afc_dac_B6_MN_B7_MN.ext:
+Extracting gnss_afc_dac_B4_MN_B5_MN into gnss_afc_dac_B4_MN_B5_MN.ext:
+Extracting gnss_afc_dac_B2_MN_B3_MN into gnss_afc_dac_B2_MN_B3_MN.ext:
+Extracting gnss_afc_dac_B6_MP_B7_MP into gnss_afc_dac_B6_MP_B7_MP.ext:
+Extracting gnss_afc_dac_A6_MP into gnss_afc_dac_A6_MP.ext:
+Extracting gnss_afc_dac_A5_MP into gnss_afc_dac_A5_MP.ext:
+Extracting gnss_afc_dac_A4_MP into gnss_afc_dac_A4_MP.ext:
+Extracting gnss_afc_dac_A3_MP into gnss_afc_dac_A3_MP.ext:
+Extracting gnss_afc_dac_A2_MP into gnss_afc_dac_A2_MP.ext:
+Extracting gnss_afc_dac_A1_MP into gnss_afc_dac_A1_MP.ext:
+Extracting gnss_afc_dac_A0_MP into gnss_afc_dac_A0_MP.ext:
+Extracting gnss_afc_dac_A7_MN into gnss_afc_dac_A7_MN.ext:
+Extracting gnss_afc_dac_A6_MN into gnss_afc_dac_A6_MN.ext:
+Extracting gnss_afc_dac_A5_MN into gnss_afc_dac_A5_MN.ext:
+Extracting gnss_afc_dac_A7_MP into gnss_afc_dac_A7_MP.ext:
+Extracting gnss_afc_dac into gnss_afc_dac.ext:
+Extracting gnss_bias_gen_MN2 into gnss_bias_gen_MN2.ext:
+Extracting gnss_bias_gen_CPB into gnss_bias_gen_CPB.ext:
+Extracting gnss_bias_gen_CNB into gnss_bias_gen_CNB.ext:
+Extracting gnss_bias_gen_R1u_0 into gnss_bias_gen_R1u_0.ext:
+gnss_bias_gen_R1u_0: 2 warnings
+Extracting gnss_bias_gen_MN3 into gnss_bias_gen_MN3.ext:
+gnss_bias_gen_MN3: 2 warnings
+Extracting gnss_bias_gen_MP3 into gnss_bias_gen_MP3.ext:
+Extracting gnss_bias_gen_MP2 into gnss_bias_gen_MP2.ext:
+gnss_bias_gen_MP2: 2 warnings
+Extracting gnss_bias_gen_MP1 into gnss_bias_gen_MP1.ext:
+Extracting gnss_bias_gen_MSN into gnss_bias_gen_MSN.ext:
+Extracting gnss_bias_gen_MSU into gnss_bias_gen_MSU.ext:
+Extracting gnss_bias_gen_MN4 into gnss_bias_gen_MN4.ext:
+Extracting gnss_bias_gen_MN1 into gnss_bias_gen_MN1.ext:
+gnss_bias_gen_MN1: 2 warnings
+Extracting gnss_bias_gen_MP4 into gnss_bias_gen_MP4.ext:
+gnss_bias_gen_MP4: 2 warnings
+Extracting gnss_bias_gen_MSP into gnss_bias_gen_MSP.ext:
+Extracting gnss_bias_gen into gnss_bias_gen.ext:
+Extracting gnss_adc2b_M_MP2 into gnss_adc2b_M_MP2.ext:
+Extracting gnss_adc2b_M_MP1 into gnss_adc2b_M_MP1.ext:
+Extracting gnss_adc2b_M_MN2 into gnss_adc2b_M_MN2.ext:
+Extracting gnss_adc2b_M_MN1 into gnss_adc2b_M_MN1.ext:
+Extracting gnss_sa_comp_S1_MN1 into gnss_sa_comp_S1_MN1.ext:
+Extracting gnss_sa_comp_S1_MN2 into gnss_sa_comp_S1_MN2.ext:
+Extracting gnss_sa_comp_S1_MP1 into gnss_sa_comp_S1_MP1.ext:
+Extracting gnss_sa_comp_S1_MP2 into gnss_sa_comp_S1_MP2.ext:
+Extracting gnss_sa_comp_S2_MP2 into gnss_sa_comp_S2_MP2.ext:
+Extracting gnss_sa_comp_S2_MP1 into gnss_sa_comp_S2_MP1.ext:
+Extracting gnss_sa_comp_S2_MN2 into gnss_sa_comp_S2_MN2.ext:
+Extracting gnss_sa_comp_S2_MN1 into gnss_sa_comp_S2_MN1.ext:
+Extracting gnss_sa_comp_I1_MN into gnss_sa_comp_I1_MN.ext:
+Extracting gnss_sa_comp_I1_MP into gnss_sa_comp_I1_MP.ext:
+Extracting gnss_sa_comp_I2_MP into gnss_sa_comp_I2_MP.ext:
+Extracting gnss_sa_comp_I2_MN into gnss_sa_comp_I2_MN.ext:
+Extracting gnss_sa_comp_M10 into gnss_sa_comp_M10.ext:
+Extracting gnss_sa_comp_M8 into gnss_sa_comp_M8.ext:
+Extracting gnss_sa_comp_M7 into gnss_sa_comp_M7.ext:
+Extracting gnss_sa_comp_M9 into gnss_sa_comp_M9.ext:
+Extracting gnss_sa_comp_M12 into gnss_sa_comp_M12.ext:
+Extracting gnss_sa_comp_M6 into gnss_sa_comp_M6.ext:
+Extracting gnss_sa_comp_M5 into gnss_sa_comp_M5.ext:
+Extracting gnss_sa_comp_M11 into gnss_sa_comp_M11.ext:
+Extracting gnss_sa_comp_M3 into gnss_sa_comp_M3.ext:
+Extracting gnss_sa_comp_M2 into gnss_sa_comp_M2.ext:
+Extracting gnss_sa_comp_MT into gnss_sa_comp_MT.ext:
+Extracting gnss_sa_comp_M1 into gnss_sa_comp_M1.ext:
+Extracting gnss_sa_comp_M4 into gnss_sa_comp_M4.ext:
+Extracting gnss_sa_comp into gnss_sa_comp.ext:
+Extracting gnss_adc2b_R10u_0 into gnss_adc2b_R10u_0.ext:
+gnss_adc2b_R10u_0: 8 warnings
+Extracting gnss_adc2b_CT3 into gnss_adc2b_CT3.ext:
+Extracting gnss_adc2b_CT2 into gnss_adc2b_CT2.ext:
+Extracting gnss_adc2b_CT1 into gnss_adc2b_CT1.ext:
+Extracting gnss_adc2b into gnss_adc2b.ext:
+Extracting gnss_vmon_buf_MP1_MP2 into gnss_vmon_buf_MP1_MP2.ext:
+gnss_vmon_buf_MP1_MP2: 2 warnings
+Extracting gnss_vmon_buf_M1_M2 into gnss_vmon_buf_M1_M2.ext:
+gnss_vmon_buf_M1_M2: 2 warnings
+Extracting gnss_vmon_buf_MT into gnss_vmon_buf_MT.ext:
+Extracting gnss_vmon_buf into gnss_vmon_buf.ext:
+Extracting gnss_refbuf_MN2 into gnss_refbuf_MN2.ext:
+Extracting gnss_refbuf_MN1 into gnss_refbuf_MN1.ext:
+Extracting gnss_refbuf_MP2 into gnss_refbuf_MP2.ext:
+Extracting gnss_refbuf_MP1 into gnss_refbuf_MP1.ext:
+Extracting gnss_refbuf_CIN into gnss_refbuf_CIN.ext:
+Extracting gnss_refbuf_R1u_0 into gnss_refbuf_R1u_0.ext:
+Extracting gnss_refbuf into gnss_refbuf.ext:
+Extracting gnss_vco_ring4_CSUB into gnss_vco_ring4_CSUB.ext:
+Extracting gnss_vco_ring4_CSUA into gnss_vco_ring4_CSUA.ext:
+Extracting gnss_vco_core_DP3 into gnss_vco_core_DP3.ext:
+Extracting gnss_vco_core_MCPn3 into gnss_vco_core_MCPn3.ext:
+Extracting gnss_vco_core_MCPp3 into gnss_vco_core_MCPp3.ext:
+Extracting gnss_vco_core_MBPn3 into gnss_vco_core_MBPn3.ext:
+Extracting gnss_vco_core_MBPp3 into gnss_vco_core_MBPp3.ext:
+Extracting gnss_vco_core_PLd3 into gnss_vco_core_PLd3.ext:
+Extracting gnss_vco_core_PLc3 into gnss_vco_core_PLc3.ext:
+Extracting gnss_vco_core_DP2 into gnss_vco_core_DP2.ext:
+Extracting gnss_vco_core_MCPn2 into gnss_vco_core_MCPn2.ext:
+Extracting gnss_vco_core_MCPp2 into gnss_vco_core_MCPp2.ext:
+Extracting gnss_vco_core_MBPn2 into gnss_vco_core_MBPn2.ext:
+Extracting gnss_vco_core_MBPp2 into gnss_vco_core_MBPp2.ext:
+Extracting gnss_vco_core_PLd2 into gnss_vco_core_PLd2.ext:
+Extracting gnss_vco_core_PLc2 into gnss_vco_core_PLc2.ext:
+Extracting gnss_vco_core_DP4 into gnss_vco_core_DP4.ext:
+Extracting gnss_vco_core_MCPp4 into gnss_vco_core_MCPp4.ext:
+Extracting gnss_vco_core_MCPn4 into gnss_vco_core_MCPn4.ext:
+Extracting gnss_vco_core_MBPp4 into gnss_vco_core_MBPp4.ext:
+Extracting gnss_vco_core_MBPn4 into gnss_vco_core_MBPn4.ext:
+Extracting gnss_vco_core_PLd4 into gnss_vco_core_PLd4.ext:
+Extracting gnss_vco_core_PLc4 into gnss_vco_core_PLc4.ext:
+Extracting gnss_vco_core_DP1 into gnss_vco_core_DP1.ext:
+Extracting gnss_vco_core_MCPn1 into gnss_vco_core_MCPn1.ext:
+Extracting gnss_vco_core_MCPp1 into gnss_vco_core_MCPp1.ext:
+Extracting gnss_vco_core_MBPn1 into gnss_vco_core_MBPn1.ext:
+Extracting gnss_vco_core_MBPp1 into gnss_vco_core_MBPp1.ext:
+Extracting gnss_vco_core_PLd1 into gnss_vco_core_PLd1.ext:
+Extracting gnss_vco_core_PLc1 into gnss_vco_core_PLc1.ext:
+Extracting gnss_vco_core_P3 into gnss_vco_core_P3.ext:
+Extracting gnss_vco_core_P2 into gnss_vco_core_P2.ext:
+Extracting gnss_vco_core_P4 into gnss_vco_core_P4.ext:
+Extracting gnss_vco_core_P1 into gnss_vco_core_P1.ext:
+Extracting gnss_vco_core_N3 into gnss_vco_core_N3.ext:
+gnss_vco_core_N3: 7 warnings
+Extracting gnss_vco_core_N2 into gnss_vco_core_N2.ext:
+gnss_vco_core_N2: 6 warnings
+Extracting gnss_vco_core_N4 into gnss_vco_core_N4.ext:
+gnss_vco_core_N4: 7 warnings
+Extracting gnss_vco_core_N1 into gnss_vco_core_N1.ext:
+gnss_vco_core_N1: 6 warnings
+Extracting gnss_vco_core_DN3 into gnss_vco_core_DN3.ext:
+Extracting gnss_vco_core_MCNn3 into gnss_vco_core_MCNn3.ext:
+Extracting gnss_vco_core_MCNp3 into gnss_vco_core_MCNp3.ext:
+Extracting gnss_vco_core_MBNn3 into gnss_vco_core_MBNn3.ext:
+Extracting gnss_vco_core_MBNp3 into gnss_vco_core_MBNp3.ext:
+Extracting gnss_vco_core_NLd3 into gnss_vco_core_NLd3.ext:
+Extracting gnss_vco_core_NLc3 into gnss_vco_core_NLc3.ext:
+Extracting gnss_vco_core_DN2 into gnss_vco_core_DN2.ext:
+Extracting gnss_vco_core_MCNn2 into gnss_vco_core_MCNn2.ext:
+Extracting gnss_vco_core_MCNp2 into gnss_vco_core_MCNp2.ext:
+Extracting gnss_vco_core_MBNn2 into gnss_vco_core_MBNn2.ext:
+Extracting gnss_vco_core_MBNp2 into gnss_vco_core_MBNp2.ext:
+Extracting gnss_vco_core_NLd2 into gnss_vco_core_NLd2.ext:
+Extracting gnss_vco_core_NLc2 into gnss_vco_core_NLc2.ext:
+Extracting gnss_vco_core_DN4 into gnss_vco_core_DN4.ext:
+Extracting gnss_vco_core_MCNp4 into gnss_vco_core_MCNp4.ext:
+Extracting gnss_vco_core_MCNn4 into gnss_vco_core_MCNn4.ext:
+Extracting gnss_vco_core_MBNp4 into gnss_vco_core_MBNp4.ext:
+Extracting gnss_vco_core_MBNn4 into gnss_vco_core_MBNn4.ext:
+Extracting gnss_vco_core_NLd4 into gnss_vco_core_NLd4.ext:
+Extracting gnss_vco_core_NLc4 into gnss_vco_core_NLc4.ext:
+Extracting gnss_vco_core_DN1 into gnss_vco_core_DN1.ext:
+Extracting gnss_vco_core_MCNn1 into gnss_vco_core_MCNn1.ext:
+Extracting gnss_vco_core_MCNp1 into gnss_vco_core_MCNp1.ext:
+Extracting gnss_vco_core_MBNn1 into gnss_vco_core_MBNn1.ext:
+Extracting gnss_vco_core_MBNp1 into gnss_vco_core_MBNp1.ext:
+Extracting gnss_vco_core_NLd1 into gnss_vco_core_NLd1.ext:
+Extracting gnss_vco_core_NLc1 into gnss_vco_core_NLc1.ext:
+Extracting gnss_vco_core into gnss_vco_core.ext:
+Extracting gnss_vco_ring4_R1u_0 into gnss_vco_ring4_R1u_0.ext:
+Extracting gnss_vco_ring4_R2u_0 into gnss_vco_ring4_R2u_0.ext:
+gnss_vco_ring4_R2u_0: 2 warnings
+Extracting gnss_vco_ring4_MMIN into gnss_vco_ring4_MMIN.ext:
+Extracting gnss_vco_ring4_MVI into gnss_vco_ring4_MVI.ext:
+Extracting gnss_vco_ring4_CVR into gnss_vco_ring4_CVR.ext:
+Extracting gnss_nand2_MN2 into gnss_nand2_MN2.ext:
+Extracting gnss_nand2_MN1 into gnss_nand2_MN1.ext:
+Extracting gnss_nand2_MP2 into gnss_nand2_MP2.ext:
+Extracting gnss_nand2_MP1 into gnss_nand2_MP1.ext:
+Extracting gnss_nand2 into gnss_nand2.ext:
+Extracting gnss_nor2_MP2 into gnss_nor2_MP2.ext:
+Extracting gnss_nor2_MP1 into gnss_nor2_MP1.ext:
+Extracting gnss_nor2_MN2 into gnss_nor2_MN2.ext:
+Extracting gnss_nor2_MN1 into gnss_nor2_MN1.ext:
+Extracting gnss_nor2 into gnss_nor2.ext:
+Extracting gnss_vco_ring4_MSB1 into gnss_vco_ring4_MSB1.ext:
+gnss_vco_ring4_MSB1: 18 warnings
+Extracting gnss_vco_ring4_MSB0 into gnss_vco_ring4_MSB0.ext:
+gnss_vco_ring4_MSB0: 12 warnings
+Extracting gnss_vco_ring4_MPD_MPO_MPB0_MPB1 into gnss_vco_ring4_MPD_MPO_MPB0_MPB1.ext:
+gnss_vco_ring4_MPD_MPO_MPB0_MPB1: 10 warnings
+Extracting gnss_inv_dig_MP into gnss_inv_dig_MP.ext:
+Extracting gnss_inv_dig_MN into gnss_inv_dig_MN.ext:
+Extracting gnss_inv_dig into gnss_inv_dig.ext:
+Extracting gnss_vco_ring4 into gnss_vco_ring4.ext:
+Extracting gnss_cp_MNC_MNC2_MBT into gnss_cp_MNC_MNC2_MBT.ext:
+Extracting gnss_cp_CVD into gnss_cp_CVD.ext:
+Extracting gnss_cp_MNE2 into gnss_cp_MNE2.ext:
+Extracting gnss_cp_MND2 into gnss_cp_MND2.ext:
+Extracting gnss_cp_MNS2 into gnss_cp_MNS2.ext:
+Extracting gnss_cp_MND into gnss_cp_MND.ext:
+Extracting gnss_cp_MNS into gnss_cp_MNS.ext:
+Extracting gnss_cp_MBL1_MBL2 into gnss_cp_MBL1_MBL2.ext:
+gnss_cp_MBL1_MBL2: 2 warnings
+Extracting gnss_cp_MB1_MB2 into gnss_cp_MB1_MB2.ext:
+gnss_cp_MB1_MB2: 2 warnings
+Extracting gnss_cp_MPS2_MPD2 into gnss_cp_MPS2_MPD2.ext:
+Extracting gnss_cp_MPS_MPD into gnss_cp_MPS_MPD.ext:
+Extracting gnss_cp_MPE2 into gnss_cp_MPE2.ext:
+Extracting gnss_cp_MPC_MPC2 into gnss_cp_MPC_MPC2.ext:
+Extracting gnss_cp into gnss_cp.ext:
+Extracting gnss_loop_filter_R2u_0 into gnss_loop_filter_R2u_0.ext:
+Extracting gnss_loop_filter_R1u_0 into gnss_loop_filter_R1u_0.ext:
+Extracting gnss_loop_filter_C3 into gnss_loop_filter_C3.ext:
+Extracting gnss_loop_filter_C2 into gnss_loop_filter_C2.ext:
+Extracting gnss_loop_filter_C1_1 into gnss_loop_filter_C1_1.ext:
+Extracting gnss_loop_filter_C1_0 into gnss_loop_filter_C1_0.ext:
+Extracting gnss_loop_filter into gnss_loop_filter.ext:
+Extracting gnss_div48_D5_F1_MP4 into gnss_div48_D5_F1_MP4.ext:
+Extracting gnss_div48_D5_F1_MN1 into gnss_div48_D5_F1_MN1.ext:
+Extracting gnss_div48_D3_F_MN6 into gnss_div48_D3_F_MN6.ext:
+Extracting gnss_div48_D3_F_MP4 into gnss_div48_D3_F_MP4.ext:
+Extracting gnss_div48_D3_F_MN1 into gnss_div48_D3_F_MN1.ext:
+Extracting gnss_div48_D2_F_MN6 into gnss_div48_D2_F_MN6.ext:
+Extracting gnss_div48_D2_F_MP4 into gnss_div48_D2_F_MP4.ext:
+Extracting gnss_div48_D2_F_MN1 into gnss_div48_D2_F_MN1.ext:
+Extracting gnss_div48_D1_F_MN6 into gnss_div48_D1_F_MN6.ext:
+Extracting gnss_div48_D1_F_MP4 into gnss_div48_D1_F_MP4.ext:
+Extracting gnss_div48_D1_F_MN1 into gnss_div48_D1_F_MN1.ext:
+Extracting gnss_div48_FB1_MP into gnss_div48_FB1_MP.ext:
+Extracting gnss_div48_D5_N_MP2 into gnss_div48_D5_N_MP2.ext:
+Extracting gnss_div48_D5_N_MP1 into gnss_div48_D5_N_MP1.ext:
+Extracting gnss_div48_D1_F_MP2 into gnss_div48_D1_F_MP2.ext:
+Extracting gnss_div48_D1_F_MP1 into gnss_div48_D1_F_MP1.ext:
+Extracting gnss_div48_FB2_MP into gnss_div48_FB2_MP.ext:
+Extracting gnss_div48_FB2_MN into gnss_div48_FB2_MN.ext:
+Extracting gnss_div48_D6_F_MN6 into gnss_div48_D6_F_MN6.ext:
+Extracting gnss_div48_D6_F_MP4 into gnss_div48_D6_F_MP4.ext:
+Extracting gnss_div48_D6_F_MN1 into gnss_div48_D6_F_MN1.ext:
+Extracting gnss_div48_D5_N_MN2 into gnss_div48_D5_N_MN2.ext:
+Extracting gnss_div48_D5_N_MN1 into gnss_div48_D5_N_MN1.ext:
+Extracting gnss_div48_D5_F2_MN6 into gnss_div48_D5_F2_MN6.ext:
+Extracting gnss_div48_D5_F2_MP4 into gnss_div48_D5_F2_MP4.ext:
+Extracting gnss_div48_D5_F2_MN1 into gnss_div48_D5_F2_MN1.ext:
+Extracting gnss_div48_D5_F1_MN6 into gnss_div48_D5_F1_MN6.ext:
+Extracting gnss_div48_D5_F1_MP5 into gnss_div48_D5_F1_MP5.ext:
+Extracting gnss_div48_D5_F1_MP3 into gnss_div48_D5_F1_MP3.ext:
+Extracting gnss_div48_D5_F1_MP2 into gnss_div48_D5_F1_MP2.ext:
+Extracting gnss_div48_D5_F1_MP1 into gnss_div48_D5_F1_MP1.ext:
+Extracting gnss_div48_D3_F_MP5 into gnss_div48_D3_F_MP5.ext:
+Extracting gnss_div48_D3_F_MP3 into gnss_div48_D3_F_MP3.ext:
+Extracting gnss_div48_D3_F_MP2 into gnss_div48_D3_F_MP2.ext:
+Extracting gnss_div48_D3_F_MP1 into gnss_div48_D3_F_MP1.ext:
+Extracting gnss_div48_D2_F_MP5 into gnss_div48_D2_F_MP5.ext:
+Extracting gnss_div48_D2_F_MP3 into gnss_div48_D2_F_MP3.ext:
+Extracting gnss_div48_D2_F_MP2 into gnss_div48_D2_F_MP2.ext:
+Extracting gnss_div48_D2_F_MP1 into gnss_div48_D2_F_MP1.ext:
+Extracting gnss_div48_D1_F_MP5 into gnss_div48_D1_F_MP5.ext:
+Extracting gnss_div48_D1_F_MP3 into gnss_div48_D1_F_MP3.ext:
+Extracting gnss_div48_D2_F_MN2 into gnss_div48_D2_F_MN2.ext:
+Extracting gnss_div48_D1_F_MN5 into gnss_div48_D1_F_MN5.ext:
+Extracting gnss_div48_D1_F_MN4 into gnss_div48_D1_F_MN4.ext:
+Extracting gnss_div48_D1_F_MN3 into gnss_div48_D1_F_MN3.ext:
+Extracting gnss_div48_D1_F_MN2 into gnss_div48_D1_F_MN2.ext:
+Extracting gnss_div48_FB1_MN into gnss_div48_FB1_MN.ext:
+Extracting gnss_div48_D6_F_MP5 into gnss_div48_D6_F_MP5.ext:
+Extracting gnss_div48_D6_F_MP3 into gnss_div48_D6_F_MP3.ext:
+Extracting gnss_div48_D6_F_MP2 into gnss_div48_D6_F_MP2.ext:
+Extracting gnss_div48_D6_F_MP1 into gnss_div48_D6_F_MP1.ext:
+Extracting gnss_div48_D5_F2_MP5 into gnss_div48_D5_F2_MP5.ext:
+Extracting gnss_div48_D5_F2_MP3 into gnss_div48_D5_F2_MP3.ext:
+Extracting gnss_div48_D5_F2_MP2 into gnss_div48_D5_F2_MP2.ext:
+Extracting gnss_div48_D5_F2_MP1 into gnss_div48_D5_F2_MP1.ext:
+Extracting gnss_div48_D5_F2_MN4 into gnss_div48_D5_F2_MN4.ext:
+Extracting gnss_div48_D5_F2_MN3 into gnss_div48_D5_F2_MN3.ext:
+Extracting gnss_div48_D5_F2_MN2 into gnss_div48_D5_F2_MN2.ext:
+Extracting gnss_div48_D5_F1_MN5 into gnss_div48_D5_F1_MN5.ext:
+Extracting gnss_div48_D5_F1_MN4 into gnss_div48_D5_F1_MN4.ext:
+Extracting gnss_div48_D5_F1_MN3 into gnss_div48_D5_F1_MN3.ext:
+Extracting gnss_div48_D5_F1_MN2 into gnss_div48_D5_F1_MN2.ext:
+Extracting gnss_div48_D3_F_MN5 into gnss_div48_D3_F_MN5.ext:
+Extracting gnss_div48_D3_F_MN4 into gnss_div48_D3_F_MN4.ext:
+Extracting gnss_div48_D3_F_MN3 into gnss_div48_D3_F_MN3.ext:
+Extracting gnss_div48_D3_F_MN2 into gnss_div48_D3_F_MN2.ext:
+Extracting gnss_div48_D2_F_MN5 into gnss_div48_D2_F_MN5.ext:
+Extracting gnss_div48_D2_F_MN4 into gnss_div48_D2_F_MN4.ext:
+Extracting gnss_div48_D2_F_MN3 into gnss_div48_D2_F_MN3.ext:
+Extracting gnss_div48_D6_F_MN5 into gnss_div48_D6_F_MN5.ext:
+Extracting gnss_div48_D6_F_MN4 into gnss_div48_D6_F_MN4.ext:
+Extracting gnss_div48_D6_F_MN3 into gnss_div48_D6_F_MN3.ext:
+Extracting gnss_div48_D6_F_MN2 into gnss_div48_D6_F_MN2.ext:
+Extracting gnss_div48_D5_F2_MN5 into gnss_div48_D5_F2_MN5.ext:
+Extracting gnss_div48 into gnss_div48.ext:
+Extracting gnss_pfd_D_3_MN1 into gnss_pfd_D_3_MN1.ext:
+Extracting gnss_pfd_D_2_MN3 into gnss_pfd_D_2_MN3.ext:
+Extracting gnss_pfd_D_2_MN2 into gnss_pfd_D_2_MN2.ext:
+Extracting gnss_pfd_D_2_MN1 into gnss_pfd_D_2_MN1.ext:
+Extracting gnss_pfd_U_6_MN3 into gnss_pfd_U_6_MN3.ext:
+Extracting gnss_pfd_U_6_MN2 into gnss_pfd_U_6_MN2.ext:
+Extracting gnss_pfd_U_6_MN1 into gnss_pfd_U_6_MN1.ext:
+Extracting gnss_pfd_U_3_MN3 into gnss_pfd_U_3_MN3.ext:
+Extracting gnss_pfd_U_3_MN2 into gnss_pfd_U_3_MN2.ext:
+Extracting gnss_pfd_U_3_MN1 into gnss_pfd_U_3_MN1.ext:
+Extracting gnss_pfd_U_2_MN3 into gnss_pfd_U_2_MN3.ext:
+Extracting gnss_pfd_U_2_MN2 into gnss_pfd_U_2_MN2.ext:
+Extracting gnss_pfd_U_2_MN1 into gnss_pfd_U_2_MN1.ext:
+Extracting gnss_pfd_U_1_MN2 into gnss_pfd_U_1_MN2.ext:
+Extracting gnss_pfd_U_1_MN1 into gnss_pfd_U_1_MN1.ext:
+Extracting gnss_pfd_O2_MN into gnss_pfd_O2_MN.ext:
+Extracting gnss_pfd_O1_MN into gnss_pfd_O1_MN.ext:
+Extracting gnss_pfd_D4_MN into gnss_pfd_D4_MN.ext:
+Extracting gnss_pfd_D3_MN into gnss_pfd_D3_MN.ext:
+Extracting gnss_pfd_D2_MN into gnss_pfd_D2_MN.ext:
+Extracting gnss_pfd_D1_MN into gnss_pfd_D1_MN.ext:
+Extracting gnss_pfd_D_6_MN3 into gnss_pfd_D_6_MN3.ext:
+Extracting gnss_pfd_D_6_MN2 into gnss_pfd_D_6_MN2.ext:
+Extracting gnss_pfd_D_6_MN1 into gnss_pfd_D_6_MN1.ext:
+Extracting gnss_pfd_D_3_MN3 into gnss_pfd_D_3_MN3.ext:
+Extracting gnss_pfd_D_3_MN2 into gnss_pfd_D_3_MN2.ext:
+Extracting gnss_pfd_U_5_MN1 into gnss_pfd_U_5_MN1.ext:
+Extracting gnss_pfd_U_4_MP2 into gnss_pfd_U_4_MP2.ext:
+Extracting gnss_pfd_U_4_MP1 into gnss_pfd_U_4_MP1.ext:
+Extracting gnss_pfd_U_4_MN2 into gnss_pfd_U_4_MN2.ext:
+Extracting gnss_pfd_U_4_MN1 into gnss_pfd_U_4_MN1.ext:
+Extracting gnss_pfd_U_3_MP3 into gnss_pfd_U_3_MP3.ext:
+Extracting gnss_pfd_U_3_MP2 into gnss_pfd_U_3_MP2.ext:
+Extracting gnss_pfd_U_3_MP1 into gnss_pfd_U_3_MP1.ext:
+Extracting gnss_pfd_U_2_MP3 into gnss_pfd_U_2_MP3.ext:
+Extracting gnss_pfd_U_2_MP2 into gnss_pfd_U_2_MP2.ext:
+Extracting gnss_pfd_U_2_MP1 into gnss_pfd_U_2_MP1.ext:
+Extracting gnss_pfd_U_1_MP2 into gnss_pfd_U_1_MP2.ext:
+Extracting gnss_pfd_U_1_MP1 into gnss_pfd_U_1_MP1.ext:
+Extracting gnss_pfd_D_2_MP3 into gnss_pfd_D_2_MP3.ext:
+Extracting gnss_pfd_D_2_MP2 into gnss_pfd_D_2_MP2.ext:
+Extracting gnss_pfd_D_2_MP1 into gnss_pfd_D_2_MP1.ext:
+Extracting gnss_pfd_D_1_MP2 into gnss_pfd_D_1_MP2.ext:
+Extracting gnss_pfd_D_1_MP1 into gnss_pfd_D_1_MP1.ext:
+Extracting gnss_pfd_D_1_MN2 into gnss_pfd_D_1_MN2.ext:
+Extracting gnss_pfd_D_1_MN1 into gnss_pfd_D_1_MN1.ext:
+Extracting gnss_pfd_U_6_MP3 into gnss_pfd_U_6_MP3.ext:
+Extracting gnss_pfd_U_6_MP2 into gnss_pfd_U_6_MP2.ext:
+Extracting gnss_pfd_U_6_MP1 into gnss_pfd_U_6_MP1.ext:
+Extracting gnss_pfd_U_5_MP2 into gnss_pfd_U_5_MP2.ext:
+Extracting gnss_pfd_U_5_MP1 into gnss_pfd_U_5_MP1.ext:
+Extracting gnss_pfd_U_5_MN2 into gnss_pfd_U_5_MN2.ext:
+Extracting gnss_pfd_D_6_MP2 into gnss_pfd_D_6_MP2.ext:
+Extracting gnss_pfd_D_6_MP1 into gnss_pfd_D_6_MP1.ext:
+Extracting gnss_pfd_D_5_MP2 into gnss_pfd_D_5_MP2.ext:
+Extracting gnss_pfd_D_5_MP1 into gnss_pfd_D_5_MP1.ext:
+Extracting gnss_pfd_D_5_MN2 into gnss_pfd_D_5_MN2.ext:
+Extracting gnss_pfd_D_5_MN1 into gnss_pfd_D_5_MN1.ext:
+Extracting gnss_pfd_D_4_MP2 into gnss_pfd_D_4_MP2.ext:
+Extracting gnss_pfd_D_4_MP1 into gnss_pfd_D_4_MP1.ext:
+Extracting gnss_pfd_D_4_MN2 into gnss_pfd_D_4_MN2.ext:
+Extracting gnss_pfd_D_4_MN1 into gnss_pfd_D_4_MN1.ext:
+Extracting gnss_pfd_D_3_MP3 into gnss_pfd_D_3_MP3.ext:
+Extracting gnss_pfd_D_3_MP2 into gnss_pfd_D_3_MP2.ext:
+Extracting gnss_pfd_D_3_MP1 into gnss_pfd_D_3_MP1.ext:
+Extracting gnss_pfd_O2_MP into gnss_pfd_O2_MP.ext:
+Extracting gnss_pfd_O1_MP into gnss_pfd_O1_MP.ext:
+Extracting gnss_pfd_D4_MP into gnss_pfd_D4_MP.ext:
+Extracting gnss_pfd_D3_MP into gnss_pfd_D3_MP.ext:
+Extracting gnss_pfd_D2_MP into gnss_pfd_D2_MP.ext:
+Extracting gnss_pfd_D1_MP into gnss_pfd_D1_MP.ext:
+Extracting gnss_pfd_R_MP2 into gnss_pfd_R_MP2.ext:
+Extracting gnss_pfd_R_MP1 into gnss_pfd_R_MP1.ext:
+Extracting gnss_pfd_R_MN2 into gnss_pfd_R_MN2.ext:
+Extracting gnss_pfd_R_MN1 into gnss_pfd_R_MN1.ext:
+Extracting gnss_pfd_D_6_MP3 into gnss_pfd_D_6_MP3.ext:
+Extracting gnss_pfd into gnss_pfd.ext:
+Extracting gnss_pll_core_R2u_0 into gnss_pll_core_R2u_0.ext:
+Extracting gnss_pll_core_MTLO into gnss_pll_core_MTLO.ext:
+Extracting gnss_pll_core_MTHI into gnss_pll_core_MTHI.ext:
+Extracting gnss_pll_core_MTX into gnss_pll_core_MTX.ext:
+gnss_pll_core_MTX: 2 warnings
+Extracting gnss_pll_core_MCLN into gnss_pll_core_MCLN.ext:
+Extracting gnss_pll_core_MCLP into gnss_pll_core_MCLP.ext:
+Extracting gnss_divbuf_MN2 into gnss_divbuf_MN2.ext:
+Extracting gnss_divbuf_MN1 into gnss_divbuf_MN1.ext:
+Extracting gnss_divbuf_MP2 into gnss_divbuf_MP2.ext:
+Extracting gnss_divbuf_MP1 into gnss_divbuf_MP1.ext:
+Extracting gnss_divbuf_R1u_0 into gnss_divbuf_R1u_0.ext:
+Extracting gnss_divbuf_CIN into gnss_divbuf_CIN.ext:
+Extracting gnss_divbuf into gnss_divbuf.ext:
+Extracting gnss_pll_core into gnss_pll_core.ext:
+Extracting gnss_decap_MD2 into gnss_decap_MD2.ext:
+gnss_decap_MD2: 16 warnings
+Extracting gnss_decap_MD1 into gnss_decap_MD1.ext:
+gnss_decap_MD1: 16 warnings
+Extracting gnss_decap_MD0 into gnss_decap_MD0.ext:
+gnss_decap_MD0: 16 warnings
+Extracting gnss_decap_MD5 into gnss_decap_MD5.ext:
+gnss_decap_MD5: 16 warnings
+Extracting gnss_decap_MD4 into gnss_decap_MD4.ext:
+gnss_decap_MD4: 16 warnings
+Extracting gnss_decap_MD3 into gnss_decap_MD3.ext:
+gnss_decap_MD3: 16 warnings
+Extracting gnss_decap_MD8 into gnss_decap_MD8.ext:
+gnss_decap_MD8: 16 warnings
+Extracting gnss_decap_MD7 into gnss_decap_MD7.ext:
+gnss_decap_MD7: 16 warnings
+Extracting gnss_decap_MD6 into gnss_decap_MD6.ext:
+gnss_decap_MD6: 16 warnings
+Extracting gnss_decap_MD11 into gnss_decap_MD11.ext:
+gnss_decap_MD11: 16 warnings
+Extracting gnss_decap_MD10 into gnss_decap_MD10.ext:
+gnss_decap_MD10: 16 warnings
+Extracting gnss_decap_MD9 into gnss_decap_MD9.ext:
+gnss_decap_MD9: 16 warnings
+Extracting gnss_decap_MD12 into gnss_decap_MD12.ext:
+gnss_decap_MD12: 16 warnings
+Extracting gnss_decap into gnss_decap.ext:
+Extracting gnss_afe_analog_R1u_0 into gnss_afe_analog_R1u_0.ext:
+Extracting gnss_mixer_iq_CL2Q into gnss_mixer_iq_CL2Q.ext:
+Extracting gnss_mixer_iq_CL1Q into gnss_mixer_iq_CL1Q.ext:
+Extracting gnss_mixer_iq_CLOL into gnss_mixer_iq_CLOL.ext:
+Extracting gnss_mixer_iq_CBRF into gnss_mixer_iq_CBRF.ext:
+Extracting gnss_mixer_iq_CLOU into gnss_mixer_iq_CLOU.ext:
+Extracting gnss_mixer_iq_CL2I into gnss_mixer_iq_CL2I.ext:
+Extracting gnss_mixer_iq_CL1I into gnss_mixer_iq_CL1I.ext:
+Extracting gnss_mixer_iq_R1u_1 into gnss_mixer_iq_R1u_1.ext:
+gnss_mixer_iq_R1u_1: 9 warnings
+Extracting gnss_mixer_iq_MG1Q_MG2Q into gnss_mixer_iq_MG1Q_MG2Q.ext:
+Extracting gnss_mixer_iq_MTI_MTQ into gnss_mixer_iq_MTI_MTQ.ext:
+gnss_mixer_iq_MTI_MTQ: 6 warnings
+Extracting gnss_mixer_iq_R4u_0 into gnss_mixer_iq_R4u_0.ext:
+gnss_mixer_iq_R4u_0: 4 warnings
+Extracting gnss_mixer_iq_MG1I_MG2I into gnss_mixer_iq_MG1I_MG2I.ext:
+Extracting gnss_mixer_iq_R1u_0 into gnss_mixer_iq_R1u_0.ext:
+gnss_mixer_iq_R1u_0: 14 warnings
+Extracting gnss_mixer_iq_MCTL4N into gnss_mixer_iq_MCTL4N.ext:
+gnss_mixer_iq_MCTL4N: 1 warning
+Extracting gnss_mixer_iq_MCTL4P into gnss_mixer_iq_MCTL4P.ext:
+gnss_mixer_iq_MCTL4P: 1 warning
+Extracting gnss_mixer_iq_MCTL2N into gnss_mixer_iq_MCTL2N.ext:
+gnss_mixer_iq_MCTL2N: 1 warning
+Extracting gnss_mixer_iq_MCTL2P into gnss_mixer_iq_MCTL2P.ext:
+gnss_mixer_iq_MCTL2P: 1 warning
+Extracting gnss_mixer_iq_MU3nQ_MU4nQ into gnss_mixer_iq_MU3nQ_MU4nQ.ext:
+Extracting gnss_mixer_iq_MU1nQ_MU2nQ into gnss_mixer_iq_MU1nQ_MU2nQ.ext:
+Extracting gnss_mixer_iq_MLAnQ_MLBnQ into gnss_mixer_iq_MLAnQ_MLBnQ.ext:
+Extracting gnss_mixer_iq_MU3pQ_MU4pQ into gnss_mixer_iq_MU3pQ_MU4pQ.ext:
+Extracting gnss_mixer_iq_MU1pQ_MU2pQ into gnss_mixer_iq_MU1pQ_MU2pQ.ext:
+Extracting gnss_mixer_iq_MLApQ_MLBpQ into gnss_mixer_iq_MLApQ_MLBpQ.ext:
+Extracting gnss_mixer_iq_MU3nI_MU4nI into gnss_mixer_iq_MU3nI_MU4nI.ext:
+Extracting gnss_mixer_iq_MU1nI_MU2nI into gnss_mixer_iq_MU1nI_MU2nI.ext:
+Extracting gnss_mixer_iq_MLAnI_MLBnI into gnss_mixer_iq_MLAnI_MLBnI.ext:
+Extracting gnss_mixer_iq_MU3pI_MU4pI into gnss_mixer_iq_MU3pI_MU4pI.ext:
+Extracting gnss_mixer_iq_MU1pI_MU2pI into gnss_mixer_iq_MU1pI_MU2pI.ext:
+Extracting gnss_mixer_iq_MLApI_MLBpI into gnss_mixer_iq_MLApI_MLBpI.ext:
+Extracting gnss_mixer_iq_MCTL3N into gnss_mixer_iq_MCTL3N.ext:
+gnss_mixer_iq_MCTL3N: 1 warning
+Extracting gnss_mixer_iq_MCTL3P into gnss_mixer_iq_MCTL3P.ext:
+gnss_mixer_iq_MCTL3P: 1 warning
+Extracting gnss_mixer_iq_MCTL1N into gnss_mixer_iq_MCTL1N.ext:
+gnss_mixer_iq_MCTL1N: 1 warning
+Extracting gnss_mixer_iq_MCTL1P into gnss_mixer_iq_MCTL1P.ext:
+gnss_mixer_iq_MCTL1P: 1 warning
+Extracting gnss_mixer_iq_CACL3N into gnss_mixer_iq_CACL3N.ext:
+Extracting gnss_mixer_iq_CACL3P into gnss_mixer_iq_CACL3P.ext:
+Extracting gnss_mixer_iq_CACL2N into gnss_mixer_iq_CACL2N.ext:
+Extracting gnss_mixer_iq_CACL2P into gnss_mixer_iq_CACL2P.ext:
+Extracting gnss_mixer_iq_CACL4N into gnss_mixer_iq_CACL4N.ext:
+Extracting gnss_mixer_iq_CACL4P into gnss_mixer_iq_CACL4P.ext:
+Extracting gnss_mixer_iq_CACL1N into gnss_mixer_iq_CACL1N.ext:
+Extracting gnss_mixer_iq_CACL1P into gnss_mixer_iq_CACL1P.ext:
+Extracting gnss_mixer_iq into gnss_mixer_iq.ext:
+Extracting gnss_lna_nc_MP1_MP2 into gnss_lna_nc_MP1_MP2.ext:
+gnss_lna_nc_MP1_MP2: 6 warnings
+Extracting gnss_lna_nc_R30u_0 into gnss_lna_nc_R30u_0.ext:
+Extracting gnss_lna_nc_R1u_0 into gnss_lna_nc_R1u_0.ext:
+gnss_lna_nc_R1u_0: 2 warnings
+Extracting gnss_lna_nc_R10u_0 into gnss_lna_nc_R10u_0.ext:
+gnss_lna_nc_R10u_0: 2 warnings
+Extracting gnss_lna_nc_CON into gnss_lna_nc_CON.ext:
+Extracting gnss_lna_nc_COP into gnss_lna_nc_COP.ext:
+Extracting gnss_lna_nc_M2R into gnss_lna_nc_M2R.ext:
+gnss_lna_nc_M2R: 2 warnings
+Extracting gnss_lna_nc_M1R into gnss_lna_nc_M1R.ext:
+gnss_lna_nc_M1R: 2 warnings
+Extracting gnss_lna_nc_M2 into gnss_lna_nc_M2.ext:
+gnss_lna_nc_M2: 4 warnings
+Extracting gnss_lna_nc_M1 into gnss_lna_nc_M1.ext:
+Extracting gnss_lna_nc_CB2 into gnss_lna_nc_CB2.ext:
+Extracting gnss_lna_nc_CB1 into gnss_lna_nc_CB1.ext:
+Extracting gnss_lna_nc_CC2 into gnss_lna_nc_CC2.ext:
+Extracting gnss_lna_nc into gnss_lna_nc.ext:
+Extracting gnss_afe_analog into gnss_afe_analog.ext:
+Total of 467 warnings.
+exttospice finished.

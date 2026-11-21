@@ -1,0 +1,129 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_vco.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  5.81883e-09
+tq                  =  6.20704e-09
+ivdd                =  -8.25528e-04 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  1.28535e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=0.8 f= qerr= ivdd=-0.000825528 vr=1.28535
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  5.50428e-09
+tq                  =  5.79932e-09
+ivdd                =  -1.48906e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  1.51020e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=1.05 f= qerr= ivdd=-0.00148906 vr=1.5102
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  4.73506e-09
+tb                  =  1.15989e-08
+tq                  =  4.96133e-09
+ivdd                =  -2.05904e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  1.68233e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=1.3 f=1.16553E+09 qerr=4.93929 ivdd=-0.00205904 vr=1.68233
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  4.13887e-09
+tb                  =  1.01030e-08
+tq                  =  4.33260e-09
+ivdd                =  -2.63308e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  1.83329e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=1.55 f=1.34136E+09 qerr=3.5512 ivdd=-0.00263307 vr=1.83329
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  3.69537e-09
+tb                  =  9.04490e-09
+tq                  =  3.86834e-09
+ivdd                =  -3.21624e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  1.97469e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=1.8 f=1.49546E+09 qerr=3.12422 ivdd=-0.00321624 vr=1.97469
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  3.35728e-09
+tb                  =  8.25962e-09
+tq                  =  3.51552e-09
+ivdd                =  -3.80321e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  2.10850e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=2.05 f=1.63188E+09 qerr=2.95794 ivdd=-0.00380321 vr=2.1085
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  3.09252e-09
+tb                  =  7.65532e-09
+tq                  =  3.23967e-09
+ivdd                =  -4.38936e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  2.23548e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=2.3 f=1.75331E+09 qerr=2.87674 ivdd=-0.00438936 vr=2.23548
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  2.88004e-09
+tb                  =  7.17700e-09
+tq                  =  3.01852e-09
+ivdd                =  -4.97060e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  2.35598e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=2.55 f=1.86178E+09 qerr=2.81618 ivdd=-0.0049706 vr=2.35598
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+No. of Data Rows : 6034
+ta                  =  2.70585e-09
+tb                  =  6.79026e-09
+tq                  =  2.83738e-09
+ivdd                =  -5.54139e-03 from=  6.00000e-09 to=  1.20000e-08
+vravg               =  2.46986e+00 from=  6.00000e-09 to=  1.20000e-08
+RES vc=2.8 f=1.95867E+09 qerr=2.74439 ivdd=-0.00554139 vr=2.46986
+Note: Simulation executed from .control section 
+
+Error: measure  tb  when(WHEN) : out of interval
+ meas tran tb when v(loip)=vexprint2 rise=12 failed!
+
+Error: RHS "8/(tb-ta)" invalid
+Error: RHS "((tq-ta)*f - floor((tq-ta)*f))*360 - 90" invalid
+Error: &f: no such variable.
+Error: &qerr: no such variable.
+
+Error: measure  tb  when(WHEN) : out of interval
+ meas tran tb when v(loip)=vexprint2 rise=12 failed!
+
+Error: RHS "8/(tb-ta)" invalid
+Error: RHS "((tq-ta)*f - floor((tq-ta)*f))*360 - 90" invalid
+Error: &f: no such variable.
+Error: &qerr: no such variable.

@@ -1,0 +1,39 @@
+route tspc_dff: OK []  grid 63x129 nets 11
+route nor2: OK []  grid 51x71 nets 6
+route div3: OK []  grid 219x159 nets 8
+div3         route=True DRC=0 LVS=OK size=152x111um 3s 
+route div2: OK []  grid 95x159 nets 5
+route inv_lo1: OK []  grid 39x70 nets 4
+route inv_lo2: OK []  grid 43x70 nets 4
+route div96: OK []  grid 442x368 nets 16
+div96        route=True DRC=0 LVS=OK size=309x257um 6s 
+route nand2: OK []  grid 51x68 nets 6
+route nand3: OK []  grid 51x128 nets 8
+route dff_r: OK []  grid 251x306 nets 10
+dff_r        route=True DRC=0 LVS=OK size=175x214um 12s 
+route inv_dig: OK []  grid 39x69 nets 4
+route pfd: OK []  grid 595x425 nets 13
+pfd          route=True DRC=0 LVS=OK size=416x297um 32s 
+route cp: OK []  grid 158x204 nets 15
+cp           route=True DRC=0 LVS=OK size=110x142um 3s 
+route refbuf: OK []  grid 95x174 nets 6
+route divbuf: OK []  grid 51x174 nets 6
+route loop_filter: OK []  grid 562x480 nets 3
+route pll_core: FAIL ['VCTRL', 'overlap:0']  grid 1230x955 nets 16
+pll_core     route=False DRC=0 LVS=FAIL size=861x668um 5583s ['Final result: Top level cell failed pin matching.']
+route vco_cellk: OK []  grid 67x135 nets 7
+route vco_cell: OK []  grid 59x134 nets 6
+route vco_ring4: OK []  grid 479x542 nets 42
+vco_ring4    route=True DRC=0 LVS=OK size=334x379um 211s 
+route sa_comp: OK []  grid 171x253 nets 16
+sa_comp      route=True DRC=0 LVS=OK size=119x177um 17s 
+route adc2b: OK []  grid 554x522 nets 15
+adc2b        route=True DRC=0 LVS=OK size=387x365um 43s 
+route afc_dac: OK []  grid 291x320 nets 34
+afc_dac      route=True DRC=0 LVS=FAIL size=203x223um 100s ['Port matching may fail to disambiguate symmetries.']
+route bias_if: OK []  grid 146x193 nets 19
+route vga: OK []  grid 337x244 nets 16
+route sk_lpf1: OK []  grid 294x387 nets 11
+route sk_lpf2: OK []  grid 418x351 nets 11
+route if_chain: FAIL ['nbif', 'VDD', 'G1A', 'G1B', 'a1n', 'G2A', 'G2B', 'a2n', 'G3A', 'G3B', 'a3n', 'a4n', 'a5n', 'OUTN', 'overlap:0']  grid 1161x1052 nets 29
+if_chain     route=False DRC=0 LVS=FAIL size=812x736um 3426s ['Final result: Top level cell failed pin matching.']

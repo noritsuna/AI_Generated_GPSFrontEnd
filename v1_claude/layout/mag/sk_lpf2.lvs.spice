@@ -1,0 +1,227 @@
+* NGSPICE file created from sk_lpf2.ext - technology: gf180mcuD
+
+.subckt sk_lpf2_MSNP_MSNN nP nN TN VSS
+X0 VSS TN nP VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 nP TN VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 VSS TN nN VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X3 nN TN VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt sk_lpf2_MFN VSS yN OUTN
+X0 OUTN yN VSS OUTN pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X1 OUTN yN VSS OUTN pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 VSS yN OUTN OUTN pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X3 VSS yN OUTN OUTN pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X4 VSS yN OUTN OUTN pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X5 OUTN yN VSS OUTN pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 VSS yN OUTN OUTN pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 OUTN yN VSS OUTN pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt sk_lpf2_C2N yN VSS
+X0 yN VSS cap_mim_2f0_m4m5_noshield c_width=19.53u c_length=19.53u
+.ends
+
+.subckt sk_lpf2_C1N xN OUTN
+X0 xN OUTN cap_mim_2f0_m4m5_noshield c_width=70.71u c_length=70.71u
+X1 xN OUTN cap_mim_2f0_m4m5_noshield c_width=70.71u c_length=70.71u
+.ends
+
+.subckt sk_lpf2_C2P yP VSS
+X0 yP VSS cap_mim_2f0_m4m5_noshield c_width=19.53u c_length=19.53u
+.ends
+
+.subckt sk_lpf2_MFP VSS yP OUTP
+X0 OUTP yP VSS OUTP pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X1 OUTP yP VSS OUTP pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X2 VSS yP OUTP OUTP pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X3 VSS yP OUTP OUTP pfet_03v3 ad=1.325p pd=5.53u as=2.225p ps=10.89u w=5u l=0.28u
+X4 VSS yP OUTP OUTP pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X5 OUTP yP VSS OUTP pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X6 VSS yP OUTP OUTP pfet_03v3 ad=1.325p pd=5.53u as=1.325p ps=5.53u w=5u l=0.28u
+X7 OUTP yP VSS OUTP pfet_03v3 ad=2.225p pd=10.89u as=1.325p ps=5.53u w=5u l=0.28u
+.ends
+
+.subckt sk_lpf2_C1P xP OUTP
+X0 xP OUTP cap_mim_2f0_m4m5_noshield c_width=70.71u c_length=70.71u
+X1 xP OUTP cap_mim_2f0_m4m5_noshield c_width=70.71u c_length=70.71u
+.ends
+
+.subckt sk_lpf2_C2WN yN wN
+X0 yN wN cap_mim_2f0_m4m5_noshield c_width=14.76u c_length=14.76u
+.ends
+
+.subckt sk_lpf2_R1u_0 xP INP xN INN yP yN VSS
+X0 xN yN VSS ppolyf_u_1k r_width=1u r_length=3u
+X1 INN xN VSS ppolyf_u_1k r_width=1u r_length=1u
+X2 xP yP VSS ppolyf_u_1k r_width=1u r_length=3u
+X3 INP xP VSS ppolyf_u_1k r_width=1u r_length=1u
+.ends
+
+.subckt sk_lpf2_C2WP yP wP
+X0 yP wP cap_mim_2f0_m4m5_noshield c_width=14.76u c_length=14.76u
+.ends
+
+.subckt sk_lpf2_MIP_MIN OUTP OUTN PB VDD
+X0 VDD PB OUTP VDD pfet_03v3 ad=4.45p pd=20.89u as=2.65p ps=10.53u w=10u l=2u
+X1 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X2 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X3 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X4 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X5 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X6 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X7 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X8 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X9 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X10 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X11 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X12 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X13 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X14 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X15 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X16 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X17 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=4.45p ps=20.89u w=10u l=2u
+X18 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X19 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X20 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X21 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X22 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X23 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X24 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X25 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X26 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X27 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X28 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X29 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X30 VDD PB OUTP VDD pfet_03v3 ad=4.45p pd=20.89u as=2.65p ps=10.53u w=10u l=2u
+X31 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X32 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X33 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X34 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X35 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X36 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X37 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X38 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X39 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X40 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X41 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X42 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X43 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X44 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X45 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X46 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X47 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=4.45p ps=20.89u w=10u l=2u
+X48 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X49 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X50 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X51 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X52 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X53 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X54 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X55 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X56 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X57 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X58 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X59 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X60 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X61 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X62 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X63 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X64 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X65 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X66 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X67 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X68 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X69 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X70 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X71 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X72 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X73 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X74 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X75 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X76 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X77 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X78 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X79 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X80 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X81 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X82 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X83 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X84 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X85 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X86 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X87 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X88 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X89 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X90 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X91 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X92 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X93 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X94 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X95 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X96 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X97 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X98 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X99 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X100 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X101 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X102 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X103 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X104 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X105 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X106 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X107 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X108 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X109 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X110 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X111 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X112 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X113 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X114 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X115 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X116 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X117 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X118 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X119 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X120 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X121 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X122 OUTN PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X123 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X124 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X125 VDD PB OUTP VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X126 VDD PB OUTN VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+X127 OUTP PB VDD VDD pfet_03v3 ad=2.65p pd=10.53u as=2.65p ps=10.53u w=10u l=2u
+.ends
+
+.subckt sk_lpf2_C2NN yN nN
+X0 yN nN cap_mim_2f0_m4m5_noshield c_width=18.82u c_length=18.82u
+.ends
+
+.subckt sk_lpf2_MSWP_MSWN wP wN TW VSS
+X0 VSS TW wP VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X1 wP TW VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 VSS TW wN VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X3 wN TW VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt sk_lpf2_C2NP yP nP
+X0 yP nP cap_mim_2f0_m4m5_noshield c_width=18.82u c_length=18.82u
+.ends
+
+.subckt sk_lpf2 VSS VDD INP INN PB TW TN OUTP OUTN
+XXMSNP_MSNN XC2NP/nP XC2NN/nN TN VSS sk_lpf2_MSNP_MSNN
+XXMFN VSS XMFN/yN OUTN sk_lpf2_MFN
+XXC2N XMFN/yN VSS sk_lpf2_C2N
+XXC1N XC1N/xN OUTN sk_lpf2_C1N
+XXC2P XMFP/yP VSS sk_lpf2_C2P
+XXMFP VSS XMFP/yP OUTP sk_lpf2_MFP
+XXC1P XC1P/xP OUTP sk_lpf2_C1P
+XXC2WN XMFN/yN XC2WN/wN sk_lpf2_C2WN
+XXR1u_0 XC1P/xP INP XC1N/xN INN XMFP/yP XMFN/yN VSS sk_lpf2_R1u_0
+XXC2WP XMFP/yP XC2WP/wP sk_lpf2_C2WP
+XXMIP_MIN OUTP OUTN PB VDD sk_lpf2_MIP_MIN
+XXC2NN XMFN/yN XC2NN/nN sk_lpf2_C2NN
+XXMSWP_MSWN XC2WP/wP XC2WN/wN TW VSS sk_lpf2_MSWP_MSWN
+XXC2NP XMFP/yP XC2NP/nP sk_lpf2_C2NP
+.ends
+

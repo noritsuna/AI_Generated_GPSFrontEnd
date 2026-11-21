@@ -1,0 +1,12 @@
+.subckt vco_cellk IP IN OP ON FK VR VSS
+XMN1 ON IP VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XMP1 ON IP VR VR pfet_03v3 L=0.28u W=12u nf=4  m=1
+XMN2 OP IN VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XMP2 OP IN VR VR pfet_03v3 L=0.28u W=12u nf=4  m=1
+XMN3 ON OP VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP3 ON OP VR VR pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN4 OP ON VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP4 OP ON VR VR pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMK ON FK VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XMKD OP VSS VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+.ends

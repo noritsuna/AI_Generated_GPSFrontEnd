@@ -1,0 +1,53 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< pwell >>
+rect -368 -464 368 2636
+<< psubdiff >>
+rect -344 -440 344 -336
+rect -344 2508 344 2612
+rect -344 -336 -240 2508
+rect 240 -336 344 2508
+<< polysilicon >>
+rect -100 2086 100 2208
+rect -100 -36 100 86
+<< nhighres >>
+rect -100 86 100 2086
+<< psubdiffcont >>
+rect -331 -416 -253 2588
+rect 253 -416 331 2588
+rect -193 2521 193 2599
+rect -193 -427 193 -349
+<< polycontact >>
+rect -87 2149 87 2195
+rect -87 -23 87 23
+<< metal1 >>
+rect -98 2149 98 2195
+rect -98 -23 98 23
+rect -98 -38 98 38
+rect -98 2134 98 2210
+rect -331 -427 331 -349
+rect -331 2521 331 2599
+rect -331 -427 -253 2599
+rect 253 -427 331 2599
+rect -331 -427 331 -349
+rect -331 2521 331 2599
+<< metal2 >>
+rect -98 -38 98 38
+rect -98 2134 98 2210
+rect -331 -427 331 -349
+rect -331 2521 331 2599
+<< via1 >>
+rect -86 -26 86 26
+rect -86 2146 86 2198
+rect -319 -415 319 -361
+rect -319 2533 319 2587
+<< labels >>
+flabel metal2 s -98 -38 98 38 0 FreeSans 80 0 0 0 vmon
+port 1 nsew signal bidirectional
+flabel metal2 s -98 2134 98 2210 0 FreeSans 80 0 0 0 VCTRL
+port 2 nsew signal bidirectional
+flabel metal2 s -331 -427 331 -349 0 FreeSans 80 0 0 0 VSS
+port 3 nsew signal bidirectional
+<< end >>

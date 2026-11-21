@@ -1,0 +1,93 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_if.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 1
+RES op a1p=1.05524 f1p=2.35292 a2p=1.05524 f2p=2.35292 outp=1.05524
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 201
+g4                  =  4.07618e+01
+g66                 =  3.87102e+01
+g112                =  2.73712e+01
+g164                =  1.45540e+01
+gmax                =  4.10639e+01 at=  2.66073e+06
+fl                  =  7.66252e+05
+fh                  =  7.00924e+06
+RES code=0 g4=40.7618 g6.6=38.7101 g11.25=27.3712 g16.4=14.554 gmax=41.0639 fl=766252 fh=7.00924E+06
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 61
+
+No. of Data Rows : 1
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 201
+g4                  =  5.11469e+01
+g66                 =  4.91669e+01
+g112                =  3.80479e+01
+g164                =  2.52700e+01
+gmax                =  5.14407e+01 at=  2.66073e+06
+fl                  =  7.65456e+05
+fh                  =  7.07539e+06
+RES code=1 g4=51.1469 g6.6=49.1669 g11.25=38.0479 g16.4=25.27 gmax=51.4407 fl=765456 fh=7.07539E+06
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 61
+
+No. of Data Rows : 1
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 201
+g4                  =  6.25091e+01
+g66                 =  6.06433e+01
+g112                =  4.99080e+01
+g164                =  3.72107e+01
+gmax                =  6.27899e+01 at=  2.66073e+06
+fl                  =  7.64049e+05
+fh                  =  7.17649e+06
+RES code=2 g4=62.5091 g6.6=60.6433 g11.25=49.908 g16.4=37.2107 gmax=62.7898 fl=764049 fh=7.17649E+06
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 61
+
+No. of Data Rows : 1
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 201
+g4                  =  6.55149e+01
+g66                 =  6.36867e+01
+g112                =  5.30885e+01
+g164                =  4.04224e+01
+gmax                =  6.57916e+01 at=  2.66073e+06
+fl                  =  7.63527e+05
+fh                  =  7.21270e+06
+RES code=3 g4=65.5149 g6.6=63.6867 g11.25=53.0885 g16.4=40.4224 gmax=65.7916 fl=763527 fh=7.2127E+06
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 61
+
+No. of Data Rows : 1
+Note: Simulation executed from .control section 
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed

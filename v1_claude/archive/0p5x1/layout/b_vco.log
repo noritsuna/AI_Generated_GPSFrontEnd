@@ -1,0 +1,8 @@
+route inv_dig: OK []  grid 39x69 nets 4
+route vco_core: OK []  grid 448x132 nets 36
+route nand2: OK []  grid 51x68 nets 6
+route nor2: OK []  grid 51x71 nets 6
+route vco_ring4: OK []  grid 480x511 nets 42
+vco_ring4: routed=True 140.7s
+  DRC 0
+  LVS OK ['Flattening unmatched subcell vco_ring4_MPD_MPO_MPB0_MPB1 in circuit vco_ring4 (0)(1 instance)', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.']

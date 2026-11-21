@@ -1,0 +1,386 @@
+timestamp 1623399878
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use gnss_vco_core_DP3 XDP3 1 0 56000 0 1 13860
+use gnss_vco_core_MCPn3 XMCPn3 1 0 54460 0 1 13860
+use gnss_vco_core_MCPp3 XMCPp3 1 0 52920 0 1 13860
+use gnss_vco_core_MBPn3 XMBPn3 1 0 51380 0 1 13860
+use gnss_vco_core_MBPp3 XMBPp3 1 0 49840 0 1 13860
+use gnss_vco_core_PLd3 XPLd3 1 0 47880 0 1 13860
+use gnss_vco_core_PLc3 XPLc3 1 0 45920 0 1 13860
+use gnss_vco_core_DP2 XDP2 1 0 41160 0 1 13860
+use gnss_vco_core_MCPn2 XMCPn2 1 0 39620 0 1 13860
+use gnss_vco_core_MCPp2 XMCPp2 1 0 38080 0 1 13860
+use gnss_vco_core_MBPn2 XMBPn2 1 0 36540 0 1 13860
+use gnss_vco_core_MBPp2 XMBPp2 1 0 35000 0 1 13860
+use gnss_vco_core_PLd2 XPLd2 1 0 33040 0 1 13860
+use gnss_vco_core_PLc2 XPLc2 1 0 31080 0 1 13860
+use gnss_vco_core_DP4 XDP4 1 0 26320 0 1 13860
+use gnss_vco_core_MCPp4 XMCPp4 1 0 24780 0 1 13860
+use gnss_vco_core_MCPn4 XMCPn4 1 0 23240 0 1 13860
+use gnss_vco_core_MBPp4 XMBPp4 1 0 21700 0 1 13860
+use gnss_vco_core_MBPn4 XMBPn4 1 0 20160 0 1 13860
+use gnss_vco_core_PLd4 XPLd4 1 0 18200 0 1 13860
+use gnss_vco_core_PLc4 XPLc4 1 0 16240 0 1 13860
+use gnss_vco_core_DP1 XDP1 1 0 11480 0 1 13860
+use gnss_vco_core_MCPn1 XMCPn1 1 0 9940 0 1 13860
+use gnss_vco_core_MCPp1 XMCPp1 1 0 8400 0 1 13860
+use gnss_vco_core_MBPn1 XMBPn1 1 0 6860 0 1 13860
+use gnss_vco_core_MBPp1 XMBPp1 1 0 5320 0 1 13860
+use gnss_vco_core_PLd1 XPLd1 1 0 3360 0 1 13860
+use gnss_vco_core_PLc1 XPLc1 1 0 1400 0 1 13860
+use gnss_vco_core_P3 XP3 1 0 44660 0 1 9660
+use gnss_vco_core_P2 XP2 1 0 30240 0 1 9660
+use gnss_vco_core_P4 XP4 1 0 15820 0 1 9660
+use gnss_vco_core_P1 XP1 1 0 1400 0 1 9660
+use gnss_vco_core_N3 XN3 1 0 44660 0 1 5320
+use gnss_vco_core_N2 XN2 1 0 30240 0 1 5320
+use gnss_vco_core_N4 XN4 1 0 15820 0 1 5320
+use gnss_vco_core_N1 XN1 1 0 1400 0 1 5320
+use gnss_vco_core_DN3 XDN3 1 0 55860 0 1 1120
+use gnss_vco_core_MCNn3 XMCNn3 1 0 54320 0 1 1120
+use gnss_vco_core_MCNp3 XMCNp3 1 0 52780 0 1 1120
+use gnss_vco_core_MBNn3 XMBNn3 1 0 51240 0 1 1120
+use gnss_vco_core_MBNp3 XMBNp3 1 0 49700 0 1 1120
+use gnss_vco_core_NLd3 XNLd3 1 0 48020 0 1 1120
+use gnss_vco_core_NLc3 XNLc3 1 0 46340 0 1 1120
+use gnss_vco_core_DN2 XDN2 1 0 40880 0 1 1120
+use gnss_vco_core_MCNn2 XMCNn2 1 0 39340 0 1 1120
+use gnss_vco_core_MCNp2 XMCNp2 1 0 37800 0 1 1120
+use gnss_vco_core_MBNn2 XMBNn2 1 0 36260 0 1 1120
+use gnss_vco_core_MBNp2 XMBNp2 1 0 34720 0 1 1120
+use gnss_vco_core_NLd2 XNLd2 1 0 33040 0 1 1120
+use gnss_vco_core_NLc2 XNLc2 1 0 31360 0 1 1120
+use gnss_vco_core_DN4 XDN4 1 0 25900 0 1 1120
+use gnss_vco_core_MCNp4 XMCNp4 1 0 24360 0 1 1120
+use gnss_vco_core_MCNn4 XMCNn4 1 0 22820 0 1 1120
+use gnss_vco_core_MBNp4 XMBNp4 1 0 21280 0 1 1120
+use gnss_vco_core_MBNn4 XMBNn4 1 0 19740 0 1 1120
+use gnss_vco_core_NLd4 XNLd4 1 0 18060 0 1 1120
+use gnss_vco_core_NLc4 XNLc4 1 0 16380 0 1 1120
+use gnss_vco_core_DN1 XDN1 1 0 10920 0 1 1120
+use gnss_vco_core_MCNn1 XMCNn1 1 0 9380 0 1 1120
+use gnss_vco_core_MCNp1 XMCNp1 1 0 7840 0 1 1120
+use gnss_vco_core_MBNn1 XMBNn1 1 0 6300 0 1 1120
+use gnss_vco_core_MBNp1 XMBNp1 1 0 4760 0 1 1120
+use gnss_vco_core_NLd1 XNLd1 1 0 3080 0 1 1120
+use gnss_vco_core_NLc1 XNLc1 1 0 1400 0 1 1120
+port "kl" 9 9980 -1220 10180 -1020 m3
+port "VSS" 3 0 0 600 15979 m3
+port "kh" 7 4240 -1220 4440 -1020 m3
+port "ckdn3" 25 55620 -1220 55820 -1020 m3
+port "ckdp3" 23 49880 -1220 50080 -1020 m3
+port "ckdn2" 21 44140 -1220 44340 -1020 m3
+port "ckdp2" 19 38540 -1220 38740 -1020 m3
+port "ckdp4" 15 27060 -1220 27260 -1020 m3
+port "ckdn4" 17 32800 -1220 33000 -1020 m3
+port "ckdn1" 13 21320 -1220 21520 -1020 m3
+port "CK" 11 15720 -1220 15920 -1020 m3
+port "L3P" 39 47360 16840 47560 17040 m3
+port "L4N" 33 26500 16840 26700 17040 m3
+port "L1N" 29 12500 16840 12700 17040 m3
+port "VR" 5 59616 0 60216 15979 m3
+port "L3N" 41 54360 16840 54560 17040 m3
+port "L2N" 37 40360 16840 40560 17040 m3
+port "L2P" 35 33360 16840 33560 17040 m3
+port "L4P" 31 19500 16840 19700 17040 m3
+port "L1P" 27 5500 16840 5700 17040 m3
+node "kl" 0 0 9980 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "kh" 0 0 4240 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ckdn3" 0 0 55620 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ckdp3" 0 0 49880 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ckdn2" 0 0 44140 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ckdp2" 0 0 38540 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ckdp4" 0 0 27060 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ckdn4" 0 0 32800 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ckdn1" 0 0 21320 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CK" 0 0 15720 -1220 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_51350_1370#" 0 0 51350 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_49810_1370#" 0 0 49810 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_36370_1370#" 0 0 36370 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_34830_1370#" 0 0 34830 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_21390_1370#" 0 0 21390 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_19850_1370#" 0 0 19850 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6410_1370#" 0 0 6410 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_4870_1370#" 0 0 4870 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L3P" 0 0 47360 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_17182_6262#" 0 0 17182 6262 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_16062_6262#" 0 0 16062 6262 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_30622_5842#" 0 0 30622 5842 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_31470_1930#" 0 0 31470 1930 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L4N" 0 0 26500 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1642_6262#" 0 0 1642 6262 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_2762_6262#" 0 0 2762 6262 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L1N" 0 0 12500 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_1510#" 0 0 1510 1510 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_1930#" 0 0 1510 1930 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VR" 0 0 59616 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L3N" 0 0 54360 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L2N" 0 0 40360 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L2P" 0 0 33360 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L4P" 0 0 19500 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "L1P" 0 0 5500 16840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XDP3/VSUBS" "XMCPn3/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPn3/VSUBS" "XMCPp3/VSUBS"
+merge "XMCPp3/VSUBS" "XMBPn3/VSUBS"
+merge "XMBPn3/VSUBS" "XMBPp3/VSUBS"
+merge "XMBPp3/VSUBS" "XPLd3/VSUBS"
+merge "XPLd3/VSUBS" "XPLc3/VSUBS"
+merge "XPLc3/VSUBS" "XDP2/VSUBS"
+merge "XDP2/VSUBS" "XMCPn2/VSUBS"
+merge "XMCPn2/VSUBS" "XMCPp2/VSUBS"
+merge "XMCPp2/VSUBS" "XMBPn2/VSUBS"
+merge "XMBPn2/VSUBS" "XMBPp2/VSUBS"
+merge "XMBPp2/VSUBS" "XPLd2/VSUBS"
+merge "XPLd2/VSUBS" "XPLc2/VSUBS"
+merge "XPLc2/VSUBS" "XDP4/VSUBS"
+merge "XDP4/VSUBS" "XMCPp4/VSUBS"
+merge "XMCPp4/VSUBS" "XMCPn4/VSUBS"
+merge "XMCPn4/VSUBS" "XMBPp4/VSUBS"
+merge "XMBPp4/VSUBS" "XMBPn4/VSUBS"
+merge "XMBPn4/VSUBS" "XPLd4/VSUBS"
+merge "XPLd4/VSUBS" "XPLc4/VSUBS"
+merge "XPLc4/VSUBS" "XDP1/VSUBS"
+merge "XDP1/VSUBS" "XMCPn1/VSUBS"
+merge "XMCPn1/VSUBS" "XMCPp1/VSUBS"
+merge "XMCPp1/VSUBS" "XMBPn1/VSUBS"
+merge "XMBPn1/VSUBS" "XMBPp1/VSUBS"
+merge "XMBPp1/VSUBS" "XPLd1/VSUBS"
+merge "XPLd1/VSUBS" "XPLc1/VSUBS"
+merge "XPLc1/VSUBS" "XP3/VSUBS"
+merge "XP3/VSUBS" "XP2/VSUBS"
+merge "XP2/VSUBS" "XP4/VSUBS"
+merge "XP4/VSUBS" "XP1/VSUBS"
+merge "XP1/VSUBS" "XN3/VSS"
+merge "XN3/VSS" "XN2/VSS"
+merge "XN2/VSS" "XN4/VSS"
+merge "XN4/VSS" "XN1/VSS"
+merge "XN1/VSS" "XDN3/VSS"
+merge "XDN3/VSS" "XMCNn3/VSS"
+merge "XMCNn3/VSS" "XMCNp3/VSS"
+merge "XMCNp3/VSS" "XMBNn3/VSS"
+merge "XMBNn3/VSS" "XMBNp3/VSS"
+merge "XMBNp3/VSS" "XNLd3/VSS"
+merge "XNLd3/VSS" "XNLc3/VSS"
+merge "XNLc3/VSS" "XDN2/VSS"
+merge "XDN2/VSS" "XMCNn2/VSS"
+merge "XMCNn2/VSS" "XMCNp2/VSS"
+merge "XMCNp2/VSS" "XMBNn2/VSS"
+merge "XMBNn2/VSS" "XMBNp2/VSS"
+merge "XMBNp2/VSS" "XNLd2/VSS"
+merge "XNLd2/VSS" "XNLc2/VSS"
+merge "XNLc2/VSS" "XDN4/VSS"
+merge "XDN4/VSS" "XMCNp4/VSS"
+merge "XMCNp4/VSS" "XMCNn4/VSS"
+merge "XMCNn4/VSS" "XMBNp4/VSS"
+merge "XMBNp4/VSS" "XMBNn4/VSS"
+merge "XMBNn4/VSS" "XNLd4/VSS"
+merge "XNLd4/VSS" "XNLc4/VSS"
+merge "XNLc4/VSS" "XDN1/VSS"
+merge "XDN1/VSS" "XMCNn1/VSS"
+merge "XMCNn1/VSS" "XMCNp1/VSS"
+merge "XMCNp1/VSS" "XMBNn1/VSS"
+merge "XMBNn1/VSS" "XMBNp1/VSS"
+merge "XMBNp1/VSS" "XNLd1/VSS"
+merge "XNLd1/VSS" "XNLc1/VSS"
+merge "XNLc1/VSS" "VSUBS"
+merge "VSUBS" "VSS"
+merge "XMCPn3/VR" "XMCPp3/VR" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPp3/VR" "XMBPn3/VR"
+merge "XMBPn3/VR" "XMBPp3/VR"
+merge "XMBPp3/VR" "XPLd3/VR"
+merge "XPLd3/VR" "XPLc3/VR"
+merge "XPLc3/VR" "XMCPn2/VR"
+merge "XMCPn2/VR" "XMCPp2/VR"
+merge "XMCPp2/VR" "XMBPn2/VR"
+merge "XMBPn2/VR" "XMBPp2/VR"
+merge "XMBPp2/VR" "XPLd2/VR"
+merge "XPLd2/VR" "XPLc2/VR"
+merge "XPLc2/VR" "XMCPp4/VR"
+merge "XMCPp4/VR" "XMCPn4/VR"
+merge "XMCPn4/VR" "XMBPp4/VR"
+merge "XMBPp4/VR" "XMBPn4/VR"
+merge "XMBPn4/VR" "XPLd4/VR"
+merge "XPLd4/VR" "XPLc4/VR"
+merge "XPLc4/VR" "XMCPn1/VR"
+merge "XMCPn1/VR" "XMCPp1/VR"
+merge "XMCPp1/VR" "XMBPn1/VR"
+merge "XMBPn1/VR" "XMBPp1/VR"
+merge "XMBPp1/VR" "XPLd1/VR"
+merge "XPLd1/VR" "XPLc1/VR"
+merge "XPLc1/VR" "XDP3/VR"
+merge "XDP3/VR" "XDP2/VR"
+merge "XDP2/VR" "XDP4/VR"
+merge "XDP4/VR" "XDP1/VR"
+merge "XDP1/VR" "XP3/VR"
+merge "XP3/VR" "XP2/VR"
+merge "XP2/VR" "XP4/VR"
+merge "XP4/VR" "XP1/VR"
+merge "XP1/VR" "VR"
+merge "XMBPn1/n1" "XPLd1/n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd1/n1" "XPLc1/n1"
+merge "XPLc1/n1" "XP2/n1"
+merge "XP2/n1" "XP1/n1"
+merge "XP1/n1" "XN2/n1"
+merge "XN2/n1" "XN1/n1"
+merge "XN1/n1" "XMBNn1/n1"
+merge "XMBNn1/n1" "XNLd1/n1"
+merge "XNLd1/n1" "XNLc1/n1"
+merge "XNLc1/n1" "m2_1510_1510#"
+merge "XDP4/L4P" "XMCPp4/L4P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPp4/L4P" "XMCNp4/L4P"
+merge "XMCNp4/L4P" "XDN4/L4P"
+merge "XDN4/L4P" "L4P"
+merge "XDP1/L1P" "XMCPp1/L1P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPp1/L1P" "XMCNp1/L1P"
+merge "XMCNp1/L1P" "XDN1/L1P"
+merge "XDN1/L1P" "L1P"
+merge "XMBPn3/n3" "XPLd3/n3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd3/n3" "XPLc3/n3"
+merge "XPLc3/n3" "XP3/n3"
+merge "XP3/n3" "XP4/n3"
+merge "XP4/n3" "XN3/n3"
+merge "XN3/n3" "XN4/n3"
+merge "XN4/n3" "XMBNn3/n3"
+merge "XMBNn3/n3" "XNLd3/n3"
+merge "XNLd3/n3" "XNLc3/n3"
+merge "XNLc3/n3" "m2_17182_6262#"
+merge "XMBPp1/p1" "XPLd1/p1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd1/p1" "XPLc1/p1"
+merge "XPLc1/p1" "XP2/p1"
+merge "XP2/p1" "XP1/p1"
+merge "XP1/p1" "XN2/p1"
+merge "XN2/p1" "XN1/p1"
+merge "XN1/p1" "XMBNp1/p1"
+merge "XMBNp1/p1" "XNLc1/p1"
+merge "XNLc1/p1" "XNLd1/p1"
+merge "XNLd1/p1" "m2_1510_1930#"
+merge "XN2/kl" "kl" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XDP1/an1" "XMBPn1/an1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPn1/an1" "XDN1/an1"
+merge "XDN1/an1" "XMBNn1/an1"
+merge "XMBNn1/an1" "m2_6410_1370#"
+merge "XMBPn2/n2" "XPLd2/n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd2/n2" "XPLc2/n2"
+merge "XPLc2/n2" "XP3/n2"
+merge "XP3/n2" "XP2/n2"
+merge "XP2/n2" "XN3/n2"
+merge "XN3/n2" "XN2/n2"
+merge "XN2/n2" "XMBNn2/n2"
+merge "XMBNn2/n2" "XNLd2/n2"
+merge "XNLd2/n2" "XNLc2/n2"
+merge "XNLc2/n2" "m2_30622_5842#"
+merge "XDP3/ap3" "XMBPp3/ap3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPp3/ap3" "XDN3/ap3"
+merge "XDN3/ap3" "XMBNp3/ap3"
+merge "XMBNp3/ap3" "m2_49810_1370#"
+merge "XMBPn4/n4" "XPLd4/n4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd4/n4" "XPLc4/n4"
+merge "XPLc4/n4" "XP4/n4"
+merge "XP4/n4" "XP1/n4"
+merge "XP1/n4" "XN4/n4"
+merge "XN4/n4" "XN1/n4"
+merge "XN1/n4" "XMBNn4/n4"
+merge "XMBNn4/n4" "XNLc4/n4"
+merge "XNLc4/n4" "XNLd4/n4"
+merge "XNLd4/n4" "m2_2762_6262#"
+merge "XMBPp2/p2" "XPLd2/p2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd2/p2" "XPLc2/p2"
+merge "XPLc2/p2" "XP3/p2"
+merge "XP3/p2" "XP2/p2"
+merge "XP2/p2" "XN3/p2"
+merge "XN3/p2" "XN2/p2"
+merge "XN2/p2" "XMBNp2/p2"
+merge "XMBNp2/p2" "XNLc2/p2"
+merge "XNLc2/p2" "XNLd2/p2"
+merge "XNLd2/p2" "m2_31470_1930#"
+merge "XMBPp3/p3" "XPLd3/p3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd3/p3" "XPLc3/p3"
+merge "XPLc3/p3" "XP3/p3"
+merge "XP3/p3" "XP4/p3"
+merge "XP4/p3" "XN3/p3"
+merge "XN3/p3" "XN4/p3"
+merge "XN4/p3" "XMBNp3/p3"
+merge "XMBNp3/p3" "XNLc3/p3"
+merge "XNLc3/p3" "XNLd3/p3"
+merge "XNLd3/p3" "m2_16062_6262#"
+merge "XMCPp1/CK" "XMCNp1/CK" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNp1/CK" "CK"
+merge "XDP3/an3" "XMBPn3/an3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPn3/an3" "XDN3/an3"
+merge "XDN3/an3" "XMBNn3/an3"
+merge "XMBNn3/an3" "m2_51350_1370#"
+merge "XDP2/an2" "XMBPn2/an2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPn2/an2" "XDN2/an2"
+merge "XDN2/an2" "XMBNn2/an2"
+merge "XMBNn2/an2" "m2_36370_1370#"
+merge "XMBPp4/p4" "XPLd4/p4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XPLd4/p4" "XPLc4/p4"
+merge "XPLc4/p4" "XP4/p4"
+merge "XP4/p4" "XP1/p4"
+merge "XP1/p4" "XN4/p4"
+merge "XN4/p4" "XN1/p4"
+merge "XN1/p4" "XMBNp4/p4"
+merge "XMBNp4/p4" "XNLd4/p4"
+merge "XNLd4/p4" "XNLc4/p4"
+merge "XNLc4/p4" "m2_1642_6262#"
+merge "XDP4/ap4" "XMBPp4/ap4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPp4/ap4" "XDN4/ap4"
+merge "XDN4/ap4" "XMBNp4/ap4"
+merge "XMBNp4/ap4" "m2_21390_1370#"
+merge "XDP2/L2N" "XMCPn2/L2N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPn2/L2N" "XMCNn2/L2N"
+merge "XMCNn2/L2N" "XDN2/L2N"
+merge "XDN2/L2N" "L2N"
+merge "XDP4/an4" "XMBPn4/an4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPn4/an4" "XDN4/an4"
+merge "XDN4/an4" "XMBNn4/an4"
+merge "XMBNn4/an4" "m2_19850_1370#"
+merge "XDP2/ap2" "XMBPp2/ap2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPp2/ap2" "XDN2/ap2"
+merge "XDN2/ap2" "XMBNp2/ap2"
+merge "XMBNp2/ap2" "m2_34830_1370#"
+merge "XMCPp4/ckdp4" "XMCNp4/ckdp4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNp4/ckdp4" "ckdp4"
+merge "XMCPp3/ckdp3" "XMCNp3/ckdp3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNp3/ckdp3" "ckdp3"
+merge "XDP3/L3P" "XMCPp3/L3P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPp3/L3P" "XMCNp3/L3P"
+merge "XMCNp3/L3P" "XDN3/L3P"
+merge "XDN3/L3P" "L3P"
+merge "XDP3/L3N" "XMCPn3/L3N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPn3/L3N" "XMCNn3/L3N"
+merge "XMCNn3/L3N" "XDN3/L3N"
+merge "XDN3/L3N" "L3N"
+merge "XMCPp2/ckdp2" "XMCNp2/ckdp2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNp2/ckdp2" "ckdp2"
+merge "XDP2/L2P" "XMCPp2/L2P" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPp2/L2P" "XMCNp2/L2P"
+merge "XMCNp2/L2P" "XDN2/L2P"
+merge "XDN2/L2P" "L2P"
+merge "XDP4/L4N" "XMCPn4/L4N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPn4/L4N" "XMCNn4/L4N"
+merge "XMCNn4/L4N" "XDN4/L4N"
+merge "XDN4/L4N" "L4N"
+merge "XDP1/L1N" "XMCPn1/L1N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCPn1/L1N" "XMCNn1/L1N"
+merge "XMCNn1/L1N" "XDN1/L1N"
+merge "XDN1/L1N" "L1N"
+merge "XMCPn4/ckdn4" "XMCNn4/ckdn4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNn4/ckdn4" "ckdn4"
+merge "XMCPn3/ckdn3" "XMCNn3/ckdn3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNn3/ckdn3" "ckdn3"
+merge "XMCPn2/ckdn2" "XMCNn2/ckdn2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNn2/ckdn2" "ckdn2"
+merge "XMCPn1/ckdn1" "XMCNn1/ckdn1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMCNn1/ckdn1" "ckdn1"
+merge "XDP1/ap1" "XMBPp1/ap1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBPp1/ap1" "XDN1/ap1"
+merge "XDN1/ap1" "XMBNp1/ap1"
+merge "XMBNp1/ap1" "m2_4870_1370#"
+merge "XN1/kh" "kh" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

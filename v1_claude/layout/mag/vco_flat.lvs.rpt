@@ -1,0 +1,99 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+
+Circuit 1 cell ppolyf_u_1k and Circuit 2 cell ppolyf_u_1k are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k                     |Circuit 2: ppolyf_u_1k                     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k and ppolyf_u_1k are equivalent.
+Flattening unmatched subcell inv_dig in circuit vco_ring4 (1)(4 instances)
+Flattening unmatched subcell vco_cellk in circuit vco_ring4 (1)(2 instances)
+Flattening unmatched subcell vco_cell in circuit vco_ring4 (1)(2 instances)
+Flattening unmatched subcell inv_lo1 in circuit vco_ring4 (1)(8 instances)
+Flattening unmatched subcell inv_lo2 in circuit vco_ring4 (1)(4 instances)
+Flattening unmatched subcell nand2 in circuit vco_ring4 (1)(3 instances)
+Flattening unmatched subcell nor2 in circuit vco_ring4 (1)(3 instances)
+
+Class vco_ring4_flat (0):  Merged 316 parallel devices.
+Class vco_ring4_flat (0):  Merged 18 series devices.
+Subcircuit summary:
+Circuit 1: vco_ring4_flat                  |Circuit 2: vco_ring4                       
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (312->50)                        |pfet_03v3 (73->50)                         
+nfet_03v3 (68->49)                         |nfet_03v3 (49)                             
+cap_mim_2f0_m4m5_noshield (38->3)          |cap_mim_2f0_m4m5_noshield (38->3)          
+ppolyf_u_1k (22->4)                        |ppolyf_u_1k (4)                            
+Number of devices: 106                     |Number of devices: 106                     
+Number of nets: 48                         |Number of nets: 48                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_ring4_flat                  |Circuit 2: vco_ring4                       
+-------------------------------------------|-------------------------------------------
+VCTRL                                      |VCTRL                                      
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+VR                                         |VR                                         
+B0                                         |B0                                         
+B1                                         |B1                                         
+LOIP                                       |LOIP                                       
+LOIN                                       |LOIN                                       
+LOQP                                       |LOQP                                       
+LOQN                                       |LOQN                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_ring4_flat and vco_ring4 are equivalent.
+
+Final result: Circuits match uniquely.
+.

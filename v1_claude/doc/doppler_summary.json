@@ -1,0 +1,16 @@
+{
+ "GPS L1": {
+  "max_dop_hz": 38357.173161282924,
+  "max_rate_hz_s": 153.1735781941279
+ },
+ "Galileo E1": {
+  "max_dop_hz": 39862.80657923903,
+  "max_rate_hz_s": 153.9633052020181
+ },
+ "GLONASS L1": {
+  "max_dop_hz": 41443.94215895185,
+  "max_rate_hz_s": 159.62462846509516
+ },
+ "TCXO +-2.5ppm at L1 [Hz]": 3938.55,
+ "g-sensitivity 1ppb/g x 10 g [Hz]": 15.7542
+}

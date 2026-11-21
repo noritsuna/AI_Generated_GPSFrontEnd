@@ -1,0 +1,16 @@
+c_rb ['RES vc_end=1.55828 vc_pp=0.00102961 flo=1.57134E+09 phase_err_s=1.2E-11']
+c_div ['RES vc_end=1.55791 vc_pp=0.00194447 flo=1.57126E+09 phase_err_s=-1.2E-11']
+c_pfd ['RES vc_end=1.55792 vc_pp=0.00199713 flo=1.57126E+09 phase_err_s=-1E-11']
+c_cp ['RES vc_end=1.55831 vc_pp=0.00414488 flo=1.57125E+09 phase_err_s=-6E-12']
+c_cpb ['RES vc_end=1.55787 vc_pp=0.00219215 flo=1.57126E+09 phase_err_s=-1.5E-11']
+c_all ['RES vc_end=1.55819 vc_pp=0.000846589 flo=1.57133E+09 phase_err_s=4E-12']
+pkg ['RES vc_end=1.55884 vc_pp=0.0270424 flo=1.57179E+09 phase_err_s=1.83299E-07']
+pkg_dec ['RES vc_end=1.55883 vc_pp=0.00970241 flo=1.57127E+09 phase_err_s=1.83289E-07']
+c_rb      fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 21.36 mrad | 1 MHz: beta 3.01e-02 -> -36.5 dBc
+c_div     fLO 785.669 MHz  VCTRL 1.5582 V  phase rms 267.45 mrad | 1 MHz: beta 3.82e-01 -> -14.4 dBc
+c_pfd     fLO 785.669 MHz  VCTRL 1.5582 V  phase rms 271.04 mrad | 1 MHz: beta 3.88e-01 -> -14.2 dBc
+c_cp      fLO 785.678 MHz  VCTRL 1.5582 V  phase rms 526.35 mrad | 1 MHz: beta 7.61e-01 -> -8.4 dBc
+c_cpb     fLO 785.670 MHz  VCTRL 1.5582 V  phase rms 295.50 mrad | 1 MHz: beta 4.24e-01 -> -13.5 dBc
+c_all     fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 1.21 mrad | 1 MHz: beta 1.51e-05 -> -102.4 dBc
+pkg       fLO 785.677 MHz  VCTRL 1.5589 V  phase rms 75.76 mrad | 1 MHz: beta 2.40e-03 -> -58.4 dBc | 4.09 MHz: beta 3.73e-04 -> -74.6 dBc | 16.4 MHz: beta 1.82e-03 -> -60.8 dBc | 32.7 MHz: beta 1.31e-03 -> -63.7 dBc | VDD pp 72.5 mV, VDDV pp 17.0 mV
+pkg_dec   fLO 785.663 MHz  VCTRL 1.5588 V  phase rms 8.54 mrad | 1 MHz: beta 2.56e-03 -> -57.9 dBc | 4.09 MHz: beta 4.71e-04 -> -72.6 dBc | 16.4 MHz: beta 1.36e-03 -> -63.4 dBc | 32.7 MHz: beta 5.71e-04 -> -70.9 dBc | VDD pp 28.6 mV, VDDV pp 2.7 mV

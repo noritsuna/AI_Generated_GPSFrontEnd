@@ -1,0 +1,3 @@
+LO pin load (fF): L1P 159.9 L1N 158.9 L2P 161.1 L2N 160.3 L3P 157.7 L3N 159.9 L4P 159.3 L4N 154.4  spread 6.6 fF
+pin load per fF of gate load: 0.88 0.88 0.87 0.88 0.88 0.88 0.88 0.88
+LO_TRIM = {'L1P': 4.95, 'L1N': 6.22, 'L2P': 3.8, 'L2N': 4.19, 'L3P': 1.13, 'L3N': 0.8, 'L4P': 1.38, 'L4N': 2.42}

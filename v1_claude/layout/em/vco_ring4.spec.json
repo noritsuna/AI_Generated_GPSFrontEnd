@@ -1,0 +1,57 @@
+{
+ "cell": "vco_ring4",
+ "nets": {
+  "VR_B00": {
+   "MPD_MPO_MPB0_MPB1:sd": 3.5,
+   "vco_core:sd": -3.4,
+   "nand2:sd": -0.05,
+   "nor2:sd": -0.05
+  },
+  "VR_B11": {
+   "MPD_MPO_MPB0_MPB1:sd": 1.1,
+   "MSB0:sd": 0.8,
+   "MSB1:sd": 1.6,
+   "vco_core:sd": -3.4,
+   "nand2:sd": -0.05,
+   "nor2:sd": -0.05
+  },
+  "nb1": {
+   "MPD_MPO_MPB0_MPB1:sd": 1.6,
+   "MSB1:sd": -1.6
+  },
+  "nb0": {
+   "MPD_MPO_MPB0_MPB1:sd": 0.8,
+   "MSB0:sd": -0.8
+  },
+  "VDD": {
+   "M4": 0,
+   "MPD_MPO_MPB0_MPB1:sd": -3.6
+  },
+  "VSS": {
+   "M4": 0,
+   "vco_core:sd": 3.4,
+   "nand2:sd": 0.05,
+   "nor2:sd": 0.05
+  }
+ },
+ "opts": {
+  "VR_B00": {
+   "pick": "$9"
+  },
+  "VR_B11": {
+   "pick": "$9"
+  },
+  "nb1": {
+   "pick": "$7"
+  },
+  "nb0": {
+   "pick": "$8"
+  },
+  "VDD": {
+   "pick": "$6"
+  },
+  "VSS": {
+   "pick": "$5"
+  }
+ }
+}

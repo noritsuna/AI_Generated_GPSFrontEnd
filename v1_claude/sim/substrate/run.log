@@ -1,0 +1,14 @@
+if1 ['RES sig gd=375.35', 'RES sub sd=3.27853 sc=4.76474']
+if3 ['RES sig gd=1973.57', 'RES sub sd=12.4105 sc=4.77232']
+rx_if []
+rx_rf []
+rx_ref []
+agg_pll []
+agg_ifadc []
+if1 @4.092 MHz: signal gain 51.5 dB, SUB->diff out 10.3 dB (input-referred 8.73e-03 V/V), SUB->CM out 13.6 dB
+if3 @4.092 MHz: signal gain 65.9 dB, SUB->diff out 21.9 dB (input-referred 6.29e-03 V/V), SUB->CM out 13.6 dB
+rx_if: IF I / Q at 4.092 MHz 5.082e-04 / 2.980e-04 V
+rx_rf: IF I / Q at 4.092 MHz 3.259e-03 / 3.179e-03 V
+rx_ref: IF I / Q at 4.092 MHz 8.459e-03 / 8.869e-03 V
+agg_pll: I(sub) dc 6.0 uA, rms(ac) 99.1 uA | 16.4 MHz 4.13 uA | 32.7 MHz 21.94 uA | 785.7 MHz 23.37 uA | 1571.3 MHz 4.71 uA | 3142.7 MHz 16.57 uA | 4.1 MHz 1.84 uA
+agg_ifadc: I(sub) dc 1.1 uA, rms(ac) 138.0 uA, IF out 68.9 mVpk | 4.13 MHz 0.141 uA | 8.26 MHz 0.245 uA | 16.37 MHz 13.306 uA | 12.24 MHz 0.429 uA

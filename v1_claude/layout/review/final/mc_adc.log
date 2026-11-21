@@ -1,0 +1,4 @@
+sim/mc/final_adc.txt: 200 runs
+  sign     nom    -0.850  mean    -0.177  sd   15.070  min   -40.950  max    43.060
+  magn     nom  -157.410  mean  -159.250  sd   18.106  min  -212.770  max   -92.500
+  magp     nom   157.620  mean   158.211  sd   15.072  min   119.430  max   195.800

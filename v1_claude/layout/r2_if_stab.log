@@ -1,0 +1,45 @@
+== tt_ideal
+IDD 26.93 mA
+1.5-2.0 us  I out pp    0.054 mV  Q out pp    0.054 mV  supply pp   0.000 mV
+2.0-2.5 us  I out pp  288.340 mV  Q out pp    0.029 mV  supply pp   0.000 mV
+2.5-3.0 us  I out pp    7.180 mV  Q out pp    0.015 mV  supply pp   0.000 mV
+3.0-4.0 us  I out pp    7.238 mV  Q out pp    0.012 mV  supply pp   0.000 mV
+4.0-5.0 us  I out pp    0.884 mV  Q out pp    0.003 mV  supply pp   0.000 mV
+5.0-6.0 us  I out pp    0.423 mV  Q out pp    0.001 mV  supply pp   0.000 mV
+6.0-7.0 us  I out pp    0.050 mV  Q out pp    0.000 mV  supply pp   0.000 mV
+== tt_2n
+IDD 26.80 mA
+1.5-2.0 us  I out pp    0.053 mV  Q out pp    0.053 mV  supply pp   0.000 mV
+2.0-2.5 us  I out pp  287.279 mV  Q out pp    0.032 mV  supply pp   0.007 mV
+2.5-3.0 us  I out pp    7.160 mV  Q out pp    0.015 mV  supply pp   0.000 mV
+3.0-4.0 us  I out pp    7.216 mV  Q out pp    0.012 mV  supply pp   0.000 mV
+4.0-5.0 us  I out pp    0.882 mV  Q out pp    0.003 mV  supply pp   0.000 mV
+5.0-6.0 us  I out pp    0.422 mV  Q out pp    0.001 mV  supply pp   0.000 mV
+6.0-7.0 us  I out pp    0.050 mV  Q out pp    0.000 mV  supply pp   0.000 mV
+== tt_5n
+IDD 26.70 mA
+1.5-2.0 us  I out pp    0.053 mV  Q out pp    0.053 mV  supply pp   0.000 mV
+2.0-2.5 us  I out pp  286.570 mV  Q out pp    0.039 mV  supply pp   0.013 mV
+2.5-3.0 us  I out pp    7.146 mV  Q out pp    0.015 mV  supply pp   0.000 mV
+3.0-4.0 us  I out pp    7.202 mV  Q out pp    0.012 mV  supply pp   0.000 mV
+4.0-5.0 us  I out pp    0.880 mV  Q out pp    0.003 mV  supply pp   0.000 mV
+5.0-6.0 us  I out pp    0.421 mV  Q out pp    0.001 mV  supply pp   0.000 mV
+6.0-7.0 us  I out pp    0.049 mV  Q out pp    0.000 mV  supply pp   0.000 mV
+== ss_5n
+IDD 22.62 mA
+1.5-2.0 us  I out pp    0.747 mV  Q out pp    0.747 mV  supply pp   0.000 mV
+2.0-2.5 us  I out pp  196.926 mV  Q out pp    0.510 mV  supply pp   0.013 mV
+2.5-3.0 us  I out pp   10.878 mV  Q out pp    0.334 mV  supply pp   0.000 mV
+3.0-4.0 us  I out pp    5.791 mV  Q out pp    0.360 mV  supply pp   0.000 mV
+4.0-5.0 us  I out pp    0.885 mV  Q out pp    0.148 mV  supply pp   0.000 mV
+5.0-6.0 us  I out pp    0.527 mV  Q out pp    0.059 mV  supply pp   0.000 mV
+6.0-7.0 us  I out pp    0.161 mV  Q out pp    0.023 mV  supply pp   0.000 mV
+== ff_5n
+IDD 31.77 mA
+1.5-2.0 us  I out pp    0.001 mV  Q out pp    0.001 mV  supply pp   0.000 mV
+2.0-2.5 us  I out pp  372.688 mV  Q out pp    0.025 mV  supply pp   0.013 mV
+2.5-3.0 us  I out pp    7.202 mV  Q out pp    0.000 mV  supply pp   0.000 mV
+3.0-4.0 us  I out pp    4.613 mV  Q out pp    0.000 mV  supply pp   0.000 mV
+4.0-5.0 us  I out pp    1.117 mV  Q out pp    0.000 mV  supply pp   0.000 mV
+5.0-6.0 us  I out pp    0.088 mV  Q out pp    0.000 mV  supply pp   0.000 mV
+6.0-7.0 us  I out pp    0.067 mV  Q out pp    0.000 mV  supply pp   0.000 mV

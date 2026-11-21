@@ -1,0 +1,233 @@
+meta:
+  version: 3
+  flow: Chip
+  substituting_steps:
+
+    # GNSS AFE: Metal2 straps analog pad block -> analog macro (librelane/plugins)
+    +Odb.RemovePDNObstructions: Odb.GnssAnalogStraps
+
+    # Render the layout after sealring insertion
+    KLayout.Render: null
+    +KLayout.SealRing: KLayout.Render
+
+    # Disable KLayout DRC
+    #KLayout.DRC: null
+    #Checker.KLayoutDRC: null
+
+    # Disable KLayout antenna check
+    #KLayout.Antenna: null
+    #Checker.KLayoutAntenna: null
+
+    # Disable KLayout density check
+    #KLayout.Density: null
+    #Checker.KLayoutDensity: null
+
+    # Save time during development
+    # Enable for sign-off
+    #OpenROAD.IRDropReport: null
+    #Magic.DRC: null
+    #Checker.MagicDRC: null
+    #KLayout.XOR: null
+    #Netgen.LVS: null
+    #Checker.LVS: null
+
+DESIGN_NAME: chip_top
+VERILOG_FILES:
+- dir::../src/chip_top.sv
+- dir::../src/chip_core.sv
+
+# Enable plugin for better SystemVerilog support
+# USE_SLANG: True
+# SLANG_ARGUMENTS: ['--keep-hierarchy']
+
+# Slightly smaller file sizes
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+# SDC files
+PNR_SDC_FILE: dir::chip_top.sdc
+SIGNOFF_SDC_FILE: dir::chip_top.sdc
+FALLBACK_SDC: dir::chip_top.sdc
+
+# Power / ground nets
+VDD_NETS:
+- VDD
+# VDDA (analog supply) and VDDV (VCO supply) are deliberately not PDN nets: no core stripes / ring (they would pick up the
+# digital noise they exist to avoid); the pad block feeds the macro over Odb.GnssAnalogStraps only
+GND_NETS:      # one per VDD_NETS entry (pdn_cfg.tcl pairs them; a missing one becomes a net "")
+- VSS
+
+# We need to add gf180mcu_fd_io__bi_24t
+# due to the unused Y output for output only pads
+IGNORE_DISCONNECTED_MODULES:
+- gf180mcu_fd_io__bi_24t
+- gf180mcu_ws_ip__qrcode_id
+- gf180mcu_ws_ip__shuttle_id
+- gf180mcu_ws_ip__project_id
+- gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__marker
+
+# Clock
+CLOCK_PORT: clk_PAD
+CLOCK_NET: clk_pad/Y
+CLOCK_PERIOD: 40 # 25 MHz
+
+# Overfix hold violations
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
+GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
+
+# Increase density for more 
+# logic on your die
+PL_TARGET_DENSITY_PCT: 35
+# The pads are at the fixed template positions, so the nets along the standard-cell strip are long
+# (up to about 600 um): buffer long wires, repair slew in the slow corner (the corner the sign-off
+# check fails in first) and keep setup margin before routing
+DESIGN_REPAIR_MAX_WIRE_LENGTH: 120
+DESIGN_REPAIR_MAX_SLEW_PCT: 40
+DEFAULT_CORNER: nom_ss_125C_4v50
+PL_RESIZER_SETUP_SLACK_MARGIN: 0.3
+# The delay cells are slow and weak: do not let the repair steps use them as wire buffers
+EXTRA_EXCLUDED_CELLS:
+  - gf180mcu_fd_sc_mcu7t5v0__dlya_1
+  - gf180mcu_fd_sc_mcu7t5v0__dlya_2
+  - gf180mcu_fd_sc_mcu7t5v0__dlya_4
+  - gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+  - gf180mcu_fd_sc_mcu7t5v0__dlyb_2
+  - gf180mcu_fd_sc_mcu7t5v0__dlyb_4
+  - gf180mcu_fd_sc_mcu7t5v0__dlyc_1
+  - gf180mcu_fd_sc_mcu7t5v0__dlyc_2
+  - gf180mcu_fd_sc_mcu7t5v0__dlyc_4
+  - gf180mcu_fd_sc_mcu7t5v0__dlyd_1
+  - gf180mcu_fd_sc_mcu7t5v0__dlyd_2
+  - gf180mcu_fd_sc_mcu7t5v0__dlyd_4
+# Wire capacitance for the estimates before detailed routing: the extraction gives about 0.2 fF/um
+# on the nets along the strip (0.125 pF on 600 um), the PDK default is 0.135-0.155 fF/um, so the
+# repair steps missed nets that violate the slew limit after routing (SS corner)
+LAYERS_RC:
+  "*":
+    Metal2: {res: 0.000225636, cap: 0.00022}
+    Metal3: {res: 0.000225636, cap: 0.00022}
+    Metal4: {res: 0.000225636, cap: 0.00022}
+    Metal5: {res: 5.85545e-05, cap: 0.00022}
+GRT_ALLOW_CONGESTION: true
+
+# Allow a larger Y displacement
+PL_MAX_DISPLACEMENT_Y: 200
+
+# Fix antenna violations after DRT
+DRT_ANTENNA_REPAIR_ITERS: 10
+DRT_ANTENNA_REPAIR_MARGIN: 10 # %
+
+# Padring: LibreLane's default placement (equal gaps -> the template's bond positions) plus the
+# two ring breaks at the ends of the analog pad block
+PAD_CFG: dir::pad_cfg.tcl
+
+# PDN
+PDN_CFG: dir::pdn/pdn_cfg.tcl
+# no standard-cell rows in the 31.6 um strip between the analog macro's top edge and the core top:
+# the M2 pad straps cross it, and the rail via stacks there shorted them (VDD/VSS/VDDA/VDDV, LVS)
+FP_MACRO_VERTICAL_HALO: 40
+# keep the core grid off the analog macro (+10 um halo): with no macro grid in pdn_cfg.tcl the
+# stripes ran over its edges (VDDA M4 at x = 470.7 / 1445.7 um) and shorted its rails
+# macro at [452, 522.2] (macros_gnss.yaml), 1024.1 x 1535.2 um (slot 0p5x0p5)
+PDN_OBSTRUCTIONS:
+- [Metal1, 442, 512.2, 1486.1, 2067.4]
+- [Metal2, 442, 512.2, 1486.1, 2067.4]
+- [Metal3, 442, 512.2, 1486.1, 2067.4]
+- [Metal4, 442, 512.2, 1486.1, 2067.4]
+- [Metal5, 442, 512.2, 1486.1, 2067.4]
+PDN_ENABLE_PINS: False
+
+# PDN - Straps
+PDN_VWIDTH: 5
+PDN_HWIDTH: 5
+PDN_VSPACING: 1
+PDN_HSPACING: 1
+PDN_VPITCH: 75
+PDN_HPITCH: 75
+
+# PDN - Core ring
+PDN_CORE_RING: True
+# Maximum metal width without slotting: 30um
+PDN_CORE_RING_VWIDTH: 25
+PDN_CORE_RING_HWIDTH: 25
+PDN_CORE_RING_CONNECT_TO_PADS: True
+PDN_CORE_VERTICAL_LAYER: Metal4
+PDN_CORE_HORIZONTAL_LAYER: Metal3
+PDN_CORE_RING_CONNECT_TO_PAD_LAYERS: [Metal2]
+
+# Do not error on magic DRC violations
+# Note: Passing magic DRC is not required for the submission.
+# However, it is recommended to fix or carefully review all violations.
+ERROR_ON_MAGIC_DRC: False
+
+# Prevent false positive DRC errors in I/O cells
+MAGIC_GDS_FLATGLOB:
+# For contacts
+- "*_CDNS_*"
+# Foundry provided SRAMs
+- "*$$*"
+- "M1_N*"
+- "M1_P*"
+- "M2_M1*"
+- "M3_M2*"
+- "nmos_5p0*"
+- "nmos_1p2*"
+- "pmos_5p0*"
+- "pmos_1p2*"
+- "via1_*"
+- "ypass_gate*"
+- "G_ring_*"
+# These additional cells must be flattened to get rid of 3.3V devices
+# (DUALGATE drawn into high-level cells)
+- "dcap_103*"
+- "din_*"
+- "mux821_*"
+- "rdummy_*"
+- "pmoscap_*"
+- "xdec_*"
+- "ypredec*"
+- "xpredec*"
+- "prexdec_*"
+- "xdec8_*"
+- "xdec16_*"
+- "xdec32_*"
+- "sa_*"
+
+# Since we cannot meet the minimum density limit on Metal2,
+# ignore active metal on previous and subsequent layers
+# (DM.5_DM.7 and DM.4_DM.6). Dummy metal is moved to active
+# metal during the precheck.
+KLAYOUT_FILLER_OPTIONS:
+  Metal2_ignore_active: true
+
+# Because we have multiple power pads for one power domain
+MAGIC_EXT_UNIQUE: notopports
+
+# Image render settings
+KLAYOUT_RENDER_RESOLUTION: 2048
+KLAYOUT_RENDER_OVERSAMPLING: 3
+KLAYOUT_PROPERTIES: dir::gf180mcu_render.lyp
+
+# DRC settings
+# A high number of workers increases RAM usage,
+# but can significantly improve the performance.
+# workers * threads should equal the available
+# hardware threads for a best possible utilization.
+
+KLAYOUT_DRC_THREADS: 1
+
+# "max" equals max hardware threads
+KLAYOUT_DRC_OPTIONS:
+  decks: "all,-antenna,-density,-cup" # disable CUP for now
+  variant: ref::$PDK
+  workers: 4 # max crashed (SIGSEGV) or deadlocked in the 0p5x0p5 run
+
+KLAYOUT_DENSITY_OPTIONS:
+  decks: "density"
+  variant: ref::$PDK
+  workers: max
+
+KLAYOUT_ANTENNA_OPTIONS:
+  decks: "antenna"
+  variant: ref::$PDK
+  workers: max

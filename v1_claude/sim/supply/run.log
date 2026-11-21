@@ -1,0 +1,42 @@
+base ['RES vc_end=1.55819 vc_pp=0.000846589 flo=1.57133E+09 phase_err_s=4E-12']
+vdd_0p5 ['RES vc_end=1.55811 vc_pp=0.000883358 flo=1.57134E+09 phase_err_s=-2E-12']
+vdd_1 ['RES vc_end=1.55793 vc_pp=0.00204158 flo=1.57126E+09 phase_err_s=-1E-11']
+vdd_5 ['RES vc_end=1.55837 vc_pp=0.00660782 flo=1.57128E+09 phase_err_s=-1.53E-10']
+vdd_16 ['RES vc_end=1.55819 vc_pp=0.000867772 flo=1.57133E+09 phase_err_s=4E-12']
+vddv_0p5 ['RES vc_end=1.55822 vc_pp=0.000885116 flo=1.57133E+09 phase_err_s=5E-12']
+vddv_1 ['RES vc_end=1.55822 vc_pp=0.000905469 flo=1.57133E+09 phase_err_s=6E-12']
+vddv_5 ['RES vc_end=1.55819 vc_pp=0.000870096 flo=1.57133E+09 phase_err_s=5E-12']
+vddv_16 ['RES vc_end=1.55819 vc_pp=0.000846824 flo=1.57133E+09 phase_err_s=4E-12']
+pkg suna/gps/xschem/tb_pll.sch
+
+
+Error on line 13 or its substitute:
+  aiac %id(vdd vssi) iacsrc
+Missing [, an array connection was expected
+    Simulation interrupted due to error!
+
+Error: incomplete or empty netlist
+       or no ".plot", ".print", or ".fourier" lines in batch mode;
+no simulations run!
+pkg_dec suna/gps/xschem/tb_pll.sch
+
+
+Error on line 13 or its substitute:
+  aiac %id(vdd vssi) iacsrc
+Missing [, an array connection was expected
+    Simulation interrupted due to error!
+
+Error: incomplete or empty netlist
+       or no ".plot", ".print", or ".fourier" lines in batch mode;
+no simulations run!
+base      fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 1.21 mrad | 0.5 MHz: beta 1.18e-04 -> -84.6 dBc | 1 MHz: beta 1.51e-05 -> -102.4 dBc | 5 MHz: beta 4.86e-07 -> -132.3 dBc | 16.4 MHz: beta 1.50e-03 -> -62.5 dBc
+vdd_0p5   fLO 785.666 MHz  VCTRL 1.5582 V  phase rms 125.59 mrad | 0.5 MHz: beta 1.80e-01 -> -20.9 dBc
+vdd_1     fLO 785.670 MHz  VCTRL 1.5582 V  phase rms 272.87 mrad | 1 MHz: beta 3.91e-01 -> -14.2 dBc
+vdd_5     fLO 785.663 MHz  VCTRL 1.5582 V  phase rms 150.11 mrad | 5 MHz: beta 2.07e-01 -> -19.7 dBc
+vdd_16    fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 5.17 mrad | 16.4 MHz: beta 7.28e-03 -> -48.8 dBc
+vddv_0p5  fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 6.72 mrad | 0.5 MHz: beta 1.02e-02 -> -45.9 dBc
+vddv_1    fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 8.65 mrad | 1 MHz: beta 1.23e-02 -> -44.2 dBc
+vddv_5    fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 4.52 mrad | 5 MHz: beta 6.16e-03 -> -50.2 dBc
+vddv_16   fLO 785.664 MHz  VCTRL 1.5582 V  phase rms 1.51 mrad | 16.4 MHz: beta 1.98e-03 -> -60.1 dBc
+pkg ana failed /home/noritsuna/GPS/sim/supply/pkg_w not found.
+pkg_dec ana failed /home/noritsuna/GPS/sim/supply/pkg_dec_w not found.

@@ -1,0 +1,14 @@
+== tt  band B1B0=0
+vc=1.30  sch fLO  1382.9 MHz  I/Q err -0.00 deg  phase err 0.0/0.0/-0.0  duty 0.500/0.500/0.500/0.501  swing 1.46 V  3.54 mA  VR 1.45
+          pex fLO  1013.7 MHz  I/Q err -1.41 deg  phase err -0.2/2.4/1.2  duty 0.499/0.498/0.503/0.500  swing 1.48 V  3.46 mA  VR 1.49
+vc=2.00  sch fLO  2053.4 MHz  I/Q err -0.00 deg  phase err 0.0/0.0/-0.0  duty 0.500/0.500/0.500/0.500  swing 1.80 V  6.86 mA  VR 1.81
+          pex fLO  1507.1 MHz  I/Q err -1.20 deg  phase err 0.0/2.5/1.2  duty 0.499/0.498/0.502/0.500  swing 1.81 V  6.65 mA  VR 1.88
+vc=2.80  sch fLO  2591.1 MHz  I/Q err  0.00 deg  phase err 0.0/0.0/-0.0  duty 0.500/0.500/0.500/0.500  swing 2.12 V  10.68 mA  VR 2.16
+          pex fLO  1897.6 MHz  I/Q err -1.07 deg  phase err 0.2/2.5/1.2  duty 0.499/0.498/0.501/0.500  swing 2.12 V  10.22 mA  VR 2.24
+== tt  band B1B0=3
+vc=1.30  sch fLO  2364.9 MHz  I/Q err  0.00 deg  phase err 0.0/0.0/-0.0  duty 0.500/0.500/0.500/0.500  swing 1.98 V  8.59 mA  VR 2.01
+          pex fLO  1710.0 MHz  I/Q err -1.13 deg  phase err 0.1/2.5/1.2  duty 0.499/0.498/0.502/0.500  swing 1.97 V  8.05 mA  VR 2.06
+vc=2.00  sch fLO  3287.5 MHz  I/Q err  0.00 deg  phase err 0.0/0.0/-0.0  duty 0.500/0.500/0.500/0.500  swing 2.63 V  17.23 mA  VR 2.72
+          pex fLO  2220.6 MHz  I/Q err -0.97 deg  phase err 0.2/2.4/1.2  duty 0.499/0.499/0.501/0.499  swing 2.41 V  13.61 mA  VR 2.59
+vc=2.80  sch fLO  3602.6 MHz  I/Q err  0.00 deg  phase err 0.0/0.0/-0.0  duty 0.500/0.500/0.500/0.500  swing 2.92 V  21.76 mA  VR 3.03
+          pex fLO  2329.7 MHz  I/Q err -0.94 deg  phase err 0.3/2.4/1.2  duty 0.499/0.499/0.501/0.499  swing 2.52 V  15.33 mA  VR 2.73

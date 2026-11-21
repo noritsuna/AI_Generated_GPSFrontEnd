@@ -1,0 +1,94 @@
+scale 1000 1 0.5
+rnode "VSS.n0" 0 0 1008 1532 0
+rnode "VSS.n1" 0 0 1008 -112 0
+rnode "VSS.t7" 0 0 1899 710 0
+rnode "VSS.t6" 0 0 1737 710 0
+rnode "VSS.t5" 0 0 1575 710 0
+rnode "VSS.t4" 0 0 1413 710 0
+rnode "VSS.t3" 0 0 1251 710 0
+rnode "VSS.t2" 0 0 1089 710 0
+rnode "VSS" 0 0 -304 -188 0
+rnode "VSS.n2" 0 0 -228 710 0
+rnode "VSS.t8" 0 0 117 710 0
+rnode "VSS.t9" 0 0 279 710 0
+rnode "VSS.t10" 0 0 441 710 0
+rnode "VSS.t11" 0 0 603 710 0
+rnode "VSS.t0" 0 0 765 710 0
+rnode "VSS.t1" 0 0 927 710 0
+rnode "VSS" 0 0 -267 -151 0
+resist "VSS" "VSS.n0" 1.65865
+resist "VSS.n0" "VSS.n1" 0.157885
+resist "VSS.n1" "VSS.n2" 1.71393
+resist "VSS.n1" "VSS.t7" 626.019
+resist "VSS.n2" "VSS" 137.528
+resist "VSS.n0" "VSS.t2" 146.576
+resist "VSS.n0" "VSS.t1" 146.576
+resist "VSS.t6" "VSS.t7" 293.151
+resist "VSS.t5" "VSS.t6" 293.151
+resist "VSS.t4" "VSS.t5" 293.151
+resist "VSS.t3" "VSS.t4" 293.151
+resist "VSS.t2" "VSS.t3" 293.151
+resist "VSS.t1" "VSS.t0" 293.151
+resist "VSS.t0" "VSS.t11" 293.151
+resist "VSS.t11" "VSS.t10" 293.151
+resist "VSS.t10" "VSS.t9" 293.151
+resist "VSS.t9" "VSS.t8" 293.151
+resist "VSS.t8" "VSS.n2" 624.304
+rnode "GA" 0 43355.1 82 1331 0
+rnode "GA.t1" 0 30631.5 441 710 0
+rnode "GA.t0" 0 33070 603 710 0
+rnode "GA.n0" 0 35293.1 441 1318 0
+rnode "GA.t2" 0 30631.5 279 710 0
+rnode "GA.t3" 0 33070 117 710 0
+rnode "GA.n1" 0 35293.1 279 1318 0
+rnode "GA.n2" 0 16437.8 360 1369 0
+resist "GA" "GA.n2" 2.23333
+resist "GA.n2" "GA.n1" 5.79706
+resist "GA.n2" "GA.n0" 5.79706
+resist "GA.n0" "GA.t1" 79.2571
+resist "GA.n1" "GA.t2" 79.2571
+resist "GA.n0" "GA.t0" 90.8513
+resist "GA.n1" "GA.t3" 90.8513
+rnode "GB" 0 87679.6 730 13 0
+rnode "GB.t3" 0 28766.5 1413 710 0
+rnode "GB.t2" 0 28766.5 1575 710 0
+rnode "GB.t1" 0 28766.5 1737 710 0
+rnode "GB.t0" 0 31056.6 1899 710 0
+rnode "GB.n0" 0 35600.4 1737 102 0
+rnode "GB.n1" 0 19945.8 1575 102 0
+rnode "GB.n2" 0 17489.8 1413 102 0
+rnode "GB.t4" 0 28766.5 1251 710 0
+rnode "GB.t5" 0 28766.5 1089 710 0
+rnode "GB.t6" 0 28766.5 927 710 0
+rnode "GB.t7" 0 31056.6 765 710 0
+rnode "GB.n3" 0 35600.4 927 102 0
+rnode "GB.n4" 0 19945.8 1089 102 0
+rnode "GB.n5" 0 17489.8 1251 102 0
+rnode "GB.n6" 0 27033.3 1332 51 0
+resist "GB" "GB.n6" 1.02448
+resist "GB.n6" "GB.n2" 5.79706
+resist "GB.n6" "GB.n5" 5.79706
+resist "GB.n1" "GB.n0" 11.5941
+resist "GB.n2" "GB.n1" 11.5941
+resist "GB.n5" "GB.n4" 11.5941
+resist "GB.n4" "GB.n3" 11.5941
+resist "GB.n0" "GB.t1" 79.2571
+resist "GB.n1" "GB.t2" 79.2571
+resist "GB.n2" "GB.t3" 79.2571
+resist "GB.n5" "GB.t4" 79.2571
+resist "GB.n4" "GB.t5" 79.2571
+resist "GB.n3" "GB.t6" 79.2571
+resist "GB.n0" "GB.t0" 90.8513
+resist "GB.n3" "GB.t7" 90.8513
+device msubckt nfet_03v3 89 210 90 211  "VSS.t8" "GA.t3" 112 0 "s1" 1000 89000,2178 "da" 1000 53000,1106
+device msubckt nfet_03v3 251 210 252 211  "VSS.t9" "GA.t2" 112 0 "da" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 413 210 414 211  "VSS.t10" "GA.t1" 112 0 "s1" 1000 53000,1106 "da" 1000 53000,1106
+device msubckt nfet_03v3 575 210 576 211  "VSS.t11" "GA.t0" 112 0 "da" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 737 210 738 211  "VSS.t0" "GB.t7" 112 0 "s1" 1000 53000,1106 "db" 1000 53000,1106
+device msubckt nfet_03v3 899 210 900 211  "VSS.t1" "GB.t6" 112 0 "db" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 1061 210 1062 211  "VSS.t2" "GB.t5" 112 0 "s1" 1000 53000,1106 "db" 1000 53000,1106
+device msubckt nfet_03v3 1223 210 1224 211  "VSS.t3" "GB.t4" 112 0 "db" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 1385 210 1386 211  "VSS.t4" "GB.t3" 112 0 "s1" 1000 53000,1106 "db" 1000 53000,1106
+device msubckt nfet_03v3 1547 210 1548 211  "VSS.t5" "GB.t2" 112 0 "db" 1000 53000,1106 "s1" 1000 53000,1106
+device msubckt nfet_03v3 1709 210 1710 211  "VSS.t6" "GB.t1" 112 0 "s1" 1000 53000,1106 "db" 1000 53000,1106
+device msubckt nfet_03v3 1871 210 1872 211  "VSS.t7" "GB.t0" 112 0 "db" 1000 53000,1106 "s1" 1000 89000,2178

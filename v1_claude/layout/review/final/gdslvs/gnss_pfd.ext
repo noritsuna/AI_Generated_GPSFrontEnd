@@ -1,0 +1,419 @@
+timestamp 1623399878
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use gnss_pfd_D_3_MN1 XD_3_MN1 1 0 21560 0 1 21560
+use gnss_pfd_D_2_MN3 XD_2_MN3 1 0 19880 0 1 21560
+use gnss_pfd_D_2_MN2 XD_2_MN2 1 0 18200 0 1 21560
+use gnss_pfd_D_2_MN1 XD_2_MN1 1 0 16520 0 1 21560
+use gnss_pfd_U_6_MN3 XU_6_MN3 1 0 14840 0 1 21560
+use gnss_pfd_U_6_MN2 XU_6_MN2 1 0 13160 0 1 21560
+use gnss_pfd_U_6_MN1 XU_6_MN1 1 0 11480 0 1 21560
+use gnss_pfd_U_3_MN3 XU_3_MN3 1 0 9800 0 1 21560
+use gnss_pfd_U_3_MN2 XU_3_MN2 1 0 8120 0 1 21560
+use gnss_pfd_U_3_MN1 XU_3_MN1 1 0 6440 0 1 21560
+use gnss_pfd_U_2_MN3 XU_2_MN3 1 0 4760 0 1 21560
+use gnss_pfd_U_2_MN2 XU_2_MN2 1 0 3080 0 1 21560
+use gnss_pfd_U_2_MN1 XU_2_MN1 1 0 1400 0 1 21560
+use gnss_pfd_U_1_MN2 XU_1_MN2 1 0 21560 0 1 17360
+use gnss_pfd_U_1_MN1 XU_1_MN1 1 0 19880 0 1 17360
+use gnss_pfd_O2_MN XO2_MN 1 0 18200 0 1 17360
+use gnss_pfd_O1_MN XO1_MN 1 0 16520 0 1 17360
+use gnss_pfd_D4_MN XD4_MN 1 0 14840 0 1 17360
+use gnss_pfd_D3_MN XD3_MN 1 0 13160 0 1 17360
+use gnss_pfd_D2_MN XD2_MN 1 0 11480 0 1 17360
+use gnss_pfd_D1_MN XD1_MN 1 0 9800 0 1 17360
+use gnss_pfd_D_6_MN3 XD_6_MN3 1 0 8120 0 1 17360
+use gnss_pfd_D_6_MN2 XD_6_MN2 1 0 6440 0 1 17360
+use gnss_pfd_D_6_MN1 XD_6_MN1 1 0 4760 0 1 17360
+use gnss_pfd_D_3_MN3 XD_3_MN3 1 0 3080 0 1 17360
+use gnss_pfd_D_3_MN2 XD_3_MN2 1 0 1400 0 1 17360
+use gnss_pfd_U_5_MN1 XU_5_MN1 1 0 21560 0 1 13300
+use gnss_pfd_U_4_MP2 XU_4_MP2 1 0 19880 0 1 13300
+use gnss_pfd_U_4_MP1 XU_4_MP1 1 0 18200 0 1 13300
+use gnss_pfd_U_4_MN2 XU_4_MN2 1 0 16520 0 1 13300
+use gnss_pfd_U_4_MN1 XU_4_MN1 1 0 14840 0 1 13300
+use gnss_pfd_U_3_MP3 XU_3_MP3 1 0 13160 0 1 13300
+use gnss_pfd_U_3_MP2 XU_3_MP2 1 0 11480 0 1 13300
+use gnss_pfd_U_3_MP1 XU_3_MP1 1 0 9800 0 1 13300
+use gnss_pfd_U_2_MP3 XU_2_MP3 1 0 8120 0 1 13300
+use gnss_pfd_U_2_MP2 XU_2_MP2 1 0 6440 0 1 13300
+use gnss_pfd_U_2_MP1 XU_2_MP1 1 0 4760 0 1 13300
+use gnss_pfd_U_1_MP2 XU_1_MP2 1 0 3080 0 1 13300
+use gnss_pfd_U_1_MP1 XU_1_MP1 1 0 1400 0 1 13300
+use gnss_pfd_D_2_MP3 XD_2_MP3 1 0 21560 0 1 9240
+use gnss_pfd_D_2_MP2 XD_2_MP2 1 0 19880 0 1 9240
+use gnss_pfd_D_2_MP1 XD_2_MP1 1 0 18200 0 1 9240
+use gnss_pfd_D_1_MP2 XD_1_MP2 1 0 16520 0 1 9240
+use gnss_pfd_D_1_MP1 XD_1_MP1 1 0 14840 0 1 9240
+use gnss_pfd_D_1_MN2 XD_1_MN2 1 0 13160 0 1 9240
+use gnss_pfd_D_1_MN1 XD_1_MN1 1 0 11480 0 1 9240
+use gnss_pfd_U_6_MP3 XU_6_MP3 1 0 9800 0 1 9240
+use gnss_pfd_U_6_MP2 XU_6_MP2 1 0 8120 0 1 9240
+use gnss_pfd_U_6_MP1 XU_6_MP1 1 0 6440 0 1 9240
+use gnss_pfd_U_5_MP2 XU_5_MP2 1 0 4760 0 1 9240
+use gnss_pfd_U_5_MP1 XU_5_MP1 1 0 3080 0 1 9240
+use gnss_pfd_U_5_MN2 XU_5_MN2 1 0 1400 0 1 9240
+use gnss_pfd_D_6_MP2 XD_6_MP2 1 0 21560 0 1 5180
+use gnss_pfd_D_6_MP1 XD_6_MP1 1 0 19880 0 1 5180
+use gnss_pfd_D_5_MP2 XD_5_MP2 1 0 18200 0 1 5180
+use gnss_pfd_D_5_MP1 XD_5_MP1 1 0 16520 0 1 5180
+use gnss_pfd_D_5_MN2 XD_5_MN2 1 0 14840 0 1 5180
+use gnss_pfd_D_5_MN1 XD_5_MN1 1 0 13160 0 1 5180
+use gnss_pfd_D_4_MP2 XD_4_MP2 1 0 11480 0 1 5180
+use gnss_pfd_D_4_MP1 XD_4_MP1 1 0 9800 0 1 5180
+use gnss_pfd_D_4_MN2 XD_4_MN2 1 0 8120 0 1 5180
+use gnss_pfd_D_4_MN1 XD_4_MN1 1 0 6440 0 1 5180
+use gnss_pfd_D_3_MP3 XD_3_MP3 1 0 4760 0 1 5180
+use gnss_pfd_D_3_MP2 XD_3_MP2 1 0 3080 0 1 5180
+use gnss_pfd_D_3_MP1 XD_3_MP1 1 0 1400 0 1 5180
+use gnss_pfd_O2_MP XO2_MP 1 0 18200 0 1 1120
+use gnss_pfd_O1_MP XO1_MP 1 0 16520 0 1 1120
+use gnss_pfd_D4_MP XD4_MP 1 0 14840 0 1 1120
+use gnss_pfd_D3_MP XD3_MP 1 0 13160 0 1 1120
+use gnss_pfd_D2_MP XD2_MP 1 0 11480 0 1 1120
+use gnss_pfd_D1_MP XD1_MP 1 0 9800 0 1 1120
+use gnss_pfd_R_MP2 XR_MP2 1 0 8120 0 1 1120
+use gnss_pfd_R_MP1 XR_MP1 1 0 6440 0 1 1120
+use gnss_pfd_R_MN2 XR_MN2 1 0 4760 0 1 1120
+use gnss_pfd_R_MN1 XR_MN1 1 0 3080 0 1 1120
+use gnss_pfd_D_6_MP3 XD_6_MP3 1 0 1400 0 1 1120
+port "VDD" 5 22498 0 23098 23539 m3
+port "DNB" 18 23980 19360 24180 19560 m4
+port "UPB" 14 23980 9000 24180 9200 m4
+port "DN" 16 23980 14180 24180 14380 m4
+port "VSS" 3 0 0 600 23539 m3
+port "FB" 10 -1220 16000 -1020 16200 m4
+port "UP" 12 23980 3820 24180 4020 m4
+port "REF" 8 -1220 7320 -1020 7520 m4
+node "m2_3050_1230#" 0 0 3050 1230 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_13130_5290#" 0 0 13130 5290 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6410_5290#" 0 0 6410 5290 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_11450_9350#" 0 0 11450 9350 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_9490#" 0 0 1510 9490 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_14810_13410#" 0 0 14810 13410 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 22498 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_19850_17470#" 0 0 19850 17470 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DNB" 0 0 23980 19360 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "UPB" 0 0 23980 9000 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6410_17610#" 0 0 6410 17610 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_4730_17610#" 0 0 4730 17610 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_1370#" 0 0 1510 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1370_17610#" 0 0 1370 17610 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_13270_1370#" 0 0 13270 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_11590_1370#" 0 0 11590 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_9910_1370#" 0 0 9910 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_3190_1370#" 0 0 3190 1370 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DN" 0 0 23980 14180 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_3190_18170#" 0 0 3190 18170 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_17750#" 0 0 1510 17750 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_5430#" 0 0 1510 5430 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_18170_21810#" 0 0 18170 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_16490_21810#" 0 0 16490 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_13130_21810#" 0 0 13130 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_11450_21810#" 0 0 11450 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_9910#" 0 0 1510 9910 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_8090_21810#" 0 0 8090 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6410_21810#" 0 0 6410 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_3050_21810#" 0 0 3050 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1370_21810#" 0 0 1370 21810 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_5850#" 0 0 1510 5850 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "FB" 0 0 -1220 16000 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_11590_9490#" 0 0 11590 9490 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_6550_21950#" 0 0 6550 21950 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "UP" 0 0 23980 3820 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_13970#" 0 0 1510 13970 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_21950#" 0 0 1510 21950 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_1790#" 0 0 1510 1790 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "REF" 0 0 -1220 7320 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1510_13550#" 0 0 1510 13550 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_3_MN3/U_n4" "XU_1_MN1/U_n4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_1_MN1/U_n4" "XU_4_MP2/U_n4"
+merge "XU_4_MP2/U_n4" "XU_4_MP1/U_n4"
+merge "XU_4_MP1/U_n4" "XU_4_MN1/U_n4"
+merge "XU_4_MN1/U_n4" "XU_3_MP3/U_n4"
+merge "XU_3_MP3/U_n4" "XU_1_MP1/U_n4"
+merge "XU_1_MP1/U_n4" "m2_1510_13970#"
+merge "XD2_MN/r1" "XD1_MN/r1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD1_MN/r1" "XD2_MP/r1"
+merge "XD2_MP/r1" "XD1_MP/r1"
+merge "XD1_MP/r1" "m2_9910_1370#"
+merge "XU_4_MP2/VDD" "XU_4_MP1/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_4_MP1/VDD" "XU_3_MP3/VDD"
+merge "XU_3_MP3/VDD" "XU_3_MP2/VDD"
+merge "XU_3_MP2/VDD" "XU_3_MP1/VDD"
+merge "XU_3_MP1/VDD" "XU_2_MP3/VDD"
+merge "XU_2_MP3/VDD" "XU_2_MP2/VDD"
+merge "XU_2_MP2/VDD" "XU_2_MP1/VDD"
+merge "XU_2_MP1/VDD" "XU_1_MP2/VDD"
+merge "XU_1_MP2/VDD" "XU_1_MP1/VDD"
+merge "XU_1_MP1/VDD" "XD_2_MP3/VDD"
+merge "XD_2_MP3/VDD" "XD_2_MP2/VDD"
+merge "XD_2_MP2/VDD" "XD_2_MP1/VDD"
+merge "XD_2_MP1/VDD" "XD_1_MP2/VDD"
+merge "XD_1_MP2/VDD" "XD_1_MP1/VDD"
+merge "XD_1_MP1/VDD" "XU_6_MP3/VDD"
+merge "XU_6_MP3/VDD" "XU_6_MP2/VDD"
+merge "XU_6_MP2/VDD" "XU_6_MP1/VDD"
+merge "XU_6_MP1/VDD" "XU_5_MP2/VDD"
+merge "XU_5_MP2/VDD" "XU_5_MP1/VDD"
+merge "XU_5_MP1/VDD" "XD_6_MP2/VDD"
+merge "XD_6_MP2/VDD" "XD_6_MP1/VDD"
+merge "XD_6_MP1/VDD" "XD_5_MP2/VDD"
+merge "XD_5_MP2/VDD" "XD_5_MP1/VDD"
+merge "XD_5_MP1/VDD" "XD_4_MP2/VDD"
+merge "XD_4_MP2/VDD" "XD_4_MP1/VDD"
+merge "XD_4_MP1/VDD" "XD_3_MP3/VDD"
+merge "XD_3_MP3/VDD" "XD_3_MP2/VDD"
+merge "XD_3_MP2/VDD" "XD_3_MP1/VDD"
+merge "XD_3_MP1/VDD" "XO2_MP/VDD"
+merge "XO2_MP/VDD" "XO1_MP/VDD"
+merge "XO1_MP/VDD" "XD4_MP/VDD"
+merge "XD4_MP/VDD" "XD3_MP/VDD"
+merge "XD3_MP/VDD" "XD2_MP/VDD"
+merge "XD2_MP/VDD" "XD1_MP/VDD"
+merge "XD1_MP/VDD" "XR_MP2/VDD"
+merge "XR_MP2/VDD" "XR_MP1/VDD"
+merge "XR_MP1/VDD" "XD_6_MP3/VDD"
+merge "XD_6_MP3/VDD" "VDD"
+merge "XD_3_MN1/D_n3" "XD_6_MN2/D_n3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_6_MN2/D_n3" "XD_6_MP2/D_n3"
+merge "XD_6_MP2/D_n3" "XD_4_MP1/D_n3"
+merge "XD_4_MP1/D_n3" "XD_4_MN1/D_n3"
+merge "XD_4_MN1/D_n3" "XD_3_MP3/D_n3"
+merge "XD_3_MP3/D_n3" "XD_3_MP2/D_n3"
+merge "XD_3_MP2/D_n3" "XD_3_MP1/D_n3"
+merge "XD_3_MP1/D_n3" "m2_1510_5430#"
+merge "XD_6_MN1/D_qb" "XD_5_MP2/D_qb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_5_MP2/D_qb" "XD_5_MN2/D_qb"
+merge "XD_5_MN2/D_qb" "XD_6_MP2/D_qb"
+merge "XD_6_MP2/D_qb" "XD_6_MP1/D_qb"
+merge "XD_6_MP1/D_qb" "XD_6_MP3/D_qb"
+merge "XD_6_MP3/D_qb" "m2_1510_1370#"
+merge "XD1_MN/r0" "XD1_MP/r0" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD1_MP/r0" "XR_MP2/r0"
+merge "XR_MP2/r0" "XR_MP1/r0"
+merge "XR_MP1/r0" "XR_MN1/r0"
+merge "XR_MN1/r0" "m2_3190_1370#"
+merge "XD_3_MN1/VSS" "XD_2_MN3/VSS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_2_MN3/VSS" "XD_2_MN2/VSS"
+merge "XD_2_MN2/VSS" "XD_2_MN1/VSS"
+merge "XD_2_MN1/VSS" "XU_6_MN3/VSS"
+merge "XU_6_MN3/VSS" "XU_6_MN2/VSS"
+merge "XU_6_MN2/VSS" "XU_6_MN1/VSS"
+merge "XU_6_MN1/VSS" "XU_3_MN3/VSS"
+merge "XU_3_MN3/VSS" "XU_3_MN2/VSS"
+merge "XU_3_MN2/VSS" "XU_3_MN1/VSS"
+merge "XU_3_MN1/VSS" "XU_2_MN3/VSS"
+merge "XU_2_MN3/VSS" "XU_2_MN2/VSS"
+merge "XU_2_MN2/VSS" "XU_2_MN1/VSS"
+merge "XU_2_MN1/VSS" "XU_1_MN2/VSS"
+merge "XU_1_MN2/VSS" "XU_1_MN1/VSS"
+merge "XU_1_MN1/VSS" "XO2_MN/VSS"
+merge "XO2_MN/VSS" "XO1_MN/VSS"
+merge "XO1_MN/VSS" "XD4_MN/VSS"
+merge "XD4_MN/VSS" "XD3_MN/VSS"
+merge "XD3_MN/VSS" "XD2_MN/VSS"
+merge "XD2_MN/VSS" "XD1_MN/VSS"
+merge "XD1_MN/VSS" "XD_6_MN3/VSS"
+merge "XD_6_MN3/VSS" "XD_6_MN2/VSS"
+merge "XD_6_MN2/VSS" "XD_6_MN1/VSS"
+merge "XD_6_MN1/VSS" "XD_3_MN3/VSS"
+merge "XD_3_MN3/VSS" "XD_3_MN2/VSS"
+merge "XD_3_MN2/VSS" "XU_5_MN1/VSS"
+merge "XU_5_MN1/VSS" "XU_4_MP2/VSUBS"
+merge "XU_4_MP2/VSUBS" "XU_4_MP1/VSUBS"
+merge "XU_4_MP1/VSUBS" "XU_4_MN2/VSS"
+merge "XU_4_MN2/VSS" "XU_4_MN1/VSS"
+merge "XU_4_MN1/VSS" "XU_3_MP3/VSUBS"
+merge "XU_3_MP3/VSUBS" "XU_3_MP2/VSUBS"
+merge "XU_3_MP2/VSUBS" "XU_3_MP1/VSUBS"
+merge "XU_3_MP1/VSUBS" "XU_2_MP3/VSUBS"
+merge "XU_2_MP3/VSUBS" "XU_2_MP2/VSUBS"
+merge "XU_2_MP2/VSUBS" "XU_2_MP1/VSUBS"
+merge "XU_2_MP1/VSUBS" "XU_1_MP2/VSUBS"
+merge "XU_1_MP2/VSUBS" "XU_1_MP1/VSUBS"
+merge "XU_1_MP1/VSUBS" "XD_2_MP3/VSUBS"
+merge "XD_2_MP3/VSUBS" "XD_2_MP2/VSUBS"
+merge "XD_2_MP2/VSUBS" "XD_2_MP1/VSUBS"
+merge "XD_2_MP1/VSUBS" "XD_1_MP2/VSUBS"
+merge "XD_1_MP2/VSUBS" "XD_1_MP1/VSUBS"
+merge "XD_1_MP1/VSUBS" "XD_1_MN2/VSS"
+merge "XD_1_MN2/VSS" "XD_1_MN1/VSS"
+merge "XD_1_MN1/VSS" "XU_6_MP3/VSUBS"
+merge "XU_6_MP3/VSUBS" "XU_6_MP2/VSUBS"
+merge "XU_6_MP2/VSUBS" "XU_6_MP1/VSUBS"
+merge "XU_6_MP1/VSUBS" "XU_5_MP2/VSUBS"
+merge "XU_5_MP2/VSUBS" "XU_5_MP1/VSUBS"
+merge "XU_5_MP1/VSUBS" "XU_5_MN2/VSS"
+merge "XU_5_MN2/VSS" "XD_6_MP2/VSUBS"
+merge "XD_6_MP2/VSUBS" "XD_6_MP1/VSUBS"
+merge "XD_6_MP1/VSUBS" "XD_5_MP2/VSUBS"
+merge "XD_5_MP2/VSUBS" "XD_5_MP1/VSUBS"
+merge "XD_5_MP1/VSUBS" "XD_5_MN2/VSS"
+merge "XD_5_MN2/VSS" "XD_5_MN1/VSS"
+merge "XD_5_MN1/VSS" "XD_4_MP2/VSUBS"
+merge "XD_4_MP2/VSUBS" "XD_4_MP1/VSUBS"
+merge "XD_4_MP1/VSUBS" "XD_4_MN2/VSS"
+merge "XD_4_MN2/VSS" "XD_4_MN1/VSS"
+merge "XD_4_MN1/VSS" "XD_3_MP3/VSUBS"
+merge "XD_3_MP3/VSUBS" "XD_3_MP2/VSUBS"
+merge "XD_3_MP2/VSUBS" "XD_3_MP1/VSUBS"
+merge "XD_3_MP1/VSUBS" "XO2_MP/VSUBS"
+merge "XO2_MP/VSUBS" "XO1_MP/VSUBS"
+merge "XO1_MP/VSUBS" "XD4_MP/VSUBS"
+merge "XD4_MP/VSUBS" "XD3_MP/VSUBS"
+merge "XD3_MP/VSUBS" "XD2_MP/VSUBS"
+merge "XD2_MP/VSUBS" "XD1_MP/VSUBS"
+merge "XD1_MP/VSUBS" "XR_MP2/VSUBS"
+merge "XR_MP2/VSUBS" "XR_MP1/VSUBS"
+merge "XR_MP1/VSUBS" "XR_MN2/VSS"
+merge "XR_MN2/VSS" "XR_MN1/VSS"
+merge "XR_MN1/VSS" "VSS"
+merge "VSS" "XD_6_MP3/VSUBS"
+merge "XD_6_MP3/VSUBS" "VSUBS"
+merge "XD_3_MN3/D_n4" "XD_1_MP1/D_n4" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_1_MP1/D_n4" "XD_1_MN1/D_n4"
+merge "XD_1_MN1/D_n4" "XD_3_MP3/D_n4"
+merge "XD_3_MP3/D_n4" "XD_4_MP2/D_n4"
+merge "XD_4_MP2/D_n4" "XD_4_MP1/D_n4"
+merge "XD_4_MP1/D_n4" "XD_4_MN1/D_n4"
+merge "XD_4_MN1/D_n4" "m2_3190_18170#"
+merge "XD_1_MN2/D_1_n1" "XD_1_MN1/D_1_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_1_MN1/D_1_n1" "m2_11450_9350#"
+merge "XD_5_MN2/D_5_n1" "XD_5_MN1/D_5_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_5_MN1/D_5_n1" "m2_13130_5290#"
+merge "XD_2_MN3/rb" "XU_6_MN3/rb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_6_MN3/rb" "XU_2_MN3/rb"
+merge "XU_2_MN3/rb" "XD4_MN/rb"
+merge "XD4_MN/rb" "XD_6_MN3/rb"
+merge "XD_6_MN3/rb" "XU_4_MP2/rb"
+merge "XU_4_MP2/rb" "XU_4_MN2/rb"
+merge "XU_4_MN2/rb" "XU_2_MP3/rb"
+merge "XU_2_MP3/rb" "XD_2_MP3/rb"
+merge "XD_2_MP3/rb" "XU_6_MP3/rb"
+merge "XU_6_MP3/rb" "XD_4_MP2/rb"
+merge "XD_4_MP2/rb" "XD_4_MN2/rb"
+merge "XD_4_MN2/rb" "XD_6_MP3/rb"
+merge "XD_6_MP3/rb" "XD4_MP/rb"
+merge "XD4_MP/rb" "m2_1510_1790#"
+merge "XD4_MN/r3" "XD3_MN/r3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD3_MN/r3" "XD4_MP/r3"
+merge "XD4_MP/r3" "XD3_MP/r3"
+merge "XD3_MP/r3" "m2_13270_1370#"
+merge "XU_3_MN2/REF" "XU_2_MN2/REF" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_2_MN2/REF" "XU_3_MP2/REF"
+merge "XU_3_MP2/REF" "XU_2_MP2/REF"
+merge "XU_2_MP2/REF" "REF"
+merge "XD3_MN/r2" "XD2_MN/r2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD2_MN/r2" "XD3_MP/r2"
+merge "XD3_MP/r2" "XD2_MP/r2"
+merge "XD2_MP/r2" "m2_11590_1370#"
+merge "XO2_MN/DN" "XD_6_MN1/DN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_6_MN1/DN" "XD_6_MP1/DN"
+merge "XD_6_MP1/DN" "XD_5_MP2/DN"
+merge "XD_5_MP2/DN" "XD_5_MP1/DN"
+merge "XD_5_MP1/DN" "XD_5_MN1/DN"
+merge "XD_5_MN1/DN" "XO2_MP/DN"
+merge "XO2_MP/DN" "XR_MP2/DN"
+merge "XR_MP2/DN" "XR_MN2/DN"
+merge "XR_MN2/DN" "DN"
+merge "XU_5_MN1/U_5_n1" "XU_5_MN2/U_5_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_5_MN2/U_5_n1" "m2_1510_9490#"
+merge "XU_1_MN2/U_1_n1" "XU_1_MN1/U_1_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_1_MN1/U_1_n1" "m2_19850_17470#"
+merge "XU_2_MN1/U_n1" "XU_1_MN1/U_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_1_MN1/U_n1" "XU_2_MP1/U_n1"
+merge "XU_2_MP1/U_n1" "XU_1_MP2/U_n1"
+merge "XU_1_MP2/U_n1" "XU_1_MP1/U_n1"
+merge "XU_1_MP1/U_n1" "m2_1510_13550#"
+merge "XD_2_MN2/D_2_n1" "XD_2_MN1/D_2_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_2_MN1/D_2_n1" "m2_16490_21810#"
+merge "XD_6_MN2/D_6_n1" "XD_6_MN1/D_6_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_6_MN1/D_6_n1" "m2_4730_17610#"
+merge "XD_2_MN2/FB" "XD_3_MN2/FB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_3_MN2/FB" "XD_2_MP2/FB"
+merge "XD_2_MP2/FB" "XD_3_MP2/FB"
+merge "XD_3_MP2/FB" "FB"
+merge "XU_6_MN1/UP" "XO1_MN/UP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XO1_MN/UP" "XU_5_MN1/UP"
+merge "XU_5_MN1/UP" "XU_6_MP1/UP"
+merge "XU_6_MP1/UP" "XU_5_MP2/UP"
+merge "XU_5_MP2/UP" "XU_5_MP1/UP"
+merge "XU_5_MP1/UP" "XO1_MP/UP"
+merge "XO1_MP/UP" "XR_MP1/UP"
+merge "XR_MP1/UP" "XR_MN1/UP"
+merge "XR_MN1/UP" "UP"
+merge "XU_3_MN1/U_n2" "XU_2_MN1/U_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_2_MN1/U_n2" "XU_1_MN2/U_n2"
+merge "XU_1_MN2/U_n2" "XU_5_MN1/U_n2"
+merge "XU_5_MN1/U_n2" "XU_3_MP1/U_n2"
+merge "XU_3_MP1/U_n2" "XU_2_MP3/U_n2"
+merge "XU_2_MP3/U_n2" "XU_2_MP2/U_n2"
+merge "XU_2_MP2/U_n2" "XU_2_MP1/U_n2"
+merge "XU_2_MP1/U_n2" "XU_1_MP2/U_n2"
+merge "XU_1_MP2/U_n2" "XU_5_MP1/U_n2"
+merge "XU_5_MP1/U_n2" "m2_1510_21950#"
+merge "XU_6_MN2/U_n3" "XU_3_MN1/U_n3" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_3_MN1/U_n3" "XU_4_MP1/U_n3"
+merge "XU_4_MP1/U_n3" "XU_4_MN1/U_n3"
+merge "XU_4_MN1/U_n3" "XU_3_MP3/U_n3"
+merge "XU_3_MP3/U_n3" "XU_3_MP2/U_n3"
+merge "XU_3_MP2/U_n3" "XU_3_MP1/U_n3"
+merge "XU_3_MP1/U_n3" "XU_6_MP2/U_n3"
+merge "XU_6_MP2/U_n3" "m2_6550_21950#"
+merge "XD_2_MN1/D_n1" "XD_2_MP1/D_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_2_MP1/D_n1" "XD_1_MP2/D_n1"
+merge "XD_1_MP2/D_n1" "XD_1_MP1/D_n1"
+merge "XD_1_MP1/D_n1" "XD_1_MN1/D_n1"
+merge "XD_1_MN1/D_n1" "m2_11590_9490#"
+merge "XU_6_MN1/U_qb" "XU_5_MP2/U_qb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_5_MP2/U_qb" "XU_5_MN2/U_qb"
+merge "XU_5_MN2/U_qb" "XU_6_MP3/U_qb"
+merge "XU_6_MP3/U_qb" "XU_6_MP2/U_qb"
+merge "XU_6_MP2/U_qb" "XU_6_MP1/U_qb"
+merge "XU_6_MP1/U_qb" "m2_1510_9910#"
+merge "XD_3_MN1/D_n2" "XD_2_MN1/D_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_2_MN1/D_n2" "XD_1_MP2/D_n2"
+merge "XD_1_MP2/D_n2" "XD_1_MN2/D_n2"
+merge "XD_1_MN2/D_n2" "XD_2_MP3/D_n2"
+merge "XD_2_MP3/D_n2" "XD_2_MP2/D_n2"
+merge "XD_2_MP2/D_n2" "XD_2_MP1/D_n2"
+merge "XD_2_MP1/D_n2" "XD_5_MP1/D_n2"
+merge "XD_5_MP1/D_n2" "XD_5_MN1/D_n2"
+merge "XD_5_MN1/D_n2" "XD_3_MP1/D_n2"
+merge "XD_3_MP1/D_n2" "m2_1510_5850#"
+merge "XD_6_MN3/D_6_n2" "XD_6_MN2/D_6_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_6_MN2/D_6_n2" "m2_6410_17610#"
+merge "XD_2_MN3/D_2_n2" "XD_2_MN2/D_2_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_2_MN2/D_2_n2" "m2_18170_21810#"
+merge "XU_6_MN2/U_6_n1" "XU_6_MN1/U_6_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_6_MN1/U_6_n1" "m2_11450_21810#"
+merge "XU_2_MN2/U_2_n1" "XU_2_MN1/U_2_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_2_MN1/U_2_n1" "m2_1370_21810#"
+merge "XO2_MN/DNB" "XO2_MP/DNB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XO2_MP/DNB" "DNB"
+merge "XD_3_MN1/D_3_n1" "XD_3_MN2/D_3_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_3_MN2/D_3_n1" "m2_1510_17750#"
+merge "XR_MN2/R_n1" "XR_MN1/R_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XR_MN1/R_n1" "m2_3050_1230#"
+merge "XO1_MN/UPB" "XO1_MP/UPB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XO1_MP/UPB" "UPB"
+merge "XU_4_MN2/U_4_n1" "XU_4_MN1/U_4_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_4_MN1/U_4_n1" "m2_14810_13410#"
+merge "XU_6_MN3/U_6_n2" "XU_6_MN2/U_6_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_6_MN2/U_6_n2" "m2_13130_21810#"
+merge "XU_2_MN3/U_2_n2" "XU_2_MN2/U_2_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_2_MN2/U_2_n2" "m2_3050_21810#"
+merge "XD_4_MN2/D_4_n1" "XD_4_MN1/D_4_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_4_MN1/D_4_n1" "m2_6410_5290#"
+merge "XD_3_MN3/D_3_n2" "XD_3_MN2/D_3_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XD_3_MN2/D_3_n2" "m2_1370_17610#"
+merge "XU_3_MN2/U_3_n1" "XU_3_MN1/U_3_n1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_3_MN1/U_3_n1" "m2_6410_21810#"
+merge "XU_3_MN3/U_3_n2" "XU_3_MN2/U_3_n2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XU_3_MN2/U_3_n2" "m2_8090_21810#"

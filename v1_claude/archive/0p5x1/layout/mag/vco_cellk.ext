@@ -1,0 +1,60 @@
+timestamp 0
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use vco_cellk_MK XMK 1 0 1400 0 1 1120
+use vco_cellk_MN1_MN2 XMN1_MN2 1 0 3220 0 1 1120
+use vco_cellk_MN3 XMN3 1 0 5460 0 1 1120
+use vco_cellk_MN4 XMN4 1 0 7140 0 1 1120
+use vco_cellk_MKD XMKD 1 0 8820 0 1 1120
+use vco_cellk_MP1_MP2 XMP1_MP2 1 0 1400 0 1 5740
+use vco_cellk_MP3 XMP3 1 0 4200 0 1 5740
+use vco_cellk_MP4 XMP4 1 0 5880 0 1 5740
+port "VSS" 1 0 0 600 7999 m3
+port "FK" 5 -1220 6480 -1020 6680 m4
+port "IN" 4 -1220 3820 -1020 4020 m4
+port "ON" 7 11380 5640 11580 5840 m4
+port "OP" 6 11380 2140 11580 2340 m4
+port "IP" 3 -1220 1160 -1020 1360 m4
+port "VR" 2 9920 0 10520 7999 m3
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "FK" 0 0 -1220 6480 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IN" 0 0 -1220 3820 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ON" 0 0 11380 5640 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OP" 0 0 11380 2140 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IP" 0 0 -1220 1160 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VR" 0 0 9920 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP4/OP" "XMP3/OP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP3/OP" "XMP1_MP2/OP"
+merge "XMP1_MP2/OP" "XMKD/OP"
+merge "XMKD/OP" "XMN3/OP"
+merge "XMN3/OP" "XMN1_MN2/OP"
+merge "XMN1_MN2/OP" "XMN4/OP"
+merge "XMN4/OP" "OP"
+merge "XMP4/VSUBS" "XMP3/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP3/VSUBS" "XMP1_MP2/VSUBS"
+merge "XMP1_MP2/VSUBS" "XMKD/VSS"
+merge "XMKD/VSS" "XMN4/VSS"
+merge "XMN4/VSS" "XMN3/VSS"
+merge "XMN3/VSS" "XMN1_MN2/VSS"
+merge "XMN1_MN2/VSS" "XMK/VSS"
+merge "XMK/VSS" "VSUBS"
+merge "VSUBS" "VSS"
+merge "XMP4/ON" "XMP3/ON" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP3/ON" "XMP1_MP2/ON"
+merge "XMP1_MP2/ON" "XMN4/ON"
+merge "XMN4/ON" "XMN1_MN2/ON"
+merge "XMN1_MN2/ON" "XMK/ON"
+merge "XMK/ON" "XMN3/ON"
+merge "XMN3/ON" "ON"
+merge "XMK/FK" "FK" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP1_MP2/IN" "XMN1_MN2/IN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMN1_MN2/IN" "IN"
+merge "XMP4/VR" "XMP3/VR" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMP3/VR" "XMP1_MP2/VR"
+merge "XMP1_MP2/VR" "VR"
+merge "XMP1_MP2/IP" "XMN1_MN2/IP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMN1_MN2/IP" "IP"

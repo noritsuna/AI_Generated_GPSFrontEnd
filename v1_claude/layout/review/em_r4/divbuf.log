@@ -1,0 +1,8 @@
+== b (klayout net $4): MP1:sd +0.38 mA / 17 contacts = 0.022 mA each; MN1:sd -0.38 mA / 8 contacts = 0.048 mA each
+   M1: 1.01 mA/um over a 0.2 um wide wire (0.20 mA) at 33.8,9.8 um  [limit 2.09 at 85 C / 1.00 at 110 C] over the 110 C limit
+   M2: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.50 mA/um over a 0.1 um wide wire (0.05 mA) at 50.6,8.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.38 mA/um over a 1.0 um wide wire (0.38 mA) at 34.4,9.6 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 8 vias, max 0.191 mA per via at 50.6,8.1 um  [limit 0.58 / 0.28] OK
+   V2: 7 vias, max 0.191 mA per via at 50.6,8.6 um  [limit 0.58 / 0.28] OK
+   V3: 20 vias, max 0.097 mA per via at 50.4,9.8 um  [limit 0.58 / 0.28] OK

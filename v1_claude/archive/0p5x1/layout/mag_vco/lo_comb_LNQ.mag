@@ -1,0 +1,96 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< pwell >>
+rect -304 -188 1024 1359
+<< ndiff >>
+rect 0 299 720 899
+<< psubdiff >>
+rect -280 -164 1000 -60
+rect -280 1231 1000 1335
+rect -280 -60 -176 1231
+rect 896 -60 1000 1231
+<< nmos >>
+rect 89 299 145 899
+rect 251 299 307 899
+rect 413 299 469 899
+rect 575 299 631 899
+<< polysilicon >>
+rect 89 899 145 1069
+rect 251 899 307 1069
+rect 69 1069 327 1171
+rect 413 191 469 299
+rect 575 191 631 299
+rect 393 89 651 191
+rect 89 239 145 299
+rect 251 239 307 299
+rect 413 899 469 959
+rect 575 899 631 959
+rect -116 239 -60 959
+rect 780 239 836 959
+<< ndiffc >>
+rect 13 312 59 886
+rect 175 312 221 886
+rect 337 312 383 886
+rect 499 312 545 886
+rect 661 312 707 886
+<< psubdiffcont >>
+rect -267 -140 -189 1311
+rect 909 -140 987 1311
+rect -129 1244 849 1322
+rect -129 -151 849 -73
+<< polycontact >>
+rect 82 1082 314 1158
+rect 406 102 638 178
+<< metal1 >>
+rect 13 301 59 897
+rect 175 301 221 897
+rect 337 301 383 897
+rect 499 301 545 897
+rect 661 301 707 897
+rect -2 378 74 462
+rect 322 378 398 462
+rect 646 378 722 462
+rect 160 518 236 602
+rect 484 658 560 742
+rect 71 1082 325 1158
+rect 395 102 649 178
+rect -267 -151 987 -73
+rect -267 1244 987 1322
+rect -267 -151 -189 1322
+rect 909 -151 987 1322
+rect -267 -151 987 -73
+rect -267 1244 987 1322
+<< metal2 >>
+rect 160 518 236 602
+rect 484 658 560 742
+rect 82 1082 314 1158
+rect 406 102 638 178
+rect -267 -151 987 -73
+rect -267 1244 987 1322
+rect -267 378 987 462
+<< via1 >>
+rect 10 390 62 450
+rect 334 390 386 450
+rect 658 390 710 450
+rect 172 530 224 590
+rect 496 670 548 730
+rect 94 1094 302 1146
+rect 418 114 626 166
+rect -255 -139 975 -85
+rect -255 1256 975 1310
+rect -254 390 -202 450
+rect 922 390 974 450
+<< labels >>
+flabel metal2 s 160 518 236 602 0 FreeSans 80 0 0 0 LOQN
+port 1 nsew signal bidirectional
+flabel metal2 s 484 658 560 742 0 FreeSans 80 0 0 0 LOQP
+port 2 nsew signal bidirectional
+flabel metal2 s 82 1082 314 1158 0 FreeSans 80 0 0 0 xQP
+port 3 nsew signal bidirectional
+flabel metal2 s 406 102 638 178 0 FreeSans 80 0 0 0 xQN
+port 4 nsew signal bidirectional
+flabel metal2 s -267 -151 987 -73 0 FreeSans 80 0 0 0 VSS
+port 5 nsew signal bidirectional
+<< end >>

@@ -1,0 +1,123 @@
+timestamp 1623399878
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use gnss_cp_MNC_MNC2_MBT XMNC_MNC2_MBT 1 0 24780 0 1 6300
+use gnss_cp_CVD XCVD 1 0 1120 0 1 6580
+use gnss_cp_MNE2 XMNE2 1 0 31220 0 1 1120
+use gnss_cp_MND2 XMND2 1 0 29540 0 1 1120
+use gnss_cp_MNS2 XMNS2 1 0 27860 0 1 1120
+use gnss_cp_MND XMND 1 0 26180 0 1 1120
+use gnss_cp_MNS XMNS 1 0 24500 0 1 1120
+use gnss_cp_MBL1_MBL2 XMBL1_MBL2 1 0 21560 0 1 1120
+use gnss_cp_MB1_MB2 XMB1_MB2 1 0 18480 0 1 1120
+use gnss_cp_MPS2_MPD2 XMPS2_MPD2 1 0 16100 0 1 1120
+use gnss_cp_MPS_MPD XMPS_MPD 1 0 13860 0 1 1120
+use gnss_cp_MPE2 XMPE2 1 0 11620 0 1 1120
+use gnss_cp_MPC_MPC2 XMPC_MPC2 1 0 1680 0 1 1120
+use gnss_inv_dig XUD 1 0 9660 0 1 7280
+use gnss_inv_dig XHI 1 0 17500 0 1 7280
+port "DNB" 12 -1220 5920 -1020 6120 m4
+port "OUT" 20 33780 7180 33980 7380 m4
+port "VDD" 5 32320 0 32920 14582 m3
+port "DN" 10 -1220 3400 -1020 3600 m4
+port "PB" 14 -1220 8300 -1020 8500 m4
+port "VSS" 3 0 0 600 14582 m3
+port "UPB" 8 -1220 1020 -1020 1220 m4
+port "HI" 18 -1220 13200 -1020 13400 m4
+port "NB" 16 -1220 10820 -1020 11020 m4
+node "m2_14390_1230#" 0 0 14390 1230 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_27830_1230#" 0 0 27830 1230 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DNB" 0 0 -1220 5920 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_12002_1922#" 0 0 12002 1922 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_8782_1922#" 0 0 8782 1922 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_18730_1790#" 0 0 18730 1790 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_8222_2202#" 0 0 8222 2202 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OUT" 0 0 33780 7180 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_12142_2482#" 0 0 12142 2482 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 32320 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DN" 0 0 -1220 3400 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "PB" 0 0 -1220 8300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_24470_1230#" 0 0 24470 1230 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "UPB" 0 0 -1220 1020 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_28242_7242#" 0 0 28242 7242 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_19710_1510#" 0 0 19710 1510 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "HI" 0 0 -1220 13200 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "NB" 0 0 -1220 10820 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_7382_13402#" 0 0 7382 13402 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XUD/Y" "XMPS2_MPD2/upd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPS2_MPD2/upd" "XMPS_MPD/upd"
+merge "XMPS_MPD/upd" "m2_14390_1230#"
+merge "XMNC_MNC2_MBT/nc2" "XMNE2/nc2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMNE2/nc2" "m2_28242_7242#"
+merge "XHI/A" "XMNE2/HI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMNE2/HI" "HI"
+merge "XMBL1_MBL2/b1" "XMB1_MB2/b1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMB1_MB2/b1" "m2_18730_1790#"
+merge "XMNC_MNC2_MBT/nc" "XMND/nc" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMND/nc" "XMNS/nc"
+merge "XMNS/nc" "m2_24470_1230#"
+merge "XHI/VSS" "XHI/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XHI/VSUBS" "XUD/VSS"
+merge "XUD/VSS" "XUD/VSUBS"
+merge "XUD/VSUBS" "XMNC_MNC2_MBT/VSS"
+merge "XMNC_MNC2_MBT/VSS" "XCVD/VSUBS"
+merge "XCVD/VSUBS" "XCVD/VSS"
+merge "XCVD/VSS" "XMNE2/VSS"
+merge "XMNE2/VSS" "XMND2/VSS"
+merge "XMND2/VSS" "XMNS2/VSS"
+merge "XMNS2/VSS" "XMND/VSS"
+merge "XMND/VSS" "XMNS/VSS"
+merge "XMNS/VSS" "XMBL1_MBL2/VSUBS"
+merge "XMBL1_MBL2/VSUBS" "XMB1_MB2/VSS"
+merge "XMB1_MB2/VSS" "VSS"
+merge "VSS" "XMPS2_MPD2/VSUBS"
+merge "XMPS2_MPD2/VSUBS" "XMPS_MPD/VSUBS"
+merge "XMPS_MPD/VSUBS" "XMPE2/VSUBS"
+merge "XMPE2/VSUBS" "XMPC_MPC2/VSUBS"
+merge "XMPC_MPC2/VSUBS" "VSUBS"
+merge "XMNS2/DN" "XMNS/DN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMNS/DN" "DN"
+merge "XMNC_MNC2_MBT/bt" "XMB1_MB2/bt" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMB1_MB2/bt" "m2_19710_1510#"
+merge "XUD/A" "XMPS2_MPD2/UPB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPS2_MPD2/UPB" "XMPS_MPD/UPB"
+merge "XMPS_MPD/UPB" "UPB"
+merge "XCVD/vd" "XMBL1_MBL2/vd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMBL1_MBL2/vd" "XMPS2_MPD2/vd"
+merge "XMPS2_MPD2/vd" "XMPS_MPD/vd"
+merge "XMPS_MPD/vd" "XMND2/vd"
+merge "XMND2/vd" "XMND/vd"
+merge "XMND/vd" "XMB1_MB2/vd"
+merge "XMB1_MB2/vd" "m2_7382_13402#"
+merge "XMPC_MPC2/PB" "PB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMNE2/ne2" "XMND2/ne2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMND2/ne2" "XMNS2/ne2"
+merge "XMNS2/ne2" "m2_27830_1230#"
+merge "XHI/VDD" "XUD/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XUD/VDD" "XMPS2_MPD2/VDD"
+merge "XMPS2_MPD2/VDD" "XMPS_MPD/VDD"
+merge "XMPS_MPD/VDD" "XMPE2/VDD"
+merge "XMPE2/VDD" "XMPC_MPC2/VDD"
+merge "XMPC_MPC2/VDD" "XMBL1_MBL2/VDD"
+merge "XMBL1_MBL2/VDD" "VDD"
+merge "XMPS_MPD/pc" "XMPC_MPC2/pc" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPC_MPC2/pc" "m2_8782_1922#"
+merge "XMPE2/pc2" "XMPC_MPC2/pc2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPC_MPC2/pc2" "m2_8222_2202#"
+merge "XMPS2_MPD2/pe2" "XMPE2/pe2" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPE2/pe2" "m2_12002_1922#"
+merge "XMB1_MB2/OUT" "XMPS2_MPD2/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPS2_MPD2/OUT" "XMPS_MPD/OUT"
+merge "XMPS_MPD/OUT" "XMNS2/OUT"
+merge "XMNS2/OUT" "XMNS/OUT"
+merge "XMNS/OUT" "OUT"
+merge "XMND2/DNB" "XMND/DNB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMND/DNB" "DNB"
+merge "XHI/Y" "XMPE2/hib" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPE2/hib" "m2_12142_2482#"
+merge "XMNC_MNC2_MBT/NB" "NB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

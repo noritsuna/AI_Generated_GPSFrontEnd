@@ -1,0 +1,1260 @@
+** sch_path: /home/noritsuna/GPS/xschem/tb_rx.sch
+**.subckt tb_rx
+VDD vdd 0 3.135
+XB nb pb vdd 0 bias_gen
+VL1P l1p 0 dc 1
+VL1N l1n 0 dc 1
+VL2P l2p 0 dc 1
+VL2N l2n 0 dc 1
+VL3P l3p 0 dc 1
+VL3N l3n 0 dc 1
+VL4P l4p 0 dc 1
+VL4N l4n 0 dc 1
+VRFP rfp 0 dc 1.235 ac 0.5
+VRFN rfn 0 dc 1.235 ac -0.5
+XM rfp rfn l1p l1n l2p l2n l3p l3n l4p l4n nb ifip ifin ifqp ifqn vdd 0 mixer_iq
+**** begin user architecture code
+ .include /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice ss
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_ss
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_ss
+
+.temp 85
+.control
+set num_threads=1
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63445
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 0 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 1.39098
+alter VL1N dc = 2.01793
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 1 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.0075
+alter VL1N dc = 1.40142
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 2 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.62402
+alter VL1N dc = 0.7849
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 3 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 4 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 5 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 6 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 7 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 0.77447
+alter VL2N dc = 2.63445
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 8 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 1.39099
+alter VL2N dc = 2.01793
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 9 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.0075
+alter VL2N dc = 1.40141
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 10 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.62402
+alter VL2N dc = 0.784896
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 11 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 12 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 13 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 14 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 15 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 0.207214
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 16 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 0.82373
+alter VL3N dc = 1.4507
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 17 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 1.44025
+alter VL3N dc = 0.83418
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 18 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.05676
+alter VL3N dc = 0.217663
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 19 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 20 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 21 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 22 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 23 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 0.207218
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 24 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 0.823734
+alter VL4N dc = 1.45069
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 25 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 1.44025
+alter VL4N dc = 0.834176
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 26 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.05677
+alter VL4N dc = 0.217659
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 27 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 28 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 29 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 30 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774466
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 31 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.63447
+alter VL1N dc = 0.774482
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 32 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 2.01795
+alter VL1N dc = 1.391
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 33 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 1.40143
+alter VL1N dc = 2.00752
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 34 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.784915
+alter VL1N dc = 2.62403
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 35 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 36 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 37 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 38 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 2.63447
+alter VL2N dc = 0.774466
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 39 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 2.63446
+alter VL2N dc = 0.774485
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 40 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 2.01795
+alter VL2N dc = 1.391
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 41 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 1.40143
+alter VL2N dc = 2.00752
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 42 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.784912
+alter VL2N dc = 2.62404
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 43 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 44 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 45 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 46 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 2.06721
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 47 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 2.0672
+alter VL3N dc = 0.207206
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 48 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 1.45068
+alter VL3N dc = 0.823715
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 49 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.834164
+alter VL3N dc = 1.44023
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 50 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.217648
+alter VL3N dc = 2.05675
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 51 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 52 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 53 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 54 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 2.06721
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 55 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 2.06719
+alter VL4N dc = 0.207206
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 56 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 1.45068
+alter VL4N dc = 0.823719
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 57 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.834161
+alter VL4N dc = 1.44024
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 58 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.217644
+alter VL4N dc = 2.05675
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 59 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 60 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 61 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 62 $&ac1.gi $&ac1.gq
+destroy all
+alter VL1P dc = 0.774466
+alter VL1N dc = 2.63447
+alter VL2P dc = 0.774466
+alter VL2N dc = 2.63447
+alter VL3P dc = 0.207206
+alter VL3N dc = 2.06721
+alter VL4P dc = 0.207206
+alter VL4N dc = 2.06721
+op
+ac lin 1 1e5 1e5
+let gi = real(v(ifip)-v(ifin))
+let gq = real(v(ifqp)-v(ifqn))
+noise v(ifip,ifin) VRFP lin 2 3.592e+06 4.592e+06 1
+setplot noise2
+print all
+echo QS 63 $&ac1.gi $&ac1.gq
+destroy all
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  bias_gen.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/bias_gen.sym
+** sch_path: /home/noritsuna/GPS/xschem/bias_gen.sch
+.subckt bias_gen NB PB VDD VSS
+*.opin NB
+*.opin PB
+*.iopin VDD
+*.iopin VSS
+XMN1 nbc nbc VSS VSS nfet_03v3 L=2u W=4u nf=1 ad='4u*0.09u' as='4u*0.09u' pd='4u+0.18u' ps='4u+0.18u' sa=0 sb=0 sd=0 m=1
+XMN2 pbc nbc nr VSS nfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=2
+XRB VSS nr VSS ppolyf_u_1k r_width=1u r_length=4.6u
+XMP1 nbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=1
+XMP2 pbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=1
+XMSP st VSS VDD VDD pfet_03v3 L=20u W=1u nf=1 ad='1u*0.09u' as='1u*0.09u' pd='1u+0.18u' ps='1u+0.18u' sa=0 sb=0 sd=0 m=1
+XMSN st nbc VSS VSS nfet_03v3 L=1u W=2u nf=1 ad='2u*0.09u' as='2u*0.09u' pd='2u+0.18u' ps='2u+0.18u' sa=0 sb=0 sd=0 m=1
+XMSU pbc st VSS VSS nfet_03v3 L=1u W=1u nf=1 ad='1u*0.09u' as='1u*0.09u' pd='1u+0.18u' ps='1u+0.18u' sa=0 sb=0 sd=0 m=1
+XMP3 NB pbc VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=1
+XMN3 NB NB VSS VSS nfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=2
+XMN4 PB nbc VSS VSS nfet_03v3 L=2u W=4u nf=1 ad='4u*0.09u' as='4u*0.09u' pd='4u+0.18u' ps='4u+0.18u' sa=0 sb=0 sd=0 m=1
+XMP4 PB PB VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=4
+XCNB NB VSS cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+XCPB VDD PB cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+.ends
+
+
+* expanding   symbol:  lna_nc.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/lna_nc.sym
+** sch_path: /home/noritsuna/GPS/xschem/lna_nc.sch
+.subckt lna_nc RFIN PB OUTP OUTN VDD VSS
+*.ipin RFIN
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XM1 op_i vb1 RFIN VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=24
+XRS VSS RFIN VSS ppolyf_u_1k r_width=10u r_length=3u
+XR1 op_i VDD VSS ppolyf_u_1k r_width=10u r_length=2u
+XCC2 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XRB2 vb2 g2 VSS ppolyf_u_1k r_width=1u r_length=10u
+XM2 on_i g2 VSS VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=64
+XR2 on_i VDD VSS ppolyf_u_1k r_width=30u r_length=2.17u
+XMP1 vb1 PB VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=24
+XM1R vb1 vb1 s1r VSS nfet_03v3 L=0.28u W=6u nf=1 ad='6u*0.09u' as='6u*0.09u' pd='6u+0.18u' ps='6u+0.18u' sa=0 sb=0 sd=0 m=2
+XRSR VSS s1r VSS ppolyf_u_1k r_width=1u r_length=3u
+XMP2 vb2 PB VDD VDD pfet_03v3 L=2u W=8u nf=1 ad='8u*0.09u' as='8u*0.09u' pd='8u+0.18u' ps='8u+0.18u' sa=0 sb=0 sd=0 m=20
+XM2R vb2 vb2 VSS VSS nfet_03v3 L=0.28u W=4u nf=1 ad='4u*0.09u' as='4u*0.09u' pd='4u+0.18u' ps='4u+0.18u' sa=0 sb=0 sd=0 m=2
+XCB1 vb1 VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCB2 vb2 VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCOP op_i OUTP cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCON on_i OUTN cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+.ends
+
+
+* expanding   symbol:  mixer_iq.sym # of pins=17
+** sym_path: /home/noritsuna/GPS/xschem/mixer_iq.sym
+** sch_path: /home/noritsuna/GPS/xschem/mixer_iq.sch
+.subckt mixer_iq RFP RFN L1P L1N L2P L2N L3P L3N L4P L4N NB IFIP IFIN IFQP IFQN VDD VSS
+*.ipin RFP
+*.ipin RFN
+*.ipin L1P
+*.ipin L1N
+*.ipin L2P
+*.ipin L2N
+*.ipin L3P
+*.ipin L3N
+*.ipin L4P
+*.ipin L4N
+*.ipin NB
+*.opin IFIP
+*.opin IFIN
+*.opin IFQP
+*.opin IFQN
+*.iopin VDD
+*.iopin VSS
+XRT1 vbrf RFP VSS ppolyf_u_1k r_width=1u r_length=5u
+XRT2 vbrf RFN VSS ppolyf_u_1k r_width=1u r_length=5u
+XRBA vbrf VDD VSS ppolyf_u_1k r_width=1u r_length=20u
+XRBB VSS vbrf VSS ppolyf_u_1k r_width=1u r_length=13u
+XCBRF vbrf VSS cap_mim_2f0_m4m5_noshield c_width=70e-6 c_length=70e-6
+XRLUA vlou VDD VSS ppolyf_u_1k r_width=1u r_length=47u
+XRLUB VSS vlou VSS ppolyf_u_1k r_width=1u r_length=56u
+XCLOU vlou VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XRLLA vlol VDD VSS ppolyf_u_1k r_width=1u r_length=65u
+XRLLB VSS vlol VSS ppolyf_u_1k r_width=1u r_length=37u
+XCLOL vlol VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+VCACL1P L1P gl1p 0
+VCACL1N L1N gl1n 0
+VCACL2P L2P gl2p 0
+VCACL2N L2N gl2n 0
+VCACL3P L3P gl3p 0
+VCACL3N L3N gl3n 0
+VCACL4P L4P gl4p 0
+VCACL4N L4N gl4n 0
+XMCTL1P VSS gl1p VSS VSS nfet_03v3 L=2u W=4.96u nf=1 ad='4.96u*0.09u' as='4.96u*0.09u' pd='4.96u+0.18u' ps='4.96u+0.18u' sa=0 sb=0 sd=0 m=1
+XMCTL1N VSS gl1n VSS VSS nfet_03v3 L=2u W=6.08u nf=1 ad='6.08u*0.09u' as='6.08u*0.09u' pd='6.08u+0.18u' ps='6.08u+0.18u' sa=0 sb=0 sd=0 m=1
+XMCTL2P VSS gl2p VSS VSS nfet_03v3 L=2u W=3.97u nf=1 ad='3.97u*0.09u' as='3.97u*0.09u' pd='3.97u+0.18u' ps='3.97u+0.18u' sa=0 sb=0 sd=0 m=1
+XMCTL2N VSS gl2n VSS VSS nfet_03v3 L=2u W=4.25u nf=1 ad='4.25u*0.09u' as='4.25u*0.09u' pd='4.25u+0.18u' ps='4.25u+0.18u' sa=0 sb=0 sd=0 m=1
+XMCTL3P VSS gl3p VSS VSS nfet_03v3 L=2u W=0.83u nf=1 ad='0.83u*0.09u' as='0.83u*0.09u' pd='0.83u+0.18u' ps='0.83u+0.18u' sa=0 sb=0 sd=0 m=1
+XMCTL3N VSS gl3n VSS VSS nfet_03v3 L=2u W=0.8u nf=1 ad='0.8u*0.09u' as='0.8u*0.09u' pd='0.8u+0.18u' ps='0.8u+0.18u' sa=0 sb=0 sd=0 m=1
+XMCTL4P VSS gl4p VSS VSS nfet_03v3 L=2u W=1.3u nf=1 ad='1.3u*0.09u' as='1.3u*0.09u' pd='1.3u+0.18u' ps='1.3u+0.18u' sa=0 sb=0 sd=0 m=1
+XMCTL4N VSS gl4n VSS VSS nfet_03v3 L=2u W=1.65u nf=1 ad='1.65u*0.09u' as='1.65u*0.09u' pd='1.65u+0.18u' ps='1.65u+0.18u' sa=0 sb=0 sd=0 m=1
+XMTI tI NB VSS VSS nfet_03v3 L=2u W=10u nf=1 ad='10u*0.09u' as='10u*0.09u' pd='10u+0.18u' ps='10u+0.18u' sa=0 sb=0 sd=0 m=64
+XMG1I xpI RFP tI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=16
+XMG2I xnI RFN tI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=16
+XMLApI mpaI gl3n xpI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMLBpI mpbI gl3p xpI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMU1pI IFIP gl1p mpaI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU2pI IFIN gl1n mpaI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU3pI IFIN gl1p mpbI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU4pI IFIP gl1n mpbI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMLAnI mnaI gl3n xnI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMLBnI mnbI gl3p xnI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMU1nI IFIN gl1p mnaI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU2nI IFIP gl1n mnaI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU3nI IFIP gl1p mnbI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU4nI IFIN gl1n mnbI VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XRL1I IFIP VDD VSS ppolyf_u_1k r_width=4u r_length=5u
+XRL2I IFIN VDD VSS ppolyf_u_1k r_width=4u r_length=5u
+XCL1I IFIP VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCL2I IFIN VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XMTQ tQ NB VSS VSS nfet_03v3 L=2u W=10u nf=1 ad='10u*0.09u' as='10u*0.09u' pd='10u+0.18u' ps='10u+0.18u' sa=0 sb=0 sd=0 m=64
+XMG1Q xpQ RFP tQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=16
+XMG2Q xnQ RFN tQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=16
+XMLApQ mpaQ gl4n xpQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMLBpQ mpbQ gl4p xpQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMU1pQ IFQP gl2p mpaQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU2pQ IFQN gl2n mpaQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU3pQ IFQN gl2p mpbQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU4pQ IFQP gl2n mpbQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMLAnQ mnaQ gl4n xnQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMLBnQ mnbQ gl4p xnQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=8
+XMU1nQ IFQN gl2p mnaQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU2nQ IFQP gl2n mnaQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU3nQ IFQP gl2p mnbQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XMU4nQ IFQN gl2n mnbQ VSS nfet_03v3 L=0.28u W=5u nf=1 ad='5u*0.09u' as='5u*0.09u' pd='5u+0.18u' ps='5u+0.18u' sa=0 sb=0 sd=0 m=4
+XRL1Q IFQP VDD VSS ppolyf_u_1k r_width=4u r_length=5u
+XRL2Q IFQN VDD VSS ppolyf_u_1k r_width=4u r_length=5u
+XCL1Q IFQP VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCL2Q IFQN VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+.ends
+
+.end

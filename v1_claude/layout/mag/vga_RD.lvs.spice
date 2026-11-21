@@ -1,0 +1,7 @@
+* NGSPICE file created from vga_RD.ext - technology: gf180mcuD
+
+.subckt vga_RD s2 s1 da VSS
+X0 da s2 VSS ppolyf_u_1k r_width=1u r_length=3u
+X1 s1 s2 VSS ppolyf_u_1k r_width=1u r_length=2u
+.ends
+

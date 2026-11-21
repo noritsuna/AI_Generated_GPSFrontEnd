@@ -1,0 +1,36 @@
+== pex_open  (SDO load none, simulated 4.20 us)
+  frame 1: sent 008015, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 9.8 ns; least margin before the rising edge 40.2 ns
+           control inputs of the macro 100 ns after CS_N rises: 08015 (expected 08015) OK
+  -> digital PASS
+  1.00-2.00 us: vctrl 2.1414 V (pp 41.12 mV)  CLKOUT pad 16.3841 MHz  IF tone I 21.18 mV Q 36.21 mV  rest pp I 250.63 mV Q 201.58 mV  I(VDDA+VDDV) 57.93 mA  I(VDD digital) 0.956 mA
+                 pp: VSS analog 42.32 mV  VSS digital 50.71 mV  VDDA 67.92 mV  VDDV 56.54 mV  VDD digital 63.64 mV
+  2.00-3.00 us: vctrl 2.1389 V (pp 32.74 mV)  CLKOUT pad 16.3695 MHz  IF tone I 16.84 mV Q 14.32 mV  rest pp I 899.83 mV Q 860.57 mV  I(VDDA+VDDV) 58.02 mA  I(VDD digital) 0.958 mA
+                 pp: VSS analog 33.22 mV  VSS digital 39.26 mV  VDDA 49.32 mV  VDDV 46.72 mV  VDD digital 34.01 mV
+  3.20-4.20 us: vctrl 2.1386 V (pp 57.86 mV)  CLKOUT pad 16.3681 MHz  IF tone I 70.32 mV Q 68.45 mV  rest pp I 1107.74 mV Q 856.25 mV  I(VDDA+VDDV) 58.02 mA  I(VDD digital) 1.370 mA
+                 pp: VSS analog 58.88 mV  VSS digital 77.14 mV  VDDA 85.70 mV  VDDV 96.85 mV  VDD digital 72.53 mV
+== pex_c30  (SDO load 30 pF, simulated 4.20 us)
+  frame 1: sent 008015, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 12.0 ns; least margin before the rising edge 38.0 ns
+           control inputs of the macro 100 ns after CS_N rises: 08015 (expected 08015) OK
+  -> digital PASS
+  1.00-2.00 us: vctrl 2.1414 V (pp 48.14 mV)  CLKOUT pad 16.3841 MHz  IF tone I 28.51 mV Q 78.09 mV  rest pp I 250.35 mV Q 290.86 mV  I(VDDA+VDDV) 57.93 mA  I(VDD digital) 1.140 mA
+                 pp: VSS analog 46.54 mV  VSS digital 55.37 mV  VDDA 62.47 mV  VDDV 74.01 mV  VDD digital 41.53 mV
+  2.00-3.00 us: vctrl 2.1389 V (pp 32.12 mV)  CLKOUT pad 16.3694 MHz  IF tone I 19.63 mV Q 5.29 mV  rest pp I 876.67 mV Q 854.08 mV  I(VDDA+VDDV) 58.02 mA  I(VDD digital) 1.013 mA
+                 pp: VSS analog 32.56 mV  VSS digital 38.12 mV  VDDA 48.56 mV  VDDV 43.70 mV  VDD digital 33.26 mV
+  3.20-4.20 us: vctrl 2.1386 V (pp 76.06 mV)  CLKOUT pad 16.3682 MHz  IF tone I 32.89 mV Q 130.74 mV  rest pp I 940.15 mV Q 1702.35 mV  I(VDDA+VDDV) 58.02 mA  I(VDD digital) 1.301 mA
+                 pp: VSS analog 77.52 mV  VSS digital 93.71 mV  VDDA 109.08 mV  VDDV 117.16 mV  VDD digital 97.30 mV
+== pex_c30 minus pex_open (common grid 20 ps, up to 4.20 us)
+  ifI     1.00-2.00 us: rms 72.5505 mV pp 328.4648 mV  3.20-4.20 us: rms 238.9862 mV pp 1172.1366 mV
+  ifQ     1.00-2.00 us: rms 79.9106 mV pp 318.9679 mV  3.20-4.20 us: rms 303.1502 mV pp 1510.7799 mV
+  mixI    1.00-2.00 us: rms 1.4538 mV pp 27.0469 mV  3.20-4.20 us: rms 1.6625 mV pp 33.2190 mV
+  mixQ    1.00-2.00 us: rms 1.6683 mV pp 26.6264 mV  3.20-4.20 us: rms 2.0147 mV pp 38.9107 mV
+  vctrl   1.00-2.00 us: rms 1.3047 mV pp 46.3863 mV  3.20-4.20 us: rms 1.3074 mV pp 55.5814 mV
+  vssa    1.00-2.00 us: rms 1.3158 mV pp 46.7741 mV  3.20-4.20 us: rms 1.3185 mV pp 55.9820 mV
+  vdda    1.00-2.00 us: rms 2.6543 mV pp 46.4287 mV  3.20-4.20 us: rms 2.5824 mV pp 66.2193 mV
+== pex_c30 minus sdo_c30 (common grid 20 ps, up to 4.20 us)
+  ifI     1.00-2.00 us: rms 98.4285 mV pp 542.1995 mV  3.20-4.20 us: rms 358.1278 mV pp 1516.7367 mV
+  ifQ     1.00-2.00 us: rms 101.2723 mV pp 482.1599 mV  3.20-4.20 us: rms 505.6747 mV pp 2392.6323 mV
+  mixI    1.00-2.00 us: rms 4.4585 mV pp 40.4337 mV  3.20-4.20 us: rms 4.7868 mV pp 46.7773 mV
+  mixQ    1.00-2.00 us: rms 2.8522 mV pp 25.3284 mV  3.20-4.20 us: rms 4.4988 mV pp 56.6225 mV
+  vctrl   1.00-2.00 us: rms 9.2523 mV pp 74.0624 mV  3.20-4.20 us: rms 3.4110 mV pp 92.4418 mV
+  vssa    1.00-2.00 us: rms 2.3236 mV pp 42.2685 mV  3.20-4.20 us: rms 3.3877 mV pp 91.7336 mV
+  vdda    1.00-2.00 us: rms 6.6336 mV pp 68.6879 mV  3.20-4.20 us: rms 11.2786 mV pp 138.2714 mV

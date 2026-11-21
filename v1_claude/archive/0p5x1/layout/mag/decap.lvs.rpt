@@ -1,0 +1,43 @@
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+Flattening unmatched subcell decap_CD5 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_CD6 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_CD0 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_CD1 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_CD2 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_CD3 in circuit decap (0)(1 instance)
+Flattening unmatched subcell decap_CD4 in circuit decap (0)(1 instance)
+
+Class decap (0):  Merged 2526 parallel devices.
+Class decap (1):  Merged 6 parallel devices.
+Subcircuit summary:
+Circuit 1: decap                           |Circuit 2: decap                           
+-------------------------------------------|-------------------------------------------
+cap_mim_2f0_m4m5_noshield (2527->1)        |cap_mim_2f0_m4m5_noshield (2527->1)        
+Number of devices: 1                       |Number of devices: 1                       
+Number of nets: 2                          |Number of nets: 2                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: decap                           |Circuit 2: decap                           
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes decap and decap are equivalent.
+
+Final result: Circuits match uniquely.
+.

@@ -1,0 +1,16 @@
+== adc_sch
+RES vth_sign=0.00084264 vth_mag_lo=-0.155559 vth_mag_hi=0.162133
+RES ladder thp=1.28272 thm=1.20415 thn=1.12558
+RES iavg=-0.000510656
+== adc_pex
+RES vth_sign=0.005762 vth_mag_lo=-0.150636 vth_mag_hi=0.157285
+RES ladder thp= thm= thn=
+RES iavg=-0.000509853
+Error: measure  thp  avg(TRIG) : no such vector as 'v(xa.xpex.thp)'
+Error: measure  thm  avg(TRIG) : no such vector as 'v(xa.xpex.thm)'
+Error: measure  thn  avg(TRIG) : no such vector as 'v(xa.xpex.thn)'
+Error: &thp: no such variable.
+Error: &thm: no such variable.
+Error: &thn: no such variable.
+== afc_sch  out 0.0000 .. 2.9810 V  LSB 11.690 mV  fit 11.690 mV/code + 0.0002 V  INL -0.00/+0.03  DNL -0.01/+0.01 LSB  monotonic True
+== afc_pex  out -0.0003 .. 2.9773 V  LSB 11.677 mV  fit 11.686 mV/code + -0.0011 V  INL -0.13/+0.20  DNL -0.01/+0.33 LSB  monotonic True

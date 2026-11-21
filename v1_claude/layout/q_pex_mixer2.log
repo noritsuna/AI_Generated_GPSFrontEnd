@@ -1,0 +1,4 @@
+mix_sch RES vin_pp=0.003884 ipp=0.0182506 qpp=0.0180002 ti=7.73577E-08 tq=1.38519E-08
+mix_pex RES vin_pp=0.00820177 ipp=0.0614881 qpp=0.054276 ti=1.311E-09 tq= Error: measure  tq  when(WHEN) : out of interval Error: &tq: no such variable.
+mix_sch vrf=1.91mV  I=8.54mV Q=8.56mV  CG_I=13.01dB CG_Q=13.03dB  dphi=-90.2deg
+mix_pex vrf=1.89mV  I=7.42mV Q=7.65mV  CG_I=11.90dB CG_Q=12.17dB  dphi=-96.8deg

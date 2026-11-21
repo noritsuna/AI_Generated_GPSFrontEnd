@@ -1,0 +1,20 @@
+device                                        layout      schematic    diff %   fingers / pieces (layout, schematic)
+cap_mim_2f0_m4m5_noshield    area          223758.03      223758.03    -0.000   698, 698
+nfet_03v3                    L 0.28          4446.00        4446.00    +0.000   1070, 1070
+nfet_03v3                    L 0.50            20.00          20.00    +0.000   4, 4
+nfet_03v3                    L 1.00            91.00          91.00    +0.000   14, 14
+nfet_03v3                    L 2.00          7931.84        7931.84    +0.000   808, 808
+nfet_03v3                    L 5.00          6240.00        6240.00    +0.000   208, 208
+pfet_03v3                    L 0.28          3033.00        3033.00    +0.000   771, 771
+pfet_03v3                    L 0.56          4240.00        4240.00    +0.000   848, 848
+pfet_03v3                    L 1.00            80.00          80.00    +0.000   12, 12
+pfet_03v3                    L 2.00          5928.00        5928.00    +0.000   615, 615
+pfet_03v3                    L 20.00            1.00           1.00    +0.000   1, 1
+ppolyf_u_1k                  W 1.00          3750.27        3750.20    +0.002   427, 115
+ppolyf_u_1k                  W 10.00           13.54          13.54    +0.007   22, 10
+ppolyf_u_1k                  W 10.60            0.38           0.38    +0.000   4, 4
+ppolyf_u_1k                  W 2.00           303.05         303.05    -0.000   86, 45
+ppolyf_u_1k                  W 30.00            0.07           0.07    +0.000   1, 1
+ppolyf_u_1k                  W 4.00             5.00           5.00    +0.000   4, 4
+units: FET total width um, resistor total squares (series pieces of one resistor add), MIM total area um2
+groups differing by more than 0.5 %: 0

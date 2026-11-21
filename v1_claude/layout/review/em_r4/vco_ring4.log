@@ -1,0 +1,52 @@
+== VR_B00 (klayout net $9): MPD_MPO_MPB0_MPB1:sd +3.50 mA / 1280 contacts = 0.003 mA each; vco_core:sd -3.40 mA / 752 contacts = 0.005 mA each; nand2:sd -0.05 mA / 40 contacts = 0.001 mA each; nor2:sd -0.05 mA / 40 contacts = 0.001 mA each
+   M1: 0.20 mA/um over a 0.1 um wide wire (0.02 mA) at 503.6,202.9 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 1.13 mA/um over a 3.1 um wide wire (3.49 mA) at 112.5,69.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] over the 110 C limit
+   M3: 1.94 mA/um over a 1.5 um wide wire (2.91 mA) at 100.8,14.9 um  [limit 2.09 at 85 C / 1.00 at 110 C] over the 110 C limit
+   M4: 0.77 mA/um over a 3.0 um wide wire (2.31 mA) at 503.5,209.2 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M5: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 4.50 at 85 C / 2.20 at 110 C] OK
+   V1: 1966 vias, max 0.041 mA per via at 452.0,202.9 um  [limit 0.58 / 0.28] OK
+   V2: 854 vias, max 0.216 mA per via at 102.1,15.3 um  [limit 0.58 / 0.28] OK
+   V3: 2195 vias, max 0.212 mA per via at 101.8,13.4 um  [limit 0.58 / 0.28] OK
+   V4: 114 vias, max 0.000 mA per via at 111.5,160.9 um  [limit 0.58 / 0.28] OK
+== VR_B11 (klayout net $9): MPD_MPO_MPB0_MPB1:sd +1.10 mA / 1280 contacts = 0.001 mA each; MSB0:sd +0.80 mA / 480 contacts = 0.002 mA each; MSB1:sd +1.60 mA / 960 contacts = 0.002 mA each; vco_core:sd -3.40 mA / 752 contacts = 0.005 mA each; nand2:sd -0.05 mA / 40 contacts = 0.001 mA each; nor2:sd -0.05 mA / 40 contacts = 0.001 mA each
+   M1: 0.20 mA/um over a 0.1 um wide wire (0.02 mA) at 503.6,202.9 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.35 mA/um over a 3.1 um wide wire (1.09 mA) at 112.5,69.1 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 1.13 mA/um over a 3.0 um wide wire (3.40 mA) at 506.0,187.4 um  [limit 2.09 at 85 C / 1.00 at 110 C] over the 110 C limit
+   M4: 0.77 mA/um over a 3.0 um wide wire (2.31 mA) at 503.5,209.2 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M5: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 4.50 at 85 C / 2.20 at 110 C] OK
+   V1: 1966 vias, max 0.041 mA per via at 452.0,202.9 um  [limit 0.58 / 0.28] OK
+   V2: 854 vias, max 0.080 mA per via at 503.0,206.6 um  [limit 0.58 / 0.28] OK
+   V3: 2195 vias, max 0.114 mA per via at 506.2,209.4 um  [limit 0.58 / 0.28] OK
+   V4: 114 vias, max 0.000 mA per via at 111.5,160.9 um  [limit 0.58 / 0.28] OK
+== nb1 (klayout net $7): MPD_MPO_MPB0_MPB1:sd +1.60 mA / 1920 contacts = 0.001 mA each; MSB1:sd -1.60 mA / 1020 contacts = 0.002 mA each
+   M1: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 1.13 mA/um over a 0.4 um wide wire (0.45 mA) at 276.4,7.5 um  [limit 2.09 at 85 C / 1.00 at 110 C] over the 110 C limit
+   M3: 0.64 mA/um over a 2.5 um wide wire (1.60 mA) at 282.6,14.6 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.67 mA/um over a 2.4 um wide wire (1.60 mA) at 510.0,14.5 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 396 vias, max 0.008 mA per via at 8.2,7.6 um  [limit 0.58 / 0.28] OK
+   V2: 70 vias, max 0.166 mA per via at 282.8,14.6 um  [limit 0.58 / 0.28] OK
+   V3: 32 vias, max 0.114 mA per via at 284.8,14.8 um  [limit 0.58 / 0.28] OK
+== nb0 (klayout net $8): MPD_MPO_MPB0_MPB1:sd +0.80 mA / 960 contacts = 0.001 mA each; MSB0:sd -0.80 mA / 520 contacts = 0.002 mA each
+   M1: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.77 mA/um over a 0.4 um wide wire (0.31 mA) at 152.0,8.9 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.44 mA/um over a 1.8 um wide wire (0.80 mA) at 144.7,8.9 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.47 mA/um over a 1.7 um wide wire (0.80 mA) at 477.8,7.5 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 200 vias, max 0.008 mA per via at 389.7,9.0 um  [limit 0.58 / 0.28] OK
+   V2: 30 vias, max 0.137 mA per via at 146.1,9.0 um  [limit 0.58 / 0.28] OK
+   V3: 33 vias, max 0.094 mA per via at 146.1,8.9 um  [limit 0.58 / 0.28] OK
+== VDD (klayout net $6): M4 rails 0 V; MPD_MPO_MPB0_MPB1:sd -3.60 mA / 4260 contacts = 0.001 mA each
+   M1: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 2450 vias, max 0.011 mA per via at 5.5,14.0 um  [limit 0.58 / 0.28] OK
+   V2: 304 vias, max 0.015 mA per via at 250.5,7.0 um  [limit 0.58 / 0.28] OK
+   V3: 985 vias, max 0.007 mA per via at 250.5,50.0 um  [limit 0.58 / 0.28] OK
+== VSS (klayout net $5): M4 rails 0 V; vco_core:sd +3.40 mA / 688 contacts = 0.005 mA each; nand2:sd +0.05 mA / 20 contacts = 0.003 mA each; nor2:sd +0.05 mA / 20 contacts = 0.003 mA each
+   M1: 0.59 mA/um over a 0.4 um wide wire (0.24 mA) at 357.8,158.4 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M2: 0.42 mA/um over a 0.1 um wide wire (0.04 mA) at 357.9,160.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M3: 0.29 mA/um over a 0.1 um wide wire (0.03 mA) at 358.4,158.3 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   M4: 0.00 mA/um over a 0.0 um wide wire (0.00 mA) at 0.0,0.0 um  [limit 2.09 at 85 C / 1.00 at 110 C] OK
+   V1: 1745 vias, max 0.120 mA per via at 449.3,160.0 um  [limit 0.58 / 0.28] OK
+   V2: 272 vias, max 0.120 mA per via at 358.5,158.3 um  [limit 0.58 / 0.28] OK
+   V3: 2644 vias, max 0.027 mA per via at 358.5,155.3 um  [limit 0.58 / 0.28] OK

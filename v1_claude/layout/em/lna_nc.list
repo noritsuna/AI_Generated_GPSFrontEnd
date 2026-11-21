@@ -1,0 +1,9 @@
+net $12    M1:tap x148  M1R:tap x74  M2:tap x204  M2R:tap x66  MP1_MP2:sd x408  MP1_MP2:tap x346  R10u_0:poly x21  R15u_0:poly x32
+net $1     M1:tap x124  M1R:tap x50  M2:sd x340  M2:tap x182  M2R:sd x16  M2R:tap x42  R10u_0:poly x21  R10u_0:tap x128  R15u_0:tap x94  R1u_0:poly x2  R1u_0:tap x82
+net $8     M2:sd x320  R15u_0:poly x32
+net $3     M1:poly x40  M1R:poly x2  M1R:sd x13  MP1_MP2:sd x204
+net $4     M2R:poly x2  M2R:sd x8  MP1_MP2:sd x170  R1u_0:poly x2
+net $5     M1:sd x130  R10u_0:poly x21
+net $11    M1:sd x120  R10u_0:poly x21
+net $2     M2:poly x108  R1u_0:poly x2
+net $9     M1R:sd x26  R1u_0:poly x2

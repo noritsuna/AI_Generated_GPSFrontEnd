@@ -1,0 +1,89 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< nwell >>
+rect -648 -188 2744 1219
+<< pdiff >>
+rect 0 60 2096 860
+<< nsubdiff >>
+rect -624 -164 2720 -60
+rect -624 1091 2720 1195
+rect -624 -60 -520 1091
+rect 2616 -60 2720 1091
+<< pmos >>
+rect 89 60 489 860
+rect 595 60 995 860
+rect 1101 60 1501 860
+rect 1607 60 2007 860
+<< polysilicon >>
+rect 89 860 489 929
+rect 595 860 995 929
+rect 1101 860 1501 929
+rect 1607 860 2007 929
+rect 69 929 2027 1031
+rect 89 0 489 60
+rect 595 0 995 60
+rect 1101 0 1501 60
+rect 1607 0 2007 60
+rect -460 0 -60 920
+rect 2156 0 2556 920
+<< pdiffc >>
+rect 13 73 59 847
+rect 519 73 565 847
+rect 1025 73 1071 847
+rect 1531 73 1577 847
+rect 2037 73 2083 847
+<< nsubdiffcont >>
+rect -611 -140 -533 1171
+rect 2629 -140 2707 1171
+rect -473 1104 2569 1182
+rect -473 -151 2569 -73
+<< polycontact >>
+rect 82 942 2014 1018
+<< metal1 >>
+rect 13 62 59 858
+rect 519 62 565 858
+rect 1025 62 1071 858
+rect 1531 62 1577 858
+rect 2037 62 2083 858
+rect -2 238 74 322
+rect 1010 238 1086 322
+rect 2022 238 2098 322
+rect 504 378 580 462
+rect 1516 518 1592 602
+rect 71 942 2025 1018
+rect -611 -151 2707 -73
+rect -611 1104 2707 1182
+rect -611 -151 -533 1182
+rect 2629 -151 2707 1182
+rect -611 -151 2707 -73
+rect -611 1104 2707 1182
+<< metal2 >>
+rect 504 378 580 462
+rect 1516 518 1592 602
+rect 82 942 2014 1018
+rect -611 -151 2707 -73
+rect -611 1104 2707 1182
+rect -611 238 2707 322
+<< via1 >>
+rect 10 250 62 310
+rect 1022 250 1074 310
+rect 2034 250 2086 310
+rect 516 390 568 450
+rect 1528 530 1580 590
+rect 94 954 2002 1006
+rect -599 -139 2695 -85
+rect -599 1116 2695 1170
+rect -598 250 -546 310
+rect 2642 250 2694 310
+<< labels >>
+flabel metal2 s 504 378 580 462 0 FreeSans 80 0 0 0 x
+port 1 nsew signal bidirectional
+flabel metal2 s 1516 518 1592 602 0 FreeSans 80 0 0 0 OUT
+port 2 nsew signal bidirectional
+flabel metal2 s 82 942 2014 1018 0 FreeSans 80 0 0 0 x
+port 1 nsew signal bidirectional
+flabel metal2 s -611 -151 2707 -73 0 FreeSans 80 0 0 0 VDD
+port 3 nsew signal bidirectional
+<< end >>

@@ -1,0 +1,133 @@
+.subckt divbuf IN OUT VDD VSS
+XCIN IN a cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=6
+XRF b a VSS ppolyf_u_1k r_width=1u r_length=20u
+XMN1 b a VSS VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XMP1 b a VDD VDD pfet_03v3 L=0.28u W=8u nf=1  m=1
+XMN2 OUT b VSS VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XMP2 OUT b VDD VDD pfet_03v3 L=0.28u W=8u nf=1  m=1
+.ends
+.subckt nor2 A B Y VDD VSS
+XMN1 Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMN2 Y B VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP1 n1 A VDD VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+XMP2 Y B n1 VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+.ends
+.subckt div3 CK Q VDD VSS
+XF1 d1 CK Q q1b VDD VSS tspc_dff
+XF2 Q CK q2 q2b VDD VSS tspc_dff
+XN Q q2 d1 VDD VSS nor2
+.ends
+.subckt tspc_dff D CK Q QB VDD VSS
+XMP1 a1 D VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 x CK a1 VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN1 x D VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP3 y CK VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN2 y x b2 VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMN3 b2 CK VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMP4 QB y VDD VDD pfet_03v3 L=0.28u W=3u nf=1  m=1
+XMN4 QB CK c3 VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMN5 c3 y VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMP5 Q QB VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN6 Q QB VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+.ends
+.subckt div2 CK Q QB VDD VSS
+XF QB CK Q QB VDD VSS tspc_dff
+.ends
+.subckt inv_lo1 A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=4u nf=1  m=1
+.ends
+.subckt inv_lo2 A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=6u nf=2  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=12u nf=4  m=1
+.ends
+.subckt div48 CK FS FB VDD VSS
+XD1 CK c2 c2b VDD VSS div2
+XD2 c2 c4 c4b VDD VSS div2
+XD3 c4 c8 c8b VDD VSS div2
+XD5 c8 c24 VDD VSS div3
+XD6 c24 FB c48b VDD VSS div2
+XFB1 FB fbi VDD VSS inv_lo1
+XFB2 fbi FS VDD VSS inv_lo2
+.ends
+.subckt nand3 A B C Y VDD VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=3u nf=1  m=1
+XMN2 n1 B n2 VSS nfet_03v3 L=0.28u W=3u nf=1  m=1
+XMN3 n2 C VSS VSS nfet_03v3 L=0.28u W=3u nf=1  m=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP3 Y C VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt dff_r CK RB Q VDD VSS
+X1 n4 n2 n1 VDD VSS nand2
+X2 n1 CK RB n2 VDD VSS nand3
+X3 n2 CK n4 n3 VDD VSS nand3
+X4 n3 RB n4 VDD VSS nand2
+X5 n2 qb Q VDD VSS nand2
+X6 Q n3 RB qb VDD VSS nand3
+.ends
+.subckt nand2 A B Y VDD VSS
+XMN1 Y A n1 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN2 n1 B VSS VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt pfd REF FB UP UPB DN DNB VDD VSS
+XU REF rb UP VDD VSS dff_r
+XD FB rb DN VDD VSS dff_r
+XR UP DN r0 VDD VSS nand2
+XD1 r0 r1 VDD VSS inv_dig
+XD2 r1 r2 VDD VSS inv_dig
+XD3 r2 r3 VDD VSS inv_dig
+XD4 r3 rb VDD VSS inv_dig
+XO1 UP UPB VDD VSS inv_dig
+XO2 DN DNB VDD VSS inv_dig
+.ends
+.subckt inv_dig A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt cp UPB DN DNB PB NB HI OUT VDD VSS
+XUD UPB upd VDD VSS inv_dig
+XMPC pc PB VDD VDD pfet_03v3 L=2u W=32u nf=4  m=4
+XMPS OUT UPB pc VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMPD vd upd pc VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMNS OUT DN nc VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMND vd DNB nc VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMNC nc NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=4
+XHI HI hib VDD VSS inv_dig
+XMPC2 pc2 PB VDD VDD pfet_03v3 L=2u W=32u nf=4  m=4
+XMPE2 pe2 hib pc2 VDD pfet_03v3 L=0.28u W=24u nf=4  m=1
+XMPS2 OUT UPB pe2 VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMPD2 vd upd pe2 VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMNS2 OUT DN ne2 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMND2 vd DNB ne2 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMNE2 ne2 HI nc2 VSS nfet_03v3 L=0.28u W=4u nf=2  m=1
+XMNC2 nc2 NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=4
+XMBT bt NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=1
+XMB1 b1 OUT bt VSS nfet_03v3 L=1u W=8u nf=2  m=1
+XMB2 vd vd bt VSS nfet_03v3 L=1u W=8u nf=2  m=1
+XMBL1 b1 b1 VDD VDD pfet_03v3 L=1u W=8u nf=2  m=1
+XMBL2 vd b1 VDD VDD pfet_03v3 L=1u W=8u nf=2  m=1
+XCVD vd VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=41
+.ends
+.subckt loop_filter VC VT VSS
+XRZ z VC VSS ppolyf_u_1k r_width=1u r_length=5u
+XC1 z VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=2372
+XC2 VC VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=196
+XRVT VT VC VSS ppolyf_u_1k r_width=2u r_length=2u
+XC3 VT VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=30
+.ends
+.subckt pll_core REFCK LO NB PB ICP2 VCTRL FS FB VDD VSS
+XDB LO ck VDD VSS divbuf
+XDIV ck FS FB VDD VSS div48
+XRREF refck_i REFCK VSS ppolyf_u_1k r_width=2u r_length=2u
+XMCLN refck_i tlo VSS VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMCLP refck_i thi VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMTX tx tx VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMTHI thi tx VDD VDD pfet_03v3 L=0.28u W=1u nf=1  m=1
+XMTLO tlo thi VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XPFD refck_i FB up upb dn dnb VDD VSS pfd
+XCP upb dn dnb PB NB ICP2 vcp VDD VSS cp
+XLF vcp VCTRL VSS loop_filter
+.ends

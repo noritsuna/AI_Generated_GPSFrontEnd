@@ -1,0 +1,57 @@
+* NGSPICE file created from vco_cellk.ext - technology: gf180mcuD
+
+.subckt vco_cellk_MK ON FK VSS
+X0 VSS FK ON VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 ON FK VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_cellk_MP3 ON OP VR
+X0 ON OP VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_cellk_MP4 OP ON VR
+X0 OP ON VR VR pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt vco_cellk_MN3 ON OP VSS
+X0 ON OP VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt vco_cellk_MN4 OP ON VSS
+X0 OP ON VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt vco_cellk_MN1_MN2 ON OP IP IN VSS
+X0 VSS IN OP VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 ON IP VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+X2 OP IN VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+X3 VSS IP ON VSS nfet_03v3 ad=1.06p pd=4.53u as=1.06p ps=4.53u w=4u l=0.28u
+.ends
+
+.subckt vco_cellk_MP1_MP2 ON OP IP IN VR
+X0 VR IP ON VR pfet_03v3 ad=1.335p pd=6.89u as=0.795p ps=3.53u w=3u l=0.28u
+X1 VR IN OP VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X2 ON IP VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X3 VR IN OP VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X4 ON IP VR VR pfet_03v3 ad=0.795p pd=3.53u as=1.335p ps=6.89u w=3u l=0.28u
+X5 OP IN VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X6 VR IP ON VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+X7 OP IN VR VR pfet_03v3 ad=0.795p pd=3.53u as=0.795p ps=3.53u w=3u l=0.28u
+.ends
+
+.subckt vco_cellk_MKD OP VSS
+X0 VSS VSS OP VSS nfet_03v3 ad=1.78p pd=8.89u as=1.06p ps=4.53u w=4u l=0.28u
+X1 OP VSS VSS VSS nfet_03v3 ad=1.06p pd=4.53u as=1.78p ps=8.89u w=4u l=0.28u
+.ends
+
+.subckt vco_cellk VSS VR IP IN FK OP ON
+XXMK ON FK VSS vco_cellk_MK
+XXMP3 ON OP VR vco_cellk_MP3
+XXMP4 OP ON VR vco_cellk_MP4
+XXMN3 ON OP VSS vco_cellk_MN3
+XXMN4 OP ON VSS vco_cellk_MN4
+XXMN1_MN2 ON OP IP IN VSS vco_cellk_MN1_MN2
+XXMP1_MP2 ON OP IP IN VR vco_cellk_MP1_MP2
+XXMKD OP VSS vco_cellk_MKD
+.ends
+

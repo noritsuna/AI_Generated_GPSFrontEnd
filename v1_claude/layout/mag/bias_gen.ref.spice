@@ -1,0 +1,16 @@
+.subckt bias_gen NB PB VDD VSS
+XMN1 nbc nbc VSS VSS nfet_03v3 L=2u W=4u nf=1  m=1
+XMN2 pbc nbc nr VSS nfet_03v3 L=2u W=16u nf=2  m=1
+XRB VSS nr VSS ppolyf_u_1k r_width=1u r_length=4.6u
+XMP1 nbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1  m=1
+XMP2 pbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1  m=1
+XMSP st VSS VDD VDD pfet_03v3 L=20u W=1u nf=1  m=1
+XMSN st nbc VSS VSS nfet_03v3 L=1u W=2u nf=1  m=1
+XMSU pbc st VSS VSS nfet_03v3 L=1u W=1u nf=1  m=1
+XMP3 NB pbc VDD VDD pfet_03v3 L=2u W=8u nf=1  m=1
+XMN3 NB NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=1
+XMN4 PB nbc VSS VSS nfet_03v3 L=2u W=4u nf=1  m=1
+XMP4 PB PB VDD VDD pfet_03v3 L=2u W=32u nf=4  m=1
+XCNB NB VSS cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6 m=1
+XCPB VDD PB cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6 m=1
+.ends

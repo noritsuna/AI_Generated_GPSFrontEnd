@@ -1,0 +1,92 @@
+* NGSPICE file created from pfd.ext - technology: gf180mcuD
+
+.subckt inv_dig_MN Y A VSS
+X0 Y A VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt inv_dig_MP Y A VDD
+X0 Y A VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt inv_dig VDD A Y VSS
+XXMN Y A VSS inv_dig_MN
+XXMP Y A VDD inv_dig_MP
+.ends
+
+.subckt nand2_MP1 Y A VDD
+X0 Y A VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2_MP2 Y B VDD
+X0 Y B VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2_MN1 n1 Y A VSS
+X0 Y A n1 VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2_MN2 n1 B VSS
+X0 n1 B VSS VSS nfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand2 VDD A B Y VSS
+XXMP1 Y A VDD nand2_MP1
+XXMP2 Y B VDD nand2_MP2
+XXMN1 XMN2/n1 Y A VSS nand2_MN1
+XXMN2 XMN2/n1 B VSS nand2_MN2
+.ends
+
+.subckt nand3_MP1 Y A VDD
+X0 Y A VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand3_MP2 Y B VDD
+X0 Y B VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand3_MP3 Y C VDD
+X0 Y C VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt nand3_MN1 n1 Y A VSS
+X0 Y A n1 VSS nfet_03v3 ad=1.335p pd=6.89u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt nand3_MN2 n2 n1 B VSS
+X0 n1 B n2 VSS nfet_03v3 ad=1.335p pd=6.89u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt nand3_MN3 n2 C VSS
+X0 n2 C VSS VSS nfet_03v3 ad=1.335p pd=6.89u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt nand3 VDD A B C Y VSS
+XXMP1 Y A VDD nand3_MP1
+XXMP2 Y B VDD nand3_MP2
+XXMP3 Y C VDD nand3_MP3
+XXMN1 XMN2/n1 Y A VSS nand3_MN1
+XXMN2 XMN3/n2 XMN2/n1 B VSS nand3_MN2
+XXMN3 XMN3/n2 C VSS nand3_MN3
+.ends
+
+.subckt dff_r VDD CK RB Q VSS
+XX4 VDD X6/B RB X4/Y VSS nand2
+XX5 VDD X5/A X6/Y Q VSS nand2
+XX6 VDD Q X6/B RB X6/Y VSS nand3
+XX1 VDD X4/Y X5/A X2/A VSS nand2
+XX2 VDD X2/A CK RB X5/A VSS nand3
+XX3 VDD X5/A CK X4/Y X6/B VSS nand3
+.ends
+
+.subckt pfd VSS VDD REF FB UP UPB DN DNB
+XXO2 VDD DN DNB VSS inv_dig
+XXO1 VDD UP UPB VSS inv_dig
+XXD VDD FB XU/RB DN VSS dff_r
+XXD1 VDD XR/Y XD2/A VSS inv_dig
+XXD2 VDD XD2/A XD3/A VSS inv_dig
+XXD3 VDD XD3/A XD4/A VSS inv_dig
+XXD4 VDD XD4/A XU/RB VSS inv_dig
+XXR VDD UP DN XR/Y VSS nand2
+XXU VDD REF XU/RB UP VSS dff_r
+.ends
+

@@ -1,0 +1,60 @@
+* NGSPICE file created from tspc_dff.ext - technology: gf180mcuD
+
+.subckt tspc_dff_MP1 a1 D VDD
+X0 a1 D VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt tspc_dff_MP2 a1 x CK VDD
+X0 x CK a1 VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt tspc_dff_MN1 x D VSS
+X0 x D VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt tspc_dff_MP3 y CK VDD
+X0 y CK VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt tspc_dff_MP4 QB y VDD
+X0 QB y VDD VDD pfet_03v3 ad=1.335p pd=6.89u as=1.335p ps=6.89u w=3u l=0.28u
+.ends
+
+.subckt tspc_dff_MN2 b2 y x VSS
+X0 y x b2 VSS nfet_03v3 ad=0.6675p pd=3.89u as=0.6675p ps=3.89u w=1.5u l=0.28u
+.ends
+
+.subckt tspc_dff_MP5 Q QB VDD
+X0 Q QB VDD VDD pfet_03v3 ad=0.89p pd=4.89u as=0.89p ps=4.89u w=2u l=0.28u
+.ends
+
+.subckt tspc_dff_MN3 b2 CK VSS
+X0 b2 CK VSS VSS nfet_03v3 ad=0.6675p pd=3.89u as=0.6675p ps=3.89u w=1.5u l=0.28u
+.ends
+
+.subckt tspc_dff_MN4 c3 QB CK VSS
+X0 QB CK c3 VSS nfet_03v3 ad=0.6675p pd=3.89u as=0.6675p ps=3.89u w=1.5u l=0.28u
+.ends
+
+.subckt tspc_dff_MN5 c3 y VSS
+X0 c3 y VSS VSS nfet_03v3 ad=0.6675p pd=3.89u as=0.6675p ps=3.89u w=1.5u l=0.28u
+.ends
+
+.subckt tspc_dff_MN6 Q QB VSS
+X0 Q QB VSS VSS nfet_03v3 ad=0.445p pd=2.89u as=0.445p ps=2.89u w=1u l=0.28u
+.ends
+
+.subckt tspc_dff VSS VDD D CK Q QB
+XXMP1 XMP2/a1 D VDD tspc_dff_MP1
+XXMP2 XMP2/a1 XMP2/x CK VDD tspc_dff_MP2
+XXMN1 XMP2/x D VSS tspc_dff_MN1
+XXMP3 XMP4/y CK VDD tspc_dff_MP3
+XXMP4 QB XMP4/y VDD tspc_dff_MP4
+XXMN2 XMN3/b2 XMP4/y XMP2/x VSS tspc_dff_MN2
+XXMP5 Q QB VDD tspc_dff_MP5
+XXMN3 XMN3/b2 CK VSS tspc_dff_MN3
+XXMN4 XMN5/c3 QB CK VSS tspc_dff_MN4
+XXMN5 XMN5/c3 XMP4/y VSS tspc_dff_MN5
+XXMN6 Q QB VSS tspc_dff_MN6
+.ends
+

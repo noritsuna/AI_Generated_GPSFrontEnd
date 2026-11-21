@@ -1,0 +1,21 @@
+   mixer output noise, frozen LO: 41.1 nV/rtHz with the Gm / tail 1/f noise, 17.3 nV/rtHz without
+== tt: LNA gain (EMF/2 -> diff) 13.79 dB at 1575 MHz, LNA NF alone 2.20 dB; mixer conversion gain |c2| I 15.01 dB, Q 15.01 dB (RF port -> IF: 28.80 dB)
+   mixer own output noise 17.3 nV/rtHz (I, 4.092 MHz) = 1.91 x the wanted-sideband source noise
+     n= 2 ( 1571.3 MHz): |c_n|/|c_2|    0.0 dB, LNA output noise there  2.88 nV/rtHz, folded noise 3.332 x source
+     n= 6 ( 4714.0 MHz): |c_n|/|c_2|   -9.9 dB, LNA output noise there  1.74 nV/rtHz, folded noise 0.123 x source
+     n=10 ( 7856.6 MHz): |c_n|/|c_2|  -15.2 dB, LNA output noise there  1.21 nV/rtHz, folded noise 0.018 x source
+   NF of the chip: one channel alone (both sidebands of every harmonic fold) 7.32 dB; complex I/Q (one sideband per harmonic) 5.62 dB; mixer-only NF referred to its input (source = LNA output noise) -> mixer adds 3.42 dB to the LNA NF
+   mixer output noise, frozen LO: 39.6 nV/rtHz with the Gm / tail 1/f noise, 18.9 nV/rtHz without
+== ss: LNA gain (EMF/2 -> diff) 13.30 dB at 1575 MHz, LNA NF alone 3.13 dB; mixer conversion gain |c2| I 14.06 dB, Q 14.06 dB (RF port -> IF: 27.37 dB)
+   mixer own output noise 18.9 nV/rtHz (I, 4.092 MHz) = 3.17 x the wanted-sideband source noise
+     n= 2 ( 1571.3 MHz): |c_n|/|c_2|    0.0 dB, LNA output noise there  3.03 nV/rtHz, folded noise 4.131 x source
+     n= 6 ( 4714.0 MHz): |c_n|/|c_2|  -10.2 dB, LNA output noise there  1.72 nV/rtHz, folded noise 0.127 x source
+     n=10 ( 7856.6 MHz): |c_n|/|c_2|  -16.1 dB, LNA output noise there  1.19 nV/rtHz, folded noise 0.016 x source
+   NF of the chip: one channel alone (both sidebands of every harmonic fold) 8.73 dB; complex I/Q (one sideband per harmonic) 7.25 dB; mixer-only NF referred to its input (source = LNA output noise) -> mixer adds 4.12 dB to the LNA NF
+   mixer output noise, frozen LO: 39.5 nV/rtHz with the Gm / tail 1/f noise, 15.0 nV/rtHz without
+== ff: LNA gain (EMF/2 -> diff) 13.97 dB at 1575 MHz, LNA NF alone 1.42 dB; mixer conversion gain |c2| I 15.30 dB, Q 15.30 dB (RF port -> IF: 29.27 dB)
+   mixer own output noise 15.0 nV/rtHz (I, 4.092 MHz) = 1.29 x the wanted-sideband source noise
+     n= 2 ( 1571.3 MHz): |c_n|/|c_2|    0.0 dB, LNA output noise there  2.68 nV/rtHz, folded noise 2.779 x source
+     n= 6 ( 4714.0 MHz): |c_n|/|c_2|   -9.8 dB, LNA output noise there  1.76 nV/rtHz, folded noise 0.126 x source
+     n=10 ( 7856.6 MHz): |c_n|/|c_2|  -14.7 dB, LNA output noise there  1.27 nV/rtHz, folded noise 0.021 x source
+   NF of the chip: one channel alone (both sidebands of every harmonic fold) 6.27 dB; complex I/Q (one sideband per harmonic) 4.40 dB; mixer-only NF referred to its input (source = LNA output noise) -> mixer adds 2.99 dB to the LNA NF

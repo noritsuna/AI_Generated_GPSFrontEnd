@@ -1,0 +1,302 @@
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell ppolyf_u_1k and Circuit 2 cell ppolyf_u_1k are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k                     |Circuit 2: ppolyf_u_1k                     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k and ppolyf_u_1k are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+Flattening unmatched subcell vga_MSW in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RDB in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_MDP in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_MT in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RB in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_CCM in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RD in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_CC1 in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_RL in circuit vga (0)(1 instance)
+Flattening unmatched subcell vga_CC2 in circuit vga (0)(1 instance)
+
+Class vga (0):  Merged 102 parallel devices.
+Class vga (0):  Merged 23 series devices.
+Subcircuit summary:
+Circuit 1: vga                             |Circuit 2: vga                             
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (108->6)                         |nfet_03v3 (22->6)                          
+ppolyf_u_1k (32->9)                        |ppolyf_u_1k (9)                            
+cap_mim_2f0_m4m5_noshield (3)              |cap_mim_2f0_m4m5_noshield (3)              
+Number of devices: 18                      |Number of devices: 18                      
+Number of nets: 16                         |Number of nets: 16                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vga                             |Circuit 2: vga                             
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+INP                                        |INP                                        
+INN                                        |INN                                        
+GA                                         |GA                                         
+GB                                         |GB                                         
+OUTP                                       |OUTP                                       
+OUTN                                       |OUTN                                       
+NB                                         |NB                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vga and vga are equivalent.
+Flattening unmatched subcell vga_fix_M1 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_R1u_0 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_M2 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_R1u_1 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_MT1_MT2 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_R10p6u_0 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_CCM in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_R2u_0 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_CC1 in circuit vga_fix (0)(1 instance)
+Flattening unmatched subcell vga_fix_CC2 in circuit vga_fix (0)(1 instance)
+
+Class vga_fix (0):  Merged 92 parallel devices.
+Class vga_fix (0):  Merged 23 series devices.
+Subcircuit summary:
+Circuit 1: vga_fix                         |Circuit 2: vga_fix                         
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (96->4)                          |nfet_03v3 (20->4)                          
+ppolyf_u_1k (30->7)                        |ppolyf_u_1k (7)                            
+cap_mim_2f0_m4m5_noshield (3)              |cap_mim_2f0_m4m5_noshield (3)              
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 12                         |Number of nets: 12                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vga_fix                         |Circuit 2: vga_fix                         
+-------------------------------------------|-------------------------------------------
+INP                                        |INP                                        
+INN                                        |INN                                        
+VSS                                        |VSS                                        
+OUTN                                       |OUTN                                       
+OUTP                                       |OUTP                                       
+NB                                         |NB                                         
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vga_fix and vga_fix are equivalent.
+Flattening unmatched subcell sk_lpf1_MSNP_MSNN in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C2N in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_MFN in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C1N in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C2P in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C1P in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_MFP in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C2WN in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_R1u_0 in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C2WP in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_MIP_MIN in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C2NN in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_MSWP_MSWN in circuit sk_lpf1 (0)(1 instance)
+Flattening unmatched subcell sk_lpf1_C2NP in circuit sk_lpf1 (0)(1 instance)
+
+Class sk_lpf1 (0):  Merged 144 parallel devices.
+Subcircuit summary:
+Circuit 1: sk_lpf1                         |Circuit 2: sk_lpf1                         
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (8->4)                           |nfet_03v3 (4)                              
+cap_mim_2f0_m4m5_noshield (8)              |cap_mim_2f0_m4m5_noshield (8)              
+pfet_03v3 (144->4)                         |pfet_03v3 (34->4)                          
+ppolyf_u_1k (4)                            |ppolyf_u_1k (4)                            
+Number of devices: 20                      |Number of devices: 20                      
+Number of nets: 17                         |Number of nets: 17                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sk_lpf1                         |Circuit 2: sk_lpf1                         
+-------------------------------------------|-------------------------------------------
+INN                                        |INN                                        
+INP                                        |INP                                        
+VDD                                        |VDD                                        
+OUTP                                       |OUTP                                       
+OUTN                                       |OUTN                                       
+VSS                                        |VSS                                        
+TW                                         |TW                                         
+TN                                         |TN                                         
+PB                                         |PB                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sk_lpf1 and sk_lpf1 are equivalent.
+Flattening unmatched subcell sk_lpf2_MSNP_MSNN in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_MFN in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C2N in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C1N in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C2P in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C1P in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_MFP in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C2WN in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_R1u_0 in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C2WP in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_MIP_MIN in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C2NN in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_MSWP_MSWN in circuit sk_lpf2 (0)(1 instance)
+Flattening unmatched subcell sk_lpf2_C2NP in circuit sk_lpf2 (0)(1 instance)
+
+Class sk_lpf2 (0):  Merged 146 parallel devices.
+Subcircuit summary:
+Circuit 1: sk_lpf2                         |Circuit 2: sk_lpf2                         
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (8->4)                           |nfet_03v3 (4)                              
+pfet_03v3 (144->4)                         |pfet_03v3 (34->4)                          
+cap_mim_2f0_m4m5_noshield (10->8)          |cap_mim_2f0_m4m5_noshield (10->8)          
+ppolyf_u_1k (4)                            |ppolyf_u_1k (4)                            
+Number of devices: 20                      |Number of devices: 20                      
+Number of nets: 17                         |Number of nets: 17                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sk_lpf2                         |Circuit 2: sk_lpf2                         
+-------------------------------------------|-------------------------------------------
+INN                                        |INN                                        
+INP                                        |INP                                        
+VDD                                        |VDD                                        
+OUTP                                       |OUTP                                       
+OUTN                                       |OUTN                                       
+VSS                                        |VSS                                        
+TW                                         |TW                                         
+TN                                         |TN                                         
+PB                                         |PB                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sk_lpf2 and sk_lpf2 are equivalent.
+Flattening unmatched subcell bias_if_CPB in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_CNB in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_CC in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_MI1_MI2 in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_MOT_MPP in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_ML1 in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_ML2 in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_MV in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_R1u_0 in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_MND_MNP in circuit bias_if (0)(1 instance)
+Flattening unmatched subcell bias_if_MPD_MPM in circuit bias_if (0)(1 instance)
+
+Class bias_if (0):  Merged 17 parallel devices.
+Class bias_if (0):  Merged 16 series devices.
+Class bias_if (1):  Merged 8 series devices.
+Subcircuit summary:
+Circuit 1: bias_if                         |Circuit 2: bias_if                         
+-------------------------------------------|-------------------------------------------
+cap_mim_2f0_m4m5_noshield (3)              |cap_mim_2f0_m4m5_noshield (3)              
+pfet_03v3 (20->6)                          |pfet_03v3 (6)                              
+nfet_03v3 (8->5)                           |nfet_03v3 (5)                              
+ppolyf_u_1k (19->3)                        |ppolyf_u_1k (11->3)                        
+Number of devices: 17                      |Number of devices: 17                      
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: bias_if                         |Circuit 2: bias_if                         
+-------------------------------------------|-------------------------------------------
+PB                                         |PB                                         
+VSS                                        |VSS                                        
+NBIF                                       |NBIF                                       
+PBIF                                       |PBIF                                       
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes bias_if and bias_if are equivalent.
+
+Subcircuit summary:
+Circuit 1: if_chain                        |Circuit 2: if_chain                        
+-------------------------------------------|-------------------------------------------
+vga (3)                                    |vga (3)                                    
+vga_fix (2)                                |vga_fix (2)                                
+sk_lpf1 (1)                                |sk_lpf1 (1)                                
+sk_lpf2 (1)                                |sk_lpf2 (1)                                
+bias_if (1)                                |bias_if (1)                                
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 29                         |Number of nets: 29                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: if_chain                        |Circuit 2: if_chain                        
+-------------------------------------------|-------------------------------------------
+BWK                                        |BWK                                        
+BWN                                        |BWN                                        
+PB                                         |PB                                         
+INP                                        |INP                                        
+INN                                        |INN                                        
+G1A                                        |G1A                                        
+G1B                                        |G1B                                        
+G3A                                        |G3A                                        
+G2A                                        |G2A                                        
+G3B                                        |G3B                                        
+G2B                                        |G2B                                        
+OUTP                                       |OUTP                                       
+OUTN                                       |OUTN                                       
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes if_chain and if_chain are equivalent.
+
+Final result: Circuits match uniquely.
+.

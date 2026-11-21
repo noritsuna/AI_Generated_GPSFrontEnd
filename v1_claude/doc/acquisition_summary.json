@@ -1,0 +1,34 @@
+{
+ "GPS PRN1 (C/A) unquantised": {
+  "true_apparent_doppler_Hz": 34857.344,
+  "found_doppler_Hz": 35000.0,
+  "peak_to_mean_dB": 11.947929760081513
+ },
+ "Galileo E1 (BOC(1,1)) unquantised": {
+  "true_apparent_doppler_Hz": -43042.656,
+  "found_doppler_Hz": -43000.0,
+  "peak_to_mean_dB": 17.899994856569613
+ },
+ "GPS PRN1 (C/A) 2-bit": {
+  "true_apparent_doppler_Hz": 34857.344,
+  "found_doppler_Hz": 35000.0,
+  "peak_to_mean_dB": 10.92932581698911
+ },
+ "Galileo E1 (BOC(1,1)) 2-bit": {
+  "true_apparent_doppler_Hz": -43042.656,
+  "found_doppler_Hz": -43125.0,
+  "peak_to_mean_dB": 17.504423108769004
+ },
+ "aliasing_loss_GPS_band_dB": 0.141272288522311,
+ "aliasing_loss_Galileo_band_dB": 0.22597377470289803,
+ "link_budget": {
+  "chip_NF_dB": 4.485083366265191,
+  "system_NF_dB": 1.6048436154301577,
+  "NF_degradation_vs_LNA_dB": 0.10484361543015774,
+  "ADC_sigma_V code0 (G1=G2=G3=00)": 0.04907594579491188,
+  "ADC_sigma_V code1 (G1=G2=G3=01)": 0.1646694387921249,
+  "ADC_sigma_V code2 (G1=G2=G3=10)": 0.6217743305724509,
+  "ADC_sigma_V code3 (G1=G2=G3=11)": 0.8848159701141138,
+  "ADC_threshold_V": 0.157
+ }
+}

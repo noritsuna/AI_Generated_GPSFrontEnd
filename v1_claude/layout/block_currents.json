@@ -1,0 +1,42 @@
+{
+ "gnss_bias_gen#1": {
+  "VDD": 0.000205647
+ },
+ "gnss_pll_core#1": {
+  "VDD": 0.000752866
+ },
+ "gnss_lna_nc#1": {
+  "VDD": 0.0164753
+ },
+ "gnss_mixer_iq#1": {
+  "VDD": 0.0041209
+ },
+ "gnss_if_chain#1": {
+  "VDD": 0.00606403
+ },
+ "gnss_if_chain#2": {
+  "VDD": 0.0060618
+ },
+ "gnss_adc2b#1": {
+  "VDD": 0.00051608
+ },
+ "gnss_adc2b#2": {
+  "VDD": 0.000513068
+ },
+ "gnss_inv_lo2#1": {
+  "VDD": 3.07903e-06
+ },
+ "gnss_inv_lo2#2": {
+  "VDD": 8.89444e-05
+ },
+ "gnss_afc_dac#1": {
+  "VDD": 8.63084e-05
+ },
+ "gnss_vco_ring4#1": {
+  "VDDV": 0.00359953
+ },
+ "gnss_refbuf#1": {
+  "VDDV": 0.000201382
+ },
+ "_source": "tb_full schematic, TT, mean supply current 0.3-0.6 us (sim/netlist/q_iblk_tran.spice)"
+}

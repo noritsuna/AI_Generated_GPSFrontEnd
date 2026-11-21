@@ -1,0 +1,79 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 0
+<< nwell >>
+rect -304 -188 700 2339
+<< pdiff >>
+rect 0 299 396 1899
+<< nsubdiff >>
+rect -280 -164 676 -60
+rect -280 2211 676 2315
+rect -280 -60 -176 2211
+rect 572 -60 676 2211
+<< pmos >>
+rect 89 299 145 1899
+rect 251 299 307 1899
+<< polysilicon >>
+rect 89 1899 145 2049
+rect 27 2049 207 2151
+rect 251 191 307 299
+rect 189 89 369 191
+rect 89 239 145 299
+rect 251 1899 307 1959
+rect -116 239 -60 1959
+rect 456 239 512 1959
+<< pdiffc >>
+rect 13 312 59 1886
+rect 175 312 221 1886
+rect 337 312 383 1886
+<< nsubdiffcont >>
+rect -267 -140 -189 2291
+rect 585 -140 663 2291
+rect -129 2224 525 2302
+rect -129 -151 525 -73
+<< polycontact >>
+rect 40 2062 194 2138
+rect 202 102 356 178
+<< metal1 >>
+rect 13 301 59 1897
+rect 175 301 221 1897
+rect 337 301 383 1897
+rect -2 728 74 952
+rect 322 728 398 952
+rect 160 1008 236 1232
+rect 29 2062 205 2138
+rect 191 102 367 178
+rect -267 -151 663 -73
+rect -267 2224 663 2302
+rect -267 -151 -189 2302
+rect 585 -151 663 2302
+rect -267 -151 663 -73
+rect -267 2224 663 2302
+<< metal2 >>
+rect 160 1008 236 1232
+rect 40 2062 194 2138
+rect 202 102 356 178
+rect -267 -151 663 -73
+rect -267 2224 663 2302
+rect -267 728 663 952
+<< via1 >>
+rect 10 740 62 940
+rect 334 740 386 940
+rect 172 1020 224 1220
+rect 52 2074 182 2126
+rect 214 114 344 166
+rect -255 -139 651 -85
+rect -255 2236 651 2290
+rect -254 740 -202 940
+rect 598 740 650 940
+<< labels >>
+flabel metal2 s 160 1008 236 1232 0 FreeSans 80 0 0 0 pmIP
+port 1 nsew signal bidirectional
+flabel metal2 s 40 2062 194 2138 0 FreeSans 80 0 0 0 gp1
+port 2 nsew signal bidirectional
+flabel metal2 s 202 102 356 178 0 FreeSans 80 0 0 0 gn3
+port 3 nsew signal bidirectional
+flabel metal2 s -267 -151 663 -73 0 FreeSans 80 0 0 0 VR
+port 4 nsew signal bidirectional
+<< end >>

@@ -1,0 +1,914 @@
+* Xyce deck generated from tb_full.spice by scripts/to_xyce.py
+.include /home/noritsuna/pdk/gf180mcuD/libs.tech/xyce/design.xyce
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/xyce/sm141064.xyce typical
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/xyce/sm141064.xyce res_typical
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/xyce/sm141064.xyce mimcap_typical
+**.subckt tb_full
+VDD vdd 0 3.3
+VREF refin 0 sin(1.65 0.4 16.368e6)
+VRFP sp0 0 sin(0 11.2u 1575.42e6)
+VRNP sp sp0 pwl file "tb_full_vrnp_noise.csv"
+RSP sp sps 50
+CCP sps rfin 10p
+VSCLK sclk 0 pwl(0 0 2.6e-06 0 2.602e-06 3.3 2.65e-06 3.3 2.652e-06 0 2.7e-06 0 2.702e-06 3.3 2.75e-06 3.3 2.752e-06 0 2.8e-06 0  2.802e-06 3.3 2.85e-06 3.3 2.852e-06 0 2.9e-06 0 2.902e-06 3.3 2.95e-06 3.3 2.952e-06 0 3e-06 0 3.002e-06 3.3 3.05e-06 3.3 3.052e-06 0  3.1e-06 0 3.102e-06 3.3 3.15e-06 3.3 3.152e-06 0 3.2e-06 0 3.202e-06 3.3 3.25e-06 3.3 3.252e-06 0 3.3e-06 0 3.302e-06 3.3 3.35e-06 3.3  3.352e-06 0 3.4e-06 0 3.402e-06 3.3 3.45e-06 3.3 3.452e-06 0 3.5e-06 0 3.502e-06 3.3 3.55e-06 3.3 3.552e-06 0 3.6e-06 0 3.602e-06 3.3  3.65e-06 3.3 3.652e-06 0 3.7e-06 0 3.702e-06 3.3 3.75e-06 3.3 3.752e-06 0 3.8e-06 0 3.802e-06 3.3 3.85e-06 3.3 3.852e-06 0 3.9e-06 0  3.902e-06 3.3 3.95e-06 3.3 3.952e-06 0 4e-06 0 4.002e-06 3.3 4.05e-06 3.3 4.052e-06 0 4.1e-06 0 4.102e-06 3.3 4.15e-06 3.3 4.152e-06 0)
+VSDI sdi 0 pwl(0 0 2.55e-06 0 2.552e-06 0 2.65e-06 0 2.652e-06 0 2.75e-06 0 2.752e-06 0 2.85e-06 0 2.852e-06 0 2.95e-06 0  2.952e-06 0 3.05e-06 0 3.052e-06 0 3.15e-06 0 3.152e-06 0 3.25e-06 0 3.252e-06 0 3.35e-06 0 3.352e-06 0 3.45e-06 0 3.452e-06 0 3.55e-06 0  3.552e-06 0 3.65e-06 0 3.652e-06 3.3 3.75e-06 3.3 3.752e-06 0 3.85e-06 0 3.852e-06 3.3 3.95e-06 3.3 3.952e-06 0 4.05e-06 0 4.052e-06 3.3)
+VCSN csn 0 pwl(0 3.3 2.5e-06 3.3 2.502e-06 0 4.2e-06 0 4.202e-06 3.3)
+XDUT rfin refin sclk sdi csn isign imag qsign qmag clkout afcout vctrl vdd 0 gnss_afe_top
+CPisign isign 0 2p
+CPimag imag 0 2p
+CPqsign qsign 0 2p
+CPqmag qmag 0 2p
+CPclkout clkout 0 2p
+RAFC afcout 0 100k
+**** begin user architecture code
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  gnss_afe_top.sym # of pins=14
+** sym_path: /home/noritsuna/GPS/xschem/gnss_afe_top.sym
+** sch_path: /home/noritsuna/GPS/xschem/gnss_afe_top.sch
+.subckt gnss_afe_top RFIN REFIN SCLK SDI CS_N I_SIGN I_MAG Q_SIGN Q_MAG CLKOUT AFCOUT VCTRL VDD VSS
+*.ipin RFIN
+*.ipin REFIN
+*.ipin SCLK
+*.ipin SDI
+*.ipin CS_N
+*.opin I_SIGN
+*.opin I_MAG
+*.opin Q_SIGN
+*.opin Q_MAG
+*.opin CLKOUT
+*.opin AFCOUT
+*.opin VCTRL
+*.iopin VDD
+*.iopin VSS
+XSPI SCLK SDI CS_N IG1A IG1B IG2A IG2B IG3A IG3B B0 B1 AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 VDD VSS spi_regs
+XBIAS nb pb VDD VSS bias_gen
+XVCO VCTRL B0 B1 loip loin loqp loqn vr VDD VSS vco_ring4
+XPLL REFIN loip nb pb VCTRL fs fb refck VDD VSS pll_core
+XDBD_loin loin dbd_loin VDD VSS divbuf
+XDBD_loqp loqp dbd_loqp VDD VSS divbuf
+XDBD_loqn loqn dbd_loqn VDD VSS divbuf
+XLNA RFIN pb rfp rfn VDD VSS lna_nc
+XMIX rfp rfn loip loin loqp loqn nb mip min mqp mqn VDD VSS mixer_iq
+XIFI mip min IG1A IG1B IG2A IG2B IG3A IG3B nb pb aip ain VDD VSS if_chain
+XIFQ mqp mqn IG1A IG1B IG2A IG2B IG3A IG3B nb pb aqp aqn VDD VSS if_chain
+XADI aip ain fs I_SIGN I_MAG VDD VSS adc2b
+XADQ aqp aqn fs Q_SIGN Q_MAG VDD VSS adc2b
+XCKO1 fs fsb VDD VSS inv_lo2
+XCKO2 fsb CLKOUT VDD VSS inv_lo2
+XAFC AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 AFCOUT VDD VSS afc_dac
+.ends
+
+
+* expanding   symbol:  spi_regs.sym # of pins=21
+** sym_path: /home/noritsuna/GPS/xschem/spi_regs.sym
+** sch_path: /home/noritsuna/GPS/xschem/spi_regs.sch
+.subckt spi_regs SCLK SDI CS_N IG1A IG1B IG2A IG2B IG3A IG3B B0 B1 AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 VDD VSS
+*.ipin SCLK
+*.ipin SDI
+*.ipin CS_N
+*.opin IG1A
+*.opin IG1B
+*.opin IG2A
+*.opin IG2B
+*.opin IG3A
+*.opin IG3B
+*.opin B0
+*.opin B1
+*.opin AFC0
+*.opin AFC1
+*.opin AFC2
+*.opin AFC3
+*.opin AFC4
+*.opin AFC5
+*.opin AFC6
+*.opin AFC7
+*.iopin VDD
+*.iopin VSS
+XRPU CS_N VDD VSS ppolyf_u_1k r_width=1u r_length=100u
+XSCB SCLK sclkb VDD VSS inv_dig
+XSCG CS_N sclkb sck VDD VSS nor2
+XRPOR pr VDD VSS ppolyf_u_1k r_width=1u r_length=200u
+XCPOR pr VSS cap_mim_2f0_m4m5_noshield c_width=70e-6 c_length=70e-6
+XP1 pr por1 VDD VSS inv_dig
+XP2 por1 por2 VDD VSS inv_dig
+XP3 por2 rst VDD VSS inv_dig
+XR0 SDI sck rst r0 VDD VSS dffr_s
+XR1 r0 sck rst r1 VDD VSS dffr_s
+XR2 r1 sck rst r2 VDD VSS dffr_s
+XR3 r2 sck rst r3 VDD VSS dffr_s
+XR4 r3 sck rst r4 VDD VSS dffr_s
+XR5 r4 sck rst r5 VDD VSS dffr_s
+XR6 r5 sck rst r6 VDD VSS dffr_s
+XR7 r6 sck rst r7 VDD VSS dffr_s
+XR8 r7 sck rst r8 VDD VSS dffr_s
+XR9 r8 sck rst r9 VDD VSS dffr_s
+XR10 r9 sck rst r10 VDD VSS dffr_s
+XR11 r10 sck rst r11 VDD VSS dffr_s
+XR12 r11 sck rst r12 VDD VSS dffr_s
+XR13 r12 sck rst r13 VDD VSS dffr_s
+XR14 r13 sck rst r14 VDD VSS dffr_s
+XR15 r14 sck rst r15 VDD VSS dffr_s
+XL0 r0 CS_N IG1A VDD VSS latch_s
+XL1 r1 CS_N IG1B VDD VSS latch_s
+XL2 r2 CS_N IG2A VDD VSS latch_s
+XL3 r3 CS_N IG2B VDD VSS latch_s
+XL4 r4 CS_N IG3A VDD VSS latch_s
+XL5 r5 CS_N IG3B VDD VSS latch_s
+XL6 r6 CS_N B0 VDD VSS latch_s
+XL7 r7 CS_N B1 VDD VSS latch_s
+XL8 r8 CS_N AFC0 VDD VSS latch_s
+XL9 r9 CS_N AFC1 VDD VSS latch_s
+XL10 r10 CS_N AFC2 VDD VSS latch_s
+XL11 r11 CS_N AFC3 VDD VSS latch_s
+XL12 r12 CS_N AFC4 VDD VSS latch_s
+XL13 r13 CS_N AFC5 VDD VSS latch_s
+XL14 r14 CS_N AFC6 VDD VSS latch_s
+XL15 r15 CS_N afc7n VDD VSS latch_s
+XAFC7 afc7n AFC7 VDD VSS inv_dig
+.ends
+
+
+* expanding   symbol:  bias_gen.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/bias_gen.sym
+** sch_path: /home/noritsuna/GPS/xschem/bias_gen.sch
+.subckt bias_gen NB PB VDD VSS
+*.opin NB
+*.opin PB
+*.iopin VDD
+*.iopin VSS
+MMN1 nbc nbc VSS VSS nfet_03v3 L=2u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MMN2 pbc nbc nr VSS nfet_03v3 L=2u W=16u nf=2        sa=0 sb=0 sd=0 m=1  ad=1.44e-12 as=2.88e-12 pd=1.636e-05 ps=3.272e-05 nrd=0.01125 nrs=0.01125
+XRB VSS nr VSS ppolyf_u_1k r_width=1u r_length=4.6u
+MMP1 nbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.44e-12 as=1.44e-12 pd=1.636e-05 ps=1.636e-05 nrd=0.0225 nrs=0.0225
+MMP2 pbc pbc VDD VDD pfet_03v3 L=2u W=8u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.44e-12 as=1.44e-12 pd=1.636e-05 ps=1.636e-05 nrd=0.0225 nrs=0.0225
+MMSP st VSS VDD VDD pfet_03v3 L=20u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMSN st nbc VSS VSS nfet_03v3 L=1u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMSU pbc st VSS VSS nfet_03v3 L=1u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP3 NB pbc VDD VDD pfet_03v3 L=2u W=8u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.44e-12 as=1.44e-12 pd=1.636e-05 ps=1.636e-05 nrd=0.0225 nrs=0.0225
+MMN3 NB NB VSS VSS nfet_03v3 L=2u W=16u nf=2        sa=0 sb=0 sd=0 m=1  ad=1.44e-12 as=2.88e-12 pd=1.636e-05 ps=3.272e-05 nrd=0.01125 nrs=0.01125
+MMN4 PB nbc VSS VSS nfet_03v3 L=2u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MMP4 PB PB VDD VDD pfet_03v3 L=2u W=32u nf=4        sa=0 sb=0 sd=0 m=1  ad=2.88e-12 as=4.32e-12 pd=3.272e-05 ps=4.908e-05 nrd=0.005625 nrs=0.005625
+XCNB NB VSS cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+XCPB VDD PB cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+.ends
+
+
+* expanding   symbol:  vco_ring4.sym # of pins=10
+** sym_path: /home/noritsuna/GPS/xschem/vco_ring4.sym
+** sch_path: /home/noritsuna/GPS/xschem/vco_ring4.sch
+.subckt vco_ring4 VCTRL B0 B1 LOIP LOIN LOQP LOQN VR VDD VSS
+*.ipin VCTRL
+*.ipin B0
+*.ipin B1
+*.opin LOIP
+*.opin LOIN
+*.opin LOQP
+*.opin LOQN
+*.opin VR
+*.iopin VDD
+*.iopin VSS
+MMVI nb VCTRL ns VSS nfet_03v3 L=0.5u W=20u nf=4        sa=0 sb=0 sd=0 m=1  ad=1.8e-12 as=2.7e-12 pd=2.072e-05 ps=3.108e-05 nrd=0.009 nrs=0.009
+XRDEG VSS ns VSS ppolyf_u_1k r_width=2u r_length=4u
+MMPD nb nb VDD VDD pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMPO VR nb VDD VDD pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=8  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+XRMIN VR VDD VSS ppolyf_u_1k r_width=2u r_length=5u
+XB0 B0 b0n VDD VSS inv_dig
+XB1 B1 b1n VDD VSS inv_dig
+MMPB0 nb0 nb VDD VDD pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=2  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMSB0 VR b0n nb0 VDD pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=2  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMPB1 nb1 nb VDD VDD pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=8  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMSB1 VR b1n nb1 VDD pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=8  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+XCVR VR VSS cap_mim_2f0_m4m5_noshield c_width=30e-6 c_length=30e-6
+XC1 p4 n4 p1 n1 kh VR VSS vco_cellk
+XC2 p1 n1 p2 n2 kl VR VSS vco_cellk
+XC3 p2 n2 p3 n3 VR VSS vco_cell
+XC4 p3 n3 n4 p4 VR VSS vco_cell
+XB1I0 p1 bI0 VR VSS inv_lo1
+XB2I0 bI0 LOIP VR VSS inv_lo2
+XB1I1 n1 bI1 VR VSS inv_lo1
+XB2I1 bI1 LOIN VR VSS inv_lo2
+XB1Q0 p3 bQ0 VR VSS inv_lo1
+XB2Q0 bQ0 LOQP VR VSS inv_lo2
+XB1Q1 n3 bQ1 VR VSS inv_lo1
+XB2Q1 bQ1 LOQN VR VSS inv_lo2
+XB1D0 p2 dD0 VR VSS inv_lo1
+XB1D1 n2 dD1 VR VSS inv_lo1
+XB1D2 p4 dD2 VR VSS inv_lo1
+XB1D3 n4 dD3 VR VSS inv_lo1
+XSUA dD0 dD1 sua VR VSS nand2
+XSUB dD0 dD1 sub VR VSS nor2
+XSUAD dD2 dD3 suad VR VSS nand2
+XSUBD dD2 dD3 subd VR VSS nor2
+XRSUA fsua sua VSS ppolyf_u_1k r_width=1u r_length=100u
+XCSUA fsua VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6
+XRSUB fsub sub VSS ppolyf_u_1k r_width=1u r_length=100u
+XCSUB fsub VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6
+XSUA1 sua fsua kh VR VSS nor2
+XSUA2 kh khn VR VSS inv_dig
+XSUB1 sub fsub kln VR VSS nand2
+XSUB2 kln kl VR VSS inv_dig
+.ends
+
+
+* expanding   symbol:  pll_core.sym # of pins=10
+** sym_path: /home/noritsuna/GPS/xschem/pll_core.sym
+** sch_path: /home/noritsuna/GPS/xschem/pll_core.sch
+.subckt pll_core REFIN LO NB PB VCTRL FS FB REFCK VDD VSS
+*.ipin REFIN
+*.ipin LO
+*.ipin NB
+*.ipin PB
+*.opin VCTRL
+*.opin FS
+*.opin FB
+*.opin REFCK
+*.iopin VDD
+*.iopin VSS
+XRB REFIN REFCK VDD VSS refbuf
+XDB LO ck VDD VSS divbuf
+XDIV ck FS FB VDD VSS div96
+XPFD REFCK FB up upb dn dnb VDD VSS pfd
+XCP upb dn PB NB VCTRL VDD VSS cp
+XLF VCTRL VSS loop_filter
+.ends
+
+
+* expanding   symbol:  divbuf.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/divbuf.sym
+** sch_path: /home/noritsuna/GPS/xschem/divbuf.sch
+.subckt divbuf IN OUT VDD VSS
+*.ipin IN
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XCIN IN a cap_mim_2f0_m4m5_noshield c_width=12e-6 c_length=12e-6
+XRF b a VSS ppolyf_u_1k r_width=1u r_length=20u
+MMN1 b a VSS VSS nfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MMP1 b a VDD VDD pfet_03v3 L=0.28u W=8u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.44e-12 as=1.44e-12 pd=1.636e-05 ps=1.636e-05 nrd=0.0225 nrs=0.0225
+MMN2 OUT b VSS VSS nfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MMP2 OUT b VDD VDD pfet_03v3 L=0.28u W=8u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.44e-12 as=1.44e-12 pd=1.636e-05 ps=1.636e-05 nrd=0.0225 nrs=0.0225
+.ends
+
+
+* expanding   symbol:  lna_nc.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/lna_nc.sym
+** sch_path: /home/noritsuna/GPS/xschem/lna_nc.sch
+.subckt lna_nc RFIN PB OUTP OUTN VDD VSS
+*.ipin RFIN
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+MM1 op_i vb1 RFIN VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=3  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+XRS VSS RFIN VSS ppolyf_u_1k r_width=10u r_length=3u
+XR1 op_i VDD VSS ppolyf_u_1k r_width=10u r_length=2u
+XCC2 RFIN g2 cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XRB2 vb2 g2 VSS ppolyf_u_1k r_width=1u r_length=10u
+MM2 on_i g2 VSS VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=8  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+XR2 on_i VDD VSS ppolyf_u_1k r_width=15u r_length=1u
+MMP1 vb1 PB VDD VDD pfet_03v3 L=2u W=32u nf=4        sa=0 sb=0 sd=0 m=6  ad=2.88e-12 as=4.32e-12 pd=3.272e-05 ps=4.908e-05 nrd=0.005625 nrs=0.005625
+MM1R vb1 vb1 s1r VSS nfet_03v3 L=0.28u W=12u nf=2        sa=0 sb=0 sd=0 m=1  ad=1.08e-12 as=2.16e-12 pd=1.236e-05 ps=2.472e-05 nrd=0.015 nrs=0.015
+XRSR VSS s1r VSS ppolyf_u_1k r_width=1u r_length=3u
+MMP2 vb2 PB VDD VDD pfet_03v3 L=2u W=32u nf=4        sa=0 sb=0 sd=0 m=5  ad=2.88e-12 as=4.32e-12 pd=3.272e-05 ps=4.908e-05 nrd=0.005625 nrs=0.005625
+MM2R vb2 vb2 VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+XCB1 vb1 VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCB2 vb2 VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCOP op_i OUTP cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCON on_i OUTN cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+.ends
+
+
+* expanding   symbol:  mixer_iq.sym # of pins=13
+** sym_path: /home/noritsuna/GPS/xschem/mixer_iq.sym
+** sch_path: /home/noritsuna/GPS/xschem/mixer_iq.sch
+.subckt mixer_iq RFP RFN LOIP LOIN LOQP LOQN NB IFIP IFIN IFQP IFQN VDD VSS
+*.ipin RFP
+*.ipin RFN
+*.ipin LOIP
+*.ipin LOIN
+*.ipin LOQP
+*.ipin LOQN
+*.ipin NB
+*.opin IFIP
+*.opin IFIN
+*.opin IFQP
+*.opin IFQN
+*.iopin VDD
+*.iopin VSS
+XRT1 vbrf RFP VSS ppolyf_u_1k r_width=1u r_length=5u
+XRT2 vbrf RFN VSS ppolyf_u_1k r_width=1u r_length=5u
+XRBA vbrf VDD VSS ppolyf_u_1k r_width=1u r_length=20u
+XRBB VSS vbrf VSS ppolyf_u_1k r_width=1u r_length=13u
+XCBRF vbrf VSS cap_mim_2f0_m4m5_noshield c_width=70e-6 c_length=70e-6
+XRLA vlob VDD VSS ppolyf_u_1k r_width=1u r_length=53u
+XRLB VSS vlob VSS ppolyf_u_1k r_width=1u r_length=50u
+XCLOB vlob VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCACLOIP LOIP gloip cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACLOIP vlob gloip VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACLOIN LOIN gloin cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACLOIN vlob gloin VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACLOQP LOQP gloqp cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACLOQP vlob gloqp VSS ppolyf_u_1k r_width=1u r_length=20u
+XCACLOQN LOQN gloqn cap_mim_2f0_m4m5_noshield c_width=31.6e-6 c_length=31.6e-6
+XRACLOQN vlob gloqn VSS ppolyf_u_1k r_width=1u r_length=20u
+MMTI tI NB VSS VSS nfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=16  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+MMG1I xpI RFP tI VSS nfet_03v3 L=0.28u W=80u nf=16        sa=0 sb=0 sd=0 m=1  ad=7.2e-12 as=8.1e-12 pd=8.288e-05 ps=9.324e-05 nrd=0.00225 nrs=0.00225
+MMG2I xnI RFN tI VSS nfet_03v3 L=0.28u W=80u nf=16        sa=0 sb=0 sd=0 m=1  ad=7.2e-12 as=8.1e-12 pd=8.288e-05 ps=9.324e-05 nrd=0.00225 nrs=0.00225
+MMS1I IFIP gloip xpI VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMS2I IFIN gloin xpI VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMS3I IFIN gloip xnI VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMS4I IFIP gloin xnI VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+XRL1I IFIP VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XRL2I IFIN VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XCL1I IFIP VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCL2I IFIN VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+MMTQ tQ NB VSS VSS nfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=16  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+MMG1Q xpQ RFP tQ VSS nfet_03v3 L=0.28u W=80u nf=16        sa=0 sb=0 sd=0 m=1  ad=7.2e-12 as=8.1e-12 pd=8.288e-05 ps=9.324e-05 nrd=0.00225 nrs=0.00225
+MMG2Q xnQ RFN tQ VSS nfet_03v3 L=0.28u W=80u nf=16        sa=0 sb=0 sd=0 m=1  ad=7.2e-12 as=8.1e-12 pd=8.288e-05 ps=9.324e-05 nrd=0.00225 nrs=0.00225
+MMS1Q IFQP gloqp xpQ VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMS2Q IFQN gloqn xpQ VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMS3Q IFQN gloqp xnQ VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMS4Q IFQP gloqn xnQ VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+XRL1Q IFQP VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XRL2Q IFQN VDD VSS ppolyf_u_1k r_width=2u r_length=2.4u
+XCL1Q IFQP VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+XCL2Q IFQN VSS cap_mim_2f0_m4m5_noshield c_width=45e-6 c_length=45e-6
+.ends
+
+
+* expanding   symbol:  if_chain.sym # of pins=14
+** sym_path: /home/noritsuna/GPS/xschem/if_chain.sym
+** sch_path: /home/noritsuna/GPS/xschem/if_chain.sch
+.subckt if_chain INP INN G1A G1B G2A G2B G3A G3B NB PB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin G1A
+*.ipin G1B
+*.ipin G2A
+*.ipin G2B
+*.ipin G3A
+*.ipin G3B
+*.ipin NB
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XV1 INP INN G1A G1B NB a1p a1n VDD VSS vga
+XF1 a1p a1n PB f1p f1n VDD VSS sk_lpf1
+XV2 f1p f1n G2A G2B NB a2p a2n VDD VSS vga
+XF2 a2p a2n PB f2p f2n VDD VSS sk_lpf2
+XV3 f2p f2n G3A G3B NB a3p a3n VDD VSS vga
+XV4 a3p a3n VDD VDD NB a4p a4n VDD VSS vga
+XV5 a4p a4n VDD VDD NB a5p a5n VDD VSS vga
+XV6 a5p a5n VDD VDD NB OUTP OUTN VDD VSS vga
+.ends
+
+
+* expanding   symbol:  adc2b.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/adc2b.sym
+** sch_path: /home/noritsuna/GPS/xschem/adc2b.sch
+.subckt adc2b INP INN CLK SIGN MAG VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin CLK
+*.opin SIGN
+*.opin MAG
+*.iopin VDD
+*.iopin VSS
+XRL0 thp VDD VSS ppolyf_u_1k r_width=10u r_length=43.2u
+XRL1 thm thp VSS ppolyf_u_1k r_width=10u r_length=1.4u
+XRL2 thn thm VSS ppolyf_u_1k r_width=10u r_length=1.4u
+XRL3 VSS thn VSS ppolyf_u_1k r_width=10u r_length=19.2u
+XCT1 thp VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCT2 thm VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCT3 thn VSS cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCS INP INN thm thm CLK SIGN sb VDD VSS sa_comp
+XCH INP INN thp thn CLK qh qhb VDD VSS sa_comp
+XCL INP INN thn thp CLK ql qlb VDD VSS sa_comp
+XM qhb ql MAG VDD VSS nand2
+.ends
+
+
+* expanding   symbol:  inv_lo2.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/inv_lo2.sym
+** sch_path: /home/noritsuna/GPS/xschem/inv_lo2.sch
+.subckt inv_lo2 A Y VDD VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+MMN Y A VSS VSS nfet_03v3 L=0.28u W=6u nf=2        sa=0 sb=0 sd=0 m=1  ad=5.4e-13 as=1.08e-12 pd=6.36e-06 ps=1.272e-05 nrd=0.03 nrs=0.03
+MMP Y A VDD VDD pfet_03v3 L=0.28u W=12u nf=4        sa=0 sb=0 sd=0 m=1  ad=1.08e-12 as=1.62e-12 pd=1.272e-05 ps=1.908e-05 nrd=0.015 nrs=0.015
+.ends
+
+
+* expanding   symbol:  afc_dac.sym # of pins=11
+** sym_path: /home/noritsuna/GPS/xschem/afc_dac.sym
+** sch_path: /home/noritsuna/GPS/xschem/afc_dac.sch
+.subckt afc_dac D0 D1 D2 D3 D4 D5 D6 D7 OUT VDD VSS
+*.ipin D0
+*.ipin D1
+*.ipin D2
+*.ipin D3
+*.ipin D4
+*.ipin D5
+*.ipin D6
+*.ipin D7
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XRT VSS n0 VSS ppolyf_u_1k r_width=1u r_length=20u
+XA0 D0 db0 VDD VSS inv_dig
+XB0 db0 d0 VDD VSS inv_dig
+XR2_0 n0 d0 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_0 n1 n0 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA1 D1 db1 VDD VSS inv_dig
+XB1 db1 d1 VDD VSS inv_dig
+XR2_1 n1 d1 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_1 n2 n1 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA2 D2 db2 VDD VSS inv_dig
+XB2 db2 d2 VDD VSS inv_dig
+XR2_2 n2 d2 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_2 n3 n2 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA3 D3 db3 VDD VSS inv_dig
+XB3 db3 d3 VDD VSS inv_dig
+XR2_3 n3 d3 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_3 n4 n3 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA4 D4 db4 VDD VSS inv_dig
+XB4 db4 d4 VDD VSS inv_dig
+XR2_4 n4 d4 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_4 n5 n4 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA5 D5 db5 VDD VSS inv_dig
+XB5 db5 d5 VDD VSS inv_dig
+XR2_5 n5 d5 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_5 n6 n5 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA6 D6 db6 VDD VSS inv_dig
+XB6 db6 d6 VDD VSS inv_dig
+XR2_6 n6 d6 VSS ppolyf_u_1k r_width=1u r_length=20u
+XR1_6 OUT n6 VSS ppolyf_u_1k r_width=1u r_length=10u
+XA7 D7 db7 VDD VSS inv_dig
+XB7 db7 d7 VDD VSS inv_dig
+XR2_7 OUT d7 VSS ppolyf_u_1k r_width=1u r_length=20u
+.ends
+
+
+* expanding   symbol:  inv_dig.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/inv_dig.sym
+** sch_path: /home/noritsuna/GPS/xschem/inv_dig.sch
+.subckt inv_dig A Y VDD VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+MMN Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+.ends
+
+
+* expanding   symbol:  nor2.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/nor2.sym
+** sch_path: /home/noritsuna/GPS/xschem/nor2.sch
+.subckt nor2 A B Y VDD VSS
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+MMN1 Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMN2 Y B VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP1 n1 A VDD VDD pfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MMP2 Y B n1 VDD pfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+.ends
+
+
+* expanding   symbol:  dffr_s.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/dffr_s.sym
+** sch_path: /home/noritsuna/GPS/xschem/dffr_s.sch
+.subckt dffr_s D CK RST Q VDD VSS
+*.ipin D
+*.ipin CK
+*.ipin RST
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+XCI CK ckb VDD VSS inv_dig
+MT1N D ckb m VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MT1P D CK m VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+XM m RST mb VDD VSS nor2
+XMF mb mf VDD VSS inv_dig
+MT2N mf CK m VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MT2P mf ckb m VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MT3N mb CK sl VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MT3P mb ckb sl VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+XS sl RST Q VDD VSS nor2
+XSF Q sf VDD VSS inv_dig
+MT4N sf ckb sl VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MT4P sf CK sl VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+.ends
+
+
+* expanding   symbol:  latch_s.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/latch_s.sym
+** sch_path: /home/noritsuna/GPS/xschem/latch_s.sch
+.subckt latch_s D EN Q VDD VSS
+*.ipin D
+*.ipin EN
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+XEI EN enb VDD VSS inv_dig
+MTIN D EN l VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MTIP D enb l VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+X1 l lb VDD VSS inv_dig
+X2 lb Q VDD VSS inv_dig
+MTFN Q enb l VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MTFP Q EN l VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+.ends
+
+
+* expanding   symbol:  vco_cellk.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/vco_cellk.sym
+** sch_path: /home/noritsuna/GPS/xschem/vco_cellk.sch
+.subckt vco_cellk IP IN OP ON FK VR VSS
+*.ipin IP
+*.ipin IN
+*.opin OP
+*.opin ON
+*.ipin FK
+*.iopin VR
+*.iopin VSS
+MMN1 ON IP VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+MMP1 ON IP VR VR pfet_03v3 L=0.28u W=12u nf=4        sa=0 sb=0 sd=0 m=1  ad=1.08e-12 as=1.62e-12 pd=1.272e-05 ps=1.908e-05 nrd=0.015 nrs=0.015
+MMN2 OP IN VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+MMP2 OP IN VR VR pfet_03v3 L=0.28u W=12u nf=4        sa=0 sb=0 sd=0 m=1  ad=1.08e-12 as=1.62e-12 pd=1.272e-05 ps=1.908e-05 nrd=0.015 nrs=0.015
+MMN3 ON OP VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP3 ON OP VR VR pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMN4 OP ON VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP4 OP ON VR VR pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMK ON FK VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+MMKD OP VSS VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+.ends
+
+
+* expanding   symbol:  vco_cell.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/vco_cell.sym
+** sch_path: /home/noritsuna/GPS/xschem/vco_cell.sch
+.subckt vco_cell IP IN OP ON VR VSS
+*.ipin IP
+*.ipin IN
+*.opin OP
+*.opin ON
+*.iopin VR
+*.iopin VSS
+MMN1 ON IP VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+MMP1 ON IP VR VR pfet_03v3 L=0.28u W=12u nf=4        sa=0 sb=0 sd=0 m=1  ad=1.08e-12 as=1.62e-12 pd=1.272e-05 ps=1.908e-05 nrd=0.015 nrs=0.015
+MMN2 OP IN VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+MMP2 OP IN VR VR pfet_03v3 L=0.28u W=12u nf=4        sa=0 sb=0 sd=0 m=1  ad=1.08e-12 as=1.62e-12 pd=1.272e-05 ps=1.908e-05 nrd=0.015 nrs=0.015
+MMN3 ON OP VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP3 ON OP VR VR pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMN4 OP ON VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP4 OP ON VR VR pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+.ends
+
+
+* expanding   symbol:  inv_lo1.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/inv_lo1.sym
+** sch_path: /home/noritsuna/GPS/xschem/inv_lo1.sch
+.subckt inv_lo1 A Y VDD VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+MMN Y A VSS VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP Y A VDD VDD pfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+.ends
+
+
+* expanding   symbol:  nand2.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/nand2.sym
+** sch_path: /home/noritsuna/GPS/xschem/nand2.sch
+.subckt nand2 A B Y VDD VSS
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+MMN1 Y A n1 VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMN2 n1 B VSS VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+.ends
+
+
+* expanding   symbol:  refbuf.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/refbuf.sym
+** sch_path: /home/noritsuna/GPS/xschem/refbuf.sch
+.subckt refbuf IN OUT VDD VSS
+*.ipin IN
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XCIN IN a cap_mim_2f0_m4m5_noshield c_width=20e-6 c_length=20e-6
+XRF b a VSS ppolyf_u_1k r_width=1u r_length=200u
+MMN1 b a VSS VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP1 b a VDD VDD pfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MMN2 OUT b VSS VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP2 OUT b VDD VDD pfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+.ends
+
+
+* expanding   symbol:  div96.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/div96.sym
+** sch_path: /home/noritsuna/GPS/xschem/div96.sch
+.subckt div96 CK FS FB VDD VSS
+*.ipin CK
+*.opin FS
+*.opin FB
+*.iopin VDD
+*.iopin VSS
+XD1 CK c2 c2b VDD VSS div2
+XD2 c2 c4 c4b VDD VSS div2
+XD3 c4 c8 c8b VDD VSS div2
+XD4 c8 c16 c16b VDD VSS div2
+XD5 c16 c48 VDD VSS div3
+XD6 c48 FB c96b VDD VSS div2
+XFB1 FB fbi VDD VSS inv_lo1
+XFB2 fbi FS VDD VSS inv_lo2
+.ends
+
+
+* expanding   symbol:  pfd.sym # of pins=8
+** sym_path: /home/noritsuna/GPS/xschem/pfd.sym
+** sch_path: /home/noritsuna/GPS/xschem/pfd.sch
+.subckt pfd REF FB UP UPB DN DNB VDD VSS
+*.ipin REF
+*.ipin FB
+*.opin UP
+*.opin UPB
+*.opin DN
+*.opin DNB
+*.iopin VDD
+*.iopin VSS
+XU REF rb UP VDD VSS dff_r
+XD FB rb DN VDD VSS dff_r
+XR UP DN r0 VDD VSS nand2
+XD1 r0 r1 VDD VSS inv_dig
+XD2 r1 r2 VDD VSS inv_dig
+XD3 r2 r3 VDD VSS inv_dig
+XD4 r3 rb VDD VSS inv_dig
+XO1 UP UPB VDD VSS inv_dig
+XO2 DN DNB VDD VSS inv_dig
+.ends
+
+
+* expanding   symbol:  cp.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/cp.sym
+** sch_path: /home/noritsuna/GPS/xschem/cp.sch
+.subckt cp UPB DN PB NB OUT VDD VSS
+*.ipin UPB
+*.ipin DN
+*.ipin PB
+*.ipin NB
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+MMPC pc PB VDD VDD pfet_03v3 L=2u W=32u nf=4        sa=0 sb=0 sd=0 m=4  ad=2.88e-12 as=4.32e-12 pd=3.272e-05 ps=4.908e-05 nrd=0.005625 nrs=0.005625
+MMPS OUT UPB pc VDD pfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MMNS OUT DN nc VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMNC nc NB VSS VSS nfet_03v3 L=2u W=16u nf=2        sa=0 sb=0 sd=0 m=4  ad=1.44e-12 as=2.88e-12 pd=1.636e-05 ps=3.272e-05 nrd=0.01125 nrs=0.01125
+.ends
+
+
+* expanding   symbol:  loop_filter.sym # of pins=2
+** sym_path: /home/noritsuna/GPS/xschem/loop_filter.sym
+** sch_path: /home/noritsuna/GPS/xschem/loop_filter.sch
+.subckt loop_filter VC VSS
+*.iopin VC
+*.iopin VSS
+XRZ z VC VSS ppolyf_u_1k r_width=1u r_length=5u
+XC1 z VSS cap_mim_2f0_m4m5_noshield c_width=77e-6 c_length=77e-6 m=10
+XC2 VC VSS cap_mim_2f0_m4m5_noshield c_width=70e-6 c_length=70e-6
+.ends
+
+
+* expanding   symbol:  vga.sym # of pins=9
+** sym_path: /home/noritsuna/GPS/xschem/vga.sym
+** sch_path: /home/noritsuna/GPS/xschem/vga.sch
+.subckt vga INP INN GA GB NB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin GA
+*.ipin GB
+*.ipin NB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XCC1 INP gp cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XCC2 INN gn cap_mim_2f0_m4m5_noshield c_width=50e-6 c_length=50e-6
+XRB1 vcm gp VSS ppolyf_u_1k r_width=1u r_length=100u
+XRB2 vcm gn VSS ppolyf_u_1k r_width=1u r_length=100u
+XRCA vcm VDD VSS ppolyf_u_1k r_width=1u r_length=34u
+XRCB VSS vcm VSS ppolyf_u_1k r_width=1u r_length=25u
+XCCM vcm VSS cap_mim_2f0_m4m5_noshield c_width=30e-6 c_length=30e-6
+MM1 OUTN gp s1 VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=2  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MM2 OUTP gn s2 VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=2  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMT1 s1 NB VSS VSS nfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=8  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+MMT2 s2 NB VSS VSS nfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=8  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+XRL1 OUTN VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRL2 OUTP VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRD0 s2 s1 VSS ppolyf_u_1k r_width=1u r_length=2u
+MMSA s1 GA da VSS nfet_03v3 L=0.28u W=20u nf=4        sa=0 sb=0 sd=0 m=1  ad=1.8e-12 as=2.7e-12 pd=2.072e-05 ps=3.108e-05 nrd=0.009 nrs=0.009
+XRDA s2 da VSS ppolyf_u_1k r_width=1u r_length=3u
+MMSB s1 GB db VSS nfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+XRDB s2 db VSS ppolyf_u_1k r_width=1u r_length=0.8u
+.ends
+
+
+* expanding   symbol:  sk_lpf1.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/sk_lpf1.sym
+** sch_path: /home/noritsuna/GPS/xschem/sk_lpf1.sch
+.subckt sk_lpf1 INP INN PB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XR1P xP INP VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2P yP xP VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1P xP OUTP cap_mim_2f0_m4m5_noshield c_width=47.6e-6 c_length=47.6e-6
+XC2P yP VSS cap_mim_2f0_m4m5_noshield c_width=51.2e-6 c_length=51.2e-6
+MMFP VSS yP OUTP OUTP pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMIP OUTP PB VDD VDD pfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=16  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+XR1N xN INN VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2N yN xN VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1N xN OUTN cap_mim_2f0_m4m5_noshield c_width=47.6e-6 c_length=47.6e-6
+XC2N yN VSS cap_mim_2f0_m4m5_noshield c_width=51.2e-6 c_length=51.2e-6
+MMFN VSS yN OUTN OUTN pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMIN OUTN PB VDD VDD pfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=16  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+.ends
+
+
+* expanding   symbol:  sk_lpf2.sym # of pins=7
+** sym_path: /home/noritsuna/GPS/xschem/sk_lpf2.sym
+** sch_path: /home/noritsuna/GPS/xschem/sk_lpf2.sch
+.subckt sk_lpf2 INP INN PB OUTP OUTN VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin PB
+*.opin OUTP
+*.opin OUTN
+*.iopin VDD
+*.iopin VSS
+XR1P xP INP VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2P yP xP VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1P xP OUTP cap_mim_2f0_m4m5_noshield c_width=107.1e-6 c_length=107.1e-6
+XC2P yP VSS cap_mim_2f0_m4m5_noshield c_width=25.7e-6 c_length=25.7e-6
+MMFP VSS yP OUTP OUTP pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMIP OUTP PB VDD VDD pfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=16  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+XR1N xN INN VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2N yN xN VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1N xN OUTN cap_mim_2f0_m4m5_noshield c_width=107.1e-6 c_length=107.1e-6
+XC2N yN VSS cap_mim_2f0_m4m5_noshield c_width=25.7e-6 c_length=25.7e-6
+MMFN VSS yN OUTN OUTN pfet_03v3 L=0.28u W=40u nf=8        sa=0 sb=0 sd=0 m=1  ad=3.6e-12 as=4.5e-12 pd=4.144e-05 ps=5.18e-05 nrd=0.0045 nrs=0.0045
+MMIN OUTN PB VDD VDD pfet_03v3 L=2u W=40u nf=4        sa=0 sb=0 sd=0 m=16  ad=3.6e-12 as=5.4e-12 pd=4.072e-05 ps=6.108e-05 nrd=0.0045 nrs=0.0045
+.ends
+
+
+* expanding   symbol:  sa_comp.sym # of pins=9
+** sym_path: /home/noritsuna/GPS/xschem/sa_comp.sym
+** sch_path: /home/noritsuna/GPS/xschem/sa_comp.sch
+.subckt sa_comp INP INN REFP REFN CLK Q QB VDD VSS
+*.ipin INP
+*.ipin INN
+*.ipin REFP
+*.ipin REFN
+*.ipin CLK
+*.opin Q
+*.opin QB
+*.iopin VDD
+*.iopin VSS
+MMT t CLK VSS VSS nfet_03v3 L=0.28u W=8u nf=2        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=1.44e-12 pd=8.36e-06 ps=1.672e-05 nrd=0.0225 nrs=0.0225
+MM1 x1 INP t VSS nfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MM2 x2 INN t VSS nfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MM3 x2 REFP t VSS nfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MM4 x1 REFN t VSS nfet_03v3 L=0.28u W=4u nf=1        sa=0 sb=0 sd=0 m=1  ad=7.2e-13 as=7.2e-13 pd=8.36e-06 ps=8.36e-06 nrd=0.045 nrs=0.045
+MM5 on op x1 VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MM6 op on x2 VSS nfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MM7 on op VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MM8 op on VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MM9 on CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MM10 op CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MM11 x1 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MM12 x2 CLK VDD VDD pfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+XI1 op opb VDD VSS inv_dig
+XI2 on onb VDD VSS inv_dig
+XS1 opb QB Q VDD VSS nor2
+XS2 onb Q QB VDD VSS nor2
+.ends
+
+
+* expanding   symbol:  div2.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/div2.sym
+** sch_path: /home/noritsuna/GPS/xschem/div2.sch
+.subckt div2 CK Q QB VDD VSS
+*.ipin CK
+*.opin Q
+*.opin QB
+*.iopin VDD
+*.iopin VSS
+XF QB CK Q QB VDD VSS tspc_dff
+.ends
+
+
+* expanding   symbol:  div3.sym # of pins=4
+** sym_path: /home/noritsuna/GPS/xschem/div3.sym
+** sch_path: /home/noritsuna/GPS/xschem/div3.sch
+.subckt div3 CK Q VDD VSS
+*.ipin CK
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+XF1 d1 CK Q q1b VDD VSS tspc_dff
+XF2 Q CK q2 q2b VDD VSS tspc_dff
+XN Q q2 d1 VDD VSS nor2
+.ends
+
+
+* expanding   symbol:  dff_r.sym # of pins=5
+** sym_path: /home/noritsuna/GPS/xschem/dff_r.sym
+** sch_path: /home/noritsuna/GPS/xschem/dff_r.sch
+.subckt dff_r CK RB Q VDD VSS
+*.ipin CK
+*.ipin RB
+*.opin Q
+*.iopin VDD
+*.iopin VSS
+X1 n4 n2 n1 VDD VSS nand2
+X2 n1 CK RB n2 VDD VSS nand3
+X3 n2 CK n4 n3 VDD VSS nand3
+X4 n3 RB n4 VDD VSS nand2
+X5 n2 qb Q VDD VSS nand2
+X6 Q n3 RB qb VDD VSS nand3
+.ends
+
+
+* expanding   symbol:  tspc_dff.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/tspc_dff.sym
+** sch_path: /home/noritsuna/GPS/xschem/tspc_dff.sch
+.subckt tspc_dff D CK Q QB VDD VSS
+*.ipin D
+*.ipin CK
+*.opin Q
+*.opin QB
+*.iopin VDD
+*.iopin VSS
+MMP1 a1 D VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP2 x CK a1 VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMN1 x D VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+MMP3 y CK VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMN2 y x b2 VSS nfet_03v3 L=0.28u W=1.5u nf=1        sa=0 sb=0 sd=0 m=1  ad=2.7e-13 as=2.7e-13 pd=3.36e-06 ps=3.36e-06 nrd=0.12 nrs=0.12
+MMN3 b2 CK VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1        sa=0 sb=0 sd=0 m=1  ad=2.7e-13 as=2.7e-13 pd=3.36e-06 ps=3.36e-06 nrd=0.12 nrs=0.12
+MMP4 QB y VDD VDD pfet_03v3 L=0.28u W=3u nf=1        sa=0 sb=0 sd=0 m=1  ad=5.4e-13 as=5.4e-13 pd=6.36e-06 ps=6.36e-06 nrd=0.06 nrs=0.06
+MMN4 QB CK c3 VSS nfet_03v3 L=0.28u W=1.5u nf=1        sa=0 sb=0 sd=0 m=1  ad=2.7e-13 as=2.7e-13 pd=3.36e-06 ps=3.36e-06 nrd=0.12 nrs=0.12
+MMN5 c3 y VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1        sa=0 sb=0 sd=0 m=1  ad=2.7e-13 as=2.7e-13 pd=3.36e-06 ps=3.36e-06 nrd=0.12 nrs=0.12
+MMP5 Q QB VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMN6 Q QB VSS VSS nfet_03v3 L=0.28u W=1u nf=1        sa=0 sb=0 sd=0 m=1  ad=1.8e-13 as=1.8e-13 pd=2.36e-06 ps=2.36e-06 nrd=0.18 nrs=0.18
+.ends
+
+
+* expanding   symbol:  nand3.sym # of pins=6
+** sym_path: /home/noritsuna/GPS/xschem/nand3.sym
+** sch_path: /home/noritsuna/GPS/xschem/nand3.sch
+.subckt nand3 A B C Y VDD VSS
+*.ipin A
+*.ipin B
+*.ipin C
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+MMN1 Y A n1 VSS nfet_03v3 L=0.28u W=3u nf=1        sa=0 sb=0 sd=0 m=1  ad=5.4e-13 as=5.4e-13 pd=6.36e-06 ps=6.36e-06 nrd=0.06 nrs=0.06
+MMN2 n1 B n2 VSS nfet_03v3 L=0.28u W=3u nf=1        sa=0 sb=0 sd=0 m=1  ad=5.4e-13 as=5.4e-13 pd=6.36e-06 ps=6.36e-06 nrd=0.06 nrs=0.06
+MMN3 n2 C VSS VSS nfet_03v3 L=0.28u W=3u nf=1        sa=0 sb=0 sd=0 m=1  ad=5.4e-13 as=5.4e-13 pd=6.36e-06 ps=6.36e-06 nrd=0.06 nrs=0.06
+MMP1 Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP2 Y B VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+MMP3 Y C VDD VDD pfet_03v3 L=0.28u W=2u nf=1        sa=0 sb=0 sd=0 m=1  ad=3.6e-13 as=3.6e-13 pd=4.36e-06 ps=4.36e-06 nrd=0.09 nrs=0.09
+.ends
+
+.ic v(vctrl)=1.7 v(xdut:xpll:xlf:z)=1.7 v(xdut:xvco:p4)=0 v(xdut:xvco:n4)=1
+.options timeint method=gear reltol=2e-4
+.tran 5p 12u 0 5p uic
+.measure tran vc_end avg v(vctrl) from=11u to=12u
+.measure tran idd avg i(VDD) from=8u to=12u
+.print tran format=csv v(vctrl) v(clkout) v(isign) v(imag) v(qsign) v(qmag) v(xdut:aip,xdut:ain) v(xdut:aqp,xdut:aqn) v(xdut:mip,xdut:min) v(xdut:mqp,xdut:mqn) v(rfin) v(xdut:rfp,xdut:rfn) i(VDD)
+
+.end

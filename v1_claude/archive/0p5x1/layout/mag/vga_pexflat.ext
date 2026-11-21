@@ -1,0 +1,723 @@
+timestamp 0
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+parameters nfet_03v3_dss l=l w=w a1=as p1=ps a2=ad p2=pd l1=s_sab l2=d_sab
+parameters nfet_03v3 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters ppolyf_u_1k l=r_length w=r_width
+parameters cap_mim_2f0_m4m5_noshield l=c_length w=c_width
+port "INP" 3 -240 9980 -40 10180 m4
+port "INN" 4 -240 20620 -40 20820 m4
+port "NB" 7 33360 -380 33560 -180 m3
+port "GB" 6 22160 -380 22360 -180 m3
+port "GA" 5 10820 -380 11020 -180 m3
+port "OUTN" 9 44420 20620 44760 20960 m4
+port "OUTP" 8 44420 9980 44760 10320 m4
+port "VDD" 2 43920 0 44520 31044 m3
+port "VSS" 1 0 0 600 31044 m3
+node "INP" 0 3.01147e+06 -240 9980 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "INP" "XCC1.INP"
+node "INN" 0 2.43112e+06 -240 20620 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "INN" "XCC2.INN"
+node "a_42932_1088#" 0 2.63054e+06 42932 1088 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_26148_1088#" 0 2.76246e+06 26148 1088 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_42932_3360#" 0 2.57378e+06 42932 3360 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_26148_3360#" 0 2.73326e+06 26148 3360 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "NB" 0 4.42526e+07 33360 -380 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "NB" "XMT.NB"
+node "a_13084_16870#" 0 0 13084 16870 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_12684_16870#" 0 0 12684 16870 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_10948_16870#" 0 0 10948 16870 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_9412_16870#" 0 0 9412 16870 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_9012_16870#" 0 0 9012 16870 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_7700_16658#" 0 982934 7700 16658 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "XRDB.db" 0 726688 6417 16718 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "XRDB.db" "XMSW.db"
+node "XRD.da" 0 334262 5769 16718 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "XRD.da" "XMSW.da"
+node "GB" 0 2.80085e+06 22160 -380 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "GB" "XMSW.GB"
+node "a_5508_16658#" 0 906210 5508 16658 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "GA" 0 1.78765e+06 10820 -380 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "GA" "XMSW.GA"
+node "a_4276_16600#" 0 808305 4276 16600 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2732_16600#" 0 834486 2732 16600 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1188_16600#" 0 894294 1188 16600 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4276_17964#" 0 924352 4276 17964 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OUTN" 0 4.43063e+06 44420 20620 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "OUTN" "XMDP.OUTN"
+equiv "OUTN" "XRL.OUTN"
+node "XMT.s1" 0 6.88384e+06 1304 16660 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "XMT.s1" "XMDP.s1"
+equiv "XMT.s1" "XMSW.s1"
+equiv "XMT.s1" "XRD.s1"
+node "a_2732_17964#" 0 818704 2732 17964 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OUTP" 0 1.89533e+06 44420 9980 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "OUTP" "XMDP.OUTP"
+equiv "OUTP" "XRL.OUTP"
+node "XMT.s2" 0 6.51302e+06 1304 18024 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "XMT.s2" "XMDP.s2"
+equiv "XMT.s2" "XRD.s2"
+equiv "XMT.s2" "XRDB.s2"
+node "a_1188_17964#" 0 913647 1188 17964 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_11668_22714#" 0 0 11668 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_11268_22592#" 0 311841 11268 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_11268_22714#" 0 0 11268 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_10868_22714#" 0 0 10868 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_10868_24381#" 0 228022 10868 24381 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 5.21619e+06 43920 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "VDD" "XRL.VDD"
+equiv "VDD" "XRB.VDD"
+node "a_10468_22714#" 0 0 10468 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_10068_22714#" 0 0 10068 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_10068_24414#" 0 218288 10068 24414 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_9668_22592#" 0 226508 9668 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_9668_22714#" 0 0 9668 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_9268_22714#" 0 0 9268 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_9268_24414#" 0 248332 9268 24414 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "XCC2.gn" 0 5.63371e+06 1373 17872 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "XCC2.gn" "XMDP.gn"
+equiv "XCC2.gn" "XRB.gn"
+node "a_8868_22714#" 0 0 8868 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "XCC1.gp" 0 6.18888e+06 1373 17710 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "XCC1.gp" "XMDP.gp"
+equiv "XCC1.gp" "XRB.gp"
+node "a_8468_22714#" 0 0 8468 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_8068_22714#" 0 0 8068 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_8068_24714#" 0 243724 8068 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_7668_22714#" 0 0 7668 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_7668_24714#" 0 205148 7668 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_7268_22592#" 0 233335 7268 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_7268_22714#" 0 0 7268 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_6868_22592#" 0 224480 6868 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_6868_22714#" 0 0 6868 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_6468_22714#" 0 0 6468 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_6468_24714#" 0 200295 6468 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_6068_22714#" 0 0 6068 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_6068_24714#" 0 205148 6068 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_5668_22592#" 0 233626 5668 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_5668_22714#" 0 0 5668 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_5268_22592#" 0 224480 5268 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_5268_22714#" 0 0 5268 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4868_22714#" 0 0 4868 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4868_24714#" 0 200295 4868 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4468_22714#" 0 0 4468 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4468_24714#" 0 205148 4468 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4068_22592#" 0 231842 4068 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4068_22714#" 0 0 4068 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_3668_22592#" 0 224480 3668 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_3668_22714#" 0 0 3668 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_3268_22714#" 0 0 3268 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_3268_24714#" 0 200295 3268 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2868_22714#" 0 0 2868 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2868_24714#" 0 205148 2868 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2468_22592#" 0 233917 2468 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2468_22714#" 0 0 2468 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2068_22592#" 0 228000 2068 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2068_22714#" 0 0 2068 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1668_22714#" 0 0 1668 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1668_24714#" 0 240607 1668 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "XCCM.vcm" 0 9.25216e+06 1268 22592 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "XCCM.vcm" "XRB.vcm"
+node "a_1268_22714#" 0 0 1268 22714 hires 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1268_24714#" 0 268913 1268 24714 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "VSS" "XMDP.VSS"
+equiv "VSS" "XMSW.VSS"
+equiv "VSS" "XRD.VSS"
+equiv "VSS" "XRDB.VSS"
+equiv "VSS" "XRL.VSS"
+equiv "VSS" "XRB.VSS"
+equiv "VSS" "XCCM.VSS"
+equiv "VSS" "XMT.VSS"
+cap "a_3268_24714#" "a_2868_24714#" 37853.5
+cap "a_7268_22592#" "a_6868_22592#" 37853.5
+cap "XCCM.vcm" "a_2468_22592#" 37324
+cap "a_1188_17964#" "XMT.s2" 51919.4
+cap "XCC2.gn" "a_6868_22592#" 4770.46
+cap "XCC1.gp" "a_7268_22592#" 21836.6
+cap "INN" "INP" 2.22758e+06
+cap "a_4068_22592#" "a_2468_22592#" 2415.1
+cap "a_5268_22592#" "a_3668_22592#" 3.82922
+cap "XMT.s1" "GB" 277907
+cap "XCC2.gn" "a_7700_16658#" 5662.08
+cap "XMT.s1" "OUTN" 1.55838e+06
+cap "a_42932_3360#" "NB" 4.8576
+cap "a_9668_22592#" "VDD" 26505.7
+cap "XCC2.gn" "XCC1.gp" 1.52026e+06
+cap "XMT.s1" "XMT.s2" 2.9114e+06
+cap "XMT.s1" "a_4276_16600#" 15383.1
+cap "VDD" "XCC1.gp" 748657
+cap "GB" "GA" 83905.6
+cap "XMT.s1" "a_42932_1088#" 35700.5
+cap "OUTN" "GA" 149458
+cap "VDD" "a_10068_24414#" 2698.7
+cap "a_7700_16658#" "XRD.da" 9810.92
+cap "XMT.s2" "GA" 74010.6
+cap "a_4276_17964#" "XCC1.gp" 3905.63
+cap "a_2732_17964#" "XCC2.gn" 2997.57
+cap "a_7268_22592#" "XCCM.vcm" 31566.1
+cap "a_2732_17964#" "VDD" 3858.36
+cap "a_4868_24714#" "a_3268_24714#" 2415.1
+cap "INN" "a_1188_16600#" 1980.72
+cap "XMT.s1" "a_26148_3360#" 10015.6
+cap "XCC2.gn" "NB" 38256.3
+cap "OUTN" "a_2732_16600#" 40883.9
+cap "XCC2.gn" "XCCM.vcm" 40975
+cap "a_2732_16600#" "XMT.s2" 56346
+cap "a_4276_17964#" "a_2732_17964#" 3.7544
+cap "VDD" "XCCM.vcm" 2.23041e+06
+cap "VDD" "NB" 276387
+cap "INN" "a_26148_1088#" 82613.3
+cap "a_4276_16600#" "a_2732_16600#" 3.7544
+cap "a_11268_22592#" "XCCM.vcm" 1233.92
+cap "a_2068_22592#" "a_3668_22592#" 3.82922
+cap "GB" "XRDB.db" 267355
+cap "OUTN" "XRDB.db" 196925
+cap "XMT.s2" "XRDB.db" 43607.1
+cap "INP" "GA" 165338
+cap "INN" "XCC1.gp" 765598
+cap "OUTP" "GB" 3833.54
+cap "OUTN" "OUTP" 604714
+cap "a_1188_16600#" "a_1188_17964#" 1.32797
+cap "a_1268_24714#" "a_2868_24714#" 3.82922
+cap "OUTP" "XMT.s2" 758067
+cap "XMT.s1" "a_5508_16658#" 66819.8
+cap "a_5268_22592#" "a_6868_22592#" 3.82922
+cap "OUTP" "a_4276_16600#" 28703.5
+cap "XMT.s1" "a_1188_16600#" 53403.1
+cap "a_5268_22592#" "XCC1.gp" 25510.1
+cap "a_5508_16658#" "GA" 4.7905
+cap "XMT.s1" "a_26148_1088#" 75176
+cap "a_10868_24381#" "a_9268_24414#" 3066.79
+cap "a_6468_24714#" "a_4868_24714#" 2415.1
+cap "a_1188_17964#" "XCC1.gp" 9365.79
+cap "a_1188_16600#" "a_2732_16600#" 3.7544
+cap "VDD" "a_42932_3360#" 157538
+cap "a_5268_22592#" "XCCM.vcm" 14543.8
+cap "XMT.s1" "a_7700_16658#" 74781.7
+cap "XMT.s1" "XCC1.gp" 797304
+cap "a_1188_17964#" "a_2732_17964#" 3.7544
+cap "a_5268_22592#" "a_4068_22592#" 15833.4
+cap "XCC2.gn" "a_7268_22592#" 16454.9
+cap "a_7700_16658#" "GA" 1033.03
+cap "a_5508_16658#" "XRDB.db" 21006.2
+cap "XCC1.gp" "GA" 322614
+cap "XMT.s1" "a_2732_17964#" 48800.6
+cap "VDD" "XCC2.gn" 714269
+cap "OUTP" "a_5508_16658#" 2909.75
+cap "XCC1.gp" "a_2068_22592#" 17317.6
+cap "XMT.s1" "NB" 1.19636e+07
+cap "OUTN" "GB" 26218.5
+cap "XMT.s2" "GB" 34656.1
+cap "a_2732_16600#" "XCC1.gp" 560.313
+cap "a_4276_17964#" "XCC2.gn" 10757.2
+cap "OUTN" "XMT.s2" 1.27065e+06
+cap "XCC2.gn" "XRD.da" 27515.6
+cap "a_3268_24714#" "a_1668_24714#" 2415.1
+cap "a_4276_17964#" "VDD" 3858.36
+cap "a_8068_24714#" "a_7668_24714#" 37853.5
+cap "a_5668_22592#" "a_6868_22592#" 15833.4
+cap "OUTN" "a_4276_16600#" 14080.2
+cap "a_4276_16600#" "XMT.s2" 66628.8
+cap "a_2732_16600#" "a_2732_17964#" 1.32797
+cap "a_5668_22592#" "XCC1.gp" 11261
+cap "XMT.s2" "a_42932_1088#" 2976.6
+cap "a_2068_22592#" "XCCM.vcm" 27071.3
+cap "a_7700_16658#" "XRDB.db" 44443.9
+cap "a_2868_24714#" "a_1668_24714#" 15833.4
+cap "XMT.s2" "a_26148_3360#" 35700.5
+cap "OUTP" "a_7700_16658#" 479.192
+cap "OUTP" "XCC1.gp" 266442
+cap "a_5668_22592#" "XCCM.vcm" 32457
+cap "INP" "GB" 451069
+cap "INN" "XCC2.gn" 1.6407e+07
+cap "a_10868_24381#" "a_10068_24414#" 4312.5
+cap "INN" "VDD" 4.36658e+06
+cap "a_5668_22592#" "a_4068_22592#" 2415.1
+cap "OUTP" "a_2732_17964#" 38098.8
+cap "a_10868_24381#" "XCCM.vcm" 32419.6
+cap "a_7668_24714#" "a_6068_24714#" 3.82922
+cap "XMT.s1" "a_42932_3360#" 2976.6
+cap "OUTN" "a_5508_16658#" 14868.2
+cap "a_6068_24714#" "a_4468_24714#" 3.82922
+cap "XMT.s2" "a_5508_16658#" 15436.3
+cap "a_1188_16600#" "OUTN" 34645.4
+cap "a_2068_22592#" "a_2468_22592#" 37853.5
+cap "a_4276_16600#" "a_5508_16658#" 5.05406
+cap "a_1188_17964#" "XCC2.gn" 4.8576
+cap "a_1268_24714#" "a_1668_24714#" 37853.5
+cap "XMT.s2" "a_26148_1088#" 2976.6
+cap "a_1188_17964#" "VDD" 1437.58
+cap "XMT.s1" "XCC2.gn" 313761
+cap "XMT.s1" "VDD" 606063
+cap "a_7700_16658#" "GB" 4.7905
+cap "OUTN" "a_7700_16658#" 27198.1
+cap "XCC1.gp" "GB" 171192
+cap "XCC2.gn" "GA" 331051
+cap "XMT.s1" "a_4276_17964#" 48800.6
+cap "XMT.s2" "a_7700_16658#" 12902.7
+cap "OUTN" "XCC1.gp" 788112
+cap "XMT.s1" "XRD.da" 375122
+cap "VDD" "GA" 301590
+cap "XMT.s2" "XCC1.gp" 242579
+cap "a_26148_3360#" "a_26148_1088#" 15.631
+cap "a_2732_16600#" "XCC2.gn" 1596.82
+cap "a_4468_24714#" "a_3268_24714#" 15833.4
+cap "OUTN" "a_2732_17964#" 28939.9
+cap "XRD.da" "GA" 153127
+cap "a_2732_17964#" "XMT.s2" 55827.1
+cap "a_5668_22592#" "a_7268_22592#" 2415.1
+cap "XMT.s2" "NB" 1.20801e+07
+cap "INN" "a_1188_17964#" 1980.72
+cap "XCC1.gp" "a_3668_22592#" 40333.6
+cap "a_4468_24714#" "a_2868_24714#" 3.82922
+cap "a_9268_24414#" "a_10068_24414#" 51.33
+cap "XCC2.gn" "XRDB.db" 46755.1
+cap "NB" "a_42932_1088#" 4.8576
+cap "XMT.s1" "INN" 2637.07
+cap "XCC1.gp" "INP" 1.91228e+07
+cap "VDD" "XRDB.db" 1623.63
+cap "OUTP" "XCC2.gn" 726583
+cap "NB" "a_26148_3360#" 64245.6
+cap "OUTP" "VDD" 1.26754e+06
+cap "a_9268_24414#" "XCCM.vcm" 22968.1
+cap "INN" "GA" 180338
+cap "XRD.da" "XRDB.db" 113256
+cap "XCCM.vcm" "a_3668_22592#" 14543.8
+cap "OUTP" "a_4276_17964#" 26858.5
+cap "OUTP" "XRD.da" 8697.01
+cap "a_4068_22592#" "a_3668_22592#" 37853.5
+cap "a_1188_16600#" "XCC1.gp" 21363.7
+cap "a_4868_24714#" "a_4468_24714#" 37853.5
+cap "a_7668_24714#" "a_6468_24714#" 15833.4
+cap "XMT.s2" "a_42932_3360#" 35700.5
+cap "XCC1.gp" "a_6868_22592#" 33106.3
+cap "a_5668_22592#" "a_5268_22592#" 37853.5
+cap "INN" "OUTP" 1142.73
+cap "XMT.s1" "GA" 250002
+cap "a_42932_3360#" "a_42932_1088#" 15.631
+cap "NB" "a_26148_1088#" 1591.24
+cap "a_3668_22592#" "a_2468_22592#" 15833.4
+cap "XMT.s1" "a_2732_16600#" 62306.5
+cap "XCC2.gn" "GB" 2.21168e+06
+cap "OUTN" "XCC2.gn" 284127
+cap "VDD" "GB" 411232
+cap "a_2732_17964#" "XCC1.gp" 11594.6
+cap "XMT.s2" "XCC2.gn" 754865
+cap "OUTN" "VDD" 835090
+cap "a_9668_22592#" "XCCM.vcm" 25717.9
+cap "a_6868_22592#" "XCCM.vcm" 14779.5
+cap "XMT.s2" "VDD" 567837
+cap "a_4276_16600#" "XCC2.gn" 11706.2
+cap "OUTN" "a_4276_17964#" 28939.9
+cap "XCC1.gp" "XCCM.vcm" 170456
+cap "XRD.da" "GB" 44398.2
+cap "a_4276_17964#" "XMT.s2" 8825.94
+cap "OUTN" "XRD.da" 138364
+cap "XMT.s2" "XRD.da" 26605.9
+cap "VDD" "a_42932_1088#" 157538
+cap "OUTP" "a_1188_17964#" 32909.6
+cap "a_10068_24414#" "XCCM.vcm" 37957.7
+cap "XCC1.gp" "a_4068_22592#" 25360.2
+cap "XMT.s1" "XRDB.db" 647679
+cap "a_4276_16600#" "a_4276_17964#" 1.32797
+cap "XCC2.gn" "a_26148_3360#" 72905.7
+cap "a_4276_16600#" "XRD.da" 2430.56
+cap "a_8068_24714#" "a_6468_24714#" 2415.1
+cap "XMT.s1" "OUTP" 811928
+cap "GA" "XRDB.db" 56278.3
+cap "XCC2.gn" "INP" 3.15577e+06
+cap "OUTP" "GA" 23522.3
+cap "a_4068_22592#" "XCCM.vcm" 32457
+cap "VDD" "INP" 3.34709e+06
+cap "INN" "GB" 2.89117e+06
+cap "INN" "OUTN" 1142.73
+cap "OUTP" "a_2732_16600#" 29955
+cap "INN" "XMT.s2" 2637.07
+cap "XCC2.gn" "a_5508_16658#" 12370.3
+cap "XCC1.gp" "a_2468_22592#" 37837.5
+cap "a_6068_24714#" "a_4868_24714#" 15833.4
+cap "XCC2.gn" "a_26148_1088#" 74862.1
+cap "INN" "a_26148_3360#" 97031.4
+cap "OUTP" "XRDB.db" 50354.2
+cap "XRD.da" "a_5508_16658#" 16736.6
+cap "a_6468_24714#" "a_6068_24714#" 37853.5
+device csubckt cap_mim_2f0_m4m5_noshield 24040 1380 24041 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 1380 22881 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 1380 21721 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 1380 20561 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 1380 19401 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 1380 18241 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 1380 17081 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 1380 15921 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 1380 14761 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 1380 13601 1381 l=1000 w=1000 "None" "INN" 844 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 2540 24041 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 2540 22881 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 2540 21721 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 2540 20561 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 2540 19401 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 2540 18241 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 2540 17081 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 2540 15921 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 2540 14761 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 2540 13601 2541 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 3700 24041 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 3700 22881 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 3700 21721 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 3700 20561 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 3700 19401 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 3700 18241 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 3700 17081 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 3700 15921 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 3700 14761 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 3700 13601 3701 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 4860 24041 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 4860 22881 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 4860 21721 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 4860 20561 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 4860 19401 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 4860 18241 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 4860 17081 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 4860 15921 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 4860 14761 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 4860 13601 4861 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 6020 24041 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 6020 22881 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 6020 21721 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 6020 20561 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 6020 19401 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 6020 18241 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 6020 17081 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 6020 15921 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 6020 14761 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 6020 13601 6021 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 7180 24041 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 7180 22881 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 7180 21721 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 7180 20561 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 7180 19401 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 7180 18241 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 7180 17081 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 7180 15921 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 7180 14761 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 7180 13601 7181 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 8340 24041 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 8340 22881 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 8340 21721 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 8340 20561 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 8340 19401 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 8340 18241 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 8340 17081 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 8340 15921 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 8340 14761 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 8340 13601 8341 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 9500 24041 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 9500 22881 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 9500 21721 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 9500 20561 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 9500 19401 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 9500 18241 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 9500 17081 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 9500 15921 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 9500 14761 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 9500 13601 9501 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 10660 24041 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 10660 22881 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 10660 21721 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 10660 20561 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 10660 19401 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 10660 18241 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 10660 17081 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 10660 15921 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 10660 14761 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 10660 13601 10661 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 24040 11820 24041 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 22880 11820 22881 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 21720 11820 21721 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 20560 11820 20561 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 19400 11820 19401 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18240 11820 18241 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 17080 11820 17081 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 15920 11820 15921 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 14760 11820 14761 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 13600 11820 13601 11821 l=1000 w=1000 "None" "INN" 1688 0 "XCC2.gn" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 1380 11561 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 1380 10401 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 1380 9241 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 1380 8081 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 1380 6921 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 1380 5761 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 1380 4601 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 1380 3441 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 1380 2281 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 1380 1121 1381 l=1000 w=1000 "None" "INP" 844 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 2540 11561 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 2540 10401 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 2540 9241 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 2540 8081 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 2540 6921 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 2540 5761 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 2540 4601 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 2540 3441 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 2540 2281 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 2540 1121 2541 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 3700 11561 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 3700 10401 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 3700 9241 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 3700 8081 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 3700 6921 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 3700 5761 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 3700 4601 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 3700 3441 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 3700 2281 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 3700 1121 3701 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 4860 11561 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 4860 10401 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 4860 9241 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 4860 8081 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 4860 6921 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 4860 5761 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 4860 4601 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 4860 3441 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 4860 2281 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 4860 1121 4861 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 6020 11561 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 6020 10401 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 6020 9241 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 6020 8081 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 6020 6921 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 6020 5761 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 6020 4601 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 6020 3441 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 6020 2281 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 6020 1121 6021 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 7180 11561 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 7180 10401 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 7180 9241 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 7180 8081 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 7180 6921 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 7180 5761 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 7180 4601 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 7180 3441 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 7180 2281 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 7180 1121 7181 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 8340 11561 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 8340 10401 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 8340 9241 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 8340 8081 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 8340 6921 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 8340 5761 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 8340 4601 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 8340 3441 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 8340 2281 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 8340 1121 8341 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 9500 11561 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 9500 10401 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 9500 9241 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 9500 8081 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 9500 6921 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 9500 5761 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 9500 4601 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 9500 3441 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 9500 2281 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 9500 1121 9501 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 10660 11561 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 10660 10401 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 10660 9241 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 10660 8081 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 10660 6921 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 10660 5761 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 10660 4601 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 10660 3441 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 10660 2281 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 10660 1121 10661 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 11560 11820 11561 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 10400 11820 10401 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 9240 11820 9241 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 8080 11820 8081 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 6920 11820 6921 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 5760 11820 5761 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 4600 11820 4601 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 3440 11820 3441 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 2280 11820 2281 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 1120 11820 1121 11821 l=1000 w=1000 "None" "INP" 1688 0 "XCC1.gp" 4000 19612800,223600
+device csubckt cap_mim_2f0_m4m5_noshield 18856 22644 18857 22645 l=1000 w=1000 "None" "XCCM.vcm" 844 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 17696 22644 17697 22645 l=1000 w=1000 "None" "XCCM.vcm" 844 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 16536 22644 16537 22645 l=1000 w=1000 "None" "XCCM.vcm" 844 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 15376 22644 15377 22645 l=1000 w=1000 "None" "XCCM.vcm" 844 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 14216 22644 14217 22645 l=1000 w=1000 "None" "XCCM.vcm" 844 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 13056 22644 13057 22645 l=1000 w=1000 "None" "XCCM.vcm" 844 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 18856 23804 18857 23805 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 17696 23804 17697 23805 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 16536 23804 16537 23805 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 15376 23804 15377 23805 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 14216 23804 14217 23805 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 13056 23804 13057 23805 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 18856 24964 18857 24965 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 17696 24964 17697 24965 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 16536 24964 16537 24965 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 15376 24964 15377 24965 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 14216 24964 14217 24965 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 13056 24964 13057 24965 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 18856 26124 18857 26125 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 17696 26124 17697 26125 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 16536 26124 16537 26125 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 15376 26124 15377 26125 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 14216 26124 14217 26125 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 13056 26124 13057 26125 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 18856 27284 18857 27285 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 17696 27284 17697 27285 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 16536 27284 16537 27285 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 15376 27284 15377 27285 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 14216 27284 14217 27285 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 13056 27284 13057 27285 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 18856 28444 18857 28445 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 17696 28444 17697 28445 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 16536 28444 16537 28445 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 15376 28444 15377 28445 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 14216 28444 14217 28445 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 13056 28444 13057 28445 l=1000 w=1000 "None" "XCCM.vcm" 1688 0 "VSS" 4000 7625600,86320
+device msubckt nfet_03v3 42383 1148 42384 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 178000,4178
+device msubckt nfet_03v3 41877 1148 41878 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 41371 1148 41372 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 40865 1148 40866 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 40359 1148 40360 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 39853 1148 39854 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 39347 1148 39348 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 38841 1148 38842 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 38335 1148 38336 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 37829 1148 37830 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 37323 1148 37324 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 36817 1148 36818 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 36311 1148 36312 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 35805 1148 35806 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 35299 1148 35300 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 34793 1148 34794 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 34287 1148 34288 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 33781 1148 33782 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 33275 1148 33276 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 32769 1148 32770 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 32263 1148 32264 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 31757 1148 31758 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 31251 1148 31252 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 30745 1148 30746 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 30239 1148 30240 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 29733 1148 29734 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 29227 1148 29228 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 28721 1148 28722 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 28215 1148 28216 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 27709 1148 27710 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 27203 1148 27204 1149 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 26697 1148 26698 1149 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 178000,4178 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 42383 3420 42384 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 178000,4178
+device msubckt nfet_03v3 41877 3420 41878 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 41371 3420 41372 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 40865 3420 40866 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 40359 3420 40360 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 39853 3420 39854 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 39347 3420 39348 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 38841 3420 38842 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 38335 3420 38336 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 37829 3420 37830 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 37323 3420 37324 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 36817 3420 36818 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 36311 3420 36312 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 35805 3420 35806 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 35299 3420 35300 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 34793 3420 34794 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 34287 3420 34288 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 33781 3420 33782 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 33275 3420 33276 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 32769 3420 32770 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 32263 3420 32264 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 31757 3420 31758 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 31251 3420 31252 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 30745 3420 30746 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 30239 3420 30240 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 29733 3420 29734 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 29227 3420 29228 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 28721 3420 28722 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s2" 2000 106000,2106
+device msubckt nfet_03v3 28215 3420 28216 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s1" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 27709 3420 27710 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 106000,2106 "XMT.s1" 2000 106000,2106
+device msubckt nfet_03v3 27203 3420 27204 3421 l=400 w=2000 "VSS" "NB" 800 0 "XMT.s2" 2000 106000,2106 "VSS" 2000 106000,2106
+device msubckt nfet_03v3 26697 3420 26698 3421 l=400 w=2000 "VSS" "NB" 800 0 "VSS" 2000 178000,4178 "XMT.s2" 2000 106000,2106
+device rsubckt ppolyf_u_1k 13084 16870 13085 16871 l=400 w=200 "VSS" "a_13084_16870#" 0 0 "VDD" 200 24400,644 "OUTP" 200 24400,644
+device rsubckt ppolyf_u_1k 12684 16870 12685 16871 l=400 w=200 "VSS" "a_12684_16870#" 0 0 "VDD" 200 24400,644 "OUTN" 200 24400,644
+device rsubckt ppolyf_u_1k 10948 16870 10949 16871 l=360 w=400 "VSS" "a_10948_16870#" 0 0 "XRDB.db" 400 48800,1044 "XMT.s2" 400 48800,1044
+device rsubckt ppolyf_u_1k 9412 16870 9413 16871 l=600 w=200 "VSS" "a_9412_16870#" 0 0 "XRD.da" 200 24400,644 "XMT.s2" 200 24400,644
+device rsubckt ppolyf_u_1k 9012 16870 9013 16871 l=400 w=200 "VSS" "a_9012_16870#" 0 0 "XMT.s1" 200 24400,644 "XMT.s2" 200 24400,644
+device msubckt nfet_03v3 7495 16718 7496 16719 l=56 w=1000 "VSS" "GB" 112 0 "XRDB.db" 1000 53000,1106 "XMT.s1" 1000 89000,2178
+device msubckt nfet_03v3 7333 16718 7334 16719 l=56 w=1000 "VSS" "GB" 112 0 "XMT.s1" 1000 53000,1106 "XRDB.db" 1000 53000,1106
+device msubckt nfet_03v3 7171 16718 7172 16719 l=56 w=1000 "VSS" "GB" 112 0 "XRDB.db" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 7009 16718 7010 16719 l=56 w=1000 "VSS" "GB" 112 0 "XMT.s1" 1000 53000,1106 "XRDB.db" 1000 53000,1106
+device msubckt nfet_03v3 6847 16718 6848 16719 l=56 w=1000 "VSS" "GB" 112 0 "XRDB.db" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 6685 16718 6686 16719 l=56 w=1000 "VSS" "GB" 112 0 "XMT.s1" 1000 53000,1106 "XRDB.db" 1000 53000,1106
+device msubckt nfet_03v3 6523 16718 6524 16719 l=56 w=1000 "VSS" "GB" 112 0 "XRDB.db" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 6361 16718 6362 16719 l=56 w=1000 "VSS" "GB" 112 0 "XMT.s1" 1000 53000,1106 "XRDB.db" 1000 53000,1106
+device msubckt nfet_03v3 6199 16718 6200 16719 l=56 w=1000 "VSS" "GA" 112 0 "XRD.da" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 6037 16718 6038 16719 l=56 w=1000 "VSS" "GA" 112 0 "XMT.s1" 1000 53000,1106 "XRD.da" 1000 53000,1106
+device msubckt nfet_03v3 5875 16718 5876 16719 l=56 w=1000 "VSS" "GA" 112 0 "XRD.da" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 5713 16718 5714 16719 l=56 w=1000 "VSS" "GA" 112 0 "XMT.s1" 1000 89000,2178 "XRD.da" 1000 53000,1106
+device msubckt nfet_03v3 4071 16660 4072 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 89000,2178
+device msubckt nfet_03v3 3909 16660 3910 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 3747 16660 3748 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 53000,1106
+device msubckt nfet_03v3 3585 16660 3586 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 3423 16660 3424 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 53000,1106
+device msubckt nfet_03v3 3261 16660 3262 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 3099 16660 3100 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 53000,1106
+device msubckt nfet_03v3 2937 16660 2938 16661 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 89000,2178 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 2527 16660 2528 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 89000,2178
+device msubckt nfet_03v3 2365 16660 2366 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 2203 16660 2204 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 2041 16660 2042 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 1879 16660 1880 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 1717 16660 1718 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 1555 16660 1556 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 1393 16660 1394 16661 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 89000,2178 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 4071 18024 4072 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 89000,2178
+device msubckt nfet_03v3 3909 18024 3910 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 3747 18024 3748 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 3585 18024 3586 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 3423 18024 3424 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 3261 18024 3262 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 53000,1106 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 3099 18024 3100 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "OUTN" 1000 53000,1106 "XMT.s1" 1000 53000,1106
+device msubckt nfet_03v3 2937 18024 2938 18025 l=56 w=1000 "VSS" "XCC1.gp" 112 0 "XMT.s1" 1000 89000,2178 "OUTN" 1000 53000,1106
+device msubckt nfet_03v3 2527 18024 2528 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 89000,2178
+device msubckt nfet_03v3 2365 18024 2366 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 2203 18024 2204 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 53000,1106
+device msubckt nfet_03v3 2041 18024 2042 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 1879 18024 1880 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 53000,1106
+device msubckt nfet_03v3 1717 18024 1718 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 53000,1106 "OUTP" 1000 53000,1106
+device msubckt nfet_03v3 1555 18024 1556 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "OUTP" 1000 53000,1106 "XMT.s2" 1000 53000,1106
+device msubckt nfet_03v3 1393 18024 1394 18025 l=56 w=1000 "VSS" "XCC2.gn" 112 0 "XMT.s2" 1000 89000,2178 "OUTP" 1000 53000,1106
+device rsubckt ppolyf_u_1k 11668 22714 11669 22715 l=1667 w=200 "VSS" "a_11668_22714#" 0 0 "XCCM.vcm" 200 24400,644 "a_11268_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 11268 22714 11269 22715 l=1667 w=200 "VSS" "a_11268_22714#" 0 0 "a_10868_24381#" 200 24400,644 "a_11268_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 10868 22714 10869 22715 l=1667 w=200 "VSS" "a_10868_22714#" 0 0 "a_10868_24381#" 200 24400,644 "VSS" 200 24400,644
+device rsubckt ppolyf_u_1k 10468 22714 10469 22715 l=1700 w=200 "VSS" "a_10468_22714#" 0 0 "a_10068_24414#" 200 24400,644 "VDD" 200 24400,644
+device rsubckt ppolyf_u_1k 10068 22714 10069 22715 l=1700 w=200 "VSS" "a_10068_22714#" 0 0 "a_10068_24414#" 200 24400,644 "a_9668_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 9668 22714 9669 22715 l=1700 w=200 "VSS" "a_9668_22714#" 0 0 "a_9268_24414#" 200 24400,644 "a_9668_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 9268 22714 9269 22715 l=1700 w=200 "VSS" "a_9268_22714#" 0 0 "a_9268_24414#" 200 24400,644 "XCCM.vcm" 200 24400,644
+device rsubckt ppolyf_u_1k 8868 22714 8869 22715 l=2000 w=200 "VSS" "a_8868_22714#" 0 0 "a_8068_24714#" 200 24400,644 "XCC2.gn" 200 24400,644
+device rsubckt ppolyf_u_1k 8468 22714 8469 22715 l=2000 w=200 "VSS" "a_8468_22714#" 0 0 "a_7668_24714#" 200 24400,644 "XCC1.gp" 200 24400,644
+device rsubckt ppolyf_u_1k 8068 22714 8069 22715 l=2000 w=200 "VSS" "a_8068_22714#" 0 0 "a_8068_24714#" 200 24400,644 "a_7268_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 7668 22714 7669 22715 l=2000 w=200 "VSS" "a_7668_22714#" 0 0 "a_7668_24714#" 200 24400,644 "a_6868_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 7268 22714 7269 22715 l=2000 w=200 "VSS" "a_7268_22714#" 0 0 "a_6468_24714#" 200 24400,644 "a_7268_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 6868 22714 6869 22715 l=2000 w=200 "VSS" "a_6868_22714#" 0 0 "a_6068_24714#" 200 24400,644 "a_6868_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 6468 22714 6469 22715 l=2000 w=200 "VSS" "a_6468_22714#" 0 0 "a_6468_24714#" 200 24400,644 "a_5668_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 6068 22714 6069 22715 l=2000 w=200 "VSS" "a_6068_22714#" 0 0 "a_6068_24714#" 200 24400,644 "a_5268_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 5668 22714 5669 22715 l=2000 w=200 "VSS" "a_5668_22714#" 0 0 "a_4868_24714#" 200 24400,644 "a_5668_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 5268 22714 5269 22715 l=2000 w=200 "VSS" "a_5268_22714#" 0 0 "a_4468_24714#" 200 24400,644 "a_5268_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 4868 22714 4869 22715 l=2000 w=200 "VSS" "a_4868_22714#" 0 0 "a_4868_24714#" 200 24400,644 "a_4068_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 4468 22714 4469 22715 l=2000 w=200 "VSS" "a_4468_22714#" 0 0 "a_4468_24714#" 200 24400,644 "a_3668_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 4068 22714 4069 22715 l=2000 w=200 "VSS" "a_4068_22714#" 0 0 "a_3268_24714#" 200 24400,644 "a_4068_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 3668 22714 3669 22715 l=2000 w=200 "VSS" "a_3668_22714#" 0 0 "a_2868_24714#" 200 24400,644 "a_3668_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 3268 22714 3269 22715 l=2000 w=200 "VSS" "a_3268_22714#" 0 0 "a_3268_24714#" 200 24400,644 "a_2468_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 2868 22714 2869 22715 l=2000 w=200 "VSS" "a_2868_22714#" 0 0 "a_2868_24714#" 200 24400,644 "a_2068_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 2468 22714 2469 22715 l=2000 w=200 "VSS" "a_2468_22714#" 0 0 "a_1668_24714#" 200 24400,644 "a_2468_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 2068 22714 2069 22715 l=2000 w=200 "VSS" "a_2068_22714#" 0 0 "a_1268_24714#" 200 24400,644 "a_2068_22592#" 200 24400,644
+device rsubckt ppolyf_u_1k 1668 22714 1669 22715 l=2000 w=200 "VSS" "a_1668_22714#" 0 0 "a_1668_24714#" 200 24400,644 "XCCM.vcm" 200 24400,644
+device rsubckt ppolyf_u_1k 1268 22714 1269 22715 l=2000 w=200 "VSS" "a_1268_22714#" 0 0 "a_1268_24714#" 200 24400,644 "XCCM.vcm" 200 24400,644

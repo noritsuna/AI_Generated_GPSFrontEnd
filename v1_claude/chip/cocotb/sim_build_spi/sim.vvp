@@ -1,0 +1,1742 @@
+#! /nix/store/nifnxfn7bcwpzxnyfbis5pdbd738pxjc-iverilog-13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/nix/store/nifnxfn7bcwpzxnyfbis5pdbd738pxjc-iverilog-13.0/lib/ivl/system.vpi";
+:vpi_module "/nix/store/nifnxfn7bcwpzxnyfbis5pdbd738pxjc-iverilog-13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/nix/store/nifnxfn7bcwpzxnyfbis5pdbd738pxjc-iverilog-13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/nix/store/nifnxfn7bcwpzxnyfbis5pdbd738pxjc-iverilog-13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/nix/store/nifnxfn7bcwpzxnyfbis5pdbd738pxjc-iverilog-13.0/lib/ivl/va_math.vpi";
+:vpi_module "/nix/store/nifnxfn7bcwpzxnyfbis5pdbd738pxjc-iverilog-13.0/lib/ivl/v2009.vpi";
+S_0x5e48159abe00 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x5e48159c3f90 .scope module, "chip_top" "chip_top" 3 35;
+ .timescale 0 0;
+    .port_info 0 /INOUT 1 "clk_PAD";
+    .port_info 1 /INOUT 1 "rst_n_PAD";
+    .port_info 2 /INOUT 2 "input_PAD";
+    .port_info 3 /INOUT 6 "bidir_PAD";
+    .port_info 4 /INOUT 3 "analog_PAD";
+    .port_info 5 /INOUT 1 "rf_PAD";
+    .port_info 6 /INOUT 29 "nc_PAD";
+P_0x5e481592ed50 .param/l "NUM_ANALOG_PADS" 0 3 47, +C4<00000000000000000000000000000011>;
+P_0x5e481592ed90 .param/l "NUM_BIDIR_PADS" 0 3 46, +C4<00000000000000000000000000000110>;
+P_0x5e481592edd0 .param/l "NUM_DVDD_PADS" 0 3 37, +C4<00000000000000000000000000000011>;
+P_0x5e481592ee10 .param/l "NUM_DVSS_PADS" 0 3 38, +C4<00000000000000000000000000000011>;
+P_0x5e481592ee50 .param/l "NUM_INPUT_PADS" 0 3 45, +C4<00000000000000000000000000000010>;
+P_0x5e481592ee90 .param/l "NUM_NC_PADS" 0 3 49, +C4<00000000000000000000000000011101>;
+P_0x5e481592eed0 .param/l "NUM_VDD_PADS" 0 3 41, +C4<00000000000000000000000000000001>;
+P_0x5e481592ef10 .param/l "NUM_VSS_PADS" 0 3 42, +C4<00000000000000000000000000000001>;
+o0x7314583d37e8 .functor BUFZ 3, c4<zzz>; HiZ drive
+I0x5e48158e6e50 .island tran;
+p0x7314583d37e8 .port I0x5e48158e6e50, o0x7314583d37e8;
+v0x5e48159f40c0_0 .net8 "analog_PAD", 2 0, p0x7314583d37e8;  0 drivers, strength-aware
+v0x5e48159f41b0_0 .net "bidir_CORE2PAD", 5 0, L_0x5e4815a02b70;  1 drivers
+L_0x731458386210 .functor BUFT 1, C4<000000>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f4280_0 .net "bidir_CORE2PAD_CS", 5 0, L_0x731458386210;  1 drivers
+L_0x7314583862a0 .functor BUFT 1, C4<000000>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f4380_0 .net "bidir_CORE2PAD_IE", 5 0, L_0x7314583862a0;  1 drivers
+v0x5e48159f4450_0 .net "bidir_CORE2PAD_OE", 5 0, L_0x5e48159ffd90;  1 drivers
+L_0x731458386330 .functor BUFT 1, C4<100000>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f4540_0 .net "bidir_CORE2PAD_PD", 5 0, L_0x731458386330;  1 drivers
+L_0x7314583862e8 .functor BUFT 1, C4<000000>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f4610_0 .net "bidir_CORE2PAD_PU", 5 0, L_0x7314583862e8;  1 drivers
+L_0x731458386258 .functor BUFT 1, C4<111111>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f46e0_0 .net "bidir_CORE2PAD_SL", 5 0, L_0x731458386258;  1 drivers
+o0x7314583d8048 .functor BUFZ 6, c4<zzzzzz>; HiZ drive
+I0x5e48158e9d40 .island tran;
+p0x7314583d8048 .port I0x5e48158e9d40, o0x7314583d8048;
+v0x5e48159f47b0_0 .net8 "bidir_PAD", 5 0, p0x7314583d8048;  0 drivers, strength-aware
+v0x5e48159f4850_0 .net "bidir_PAD2CORE", 5 0, L_0x5e48159fe290;  1 drivers
+o0x7314583d2198 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f4940_0 .net "clk_PAD", 0 0, o0x7314583d2198;  0 drivers
+v0x5e48159f4a10_0 .net "clk_PAD2CORE", 0 0, L_0x5e48159fd8f0;  1 drivers
+L_0x731458386180 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f4ab0_0 .net "input_CORE2PAD_PD", 1 0, L_0x731458386180;  1 drivers
+L_0x731458386138 .functor BUFT 1, C4<10>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f4b50_0 .net "input_CORE2PAD_PU", 1 0, L_0x731458386138;  1 drivers
+o0x7314583d8078 .functor BUFZ 2, c4<zz>; HiZ drive
+v0x5e48159f4c20_0 .net "input_PAD", 1 0, o0x7314583d8078;  0 drivers
+v0x5e48159f4cc0_0 .net "input_PAD2CORE", 1 0, L_0x5e48159f6b20;  1 drivers
+o0x7314583d80a8 .functor BUFZ 29, c4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+I0x5e48158e6fd0 .island tran;
+p0x7314583d80a8 .port I0x5e48158e6fd0, o0x7314583d80a8;
+v0x5e48159f4db0_0 .net8 "nc_PAD", 28 0, p0x7314583d80a8;  0 drivers, strength-aware
+o0x7314583cf018 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f4f80_0 .net "rf_PAD", 0 0, o0x7314583cf018;  0 drivers
+o0x7314583d7b98 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f5020_0 .net "rst_n_PAD", 0 0, o0x7314583d7b98;  0 drivers
+v0x5e48159f50f0_0 .net "rst_n_PAD2CORE", 0 0, L_0x5e48159ffb90;  1 drivers
+L_0x5e48159f6390 .part L_0x731458386138, 0, 1;
+L_0x5e48159f64b0 .part L_0x731458386180, 0, 1;
+L_0x5e48159f65a0 .part o0x7314583d8078, 0, 1;
+L_0x5e48159f67d0 .part L_0x731458386138, 1, 1;
+L_0x5e48159f68d0 .part L_0x731458386180, 1, 1;
+L_0x5e48159f69a0 .part o0x7314583d8078, 1, 1;
+L_0x5e48159f6b20 .concat8 [ 1 1 0 0], L_0x5e48159f6110, L_0x5e48159f6690;
+L_0x5e48159f7a40 .part L_0x731458386210, 0, 1;
+L_0x5e48159f7b80 .part L_0x731458386258, 0, 1;
+L_0x5e48159f7c70 .part L_0x7314583862a0, 0, 1;
+L_0x5e48159f7db0 .part L_0x5e48159ffd90, 0, 1;
+L_0x5e48159f7e50 .part L_0x7314583862e8, 0, 1;
+L_0x5e48159f7ef0 .part L_0x731458386330, 0, 1;
+L_0x5e48159f7fe0 .part L_0x5e4815a02b70, 0, 1;
+L_0x5e48159f8df0 .part L_0x731458386210, 1, 1;
+L_0x5e48159f8e90 .part L_0x731458386258, 1, 1;
+L_0x5e48159f8fc0 .part L_0x7314583862a0, 1, 1;
+L_0x5e48159f90b0 .part L_0x5e48159ffd90, 1, 1;
+L_0x5e48159f91f0 .part L_0x7314583862e8, 1, 1;
+L_0x5e48159f9290 .part L_0x731458386330, 1, 1;
+L_0x5e48159f9150 .part L_0x5e4815a02b70, 1, 1;
+L_0x5e48159fa0c0 .part L_0x731458386210, 2, 1;
+L_0x5e48159f9330 .part L_0x731458386258, 2, 1;
+L_0x5e48159fa340 .part L_0x7314583862a0, 2, 1;
+L_0x5e48159fa1f0 .part L_0x5e48159ffd90, 2, 1;
+L_0x5e48159fa660 .part L_0x7314583862e8, 2, 1;
+L_0x5e48159fa470 .part L_0x731458386330, 2, 1;
+L_0x5e48159fa900 .part L_0x5e4815a02b70, 2, 1;
+L_0x5e48159fb5d0 .part L_0x731458386210, 3, 1;
+L_0x5e48159fb670 .part L_0x731458386258, 3, 1;
+L_0x5e48159faa30 .part L_0x7314583862a0, 3, 1;
+L_0x5e48159fb810 .part L_0x5e48159ffd90, 3, 1;
+L_0x5e48159fb710 .part L_0x7314583862e8, 3, 1;
+L_0x5e48159fba50 .part L_0x731458386330, 3, 1;
+L_0x5e48159fb940 .part L_0x5e4815a02b70, 3, 1;
+L_0x5e48159fc8f0 .part L_0x731458386210, 4, 1;
+L_0x5e48159fbaf0 .part L_0x731458386258, 4, 1;
+L_0x5e48159fcac0 .part L_0x7314583862a0, 4, 1;
+L_0x5e48159fc990 .part L_0x5e48159ffd90, 4, 1;
+L_0x5e48159fcca0 .part L_0x7314583862e8, 4, 1;
+L_0x5e48159fcb60 .part L_0x731458386330, 4, 1;
+L_0x5e48159fcc00 .part L_0x5e4815a02b70, 4, 1;
+L_0x5e48159fdc00 .part L_0x731458386210, 5, 1;
+L_0x5e48159fdca0 .part L_0x731458386258, 5, 1;
+L_0x5e48159fcd40 .part L_0x7314583862a0, 5, 1;
+L_0x5e48159fdeb0 .part L_0x5e48159ffd90, 5, 1;
+L_0x5e48159fdd40 .part L_0x7314583862e8, 5, 1;
+L_0x5e48159fdde0 .part L_0x731458386330, 5, 1;
+L_0x5e48159fe170 .part L_0x5e4815a02b70, 5, 1;
+LS_0x5e48159fe290_0_0 .concat8 [ 1 1 1 1], L_0x5e48159f6cb0, L_0x5e48159f7730, L_0x5e48159f8ae0, L_0x5e48159f9db0;
+LS_0x5e48159fe290_0_4 .concat8 [ 1 1 0 0], L_0x5e48159fb2c0, L_0x5e48159fc5e0;
+L_0x5e48159fe290 .concat8 [ 4 2 0 0], LS_0x5e48159fe290_0_0, LS_0x5e48159fe290_0_4;
+S_0x5e48159907a0 .scope module, "afe_rf_pad" "gf180mcu_gnss_io__afe_rf" 3 276, 4 8 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+    .port_info 0 /INOUT 1 "RF";
+    .port_info 1 /INOUT 1 "VDDA";
+    .port_info 2 /INOUT 1 "VDDV";
+    .port_info 3 /INOUT 1 "VSS";
+v0x5e4815995620_0 .net "RF", 0 0, o0x7314583cf018;  alias, 0 drivers
+o0x7314583cf048 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48158ac020_0 .net "VDDA", 0 0, o0x7314583cf048;  0 drivers
+o0x7314583cf078 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48158abeb0_0 .net "VDDV", 0 0, o0x7314583cf078;  0 drivers
+o0x7314583cf0a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48158aa600_0 .net "VSS", 0 0, o0x7314583cf0a8;  0 drivers
+S_0x5e4815995e70 .scope generate, "analog[0]" "analog[0]" 3 225, 3 225 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159c81f0 .param/l "i" 1 3 225, +C4<00>;
+o0x7314583cf198 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583cf198 .port I0x5e48158e6e50, o0x7314583cf198;
+ .tranvp 3 1 0, I0x5e48158e6e50, p0x7314583d37e8 p0x7314583cf198;
+S_0x5e481599a4f0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 227, 5 27 0, S_0x5e4815995e70;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e4815929170_0 .net8 "ASIG5V", 0 0, p0x7314583cf198;  0 drivers, strength-aware
+o0x7314583cf1c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e481594cdf0_0 .net "DVDD", 0 0, o0x7314583cf1c8;  0 drivers
+o0x7314583cf1f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e481594c3e0_0 .net "DVSS", 0 0, o0x7314583cf1f8;  0 drivers
+o0x7314583cf228 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e4815994ec0_0 .net "VDD", 0 0, o0x7314583cf228;  0 drivers
+o0x7314583cf258 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c8450_0 .net "VSS", 0 0, o0x7314583cf258;  0 drivers
+S_0x5e481599eb10 .scope generate, "analog[1]" "analog[1]" 3 225, 3 225 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159c8670 .param/l "i" 1 3 225, +C4<01>;
+o0x7314583cf378 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583cf378 .port I0x5e48158e6e50, o0x7314583cf378;
+ .tranvp 3 1 1, I0x5e48158e6e50, p0x7314583d37e8 p0x7314583cf378;
+S_0x5e48159a3130 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 227, 5 27 0, S_0x5e481599eb10;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159c8870_0 .net8 "ASIG5V", 0 0, p0x7314583cf378;  0 drivers, strength-aware
+o0x7314583cf3a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c8930_0 .net "DVDD", 0 0, o0x7314583cf3a8;  0 drivers
+o0x7314583cf3d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c89f0_0 .net "DVSS", 0 0, o0x7314583cf3d8;  0 drivers
+o0x7314583cf408 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c8a90_0 .net "VDD", 0 0, o0x7314583cf408;  0 drivers
+o0x7314583cf438 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c8b50_0 .net "VSS", 0 0, o0x7314583cf438;  0 drivers
+S_0x5e48159a7750 .scope generate, "analog[2]" "analog[2]" 3 225, 3 225 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159c8d70 .param/l "i" 1 3 225, +C4<010>;
+o0x7314583cf558 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583cf558 .port I0x5e48158e6e50, o0x7314583cf558;
+ .tranvp 3 1 2, I0x5e48158e6e50, p0x7314583d37e8 p0x7314583cf558;
+S_0x5e48159c8e50 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 227, 5 27 0, S_0x5e48159a7750;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159c9120_0 .net8 "ASIG5V", 0 0, p0x7314583cf558;  0 drivers, strength-aware
+o0x7314583cf588 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c91e0_0 .net "DVDD", 0 0, o0x7314583cf588;  0 drivers
+o0x7314583cf5b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c92a0_0 .net "DVSS", 0 0, o0x7314583cf5b8;  0 drivers
+o0x7314583cf5e8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c9340_0 .net "VDD", 0 0, o0x7314583cf5e8;  0 drivers
+o0x7314583cf618 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c9400_0 .net "VSS", 0 0, o0x7314583cf618;  0 drivers
+S_0x5e48159c95b0 .scope generate, "bidir[0]" "bidir[0]" 3 199, 3 199 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159c9800 .param/l "i" 1 3 199, +C4<00>;
+RS_0x7314583cf858 .resolv tri, L_0x5e48159f6dc0, L_0x5e48159f6f20, L_0x5e48159f7490;
+p0x7314583cf858 .port I0x5e48158e9d40, RS_0x7314583cf858;
+ .tranvp 6 1 0, I0x5e48158e9d40, p0x7314583d8048 p0x7314583cf858;
+S_0x5e48159c98e0 .scope module, "pad" "gf180mcu_fd_io__bi_24t" 3 201, 5 64 0, S_0x5e48159c95b0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "CS";
+    .port_info 1 /INPUT 1 "SL";
+    .port_info 2 /INPUT 1 "IE";
+    .port_info 3 /INPUT 1 "OE";
+    .port_info 4 /INPUT 1 "PU";
+    .port_info 5 /INPUT 1 "PD";
+    .port_info 6 /INPUT 1 "A";
+    .port_info 7 /INOUT 1 "PAD";
+    .port_info 8 /OUTPUT 1 "Y";
+    .port_info 9 /INOUT 1 "DVDD";
+    .port_info 10 /INOUT 1 "DVSS";
+    .port_info 11 /INOUT 1 "VDD";
+    .port_info 12 /INOUT 1 "VSS";
+L_0x5e48159f6cb0/d .functor AND 1, p0x7314583cf858, L_0x5e48159f7c70, C4<1>, C4<1>;
+L_0x5e48159f6cb0 .delay 1 (1000,1000,1000) L_0x5e48159f6cb0/d;
+L_0x5e48159f6dc0/d .functor BUFIF1 1, L_0x5e48159f7fe0, L_0x5e48159f7db0, C4<0>, C4<0>;
+L_0x5e48159f6dc0 .delay 1 (1000,1000,1000) L_0x5e48159f6dc0/d;
+L_0x5e48159f58b0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f6f20/d .functor RNMOS 1, L_0x5e48159f58b0, L_0x5e48159f7380, C4<0>, C4<0>;
+L_0x5e48159f6f20 .delay 1 (1000,1000,1000) L_0x5e48159f6f20/d;
+L_0x5e48159f7080 .functor NOT 1, L_0x5e48159f7db0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f7180 .functor NOT 1, L_0x5e48159f7e50, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f71f0 .functor AND 1, L_0x5e48159f7080, L_0x5e48159f7180, C4<1>, C4<1>;
+L_0x5e48159f7380 .functor AND 1, L_0x5e48159f71f0, L_0x5e48159f7ef0, C4<1>, C4<1>;
+L_0x5e48159f5970 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f7490/d .functor RNMOS 1, L_0x5e48159f5970, L_0x5e48159f7860, C4<0>, C4<0>;
+L_0x5e48159f7490 .delay 1 (1000,1000,1000) L_0x5e48159f7490/d;
+L_0x5e48159f7600 .functor NOT 1, L_0x5e48159f7db0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f7670 .functor AND 1, L_0x5e48159f7600, L_0x5e48159f7e50, C4<1>, C4<1>;
+L_0x5e48159f77a0 .functor NOT 1, L_0x5e48159f7ef0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f7860 .functor AND 1, L_0x5e48159f7670, L_0x5e48159f77a0, C4<1>, C4<1>;
+v0x5e48159c9cb0_0 .net "A", 0 0, L_0x5e48159f7fe0;  1 drivers
+v0x5e48159c9d70_0 .net "CS", 0 0, L_0x5e48159f7a40;  1 drivers
+o0x7314583cf798 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c9e30_0 .net "DVDD", 0 0, o0x7314583cf798;  0 drivers
+o0x7314583cf7c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159c9ed0_0 .net "DVSS", 0 0, o0x7314583cf7c8;  0 drivers
+v0x5e48159c9f90_0 .net "IE", 0 0, L_0x5e48159f7c70;  1 drivers
+v0x5e48159ca0a0_0 .net "OE", 0 0, L_0x5e48159f7db0;  1 drivers
+v0x5e48159ca160_0 .net8 "PAD", 0 0, p0x7314583cf858;  3 drivers, strength-aware
+v0x5e48159ca220_0 .net "PD", 0 0, L_0x5e48159f7ef0;  1 drivers
+v0x5e48159ca2e0_0 .net "PU", 0 0, L_0x5e48159f7e50;  1 drivers
+v0x5e48159ca3a0_0 .net "SL", 0 0, L_0x5e48159f7b80;  1 drivers
+o0x7314583cf918 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ca460_0 .net "VDD", 0 0, o0x7314583cf918;  0 drivers
+o0x7314583cf948 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ca520_0 .net "VSS", 0 0, o0x7314583cf948;  0 drivers
+v0x5e48159ca5e0_0 .net "Y", 0 0, L_0x5e48159f6cb0;  1 drivers
+v0x5e48159ca6a0_0 .net *"_ivl_10", 0 0, L_0x5e48159f71f0;  1 drivers
+v0x5e48159ca760_0 .net *"_ivl_12", 0 0, L_0x5e48159f7380;  1 drivers
+v0x5e48159ca820_0 .net *"_ivl_14", 0 0, L_0x5e48159f7600;  1 drivers
+v0x5e48159ca900_0 .net *"_ivl_17", 0 0, L_0x5e48159f7670;  1 drivers
+v0x5e48159caad0_0 .net *"_ivl_18", 0 0, L_0x5e48159f77a0;  1 drivers
+v0x5e48159cabb0_0 .net *"_ivl_21", 0 0, L_0x5e48159f7860;  1 drivers
+v0x5e48159cac70_0 .net *"_ivl_5", 0 0, L_0x5e48159f7080;  1 drivers
+v0x5e48159cad50_0 .net *"_ivl_7", 0 0, L_0x5e48159f7180;  1 drivers
+v0x5e48159cae30_0 .net8 "gnd", 0 0, L_0x5e48159f58b0;  1 drivers, strength-aware
+v0x5e48159caef0_0 .net8 "pwr", 0 0, L_0x5e48159f5970;  1 drivers, strength-aware
+S_0x5e48159cb1c0 .scope generate, "bidir[1]" "bidir[1]" 3 199, 3 199 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159cb370 .param/l "i" 1 3 199, +C4<01>;
+RS_0x7314583cff18 .resolv tri, L_0x5e48159f8240, L_0x5e48159f83a0, L_0x5e48159f88a0;
+p0x7314583cff18 .port I0x5e48158e9d40, RS_0x7314583cff18;
+ .tranvp 6 1 1, I0x5e48158e9d40, p0x7314583d8048 p0x7314583cff18;
+S_0x5e48159cb450 .scope module, "pad" "gf180mcu_fd_io__bi_24t" 3 201, 5 64 0, S_0x5e48159cb1c0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "CS";
+    .port_info 1 /INPUT 1 "SL";
+    .port_info 2 /INPUT 1 "IE";
+    .port_info 3 /INPUT 1 "OE";
+    .port_info 4 /INPUT 1 "PU";
+    .port_info 5 /INPUT 1 "PD";
+    .port_info 6 /INPUT 1 "A";
+    .port_info 7 /INOUT 1 "PAD";
+    .port_info 8 /OUTPUT 1 "Y";
+    .port_info 9 /INOUT 1 "DVDD";
+    .port_info 10 /INOUT 1 "DVSS";
+    .port_info 11 /INOUT 1 "VDD";
+    .port_info 12 /INOUT 1 "VSS";
+L_0x5e48159f7730/d .functor AND 1, p0x7314583cff18, L_0x5e48159f8fc0, C4<1>, C4<1>;
+L_0x5e48159f7730 .delay 1 (1000,1000,1000) L_0x5e48159f7730/d;
+L_0x5e48159f8240/d .functor BUFIF1 1, L_0x5e48159f9150, L_0x5e48159f90b0, C4<0>, C4<0>;
+L_0x5e48159f8240 .delay 1 (1000,1000,1000) L_0x5e48159f8240/d;
+L_0x5e48159f5a30 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f83a0/d .functor RNMOS 1, L_0x5e48159f5a30, L_0x5e48159f8790, C4<0>, C4<0>;
+L_0x5e48159f83a0 .delay 1 (1000,1000,1000) L_0x5e48159f83a0/d;
+L_0x5e48159f8500 .functor NOT 1, L_0x5e48159f90b0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f85c0 .functor NOT 1, L_0x5e48159f91f0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f8630 .functor AND 1, L_0x5e48159f8500, L_0x5e48159f85c0, C4<1>, C4<1>;
+L_0x5e48159f8790 .functor AND 1, L_0x5e48159f8630, L_0x5e48159f9290, C4<1>, C4<1>;
+L_0x5e48159f5ad0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f88a0/d .functor RNMOS 1, L_0x5e48159f5ad0, L_0x5e48159f8c10, C4<0>, C4<0>;
+L_0x5e48159f88a0 .delay 1 (1000,1000,1000) L_0x5e48159f88a0/d;
+L_0x5e48159f89b0 .functor NOT 1, L_0x5e48159f90b0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f8a20 .functor AND 1, L_0x5e48159f89b0, L_0x5e48159f91f0, C4<1>, C4<1>;
+L_0x5e48159f8b50 .functor NOT 1, L_0x5e48159f9290, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f8c10 .functor AND 1, L_0x5e48159f8a20, L_0x5e48159f8b50, C4<1>, C4<1>;
+v0x5e48159cb820_0 .net "A", 0 0, L_0x5e48159f9150;  1 drivers
+v0x5e48159cb8e0_0 .net "CS", 0 0, L_0x5e48159f8df0;  1 drivers
+o0x7314583cfe58 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cb9a0_0 .net "DVDD", 0 0, o0x7314583cfe58;  0 drivers
+o0x7314583cfe88 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cba40_0 .net "DVSS", 0 0, o0x7314583cfe88;  0 drivers
+v0x5e48159cbb00_0 .net "IE", 0 0, L_0x5e48159f8fc0;  1 drivers
+v0x5e48159cbc10_0 .net "OE", 0 0, L_0x5e48159f90b0;  1 drivers
+v0x5e48159cbcd0_0 .net8 "PAD", 0 0, p0x7314583cff18;  3 drivers, strength-aware
+v0x5e48159cbd90_0 .net "PD", 0 0, L_0x5e48159f9290;  1 drivers
+v0x5e48159cbe50_0 .net "PU", 0 0, L_0x5e48159f91f0;  1 drivers
+v0x5e48159cbf10_0 .net "SL", 0 0, L_0x5e48159f8e90;  1 drivers
+o0x7314583cffd8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cbfd0_0 .net "VDD", 0 0, o0x7314583cffd8;  0 drivers
+o0x7314583d0008 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cc090_0 .net "VSS", 0 0, o0x7314583d0008;  0 drivers
+v0x5e48159cc150_0 .net "Y", 0 0, L_0x5e48159f7730;  1 drivers
+v0x5e48159cc210_0 .net *"_ivl_10", 0 0, L_0x5e48159f8630;  1 drivers
+v0x5e48159cc2d0_0 .net *"_ivl_12", 0 0, L_0x5e48159f8790;  1 drivers
+v0x5e48159cc390_0 .net *"_ivl_14", 0 0, L_0x5e48159f89b0;  1 drivers
+v0x5e48159cc470_0 .net *"_ivl_17", 0 0, L_0x5e48159f8a20;  1 drivers
+v0x5e48159cc640_0 .net *"_ivl_18", 0 0, L_0x5e48159f8b50;  1 drivers
+v0x5e48159cc720_0 .net *"_ivl_21", 0 0, L_0x5e48159f8c10;  1 drivers
+v0x5e48159cc7e0_0 .net *"_ivl_5", 0 0, L_0x5e48159f8500;  1 drivers
+v0x5e48159cc8c0_0 .net *"_ivl_7", 0 0, L_0x5e48159f85c0;  1 drivers
+v0x5e48159cc9a0_0 .net8 "gnd", 0 0, L_0x5e48159f5a30;  1 drivers, strength-aware
+v0x5e48159cca60_0 .net8 "pwr", 0 0, L_0x5e48159f5ad0;  1 drivers, strength-aware
+S_0x5e48159ccd30 .scope generate, "bidir[2]" "bidir[2]" 3 199, 3 199 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ccee0 .param/l "i" 1 3 199, +C4<010>;
+RS_0x7314583d05d8 .resolv tri, L_0x5e48159f9480, L_0x5e48159f95e0, L_0x5e48159f9ae0;
+p0x7314583d05d8 .port I0x5e48158e9d40, RS_0x7314583d05d8;
+ .tranvp 6 1 2, I0x5e48158e9d40, p0x7314583d8048 p0x7314583d05d8;
+S_0x5e48159ccfc0 .scope module, "pad" "gf180mcu_fd_io__bi_24t" 3 201, 5 64 0, S_0x5e48159ccd30;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "CS";
+    .port_info 1 /INPUT 1 "SL";
+    .port_info 2 /INPUT 1 "IE";
+    .port_info 3 /INPUT 1 "OE";
+    .port_info 4 /INPUT 1 "PU";
+    .port_info 5 /INPUT 1 "PD";
+    .port_info 6 /INPUT 1 "A";
+    .port_info 7 /INOUT 1 "PAD";
+    .port_info 8 /OUTPUT 1 "Y";
+    .port_info 9 /INOUT 1 "DVDD";
+    .port_info 10 /INOUT 1 "DVSS";
+    .port_info 11 /INOUT 1 "VDD";
+    .port_info 12 /INOUT 1 "VSS";
+L_0x5e48159f8ae0/d .functor AND 1, p0x7314583d05d8, L_0x5e48159fa340, C4<1>, C4<1>;
+L_0x5e48159f8ae0 .delay 1 (1000,1000,1000) L_0x5e48159f8ae0/d;
+L_0x5e48159f9480/d .functor BUFIF1 1, L_0x5e48159fa900, L_0x5e48159fa1f0, C4<0>, C4<0>;
+L_0x5e48159f9480 .delay 1 (1000,1000,1000) L_0x5e48159f9480/d;
+L_0x5e48159f5b90 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f95e0/d .functor RNMOS 1, L_0x5e48159f5b90, L_0x5e48159f99d0, C4<0>, C4<0>;
+L_0x5e48159f95e0 .delay 1 (1000,1000,1000) L_0x5e48159f95e0/d;
+L_0x5e48159f9740 .functor NOT 1, L_0x5e48159fa1f0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f9800 .functor NOT 1, L_0x5e48159fa660, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f9870 .functor AND 1, L_0x5e48159f9740, L_0x5e48159f9800, C4<1>, C4<1>;
+L_0x5e48159f99d0 .functor AND 1, L_0x5e48159f9870, L_0x5e48159fa470, C4<1>, C4<1>;
+L_0x5e48159f5c30 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f9ae0/d .functor RNMOS 1, L_0x5e48159f5c30, L_0x5e48159f9ee0, C4<0>, C4<0>;
+L_0x5e48159f9ae0 .delay 1 (1000,1000,1000) L_0x5e48159f9ae0/d;
+L_0x5e48159f9c80 .functor NOT 1, L_0x5e48159fa1f0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f9cf0 .functor AND 1, L_0x5e48159f9c80, L_0x5e48159fa660, C4<1>, C4<1>;
+L_0x5e48159f9e20 .functor NOT 1, L_0x5e48159fa470, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f9ee0 .functor AND 1, L_0x5e48159f9cf0, L_0x5e48159f9e20, C4<1>, C4<1>;
+v0x5e48159cd390_0 .net "A", 0 0, L_0x5e48159fa900;  1 drivers
+v0x5e48159cd450_0 .net "CS", 0 0, L_0x5e48159fa0c0;  1 drivers
+o0x7314583d0518 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cd510_0 .net "DVDD", 0 0, o0x7314583d0518;  0 drivers
+o0x7314583d0548 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cd5b0_0 .net "DVSS", 0 0, o0x7314583d0548;  0 drivers
+v0x5e48159cd670_0 .net "IE", 0 0, L_0x5e48159fa340;  1 drivers
+v0x5e48159cd780_0 .net "OE", 0 0, L_0x5e48159fa1f0;  1 drivers
+v0x5e48159cd840_0 .net8 "PAD", 0 0, p0x7314583d05d8;  3 drivers, strength-aware
+v0x5e48159cd900_0 .net "PD", 0 0, L_0x5e48159fa470;  1 drivers
+v0x5e48159cd9c0_0 .net "PU", 0 0, L_0x5e48159fa660;  1 drivers
+v0x5e48159cda80_0 .net "SL", 0 0, L_0x5e48159f9330;  1 drivers
+o0x7314583d0698 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cdb40_0 .net "VDD", 0 0, o0x7314583d0698;  0 drivers
+o0x7314583d06c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cdc00_0 .net "VSS", 0 0, o0x7314583d06c8;  0 drivers
+v0x5e48159cdcc0_0 .net "Y", 0 0, L_0x5e48159f8ae0;  1 drivers
+v0x5e48159cdd80_0 .net *"_ivl_10", 0 0, L_0x5e48159f9870;  1 drivers
+v0x5e48159cde40_0 .net *"_ivl_12", 0 0, L_0x5e48159f99d0;  1 drivers
+v0x5e48159cdf00_0 .net *"_ivl_14", 0 0, L_0x5e48159f9c80;  1 drivers
+v0x5e48159cdfe0_0 .net *"_ivl_17", 0 0, L_0x5e48159f9cf0;  1 drivers
+v0x5e48159ce1b0_0 .net *"_ivl_18", 0 0, L_0x5e48159f9e20;  1 drivers
+v0x5e48159ce290_0 .net *"_ivl_21", 0 0, L_0x5e48159f9ee0;  1 drivers
+v0x5e48159ce350_0 .net *"_ivl_5", 0 0, L_0x5e48159f9740;  1 drivers
+v0x5e48159ce430_0 .net *"_ivl_7", 0 0, L_0x5e48159f9800;  1 drivers
+v0x5e48159ce510_0 .net8 "gnd", 0 0, L_0x5e48159f5b90;  1 drivers, strength-aware
+v0x5e48159ce5d0_0 .net8 "pwr", 0 0, L_0x5e48159f5c30;  1 drivers, strength-aware
+S_0x5e48159ce8a0 .scope generate, "bidir[3]" "bidir[3]" 3 199, 3 199 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159cea50 .param/l "i" 1 3 199, +C4<011>;
+RS_0x7314583d0c98 .resolv tri, L_0x5e48159fab20, L_0x5e48159fab90, L_0x5e48159faff0;
+p0x7314583d0c98 .port I0x5e48158e9d40, RS_0x7314583d0c98;
+ .tranvp 6 1 3, I0x5e48158e9d40, p0x7314583d8048 p0x7314583d0c98;
+S_0x5e48159ceb30 .scope module, "pad" "gf180mcu_fd_io__bi_24t" 3 201, 5 64 0, S_0x5e48159ce8a0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "CS";
+    .port_info 1 /INPUT 1 "SL";
+    .port_info 2 /INPUT 1 "IE";
+    .port_info 3 /INPUT 1 "OE";
+    .port_info 4 /INPUT 1 "PU";
+    .port_info 5 /INPUT 1 "PD";
+    .port_info 6 /INPUT 1 "A";
+    .port_info 7 /INOUT 1 "PAD";
+    .port_info 8 /OUTPUT 1 "Y";
+    .port_info 9 /INOUT 1 "DVDD";
+    .port_info 10 /INOUT 1 "DVSS";
+    .port_info 11 /INOUT 1 "VDD";
+    .port_info 12 /INOUT 1 "VSS";
+L_0x5e48159f9db0/d .functor AND 1, p0x7314583d0c98, L_0x5e48159faa30, C4<1>, C4<1>;
+L_0x5e48159f9db0 .delay 1 (1000,1000,1000) L_0x5e48159f9db0/d;
+L_0x5e48159fab20/d .functor BUFIF1 1, L_0x5e48159fb940, L_0x5e48159fb810, C4<0>, C4<0>;
+L_0x5e48159fab20 .delay 1 (1000,1000,1000) L_0x5e48159fab20/d;
+L_0x5e48159f5cf0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fab90/d .functor RNMOS 1, L_0x5e48159f5cf0, L_0x5e48159faee0, C4<0>, C4<0>;
+L_0x5e48159fab90 .delay 1 (1000,1000,1000) L_0x5e48159fab90/d;
+L_0x5e48159fac50 .functor NOT 1, L_0x5e48159fb810, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fad10 .functor NOT 1, L_0x5e48159fb710, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fad80 .functor AND 1, L_0x5e48159fac50, L_0x5e48159fad10, C4<1>, C4<1>;
+L_0x5e48159faee0 .functor AND 1, L_0x5e48159fad80, L_0x5e48159fba50, C4<1>, C4<1>;
+L_0x5e48159f5d90 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159faff0/d .functor RNMOS 1, L_0x5e48159f5d90, L_0x5e48159fb3f0, C4<0>, C4<0>;
+L_0x5e48159faff0 .delay 1 (1000,1000,1000) L_0x5e48159faff0/d;
+L_0x5e48159fb190 .functor NOT 1, L_0x5e48159fb810, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fb200 .functor AND 1, L_0x5e48159fb190, L_0x5e48159fb710, C4<1>, C4<1>;
+L_0x5e48159fb330 .functor NOT 1, L_0x5e48159fba50, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fb3f0 .functor AND 1, L_0x5e48159fb200, L_0x5e48159fb330, C4<1>, C4<1>;
+v0x5e48159cef00_0 .net "A", 0 0, L_0x5e48159fb940;  1 drivers
+v0x5e48159cefc0_0 .net "CS", 0 0, L_0x5e48159fb5d0;  1 drivers
+o0x7314583d0bd8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cf080_0 .net "DVDD", 0 0, o0x7314583d0bd8;  0 drivers
+o0x7314583d0c08 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cf120_0 .net "DVSS", 0 0, o0x7314583d0c08;  0 drivers
+v0x5e48159cf1e0_0 .net "IE", 0 0, L_0x5e48159faa30;  1 drivers
+v0x5e48159cf2f0_0 .net "OE", 0 0, L_0x5e48159fb810;  1 drivers
+v0x5e48159cf3b0_0 .net8 "PAD", 0 0, p0x7314583d0c98;  3 drivers, strength-aware
+v0x5e48159cf470_0 .net "PD", 0 0, L_0x5e48159fba50;  1 drivers
+v0x5e48159cf530_0 .net "PU", 0 0, L_0x5e48159fb710;  1 drivers
+v0x5e48159cf5f0_0 .net "SL", 0 0, L_0x5e48159fb670;  1 drivers
+o0x7314583d0d58 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cf6b0_0 .net "VDD", 0 0, o0x7314583d0d58;  0 drivers
+o0x7314583d0d88 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159cf770_0 .net "VSS", 0 0, o0x7314583d0d88;  0 drivers
+v0x5e48159cf830_0 .net "Y", 0 0, L_0x5e48159f9db0;  1 drivers
+v0x5e48159cf8f0_0 .net *"_ivl_10", 0 0, L_0x5e48159fad80;  1 drivers
+v0x5e48159cf9b0_0 .net *"_ivl_12", 0 0, L_0x5e48159faee0;  1 drivers
+v0x5e48159cfa70_0 .net *"_ivl_14", 0 0, L_0x5e48159fb190;  1 drivers
+v0x5e48159cfb50_0 .net *"_ivl_17", 0 0, L_0x5e48159fb200;  1 drivers
+v0x5e48159cfd20_0 .net *"_ivl_18", 0 0, L_0x5e48159fb330;  1 drivers
+v0x5e48159cfe00_0 .net *"_ivl_21", 0 0, L_0x5e48159fb3f0;  1 drivers
+v0x5e48159cfec0_0 .net *"_ivl_5", 0 0, L_0x5e48159fac50;  1 drivers
+v0x5e48159cffa0_0 .net *"_ivl_7", 0 0, L_0x5e48159fad10;  1 drivers
+v0x5e48159d0080_0 .net8 "gnd", 0 0, L_0x5e48159f5cf0;  1 drivers, strength-aware
+v0x5e48159d0140_0 .net8 "pwr", 0 0, L_0x5e48159f5d90;  1 drivers, strength-aware
+S_0x5e48159d0410 .scope generate, "bidir[4]" "bidir[4]" 3 199, 3 199 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159c97b0 .param/l "i" 1 3 199, +C4<0100>;
+RS_0x7314583d1358 .resolv tri, L_0x5e48159fb9e0, L_0x5e48159fbe10, L_0x5e48159fc310;
+p0x7314583d1358 .port I0x5e48158e9d40, RS_0x7314583d1358;
+ .tranvp 6 1 4, I0x5e48158e9d40, p0x7314583d8048 p0x7314583d1358;
+S_0x5e48159d0650 .scope module, "pad" "gf180mcu_fd_io__bi_24t" 3 201, 5 64 0, S_0x5e48159d0410;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "CS";
+    .port_info 1 /INPUT 1 "SL";
+    .port_info 2 /INPUT 1 "IE";
+    .port_info 3 /INPUT 1 "OE";
+    .port_info 4 /INPUT 1 "PU";
+    .port_info 5 /INPUT 1 "PD";
+    .port_info 6 /INPUT 1 "A";
+    .port_info 7 /INOUT 1 "PAD";
+    .port_info 8 /OUTPUT 1 "Y";
+    .port_info 9 /INOUT 1 "DVDD";
+    .port_info 10 /INOUT 1 "DVSS";
+    .port_info 11 /INOUT 1 "VDD";
+    .port_info 12 /INOUT 1 "VSS";
+L_0x5e48159fb2c0/d .functor AND 1, p0x7314583d1358, L_0x5e48159fcac0, C4<1>, C4<1>;
+L_0x5e48159fb2c0 .delay 1 (1000,1000,1000) L_0x5e48159fb2c0/d;
+L_0x5e48159fb9e0/d .functor BUFIF1 1, L_0x5e48159fcc00, L_0x5e48159fc990, C4<0>, C4<0>;
+L_0x5e48159fb9e0 .delay 1 (1000,1000,1000) L_0x5e48159fb9e0/d;
+L_0x5e48159f5e50 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fbe10/d .functor RNMOS 1, L_0x5e48159f5e50, L_0x5e48159fc200, C4<0>, C4<0>;
+L_0x5e48159fbe10 .delay 1 (1000,1000,1000) L_0x5e48159fbe10/d;
+L_0x5e48159fbf70 .functor NOT 1, L_0x5e48159fc990, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fc030 .functor NOT 1, L_0x5e48159fcca0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fc0a0 .functor AND 1, L_0x5e48159fbf70, L_0x5e48159fc030, C4<1>, C4<1>;
+L_0x5e48159fc200 .functor AND 1, L_0x5e48159fc0a0, L_0x5e48159fcb60, C4<1>, C4<1>;
+L_0x5e48159f5ef0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fc310/d .functor RNMOS 1, L_0x5e48159f5ef0, L_0x5e48159fc710, C4<0>, C4<0>;
+L_0x5e48159fc310 .delay 1 (1000,1000,1000) L_0x5e48159fc310/d;
+L_0x5e48159fc4b0 .functor NOT 1, L_0x5e48159fc990, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fc520 .functor AND 1, L_0x5e48159fc4b0, L_0x5e48159fcca0, C4<1>, C4<1>;
+L_0x5e48159fc650 .functor NOT 1, L_0x5e48159fcb60, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fc710 .functor AND 1, L_0x5e48159fc520, L_0x5e48159fc650, C4<1>, C4<1>;
+v0x5e48159d0a20_0 .net "A", 0 0, L_0x5e48159fcc00;  1 drivers
+v0x5e48159d0ae0_0 .net "CS", 0 0, L_0x5e48159fc8f0;  1 drivers
+o0x7314583d1298 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d0ba0_0 .net "DVDD", 0 0, o0x7314583d1298;  0 drivers
+o0x7314583d12c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d0c40_0 .net "DVSS", 0 0, o0x7314583d12c8;  0 drivers
+v0x5e48159d0d00_0 .net "IE", 0 0, L_0x5e48159fcac0;  1 drivers
+v0x5e48159d0e10_0 .net "OE", 0 0, L_0x5e48159fc990;  1 drivers
+v0x5e48159d0ed0_0 .net8 "PAD", 0 0, p0x7314583d1358;  3 drivers, strength-aware
+v0x5e48159d0f90_0 .net "PD", 0 0, L_0x5e48159fcb60;  1 drivers
+v0x5e48159d1050_0 .net "PU", 0 0, L_0x5e48159fcca0;  1 drivers
+v0x5e48159d1110_0 .net "SL", 0 0, L_0x5e48159fbaf0;  1 drivers
+o0x7314583d1418 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d11d0_0 .net "VDD", 0 0, o0x7314583d1418;  0 drivers
+o0x7314583d1448 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d1290_0 .net "VSS", 0 0, o0x7314583d1448;  0 drivers
+v0x5e48159d1350_0 .net "Y", 0 0, L_0x5e48159fb2c0;  1 drivers
+v0x5e48159d1410_0 .net *"_ivl_10", 0 0, L_0x5e48159fc0a0;  1 drivers
+v0x5e48159d14d0_0 .net *"_ivl_12", 0 0, L_0x5e48159fc200;  1 drivers
+v0x5e48159d1590_0 .net *"_ivl_14", 0 0, L_0x5e48159fc4b0;  1 drivers
+v0x5e48159d1670_0 .net *"_ivl_17", 0 0, L_0x5e48159fc520;  1 drivers
+v0x5e48159d1840_0 .net *"_ivl_18", 0 0, L_0x5e48159fc650;  1 drivers
+v0x5e48159d1920_0 .net *"_ivl_21", 0 0, L_0x5e48159fc710;  1 drivers
+v0x5e48159d19e0_0 .net *"_ivl_5", 0 0, L_0x5e48159fbf70;  1 drivers
+v0x5e48159d1ac0_0 .net *"_ivl_7", 0 0, L_0x5e48159fc030;  1 drivers
+v0x5e48159d1ba0_0 .net8 "gnd", 0 0, L_0x5e48159f5e50;  1 drivers, strength-aware
+v0x5e48159d1c60_0 .net8 "pwr", 0 0, L_0x5e48159f5ef0;  1 drivers, strength-aware
+S_0x5e48159d1f30 .scope generate, "bidir[5]" "bidir[5]" 3 199, 3 199 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159d20e0 .param/l "i" 1 3 199, +C4<0101>;
+RS_0x7314583d1a18 .resolv tri, L_0x5e48159fcfc0, L_0x5e48159fd120, L_0x5e48159fd620;
+p0x7314583d1a18 .port I0x5e48158e9d40, RS_0x7314583d1a18;
+ .tranvp 6 1 5, I0x5e48158e9d40, p0x7314583d8048 p0x7314583d1a18;
+S_0x5e48159d21c0 .scope module, "pad" "gf180mcu_fd_io__bi_24t" 3 201, 5 64 0, S_0x5e48159d1f30;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "CS";
+    .port_info 1 /INPUT 1 "SL";
+    .port_info 2 /INPUT 1 "IE";
+    .port_info 3 /INPUT 1 "OE";
+    .port_info 4 /INPUT 1 "PU";
+    .port_info 5 /INPUT 1 "PD";
+    .port_info 6 /INPUT 1 "A";
+    .port_info 7 /INOUT 1 "PAD";
+    .port_info 8 /OUTPUT 1 "Y";
+    .port_info 9 /INOUT 1 "DVDD";
+    .port_info 10 /INOUT 1 "DVSS";
+    .port_info 11 /INOUT 1 "VDD";
+    .port_info 12 /INOUT 1 "VSS";
+L_0x5e48159fc5e0/d .functor AND 1, p0x7314583d1a18, L_0x5e48159fcd40, C4<1>, C4<1>;
+L_0x5e48159fc5e0 .delay 1 (1000,1000,1000) L_0x5e48159fc5e0/d;
+L_0x5e48159fcfc0/d .functor BUFIF1 1, L_0x5e48159fe170, L_0x5e48159fdeb0, C4<0>, C4<0>;
+L_0x5e48159fcfc0 .delay 1 (1000,1000,1000) L_0x5e48159fcfc0/d;
+L_0x5e48159f5fb0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fd120/d .functor RNMOS 1, L_0x5e48159f5fb0, L_0x5e48159fd510, C4<0>, C4<0>;
+L_0x5e48159fd120 .delay 1 (1000,1000,1000) L_0x5e48159fd120/d;
+L_0x5e48159fd280 .functor NOT 1, L_0x5e48159fdeb0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fd340 .functor NOT 1, L_0x5e48159fdd40, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fd3b0 .functor AND 1, L_0x5e48159fd280, L_0x5e48159fd340, C4<1>, C4<1>;
+L_0x5e48159fd510 .functor AND 1, L_0x5e48159fd3b0, L_0x5e48159fdde0, C4<1>, C4<1>;
+L_0x5e48159f6050 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fd620/d .functor RNMOS 1, L_0x5e48159f6050, L_0x5e48159fda20, C4<0>, C4<0>;
+L_0x5e48159fd620 .delay 1 (1000,1000,1000) L_0x5e48159fd620/d;
+L_0x5e48159fd7c0 .functor NOT 1, L_0x5e48159fdeb0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fd830 .functor AND 1, L_0x5e48159fd7c0, L_0x5e48159fdd40, C4<1>, C4<1>;
+L_0x5e48159fd960 .functor NOT 1, L_0x5e48159fdde0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fda20 .functor AND 1, L_0x5e48159fd830, L_0x5e48159fd960, C4<1>, C4<1>;
+v0x5e48159d2590_0 .net "A", 0 0, L_0x5e48159fe170;  1 drivers
+v0x5e48159d2650_0 .net "CS", 0 0, L_0x5e48159fdc00;  1 drivers
+o0x7314583d1958 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d2710_0 .net "DVDD", 0 0, o0x7314583d1958;  0 drivers
+o0x7314583d1988 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d27b0_0 .net "DVSS", 0 0, o0x7314583d1988;  0 drivers
+v0x5e48159d2870_0 .net "IE", 0 0, L_0x5e48159fcd40;  1 drivers
+v0x5e48159d2980_0 .net "OE", 0 0, L_0x5e48159fdeb0;  1 drivers
+v0x5e48159d2a40_0 .net8 "PAD", 0 0, p0x7314583d1a18;  3 drivers, strength-aware
+v0x5e48159d2b00_0 .net "PD", 0 0, L_0x5e48159fdde0;  1 drivers
+v0x5e48159d2bc0_0 .net "PU", 0 0, L_0x5e48159fdd40;  1 drivers
+v0x5e48159d2c80_0 .net "SL", 0 0, L_0x5e48159fdca0;  1 drivers
+o0x7314583d1ad8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d2d40_0 .net "VDD", 0 0, o0x7314583d1ad8;  0 drivers
+o0x7314583d1b08 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d2e00_0 .net "VSS", 0 0, o0x7314583d1b08;  0 drivers
+v0x5e48159d2ec0_0 .net "Y", 0 0, L_0x5e48159fc5e0;  1 drivers
+v0x5e48159d2f80_0 .net *"_ivl_10", 0 0, L_0x5e48159fd3b0;  1 drivers
+v0x5e48159d3040_0 .net *"_ivl_12", 0 0, L_0x5e48159fd510;  1 drivers
+v0x5e48159d3100_0 .net *"_ivl_14", 0 0, L_0x5e48159fd7c0;  1 drivers
+v0x5e48159d31e0_0 .net *"_ivl_17", 0 0, L_0x5e48159fd830;  1 drivers
+v0x5e48159d33b0_0 .net *"_ivl_18", 0 0, L_0x5e48159fd960;  1 drivers
+v0x5e48159d3490_0 .net *"_ivl_21", 0 0, L_0x5e48159fda20;  1 drivers
+v0x5e48159d3550_0 .net *"_ivl_5", 0 0, L_0x5e48159fd280;  1 drivers
+v0x5e48159d3630_0 .net *"_ivl_7", 0 0, L_0x5e48159fd340;  1 drivers
+v0x5e48159d3710_0 .net8 "gnd", 0 0, L_0x5e48159f5fb0;  1 drivers, strength-aware
+v0x5e48159d37d0_0 .net8 "pwr", 0 0, L_0x5e48159f6050;  1 drivers, strength-aware
+S_0x5e48159d3aa0 .scope module, "brk_e" "fill10_noVDD" 3 269, 4 11 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+    .port_info 0 /INOUT 1 "DVSS";
+    .port_info 1 /INOUT 1 "VSS";
+o0x7314583d1fb8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d3ca0_0 .net "DVSS", 0 0, o0x7314583d1fb8;  0 drivers
+o0x7314583d1fe8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d3d80_0 .net "VSS", 0 0, o0x7314583d1fe8;  0 drivers
+S_0x5e48159d3ea0 .scope module, "brk_w" "fill10_noVDD" 3 262, 4 11 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+    .port_info 0 /INOUT 1 "DVSS";
+    .port_info 1 /INOUT 1 "VSS";
+o0x7314583d2078 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d4110_0 .net "DVSS", 0 0, o0x7314583d2078;  0 drivers
+o0x7314583d20a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d41f0_0 .net "VSS", 0 0, o0x7314583d20a8;  0 drivers
+S_0x5e48159d4310 .scope module, "clk_pad" "gf180mcu_fd_io__in_s" 3 147, 5 582 0, S_0x5e48159c3f90;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "PU";
+    .port_info 1 /INPUT 1 "PD";
+    .port_info 2 /INPUT 1 "PAD";
+    .port_info 3 /OUTPUT 1 "Y";
+    .port_info 4 /INOUT 1 "DVDD";
+    .port_info 5 /INOUT 1 "DVSS";
+    .port_info 6 /INOUT 1 "VDD";
+    .port_info 7 /INOUT 1 "VSS";
+L_0x5e48159fd8f0/d .functor BUF 1, o0x7314583d2198, C4<0>, C4<0>, C4<0>;
+L_0x5e48159fd8f0 .delay 1 (1000,1000,1000) L_0x5e48159fd8f0/d;
+o0x7314583d2138 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d4650_0 .net "DVDD", 0 0, o0x7314583d2138;  0 drivers
+o0x7314583d2168 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d4710_0 .net "DVSS", 0 0, o0x7314583d2168;  0 drivers
+v0x5e48159d47d0_0 .net "PAD", 0 0, o0x7314583d2198;  alias, 0 drivers
+L_0x731458386060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d4870_0 .net "PD", 0 0, L_0x731458386060;  1 drivers
+L_0x731458386018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d4930_0 .net "PU", 0 0, L_0x731458386018;  1 drivers
+o0x7314583d2228 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d4a40_0 .net "VDD", 0 0, o0x7314583d2228;  0 drivers
+o0x7314583d2258 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d4b00_0 .net "VSS", 0 0, o0x7314583d2258;  0 drivers
+v0x5e48159d4bc0_0 .net "Y", 0 0, L_0x5e48159fd8f0;  alias, 1 drivers
+S_0x5e48159d4dd0 .scope generate, "dvdd_pads[0]" "dvdd_pads[0]" 3 98, 3 98 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159d4f80 .param/l "i" 1 3 98, +C4<00>;
+S_0x5e48159d5060 .scope module, "pad" "gf180mcu_fd_io__dvdd" 3 100, 5 320 0, S_0x5e48159d4dd0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VSS";
+L_0x5e48159f52e0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d5280_0 .net8 "DVDD", 0 0, L_0x5e48159f52e0;  1 drivers, strength-aware
+o0x7314583d2468 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d5360_0 .net "DVSS", 0 0, o0x7314583d2468;  0 drivers
+o0x7314583d2498 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d5420_0 .net "VSS", 0 0, o0x7314583d2498;  0 drivers
+S_0x5e48159d5540 .scope generate, "dvdd_pads[1]" "dvdd_pads[1]" 3 98, 3 98 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159d5720 .param/l "i" 1 3 98, +C4<01>;
+S_0x5e48159d5800 .scope module, "pad" "gf180mcu_fd_io__dvdd" 3 100, 5 320 0, S_0x5e48159d5540;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VSS";
+L_0x5e48159f5370 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d5a90_0 .net8 "DVDD", 0 0, L_0x5e48159f5370;  1 drivers, strength-aware
+o0x7314583d2588 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d5b70_0 .net "DVSS", 0 0, o0x7314583d2588;  0 drivers
+o0x7314583d25b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d5c30_0 .net "VSS", 0 0, o0x7314583d25b8;  0 drivers
+S_0x5e48159d5d50 .scope generate, "dvdd_pads[2]" "dvdd_pads[2]" 3 98, 3 98 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159d5f30 .param/l "i" 1 3 98, +C4<010>;
+S_0x5e48159d6010 .scope module, "pad" "gf180mcu_fd_io__dvdd" 3 100, 5 320 0, S_0x5e48159d5d50;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VSS";
+L_0x5e48159f5430 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d62a0_0 .net8 "DVDD", 0 0, L_0x5e48159f5430;  1 drivers, strength-aware
+o0x7314583d26a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d6380_0 .net "DVSS", 0 0, o0x7314583d26a8;  0 drivers
+o0x7314583d26d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d6440_0 .net "VSS", 0 0, o0x7314583d26d8;  0 drivers
+S_0x5e48159d6590 .scope generate, "dvss_pads[0]" "dvss_pads[0]" 3 109, 3 109 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159d6880 .param/l "i" 1 3 109, +C4<00>;
+S_0x5e48159d6960 .scope module, "pad" "gf180mcu_fd_io__dvss" 3 111, 5 356 0, S_0x5e48159d6590;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VDD";
+o0x7314583d2798 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d6bf0_0 .net "DVDD", 0 0, o0x7314583d2798;  0 drivers
+L_0x5e48159f54f0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d6cd0_0 .net8 "DVSS", 0 0, L_0x5e48159f54f0;  1 drivers, strength-aware
+o0x7314583d27f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d6d90_0 .net "VDD", 0 0, o0x7314583d27f8;  0 drivers
+S_0x5e48159d6ee0 .scope generate, "dvss_pads[1]" "dvss_pads[1]" 3 109, 3 109 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159d70c0 .param/l "i" 1 3 109, +C4<01>;
+S_0x5e48159d71a0 .scope module, "pad" "gf180mcu_fd_io__dvss" 3 111, 5 356 0, S_0x5e48159d6ee0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VDD";
+o0x7314583d28b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d7430_0 .net "DVDD", 0 0, o0x7314583d28b8;  0 drivers
+L_0x5e48159f55b0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d7510_0 .net8 "DVSS", 0 0, L_0x5e48159f55b0;  1 drivers, strength-aware
+o0x7314583d2918 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d75d0_0 .net "VDD", 0 0, o0x7314583d2918;  0 drivers
+S_0x5e48159d7720 .scope generate, "dvss_pads[2]" "dvss_pads[2]" 3 109, 3 109 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159d7900 .param/l "i" 1 3 109, +C4<010>;
+S_0x5e48159d79e0 .scope module, "pad" "gf180mcu_fd_io__dvss" 3 111, 5 356 0, S_0x5e48159d7720;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VDD";
+o0x7314583d29d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d7c70_0 .net "DVDD", 0 0, o0x7314583d29d8;  0 drivers
+L_0x5e48159f5670 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+v0x5e48159d7d50_0 .net8 "DVSS", 0 0, L_0x5e48159f5670;  1 drivers, strength-aware
+o0x7314583d2a38 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159d7e10_0 .net "VDD", 0 0, o0x7314583d2a38;  0 drivers
+S_0x5e48159d7f60 .scope module, "i_chip_core" "chip_core" 3 291, 6 32 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /INPUT 2 "input_in";
+    .port_info 3 /OUTPUT 2 "input_pu";
+    .port_info 4 /OUTPUT 2 "input_pd";
+    .port_info 5 /INPUT 6 "bidir_in";
+    .port_info 6 /OUTPUT 6 "bidir_out";
+    .port_info 7 /OUTPUT 6 "bidir_oe";
+    .port_info 8 /OUTPUT 6 "bidir_cs";
+    .port_info 9 /OUTPUT 6 "bidir_sl";
+    .port_info 10 /OUTPUT 6 "bidir_ie";
+    .port_info 11 /OUTPUT 6 "bidir_pu";
+    .port_info 12 /OUTPUT 6 "bidir_pd";
+    .port_info 13 /INOUT 3 "analog";
+    .port_info 14 /INOUT 1 "rfin";
+P_0x5e48159d8140 .param/l "ID" 1 6 105, C4<10101>;
+P_0x5e48159d8180 .param/l "NOUT" 1 6 70, +C4<00000000000000000000000000000101>;
+P_0x5e48159d81c0 .param/l "NUM_ANALOG_PADS" 0 6 35, +C4<00000000000000000000000000000011>;
+P_0x5e48159d8200 .param/l "NUM_BIDIR_PADS" 0 6 34, +C4<00000000000000000000000000000110>;
+P_0x5e48159d8240 .param/l "NUM_INPUT_PADS" 0 6 33, +C4<00000000000000000000000000000010>;
+L_0x5e4815a00750 .functor NOT 1, L_0x5e4815a00520, C4<0>, C4<0>, C4<0>;
+L_0x5e4815a007c0 .functor AND 1, L_0x5e48159ffb90, L_0x5e4815a00750, C4<1>, C4<1>;
+L_0x5e4815a00a30 .functor NOT 1, L_0x5e4815a00520, C4<0>, C4<0>, C4<0>;
+L_0x5e4815a01880 .functor NOT 1, L_0x5e4815a02670, C4<0>, C4<0>, C4<0>;
+L_0x5e4815a02ad0 .functor NOT 1, L_0x5e4815a01060, C4<0>, C4<0>, C4<0>;
+L_0x731458386378 .functor BUFT 1, C4<10101>, C4<0>, C4<0>, C4<0>;
+v0x5e48159daaf0_0 .net/2u *"_ivl_24", 4 0, L_0x731458386378;  1 drivers
+v0x5e48159dabf0_0 .net *"_ivl_28", 0 0, L_0x5e4815a00750;  1 drivers
+L_0x7314583863c0 .functor BUFT 1, C4<11000>, C4<0>, C4<0>, C4<0>;
+v0x5e48159dacd0_0 .net/2u *"_ivl_32", 4 0, L_0x7314583863c0;  1 drivers
+v0x5e48159dadc0_0 .net *"_ivl_34", 0 0, L_0x5e4815a00830;  1 drivers
+L_0x731458386408 .functor BUFT 1, C4<10111>, C4<0>, C4<0>, C4<0>;
+v0x5e48159dae80_0 .net/2u *"_ivl_36", 4 0, L_0x731458386408;  1 drivers
+v0x5e48159daf60_0 .net *"_ivl_38", 4 0, L_0x5e4815a00990;  1 drivers
+L_0x7314583861c8 .functor BUFT 1, C4<11111>, C4<0>, C4<0>, C4<0>;
+v0x5e48159db040_0 .net/2u *"_ivl_4", 4 0, L_0x7314583861c8;  1 drivers
+v0x5e48159db120_0 .net *"_ivl_41", 0 0, L_0x5e4815a00b70;  1 drivers
+L_0x731458386450 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5e48159db200_0 .net/2u *"_ivl_42", 0 0, L_0x731458386450;  1 drivers
+v0x5e48159db2e0_0 .net *"_ivl_85", 0 0, L_0x5e4815a02670;  1 drivers
+v0x5e48159db3c0_0 .net *"_ivl_94", 0 0, L_0x5e4815a02ad0;  1 drivers
+v0x5e48159db4a0_0 .net "_unused", 0 0, L_0x5e4815a00380;  1 drivers
+v0x5e48159db560_0 .net8 "analog", 2 0, p0x7314583d37e8;  alias, 0 drivers, strength-aware
+v0x5e48159db640_0 .net "bidir_cs", 5 0, L_0x731458386210;  alias, 1 drivers
+v0x5e48159db720_0 .net "bidir_ie", 5 0, L_0x7314583862a0;  alias, 1 drivers
+v0x5e48159db800_0 .net "bidir_in", 5 0, L_0x5e48159fe290;  alias, 1 drivers
+v0x5e48159db8e0_0 .net "bidir_oe", 5 0, L_0x5e48159ffd90;  alias, 1 drivers
+v0x5e48159dbad0_0 .net "bidir_out", 5 0, L_0x5e4815a02b70;  alias, 1 drivers
+v0x5e48159dbbb0_0 .net "bidir_pd", 5 0, L_0x731458386330;  alias, 1 drivers
+v0x5e48159dbc90_0 .net "bidir_pu", 5 0, L_0x7314583862e8;  alias, 1 drivers
+v0x5e48159dbd70_0 .net "bidir_sl", 5 0, L_0x731458386258;  alias, 1 drivers
+v0x5e48159dbe50_0 .net "clk", 0 0, L_0x5e48159fd8f0;  alias, 1 drivers
+v0x5e48159dbef0_0 .net "clkout", 0 0, L_0x5e4815a01410;  1 drivers
+v0x5e48159dbfc0_0 .var "cnt", 4 0;
+v0x5e48159dc060_0 .net "cnt_rst_n", 0 0, L_0x5e4815a007c0;  1 drivers
+v0x5e48159dc120_0 .net "cs_n", 0 0, L_0x5e4815a00520;  1 drivers
+v0x5e48159dc1e0_0 .var "ctl", 18 0;
+v0x5e48159dc2c0_0 .net "i_mag", 0 0, L_0x5e4815a00fa0;  1 drivers
+v0x5e48159dc390_0 .net "i_sign", 0 0, L_0x5e4815a00ee0;  1 drivers
+v0x5e48159dc460_0 .net "input_in", 1 0, L_0x5e48159f6b20;  alias, 1 drivers
+v0x5e48159dc500_0 .net "input_pd", 1 0, L_0x731458386180;  alias, 1 drivers
+v0x5e48159dc5e0_0 .net "input_pu", 1 0, L_0x731458386138;  alias, 1 drivers
+v0x5e48159dc6c0_0 .net "q_mag", 0 0, L_0x5e4815a01120;  1 drivers
+v0x5e48159dc9a0_0 .net "q_sign", 0 0, L_0x5e4815a01060;  1 drivers
+v0x5e48159dca70_0 .net "rd", 23 0, L_0x5e4815a00650;  1 drivers
+v0x5e48159dcb10_0 .net "rfin", 0 0, o0x7314583cf018;  alias, 0 drivers
+v0x5e48159dcbb0_0 .net "rst_n", 0 0, L_0x5e48159ffb90;  alias, 1 drivers
+v0x5e48159dcc70_0 .net "sdi", 0 0, L_0x5e4815a00450;  1 drivers
+v0x5e48159dcd30_0 .net "sdo", 0 0, L_0x5e4815a00d00;  1 drivers
+v0x5e48159dcdf0_0 .net "sdo_oe", 0 0, L_0x5e4815a00a30;  1 drivers
+v0x5e48159dceb0_0 .var "sr", 23 0;
+E_0x5e48159d86f0 .event negedge, v0x5e48159dc060_0, v0x5e48159d4bc0_0;
+E_0x5e48159d8750/0 .event negedge, v0x5e48159dcbb0_0;
+E_0x5e48159d8750/1 .event posedge, v0x5e48159dc120_0;
+E_0x5e48159d8750 .event/or E_0x5e48159d8750/0, E_0x5e48159d8750/1;
+E_0x5e48159d87b0/0 .event negedge, v0x5e48159dcbb0_0;
+E_0x5e48159d87b0/1 .event posedge, v0x5e48159d4bc0_0;
+E_0x5e48159d87b0 .event/or E_0x5e48159d87b0/0, E_0x5e48159d87b0/1;
+L_0x5e48159ffd90 .concat [ 5 1 0 0], L_0x7314583861c8, L_0x5e4815a00a30;
+L_0x5e4815a00380 .reduce/and L_0x5e48159fe290;
+L_0x5e4815a00450 .part L_0x5e48159f6b20, 0, 1;
+L_0x5e4815a00520 .part L_0x5e48159f6b20, 1, 1;
+L_0x5e4815a00650 .concat [ 19 5 0 0], v0x5e48159dc1e0_0, L_0x731458386378;
+L_0x5e4815a00830 .cmp/gt 5, L_0x7314583863c0, v0x5e48159dbfc0_0;
+L_0x5e4815a00990 .arith/sub 5, L_0x731458386408, v0x5e48159dbfc0_0;
+L_0x5e4815a00b70 .part/v L_0x5e4815a00650, L_0x5e4815a00990, 1;
+L_0x5e4815a00d00 .functor MUXZ 1, L_0x731458386450, L_0x5e4815a00b70, L_0x5e4815a00830, C4<>;
+L_0x5e4815a015f0 .part v0x5e48159dc1e0_0, 0, 1;
+L_0x5e4815a01740 .part v0x5e48159dc1e0_0, 1, 1;
+L_0x5e4815a017e0 .part v0x5e48159dc1e0_0, 2, 1;
+L_0x5e4815a018f0 .part v0x5e48159dc1e0_0, 3, 1;
+L_0x5e4815a01990 .part v0x5e48159dc1e0_0, 4, 1;
+L_0x5e4815a01ab0 .part v0x5e48159dc1e0_0, 5, 1;
+L_0x5e4815a01b50 .part v0x5e48159dc1e0_0, 6, 1;
+L_0x5e4815a01dc0 .part v0x5e48159dc1e0_0, 7, 1;
+L_0x5e4815a01e90 .part v0x5e48159dc1e0_0, 8, 1;
+L_0x5e4815a01fd0 .part v0x5e48159dc1e0_0, 9, 1;
+L_0x5e4815a02070 .part v0x5e48159dc1e0_0, 10, 1;
+L_0x5e4815a01f30 .part v0x5e48159dc1e0_0, 11, 1;
+L_0x5e4815a02210 .part v0x5e48159dc1e0_0, 12, 1;
+L_0x5e4815a02110 .part v0x5e48159dc1e0_0, 13, 1;
+L_0x5e4815a023c0 .part v0x5e48159dc1e0_0, 14, 1;
+L_0x5e4815a02300 .part v0x5e48159dc1e0_0, 15, 1;
+L_0x5e4815a02740 .part v0x5e48159dc1e0_0, 16, 1;
+L_0x5e4815a02670 .part v0x5e48159dc1e0_0, 17, 1;
+L_0x5e4815a02910 .part v0x5e48159dc1e0_0, 18, 1;
+LS_0x5e4815a02b70_0_0 .concat [ 1 1 1 1], L_0x5e4815a00ee0, L_0x5e4815a00fa0, L_0x5e4815a02ad0, L_0x5e4815a01120;
+LS_0x5e4815a02b70_0_4 .concat [ 1 1 0 0], L_0x5e4815a01410, L_0x5e4815a00d00;
+L_0x5e4815a02b70 .concat [ 4 2 0 0], LS_0x5e4815a02b70_0_0, LS_0x5e4815a02b70_0_4;
+o0x7314583d2fa8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d2fa8 .port I0x5e48158e6e50, o0x7314583d2fa8;
+ .tranvp 3 1 0, I0x5e48158e6e50, p0x7314583d37e8 p0x7314583d2fa8;
+o0x7314583d2c78 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d2c78 .port I0x5e48158e6e50, o0x7314583d2c78;
+ .tranvp 3 1 1, I0x5e48158e6e50, p0x7314583d37e8 p0x7314583d2c78;
+o0x7314583d2fd8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d2fd8 .port I0x5e48158e6e50, o0x7314583d2fd8;
+ .tranvp 3 1 2, I0x5e48158e6e50, p0x7314583d37e8 p0x7314583d2fd8;
+S_0x5e48159d8810 .scope module, "i_afe" "gnss_afe_analog" 6 123, 7 5 0, S_0x5e48159d7f60;
+ .timescale 0 0;
+    .port_info 0 /INOUT 1 "RFIN";
+    .port_info 1 /INOUT 1 "REFIN";
+    .port_info 2 /INPUT 1 "IG1A";
+    .port_info 3 /INPUT 1 "IG1B";
+    .port_info 4 /INPUT 1 "IG2A";
+    .port_info 5 /INPUT 1 "IG2B";
+    .port_info 6 /INPUT 1 "IG3A";
+    .port_info 7 /INPUT 1 "IG3B";
+    .port_info 8 /INPUT 1 "B0";
+    .port_info 9 /INPUT 1 "B1";
+    .port_info 10 /INPUT 1 "AFC0";
+    .port_info 11 /INPUT 1 "AFC1";
+    .port_info 12 /INPUT 1 "AFC2";
+    .port_info 13 /INPUT 1 "AFC3";
+    .port_info 14 /INPUT 1 "AFC4";
+    .port_info 15 /INPUT 1 "AFC5";
+    .port_info 16 /INPUT 1 "AFC6";
+    .port_info 17 /INPUT 1 "AFC7";
+    .port_info 18 /INPUT 1 "ICP2";
+    .port_info 19 /INPUT 1 "BWK";
+    .port_info 20 /INPUT 1 "BWN";
+    .port_info 21 /OUTPUT 1 "I_SIGN";
+    .port_info 22 /OUTPUT 1 "I_MAG";
+    .port_info 23 /OUTPUT 1 "Q_SIGN";
+    .port_info 24 /OUTPUT 1 "Q_MAG";
+    .port_info 25 /OUTPUT 1 "CLKOUT";
+    .port_info 26 /INOUT 1 "AFCOUT";
+    .port_info 27 /INOUT 1 "VCTRL";
+L_0x5e4815a00ee0 .functor BUFZ 1, L_0x5e4815a01e90, C4<0>, C4<0>, C4<0>;
+L_0x5e4815a00fa0 .functor BUFZ 1, L_0x5e4815a01fd0, C4<0>, C4<0>, C4<0>;
+L_0x5e4815a01060 .functor BUFZ 1, L_0x5e4815a02070, C4<0>, C4<0>, C4<0>;
+L_0x5e4815a01120 .functor BUFZ 1, L_0x5e4815a01f30, C4<0>, C4<0>, C4<0>;
+L_0x5e4815a01410 .functor XOR 1, L_0x5e4815a02210, L_0x5e4815a01320, C4<0>, C4<0>;
+v0x5e48159d8e90_0 .net "AFC0", 0 0, L_0x5e4815a01e90;  1 drivers
+v0x5e48159d8f70_0 .net "AFC1", 0 0, L_0x5e4815a01fd0;  1 drivers
+v0x5e48159d9030_0 .net "AFC2", 0 0, L_0x5e4815a02070;  1 drivers
+v0x5e48159d9100_0 .net "AFC3", 0 0, L_0x5e4815a01f30;  1 drivers
+v0x5e48159d91c0_0 .net "AFC4", 0 0, L_0x5e4815a02210;  1 drivers
+v0x5e48159d92d0_0 .net "AFC5", 0 0, L_0x5e4815a02110;  1 drivers
+v0x5e48159d9390_0 .net "AFC6", 0 0, L_0x5e4815a023c0;  1 drivers
+v0x5e48159d9450_0 .net "AFC7", 0 0, L_0x5e4815a02300;  1 drivers
+v0x5e48159d9510_0 .net8 "AFCOUT", 0 0, p0x7314583d2c78;  0 drivers, strength-aware
+v0x5e48159d95d0_0 .net "B0", 0 0, L_0x5e4815a01b50;  1 drivers
+v0x5e48159d9690_0 .net "B1", 0 0, L_0x5e4815a01dc0;  1 drivers
+v0x5e48159d9750_0 .net "BWK", 0 0, L_0x5e4815a01880;  1 drivers
+v0x5e48159d9810_0 .net "BWN", 0 0, L_0x5e4815a02910;  1 drivers
+v0x5e48159d98d0_0 .net "CLKOUT", 0 0, L_0x5e4815a01410;  alias, 1 drivers
+v0x5e48159d9990_0 .net "ICP2", 0 0, L_0x5e4815a02740;  1 drivers
+v0x5e48159d9a50_0 .net "IG1A", 0 0, L_0x5e4815a015f0;  1 drivers
+v0x5e48159d9b10_0 .net "IG1B", 0 0, L_0x5e4815a01740;  1 drivers
+v0x5e48159d9ce0_0 .net "IG2A", 0 0, L_0x5e4815a017e0;  1 drivers
+v0x5e48159d9da0_0 .net "IG2B", 0 0, L_0x5e4815a018f0;  1 drivers
+v0x5e48159d9e60_0 .net "IG3A", 0 0, L_0x5e4815a01990;  1 drivers
+v0x5e48159d9f20_0 .net "IG3B", 0 0, L_0x5e4815a01ab0;  1 drivers
+v0x5e48159d9fe0_0 .net "I_MAG", 0 0, L_0x5e4815a00fa0;  alias, 1 drivers
+v0x5e48159da0a0_0 .net "I_SIGN", 0 0, L_0x5e4815a00ee0;  alias, 1 drivers
+v0x5e48159da160_0 .net "Q_MAG", 0 0, L_0x5e4815a01120;  alias, 1 drivers
+v0x5e48159da220_0 .net "Q_SIGN", 0 0, L_0x5e4815a01060;  alias, 1 drivers
+v0x5e48159da2e0_0 .net8 "REFIN", 0 0, p0x7314583d2fa8;  0 drivers, strength-aware
+v0x5e48159da3a0_0 .net "RFIN", 0 0, o0x7314583cf018;  alias, 0 drivers
+v0x5e48159da440_0 .net8 "VCTRL", 0 0, p0x7314583d2fd8;  0 drivers, strength-aware
+v0x5e48159da4e0_0 .net *"_ivl_10", 0 0, L_0x5e4815a01320;  1 drivers
+L_0x731458386498 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x5e48159da5a0_0 .net/2u *"_ivl_8", 0 0, L_0x731458386498;  1 drivers
+L_0x5e4815a01320 .cmp/eeq 1, p0x7314583d2fa8, L_0x731458386498;
+S_0x5e48159dd170 .scope generate, "inputs[0]" "inputs[0]" 3 179, 3 179 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159dd370 .param/l "i" 1 3 179, +C4<00>;
+S_0x5e48159dd450 .scope module, "pad" "gf180mcu_fd_io__in_c" 3 181, 5 536 0, S_0x5e48159dd170;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "PU";
+    .port_info 1 /INPUT 1 "PD";
+    .port_info 2 /INPUT 1 "PAD";
+    .port_info 3 /OUTPUT 1 "Y";
+    .port_info 4 /INOUT 1 "DVDD";
+    .port_info 5 /INOUT 1 "DVSS";
+    .port_info 6 /INOUT 1 "VDD";
+    .port_info 7 /INOUT 1 "VSS";
+L_0x5e48159f6110/d .functor BUF 1, L_0x5e48159f65a0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f6110 .delay 1 (1000,1000,1000) L_0x5e48159f6110/d;
+o0x7314583d3ed8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159dd6c0_0 .net "DVDD", 0 0, o0x7314583d3ed8;  0 drivers
+o0x7314583d3f08 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159dd780_0 .net "DVSS", 0 0, o0x7314583d3f08;  0 drivers
+v0x5e48159dd840_0 .net "PAD", 0 0, L_0x5e48159f65a0;  1 drivers
+v0x5e48159dd8e0_0 .net "PD", 0 0, L_0x5e48159f64b0;  1 drivers
+v0x5e48159dd9a0_0 .net "PU", 0 0, L_0x5e48159f6390;  1 drivers
+o0x7314583d3fc8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ddab0_0 .net "VDD", 0 0, o0x7314583d3fc8;  0 drivers
+o0x7314583d3ff8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ddb70_0 .net "VSS", 0 0, o0x7314583d3ff8;  0 drivers
+v0x5e48159ddc30_0 .net "Y", 0 0, L_0x5e48159f6110;  1 drivers
+S_0x5e48159dde40 .scope generate, "inputs[1]" "inputs[1]" 3 179, 3 179 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ddff0 .param/l "i" 1 3 179, +C4<01>;
+S_0x5e48159de0d0 .scope module, "pad" "gf180mcu_fd_io__in_c" 3 181, 5 536 0, S_0x5e48159dde40;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "PU";
+    .port_info 1 /INPUT 1 "PD";
+    .port_info 2 /INPUT 1 "PAD";
+    .port_info 3 /OUTPUT 1 "Y";
+    .port_info 4 /INOUT 1 "DVDD";
+    .port_info 5 /INOUT 1 "DVSS";
+    .port_info 6 /INOUT 1 "VDD";
+    .port_info 7 /INOUT 1 "VSS";
+L_0x5e48159f6690/d .functor BUF 1, L_0x5e48159f69a0, C4<0>, C4<0>, C4<0>;
+L_0x5e48159f6690 .delay 1 (1000,1000,1000) L_0x5e48159f6690/d;
+o0x7314583d41d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159de450_0 .net "DVDD", 0 0, o0x7314583d41d8;  0 drivers
+o0x7314583d4208 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159de510_0 .net "DVSS", 0 0, o0x7314583d4208;  0 drivers
+v0x5e48159de5d0_0 .net "PAD", 0 0, L_0x5e48159f69a0;  1 drivers
+v0x5e48159de670_0 .net "PD", 0 0, L_0x5e48159f68d0;  1 drivers
+v0x5e48159de730_0 .net "PU", 0 0, L_0x5e48159f67d0;  1 drivers
+o0x7314583d42c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159de840_0 .net "VDD", 0 0, o0x7314583d42c8;  0 drivers
+o0x7314583d42f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159de900_0 .net "VSS", 0 0, o0x7314583d42f8;  0 drivers
+v0x5e48159de9c0_0 .net "Y", 0 0, L_0x5e48159f6690;  1 drivers
+S_0x5e48159debd0 .scope module, "marker" "gf180mcu_ws_ip__marker" 3 323, 8 2 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+S_0x5e48159dedc0 .scope generate, "nc[0]" "nc[0]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159defa0 .param/l "i" 1 3 243, +C4<00>;
+o0x7314583d44d8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d44d8 .port I0x5e48158e6fd0, o0x7314583d44d8;
+ .tranvp 29 1 0, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d44d8;
+S_0x5e48159df080 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159dedc0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159df350_0 .net8 "ASIG5V", 0 0, p0x7314583d44d8;  0 drivers, strength-aware
+o0x7314583d4508 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159df410_0 .net "DVDD", 0 0, o0x7314583d4508;  0 drivers
+o0x7314583d4538 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159df4d0_0 .net "DVSS", 0 0, o0x7314583d4538;  0 drivers
+o0x7314583d4568 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159df5a0_0 .net "VDD", 0 0, o0x7314583d4568;  0 drivers
+o0x7314583d4598 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159df660_0 .net "VSS", 0 0, o0x7314583d4598;  0 drivers
+S_0x5e48159df810 .scope generate, "nc[1]" "nc[1]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159dfa10 .param/l "i" 1 3 243, +C4<01>;
+o0x7314583d46b8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d46b8 .port I0x5e48158e6fd0, o0x7314583d46b8;
+ .tranvp 29 1 1, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d46b8;
+S_0x5e48159dfaf0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159df810;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159dfdc0_0 .net8 "ASIG5V", 0 0, p0x7314583d46b8;  0 drivers, strength-aware
+o0x7314583d46e8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159dfe80_0 .net "DVDD", 0 0, o0x7314583d46e8;  0 drivers
+o0x7314583d4718 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159dff40_0 .net "DVSS", 0 0, o0x7314583d4718;  0 drivers
+o0x7314583d4748 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e0010_0 .net "VDD", 0 0, o0x7314583d4748;  0 drivers
+o0x7314583d4778 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e00d0_0 .net "VSS", 0 0, o0x7314583d4778;  0 drivers
+S_0x5e48159e0280 .scope generate, "nc[2]" "nc[2]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e0480 .param/l "i" 1 3 243, +C4<010>;
+o0x7314583d4898 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d4898 .port I0x5e48158e6fd0, o0x7314583d4898;
+ .tranvp 29 1 2, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d4898;
+S_0x5e48159e0560 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e0280;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e0830_0 .net8 "ASIG5V", 0 0, p0x7314583d4898;  0 drivers, strength-aware
+o0x7314583d48c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e08f0_0 .net "DVDD", 0 0, o0x7314583d48c8;  0 drivers
+o0x7314583d48f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e09b0_0 .net "DVSS", 0 0, o0x7314583d48f8;  0 drivers
+o0x7314583d4928 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e0a80_0 .net "VDD", 0 0, o0x7314583d4928;  0 drivers
+o0x7314583d4958 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e0b40_0 .net "VSS", 0 0, o0x7314583d4958;  0 drivers
+S_0x5e48159e0cf0 .scope generate, "nc[3]" "nc[3]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e0ef0 .param/l "i" 1 3 243, +C4<011>;
+o0x7314583d4a78 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d4a78 .port I0x5e48158e6fd0, o0x7314583d4a78;
+ .tranvp 29 1 3, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d4a78;
+S_0x5e48159e0fd0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e0cf0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e12a0_0 .net8 "ASIG5V", 0 0, p0x7314583d4a78;  0 drivers, strength-aware
+o0x7314583d4aa8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e1360_0 .net "DVDD", 0 0, o0x7314583d4aa8;  0 drivers
+o0x7314583d4ad8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e1420_0 .net "DVSS", 0 0, o0x7314583d4ad8;  0 drivers
+o0x7314583d4b08 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e14f0_0 .net "VDD", 0 0, o0x7314583d4b08;  0 drivers
+o0x7314583d4b38 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e15b0_0 .net "VSS", 0 0, o0x7314583d4b38;  0 drivers
+S_0x5e48159e1760 .scope generate, "nc[4]" "nc[4]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e1960 .param/l "i" 1 3 243, +C4<0100>;
+o0x7314583d4c58 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d4c58 .port I0x5e48158e6fd0, o0x7314583d4c58;
+ .tranvp 29 1 4, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d4c58;
+S_0x5e48159e1a40 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e1760;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e1d10_0 .net8 "ASIG5V", 0 0, p0x7314583d4c58;  0 drivers, strength-aware
+o0x7314583d4c88 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e1dd0_0 .net "DVDD", 0 0, o0x7314583d4c88;  0 drivers
+o0x7314583d4cb8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e1e90_0 .net "DVSS", 0 0, o0x7314583d4cb8;  0 drivers
+o0x7314583d4ce8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e1f60_0 .net "VDD", 0 0, o0x7314583d4ce8;  0 drivers
+o0x7314583d4d18 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e2020_0 .net "VSS", 0 0, o0x7314583d4d18;  0 drivers
+S_0x5e48159e21d0 .scope generate, "nc[5]" "nc[5]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e23d0 .param/l "i" 1 3 243, +C4<0101>;
+o0x7314583d4e38 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d4e38 .port I0x5e48158e6fd0, o0x7314583d4e38;
+ .tranvp 29 1 5, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d4e38;
+S_0x5e48159e24b0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e21d0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e2780_0 .net8 "ASIG5V", 0 0, p0x7314583d4e38;  0 drivers, strength-aware
+o0x7314583d4e68 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e2840_0 .net "DVDD", 0 0, o0x7314583d4e68;  0 drivers
+o0x7314583d4e98 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e2900_0 .net "DVSS", 0 0, o0x7314583d4e98;  0 drivers
+o0x7314583d4ec8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e29d0_0 .net "VDD", 0 0, o0x7314583d4ec8;  0 drivers
+o0x7314583d4ef8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e2a90_0 .net "VSS", 0 0, o0x7314583d4ef8;  0 drivers
+S_0x5e48159e2c40 .scope generate, "nc[6]" "nc[6]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e2e40 .param/l "i" 1 3 243, +C4<0110>;
+o0x7314583d5018 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d5018 .port I0x5e48158e6fd0, o0x7314583d5018;
+ .tranvp 29 1 6, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d5018;
+S_0x5e48159e2f20 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e2c40;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e31f0_0 .net8 "ASIG5V", 0 0, p0x7314583d5018;  0 drivers, strength-aware
+o0x7314583d5048 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e32b0_0 .net "DVDD", 0 0, o0x7314583d5048;  0 drivers
+o0x7314583d5078 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e3370_0 .net "DVSS", 0 0, o0x7314583d5078;  0 drivers
+o0x7314583d50a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e3440_0 .net "VDD", 0 0, o0x7314583d50a8;  0 drivers
+o0x7314583d50d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e3500_0 .net "VSS", 0 0, o0x7314583d50d8;  0 drivers
+S_0x5e48159e36b0 .scope generate, "nc[7]" "nc[7]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e38b0 .param/l "i" 1 3 243, +C4<0111>;
+o0x7314583d51f8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d51f8 .port I0x5e48158e6fd0, o0x7314583d51f8;
+ .tranvp 29 1 7, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d51f8;
+S_0x5e48159e3990 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e36b0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e3c60_0 .net8 "ASIG5V", 0 0, p0x7314583d51f8;  0 drivers, strength-aware
+o0x7314583d5228 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e3d20_0 .net "DVDD", 0 0, o0x7314583d5228;  0 drivers
+o0x7314583d5258 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e3de0_0 .net "DVSS", 0 0, o0x7314583d5258;  0 drivers
+o0x7314583d5288 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e3eb0_0 .net "VDD", 0 0, o0x7314583d5288;  0 drivers
+o0x7314583d52b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e3f70_0 .net "VSS", 0 0, o0x7314583d52b8;  0 drivers
+S_0x5e48159e4120 .scope generate, "nc[8]" "nc[8]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e4320 .param/l "i" 1 3 243, +C4<01000>;
+o0x7314583d53d8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d53d8 .port I0x5e48158e6fd0, o0x7314583d53d8;
+ .tranvp 29 1 8, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d53d8;
+S_0x5e48159e4400 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e4120;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e46d0_0 .net8 "ASIG5V", 0 0, p0x7314583d53d8;  0 drivers, strength-aware
+o0x7314583d5408 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e4790_0 .net "DVDD", 0 0, o0x7314583d5408;  0 drivers
+o0x7314583d5438 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e4850_0 .net "DVSS", 0 0, o0x7314583d5438;  0 drivers
+o0x7314583d5468 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e4920_0 .net "VDD", 0 0, o0x7314583d5468;  0 drivers
+o0x7314583d5498 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e49e0_0 .net "VSS", 0 0, o0x7314583d5498;  0 drivers
+S_0x5e48159e4b90 .scope generate, "nc[9]" "nc[9]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e4fa0 .param/l "i" 1 3 243, +C4<01001>;
+o0x7314583d55b8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d55b8 .port I0x5e48158e6fd0, o0x7314583d55b8;
+ .tranvp 29 1 9, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d55b8;
+S_0x5e48159e5080 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e4b90;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e5350_0 .net8 "ASIG5V", 0 0, p0x7314583d55b8;  0 drivers, strength-aware
+o0x7314583d55e8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e5410_0 .net "DVDD", 0 0, o0x7314583d55e8;  0 drivers
+o0x7314583d5618 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e54d0_0 .net "DVSS", 0 0, o0x7314583d5618;  0 drivers
+o0x7314583d5648 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e55a0_0 .net "VDD", 0 0, o0x7314583d5648;  0 drivers
+o0x7314583d5678 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e5660_0 .net "VSS", 0 0, o0x7314583d5678;  0 drivers
+S_0x5e48159e5810 .scope generate, "nc[10]" "nc[10]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e5a10 .param/l "i" 1 3 243, +C4<01010>;
+o0x7314583d5798 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d5798 .port I0x5e48158e6fd0, o0x7314583d5798;
+ .tranvp 29 1 10, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d5798;
+S_0x5e48159e5af0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e5810;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e5dc0_0 .net8 "ASIG5V", 0 0, p0x7314583d5798;  0 drivers, strength-aware
+o0x7314583d57c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e5e80_0 .net "DVDD", 0 0, o0x7314583d57c8;  0 drivers
+o0x7314583d57f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e5f40_0 .net "DVSS", 0 0, o0x7314583d57f8;  0 drivers
+o0x7314583d5828 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e6010_0 .net "VDD", 0 0, o0x7314583d5828;  0 drivers
+o0x7314583d5858 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e60d0_0 .net "VSS", 0 0, o0x7314583d5858;  0 drivers
+S_0x5e48159e6280 .scope generate, "nc[11]" "nc[11]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e6480 .param/l "i" 1 3 243, +C4<01011>;
+o0x7314583d5978 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d5978 .port I0x5e48158e6fd0, o0x7314583d5978;
+ .tranvp 29 1 11, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d5978;
+S_0x5e48159e6560 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e6280;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e6830_0 .net8 "ASIG5V", 0 0, p0x7314583d5978;  0 drivers, strength-aware
+o0x7314583d59a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e68f0_0 .net "DVDD", 0 0, o0x7314583d59a8;  0 drivers
+o0x7314583d59d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e69b0_0 .net "DVSS", 0 0, o0x7314583d59d8;  0 drivers
+o0x7314583d5a08 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e6a80_0 .net "VDD", 0 0, o0x7314583d5a08;  0 drivers
+o0x7314583d5a38 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e6b40_0 .net "VSS", 0 0, o0x7314583d5a38;  0 drivers
+S_0x5e48159e6cf0 .scope generate, "nc[12]" "nc[12]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e6ef0 .param/l "i" 1 3 243, +C4<01100>;
+o0x7314583d5b58 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d5b58 .port I0x5e48158e6fd0, o0x7314583d5b58;
+ .tranvp 29 1 12, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d5b58;
+S_0x5e48159e6fd0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e6cf0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e72a0_0 .net8 "ASIG5V", 0 0, p0x7314583d5b58;  0 drivers, strength-aware
+o0x7314583d5b88 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e7360_0 .net "DVDD", 0 0, o0x7314583d5b88;  0 drivers
+o0x7314583d5bb8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e7420_0 .net "DVSS", 0 0, o0x7314583d5bb8;  0 drivers
+o0x7314583d5be8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e74f0_0 .net "VDD", 0 0, o0x7314583d5be8;  0 drivers
+o0x7314583d5c18 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e75b0_0 .net "VSS", 0 0, o0x7314583d5c18;  0 drivers
+S_0x5e48159e7760 .scope generate, "nc[13]" "nc[13]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e7960 .param/l "i" 1 3 243, +C4<01101>;
+o0x7314583d5d38 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d5d38 .port I0x5e48158e6fd0, o0x7314583d5d38;
+ .tranvp 29 1 13, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d5d38;
+S_0x5e48159e7a40 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e7760;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e7d10_0 .net8 "ASIG5V", 0 0, p0x7314583d5d38;  0 drivers, strength-aware
+o0x7314583d5d68 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e7dd0_0 .net "DVDD", 0 0, o0x7314583d5d68;  0 drivers
+o0x7314583d5d98 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e7e90_0 .net "DVSS", 0 0, o0x7314583d5d98;  0 drivers
+o0x7314583d5dc8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e7f60_0 .net "VDD", 0 0, o0x7314583d5dc8;  0 drivers
+o0x7314583d5df8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e8020_0 .net "VSS", 0 0, o0x7314583d5df8;  0 drivers
+S_0x5e48159e81d0 .scope generate, "nc[14]" "nc[14]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e83d0 .param/l "i" 1 3 243, +C4<01110>;
+o0x7314583d5f18 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d5f18 .port I0x5e48158e6fd0, o0x7314583d5f18;
+ .tranvp 29 1 14, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d5f18;
+S_0x5e48159e84b0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e81d0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e8780_0 .net8 "ASIG5V", 0 0, p0x7314583d5f18;  0 drivers, strength-aware
+o0x7314583d5f48 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e8840_0 .net "DVDD", 0 0, o0x7314583d5f48;  0 drivers
+o0x7314583d5f78 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e8900_0 .net "DVSS", 0 0, o0x7314583d5f78;  0 drivers
+o0x7314583d5fa8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e89d0_0 .net "VDD", 0 0, o0x7314583d5fa8;  0 drivers
+o0x7314583d5fd8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e8a90_0 .net "VSS", 0 0, o0x7314583d5fd8;  0 drivers
+S_0x5e48159e8c40 .scope generate, "nc[15]" "nc[15]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e8e40 .param/l "i" 1 3 243, +C4<01111>;
+o0x7314583d60f8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d60f8 .port I0x5e48158e6fd0, o0x7314583d60f8;
+ .tranvp 29 1 15, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d60f8;
+S_0x5e48159e8f20 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e8c40;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e91f0_0 .net8 "ASIG5V", 0 0, p0x7314583d60f8;  0 drivers, strength-aware
+o0x7314583d6128 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e92b0_0 .net "DVDD", 0 0, o0x7314583d6128;  0 drivers
+o0x7314583d6158 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e9370_0 .net "DVSS", 0 0, o0x7314583d6158;  0 drivers
+o0x7314583d6188 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e9440_0 .net "VDD", 0 0, o0x7314583d6188;  0 drivers
+o0x7314583d61b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e9500_0 .net "VSS", 0 0, o0x7314583d61b8;  0 drivers
+S_0x5e48159e96b0 .scope generate, "nc[16]" "nc[16]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159e98b0 .param/l "i" 1 3 243, +C4<010000>;
+o0x7314583d62d8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d62d8 .port I0x5e48158e6fd0, o0x7314583d62d8;
+ .tranvp 29 1 16, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d62d8;
+S_0x5e48159e9990 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159e96b0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159e9c60_0 .net8 "ASIG5V", 0 0, p0x7314583d62d8;  0 drivers, strength-aware
+o0x7314583d6308 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e9d20_0 .net "DVDD", 0 0, o0x7314583d6308;  0 drivers
+o0x7314583d6338 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e9de0_0 .net "DVSS", 0 0, o0x7314583d6338;  0 drivers
+o0x7314583d6368 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e9eb0_0 .net "VDD", 0 0, o0x7314583d6368;  0 drivers
+o0x7314583d6398 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159e9f70_0 .net "VSS", 0 0, o0x7314583d6398;  0 drivers
+S_0x5e48159ea120 .scope generate, "nc[17]" "nc[17]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ea320 .param/l "i" 1 3 243, +C4<010001>;
+o0x7314583d64b8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d64b8 .port I0x5e48158e6fd0, o0x7314583d64b8;
+ .tranvp 29 1 17, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d64b8;
+S_0x5e48159ea400 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159ea120;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159ea6d0_0 .net8 "ASIG5V", 0 0, p0x7314583d64b8;  0 drivers, strength-aware
+o0x7314583d64e8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ea790_0 .net "DVDD", 0 0, o0x7314583d64e8;  0 drivers
+o0x7314583d6518 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ea850_0 .net "DVSS", 0 0, o0x7314583d6518;  0 drivers
+o0x7314583d6548 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ea920_0 .net "VDD", 0 0, o0x7314583d6548;  0 drivers
+o0x7314583d6578 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ea9e0_0 .net "VSS", 0 0, o0x7314583d6578;  0 drivers
+S_0x5e48159eab90 .scope generate, "nc[18]" "nc[18]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ead90 .param/l "i" 1 3 243, +C4<010010>;
+o0x7314583d6698 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d6698 .port I0x5e48158e6fd0, o0x7314583d6698;
+ .tranvp 29 1 18, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d6698;
+S_0x5e48159eae70 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159eab90;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159eb140_0 .net8 "ASIG5V", 0 0, p0x7314583d6698;  0 drivers, strength-aware
+o0x7314583d66c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159eb200_0 .net "DVDD", 0 0, o0x7314583d66c8;  0 drivers
+o0x7314583d66f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159eb2c0_0 .net "DVSS", 0 0, o0x7314583d66f8;  0 drivers
+o0x7314583d6728 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159eb390_0 .net "VDD", 0 0, o0x7314583d6728;  0 drivers
+o0x7314583d6758 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159eb450_0 .net "VSS", 0 0, o0x7314583d6758;  0 drivers
+S_0x5e48159eb600 .scope generate, "nc[19]" "nc[19]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159eb800 .param/l "i" 1 3 243, +C4<010011>;
+o0x7314583d6878 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d6878 .port I0x5e48158e6fd0, o0x7314583d6878;
+ .tranvp 29 1 19, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d6878;
+S_0x5e48159eb8e0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159eb600;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159ebbb0_0 .net8 "ASIG5V", 0 0, p0x7314583d6878;  0 drivers, strength-aware
+o0x7314583d68a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ebc70_0 .net "DVDD", 0 0, o0x7314583d68a8;  0 drivers
+o0x7314583d68d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ebd30_0 .net "DVSS", 0 0, o0x7314583d68d8;  0 drivers
+o0x7314583d6908 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ebe00_0 .net "VDD", 0 0, o0x7314583d6908;  0 drivers
+o0x7314583d6938 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ebec0_0 .net "VSS", 0 0, o0x7314583d6938;  0 drivers
+S_0x5e48159ec070 .scope generate, "nc[20]" "nc[20]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ec270 .param/l "i" 1 3 243, +C4<010100>;
+o0x7314583d6a58 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d6a58 .port I0x5e48158e6fd0, o0x7314583d6a58;
+ .tranvp 29 1 20, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d6a58;
+S_0x5e48159ec350 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159ec070;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159ec620_0 .net8 "ASIG5V", 0 0, p0x7314583d6a58;  0 drivers, strength-aware
+o0x7314583d6a88 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ec6e0_0 .net "DVDD", 0 0, o0x7314583d6a88;  0 drivers
+o0x7314583d6ab8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ec7a0_0 .net "DVSS", 0 0, o0x7314583d6ab8;  0 drivers
+o0x7314583d6ae8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ec870_0 .net "VDD", 0 0, o0x7314583d6ae8;  0 drivers
+o0x7314583d6b18 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ec930_0 .net "VSS", 0 0, o0x7314583d6b18;  0 drivers
+S_0x5e48159ecae0 .scope generate, "nc[21]" "nc[21]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ecce0 .param/l "i" 1 3 243, +C4<010101>;
+o0x7314583d6c38 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d6c38 .port I0x5e48158e6fd0, o0x7314583d6c38;
+ .tranvp 29 1 21, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d6c38;
+S_0x5e48159ecdc0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159ecae0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159ed090_0 .net8 "ASIG5V", 0 0, p0x7314583d6c38;  0 drivers, strength-aware
+o0x7314583d6c68 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ed150_0 .net "DVDD", 0 0, o0x7314583d6c68;  0 drivers
+o0x7314583d6c98 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ed210_0 .net "DVSS", 0 0, o0x7314583d6c98;  0 drivers
+o0x7314583d6cc8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ed2e0_0 .net "VDD", 0 0, o0x7314583d6cc8;  0 drivers
+o0x7314583d6cf8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ed3a0_0 .net "VSS", 0 0, o0x7314583d6cf8;  0 drivers
+S_0x5e48159ed550 .scope generate, "nc[22]" "nc[22]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ed750 .param/l "i" 1 3 243, +C4<010110>;
+o0x7314583d6e18 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d6e18 .port I0x5e48158e6fd0, o0x7314583d6e18;
+ .tranvp 29 1 22, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d6e18;
+S_0x5e48159ed830 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159ed550;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159edb00_0 .net8 "ASIG5V", 0 0, p0x7314583d6e18;  0 drivers, strength-aware
+o0x7314583d6e48 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159edbc0_0 .net "DVDD", 0 0, o0x7314583d6e48;  0 drivers
+o0x7314583d6e78 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159edc80_0 .net "DVSS", 0 0, o0x7314583d6e78;  0 drivers
+o0x7314583d6ea8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159edd50_0 .net "VDD", 0 0, o0x7314583d6ea8;  0 drivers
+o0x7314583d6ed8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ede10_0 .net "VSS", 0 0, o0x7314583d6ed8;  0 drivers
+S_0x5e48159edfc0 .scope generate, "nc[23]" "nc[23]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ee1c0 .param/l "i" 1 3 243, +C4<010111>;
+o0x7314583d6ff8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d6ff8 .port I0x5e48158e6fd0, o0x7314583d6ff8;
+ .tranvp 29 1 23, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d6ff8;
+S_0x5e48159ee2a0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159edfc0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159ee570_0 .net8 "ASIG5V", 0 0, p0x7314583d6ff8;  0 drivers, strength-aware
+o0x7314583d7028 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ee630_0 .net "DVDD", 0 0, o0x7314583d7028;  0 drivers
+o0x7314583d7058 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ee6f0_0 .net "DVSS", 0 0, o0x7314583d7058;  0 drivers
+o0x7314583d7088 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ee7c0_0 .net "VDD", 0 0, o0x7314583d7088;  0 drivers
+o0x7314583d70b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ee880_0 .net "VSS", 0 0, o0x7314583d70b8;  0 drivers
+S_0x5e48159eea30 .scope generate, "nc[24]" "nc[24]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159eec30 .param/l "i" 1 3 243, +C4<011000>;
+o0x7314583d71d8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d71d8 .port I0x5e48158e6fd0, o0x7314583d71d8;
+ .tranvp 29 1 24, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d71d8;
+S_0x5e48159eed10 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159eea30;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159eefe0_0 .net8 "ASIG5V", 0 0, p0x7314583d71d8;  0 drivers, strength-aware
+o0x7314583d7208 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ef0a0_0 .net "DVDD", 0 0, o0x7314583d7208;  0 drivers
+o0x7314583d7238 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ef160_0 .net "DVSS", 0 0, o0x7314583d7238;  0 drivers
+o0x7314583d7268 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ef230_0 .net "VDD", 0 0, o0x7314583d7268;  0 drivers
+o0x7314583d7298 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159ef2f0_0 .net "VSS", 0 0, o0x7314583d7298;  0 drivers
+S_0x5e48159ef4a0 .scope generate, "nc[25]" "nc[25]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159ef6a0 .param/l "i" 1 3 243, +C4<011001>;
+o0x7314583d73b8 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d73b8 .port I0x5e48158e6fd0, o0x7314583d73b8;
+ .tranvp 29 1 25, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d73b8;
+S_0x5e48159ef780 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159ef4a0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159efa50_0 .net8 "ASIG5V", 0 0, p0x7314583d73b8;  0 drivers, strength-aware
+o0x7314583d73e8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159efb10_0 .net "DVDD", 0 0, o0x7314583d73e8;  0 drivers
+o0x7314583d7418 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159efbd0_0 .net "DVSS", 0 0, o0x7314583d7418;  0 drivers
+o0x7314583d7448 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159efca0_0 .net "VDD", 0 0, o0x7314583d7448;  0 drivers
+o0x7314583d7478 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159efd60_0 .net "VSS", 0 0, o0x7314583d7478;  0 drivers
+S_0x5e48159eff10 .scope generate, "nc[26]" "nc[26]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159f0110 .param/l "i" 1 3 243, +C4<011010>;
+o0x7314583d7598 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d7598 .port I0x5e48158e6fd0, o0x7314583d7598;
+ .tranvp 29 1 26, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d7598;
+S_0x5e48159f01f0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159eff10;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159f04c0_0 .net8 "ASIG5V", 0 0, p0x7314583d7598;  0 drivers, strength-aware
+o0x7314583d75c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f0580_0 .net "DVDD", 0 0, o0x7314583d75c8;  0 drivers
+o0x7314583d75f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f0640_0 .net "DVSS", 0 0, o0x7314583d75f8;  0 drivers
+o0x7314583d7628 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f0710_0 .net "VDD", 0 0, o0x7314583d7628;  0 drivers
+o0x7314583d7658 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f07d0_0 .net "VSS", 0 0, o0x7314583d7658;  0 drivers
+S_0x5e48159f0980 .scope generate, "nc[27]" "nc[27]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159f0b80 .param/l "i" 1 3 243, +C4<011011>;
+o0x7314583d7778 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d7778 .port I0x5e48158e6fd0, o0x7314583d7778;
+ .tranvp 29 1 27, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d7778;
+S_0x5e48159f0c60 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159f0980;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159f0f30_0 .net8 "ASIG5V", 0 0, p0x7314583d7778;  0 drivers, strength-aware
+o0x7314583d77a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f0ff0_0 .net "DVDD", 0 0, o0x7314583d77a8;  0 drivers
+o0x7314583d77d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f10b0_0 .net "DVSS", 0 0, o0x7314583d77d8;  0 drivers
+o0x7314583d7808 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f1180_0 .net "VDD", 0 0, o0x7314583d7808;  0 drivers
+o0x7314583d7838 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f1240_0 .net "VSS", 0 0, o0x7314583d7838;  0 drivers
+S_0x5e48159f13f0 .scope generate, "nc[28]" "nc[28]" 3 243, 3 243 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159f15f0 .param/l "i" 1 3 243, +C4<011100>;
+o0x7314583d7958 .functor BUFZ 1, c4<z>; HiZ drive
+p0x7314583d7958 .port I0x5e48158e6fd0, o0x7314583d7958;
+ .tranvp 29 1 28, I0x5e48158e6fd0, p0x7314583d80a8 p0x7314583d7958;
+S_0x5e48159f16d0 .scope module, "pad" "gf180mcu_fd_io__asig_5p0" 3 245, 5 27 0, S_0x5e48159f13f0;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "ASIG5V";
+    .port_info 1 /INOUT 1 "DVDD";
+    .port_info 2 /INOUT 1 "DVSS";
+    .port_info 3 /INOUT 1 "VDD";
+    .port_info 4 /INOUT 1 "VSS";
+v0x5e48159f19a0_0 .net8 "ASIG5V", 0 0, p0x7314583d7958;  0 drivers, strength-aware
+o0x7314583d7988 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f1a60_0 .net "DVDD", 0 0, o0x7314583d7988;  0 drivers
+o0x7314583d79b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f1b20_0 .net "DVSS", 0 0, o0x7314583d79b8;  0 drivers
+o0x7314583d79e8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f1bf0_0 .net "VDD", 0 0, o0x7314583d79e8;  0 drivers
+o0x7314583d7a18 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f1cb0_0 .net "VSS", 0 0, o0x7314583d7a18;  0 drivers
+S_0x5e48159f1e60 .scope module, "project_id" "gf180mcu_ws_ip__project_id" 3 322, 9 2 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+S_0x5e48159f20a0 .scope module, "qrcode_id" "gf180mcu_ws_ip__qrcode_id" 3 320, 10 2 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+S_0x5e48159f22c0 .scope module, "rst_n_pad" "gf180mcu_fd_io__in_c" 3 163, 5 536 0, S_0x5e48159c3f90;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "PU";
+    .port_info 1 /INPUT 1 "PD";
+    .port_info 2 /INPUT 1 "PAD";
+    .port_info 3 /OUTPUT 1 "Y";
+    .port_info 4 /INOUT 1 "DVDD";
+    .port_info 5 /INOUT 1 "DVSS";
+    .port_info 6 /INOUT 1 "VDD";
+    .port_info 7 /INOUT 1 "VSS";
+L_0x5e48159ffb90/d .functor BUF 1, o0x7314583d7b98, C4<0>, C4<0>, C4<0>;
+L_0x5e48159ffb90 .delay 1 (1000,1000,1000) L_0x5e48159ffb90/d;
+o0x7314583d7b38 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f24f0_0 .net "DVDD", 0 0, o0x7314583d7b38;  0 drivers
+o0x7314583d7b68 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f25b0_0 .net "DVSS", 0 0, o0x7314583d7b68;  0 drivers
+v0x5e48159f2670_0 .net "PAD", 0 0, o0x7314583d7b98;  alias, 0 drivers
+L_0x7314583860f0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f2710_0 .net "PD", 0 0, L_0x7314583860f0;  1 drivers
+L_0x7314583860a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f27d0_0 .net "PU", 0 0, L_0x7314583860a8;  1 drivers
+o0x7314583d7c28 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f28e0_0 .net "VDD", 0 0, o0x7314583d7c28;  0 drivers
+o0x7314583d7c58 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f29a0_0 .net "VSS", 0 0, o0x7314583d7c58;  0 drivers
+v0x5e48159f2a60_0 .net "Y", 0 0, L_0x5e48159ffb90;  alias, 1 drivers
+S_0x5e48159f2c30 .scope module, "shuttle_id" "gf180mcu_ws_ip__shuttle_id" 3 321, 11 2 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+S_0x5e48159f2e20 .scope generate, "vdd_pads[0]" "vdd_pads[0]" 3 120, 3 120 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159f3000 .param/l "i" 1 3 120, +C4<00>;
+S_0x5e48159f30e0 .scope module, "pad" "gf180mcu_fd_io__dvdd" 3 122, 5 320 0, S_0x5e48159f2e20;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VSS";
+L_0x5e48159f5730 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f3370_0 .net8 "DVDD", 0 0, L_0x5e48159f5730;  1 drivers, strength-aware
+o0x7314583d7e38 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f3450_0 .net "DVSS", 0 0, o0x7314583d7e38;  0 drivers
+o0x7314583d7e68 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f3510_0 .net "VSS", 0 0, o0x7314583d7e68;  0 drivers
+S_0x5e48159f3660 .scope generate, "vss_pads[0]" "vss_pads[0]" 3 131, 3 131 0, S_0x5e48159c3f90;
+ .timescale 0 0;
+P_0x5e48159f3840 .param/l "i" 1 3 131, +C4<00>;
+S_0x5e48159f3920 .scope module, "pad" "gf180mcu_fd_io__dvss" 3 133, 5 356 0, S_0x5e48159f3660;
+ .timescale -9 -12;
+    .port_info 0 /INOUT 1 "DVDD";
+    .port_info 1 /INOUT 1 "DVSS";
+    .port_info 2 /INOUT 1 "VDD";
+o0x7314583d7f28 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f3bb0_0 .net "DVDD", 0 0, o0x7314583d7f28;  0 drivers
+L_0x5e48159f57f0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+v0x5e48159f3c90_0 .net8 "DVSS", 0 0, L_0x5e48159f57f0;  1 drivers, strength-aware
+o0x7314583d7f88 .functor BUFZ 1, c4<z>; HiZ drive
+v0x5e48159f3d50_0 .net "VDD", 0 0, o0x7314583d7f88;  0 drivers
+S_0x5e48159f3ea0 .scope module, "wafer_space_logo" "gf180mcu_ws_ip__logo" 3 326, 12 2 0, S_0x5e48159c3f90;
+ .timescale -12 -12;
+    .scope S_0x5e48159d7f60;
+T_0 ;
+    %wait E_0x5e48159d87b0;
+    %load/vec4 v0x5e48159dcbb0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 24;
+    %assign/vec4 v0x5e48159dceb0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x5e48159dc120_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0x5e48159dceb0_0;
+    %parti/s 23, 0, 2;
+    %load/vec4 v0x5e48159dcc70_0;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0x5e48159dceb0_0, 0;
+T_0.2 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x5e48159d7f60;
+T_1 ;
+    %wait E_0x5e48159d8750;
+    %load/vec4 v0x5e48159dcbb0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 32768, 0, 19;
+    %assign/vec4 v0x5e48159dc1e0_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0x5e48159dceb0_0;
+    %parti/s 19, 0, 2;
+    %assign/vec4 v0x5e48159dc1e0_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x5e48159d7f60;
+T_2 ;
+    %wait E_0x5e48159d86f0;
+    %load/vec4 v0x5e48159dc060_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 5;
+    %assign/vec4 v0x5e48159dbfc0_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v0x5e48159dbfc0_0;
+    %cmpi/ne 24, 0, 5;
+    %jmp/0xz  T_2.2, 4;
+    %load/vec4 v0x5e48159dbfc0_0;
+    %addi 1, 0, 5;
+    %assign/vec4 v0x5e48159dbfc0_0, 0;
+T_2.2 ;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 13;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/noritsuna/GPS/chip/src/chip_top.sv";
+    "/home/noritsuna/GPS/chip/ip/gf180mcu_gnss_io/vh/gf180mcu_gnss_io.v";
+    "/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_io/verilog/gf180mcu_fd_io.v";
+    "/home/noritsuna/GPS/chip/src/chip_core.sv";
+    "/home/noritsuna/GPS/chip/cocotb/gnss_afe_analog_model.v";
+    "/home/noritsuna/GPS/chip/ip/gf180mcu_ws_ip__marker/vh/gf180mcu_ws_ip__marker.v";
+    "/home/noritsuna/GPS/chip/ip/gf180mcu_ws_ip__project_id/vh/gf180mcu_ws_ip__project_id.v";
+    "/home/noritsuna/GPS/chip/ip/gf180mcu_ws_ip__qrcode_id/vh/gf180mcu_ws_ip__qrcode_id.v";
+    "/home/noritsuna/GPS/chip/ip/gf180mcu_ws_ip__shuttle_id/vh/gf180mcu_ws_ip__shuttle_id.v";
+    "/home/noritsuna/GPS/chip/ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v";

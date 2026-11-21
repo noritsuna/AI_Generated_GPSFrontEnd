@@ -1,0 +1,642 @@
+## gnss_afe_top
+  XSPI    -> spi_regs   SCLK SDI CS_N IG1A IG1B IG2A IG2B IG3A IG3B B0 B1 AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 ICP2 BWW BWN VDD VSS  
+  XBIAS   -> bias_gen   nb pb VDD VSS  
+  XMON    -> vmon_buf   vctrl nb vmon VDDV VSS  
+  XBW     -> inv_dig    BWW bwk VDD VSS  
+  XRMON   ppolyf_u_1k W   1.00 L  10.00 m 1  R     10000 ohm (sheet only)  squares  10.00  vmon-VCTRL B=VSS
+  XVCO    -> vco_ring4  vctrl B0 B1 nb l1p l1n l2p l2n l3p l3n l4p l4n ckr vr VDDV VSS  
+  XRB     -> refbuf     REFIN refck VDDV VSS  
+  XPLL    -> pll_core   refck ckr nb pb ICP2 vctrl fs fb VDD VSS  
+  XLNA    -> lna_nc     RFIN pb rfp rfn VDD VSS  
+  XMIX    -> mixer_iq   rfp rfn l1p l1n l2p l2n l3p l3n l4p l4n nb mip min mqp mqn VDD VSS  
+  XIFI    -> if_chain   mip min IG1A IG1B IG2A IG2B IG3A IG3B pb bwk BWN aip ain VDD VSS  
+  XIFQ    -> if_chain   mqp mqn IG1A IG1B IG2A IG2B IG3A IG3B pb bwk BWN aqp aqn VDD VSS  
+  XADI    -> adc2b      aip ain fs I_SIGN I_MAG VDD VSS  
+  XADQ    -> adc2b      aqp aqn fs Q_SIGN Q_MAG VDD VSS  
+  XCKO1   -> inv_lo2    fs fsb VDD VSS  
+  XCKO2   -> inv_lo2    fsb CLKOUT VDD VSS  
+  XAFC    -> afc_dac    AFC0 AFC1 AFC2 AFC3 AFC4 AFC5 AFC6 AFC7 AFCOUT VDD VSS  
+  XDEC    -> decap      VDD VSS  
+## spi_regs
+  XRPU    ppolyf_u_1k W   1.00 L 100.00 m 1  R    100000 ohm (sheet only)  squares 100.00  CS_N-VDD B=VSS
+  XSCB    -> inv_dig    SCLK sclkb VDD VSS  
+  XSCG    -> nor2       CS_N sclkb sck VDD VSS  
+  XRPOR   ppolyf_u_1k W   1.00 L 200.00 m 1  R    200000 ohm (sheet only)  squares 200.00  pr-VDD B=VSS
+  XCPOR   mim 2fF     70.0 x  70.0 um m 1  C   9.800 pF  pr-VSS
+  XP1     -> inv_dig    pr por1 VDD VSS  
+  XP2     -> inv_dig    por1 por2 VDD VSS  
+  XP3     -> inv_dig    por2 rst VDD VSS  
+  XR0     -> dffr_s     SDI sck rst r0 VDD VSS  
+  XR1     -> dffr_s     r0 sck rst r1 VDD VSS  
+  XR2     -> dffr_s     r1 sck rst r2 VDD VSS  
+  XR3     -> dffr_s     r2 sck rst r3 VDD VSS  
+  XR4     -> dffr_s     r3 sck rst r4 VDD VSS  
+  XR5     -> dffr_s     r4 sck rst r5 VDD VSS  
+  XR6     -> dffr_s     r5 sck rst r6 VDD VSS  
+  XR7     -> dffr_s     r6 sck rst r7 VDD VSS  
+  XR8     -> dffr_s     r7 sck rst r8 VDD VSS  
+  XR9     -> dffr_s     r8 sck rst r9 VDD VSS  
+  XR10    -> dffr_s     r9 sck rst r10 VDD VSS  
+  XR11    -> dffr_s     r10 sck rst r11 VDD VSS  
+  XR12    -> dffr_s     r11 sck rst r12 VDD VSS  
+  XR13    -> dffr_s     r12 sck rst r13 VDD VSS  
+  XR14    -> dffr_s     r13 sck rst r14 VDD VSS  
+  XR15    -> dffr_s     r14 sck rst r15 VDD VSS  
+  XR16    -> dffr_s     r15 sck rst r16 VDD VSS  
+  XR17    -> dffr_s     r16 sck rst r17 VDD VSS  
+  XR18    -> dffr_s     r17 sck rst r18 VDD VSS  
+  XR19    -> dffr_s     r18 sck rst r19 VDD VSS  
+  XR20    -> dffr_s     r19 sck rst r20 VDD VSS  
+  XR21    -> dffr_s     r20 sck rst r21 VDD VSS  
+  XR22    -> dffr_s     r21 sck rst r22 VDD VSS  
+  XR23    -> dffr_s     r22 sck rst r23 VDD VSS  
+  XL0     -> latch_s    r0 CS_N IG1A VDD VSS  
+  XL1     -> latch_s    r1 CS_N IG1B VDD VSS  
+  XL2     -> latch_s    r2 CS_N IG2A VDD VSS  
+  XL3     -> latch_s    r3 CS_N IG2B VDD VSS  
+  XL4     -> latch_s    r4 CS_N IG3A VDD VSS  
+  XL5     -> latch_s    r5 CS_N IG3B VDD VSS  
+  XL6     -> latch_s    r6 CS_N B0 VDD VSS  
+  XL7     -> latch_s    r7 CS_N B1 VDD VSS  
+  XL8     -> latch_s    r8 CS_N AFC0 VDD VSS  
+  XL9     -> latch_s    r9 CS_N AFC1 VDD VSS  
+  XL10    -> latch_s    r10 CS_N AFC2 VDD VSS  
+  XL11    -> latch_s    r11 CS_N AFC3 VDD VSS  
+  XL12    -> latch_s    r12 CS_N AFC4 VDD VSS  
+  XL13    -> latch_s    r13 CS_N AFC5 VDD VSS  
+  XL14    -> latch_s    r14 CS_N AFC6 VDD VSS  
+  XL15    -> latch_s    r15 CS_N afc7n VDD VSS  
+  XAFC7   -> inv_dig    afc7n AFC7 VDD VSS  
+  XL16    -> latch_s    r16 CS_N ICP2 VDD VSS  
+  XL17    -> latch_s    r17 CS_N BWW VDD VSS  
+  XL18    -> latch_s    r18 CS_N BWN VDD VSS  
+## bias_gen
+  XMN1    nfet_03v3  W   4.00 L  2.00 nf  1 m  1  Wtot     4.0  W/L     2.0  finger  4.00  D=nbc G=nbc S=VSS B=VSS
+  XMN2    nfet_03v3  W  16.00 L  2.00 nf  2 m  1  Wtot    16.0  W/L     8.0  finger  8.00  D=pbc G=nbc S=nr B=VSS
+  XRB     ppolyf_u_1k W   1.00 L   4.60 m 1  R      4600 ohm (sheet only)  squares   4.60  VSS-nr B=VSS
+  XMP1    pfet_03v3  W   8.00 L  2.00 nf  1 m  1  Wtot     8.0  W/L     4.0  finger  8.00  D=nbc G=pbc S=VDD B=VDD
+  XMP2    pfet_03v3  W   8.00 L  2.00 nf  1 m  1  Wtot     8.0  W/L     4.0  finger  8.00  D=pbc G=pbc S=VDD B=VDD
+  XMSP    pfet_03v3  W   1.00 L 20.00 nf  1 m  1  Wtot     1.0  W/L     0.1  finger  1.00  D=st G=VSS S=VDD B=VDD
+  XMSN    nfet_03v3  W   2.00 L  1.00 nf  1 m  1  Wtot     2.0  W/L     2.0  finger  2.00  D=st G=nbc S=VSS B=VSS
+  XMSU    nfet_03v3  W   1.00 L  1.00 nf  1 m  1  Wtot     1.0  W/L     1.0  finger  1.00  D=pbc G=st S=VSS B=VSS
+  XMP3    pfet_03v3  W   8.00 L  2.00 nf  1 m  1  Wtot     8.0  W/L     4.0  finger  8.00  D=NB G=pbc S=VDD B=VDD
+  XMN3    nfet_03v3  W  16.00 L  2.00 nf  2 m  1  Wtot    16.0  W/L     8.0  finger  8.00  D=NB G=NB S=VSS B=VSS
+  XMN4    nfet_03v3  W   4.00 L  2.00 nf  1 m  1  Wtot     4.0  W/L     2.0  finger  4.00  D=PB G=nbc S=VSS B=VSS
+  XMP4    pfet_03v3  W  32.00 L  2.00 nf  4 m  1  Wtot    32.0  W/L    16.0  finger  8.00  D=PB G=PB S=VDD B=VDD
+  XCNB    mim 2fF     20.0 x  20.0 um m 1  C   0.800 pF  NB-VSS
+  XCPB    mim 2fF     20.0 x  20.0 um m 1  C   0.800 pF  VDD-PB
+## vmon_buf
+  XMT     nfet_03v3  W  16.00 L  2.00 nf  2 m  1  Wtot    16.0  W/L     8.0  finger  8.00  D=t G=NB S=VSS B=VSS
+  XM1     nfet_03v3  W  16.00 L  1.00 nf  2 m  1  Wtot    16.0  W/L    16.0  finger  8.00  D=x G=IN S=t B=VSS
+  XM2     nfet_03v3  W  16.00 L  1.00 nf  2 m  1  Wtot    16.0  W/L    16.0  finger  8.00  D=OUT G=OUT S=t B=VSS
+  XMP1    pfet_03v3  W   8.00 L  2.00 nf  2 m  1  Wtot     8.0  W/L     4.0  finger  4.00  D=x G=x S=VDD B=VDD
+  XMP2    pfet_03v3  W   8.00 L  2.00 nf  2 m  1  Wtot     8.0  W/L     4.0  finger  4.00  D=OUT G=x S=VDD B=VDD
+## inv_dig
+  XMN     nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=Y G=A S=VSS B=VSS
+  XMP     pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=A S=VDD B=VDD
+## vco_ring4
+  XMVI    nfet_03v3  W  20.00 L  0.50 nf  4 m  1  Wtot    20.0  W/L    40.0  finger  5.00  D=ng G=VCTRL S=ns B=VSS
+  XRDEG   ppolyf_u_1k W   2.00 L   4.00 m 1  R      2000 ohm (sheet only)  squares   2.00  VSS-ns B=VSS
+  XMPD    pfet_03v3  W  80.00 L  0.56 nf 16 m  1  Wtot    80.0  W/L   142.9  finger  5.00  D=ng G=ng S=VDD B=VDD
+  XMPO    pfet_03v3  W  80.00 L  0.56 nf 16 m 16  Wtot  1280.0  W/L  2285.7  finger  5.00  D=VR G=ng S=VDD B=VDD
+  XMMIN   nfet_03v3  W  12.00 L  2.00 nf  2 m  1  Wtot    12.0  W/L     6.0  finger  6.00  D=ng G=NB S=VSS B=VSS
+  XB0     -> inv_dig    B0 b0n VDD VSS  
+  XB1     -> inv_dig    B1 b1n VDD VSS  
+  XMPB0   pfet_03v3  W  80.00 L  0.56 nf 16 m 12  Wtot   960.0  W/L  1714.3  finger  5.00  D=nb0 G=ng S=VDD B=VDD
+  XMSB0   pfet_03v3  W  40.00 L  0.28 nf  8 m 12  Wtot   480.0  W/L  1714.3  finger  5.00  D=VR G=b0n S=nb0 B=VDD
+  XMPB1   pfet_03v3  W  80.00 L  0.56 nf 16 m 24  Wtot  1920.0  W/L  3428.6  finger  5.00  D=nb1 G=ng S=VDD B=VDD
+  XMSB1   pfet_03v3  W  40.00 L  0.28 nf  8 m 24  Wtot   960.0  W/L  3428.6  finger  5.00  D=VR G=b1n S=nb1 B=VDD
+  XCVR    mim 2fF     30.0 x  30.0 um m 1  C   1.800 pF  VR-VSS
+  XCORE   -> vco_core   L1P L1N L2P L2N L3P L3N L4P L4N CK ckdn1 ckdp2 ckdn2 ckdp3 ckdn3 ckdp4 ckdn4 kh kl VR VSS  
+  XSUA    -> nand2      ckdp2 ckdn2 sua VR VSS  
+  XSUB    -> nor2       ckdp2 ckdn2 sub VR VSS  
+  XSUAD1  -> nand2      CK ckdn1 suad1 VR VSS  
+  XSUBD1  -> nor2       CK ckdn1 subd1 VR VSS  
+  XSUAD3  -> nand2      ckdp3 ckdn3 suad3 VR VSS  
+  XSUBD3  -> nor2       ckdp3 ckdn3 subd3 VR VSS  
+  XSUAD4  -> nand2      ckdp4 ckdn4 suad4 VR VSS  
+  XSUBD4  -> nor2       ckdp4 ckdn4 subd4 VR VSS  
+  XRSUA   ppolyf_u_1k W   1.00 L 100.00 m 1  R    100000 ohm (sheet only)  squares 100.00  fsua-sua B=VSS
+  XCSUA   mim 2fF      5.0 x   5.0 um m 1  C   0.050 pF  fsua-VSS
+  XRSUB   ppolyf_u_1k W   1.00 L 100.00 m 1  R    100000 ohm (sheet only)  squares 100.00  fsub-sub B=VSS
+  XCSUB   mim 2fF      5.0 x   5.0 um m 1  C   0.050 pF  fsub-VSS
+  XSUA1   -> nor2       sua fsua kh VR VSS  
+  XSUA2   -> inv_dig    kh khn VR VSS  
+  XSUB1   -> nand2      sub fsub kln VR VSS  
+  XSUB2   -> inv_dig    kln kl VR VSS  
+## refbuf
+  XCIN    mim 2fF     20.0 x  20.0 um m 1  C   0.800 pF  IN-a
+  XRF     ppolyf_u_1k W   1.00 L 200.00 m 1  R    200000 ohm (sheet only)  squares 200.00  b-a B=VSS
+  XMN1    nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=b G=a S=VSS B=VSS
+  XMP1    pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=b G=a S=VDD B=VDD
+  XMN2    nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=OUT G=b S=VSS B=VSS
+  XMP2    pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=OUT G=b S=VDD B=VDD
+## pll_core
+  XDB     -> divbuf     LO ck VDD VSS  
+  XDIV    -> div48      ck FS FB VDD VSS  
+  XRREF   ppolyf_u_1k W   2.00 L   2.00 m 1  R      1000 ohm (sheet only)  squares   1.00  refck_i-REFCK B=VSS
+  XMCLN   nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=refck_i G=tlo S=VSS B=VSS
+  XMCLP   pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=refck_i G=thi S=VDD B=VDD
+  XMTX    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=tx G=tx S=VSS B=VSS
+  XMTHI   pfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=thi G=tx S=VDD B=VDD
+  XMTLO   nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=tlo G=thi S=VSS B=VSS
+  XPFD    -> pfd        refck_i FB up upb dn dnb VDD VSS  
+  XCP     -> cp         upb dn dnb PB NB ICP2 vcp VDD VSS  
+  XLF     -> loop_filter vcp VCTRL VSS  
+## lna_nc
+  XM1     nfet_03v3  W  40.00 L  0.28 nf  8 m  3  Wtot   120.0  W/L   428.6  finger  5.00  D=op_i G=vb1 S=RFIN B=VSS
+  XRS     ppolyf_u_1k W  10.00 L   3.00 m 1  R       300 ohm (sheet only)  squares   0.30  VSS-RFIN B=VSS
+  XR1     ppolyf_u_1k W  10.00 L   2.00 m 1  R       200 ohm (sheet only)  squares   0.20  op_i-VDD B=VSS
+  XCC2    mim 2fF     45.0 x  45.0 um m 1  C   4.050 pF  RFIN-g2
+  XRB2    ppolyf_u_1k W   1.00 L  10.00 m 1  R     10000 ohm (sheet only)  squares  10.00  vb2-g2 B=VSS
+  XM2     nfet_03v3  W  40.00 L  0.28 nf  8 m  8  Wtot   320.0  W/L  1142.9  finger  5.00  D=on_i G=g2 S=VSS B=VSS
+  XR2     ppolyf_u_1k W  30.00 L   2.17 m 1  R        72 ohm (sheet only)  squares   0.07  on_i-VDD B=VSS
+  XMP1    pfet_03v3  W  32.00 L  2.00 nf  4 m  6  Wtot   192.0  W/L    96.0  finger  8.00  D=vb1 G=PB S=VDD B=VDD
+  XM1R    nfet_03v3  W  12.00 L  0.28 nf  2 m  1  Wtot    12.0  W/L    42.9  finger  6.00  D=vb1 G=vb1 S=s1r B=VSS
+  XRSR    ppolyf_u_1k W   1.00 L   3.00 m 1  R      3000 ohm (sheet only)  squares   3.00  VSS-s1r B=VSS
+  XMP2    pfet_03v3  W  32.00 L  2.00 nf  4 m  5  Wtot   160.0  W/L    80.0  finger  8.00  D=vb2 G=PB S=VDD B=VDD
+  XM2R    nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=vb2 G=vb2 S=VSS B=VSS
+  XCB1    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  vb1-VSS
+  XCB2    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  vb2-VSS
+  XCOP    mim 2fF     45.0 x  45.0 um m 1  C   4.050 pF  op_i-OUTP
+  XCON    mim 2fF     45.0 x  45.0 um m 1  C   4.050 pF  on_i-OUTN
+## mixer_iq
+  XRT1    ppolyf_u_1k W   1.00 L   5.00 m 1  R      5000 ohm (sheet only)  squares   5.00  vbrf-RFP B=VSS
+  XRT2    ppolyf_u_1k W   1.00 L   5.00 m 1  R      5000 ohm (sheet only)  squares   5.00  vbrf-RFN B=VSS
+  XRBA    ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vbrf-VDD B=VSS
+  XRBB    ppolyf_u_1k W   1.00 L  13.00 m 1  R     13000 ohm (sheet only)  squares  13.00  VSS-vbrf B=VSS
+  XCBRF   mim 2fF     70.0 x  70.0 um m 1  C   9.800 pF  vbrf-VSS
+  XRLUA   ppolyf_u_1k W   1.00 L  47.00 m 1  R     47000 ohm (sheet only)  squares  47.00  vlou-VDD B=VSS
+  XRLUB   ppolyf_u_1k W   1.00 L  56.00 m 1  R     56000 ohm (sheet only)  squares  56.00  VSS-vlou B=VSS
+  XCLOU   mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  vlou-VSS
+  XRLLA   ppolyf_u_1k W   1.00 L  65.00 m 1  R     65000 ohm (sheet only)  squares  65.00  vlol-VDD B=VSS
+  XRLLB   ppolyf_u_1k W   1.00 L  37.00 m 1  R     37000 ohm (sheet only)  squares  37.00  VSS-vlol B=VSS
+  XCLOL   mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  vlol-VSS
+  XCACL1P mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L1P-gl1p
+  XRACL1P ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlou-gl1p B=VSS
+  XCACL1N mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L1N-gl1n
+  XRACL1N ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlou-gl1n B=VSS
+  XCACL2P mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L2P-gl2p
+  XRACL2P ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlou-gl2p B=VSS
+  XCACL2N mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L2N-gl2n
+  XRACL2N ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlou-gl2n B=VSS
+  XCACL3P mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L3P-gl3p
+  XRACL3P ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlol-gl3p B=VSS
+  XCACL3N mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L3N-gl3n
+  XRACL3N ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlol-gl3n B=VSS
+  XCACL4P mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L4P-gl4p
+  XRACL4P ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlol-gl4p B=VSS
+  XCACL4N mim 2fF     31.6 x  31.6 um m 1  C   1.997 pF  L4N-gl4n
+  XRACL4N ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  vlol-gl4n B=VSS
+  XMCTL1P nfet_03v3  W   4.96 L  2.00 nf  1 m  1  Wtot     5.0  W/L     2.5  finger  4.96  D=VSS G=gl1p S=VSS B=VSS
+  XMCTL1N nfet_03v3  W   6.08 L  2.00 nf  1 m  1  Wtot     6.1  W/L     3.0  finger  6.08  D=VSS G=gl1n S=VSS B=VSS
+  XMCTL2P nfet_03v3  W   3.97 L  2.00 nf  1 m  1  Wtot     4.0  W/L     2.0  finger  3.97  D=VSS G=gl2p S=VSS B=VSS
+  XMCTL2N nfet_03v3  W   4.25 L  2.00 nf  1 m  1  Wtot     4.2  W/L     2.1  finger  4.25  D=VSS G=gl2n S=VSS B=VSS
+  XMCTL3P nfet_03v3  W   0.83 L  2.00 nf  1 m  1  Wtot     0.8  W/L     0.4  finger  0.83  D=VSS G=gl3p S=VSS B=VSS
+  XMCTL3N nfet_03v3  W   0.80 L  2.00 nf  1 m  1  Wtot     0.8  W/L     0.4  finger  0.80  D=VSS G=gl3n S=VSS B=VSS
+  XMCTL4P nfet_03v3  W   1.30 L  2.00 nf  1 m  1  Wtot     1.3  W/L     0.7  finger  1.30  D=VSS G=gl4p S=VSS B=VSS
+  XMCTL4N nfet_03v3  W   1.65 L  2.00 nf  1 m  1  Wtot     1.6  W/L     0.8  finger  1.65  D=VSS G=gl4n S=VSS B=VSS
+  XMTI    nfet_03v3  W  40.00 L  2.00 nf  4 m 16  Wtot   640.0  W/L   320.0  finger 10.00  D=tI G=NB S=VSS B=VSS
+  XMG1I   nfet_03v3  W  80.00 L  0.28 nf 16 m  1  Wtot    80.0  W/L   285.7  finger  5.00  D=xpI G=RFP S=tI B=VSS
+  XMG2I   nfet_03v3  W  80.00 L  0.28 nf 16 m  1  Wtot    80.0  W/L   285.7  finger  5.00  D=xnI G=RFN S=tI B=VSS
+  XMLApI  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mpaI G=gl3n S=xpI B=VSS
+  XMLBpI  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mpbI G=gl3p S=xpI B=VSS
+  XMU1pI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIP G=gl1p S=mpaI B=VSS
+  XMU2pI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIN G=gl1n S=mpaI B=VSS
+  XMU3pI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIN G=gl1p S=mpbI B=VSS
+  XMU4pI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIP G=gl1n S=mpbI B=VSS
+  XMLAnI  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mnaI G=gl3n S=xnI B=VSS
+  XMLBnI  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mnbI G=gl3p S=xnI B=VSS
+  XMU1nI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIN G=gl1p S=mnaI B=VSS
+  XMU2nI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIP G=gl1n S=mnaI B=VSS
+  XMU3nI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIP G=gl1p S=mnbI B=VSS
+  XMU4nI  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFIN G=gl1n S=mnbI B=VSS
+  XRL1I   ppolyf_u_1k W   4.00 L   5.00 m 1  R      1250 ohm (sheet only)  squares   1.25  IFIP-VDD B=VSS
+  XRL2I   ppolyf_u_1k W   4.00 L   5.00 m 1  R      1250 ohm (sheet only)  squares   1.25  IFIN-VDD B=VSS
+  XCL1I   mim 2fF     45.0 x  45.0 um m 1  C   4.050 pF  IFIP-VSS
+  XCL2I   mim 2fF     45.0 x  45.0 um m 1  C   4.050 pF  IFIN-VSS
+  XMTQ    nfet_03v3  W  40.00 L  2.00 nf  4 m 16  Wtot   640.0  W/L   320.0  finger 10.00  D=tQ G=NB S=VSS B=VSS
+  XMG1Q   nfet_03v3  W  80.00 L  0.28 nf 16 m  1  Wtot    80.0  W/L   285.7  finger  5.00  D=xpQ G=RFP S=tQ B=VSS
+  XMG2Q   nfet_03v3  W  80.00 L  0.28 nf 16 m  1  Wtot    80.0  W/L   285.7  finger  5.00  D=xnQ G=RFN S=tQ B=VSS
+  XMLApQ  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mpaQ G=gl4n S=xpQ B=VSS
+  XMLBpQ  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mpbQ G=gl4p S=xpQ B=VSS
+  XMU1pQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQP G=gl2p S=mpaQ B=VSS
+  XMU2pQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQN G=gl2n S=mpaQ B=VSS
+  XMU3pQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQN G=gl2p S=mpbQ B=VSS
+  XMU4pQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQP G=gl2n S=mpbQ B=VSS
+  XMLAnQ  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mnaQ G=gl4n S=xnQ B=VSS
+  XMLBnQ  nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=mnbQ G=gl4p S=xnQ B=VSS
+  XMU1nQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQN G=gl2p S=mnaQ B=VSS
+  XMU2nQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQP G=gl2n S=mnaQ B=VSS
+  XMU3nQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQP G=gl2p S=mnbQ B=VSS
+  XMU4nQ  nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=IFQN G=gl2n S=mnbQ B=VSS
+  XRL1Q   ppolyf_u_1k W   4.00 L   5.00 m 1  R      1250 ohm (sheet only)  squares   1.25  IFQP-VDD B=VSS
+  XRL2Q   ppolyf_u_1k W   4.00 L   5.00 m 1  R      1250 ohm (sheet only)  squares   1.25  IFQN-VDD B=VSS
+  XCL1Q   mim 2fF     45.0 x  45.0 um m 1  C   4.050 pF  IFQP-VSS
+  XCL2Q   mim 2fF     45.0 x  45.0 um m 1  C   4.050 pF  IFQN-VSS
+## if_chain
+  XBIF    -> bias_if    PB nbif pbif VDD VSS  
+  XV1     -> vga        INP INN G1A G1B nbif a1p a1n VDD VSS  
+  XF1     -> sk_lpf1    a1p a1n pbif BWK BWN f1p f1n VDD VSS  
+  XV2     -> vga        f1p f1n G2A G2B nbif a2p a2n VDD VSS  
+  XF2     -> sk_lpf2    a2p a2n pbif BWK BWN f2p f2n VDD VSS  
+  XV3     -> vga        f2p f2n G3A G3B nbif a3p a3n VDD VSS  
+  XV4     -> vga_fix    a3p a3n nbif a4p a4n VDD VSS  
+  XV5     -> vga_fix    a4p a4n nbif OUTP OUTN VDD VSS  
+## adc2b
+  XRL0    ppolyf_u_1k W  10.00 L  40.10 m 1  R      4010 ohm (sheet only)  squares   4.01  thp-VDD B=VSS
+  XRL1    ppolyf_u_1k W  10.00 L   1.40 m 1  R       140 ohm (sheet only)  squares   0.14  thm-thp B=VSS
+  XRL2    ppolyf_u_1k W  10.00 L   1.40 m 1  R       140 ohm (sheet only)  squares   0.14  thn-thm B=VSS
+  XRL3    ppolyf_u_1k W  10.00 L  22.30 m 1  R      2230 ohm (sheet only)  squares   2.23  VSS-thn B=VSS
+  XCT1    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  thp-VSS
+  XCT2    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  thm-VSS
+  XCT3    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  thn-VSS
+  XCS     -> sa_comp    INP INN thm thm CLK SIGN sb VDD VSS  
+  XCH     -> sa_comp    INP INN thp thn CLK qh qhb VDD VSS  
+  XCL     -> sa_comp    INP INN thn thp CLK ql qlb VDD VSS  
+  XM      -> nand2      qhb ql MAG VDD VSS  
+## inv_lo2
+  XMN     nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=Y G=A S=VSS B=VSS
+  XMP     pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=Y G=A S=VDD B=VDD
+## afc_dac
+  XRT     ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  VSS-n0 B=VSS
+  XA0     -> inv_dig    D0 db0 VDD VSS  
+  XB0     -> inv_dac    db0 dr0 VDD VSS  
+  XR2_0   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  n0-dr0 B=VSS
+  XR1_0   ppolyf_u_1k W   2.00 L  20.10 m 1  R     10050 ohm (sheet only)  squares  10.05  n1-n0 B=VSS
+  XA1     -> inv_dig    D1 db1 VDD VSS  
+  XB1     -> inv_dac    db1 dr1 VDD VSS  
+  XR2_1   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  n1-dr1 B=VSS
+  XR1_1   ppolyf_u_1k W   2.00 L  20.10 m 1  R     10050 ohm (sheet only)  squares  10.05  n2-n1 B=VSS
+  XA2     -> inv_dig    D2 db2 VDD VSS  
+  XB2     -> inv_dac    db2 dr2 VDD VSS  
+  XR2_2   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  n2-dr2 B=VSS
+  XR1_2   ppolyf_u_1k W   2.00 L  20.10 m 1  R     10050 ohm (sheet only)  squares  10.05  n3-n2 B=VSS
+  XA3     -> inv_dig    D3 db3 VDD VSS  
+  XB3     -> inv_dac    db3 dr3 VDD VSS  
+  XR2_3   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  n3-dr3 B=VSS
+  XR1_3   ppolyf_u_1k W   2.00 L  20.10 m 1  R     10050 ohm (sheet only)  squares  10.05  n4-n3 B=VSS
+  XA4     -> inv_dig    D4 db4 VDD VSS  
+  XB4     -> inv_dac    db4 dr4 VDD VSS  
+  XR2_4   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  n4-dr4 B=VSS
+  XR1_4   ppolyf_u_1k W   2.00 L  20.10 m 1  R     10050 ohm (sheet only)  squares  10.05  n5-n4 B=VSS
+  XA5     -> inv_dig    D5 db5 VDD VSS  
+  XB5     -> inv_dac    db5 dr5 VDD VSS  
+  XR2_5   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  n5-dr5 B=VSS
+  XR1_5   ppolyf_u_1k W   2.00 L  20.10 m 1  R     10050 ohm (sheet only)  squares  10.05  n6-n5 B=VSS
+  XA6     -> inv_dig    D6 db6 VDD VSS  
+  XB6     -> inv_dac    db6 dr6 VDD VSS  
+  XR2_6   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  n6-dr6 B=VSS
+  XR1_6   ppolyf_u_1k W   2.00 L  20.10 m 1  R     10050 ohm (sheet only)  squares  10.05  OUT-n6 B=VSS
+  XA7     -> inv_dig    D7 db7 VDD VSS  
+  XB7     -> inv_dac    db7 dr7 VDD VSS  
+  XR2_7   ppolyf_u_1k W   2.00 L  40.00 m 1  R     20000 ohm (sheet only)  squares  20.00  OUT-dr7 B=VSS
+## decap
+  XMD0    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD1    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD2    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD3    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD4    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD5    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD6    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD7    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD8    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD9    nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD10   nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD11   nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+  XMD12   nfet_03v3  W 480.00 L  5.00 nf 16 m  1  Wtot   480.0  W/L    96.0  finger 30.00  D=VSS G=VDD S=VSS B=VSS
+## nor2
+  XMN1    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=Y G=A S=VSS B=VSS
+  XMN2    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=Y G=B S=VSS B=VSS
+  XMP1    pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=n1 G=A S=VDD B=VDD
+  XMP2    pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=Y G=B S=n1 B=VDD
+## dffr_s
+  XCI     -> inv_dig    CK ckb VDD VSS  
+  XT1N    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=D G=ckb S=m B=VSS
+  XT1P    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=D G=CK S=m B=VDD
+  XM      -> nor2       m RST mb VDD VSS  
+  XMF     -> inv_dig    mb mf VDD VSS  
+  XT2N    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=mf G=CK S=m B=VSS
+  XT2P    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=mf G=ckb S=m B=VDD
+  XT3N    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=mb G=CK S=sl B=VSS
+  XT3P    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=mb G=ckb S=sl B=VDD
+  XS      -> nor2       sl RST Q VDD VSS  
+  XSF     -> inv_dig    Q sf VDD VSS  
+  XT4N    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=sf G=ckb S=sl B=VSS
+  XT4P    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=sf G=CK S=sl B=VDD
+## latch_s
+  XEI     -> inv_dig    EN enb VDD VSS  
+  XTIN    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=D G=EN S=l B=VSS
+  XTIP    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=D G=enb S=l B=VDD
+  X1      -> inv_dig    l lb VDD VSS  
+  X2      -> inv_dig    lb Q VDD VSS  
+  XTFN    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=Q G=enb S=l B=VSS
+  XTFP    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Q G=EN S=l B=VDD
+## vco_core
+  XMNa1   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n1 G=p4 S=VSS B=VSS
+  XMNb1   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p1 G=n4 S=VSS B=VSS
+  XMPa1   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=n1 G=p4 S=VR B=VR
+  XMPb1   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=p1 G=n4 S=VR B=VR
+  XMNc1   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=n1 G=p1 S=VSS B=VSS
+  XMNd1   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=p1 G=n1 S=VSS B=VSS
+  XMPc1   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=n1 G=p1 S=VR B=VR
+  XMPd1   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=p1 G=n1 S=VR B=VR
+  XMNa2   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n2 G=p1 S=VSS B=VSS
+  XMNb2   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p2 G=n1 S=VSS B=VSS
+  XMPa2   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=n2 G=p1 S=VR B=VR
+  XMPb2   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=p2 G=n1 S=VR B=VR
+  XMNc2   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=n2 G=p2 S=VSS B=VSS
+  XMNd2   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=p2 G=n2 S=VSS B=VSS
+  XMPc2   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=n2 G=p2 S=VR B=VR
+  XMPd2   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=p2 G=n2 S=VR B=VR
+  XMNa3   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n3 G=p2 S=VSS B=VSS
+  XMNb3   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p3 G=n2 S=VSS B=VSS
+  XMPa3   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=n3 G=p2 S=VR B=VR
+  XMPb3   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=p3 G=n2 S=VR B=VR
+  XMNc3   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=n3 G=p3 S=VSS B=VSS
+  XMNd3   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=p3 G=n3 S=VSS B=VSS
+  XMPc3   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=n3 G=p3 S=VR B=VR
+  XMPd3   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=p3 G=n3 S=VR B=VR
+  XMNa4   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p4 G=p3 S=VSS B=VSS
+  XMNb4   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n4 G=n3 S=VSS B=VSS
+  XMPa4   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=p4 G=p3 S=VR B=VR
+  XMPb4   pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=n4 G=n3 S=VR B=VR
+  XMNc4   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=p4 G=n4 S=VSS B=VSS
+  XMNd4   nfet_03v3  W   6.00 L  0.28 nf  2 m  1  Wtot     6.0  W/L    21.4  finger  3.00  D=n4 G=p4 S=VSS B=VSS
+  XMPc4   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=p4 G=n4 S=VR B=VR
+  XMPd4   pfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=n4 G=p4 S=VR B=VR
+  XMBNp1  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ap1 G=p1 S=VSS B=VSS
+  XMBPp1  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ap1 G=p1 S=VR B=VR
+  XMDNp1  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L1P G=ap1 S=VSS B=VSS
+  XMDPp1  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L1P G=ap1 S=VR B=VR
+  XMCNp1  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=CK G=L1P S=VSS B=VSS
+  XMCPp1  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=CK G=L1P S=VR B=VR
+  XMBNn1  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=an1 G=n1 S=VSS B=VSS
+  XMBPn1  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=an1 G=n1 S=VR B=VR
+  XMDNn1  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L1N G=an1 S=VSS B=VSS
+  XMDPn1  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L1N G=an1 S=VR B=VR
+  XMCNn1  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ckdn1 G=L1N S=VSS B=VSS
+  XMCPn1  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ckdn1 G=L1N S=VR B=VR
+  XMBNp2  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ap2 G=p2 S=VSS B=VSS
+  XMBPp2  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ap2 G=p2 S=VR B=VR
+  XMDNp2  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L2P G=ap2 S=VSS B=VSS
+  XMDPp2  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L2P G=ap2 S=VR B=VR
+  XMCNp2  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ckdp2 G=L2P S=VSS B=VSS
+  XMCPp2  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ckdp2 G=L2P S=VR B=VR
+  XMBNn2  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=an2 G=n2 S=VSS B=VSS
+  XMBPn2  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=an2 G=n2 S=VR B=VR
+  XMDNn2  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L2N G=an2 S=VSS B=VSS
+  XMDPn2  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L2N G=an2 S=VR B=VR
+  XMCNn2  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ckdn2 G=L2N S=VSS B=VSS
+  XMCPn2  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ckdn2 G=L2N S=VR B=VR
+  XMBNp3  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ap3 G=p3 S=VSS B=VSS
+  XMBPp3  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ap3 G=p3 S=VR B=VR
+  XMDNp3  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L3P G=ap3 S=VSS B=VSS
+  XMDPp3  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L3P G=ap3 S=VR B=VR
+  XMCNp3  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ckdp3 G=L3P S=VSS B=VSS
+  XMCPp3  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ckdp3 G=L3P S=VR B=VR
+  XMBNn3  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=an3 G=n3 S=VSS B=VSS
+  XMBPn3  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=an3 G=n3 S=VR B=VR
+  XMDNn3  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L3N G=an3 S=VSS B=VSS
+  XMDPn3  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L3N G=an3 S=VR B=VR
+  XMCNn3  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ckdn3 G=L3N S=VSS B=VSS
+  XMCPn3  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ckdn3 G=L3N S=VR B=VR
+  XMBNp4  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ap4 G=p4 S=VSS B=VSS
+  XMBPp4  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ap4 G=p4 S=VR B=VR
+  XMDNp4  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L4P G=ap4 S=VSS B=VSS
+  XMDPp4  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L4P G=ap4 S=VR B=VR
+  XMCNp4  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ckdp4 G=L4P S=VSS B=VSS
+  XMCPp4  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ckdp4 G=L4P S=VR B=VR
+  XMBNn4  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=an4 G=n4 S=VSS B=VSS
+  XMBPn4  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=an4 G=n4 S=VR B=VR
+  XMDNn4  nfet_03v3  W  12.00 L  0.28 nf  4 m  1  Wtot    12.0  W/L    42.9  finger  3.00  D=L4N G=an4 S=VSS B=VSS
+  XMDPn4  pfet_03v3  W  24.00 L  0.28 nf  8 m  1  Wtot    24.0  W/L    85.7  finger  3.00  D=L4N G=an4 S=VR B=VR
+  XMCNn4  nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=ckdn4 G=L4N S=VSS B=VSS
+  XMCPn4  pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=ckdn4 G=L4N S=VR B=VR
+  XMK1    nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n1 G=kh S=VSS B=VSS
+  XMKD1   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p1 G=VSS S=VSS B=VSS
+  XMK2    nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n2 G=kl S=VSS B=VSS
+  XMKD2   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p2 G=VSS S=VSS B=VSS
+  XMK3    nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n3 G=VSS S=VSS B=VSS
+  XMKD3   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p3 G=VSS S=VSS B=VSS
+  XMK4    nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=p4 G=VSS S=VSS B=VSS
+  XMKD4   nfet_03v3  W  16.00 L  0.28 nf  4 m  1  Wtot    16.0  W/L    57.1  finger  4.00  D=n4 G=VSS S=VSS B=VSS
+## nand2
+  XMN1    nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=A S=n1 B=VSS
+  XMN2    nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=n1 G=B S=VSS B=VSS
+  XMP1    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=A S=VDD B=VDD
+  XMP2    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=B S=VDD B=VDD
+## divbuf
+  XCIN    mim 2fF     12.0 x  12.0 um m 1  C   0.288 pF  IN-a
+  XRF     ppolyf_u_1k W   1.00 L  20.00 m 1  R     20000 ohm (sheet only)  squares  20.00  b-a B=VSS
+  XMN1    nfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=b G=a S=VSS B=VSS
+  XMP1    pfet_03v3  W   8.00 L  0.28 nf  1 m  1  Wtot     8.0  W/L    28.6  finger  8.00  D=b G=a S=VDD B=VDD
+  XMN2    nfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=OUT G=b S=VSS B=VSS
+  XMP2    pfet_03v3  W   8.00 L  0.28 nf  1 m  1  Wtot     8.0  W/L    28.6  finger  8.00  D=OUT G=b S=VDD B=VDD
+## div48
+  XD1     -> div2       CK c2 c2b VDD VSS  
+  XD2     -> div2       c2 c4 c4b VDD VSS  
+  XD3     -> div2       c4 c8 c8b VDD VSS  
+  XD5     -> div3       c8 c24 VDD VSS  
+  XD6     -> div2       c24 FB c48b VDD VSS  
+  XFB1    -> inv_lo1    FB fbi VDD VSS  
+  XFB2    -> inv_lo2    fbi FS VDD VSS  
+## pfd
+  XU      -> dff_r      REF rb UP VDD VSS  
+  XD      -> dff_r      FB rb DN VDD VSS  
+  XR      -> nand2      UP DN r0 VDD VSS  
+  XD1     -> inv_dig    r0 r1 VDD VSS  
+  XD2     -> inv_dig    r1 r2 VDD VSS  
+  XD3     -> inv_dig    r2 r3 VDD VSS  
+  XD4     -> inv_dig    r3 rb VDD VSS  
+  XO1     -> inv_dig    UP UPB VDD VSS  
+  XO2     -> inv_dig    DN DNB VDD VSS  
+## cp
+  XUD     -> inv_dig    UPB upd VDD VSS  
+  XMPC    pfet_03v3  W  32.00 L  2.00 nf  4 m  2  Wtot    64.0  W/L    32.0  finger  8.00  D=pc G=PB S=VDD B=VDD
+  XMPS    pfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=OUT G=UPB S=pc B=VDD
+  XMPD    pfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=vd G=upd S=pc B=VDD
+  XMNS    nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=OUT G=DN S=nc B=VSS
+  XMND    nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=vd G=DNB S=nc B=VSS
+  XMNC    nfet_03v3  W  16.00 L  2.00 nf  2 m  2  Wtot    32.0  W/L    16.0  finger  8.00  D=nc G=NB S=VSS B=VSS
+  XHI     -> inv_dig    HI hib VDD VSS  
+  XMPC2   pfet_03v3  W  32.00 L  2.00 nf  4 m  2  Wtot    64.0  W/L    32.0  finger  8.00  D=pc2 G=PB S=VDD B=VDD
+  XMPE2   pfet_03v3  W  24.00 L  0.28 nf  4 m  1  Wtot    24.0  W/L    85.7  finger  6.00  D=pe2 G=hib S=pc2 B=VDD
+  XMPS2   pfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=OUT G=UPB S=pe2 B=VDD
+  XMPD2   pfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=vd G=upd S=pe2 B=VDD
+  XMNS2   nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=OUT G=DN S=ne2 B=VSS
+  XMND2   nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=vd G=DNB S=ne2 B=VSS
+  XMNE2   nfet_03v3  W   4.00 L  0.28 nf  2 m  1  Wtot     4.0  W/L    14.3  finger  2.00  D=ne2 G=HI S=nc2 B=VSS
+  XMNC2   nfet_03v3  W  16.00 L  2.00 nf  2 m  2  Wtot    32.0  W/L    16.0  finger  8.00  D=nc2 G=NB S=VSS B=VSS
+  XMBT    nfet_03v3  W  16.00 L  2.00 nf  2 m  1  Wtot    16.0  W/L     8.0  finger  8.00  D=bt G=NB S=VSS B=VSS
+  XMB1    nfet_03v3  W   8.00 L  1.00 nf  2 m  1  Wtot     8.0  W/L     8.0  finger  4.00  D=b1 G=OUT S=bt B=VSS
+  XMB2    nfet_03v3  W   8.00 L  1.00 nf  2 m  1  Wtot     8.0  W/L     8.0  finger  4.00  D=vd G=vd S=bt B=VSS
+  XMBL1   pfet_03v3  W   8.00 L  1.00 nf  2 m  1  Wtot     8.0  W/L     8.0  finger  4.00  D=b1 G=b1 S=VDD B=VDD
+  XMBL2   pfet_03v3  W   8.00 L  1.00 nf  2 m  1  Wtot     8.0  W/L     8.0  finger  4.00  D=vd G=b1 S=VDD B=VDD
+  XCVD    mim 2fF     32.0 x  32.0 um m 1  C   2.048 pF  vd-VSS
+## loop_filter
+  XRZ     ppolyf_u_1k W   1.00 L  10.00 m 1  R     10000 ohm (sheet only)  squares  10.00  z-VC B=VSS
+  XC1     mim 2fF     77.0 x  77.0 um m 5  C  59.290 pF  z-VSS
+  XC2     mim 2fF     49.5 x  49.5 um m 1  C   4.901 pF  VC-VSS
+  XRVT    ppolyf_u_1k W   2.00 L   4.00 m 1  R      2000 ohm (sheet only)  squares   2.00  VT-VC B=VSS
+  XC3     mim 2fF     19.4 x  19.4 um m 1  C   0.757 pF  VT-VSS
+## bias_if
+  XRDA    ppolyf_u_1k W   1.00 L  70.00 m 1  R     70000 ohm (sheet only)  squares  70.00  vdiv-VDD B=VSS
+  XRDB    ppolyf_u_1k W   1.00 L  28.30 m 1  R     28300 ohm (sheet only)  squares  28.30  VSS-vdiv B=VSS
+  XMOT    pfet_03v3  W  32.00 L  2.00 nf  4 m  1  Wtot    32.0  W/L    16.0  finger  8.00  D=ot G=PB S=VDD B=VDD
+  XMI1    pfet_03v3  W  16.00 L  1.00 nf  2 m  1  Wtot    16.0  W/L    16.0  finger  8.00  D=o1 G=vdiv S=ot B=VDD
+  XMI2    pfet_03v3  W  16.00 L  1.00 nf  2 m  1  Wtot    16.0  W/L    16.0  finger  8.00  D=og G=x S=ot B=VDD
+  XML1    nfet_03v3  W   4.00 L  2.00 nf  1 m  1  Wtot     4.0  W/L     2.0  finger  4.00  D=o1 G=o1 S=VSS B=VSS
+  XML2    nfet_03v3  W   4.00 L  2.00 nf  1 m  1  Wtot     4.0  W/L     2.0  finger  4.00  D=og G=o1 S=VSS B=VSS
+  XCC     mim 2fF     20.0 x  20.0 um m 1  C   0.800 pF  og-VSS
+  XMV     nfet_03v3  W  20.00 L  1.00 nf  2 m  1  Wtot    20.0  W/L    20.0  finger 10.00  D=dp G=og S=x B=VSS
+  XRREF0  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r1-x B=VSS
+  XRREF1  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r2-r1 B=VSS
+  XRREF2  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r3-r2 B=VSS
+  XRREF3  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r4-r3 B=VSS
+  XRREF4  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r5-r4 B=VSS
+  XRREF5  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r6-r5 B=VSS
+  XRREF6  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r7-r6 B=VSS
+  XRREF7  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  r8-r7 B=VSS
+  XRREF8  ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  VSS-r8 B=VSS
+  XMPD    pfet_03v3  W  32.00 L  2.00 nf  4 m  1  Wtot    32.0  W/L    16.0  finger  8.00  D=dp G=dp S=VDD B=VDD
+  XMPM    pfet_03v3  W  32.00 L  2.00 nf  4 m  1  Wtot    32.0  W/L    16.0  finger  8.00  D=NBIF G=dp S=VDD B=VDD
+  XMND    nfet_03v3  W  16.00 L  2.00 nf  2 m  1  Wtot    16.0  W/L     8.0  finger  8.00  D=NBIF G=NBIF S=VSS B=VSS
+  XCNB    mim 2fF     20.0 x  20.0 um m 1  C   0.800 pF  NBIF-VSS
+  XMNP    nfet_03v3  W  16.00 L  2.00 nf  2 m  1  Wtot    16.0  W/L     8.0  finger  8.00  D=PBIF G=NBIF S=VSS B=VSS
+  XMPP    pfet_03v3  W  32.00 L  2.00 nf  4 m  1  Wtot    32.0  W/L    16.0  finger  8.00  D=PBIF G=PBIF S=VDD B=VDD
+  XCPB    mim 2fF     20.0 x  20.0 um m 1  C   0.800 pF  VDD-PBIF
+## vga
+  XCC1    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  INP-gp
+  XCC2    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  INN-gn
+  XRB1    ppolyf_u_1k W   1.00 L 100.00 m 1  R    100000 ohm (sheet only)  squares 100.00  vcm-gp B=VSS
+  XRB2    ppolyf_u_1k W   1.00 L 100.00 m 1  R    100000 ohm (sheet only)  squares 100.00  vcm-gn B=VSS
+  XRCA    ppolyf_u_1k W   1.00 L  34.00 m 1  R     34000 ohm (sheet only)  squares  34.00  vcm-VDD B=VSS
+  XRCB    ppolyf_u_1k W   1.00 L  25.00 m 1  R     25000 ohm (sheet only)  squares  25.00  VSS-vcm B=VSS
+  XCCM    mim 2fF     30.0 x  30.0 um m 1  C   1.800 pF  vcm-VSS
+  XM1     nfet_03v3  W  40.00 L  0.28 nf  8 m  2  Wtot    80.0  W/L   285.7  finger  5.00  D=OUTN G=gp S=s1 B=VSS
+  XM2     nfet_03v3  W  40.00 L  0.28 nf  8 m  2  Wtot    80.0  W/L   285.7  finger  5.00  D=OUTP G=gn S=s2 B=VSS
+  XMT1    nfet_03v3  W  40.00 L  2.00 nf  4 m  8  Wtot   320.0  W/L   160.0  finger 10.00  D=s1 G=NB S=VSS B=VSS
+  XMT2    nfet_03v3  W  40.00 L  2.00 nf  4 m  8  Wtot   320.0  W/L   160.0  finger 10.00  D=s2 G=NB S=VSS B=VSS
+  XRL1    ppolyf_u_1k W   2.00 L   4.23 m 1  R      2115 ohm (sheet only)  squares   2.12  OUTN-VDD B=VSS
+  XRL2    ppolyf_u_1k W   2.00 L   4.23 m 1  R      2115 ohm (sheet only)  squares   2.12  OUTP-VDD B=VSS
+  XRD0    ppolyf_u_1k W   1.00 L   2.00 m 1  R      2000 ohm (sheet only)  squares   2.00  s2-s1 B=VSS
+  XMSA    nfet_03v3  W  20.00 L  0.28 nf  4 m  1  Wtot    20.0  W/L    71.4  finger  5.00  D=s1 G=GA S=da B=VSS
+  XRDA    ppolyf_u_1k W   1.00 L   3.00 m 1  R      3000 ohm (sheet only)  squares   3.00  s2-da B=VSS
+  XMSB    nfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=s1 G=GB S=db B=VSS
+  XRDB    ppolyf_u_1k W   2.00 L   1.80 m 1  R       900 ohm (sheet only)  squares   0.90  s2-db B=VSS
+## sk_lpf1
+  XR1P    ppolyf_u_1k W   1.00 L   1.00 m 1  R      1000 ohm (sheet only)  squares   1.00  xP-INP B=VSS
+  XR2P    ppolyf_u_1k W   1.00 L   3.00 m 1  R      3000 ohm (sheet only)  squares   3.00  yP-xP B=VSS
+  XC1P    mim 2fF     42.6 x  42.6 um m 1  C   3.630 pF  xP-OUTP
+  XC2P    mim 2fF     36.6 x  36.6 um m 1  C   2.685 pF  yP-VSS
+  XC2WP   mim 2fF     27.5 x  27.5 um m 1  C   1.510 pF  yP-wP
+  XC2NP   mim 2fF     35.5 x  35.5 um m 1  C   2.518 pF  yP-nP
+  XMSWP   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=wP G=TW S=VSS B=VSS
+  XMSNP   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=nP G=TN S=VSS B=VSS
+  XMFP    pfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=VSS G=yP S=OUTP B=OUTP
+  XMIP    pfet_03v3  W  40.00 L  2.00 nf  4 m 16  Wtot   640.0  W/L   320.0  finger 10.00  D=OUTP G=PB S=VDD B=VDD
+  XR1N    ppolyf_u_1k W   1.00 L   1.00 m 1  R      1000 ohm (sheet only)  squares   1.00  xN-INN B=VSS
+  XR2N    ppolyf_u_1k W   1.00 L   3.00 m 1  R      3000 ohm (sheet only)  squares   3.00  yN-xN B=VSS
+  XC1N    mim 2fF     42.6 x  42.6 um m 1  C   3.630 pF  xN-OUTN
+  XC2N    mim 2fF     36.6 x  36.6 um m 1  C   2.685 pF  yN-VSS
+  XC2WN   mim 2fF     27.5 x  27.5 um m 1  C   1.510 pF  yN-wN
+  XC2NN   mim 2fF     35.5 x  35.5 um m 1  C   2.518 pF  yN-nN
+  XMSWN   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=wN G=TW S=VSS B=VSS
+  XMSNN   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=nN G=TN S=VSS B=VSS
+  XMFN    pfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=VSS G=yN S=OUTN B=OUTN
+  XMIN    pfet_03v3  W  40.00 L  2.00 nf  4 m 16  Wtot   640.0  W/L   320.0  finger 10.00  D=OUTN G=PB S=VDD B=VDD
+## sk_lpf2
+  XR1P    ppolyf_u_1k W   1.00 L   1.00 m 1  R      1000 ohm (sheet only)  squares   1.00  xP-INP B=VSS
+  XR2P    ppolyf_u_1k W   1.00 L   3.00 m 1  R      3000 ohm (sheet only)  squares   3.00  yP-xP B=VSS
+  XC1P    mim 2fF     95.8 x  95.8 um m 1  C  18.355 pF  xP-OUTP
+  XC2P    mim 2fF     18.4 x  18.4 um m 1  C   0.677 pF  yP-VSS
+  XC2WP   mim 2fF     13.8 x  13.8 um m 1  C   0.381 pF  yP-wP
+  XC2NP   mim 2fF     17.8 x  17.8 um m 1  C   0.635 pF  yP-nP
+  XMSWP   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=wP G=TW S=VSS B=VSS
+  XMSNP   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=nP G=TN S=VSS B=VSS
+  XMFP    pfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=VSS G=yP S=OUTP B=OUTP
+  XMIP    pfet_03v3  W  40.00 L  2.00 nf  4 m 16  Wtot   640.0  W/L   320.0  finger 10.00  D=OUTP G=PB S=VDD B=VDD
+  XR1N    ppolyf_u_1k W   1.00 L   1.00 m 1  R      1000 ohm (sheet only)  squares   1.00  xN-INN B=VSS
+  XR2N    ppolyf_u_1k W   1.00 L   3.00 m 1  R      3000 ohm (sheet only)  squares   3.00  yN-xN B=VSS
+  XC1N    mim 2fF     95.8 x  95.8 um m 1  C  18.355 pF  xN-OUTN
+  XC2N    mim 2fF     18.4 x  18.4 um m 1  C   0.677 pF  yN-VSS
+  XC2WN   mim 2fF     13.8 x  13.8 um m 1  C   0.381 pF  yN-wN
+  XC2NN   mim 2fF     17.8 x  17.8 um m 1  C   0.635 pF  yN-nN
+  XMSWN   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=wN G=TW S=VSS B=VSS
+  XMSNN   nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=nN G=TN S=VSS B=VSS
+  XMFN    pfet_03v3  W  40.00 L  0.28 nf  8 m  1  Wtot    40.0  W/L   142.9  finger  5.00  D=VSS G=yN S=OUTN B=OUTN
+  XMIN    pfet_03v3  W  40.00 L  2.00 nf  4 m 16  Wtot   640.0  W/L   320.0  finger 10.00  D=OUTN G=PB S=VDD B=VDD
+## vga_fix
+  XCC1    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  INP-gp
+  XCC2    mim 2fF     50.0 x  50.0 um m 1  C   5.000 pF  INN-gn
+  XRB1    ppolyf_u_1k W   1.00 L 100.00 m 1  R    100000 ohm (sheet only)  squares 100.00  vcm-gp B=VSS
+  XRB2    ppolyf_u_1k W   1.00 L 100.00 m 1  R    100000 ohm (sheet only)  squares 100.00  vcm-gn B=VSS
+  XRCA    ppolyf_u_1k W   1.00 L  34.00 m 1  R     34000 ohm (sheet only)  squares  34.00  vcm-VDD B=VSS
+  XRCB    ppolyf_u_1k W   1.00 L  25.00 m 1  R     25000 ohm (sheet only)  squares  25.00  VSS-vcm B=VSS
+  XCCM    mim 2fF     30.0 x  30.0 um m 1  C   1.800 pF  vcm-VSS
+  XM1     nfet_03v3  W  40.00 L  0.28 nf  8 m  2  Wtot    80.0  W/L   285.7  finger  5.00  D=OUTN G=gp S=s1 B=VSS
+  XM2     nfet_03v3  W  40.00 L  0.28 nf  8 m  2  Wtot    80.0  W/L   285.7  finger  5.00  D=OUTP G=gn S=s2 B=VSS
+  XMT1    nfet_03v3  W  40.00 L  2.00 nf  4 m  8  Wtot   320.0  W/L   160.0  finger 10.00  D=s1 G=NB S=VSS B=VSS
+  XMT2    nfet_03v3  W  40.00 L  2.00 nf  4 m  8  Wtot   320.0  W/L   160.0  finger 10.00  D=s2 G=NB S=VSS B=VSS
+  XRL1    ppolyf_u_1k W   2.00 L   4.23 m 1  R      2115 ohm (sheet only)  squares   2.12  OUTN-VDD B=VSS
+  XRL2    ppolyf_u_1k W   2.00 L   4.23 m 1  R      2115 ohm (sheet only)  squares   2.12  OUTP-VDD B=VSS
+  XRDF    ppolyf_u_1k W  10.60 L   1.00 m 1  R        94 ohm (sheet only)  squares   0.09  s2-s1 B=VSS
+## sa_comp
+  XMT     nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=t G=CLK S=VSS B=VSS
+  XM1     nfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=x1 G=INP S=t B=VSS
+  XM2     nfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=x2 G=INN S=t B=VSS
+  XM3     nfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=x2 G=REFP S=t B=VSS
+  XM4     nfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=x1 G=REFN S=t B=VSS
+  XM5     nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=on G=op S=x1 B=VSS
+  XM6     nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=op G=on S=x2 B=VSS
+  XM7     pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=on G=op S=VDD B=VDD
+  XM8     pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=op G=on S=VDD B=VDD
+  XM9     pfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=on G=CLK S=VDD B=VDD
+  XM10    pfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=op G=CLK S=VDD B=VDD
+  XM11    pfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=x1 G=CLK S=VDD B=VDD
+  XM12    pfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=x2 G=CLK S=VDD B=VDD
+  XI1     -> inv_dig    op opb VDD VSS  
+  XI2     -> inv_dig    on onb VDD VSS  
+  XS1     -> nor2       opb QB Q VDD VSS  
+  XS2     -> nor2       onb Q QB VDD VSS  
+## inv_dac
+  XMN     nfet_03v3  W   8.00 L  0.28 nf  2 m  1  Wtot     8.0  W/L    28.6  finger  4.00  D=Y G=A S=VSS B=VSS
+  XMP     pfet_03v3  W  24.00 L  0.28 nf  4 m  1  Wtot    24.0  W/L    85.7  finger  6.00  D=Y G=A S=VDD B=VDD
+## div2
+  XF      -> tspc_dff   QB CK Q QB VDD VSS  
+## div3
+  XF1     -> tspc_dff   d1 CK Q q1b VDD VSS  
+  XF2     -> tspc_dff   Q CK q2 q2b VDD VSS  
+  XN      -> nor2       Q q2 d1 VDD VSS  
+## inv_lo1
+  XMN     nfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=A S=VSS B=VSS
+  XMP     pfet_03v3  W   4.00 L  0.28 nf  1 m  1  Wtot     4.0  W/L    14.3  finger  4.00  D=Y G=A S=VDD B=VDD
+## dff_r
+  X1      -> nand2      n4 n2 n1 VDD VSS  
+  X2      -> nand3      n1 CK RB n2 VDD VSS  
+  X3      -> nand3      n2 CK n4 n3 VDD VSS  
+  X4      -> nand2      n3 RB n4 VDD VSS  
+  X5      -> nand2      n2 qb Q VDD VSS  
+  X6      -> nand3      Q n3 RB qb VDD VSS  
+## tspc_dff
+  XMP1    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=a1 G=D S=VDD B=VDD
+  XMP2    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=x G=CK S=a1 B=VDD
+  XMN1    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=x G=D S=VSS B=VSS
+  XMP3    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=y G=CK S=VDD B=VDD
+  XMN2    nfet_03v3  W   1.50 L  0.28 nf  1 m  1  Wtot     1.5  W/L     5.4  finger  1.50  D=y G=x S=b2 B=VSS
+  XMN3    nfet_03v3  W   1.50 L  0.28 nf  1 m  1  Wtot     1.5  W/L     5.4  finger  1.50  D=b2 G=CK S=VSS B=VSS
+  XMP4    pfet_03v3  W   3.00 L  0.28 nf  1 m  1  Wtot     3.0  W/L    10.7  finger  3.00  D=QB G=y S=VDD B=VDD
+  XMN4    nfet_03v3  W   1.50 L  0.28 nf  1 m  1  Wtot     1.5  W/L     5.4  finger  1.50  D=QB G=CK S=c3 B=VSS
+  XMN5    nfet_03v3  W   1.50 L  0.28 nf  1 m  1  Wtot     1.5  W/L     5.4  finger  1.50  D=c3 G=y S=VSS B=VSS
+  XMP5    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Q G=QB S=VDD B=VDD
+  XMN6    nfet_03v3  W   1.00 L  0.28 nf  1 m  1  Wtot     1.0  W/L     3.6  finger  1.00  D=Q G=QB S=VSS B=VSS
+## nand3
+  XMN1    nfet_03v3  W   3.00 L  0.28 nf  1 m  1  Wtot     3.0  W/L    10.7  finger  3.00  D=Y G=A S=n1 B=VSS
+  XMN2    nfet_03v3  W   3.00 L  0.28 nf  1 m  1  Wtot     3.0  W/L    10.7  finger  3.00  D=n1 G=B S=n2 B=VSS
+  XMN3    nfet_03v3  W   3.00 L  0.28 nf  1 m  1  Wtot     3.0  W/L    10.7  finger  3.00  D=n2 G=C S=VSS B=VSS
+  XMP1    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=A S=VDD B=VDD
+  XMP2    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=B S=VDD B=VDD
+  XMP3    pfet_03v3  W   2.00 L  0.28 nf  1 m  1  Wtot     2.0  W/L     7.1  finger  2.00  D=Y G=C S=VDD B=VDD
+== device classes used (fingers x m for FETs): {'ppolyf_u_1k': 92, 'cap_mim_2f0_m4m5_noshield': 60, 'nfet_03v3': 1064, 'pfet_03v3': 1748}
+== static rule violations: 0

@@ -1,0 +1,4 @@
+route mixer_iq: OK []  grid 462x493 nets 42
+mixer_iq: routed=True 1902.5s
+  DRC 0
+  LVS OK ['Flattening unmatched subcell mixer_iq_MU1nQ_MU2nQ in circuit mixer_iq (0)(1 instance)', 'Netlists match uniquely.', 'Final result: Circuits match uniquely.']

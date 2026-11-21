@@ -1,0 +1,4 @@
+VDD ramp       1 us: rst max 3.30 V, time with rst high while VDD > 1 V 1.48 us, pr at the end of the ramp 0.70 V; outputs after the ramp: all 19 at the reset value
+VDD ramp      10 us: rst max 0.98 V, time with rst high while VDD > 1 V 0.00 us, pr at the end of the ramp 2.64 V; outputs after the ramp: all 19 at the reset value
+VDD ramp     100 us: rst max 0.34 V, time with rst high while VDD > 1 V 0.00 us, pr at the end of the ramp 3.23 V; outputs after the ramp: all 19 at the reset value
+VDD ramp    1000 us: rst max 0.25 V, time with rst high while VDD > 1 V 0.00 us, pr at the end of the ramp 3.29 V; outputs after the ramp: all 19 at the reset value

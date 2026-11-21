@@ -1,0 +1,2 @@
+sch vc=1.560  fLO 1736.05 MHz (halves 1738.18 / 1733.94)  LO err -0.58/-2.52/-6.28  LO I/Q -4.34 deg | RF 1575.39 MHz  IF 160.571 MHz  I 0.31 mV  Q 0.30 mV  imb 0.35 dB  I-Q -84.23 deg
+PEX vc=2.174  fLO 1556.54 MHz (halves 1558.03 / 1555.04)  LO err -4.48/-3.45/-4.58  LO I/Q -5.61 deg | RF 1575.16 MHz  IF 2878.202 MHz  I 0.01 mV  Q 0.01 mV  imb -3.84 dB  I-Q 152.52 deg

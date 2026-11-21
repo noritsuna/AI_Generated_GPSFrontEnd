@@ -1,0 +1,252 @@
+* resistor and capacitor values
+ .include /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice ss
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_ss
+.lib /home/noritsuna/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_ss
+.temp 27
+VB b 0 1.65
+V0 r0 0 1.75
+VL0 q0 0 1.55
+XR0 r0 q0 0 ppolyf_u_1k r_width=1u r_length=1u m=1
+V1 r1 0 1.75
+VL1 q1 0 1.55
+XR1 r1 q1 0 ppolyf_u_1k r_width=1u r_length=2u m=1
+V2 r2 0 1.75
+VL2 q2 0 1.55
+XR2 r2 q2 0 ppolyf_u_1k r_width=1u r_length=3u m=1
+V3 r3 0 1.75
+VL3 q3 0 1.55
+XR3 r3 q3 0 ppolyf_u_1k r_width=1u r_length=4.6u m=1
+V4 r4 0 1.75
+VL4 q4 0 1.55
+XR4 r4 q4 0 ppolyf_u_1k r_width=1u r_length=5u m=1
+V5 r5 0 1.75
+VL5 q5 0 1.55
+XR5 r5 q5 0 ppolyf_u_1k r_width=1u r_length=10u m=1
+V6 r6 0 1.75
+VL6 q6 0 1.55
+XR6 r6 q6 0 ppolyf_u_1k r_width=1u r_length=13u m=1
+V7 r7 0 1.75
+VL7 q7 0 1.55
+XR7 r7 q7 0 ppolyf_u_1k r_width=1u r_length=20u m=1
+V8 r8 0 1.75
+VL8 q8 0 1.55
+XR8 r8 q8 0 ppolyf_u_1k r_width=1u r_length=25u m=1
+V9 r9 0 1.75
+VL9 q9 0 1.55
+XR9 r9 q9 0 ppolyf_u_1k r_width=1u r_length=28.3u m=1
+V10 r10 0 1.75
+VL10 q10 0 1.55
+XR10 r10 q10 0 ppolyf_u_1k r_width=1u r_length=34u m=1
+V11 r11 0 1.75
+VL11 q11 0 1.55
+XR11 r11 q11 0 ppolyf_u_1k r_width=1u r_length=37u m=1
+V12 r12 0 1.75
+VL12 q12 0 1.55
+XR12 r12 q12 0 ppolyf_u_1k r_width=1u r_length=47u m=1
+V13 r13 0 1.75
+VL13 q13 0 1.55
+XR13 r13 q13 0 ppolyf_u_1k r_width=1u r_length=56u m=1
+V14 r14 0 1.75
+VL14 q14 0 1.55
+XR14 r14 q14 0 ppolyf_u_1k r_width=1u r_length=65u m=1
+V15 r15 0 1.75
+VL15 q15 0 1.55
+XR15 r15 q15 0 ppolyf_u_1k r_width=1u r_length=70u m=1
+V16 r16 0 1.75
+VL16 q16 0 1.55
+XR16 r16 q16 0 ppolyf_u_1k r_width=1u r_length=100u m=1
+V17 r17 0 1.75
+VL17 q17 0 1.55
+XR17 r17 q17 0 ppolyf_u_1k r_width=1u r_length=200u m=1
+V18 r18 0 1.75
+VL18 q18 0 1.55
+XR18 r18 q18 0 ppolyf_u_1k r_width=2u r_length=1.8u m=1
+V19 r19 0 1.75
+VL19 q19 0 1.55
+XR19 r19 q19 0 ppolyf_u_1k r_width=2u r_length=2u m=1
+V20 r20 0 1.75
+VL20 q20 0 1.55
+XR20 r20 q20 0 ppolyf_u_1k r_width=2u r_length=4u m=1
+V21 r21 0 1.75
+VL21 q21 0 1.55
+XR21 r21 q21 0 ppolyf_u_1k r_width=2u r_length=4.23u m=1
+V22 r22 0 1.75
+VL22 q22 0 1.55
+XR22 r22 q22 0 ppolyf_u_1k r_width=2u r_length=20.1u m=1
+V23 r23 0 1.75
+VL23 q23 0 1.55
+XR23 r23 q23 0 ppolyf_u_1k r_width=2u r_length=40u m=1
+V24 r24 0 1.75
+VL24 q24 0 1.55
+XR24 r24 q24 0 ppolyf_u_1k r_width=4u r_length=5u m=1
+V25 r25 0 1.75
+VL25 q25 0 1.55
+XR25 r25 q25 0 ppolyf_u_1k r_width=10u r_length=1.4u m=1
+V26 r26 0 1.75
+VL26 q26 0 1.55
+XR26 r26 q26 0 ppolyf_u_1k r_width=10u r_length=2u m=1
+V27 r27 0 1.75
+VL27 q27 0 1.55
+XR27 r27 q27 0 ppolyf_u_1k r_width=10u r_length=3u m=1
+V28 r28 0 1.75
+VL28 q28 0 1.55
+XR28 r28 q28 0 ppolyf_u_1k r_width=10u r_length=22.3u m=1
+V29 r29 0 1.75
+VL29 q29 0 1.55
+XR29 r29 q29 0 ppolyf_u_1k r_width=10u r_length=40.1u m=1
+V30 r30 0 1.75
+VL30 q30 0 1.55
+XR30 r30 q30 0 ppolyf_u_1k r_width=10.6u r_length=1u m=1
+V31 r31 0 1.75
+VL31 q31 0 1.55
+XR31 r31 q31 0 ppolyf_u_1k r_width=30u r_length=2.17u m=1
+VC0 c0 0 dc 1.65 ac 1
+XC0 c0 0 cap_mim_2f0_m4m5_noshield c_width=5u c_length=5u m=1
+VC1 c1 0 dc 1.65 ac 1
+XC1 c1 0 cap_mim_2f0_m4m5_noshield c_width=12u c_length=12u m=1
+VC2 c2 0 dc 1.65 ac 1
+XC2 c2 0 cap_mim_2f0_m4m5_noshield c_width=13.8u c_length=13.8u m=1
+VC3 c3 0 dc 1.65 ac 1
+XC3 c3 0 cap_mim_2f0_m4m5_noshield c_width=17.82u c_length=17.82u m=1
+VC4 c4 0 dc 1.65 ac 1
+XC4 c4 0 cap_mim_2f0_m4m5_noshield c_width=18.4u c_length=18.4u m=1
+VC5 c5 0 dc 1.65 ac 1
+XC5 c5 0 cap_mim_2f0_m4m5_noshield c_width=19.45u c_length=19.45u m=1
+VC6 c6 0 dc 1.65 ac 1
+XC6 c6 0 cap_mim_2f0_m4m5_noshield c_width=20u c_length=20u m=1
+VC7 c7 0 dc 1.65 ac 1
+XC7 c7 0 cap_mim_2f0_m4m5_noshield c_width=27.48u c_length=27.48u m=1
+VC8 c8 0 dc 1.65 ac 1
+XC8 c8 0 cap_mim_2f0_m4m5_noshield c_width=30u c_length=30u m=1
+VC9 c9 0 dc 1.65 ac 1
+XC9 c9 0 cap_mim_2f0_m4m5_noshield c_width=31.6u c_length=31.6u m=1
+VC10 c10 0 dc 1.65 ac 1
+XC10 c10 0 cap_mim_2f0_m4m5_noshield c_width=32u c_length=32u m=1
+VC11 c11 0 dc 1.65 ac 1
+XC11 c11 0 cap_mim_2f0_m4m5_noshield c_width=35.48u c_length=35.48u m=1
+VC12 c12 0 dc 1.65 ac 1
+XC12 c12 0 cap_mim_2f0_m4m5_noshield c_width=36.64u c_length=36.64u m=1
+VC13 c13 0 dc 1.65 ac 1
+XC13 c13 0 cap_mim_2f0_m4m5_noshield c_width=42.6u c_length=42.6u m=1
+VC14 c14 0 dc 1.65 ac 1
+XC14 c14 0 cap_mim_2f0_m4m5_noshield c_width=45u c_length=45u m=1
+VC15 c15 0 dc 1.65 ac 1
+XC15 c15 0 cap_mim_2f0_m4m5_noshield c_width=49.5u c_length=49.5u m=1
+VC16 c16 0 dc 1.65 ac 1
+XC16 c16 0 cap_mim_2f0_m4m5_noshield c_width=50u c_length=50u m=1
+VC17 c17 0 dc 1.65 ac 1
+XC17 c17 0 cap_mim_2f0_m4m5_noshield c_width=70u c_length=70u m=1
+VC18 c18 0 dc 1.65 ac 1
+XC18 c18 0 cap_mim_2f0_m4m5_noshield c_width=77u c_length=77u m=1
+VC19 c19 0 dc 1.65 ac 1
+XC19 c19 0 cap_mim_2f0_m4m5_noshield c_width=95.8u c_length=95.8u m=1
+.control
+op
+let r = 0.2/(-i(V0))
+echo R 1 1 $&r
+let r = 0.2/(-i(V1))
+echo R 1 2 $&r
+let r = 0.2/(-i(V2))
+echo R 1 3 $&r
+let r = 0.2/(-i(V3))
+echo R 1 4.6 $&r
+let r = 0.2/(-i(V4))
+echo R 1 5 $&r
+let r = 0.2/(-i(V5))
+echo R 1 10 $&r
+let r = 0.2/(-i(V6))
+echo R 1 13 $&r
+let r = 0.2/(-i(V7))
+echo R 1 20 $&r
+let r = 0.2/(-i(V8))
+echo R 1 25 $&r
+let r = 0.2/(-i(V9))
+echo R 1 28.3 $&r
+let r = 0.2/(-i(V10))
+echo R 1 34 $&r
+let r = 0.2/(-i(V11))
+echo R 1 37 $&r
+let r = 0.2/(-i(V12))
+echo R 1 47 $&r
+let r = 0.2/(-i(V13))
+echo R 1 56 $&r
+let r = 0.2/(-i(V14))
+echo R 1 65 $&r
+let r = 0.2/(-i(V15))
+echo R 1 70 $&r
+let r = 0.2/(-i(V16))
+echo R 1 100 $&r
+let r = 0.2/(-i(V17))
+echo R 1 200 $&r
+let r = 0.2/(-i(V18))
+echo R 2 1.8 $&r
+let r = 0.2/(-i(V19))
+echo R 2 2 $&r
+let r = 0.2/(-i(V20))
+echo R 2 4 $&r
+let r = 0.2/(-i(V21))
+echo R 2 4.23 $&r
+let r = 0.2/(-i(V22))
+echo R 2 20.1 $&r
+let r = 0.2/(-i(V23))
+echo R 2 40 $&r
+let r = 0.2/(-i(V24))
+echo R 4 5 $&r
+let r = 0.2/(-i(V25))
+echo R 10 1.4 $&r
+let r = 0.2/(-i(V26))
+echo R 10 2 $&r
+let r = 0.2/(-i(V27))
+echo R 10 3 $&r
+let r = 0.2/(-i(V28))
+echo R 10 22.3 $&r
+let r = 0.2/(-i(V29))
+echo R 10 40.1 $&r
+let r = 0.2/(-i(V30))
+echo R 10.6 1 $&r
+let r = 0.2/(-i(V31))
+echo R 30 2.17 $&r
+ac lin 1 1e6 1e6
+let c = imag(-i(VC0))/(2*pi*1e6)
+echo C 5 5 $&c
+let c = imag(-i(VC1))/(2*pi*1e6)
+echo C 12 12 $&c
+let c = imag(-i(VC2))/(2*pi*1e6)
+echo C 13.8 13.8 $&c
+let c = imag(-i(VC3))/(2*pi*1e6)
+echo C 17.82 17.82 $&c
+let c = imag(-i(VC4))/(2*pi*1e6)
+echo C 18.4 18.4 $&c
+let c = imag(-i(VC5))/(2*pi*1e6)
+echo C 19.45 19.45 $&c
+let c = imag(-i(VC6))/(2*pi*1e6)
+echo C 20 20 $&c
+let c = imag(-i(VC7))/(2*pi*1e6)
+echo C 27.48 27.48 $&c
+let c = imag(-i(VC8))/(2*pi*1e6)
+echo C 30 30 $&c
+let c = imag(-i(VC9))/(2*pi*1e6)
+echo C 31.6 31.6 $&c
+let c = imag(-i(VC10))/(2*pi*1e6)
+echo C 32 32 $&c
+let c = imag(-i(VC11))/(2*pi*1e6)
+echo C 35.48 35.48 $&c
+let c = imag(-i(VC12))/(2*pi*1e6)
+echo C 36.64 36.64 $&c
+let c = imag(-i(VC13))/(2*pi*1e6)
+echo C 42.6 42.6 $&c
+let c = imag(-i(VC14))/(2*pi*1e6)
+echo C 45 45 $&c
+let c = imag(-i(VC15))/(2*pi*1e6)
+echo C 49.5 49.5 $&c
+let c = imag(-i(VC16))/(2*pi*1e6)
+echo C 50 50 $&c
+let c = imag(-i(VC17))/(2*pi*1e6)
+echo C 70 70 $&c
+let c = imag(-i(VC18))/(2*pi*1e6)
+echo C 77 77 $&c
+let c = imag(-i(VC19))/(2*pi*1e6)
+echo C 95.8 95.8 $&c
+.endc
+.end

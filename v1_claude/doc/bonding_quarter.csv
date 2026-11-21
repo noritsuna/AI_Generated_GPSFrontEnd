@@ -1,0 +1,57 @@
+no,side,x_um,y_um,signal,instance,cell,cob_net,cob_connector_pin
+1,S,448.2,58.0,SCLK,clk_pad,gf180mcu_fd_io__in_s,clk,8
+2,S,552.2,58.0,RST_N,rst_n_pad,gf180mcu_fd_io__in_c,rst_n,7
+3,S,656.2,58.0,DVSS,dvss_pads[0],gf180mcu_fd_io__dvss,GND,10/18/25/45/53/61
+4,S,760.2,58.0,DVDD,dvdd_pads[0],gf180mcu_fd_io__dvdd,VDD_IO_3,9/11
+5,S,864.2,58.0,SDI,inputs[0],gf180mcu_fd_io__in_c,bidir_0,6
+6,S,968.2,58.0,CS_N,inputs[1],gf180mcu_fd_io__in_c,bidir_1,5
+7,S,1072.2,58.0,I_SIGN,bidir[0],gf180mcu_fd_io__bi_24t,bidir_2,4
+8,S,1176.2,58.0,I_MAG,bidir[1],gf180mcu_fd_io__bi_24t,bidir_3,3
+9,S,1280.2,58.0,Q_SIGN,bidir[2],gf180mcu_fd_io__bi_24t,bidir_4,2
+10,S,1384.2,58.0,Q_MAG,bidir[3],gf180mcu_fd_io__bi_24t,bidir_5,1
+11,S,1488.2,58.0,CLKOUT 16.368 MHz,bidir[4],gf180mcu_fd_io__bi_24t,bidir_6,70
+12,E,1878.0,449.7,SDO (SPI readback),bidir[5],gf180mcu_fd_io__bi_24t,bidir_7,69
+13,E,1878.0,551.7,NC (unused pad),nc[0],gf180mcu_fd_io__asig_5p0,bidir_8,68
+14,E,1878.0,653.7,NC (unused pad),nc[1],gf180mcu_fd_io__asig_5p0,bidir_9,67
+15,E,1878.0,755.7,NC (unused pad),nc[2],gf180mcu_fd_io__asig_5p0,bidir_10,66
+16,E,1878.0,857.7,NC (unused pad),nc[3],gf180mcu_fd_io__asig_5p0,bidir_11,65
+17,E,1878.0,959.7,NC (unused pad),nc[4],gf180mcu_fd_io__asig_5p0,bidir_12,64
+18,E,1878.0,1061.7,NC (unused pad),nc[5],gf180mcu_fd_io__asig_5p0,bidir_13,63
+19,E,1878.0,1163.7,NC (unused pad),nc[6],gf180mcu_fd_io__asig_5p0,bidir_14,60
+20,E,1878.0,1265.7,DVSS,dvss_pads[1],gf180mcu_fd_io__dvss,GND,10/18/25/45/53/61
+21,E,1878.0,1367.7,DVDD,dvdd_pads[1],gf180mcu_fd_io__dvdd,VDD_IO_1,54
+22,E,1878.0,1469.7,NC (unused pad),nc[7],gf180mcu_fd_io__asig_5p0,bidir_15,59
+23,E,1878.0,1571.7,NC (unused pad),nc[8],gf180mcu_fd_io__asig_5p0,bidir_16,58
+24,E,1878.0,1673.7,NC (unused pad),nc[9],gf180mcu_fd_io__asig_5p0,bidir_17,57
+25,E,1878.0,1775.7,NC (unused pad),nc[10],gf180mcu_fd_io__asig_5p0,bidir_18,56
+26,E,1878.0,1877.7,NC (unused pad),nc[11],gf180mcu_fd_io__asig_5p0,bidir_19,55
+27,E,1878.0,1979.7,NC (unused pad),nc[12],gf180mcu_fd_io__asig_5p0,bidir_20,52
+28,E,1878.0,2081.7,NC (unused pad),nc[13],gf180mcu_fd_io__asig_5p0,bidir_21,51
+29,N,1488.2,2473.0,VSS,afe_rf_pad,gf180mcu_gnss_io__afe_rf,bidir_22,50
+30,N,1384.2,2473.0,RFIN,afe_rf_pad,gf180mcu_gnss_io__afe_rf,bidir_23,49
+31,N,1280.2,2473.0,VSS,afe_rf_pad,gf180mcu_gnss_io__afe_rf,bidir_24,48
+32,N,1176.2,2473.0,VDDA,afe_rf_pad,gf180mcu_gnss_io__afe_rf,bidir_25,47
+33,N,1072.2,2473.0,VSS,afe_rf_pad,gf180mcu_gnss_io__afe_rf,bidir_26,43
+34,N,968.2,2473.0,VDDV,afe_rf_pad,gf180mcu_gnss_io__afe_rf,an_0,42
+35,N,864.2,2473.0,VCTRL monitor,analog[2],gf180mcu_fd_io__asig_5p0,an_1,41
+36,N,760.2,2473.0,DVDD,dvdd_pads[2],gf180mcu_fd_io__dvdd,VDD_IO_2,44/46
+37,N,656.2,2473.0,DVSS,dvss_pads[2],gf180mcu_fd_io__dvss,GND,10/18/25/45/53/61
+38,N,552.2,2473.0,AFCOUT (TCXO pull),analog[1],gf180mcu_fd_io__asig_5p0,an_2,40
+39,N,448.2,2473.0,"REFIN (TCXO, AC coupled)",analog[0],gf180mcu_fd_io__asig_5p0,an_3,31
+40,W,58.0,2081.7,NC (unused pad),nc[28],gf180mcu_fd_io__asig_5p0,in_0,30
+41,W,58.0,1979.7,NC (unused pad),nc[27],gf180mcu_fd_io__asig_5p0,in_1,29
+42,W,58.0,1877.7,DVDD (core VDD),vdd_pads[0],gf180mcu_fd_io__dvdd,VDD_CORE_1,24
+43,W,58.0,1775.7,DVSS (core VSS),vss_pads[0],gf180mcu_fd_io__dvss,GND,10/18/25/45/53/61
+44,W,58.0,1673.7,NC (unused pad),nc[26],gf180mcu_fd_io__asig_5p0,in_2,28
+45,W,58.0,1571.7,NC (unused pad),nc[25],gf180mcu_fd_io__asig_5p0,in_3,27
+46,W,58.0,1469.7,NC (unused pad),nc[24],gf180mcu_fd_io__asig_5p0,bidir_27,26
+47,W,58.0,1367.7,NC (unused pad),nc[23],gf180mcu_fd_io__asig_5p0,bidir_28,23
+48,W,58.0,1265.7,NC (unused pad),nc[22],gf180mcu_fd_io__asig_5p0,bidir_29,22
+49,W,58.0,1163.7,NC (unused pad),nc[21],gf180mcu_fd_io__asig_5p0,bidir_30,21
+50,W,58.0,1061.7,NC (unused pad),nc[20],gf180mcu_fd_io__asig_5p0,bidir_31,20
+51,W,58.0,959.7,NC (unused pad),nc[19],gf180mcu_fd_io__asig_5p0,bidir_32,17
+52,W,58.0,857.7,NC (unused pad),nc[18],gf180mcu_fd_io__asig_5p0,bidir_33,16
+53,W,58.0,755.7,NC (unused pad),nc[17],gf180mcu_fd_io__asig_5p0,bidir_34,15
+54,W,58.0,653.7,NC (unused pad),nc[16],gf180mcu_fd_io__asig_5p0,bidir_35,14
+55,W,58.0,551.7,NC (unused pad),nc[15],gf180mcu_fd_io__asig_5p0,bidir_36,13
+56,W,58.0,449.7,NC (unused pad),nc[14],gf180mcu_fd_io__asig_5p0,bidir_37,12

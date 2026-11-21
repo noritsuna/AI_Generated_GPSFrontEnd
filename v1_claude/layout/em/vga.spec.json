@@ -1,0 +1,4 @@
+{"cell": "vga",
+ "nets": {"s1": {"MT:sd": 0.462, "MDP:sd": -0.462},
+          "OUTN": {"RL:poly": 0.462, "MDP:sd": -0.462}},
+ "opts": {"s1": {"pick": "$6"}, "OUTN": {"pick": "$22"}}}

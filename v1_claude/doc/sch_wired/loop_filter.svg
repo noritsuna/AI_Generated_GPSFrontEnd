@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1390" height="506" viewBox="0 -88 1390 506" font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="0" y="-88" width="1390" height="506" fill="white"/>
+<text x="20" y="-58" font-size="22" font-weight="bold" fill="#000000">2nd-order passive loop filter: R=10k, C1=60p, C2=5p (on-chip MIM); VCO tap VT from C2 via 2k / 0.75p</text>
+<text x="20" y="-38" font-size="11" fill="#444">Supply pins: VSS (drawn as supply symbols at each device pin; ground symbol = VSS)</text>
+<text x="20" y="-24" font-size="11" fill="#444">Devices: GF180MCU PDK (nfet_03v3 / pfet_03v3 / ppolyf_u_1k / cap_mim_2f0fF); W, L in metres (u = um); bulk drawn to source where tied, otherwise tagged.</text>
+<line x1="210.0" y1="121.0" x2="210.0" y2="124.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="124.0" x2="210.0" y2="164.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="164.0" x2="210.0" y2="167.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="55.0" x2="210.0" y2="52.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="52.0" x2="210.0" y2="40.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="40.0" x2="58.0" y2="40.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="58.0" y1="40.0" x2="58.0" y2="164.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="58.0" y1="164.0" x2="58.0" y2="167.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="55.0" x2="210.0" y2="52.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="52.0" x2="210.0" y2="40.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="40.0" x2="466.0" y2="40.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="466.0" y1="40.0" x2="466.0" y2="136.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="466.0" y1="136.0" x2="385.0" y2="136.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="385.0" y1="136.0" x2="385.0" y2="171.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="385.0" y1="171.5" x2="385.0" y2="174.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="55.0" x2="210.0" y2="52.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="52.0" x2="210.0" y2="40.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="210.0" y1="40.0" x2="466.0" y2="40.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="466.0" y1="40.0" x2="466.0" y2="334.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="466.0" y1="334.5" x2="478.0" y2="334.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="478.0" y1="334.5" x2="481.0" y2="334.5" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="210.0" cy="40.0" r="2.6" fill="#1e7b34"/>
+<circle cx="466.0" cy="136.0" r="2.6" fill="#1e7b34"/>
+<line x1="385.0" y1="240.5" x2="385.0" y2="243.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="385.0" y1="243.5" x2="385.0" y2="263.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="385.0" y1="263.0" x2="258.0" y2="263.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="258.0" y1="263.0" x2="258.0" y2="291.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="258.0" y1="291.0" x2="258.0" y2="294.0" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="385.0" y1="240.5" x2="385.0" y2="243.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="385.0" y1="243.5" x2="385.0" y2="334.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="385.0" y1="334.5" x2="397.0" y2="334.5" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="397.0" y1="334.5" x2="400.0" y2="334.5" stroke="#1e7b34" stroke-width="1.3"/>
+<circle cx="385.0" cy="263.0" r="2.6" fill="#1e7b34"/>
+<g transform="translate(210.00,88.00)">
+<line x1="0" y1="20" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="20" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-32" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-32" y1="8" x2="-32" y2="-8" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-35" y1="5" x2="-35" y2="-5" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-38" y1="2" x2="-38" y2="-2" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="16" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">RZ</text>
+<text x="16" y="-4" font-size="7.5" text-anchor="start" fill="#222222">ppolyf_u_1k</text>
+<text x="16" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=1u L=10u</text>
+<text x="16" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈10 kΩ</text>
+</g>
+<g transform="translate(210.00,200.00)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="8" y1="42" x2="-8" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="5" y1="45" x2="-5" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="2" y1="48" x2="-2" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">C1</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=77u L=77u m=5</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈59.3 pF</text>
+</g>
+<g transform="translate(58.00,200.00)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="8" y1="42" x2="-8" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="5" y1="45" x2="-5" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="2" y1="48" x2="-2" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">C2</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=49.5u L=49.5u</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈4.9 pF</text>
+</g>
+<g transform="translate(385.00,207.50)">
+<line x1="0" y1="20" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="20" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="17.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="12.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="7.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="2.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-2.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-7.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="7.5" y2="-12.5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-7.5" y1="-17.5" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-20" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-20" y1="0" x2="-32" y2="0" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-32" y1="8" x2="-32" y2="-8" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-35" y1="5" x2="-35" y2="-5" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="-38" y1="2" x2="-38" y2="-2" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="33" stroke="#1e7b34" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="16" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">RVT</text>
+<text x="16" y="-4" font-size="7.5" text-anchor="start" fill="#222222">ppolyf_u_1k</text>
+<text x="16" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=2u L=4u</text>
+<text x="16" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈2 kΩ</text>
+</g>
+<g transform="translate(258.00,327.00)">
+<line x1="0" y1="5" x2="0" y2="30" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="-5" x2="15" y2="-5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="-15" y1="5" x2="15" y2="5" stroke="#1f3a93" stroke-width="1.3"/>
+<line x1="0" y1="30" x2="0" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="8" y1="42" x2="-8" y2="42" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="5" y1="45" x2="-5" y2="45" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="2" y1="48" x2="-2" y2="48" stroke="#7d3c98" stroke-width="1.3"/>
+<line x1="0" y1="-30" x2="0" y2="-33" stroke="#1e7b34" stroke-width="1.3"/>
+<text x="20" y="-14" font-size="9" text-anchor="start" fill="#222222" font-weight="bold">C3</text>
+<text x="20" y="-4" font-size="7.5" text-anchor="start" fill="#222222">cap_mim_2f0fF</text>
+<text x="20" y="9" font-size="9" text-anchor="start" fill="#8e3b00">W=19.45u L=19.45u</text>
+<text x="20" y="20" font-size="7.5" text-anchor="start" fill="#8e3b00">≈757 fF</text>
+</g>
+<g transform="translate(481.00,334.50)">
+<polygon points="0 0 8 -7 18 -7 26 0 18 7 8 7" fill="white" stroke="#b03a2e" stroke-width="1.2"/>
+<text x="10" y="3.5" font-size="10" text-anchor="start" fill="#b03a2e" font-weight="bold">VC</text>
+</g>
+<g transform="translate(400.00,334.50)">
+<polygon points="0 0 12 -7 26 -7 26 7 12 7" fill="white" stroke="#b03a2e" stroke-width="1.2"/>
+<text x="15" y="3.5" font-size="10" text-anchor="start" fill="#b03a2e" font-weight="bold">VT</text>
+</g>
+</svg>

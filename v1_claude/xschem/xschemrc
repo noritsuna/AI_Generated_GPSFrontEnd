@@ -1,0 +1,4 @@
+# Project xschemrc: GF180MCU PDK + project symbols
+source $env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc
+append XSCHEM_LIBRARY_PATH :[file dirname [file normalize [info script]]]
+set netlist_dir [file dirname [file normalize [info script]]]/../sim/netlist

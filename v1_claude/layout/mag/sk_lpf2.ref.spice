@@ -1,0 +1,22 @@
+.subckt sk_lpf2 INP INN PB TW TN OUTP OUTN VDD VSS
+XR1P xP INP VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2P yP xP VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1P xP OUTP cap_mim_2f0_m4m5_noshield c_width=70.71e-6 c_length=70.71e-6 m=2
+XC2P yP VSS cap_mim_2f0_m4m5_noshield c_width=19.53e-6 c_length=19.53e-6 m=1
+XC2WP yP wP cap_mim_2f0_m4m5_noshield c_width=14.76e-6 c_length=14.76e-6 m=1
+XC2NP yP nP cap_mim_2f0_m4m5_noshield c_width=18.82e-6 c_length=18.82e-6 m=1
+XMSWP wP TW VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XMSNP nP TN VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XMFP VSS yP OUTP OUTP pfet_03v3 L=0.28u W=40u nf=8  m=1
+XMIP OUTP PB VDD VDD pfet_03v3 L=2u W=40u nf=4  m=16
+XR1N xN INN VSS ppolyf_u_1k r_width=1u r_length=1u
+XR2N yN xN VSS ppolyf_u_1k r_width=1u r_length=3u
+XC1N xN OUTN cap_mim_2f0_m4m5_noshield c_width=70.71e-6 c_length=70.71e-6 m=2
+XC2N yN VSS cap_mim_2f0_m4m5_noshield c_width=19.53e-6 c_length=19.53e-6 m=1
+XC2WN yN wN cap_mim_2f0_m4m5_noshield c_width=14.76e-6 c_length=14.76e-6 m=1
+XC2NN yN nN cap_mim_2f0_m4m5_noshield c_width=18.82e-6 c_length=18.82e-6 m=1
+XMSWN wN TW VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XMSNN nN TN VSS VSS nfet_03v3 L=0.28u W=8u nf=2  m=1
+XMFN VSS yN OUTN OUTN pfet_03v3 L=0.28u W=40u nf=8  m=1
+XMIN OUTN PB VDD VDD pfet_03v3 L=2u W=40u nf=4  m=16
+.ends

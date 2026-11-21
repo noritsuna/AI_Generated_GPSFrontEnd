@@ -1,0 +1,24 @@
+== ss_b3_i1
+RES vc_m= vc_e=0 vc_end=0 vc_pp=0 flo= phase_err_s=
+Error: measure  vc_m  avg(TRIG) : out of interval
+Error: measure  t2  when(WHEN) : out of interval
+Error: RHS "22/(t2-t1)" invalid
+Error: RHS "ffs*96" invalid
+Error: measure  r1  when(WHEN) : out of interval
+Error: measure  b1  when(WHEN) : out of interval
+Error: RHS "b1-r1" invalid
+Error: &vc_m: no such variable.
+Error: &flo: no such variable.
+Error: &tpe: no such variable.
+== ss_b3_i0
+RES vc_m= vc_e=0 vc_end=0 vc_pp=0 flo= phase_err_s=
+Error: measure  vc_m  avg(TRIG) : out of interval
+Error: measure  t2  when(WHEN) : out of interval
+Error: RHS "22/(t2-t1)" invalid
+Error: RHS "ffs*96" invalid
+Error: measure  r1  when(WHEN) : out of interval
+Error: measure  b1  when(WHEN) : out of interval
+Error: RHS "b1-r1" invalid
+Error: &vc_m: no such variable.
+Error: &flo: no such variable.
+Error: &tpe: no such variable.

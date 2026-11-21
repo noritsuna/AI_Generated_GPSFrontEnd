@@ -1,0 +1,23 @@
+{
+ "POR default G=00 (before first write)": {
+  "samples": 33,
+  "mag_fraction": 0.12121212121212122,
+  "sign_mean": -0.030303030303030304,
+  "if_out_rms_V": 0.06435756143470092,
+  "tone_4130kHz_amplitude": 0.391670015633144
+ },
+ "SPI write 1: G1=G2=G3=01": {
+  "samples": 409,
+  "mag_fraction": 0.3251833740831296,
+  "sign_mean": -0.05623471882640587,
+  "if_out_rms_V": 0.16949644449250384,
+  "tone_4130kHz_amplitude": 0.39461264797642254
+ },
+ "SPI write 2: G1=G2=G3=00": {
+  "samples": 410,
+  "mag_fraction": 0.0,
+  "sign_mean": -0.08292682926829269,
+  "if_out_rms_V": 0.04955349651343316,
+  "tone_4130kHz_amplitude": 0.19011835922192366
+ }
+}

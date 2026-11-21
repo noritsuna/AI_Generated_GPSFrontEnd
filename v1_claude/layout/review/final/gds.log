@@ -1,0 +1,56 @@
+chip_top.gds: 86597382 bytes, SHA-256 5dc43f34bc8e9d5964c2a791bb2c6bd7913a1ccf1866c3bbc3ef57630751c1c1
+top cells: ['chip_top'], cells 1600, dbu 0.001
+macro instances: [('chip_top', 'm90 1481.8,522.2')], macro bbox (0,-0.1;1029.8,1539.395) um
+reference macro: cells 505, bbox (0,-0.1;1029.8,1539.395) um; cut-out: cells 505
+  layer   0/0   chip         1  macro         1 shapes (merged area    1585269.0 /    1585269.0 um2)  XOR 0
+  layer  21/0   chip       275  macro       275 shapes (merged area      38801.2 /      38801.2 um2)  XOR 0
+  layer  21/10  chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  22/0   chip      3353  macro      3353 shapes (merged area      95512.8 /      95512.8 um2)  XOR 0
+  layer  22/4   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  23/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  24/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  30/0   chip      6902  macro      6902 shapes (merged area      87527.4 /      87527.4 um2)  XOR 0
+  layer  30/4   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  31/0   chip      5195  macro      5195 shapes (merged area      36747.6 /      36747.6 um2)  XOR 0
+  layer  32/0   chip      2216  macro      2216 shapes (merged area      67741.3 /      67741.3 um2)  XOR 0
+  layer  33/0   chip    145846  macro    145846 shapes (merged area       7058.9 /       7058.9 um2)  XOR 0
+  layer  34/0   chip     20432  macro     20432 shapes (merged area      22925.9 /      22925.9 um2)  XOR 0
+  layer  34/4   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  34/10  chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  35/0   chip     58138  macro     58138 shapes (merged area       3930.1 /       3930.1 um2)  XOR 0
+  layer  36/0   chip     14727  macro     14727 shapes (merged area      57451.3 /      57451.3 um2)  XOR 0
+  layer  36/4   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  36/10  chip      2681  macro      2681 shapes (merged area      17329.8 /      17329.8 um2)  XOR 0
+  layer  37/0   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  38/0   chip     14575  macro     14575 shapes (merged area        985.3 /        985.3 um2)  XOR 0
+  layer  40/0   chip     71798  macro     71798 shapes (merged area       4853.5 /       4853.5 um2)  XOR 0
+  layer  41/0   chip    403480  macro    403480 shapes (merged area      27275.2 /      27275.2 um2)  XOR 0
+  layer  42/0   chip      9888  macro      9888 shapes (merged area     121204.7 /     121204.7 um2)  XOR 0
+  layer  42/4   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  42/10  chip       413  macro       413 shapes (merged area      62404.0 /      62404.0 um2)  XOR 0
+  layer  46/0   chip      6825  macro      6825 shapes (merged area     472816.6 /     472816.6 um2)  XOR 0
+  layer  46/4   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  46/10  chip       257  macro       257 shapes (merged area        339.6 /        339.6 um2)  XOR 0
+  layer  49/0   chip       152  macro       152 shapes (merged area      11199.6 /      11199.6 um2)  XOR 0
+  layer  55/0   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  58/0   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  62/0   chip       133  macro       133 shapes (merged area      14170.0 /      14170.0 um2)  XOR 0
+  layer  63/63  chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  75/0   chip       698  macro       698 shapes (merged area     223758.0 /     223758.0 um2)  XOR 0
+  layer  81/0   chip      1193  macro      1193 shapes (merged area     621892.1 /     621892.1 um2)  XOR 0
+  layer  81/4   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer  81/10  chip        56  macro        56 shapes (merged area       7411.2 /       7411.2 um2)  XOR 0
+  layer 100/8   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 110/5   chip      1088  macro      1088 shapes (merged area       9034.1 /       9034.1 um2)  XOR 0
+  layer 111/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 112/1   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 115/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 117/5   chip       698  macro       698 shapes (merged area     229563.4 /     229563.4 um2)  XOR 0
+  layer 119/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 137/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 152/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 166/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 167/5   chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+  layer 204/0   chip       408  macro       408 shapes (merged area     109704.6 /     109704.6 um2)  XOR 0
+  layer 204/10  chip         0  macro         0 shapes (merged area          0.0 /          0.0 um2)  XOR 0
+XOR total: 0 polygons -> IDENTICAL geometry

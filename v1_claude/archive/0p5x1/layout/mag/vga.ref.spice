@@ -1,0 +1,20 @@
+.subckt vga INP INN GA GB NB OUTP OUTN VDD VSS
+XCC1 INP gp cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=100
+XCC2 INN gn cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=100
+XRB1 vcm gp VSS ppolyf_u_1k r_width=1u r_length=100u
+XRB2 vcm gn VSS ppolyf_u_1k r_width=1u r_length=100u
+XRCA vcm VDD VSS ppolyf_u_1k r_width=1u r_length=34u
+XRCB VSS vcm VSS ppolyf_u_1k r_width=1u r_length=25u
+XCCM vcm VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=36
+XM1 OUTN gp s1 VSS nfet_03v3 L=0.28u W=40u nf=8  m=2
+XM2 OUTP gn s2 VSS nfet_03v3 L=0.28u W=40u nf=8  m=2
+XMT1 s1 NB VSS VSS nfet_03v3 L=2u W=40u nf=4  m=8
+XMT2 s2 NB VSS VSS nfet_03v3 L=2u W=40u nf=4  m=8
+XRL1 OUTN VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRL2 OUTP VDD VSS ppolyf_u_1k r_width=1u r_length=2u
+XRD0 s2 s1 VSS ppolyf_u_1k r_width=1u r_length=2u
+XMSA s1 GA da VSS nfet_03v3 L=0.28u W=20u nf=4  m=1
+XRDA s2 da VSS ppolyf_u_1k r_width=1u r_length=3u
+XMSB s1 GB db VSS nfet_03v3 L=0.28u W=40u nf=8  m=1
+XRDB s2 db VSS ppolyf_u_1k r_width=2u r_length=1.8u
+.ends

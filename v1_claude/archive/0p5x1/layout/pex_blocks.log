@@ -1,0 +1,120 @@
+== if schematic
+Error: incomplete or empty netlist
+== if PEX
+RES op nbif= pbif= ix= vdiv= a1p= f1p= a2p= f2p= outp=1.19611
+RES code=0 g4=40.4774 g6.6=36.2405 g11.25=22.5951 g16.4=10.0317 gmax=41.1974 fl=693199 fh=5.75024E+06
+RES code=1 g4=50.9209 g6.6=46.7959 g11.25=33.2722 g16.4=20.7243 gmax=51.6178 fl=693030 fh=5.79508E+06
+RES code=2 g4=62.328 g6.6=58.3904 g11.25=45.0867 g16.4=32.5805 gmax=62.9877 fl=692796 fh=5.87449E+06
+RES code=3 g4=65.3537 g6.6=61.4805 g11.25=48.2567 g16.4=35.7666 gmax=66.001 fl=692692 fh=5.90313E+06
+Error: &v(xif.nbif): no such variable.
+Error: &v(xif.pbif): no such variable.
+Error: &v(xif.xbif.x): no such variable.
+Error: &v(xif.xbif.vdiv): no such variable.
+Error: &v(xif.a1p): no such variable.
+Error: &v(xif.f1p): no such variable.
+Error: &v(xif.a2p): no such variable.
+Error: &v(xif.f2p): no such variable.
+== lna schematic
+RES op i1=0.003171 gm1=0.0153767 gmb1=0.00179716 i2=0.0125676 gm2=0.0475387 vx=1.00582 vop=2.61163 von=2.32059 vb1=2.09382 vb2=0.994279 idd=-0.0204768
+0	1.400000e+09	4.749955e+01	-1.51860e+01	
+1	1.450000e+09	4.712585e+01	-1.55313e+01	
+2	1.500000e+09	4.675078e+01	-1.58632e+01	
+3	1.550000e+09	4.637485e+01	-1.61818e+01	
+4	1.600000e+09	4.599857e+01	-1.64877e+01	
+5	1.650000e+09	4.562240e+01	-1.67812e+01	
+6	1.700000e+09	4.524675e+01	-1.70626e+01	
+7	1.750000e+09	4.487202e+01	-1.73324e+01	
+8	1.800000e+09	4.449854e+01	-1.75908e+01	
+0	1.400000e+09	-1.61391e+01	1.436825e+01	
+1	1.450000e+09	-1.58859e+01	1.431497e+01	
+2	1.500000e+09	-1.56420e+01	1.426027e+01	
+3	1.550000e+09	-1.54068e+01	1.420426e+01	
+4	1.600000e+09	-1.51798e+01	1.414702e+01	
+5	1.650000e+09	-1.49606e+01	1.408865e+01	
+6	1.700000e+09	-1.47487e+01	1.402923e+01	
+7	1.750000e+09	-1.45438e+01	1.396882e+01	
+8	1.800000e+09	-1.43454e+01	1.390751e+01	
+0	1.400000e+09	2.723493e-01	-1.92077e+02	
+1	1.450000e+09	2.316334e-01	-1.92399e+02	
+2	1.500000e+09	1.902010e-01	-1.92712e+02	
+3	1.550000e+09	1.480999e-01	-1.93018e+02	
+4	1.600000e+09	1.053771e-01	-1.93315e+02	
+5	1.650000e+09	6.207829e-02	-1.93604e+02	
+6	1.700000e+09	1.824813e-02	-1.93886e+02	
+7	1.750000e+09	-2.60698e-02	-1.94159e+02	
+8	1.800000e+09	-7.08332e-02	-1.94424e+02	
+0	1.400000e+09	1.485032e+00	
+1	1.450000e+09	1.486262e+00	
+2	1.500000e+09	1.487882e+00	
+3	1.550000e+09	1.489857e+00	
+4	1.600000e+09	1.492158e+00	
+5	1.650000e+09	1.494758e+00	
+6	1.700000e+09	1.497634e+00	
+7	1.750000e+09	1.500768e+00	
+8	1.800000e+09	1.504140e+00	
+== lna PEX
+RES op i1= gm1= gmb1= i2= gm2= vx=1.0037 vop= von= vb1= vb2= idd=-0.0204079
+0	1.400000e+09	4.577382e+01	-1.66651e+01	
+1	1.450000e+09	4.534249e+01	-1.69895e+01	
+2	1.500000e+09	4.491315e+01	-1.72988e+01	
+3	1.550000e+09	4.448624e+01	-1.75937e+01	
+4	1.600000e+09	4.406214e+01	-1.78748e+01	
+5	1.650000e+09	4.364120e+01	-1.81426e+01	
+6	1.700000e+09	4.322370e+01	-1.83979e+01	
+7	1.750000e+09	4.280987e+01	-1.86412e+01	
+8	1.800000e+09	4.239991e+01	-1.88731e+01	
+0	1.400000e+09	-1.50476e+01	1.370847e+01	
+1	1.450000e+09	-1.48032e+01	1.362762e+01	
+2	1.500000e+09	-1.45679e+01	1.354547e+01	
+3	1.550000e+09	-1.43414e+01	1.346216e+01	
+4	1.600000e+09	-1.41230e+01	1.337782e+01	
+5	1.650000e+09	-1.39122e+01	1.329258e+01	
+6	1.700000e+09	-1.37086e+01	1.320653e+01	
+7	1.750000e+09	-1.35118e+01	1.311977e+01	
+8	1.800000e+09	-1.33214e+01	1.303241e+01	
+0	1.400000e+09	-1.04664e-01	-1.95611e+02	
+1	1.450000e+09	-1.68186e-01	-1.95954e+02	
+2	1.500000e+09	-2.32183e-01	-1.96281e+02	
+3	1.550000e+09	-2.96564e-01	-1.96594e+02	
+4	1.600000e+09	-3.61240e-01	-1.96892e+02	
+5	1.650000e+09	-4.26129e-01	-1.97176e+02	
+6	1.700000e+09	-4.91153e-01	-1.97447e+02	
+7	1.750000e+09	-5.56238e-01	-1.97704e+02	
+8	1.800000e+09	-6.21315e-01	-1.97948e+02	
+0	1.400000e+09	2.279603e+00	
+1	1.450000e+09	2.286523e+00	
+2	1.500000e+09	2.293954e+00	
+3	1.550000e+09	2.301852e+00	
+4	1.600000e+09	2.310179e+00	
+5	1.650000e+09	2.318903e+00	
+6	1.700000e+09	2.327994e+00	
+7	1.750000e+09	2.337426e+00	
+8	1.800000e+09	2.347176e+00	
+Error: no such device or model name m.xlna.xm1.m0
+Error: &@m.xlna.xm1.m0[id]: no such variable.
+Error: no such device or model name m.xlna.xm1.m0
+Error: &@m.xlna.xm1.m0[gm]: no such variable.
+Error: no such device or model name m.xlna.xm1.m0
+Error: &@m.xlna.xm1.m0[gmbs]: no such variable.
+Error: no such device or model name m.xlna.xm2.m0
+Error: &@m.xlna.xm2.m0[id]: no such variable.
+Error: no such device or model name m.xlna.xm2.m0
+Error: &@m.xlna.xm2.m0[gm]: no such variable.
+Error: &v(xlna.op_i): no such variable.
+Error: &v(xlna.on_i): no such variable.
+Error: &v(xlna.vb1): no such variable.
+Error: &v(xlna.vb2): no such variable.
+== mixer schematic
+RES vin_pp=0.00388401 ipp=0.0181233 qpp=0.0178188 ti=7.76351E-08 tq=1.35275E-08
+== mixer PEX
+Error: too few nodes: xpex vss vdd l1p l1n l4p l4n l2p l2n l3p l3n rfp rfn nb ifip ifin mixer_iq_flat
+    Simulation interrupted due to error!
+Error: incomplete or empty netlist
+== pll schematic
+Error: Missing } in  pd={2*int((nf+1)/2)
+ERROR: fatal error in ngspice, exit(1)
+== pll PEX
+RES vc_end=2.11782 vc_pp=0.218137 flo=1.59275E+09 phase_err_s=
+Error: measure  b1  when(WHEN) : out of interval
+Error: RHS "b1-r1" invalid
+Error: &tpe: no such variable.

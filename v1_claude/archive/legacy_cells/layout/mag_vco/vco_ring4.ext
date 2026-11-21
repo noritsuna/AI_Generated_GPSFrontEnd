@@ -1,0 +1,221 @@
+timestamp 0
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use vco_ring4_MPD_MPO_MPB0_MPB1 XMPD_MPO_MPB0_MPB1 1 0 24080 0 1 11900
+use inv_dig XB0 1 0 63840 0 1 13020
+use vco_ring4_MSB1 XMSB1 1 0 56280 0 1 11900
+use vco_ring4_MSB0 XMSB0 1 0 49560 0 1 11900
+use vco_ring4_R1u_0 XR1u_0 1 0 53620 0 1 1400
+use vco_ring4_R2u_0 XR2u_0 1 0 51240 0 1 1400
+use vco_ring4_MVI XMVI 1 0 48720 0 1 1120
+use vco_ring4_CSUB XCSUB 1 0 46340 0 1 1400
+use vco_ring4_CSUA XCSUA 1 0 44240 0 1 1400
+use vco_ring4_CVR XCVR 1 0 36400 0 1 1400
+use inv_dig XB1 1 0 70000 0 1 13020
+use nor2 XSUA1 1 0 36540 0 1 25480
+use nand2 XSUB1 1 0 50540 0 1 25480
+use vco_core XCORE 1 0 35140 0 1 38220
+use inv_dig XSUB2 1 0 58380 0 1 25480
+use inv_dig XSUA2 1 0 44380 0 1 25480
+use nor2 XSUBD1 1 0 25760 0 1 59360
+use nor2 XSUB 1 0 10080 0 1 59360
+use nand2 XSUAD1 1 0 17920 0 1 59360
+use nand2 XSUA 1 0 2240 0 1 59360
+use lo_comb XLO 1 0 33600 0 1 59360
+use nor2 XSUBD4 1 0 91140 0 1 59360
+use nor2 XSUBD3 1 0 75460 0 1 59360
+use nand2 XSUAD4 1 0 83300 0 1 59360
+use nand2 XSUAD3 1 0 67620 0 1 59360
+port "B1" 5 -1220 53240 -1020 53440 m4
+port "B0" 4 -1220 35040 -1020 35240 m4
+port "LOQP" 8 98880 35040 99080 35240 m4
+port "LOIN" 7 98880 22860 99080 23060 m4
+port "VSS" 1 0 0 600 70439 m3
+port "VCTRL" 3 -1220 16840 -1020 17040 m4
+port "VDD" 2 97358 0 97958 70439 m3
+port "VR" 10 98880 59400 99220 59740 m4
+port "LOQN" 9 98880 47220 99080 47420 m4
+port "LOIP" 6 98880 10680 99080 10880 m4
+node "m4_49390_27270#" 0 0 49390 27270 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m4_35390_27410#" 0 0 35390 27410 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m4_56110_28950#" 0 0 56110 28950 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m4_24610_61290#" 0 0 24610 61290 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m4_8930_61290#" 0 0 8930 61290 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "B1" 0 0 -1220 53240 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "B0" 0 0 -1220 35040 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOQP" 0 0 98880 35040 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOIN" 0 0 98880 22860 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 0 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_49522_1502#" 0 0 49522 1502 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VCTRL" 0 0 -1220 16840 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_47142_2902#" 0 0 47142 2902 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_35102_2902#" 0 0 35102 2902 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_54562_13122#" 0 0 54562 13122 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_32442_12562#" 0 0 32442 12562 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_37062_12702#" 0 0 37062 12702 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_29222_12422#" 0 0 29222 12422 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_57362_13122#" 0 0 57362 13122 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 97358 0 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_8082_35802#" 0 0 8082 35802 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_54002_36782#" 0 0 54002 36782 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_42942_36782#" 0 0 42942 36782 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_15922_38042#" 0 0 15922 38042 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_60722_57782#" 0 0 60722 57782 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_47002_57922#" 0 0 47002 57922 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VR" 0 0 98880 59400 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_21382_61142#" 0 0 21382 61142 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_5702_61142#" 0 0 5702 61142 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_81862_61282#" 0 0 81862 61282 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_43362_57922#" 0 0 43362 57922 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_16762_64222#" 0 0 16762 64222 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_1082_64222#" 0 0 1082 64222 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOQN" 0 0 98880 47220 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOIP" 0 0 98880 10680 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XLO/LOIP" "LOIP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUBD4/VSUBS" "XSUBD4/VSS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUBD4/VSS" "XSUAD4/VSS"
+merge "XSUAD4/VSS" "XSUAD4/VSUBS"
+merge "XSUAD4/VSUBS" "XSUBD3/VSS"
+merge "XSUBD3/VSS" "XSUBD3/VSUBS"
+merge "XSUBD3/VSUBS" "XSUAD3/VSS"
+merge "XSUAD3/VSS" "XSUAD3/VSUBS"
+merge "XSUAD3/VSUBS" "XLO/VSS"
+merge "XLO/VSS" "XSUBD1/VSS"
+merge "XSUBD1/VSS" "XSUBD1/VSUBS"
+merge "XSUBD1/VSUBS" "XSUAD1/VSS"
+merge "XSUAD1/VSS" "XSUAD1/VSUBS"
+merge "XSUAD1/VSUBS" "XSUB/VSS"
+merge "XSUB/VSS" "XSUB/VSUBS"
+merge "XSUB/VSUBS" "XSUA/VSUBS"
+merge "XSUA/VSUBS" "XSUA/VSS"
+merge "XSUA/VSS" "XLO/VSUBS"
+merge "XLO/VSUBS" "XCORE/VSS"
+merge "XCORE/VSS" "XCORE/VSUBS"
+merge "XCORE/VSUBS" "XSUB2/VSS"
+merge "XSUB2/VSS" "XSUB2/VSUBS"
+merge "XSUB2/VSUBS" "XSUB1/VSUBS"
+merge "XSUB1/VSUBS" "XSUB1/VSS"
+merge "XSUB1/VSS" "XSUA2/VSS"
+merge "XSUA2/VSS" "XSUA2/VSUBS"
+merge "XSUA2/VSUBS" "XSUA1/VSUBS"
+merge "XSUA1/VSUBS" "XSUA1/VSS"
+merge "XSUA1/VSS" "XB1/VSUBS"
+merge "XB1/VSUBS" "XB1/VSS"
+merge "XB1/VSS" "XB0/VSS"
+merge "XB0/VSS" "XB0/VSUBS"
+merge "XB0/VSUBS" "XMSB1/VSUBS"
+merge "XMSB1/VSUBS" "XMSB0/VSUBS"
+merge "XMSB0/VSUBS" "XMPD_MPO_MPB0_MPB1/VSUBS"
+merge "XMPD_MPO_MPB0_MPB1/VSUBS" "XR1u_0/VSS"
+merge "XR1u_0/VSS" "XR2u_0/VSS"
+merge "XR2u_0/VSS" "XMVI/VSS"
+merge "XMVI/VSS" "XCSUB/VSUBS"
+merge "XCSUB/VSUBS" "XCSUA/VSUBS"
+merge "XCSUA/VSUBS" "XCVR/VSUBS"
+merge "XCVR/VSUBS" "VSUBS"
+merge "VSUBS" "XCSUB/VSS"
+merge "XCSUB/VSS" "XCSUA/VSS"
+merge "XCSUA/VSS" "XCVR/VSS"
+merge "XCVR/VSS" "VSS"
+merge "XB1/VDD" "XB0/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XB0/VDD" "XMSB1/VDD"
+merge "XMSB1/VDD" "XMSB0/VDD"
+merge "XMSB0/VDD" "XMPD_MPO_MPB0_MPB1/VDD"
+merge "XMPD_MPO_MPB0_MPB1/VDD" "XR2u_0/VDD"
+merge "XR2u_0/VDD" "VDD"
+merge "XSUBD4/VDD" "XSUAD4/VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUAD4/VDD" "XSUBD3/VDD"
+merge "XSUBD3/VDD" "XSUAD3/VDD"
+merge "XSUAD3/VDD" "XLO/VR"
+merge "XLO/VR" "XSUBD1/VDD"
+merge "XSUBD1/VDD" "XSUAD1/VDD"
+merge "XSUAD1/VDD" "XSUB/VDD"
+merge "XSUB/VDD" "XSUA/VDD"
+merge "XSUA/VDD" "XCORE/VR"
+merge "XCORE/VR" "XSUB2/VDD"
+merge "XSUB2/VDD" "XSUB1/VDD"
+merge "XSUB1/VDD" "XSUA2/VDD"
+merge "XSUA2/VDD" "XSUA1/VDD"
+merge "XSUA1/VDD" "XMSB1/VR"
+merge "XMSB1/VR" "XMSB0/VR"
+merge "XMSB0/VR" "XMPD_MPO_MPB0_MPB1/VR"
+merge "XMPD_MPO_MPB0_MPB1/VR" "XCVR/VR"
+merge "XCVR/VR" "XR2u_0/VR"
+merge "XR2u_0/VR" "VR"
+merge "XSUA/Y" "XSUA1/A" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUA1/A" "m4_35390_27410#"
+merge "m4_35390_27410#" "XR1u_0/sua"
+merge "XR1u_0/sua" "m2_8082_35802#"
+merge "XSUBD4/B" "XSUAD4/B" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUAD4/B" "XLO/an4"
+merge "XLO/an4" "XCORE/an4"
+merge "XCORE/an4" "m2_60722_57782#"
+merge "XSUB1/B" "XCSUB/fsub" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCSUB/fsub" "XR1u_0/fsub"
+merge "XR1u_0/fsub" "m2_47142_2902#"
+merge "XSUBD3/B" "XSUAD3/B" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUAD3/B" "XLO/an3"
+merge "XLO/an3" "XCORE/an3"
+merge "XCORE/an3" "m2_47002_57922#"
+merge "XR2u_0/ns" "XMVI/ns" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMVI/ns" "m2_49522_1502#"
+merge "XSUB/Y" "XSUB1/A" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUB1/A" "m4_49390_27270#"
+merge "m4_49390_27270#" "XR1u_0/sub"
+merge "XR1u_0/sub" "m2_15922_38042#"
+merge "XSUB2/A" "XSUB1/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUB1/Y" "m4_56110_28950#"
+merge "XSUB/B" "XSUA/B" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUA/B" "XLO/an2"
+merge "XLO/an2" "XCORE/an2"
+merge "XCORE/an2" "m2_1082_64222#"
+merge "XSUBD3/A" "XSUAD3/A" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUAD3/A" "XLO/ap3"
+merge "XLO/ap3" "XCORE/ap3"
+merge "XCORE/ap3" "m2_43362_57922#"
+merge "XSUA1/B" "XCSUA/fsua" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCSUA/fsua" "XR1u_0/fsua"
+merge "XR1u_0/fsua" "m2_35102_2902#"
+merge "XSUBD4/A" "XSUAD4/A" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUAD4/A" "XLO/ap4"
+merge "XLO/ap4" "XCORE/ap4"
+merge "XCORE/ap4" "m2_81862_61282#"
+merge "XLO/LOIN" "LOIN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUBD1/A" "m4_24610_61290#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m4_24610_61290#" "XSUAD1/A"
+merge "XSUAD1/A" "XLO/ap1"
+merge "XLO/ap1" "XCORE/ap1"
+merge "XCORE/ap1" "m2_21382_61142#"
+merge "XSUBD1/B" "XSUAD1/B" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUAD1/B" "XLO/an1"
+merge "XLO/an1" "XCORE/an1"
+merge "XCORE/an1" "m2_16762_64222#"
+merge "XB1/Y" "XMSB1/b1n" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMSB1/b1n" "m2_57362_13122#"
+merge "XB1/A" "B1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPD_MPO_MPB0_MPB1/nb" "XMVI/nb" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMVI/nb" "m2_37062_12702#"
+merge "XSUB/A" "m4_8930_61290#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m4_8930_61290#" "XSUA/A"
+merge "XSUA/A" "XLO/ap2"
+merge "XLO/ap2" "XCORE/ap2"
+merge "XCORE/ap2" "m2_5702_61142#"
+merge "XMSB0/nb0" "XMPD_MPO_MPB0_MPB1/nb0" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPD_MPO_MPB0_MPB1/nb0" "m2_32442_12562#"
+merge "XB0/Y" "XMSB0/b0n" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMSB0/b0n" "m2_54562_13122#"
+merge "XMVI/VCTRL" "VCTRL" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XB0/A" "B0" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XCORE/kh" "XSUA2/A" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUA2/A" "XSUA1/Y"
+merge "XSUA1/Y" "m2_42942_36782#"
+merge "XCORE/kl" "XSUB2/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XSUB2/Y" "m2_54002_36782#"
+merge "XMSB1/nb1" "XMPD_MPO_MPB0_MPB1/nb1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XMPD_MPO_MPB0_MPB1/nb1" "m2_29222_12422#"
+merge "XLO/LOQN" "LOQN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "XLO/LOQP" "LOQP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

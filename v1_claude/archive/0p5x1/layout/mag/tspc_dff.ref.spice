@@ -1,0 +1,13 @@
+.subckt tspc_dff D CK Q QB VDD VSS
+XMP1 a1 D VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMP2 x CK a1 VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN1 x D VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP3 y CK VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN2 y x b2 VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMN3 b2 CK VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMP4 QB y VDD VDD pfet_03v3 L=0.28u W=3u nf=1  m=1
+XMN4 QB CK c3 VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMN5 c3 y VSS VSS nfet_03v3 L=0.28u W=1.5u nf=1  m=1
+XMP5 Q QB VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+XMN6 Q QB VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+.ends

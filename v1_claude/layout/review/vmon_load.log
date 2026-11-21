@@ -1,0 +1,24 @@
+== buf_pad 
+   VCTRL 1.5585 V (pp 1.13 mV, fref component 0.069 mV)  fLO 1571.328 MHz  sidebands -54.3 / -54.4 dBc
+   VCTRL 1.5585 V (pp 1.11 mV, fref component 0.067 mV)  fLO 1571.328 MHz  sidebands -54.5 / -54.7 dBc
+   pin VCTRL (monitor) mean 1.5594 V, loop vctrl mean 1.5585 V, monitor pp 0.11 mV
+== buf_probe10M 
+   VCTRL 1.5585 V (pp 1.13 mV, fref component 0.069 mV)  fLO 1571.328 MHz  sidebands -54.3 / -54.4 dBc
+   VCTRL 1.5585 V (pp 1.11 mV, fref component 0.067 mV)  fLO 1571.328 MHz  sidebands -54.5 / -54.7 dBc
+   pin VCTRL (monitor) mean 1.5573 V, loop vctrl mean 1.5585 V, monitor pp 0.02 mV
+== buf_probe1M 
+   VCTRL 1.5585 V (pp 1.13 mV, fref component 0.069 mV)  fLO 1571.328 MHz  sidebands -54.3 / -54.4 dBc
+   VCTRL 1.5585 V (pp 1.11 mV, fref component 0.067 mV)  fLO 1571.328 MHz  sidebands -54.5 / -54.7 dBc
+   pin VCTRL (monitor) mean 1.5387 V, loop vctrl mean 1.5585 V, monitor pp 0.03 mV
+== buf_leak100n 
+   VCTRL 1.5585 V (pp 1.13 mV, fref component 0.069 mV)  fLO 1571.328 MHz  sidebands -54.3 / -54.4 dBc
+   VCTRL 1.5585 V (pp 1.11 mV, fref component 0.067 mV)  fLO 1571.328 MHz  sidebands -54.5 / -54.7 dBc
+   pin VCTRL (monitor) mean 1.5581 V, loop vctrl mean 1.5585 V, monitor pp 0.11 mV
+== buf_c100p 
+   VCTRL 1.5585 V (pp 1.13 mV, fref component 0.070 mV)  fLO 1571.328 MHz  sidebands -54.3 / -54.4 dBc
+   VCTRL 1.5585 V (pp 1.10 mV, fref component 0.067 mV)  fLO 1571.328 MHz  sidebands -54.7 / -54.8 dBc
+   pin VCTRL (monitor) mean 1.4596 V, loop vctrl mean 1.5585 V, monitor pp 73.20 mV
+== buf_adc 
+   VCTRL 1.5585 V (pp 1.49 mV, fref component 0.066 mV)  fLO 1571.369 MHz  sidebands -53.9 / -54.0 dBc
+   VCTRL 1.5585 V (pp 1.16 mV, fref component 0.066 mV)  fLO 1571.328 MHz  sidebands -54.8 / -54.8 dBc
+   pin VCTRL (monitor) mean 1.4220 V, loop vctrl mean 1.5585 V, monitor pp 543.06 mV

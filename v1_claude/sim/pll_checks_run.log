@@ -1,0 +1,6 @@
+ff ['RES vc_end=1.18485 vc_pp=0.000454431 flo=1.57116E+09 phase_err_s=6.1128E-08']
+seq_v ['RES vc_end=1.55853 vc_pp=0.000869728 flo=6.1179E+09 phase_err_s=']
+seq_d ['RES vc_end=1.55852 vc_pp=0.000868977 flo= phase_err_s=']
+ff     VCTRL 1.1848 V (pp 0.5 mV), locked from 1.59 us, fFS 16.3680 MHz (fLO 1571.323 MHz) | end I(VDD) 1.48 mA, I(VDDV) 3.77 mA
+seq_v  VCTRL 1.5585 V (pp 0.9 mV), locked from 6.30 us, fFS 16.3680 MHz (fLO 1571.332 MHz) | domain off (0.5-2.9 us): I(VDD) 1.921 mA, I(VDDV) -0.000 mA (max |I| 4.954 / 0.000 mA) | end I(VDD) 1.08 mA, I(VDDV) 4.63 mA
+seq_d  VCTRL 1.5585 V (pp 0.9 mV), locked from 6.30 us, fFS 16.3681 MHz (fLO 1571.340 MHz) | domain off (0.5-2.9 us): I(VDD) -0.361 mA, I(VDDV) 0.560 mA (max |I| 0.778 / 0.925 mA) | end I(VDD) 1.08 mA, I(VDDV) 4.63 mA

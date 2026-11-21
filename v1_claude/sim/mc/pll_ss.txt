@@ -1,0 +1,6 @@
+seed=0 c=ss vctrl=1.0917 drift_mV=0.00 vc_pp_mV=1.79 v1_mV=0.135 flo=785.663 pe_ps=57.8 sb1=-54.1 sb2=-65.0 sb3=-72.2
+seed=1 c=ss vctrl=1.0943 drift_mV=0.00 vc_pp_mV=1.75 v1_mV=0.132 flo=785.664 pe_ps=60.0 sb1=-54.2 sb2=-65.2 sb3=-72.5
+seed=2 c=ss vctrl=1.0943 drift_mV=0.00 vc_pp_mV=1.82 v1_mV=0.137 flo=785.664 pe_ps=50.0 sb1=-53.9 sb2=-64.8 sb3=-72.1
+seed=3 c=ss vctrl=1.0938 drift_mV=0.00 vc_pp_mV=1.71 v1_mV=0.127 flo=785.664 pe_ps=74.4 sb1=-54.6 sb2=-65.6 sb3=-72.8
+seed=4 c=ss vctrl=1.0908 drift_mV=-0.00 vc_pp_mV=1.79 v1_mV=0.131 flo=785.663 pe_ps=70.0 sb1=-54.4 sb2=-65.3 sb3=-72.5
+seed=5 c=ss vctrl=1.0964 drift_mV=0.00 vc_pp_mV=1.69 v1_mV=0.126 flo=785.663 pe_ps=75.0 sb1=-54.6 sb2=-65.6 sb3=-72.9

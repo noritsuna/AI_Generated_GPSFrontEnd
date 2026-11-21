@@ -1,0 +1,63 @@
+route refbuf: OK []  grid 114x115 nets 6
+route decap: OK []  grid 480x355 nets 2
+floor gnss_afe_analog: rows 0-192 197-790 795-1002 1007-1252 1257-1514
+  it  0    25s  fails 0 []  overlaps 1671  hot 58@(670,1050) 50@(670,1030) 42@(670,1270) 33@(670,1070) 29@(710,1270) 29@(10,290)  slow B0:8s B1:2s mqp:1s
+  it  1    33s  fails 0 []  overlaps 50  hot 15@(670,1150) 8@(670,770) 8@(690,690) 7@(670,1270) 6@(670,1250) 3@(250,1370)  slow B0:8s mqn:7s mqp:3s
+  it  2    35s  fails 0 []  overlaps 11  hot 8@(690,690) 3@(250,1370)  slow B0:8s mqn:8s mqp:3s
+  it  3    38s  fails 0 []  overlaps 9  hot 9@(690,690)  slow mqn:12s B0:8s mqp:3s
+  it  4    37s  fails 0 []  overlaps 8  hot 8@(690,690)  slow mqn:12s B0:8s mqp:3s
+  it  5    37s  fails 0 []  overlaps 6  hot 6@(690,690)  slow mqn:12s B0:8s mqp:3s
+  it  6    37s  fails 0 []  overlaps 6  hot 6@(690,690)  slow mqn:12s B0:8s mqp:3s
+  it  7    40s  fails 0 []  overlaps 0  hot   slow mqn:13s B0:8s mqp:3s
+route gnss_afe_analog: OK []  grid 1480x2194 nets 56
+nb       C   150.7 fF  R 1000.0 ohm  cc aqp:1.17 mqp:0.71 min:0.38
+pb       C   137.3 fF  R  887.2 ohm  cc nb:0.12 ICP2:0.08 refck:0.05
+fs       C   126.4 fF  R  803.6 ohm  cc AFCOUT:0.09 ain:0.06 Q_SIGN:0.05
+ICP2     C   112.5 fF  R  736.9 ohm  cc AFC7:1.64 mip:0.57 nb:0.13
+min      C   105.8 fF  R  746.9 ohm  cc mip:13.20 mqn:0.81 nb:0.38
+mip      C   103.0 fF  R  731.4 ohm  cc min:13.20 ICP2:0.57 mqn:0.35
+AFCOUT   C    96.9 fF  R  653.6 ohm  cc fs:0.09 aqn:0.08 Q_MAG:0.04
+vctrl    C    92.8 fF  R  590.5 ohm  cc l3p:0.25 l3n:0.24 VCTRL:0.14
+B0       C    81.7 fF  R  540.7 ohm  cc min:0.09 IG1B:0.06 IG3B:0.04
+refck    C    81.1 fF  R  497.6 ohm  cc nb:0.09 pb:0.05 ckr:0.04
+B1       C    79.1 fF  R  524.5 ohm  cc mip:0.34 aqp:0.09 I_MAG:0.04
+IG3B     C    76.5 fF  R  507.4 ohm  cc mip:0.13 B0:0.04 aip:0.04
+mqp      C    74.6 fF  R  586.0 ohm  cc mqn:19.39 nb:0.71 min:0.18
+IG2B     C    74.1 fF  R  469.6 ohm  cc mip:0.10 ain:0.09 B1:0.04
+mqn      C    73.4 fF  R  589.0 ohm  cc mqp:19.39 min:0.81 mip:0.35
+IG3A     C    72.9 fF  R  478.2 ohm  cc mip:0.10 B1:0.04 IG1B:0.04
+IG2A     C    69.3 fF  R  438.7 ohm  cc mip:0.13 ain:0.09 IG1B:0.04
+ain      C    66.2 fF  R  422.5 ohm  cc aip:0.10 IG2A:0.09 IG2B:0.09
+IG1B     C    63.0 fF  R  406.6 ohm  cc mip:0.13 ain:0.09 B0:0.06
+IG1A     C    61.3 fF  R  386.1 ohm  cc mip:0.07 ain:0.05 aip:0.05
+ckr      C    59.4 fF  R  383.2 ohm  cc ICP2:0.04 refck:0.04 B1:0.04
+aip      C    56.8 fF  R  358.0 ohm  cc ain:0.10 IG1A:0.05 fs:0.04
+aqn      C    55.7 fF  R  487.3 ohm  cc aqp:25.72 nb:0.29 ain:0.08
+aqp      C    45.5 fF  R  422.8 ohm  cc aqn:25.72 nb:1.17 I_SIGN:0.69
+RFIN     C    41.9 fF  R    0.3 ohm  cc pb:0.03
+REFIN    C    38.5 fF  R  258.2 ohm  cc AFCOUT:0.04 vctrl:0.04
+I_MAG    C    36.1 fF  R  269.5 ohm  cc I_SIGN:3.90 AFC3:0.59 ICP2:0.13
+I_SIGN   C    28.4 fF  R  222.4 ohm  cc AFC0:4.99 I_MAG:3.90 AFC3:0.96
+VCTRL    C    25.5 fF  R  172.7 ohm  cc l3n:0.67 vctrl:0.14
+AFC1     C    22.7 fF  R  161.2 ohm  cc I_SIGN:0.29 AFC7:0.24 AFC2:0.21
+Q_MAG    C    22.6 fF  R  160.6 ohm  cc fs:0.04 AFCOUT:0.04 pb:0.04
+AFC0     C    19.9 fF  R  175.3 ohm  cc I_SIGN:4.99 AFC2:1.90 AFC1:0.15
+AFC2     C    19.1 fF  R  147.1 ohm  cc AFC0:1.90 AFC1:0.21 AFC3:0.07
+AFC3     C    18.0 fF  R  132.7 ohm  cc I_SIGN:0.96 I_MAG:0.59 AFC0:0.14
+AFC4     C    16.9 fF  R  119.8 ohm  cc AFC3:0.11 I_SIGN:0.08 AFC0:0.05
+AFC5     C    16.8 fF  R  104.5 ohm  cc AFC4:0.04 Q_SIGN:0.04 AFC2:0.04
+Q_SIGN   C    16.0 fF  R  113.2 ohm  cc fs:0.05 AFC5:0.04 nb:0.04
+AFC6     C    12.8 fF  R   90.1 ohm  cc AFC3:0.08 I_SIGN:0.07 nb:0.04
+l2n      C    10.8 fF  R   64.9 ohm  cc l2p:0.09 mqn:0.03 vctrl:0.01
+l3n      C    10.8 fF  R   85.4 ohm  cc l3p:2.29 VCTRL:0.67 vctrl:0.24
+AFC7     C     9.7 fF  R   76.0 ohm  cc ICP2:1.64 AFC1:0.24 nb:0.04
+l3p      C     8.9 fF  R   75.2 ohm  cc l3n:2.29 vctrl:0.25 mqn:0.08
+l2p      C     8.5 fF  R   54.7 ohm  cc l4n:0.36 l2n:0.09 l3p:0.07
+l4n      C     7.2 fF  R   44.5 ohm  cc l2p:0.36 l4p:0.21 vctrl:0.01
+l4p      C     5.7 fF  R   34.3 ohm  cc l4n:0.21 vctrl:0.01
+l1n      C     3.5 fF  R   24.1 ohm  cc vctrl:0.09
+l1p      C     2.3 fF  R   13.9 ohm  cc 
+CLKOUT   C     1.9 fF  R   12.7 ohm  cc 
+rfn      C     1.6 fF  R    0.0 ohm  cc nb:0.21
+rfp      C     1.3 fF  R    0.0 ohm  cc nb:0.18
+fsb      C     0.4 fF  R    2.8 ohm  cc 

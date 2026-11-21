@@ -1,0 +1,40 @@
+scale 1000 1 0.5
+rnode "VSS" 0 287868 0 -480 0
+rnode "VSS.t0" 0 6.7225e+06 -60 1000 0
+resist "VSS" "VSS.t0" 1.02713
+device csubckt cap_mim_2f0_m4m5_noshield 0 5800 1 5801  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 1160 5800 1161 5801  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 2320 5800 2321 5801  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 3480 5800 3481 5801  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 4640 5800 4641 5801  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 5800 5800 5801 5801  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 0 4640 1 4641  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 1160 4640 1161 4641  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 2320 4640 2321 4641  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 3480 4640 3481 4641  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 4640 4640 4641 4641  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 5800 4640 5801 4641  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 0 3480 1 3481  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 1160 3480 1161 3481  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 2320 3480 2321 3481  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 3480 3480 3481 3481  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 4640 3480 4641 3481  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 5800 3480 5801 3481  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 0 2320 1 2321  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 1160 2320 1161 2321  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 2320 2320 2321 2321  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 3480 2320 3481 2321  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 4640 2320 4641 2321  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 5800 2320 5801 2321  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 0 1160 1 1161  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 1160 1160 1161 1161  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 2320 1160 2321 1161  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 3480 1160 3481 1161  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 4640 1160 4641 1161  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 5800 1160 5801 1161  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 0 0 1 1  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 1160 0 1161 1  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 2320 0 2321 1  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 3480 0 3481 1  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 4640 0 4641 1  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320
+device csubckt cap_mim_2f0_m4m5_noshield 5800 0 5801 1  "None" "vcm" 7376 0 "VSS.t0" -2766 7625600,86320

@@ -1,0 +1,87 @@
+# Floorplanning
+FP_SIZING: absolute
+DIE_AREA: [0, 0, 1936, 2531]
+CORE_AREA: [442, 442, 1494, 2089]
+
+VERILOG_DEFINES: ["SLOT_0P5X0P5"]
+
+# Specify the pad instances for the padring
+# The pad frame is fixed: 56 pads (11 / 17 / 11 / 17) at the bond positions of the wafer.space
+# template (default bonding setup), the power pads where the template has them.  Only the pad
+# types differ; unused positions keep a pad (nc[*], analog pad cells without core connections).
+# South (west -> east): SCLK, RST_N, DVSS, DVDD, SDI, CS_N, I_SIGN, I_MAG, Q_SIGN, Q_MAG, CLKOUT
+PAD_SOUTH: [
+    clk_pad,
+    rst_n_pad,
+
+    "dvss_pads\\[0\\].pad",
+    "dvdd_pads\\[0\\].pad",
+
+    "inputs\\[0\\].pad",
+    "inputs\\[1\\].pad",
+    "bidir\\[0\\].pad",
+    "bidir\\[1\\].pad",
+    "bidir\\[2\\].pad",
+    "bidir\\[3\\].pad",
+    "bidir\\[4\\].pad"
+]
+
+# East (south -> north): SDO next to the standard-cell strip, the rest unused
+PAD_EAST: [
+    "bidir\\[5\\].pad",
+    "nc\\[0\\].pad",
+    "nc\\[1\\].pad",
+    "nc\\[2\\].pad",
+    "nc\\[3\\].pad",
+    "nc\\[4\\].pad",
+    "nc\\[5\\].pad",
+    "nc\\[6\\].pad",
+
+    "dvss_pads\\[1\\].pad",
+    "dvdd_pads\\[1\\].pad",
+
+    "nc\\[7\\].pad",
+    "nc\\[8\\].pad",
+    "nc\\[9\\].pad",
+    "nc\\[10\\].pad",
+    "nc\\[11\\].pad",
+    "nc\\[12\\].pad",
+    "nc\\[13\\].pad"
+]
+
+# North (west -> east): REFIN, AFCOUT, DVSS, DVDD, VCTRL monitor, then the analog pad block
+# gf180mcu_gnss_io__afe_rf = VDDV | VSS RF VSS VDDA VSS (six pads on the same pitch; the ring breaks
+# brk_w / brk_e sit in the gaps at its two ends, librelane/pad_cfg.tcl)
+PAD_NORTH: [
+    "analog\\[0\\].pad",
+    "analog\\[1\\].pad",
+
+    "dvss_pads\\[2\\].pad",
+    "dvdd_pads\\[2\\].pad",
+
+    "analog\\[2\\].pad",
+    afe_rf_pad
+]
+
+# West (south -> north): unused except the core power pads
+PAD_WEST: [
+    "nc\\[14\\].pad",
+    "nc\\[15\\].pad",
+    "nc\\[16\\].pad",
+    "nc\\[17\\].pad",
+    "nc\\[18\\].pad",
+    "nc\\[19\\].pad",
+    "nc\\[20\\].pad",
+    "nc\\[21\\].pad",
+    "nc\\[22\\].pad",
+    "nc\\[23\\].pad",
+    "nc\\[24\\].pad",
+    "nc\\[25\\].pad",
+    "nc\\[26\\].pad",
+
+    "vss_pads\\[0\\].pad",
+    "vdd_pads\\[0\\].pad",
+
+    "nc\\[27\\].pad",
+    "nc\\[28\\].pad"
+]

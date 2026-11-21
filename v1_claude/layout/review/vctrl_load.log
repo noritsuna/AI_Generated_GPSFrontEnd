@@ -1,0 +1,21 @@
+== open 
+   VCTRL 1.5585 V (pp 1.16 mV, fref component 0.070 mV)  fLO 1571.328 MHz  sidebands -54.4 / -54.5 dBc
+   VCTRL 1.5585 V (pp 1.14 mV, fref component 0.067 mV)  fLO 1571.328 MHz  sidebands -54.5 / -54.7 dBc
+== pad 
+   VCTRL 1.5585 V (pp 1.09 mV, fref component 0.055 mV)  fLO 1571.328 MHz  sidebands -56.4 / -56.4 dBc
+   VCTRL 1.5585 V (pp 1.09 mV, fref component 0.055 mV)  fLO 1571.328 MHz  sidebands -56.4 / -56.3 dBc
+== probe10M 
+   VCTRL 1.5585 V (pp 1.77 mV, fref component 0.396 mV)  fLO 1571.287 MHz  sidebands -39.4 / -39.5 dBc
+   VCTRL 1.5585 V (pp 1.77 mV, fref component 0.416 mV)  fLO 1571.328 MHz  sidebands -38.9 / -39.1 dBc
+== probe1M 
+   VCTRL 1.5585 V (pp 12.03 mV, fref component 4.200 mV)  fLO 1571.328 MHz  sidebands -18.8 / -19.0 dBc
+   VCTRL 1.5585 V (pp 12.04 mV, fref component 4.202 mV)  fLO 1571.328 MHz  sidebands -18.8 / -19.0 dBc
+== leak100n 
+   VCTRL 1.5585 V (pp 1.52 mV, fref component 0.276 mV)  fLO 1571.328 MHz  sidebands -42.5 / -42.6 dBc
+   VCTRL 1.5585 V (pp 1.52 mV, fref component 0.276 mV)  fLO 1571.328 MHz  sidebands -42.5 / -42.6 dBc
+== c100p 
+   VCTRL 1.5608 V (pp 22.96 mV, fref component 5.930 mV)  fLO 1573.783 MHz  sidebands -15.7 / -15.9 dBc
+   VCTRL 1.5596 V (pp 12.02 mV, fref component 3.162 mV)  fLO 1572.515 MHz  sidebands -21.3 / -21.5 dBc
+== adc 
+   VCTRL 1.5158 V (pp 506.38 mV, fref component 61.731 mV)  fLO 1575.625 MHz  sidebands -1.0 / -0.6 dBc
+   VCTRL 1.6001 V (pp 323.50 mV, fref component 24.877 mV)  fLO 1568.382 MHz  sidebands -2.2 / -2.0 dBc

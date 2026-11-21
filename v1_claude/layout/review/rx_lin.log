@@ -1,0 +1,42 @@
+== tt_50  1575.328 MHz -50 dBm, 1576.328 MHz -50 dBm 
+   IF 4/5 MHz 25.936 / 25.760 mV, IM3 3/6 MHz 0.1589 / 0.1481 mV: 44.5 dBc -> IIP3 -27.7 dBm; conv gain 28.28 dB
+== tt_40  1575.328 MHz -40 dBm, 1576.328 MHz -40 dBm 
+   IF 4/5 MHz 81.574 / 81.055 mV, IM3 3/6 MHz 0.3709 / 0.3739 mV: 46.8 dBc -> IIP3 -16.6 dBm; conv gain 28.23 dB
+== tt_30  1575.328 MHz -30 dBm, 1576.328 MHz -30 dBm 
+   IF 4/5 MHz 246.959 / 245.445 mV, IM3 3/6 MHz 2.7714 / 2.8511 mV: 38.8 dBc -> IIP3 -10.6 dBm; conv gain 27.85 dB
+== tt_25  1575.328 MHz -25 dBm, 1576.328 MHz -25 dBm 
+   IF 4/5 MHz 413.023 / 410.689 mV, IM3 3/6 MHz 10.6329 / 10.5819 mV: 31.8 dBc -> IIP3 -9.1 dBm; conv gain 27.32 dB
+== oob_30  1671.328 MHz -30 dBm, 1767.328 MHz -30 dBm 
+   IM3 at IF 4 MHz 0.9053 mV = -79.5 dBm input-referred -> out-of-band IIP3 -5.3 dBm
+== oob_20  1671.328 MHz -20 dBm, 1767.328 MHz -20 dBm 
+   IM3 at IF 4 MHz 27.5457 mV = -49.8 dBm input-referred -> out-of-band IIP3 -5.1 dBm
+== cp_50  1575.328 MHz -50 dBm 
+   IF 25.549 mV (Q 25.594 mV)  conv gain 28.15 dB  LNA out diff 5.13 mV
+== cp_30  1575.328 MHz -30 dBm 
+   IF 251.168 mV (Q 251.294 mV)  conv gain 28.00 dB  LNA out diff 51.25 mV
+== cp_25  1575.328 MHz -25 dBm 
+   IF 433.133 mV (Q 433.179 mV)  conv gain 27.73 dB  LNA out diff 91.12 mV
+== cp_20  1575.328 MHz -20 dBm 
+   IF 723.603 mV (Q 723.993 mV)  conv gain 27.19 dB  LNA out diff 161.93 mV
+== cp_15  1575.328 MHz -15 dBm 
+   IF 1121.716 mV (Q 1122.913 mV)  conv gain 26.00 dB  LNA out diff 287.94 mV
+== cp_10  1575.328 MHz -10 dBm 
+   IF 1445.303 mV (Q 1447.100 mV)  conv gain 23.20 dB  LNA out diff 515.60 mV
+== blk_30  1575.328 MHz -60 dBm, 1709.828 MHz -30 dBm 
+   wanted: conv gain 28.08 dB; blocker at the mixer output (IF 138.5 MHz) 55.63 mV, at the LNA output 50.4 mV diff
+== blk_20  1575.328 MHz -60 dBm, 1709.828 MHz -20 dBm 
+   wanted: conv gain 27.39 dB; blocker at the mixer output (IF 138.5 MHz) 170.03 mV, at the LNA output 159.4 mV diff
+== blk_10  1575.328 MHz -60 dBm, 1709.828 MHz -10 dBm 
+   wanted: conv gain 20.74 dB; blocker at the mixer output (IF 138.5 MHz) 377.82 mV, at the LNA output 509.4 mV diff
+== blk_0  1575.328 MHz -60 dBm, 1709.828 MHz 0 dBm 
+   wanted: conv gain 9.26 dB; blocker at the mixer output (IF 138.5 MHz) 408.95 mV, at the LNA output 1598.6 mV diff
+== blk_none  1575.328 MHz -60 dBm 
+   wanted: conv gain 28.15 dB; blocker at the mixer output (IF -1571.3 MHz) 0.00 mV, at the LNA output 0.0 mV diff
+== half_30  789.664 MHz -30 dBm 
+   IF 4 MHz 0.1197 mV (gain -38.4 dB), IF 8 MHz 0.4390 mV (gain -27.2 dB), IF 12 MHz 0.0101 mV
+== x15_30  2360.992 MHz -30 dBm 
+   IF 4 MHz 0.0282 mV (gain -51.0 dB), IF 8 MHz 0.2575 mV (gain -31.8 dB), IF 12 MHz 0.0063 mV
+== half_10  789.664 MHz -10 dBm 
+   IF 4 MHz 0.8584 mV (gain -41.3 dB), IF 8 MHz 26.5562 mV (gain -11.5 dB), IF 12 MHz 0.1188 mV
+== x15_10  2360.992 MHz -10 dBm 
+   IF 4 MHz 0.1545 mV (gain -56.2 dB), IF 8 MHz 17.0611 mV (gain -15.4 dB), IF 12 MHz 0.0494 mV

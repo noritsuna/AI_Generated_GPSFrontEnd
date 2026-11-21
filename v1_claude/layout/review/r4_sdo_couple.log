@@ -1,0 +1,37 @@
+thermal noise of the 50 ohm source in 2.046 MHz: emf 1.30 uV rms (0.65 uV at a matched input)
+== c15  (series 0 ohm, load 15 pF, 16.368 Mbit/s)  pad edges 10-90 %: rise 2.28 ns, fall 1.77 ns; DVSS bounce 89 mV pp, DVDD 85 mV pp
+   at 1575.42 MHz in 2.046 MHz (one pad; x2 for the four data pads):
+     pad voltage 95.32 uV, bond-wire current 11.590 uA, DVSS bond current 5.908 uA, on-die DVSS 29.32 uV, DVDD 30.34 uV, core VSS 1.570 uV
+     clock line 96 x 16.368 MHz = LO (falls at DC after the mixer): pad 156.0 uV, bond current 18.83 uA, DVSS 48.4 uV
+     magnetic, M =  3 pH to the RFIN wire: emf 0.3442 uV (4 pads 0.6883 uV)
+     magnetic, M = 20 pH to the RFIN wire: emf 2.2945 uV (4 pads 4.5889 uV)
+     magnetic, M = 60 pH to the RFIN wire: emf 6.8834 uV (4 pads 13.7667 uV)
+     DVSS -> analog ground with 20 dB isolation: 2.9320 uV (4 pads 5.8639 uV)
+     DVSS -> analog ground with 40 dB isolation: 0.2932 uV (4 pads 0.5864 uV)
+== sdo5_c15  (series 0 ohm, load 15 pF, 5 Mbit/s)  pad edges 10-90 %: rise 2.28 ns, fall 1.76 ns; DVSS bounce 88 mV pp, DVDD 85 mV pp
+   at 1575.42 MHz in 2.046 MHz (one pad; x2 for the four data pads):
+     pad voltage 56.47 uV, bond-wire current 6.874 uA, DVSS bond current 3.336 uA, on-die DVSS 16.57 uV, DVDD 17.38 uV, core VSS 0.875 uV
+     clock line 96 x 16.368 MHz = LO (falls at DC after the mixer): pad 92.7 uV, bond current 11.20 uA, DVSS 28.6 uV
+     magnetic, M =  3 pH to the RFIN wire: emf 0.2041 uV (4 pads 0.4082 uV)
+     magnetic, M = 20 pH to the RFIN wire: emf 1.3608 uV (4 pads 2.7216 uV)
+     magnetic, M = 60 pH to the RFIN wire: emf 4.0825 uV (4 pads 8.1649 uV)
+     DVSS -> analog ground with 20 dB isolation: 1.6571 uV (4 pads 3.3142 uV)
+     DVSS -> analog ground with 40 dB isolation: 0.1657 uV (4 pads 0.3314 uV)
+== sdo5_c30  (series 0 ohm, load 30 pF, 5 Mbit/s)  pad edges 10-90 %: rise 3.14 ns, fall 2.89 ns; DVSS bounce 95 mV pp, DVDD 92 mV pp
+   at 1575.42 MHz in 2.046 MHz (one pad; x2 for the four data pads):
+     pad voltage 92.69 uV, bond-wire current 8.048 uA, DVSS bond current 3.980 uA, on-die DVSS 19.86 uV, DVDD 20.11 uV, core VSS 0.894 uV
+     clock line 96 x 16.368 MHz = LO (falls at DC after the mixer): pad 150.5 uV, bond current 13.05 uA, DVSS 33.7 uV
+     magnetic, M =  3 pH to the RFIN wire: emf 0.2390 uV (4 pads 0.4780 uV)
+     magnetic, M = 20 pH to the RFIN wire: emf 1.5932 uV (4 pads 3.1864 uV)
+     magnetic, M = 60 pH to the RFIN wire: emf 4.7796 uV (4 pads 9.5593 uV)
+     DVSS -> analog ground with 20 dB isolation: 1.9862 uV (4 pads 3.9724 uV)
+     DVSS -> analog ground with 40 dB isolation: 0.1986 uV (4 pads 0.3972 uV)
+== sdo10_c30  (series 0 ohm, load 30 pF, 10 Mbit/s)  pad edges 10-90 %: rise 3.14 ns, fall 2.89 ns; DVSS bounce 95 mV pp, DVDD 92 mV pp
+   at 1575.42 MHz in 2.046 MHz (one pad; x2 for the four data pads):
+     pad voltage 129.89 uV, bond-wire current 11.239 uA, DVSS bond current 5.731 uA, on-die DVSS 28.37 uV, DVDD 28.18 uV, core VSS 1.319 uV
+     clock line 96 x 16.368 MHz = LO (falls at DC after the mixer): pad 230.0 uV, bond current 19.95 uA, DVSS 51.4 uV
+     magnetic, M =  3 pH to the RFIN wire: emf 0.3338 uV (4 pads 0.6675 uV)
+     magnetic, M = 20 pH to the RFIN wire: emf 2.2250 uV (4 pads 4.4501 uV)
+     magnetic, M = 60 pH to the RFIN wire: emf 6.6751 uV (4 pads 13.3502 uV)
+     DVSS -> analog ground with 20 dB isolation: 2.8370 uV (4 pads 5.6740 uV)
+     DVSS -> analog ground with 40 dB isolation: 0.2837 uV (4 pads 0.5674 uV)

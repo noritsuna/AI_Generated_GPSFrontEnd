@@ -1,0 +1,19 @@
+mp_M2" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"sa_comp_MT" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"sa_comp_M1" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"sa_comp_M4" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_R10u_0" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_CT3" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_CT2" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+"adc2b_CT1" has a zero timestamp; it should be written out
+    to establish a correct timestamp.
+Total of 216 warnings.
+
+macro ports: VSS VDDA RFIN VDDV VCTRL AFCOUT REFIN IG1A IG1B IG2A IG2B

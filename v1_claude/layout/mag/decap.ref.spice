@@ -1,0 +1,15 @@
+.subckt decap VDD VSS
+XMD0 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD1 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD2 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD3 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD4 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD5 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD6 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD7 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD8 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD9 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD10 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD11 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+XMD12 VSS VDD VSS VSS nfet_03v3 L=5u W=480u nf=16  m=1
+.ends

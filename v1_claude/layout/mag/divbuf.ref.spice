@@ -1,0 +1,8 @@
+.subckt divbuf IN OUT VDD VSS
+XCIN IN a cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=6
+XRF b a VSS ppolyf_u_1k r_width=1u r_length=20u
+XMN1 b a VSS VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XMP1 b a VDD VDD pfet_03v3 L=0.28u W=8u nf=1  m=1
+XMN2 OUT b VSS VSS nfet_03v3 L=0.28u W=4u nf=1  m=1
+XMP2 OUT b VDD VDD pfet_03v3 L=0.28u W=8u nf=1  m=1
+.ends

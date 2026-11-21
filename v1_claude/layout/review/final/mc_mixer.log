@@ -1,0 +1,7 @@
+sim/mc/final_mixer.txt: 100 runs
+  ai       nom     8.450  mean     8.462  sd    0.189  min     7.897  max     8.851
+  aq       nom     8.445  mean     8.462  sd    0.205  min     7.912  max     8.925
+  imb      nom    -0.005  mean     0.000  sd    0.031  min    -0.074  max     0.074
+  dphi     nom    89.307  mean    89.335  sd    0.131  min    89.022  max    89.639
+  dci      nom     0.006  mean    -0.220  sd    1.275  min    -3.028  max     3.370
+  dcq      nom    -0.147  mean    -0.258  sd    1.313  min    -4.382  max     3.333

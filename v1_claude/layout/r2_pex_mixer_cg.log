@@ -1,0 +1,4 @@
+mix_sch RES vin_pp=0.00388485 ipp=0.0185041 qpp=0.0181403 ti=3.15344E-10 tq=1.35382E-08
+mix_pex RES vin_pp=0.00552271 ipp=0.0386832 qpp=0.0171437 ti=3.22912E-10 tq=1.59611E-07
+mix_sch vrf=1.91mV  I=8.67mV Q=8.62mV  CG_I=13.14dB CG_Q=13.09dB  dphi=-90.2deg
+mix_pex vrf=1.89mV  I=7.85mV Q=7.80mV  CG_I=12.35dB CG_Q=12.29dB  dphi=-88.3deg

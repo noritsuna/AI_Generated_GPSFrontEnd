@@ -1,0 +1,45 @@
+warning: Git tree '/home/noritsuna/GPS/chip' is dirty
+error:
+       … while calling the 'import' builtin
+         at «string»:1:2:
+            1| (import <nixpkgs> {}).bashInteractive
+             |  ^
+
+       … while realising the context of a path
+
+       … while calling the 'findFile' builtin
+         at «string»:1:9:
+            1| (import <nixpkgs> {}).bashInteractive
+             |         ^
+
+       error: file 'nixpkgs' was not found in the Nix search path (add it using $NIX_PATH or -I)
+uses bash from your environment
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:132: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:133: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:134: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:136: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:137: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:138: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:139: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:140: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:142: warning: Choosing typ expression.
+/home/noritsuna/pdk/ciel/gf180mcu/versions/792ef67037d74c8c51811eab3ce23cf793491296/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v:143: warning: Choosing typ expression.
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.13.13 interpreter at /nix/store/3r0gkdjijcs04pg5rlz2wmfz0j3xpfp9-devshell-dir/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1794583606
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /nix/store/2x5v27nhwvwii7nbykkiqy260f8zf28k-python3-3.13.13-env/lib/python3.13/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running gnss_spi_tb.test_spi (1/1)
+   500.00ns WARNING  py.warnings                        /home/noritsuna/GPS/chip/cocotb/gnss_spi_tb.py:49: DeprecationWarning: Use `handle[child_name]` syntax instead. If extended identifiers are needed simply add a '\' character before and after the name.
+                                                          return dut._id(n, extended=False)
+385900.00ns INFO     cocotb.chip_top                    SPI register test passed (gate level)
+385900.00ns INFO     cocotb.regression                  gnss_spi_tb.test_spi passed
+385900.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** gnss_spi_tb.test_spi           PASS      385900.00           0.16    2477312.60  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0             385900.00           0.16    2451847.03  **
+                                                        **************************************************************************************

@@ -1,0 +1,9 @@
+device totals of the PEX netlists (layout/mag/<block>.pex.spice) against the schematic; dummies and decoupling inside a block are in both
+lna_nc     groups 6, FET width 812.0 / 812.0 um, resistor squares 13.57 / 13.57, MIM 11075 / 11075 um2, mismatching groups: none
+mixer_iq   groups 5, FET width 2263.8 / 2263.8 um, resistor squares 413.01 / 413.00, MIM 26728 / 26728 um2, mismatching groups: none
+if_chain   groups 10, FET width 7184.0 / 7184.0 um, resistor squares 1466.37 / 1466.34, MIM 66136 / 66136 um2, mismatching groups: none
+adc2b      groups 4, FET width 194.0 / 194.0 um, resistor squares 6.52 / 6.52, MIM 7500 / 7500 um2, mismatching groups: none
+afc_dac    groups 3, FET width 280.0 / 280.0 um, resistor squares 250.35 / 250.35, MIM 0 / 0 um2, mismatching groups: none
+vco_ring4  groups 8, FET width 6790.0 / 6790.0 um, resistor squares 202.00 / 202.00, MIM 950 / 950 um2, mismatching groups: none
+pll_core   groups 9, FET width 657.0 / 657.0 um, resistor squares 33.00 / 33.00, MIM 36533 / 36533 um2, mismatching groups: none
+vmon_buf   groups 3, FET width 64.0 / 64.0 um, resistor squares 0.00 / 0.00, MIM 0 / 0 um2, mismatching groups: none

@@ -1,0 +1,28 @@
+.subckt inv_dig A Y VDD VSS
+XMN Y A VSS VSS nfet_03v3 L=0.28u W=1u nf=1  m=1
+XMP Y A VDD VDD pfet_03v3 L=0.28u W=2u nf=1  m=1
+.ends
+.subckt cp UPB DN DNB PB NB HI OUT VDD VSS
+XUD UPB upd VDD VSS inv_dig
+XMPC pc PB VDD VDD pfet_03v3 L=2u W=32u nf=4  m=4
+XMPS OUT UPB pc VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMPD vd upd pc VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMNS OUT DN nc VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMND vd DNB nc VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMNC nc NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=4
+XHI HI hib VDD VSS inv_dig
+XMPC2 pc2 PB VDD VDD pfet_03v3 L=2u W=32u nf=4  m=4
+XMPE2 pe2 hib pc2 VDD pfet_03v3 L=0.28u W=24u nf=4  m=1
+XMPS2 OUT UPB pe2 VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMPD2 vd upd pe2 VDD pfet_03v3 L=0.28u W=8u nf=2  m=1
+XMNS2 OUT DN ne2 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMND2 vd DNB ne2 VSS nfet_03v3 L=0.28u W=2u nf=1  m=1
+XMNE2 ne2 HI nc2 VSS nfet_03v3 L=0.28u W=4u nf=2  m=1
+XMNC2 nc2 NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=4
+XMBT bt NB VSS VSS nfet_03v3 L=2u W=16u nf=2  m=1
+XMB1 b1 OUT bt VSS nfet_03v3 L=1u W=8u nf=2  m=1
+XMB2 vd vd bt VSS nfet_03v3 L=1u W=8u nf=2  m=1
+XMBL1 b1 b1 VDD VDD pfet_03v3 L=1u W=8u nf=2  m=1
+XMBL2 vd b1 VDD VDD pfet_03v3 L=1u W=8u nf=2  m=1
+XCVD vd VSS cap_mim_2f0_m4m5_noshield c_width=5e-6 c_length=5e-6 m=41
+.ends

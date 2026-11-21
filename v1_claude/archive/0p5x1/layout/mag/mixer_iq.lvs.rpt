@@ -1,0 +1,125 @@
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0_m4m5_noshield are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0_m4m5_noshield       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0_m4m5_noshield are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell ppolyf_u_1k and Circuit 2 cell ppolyf_u_1k are black boxes.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k                     |Circuit 2: ppolyf_u_1k                     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k and ppolyf_u_1k are equivalent.
+Flattening unmatched subcell mixer_iq_CL2I in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU1nI_MU2nI in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CL1I in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MLApQ_MLBpQ in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MG1Q_MG2Q in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MLApI_MLBpI in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU1pQ_MU2pQ in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CL2Q in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CL1Q in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CLOL in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU1pI_MU2pI in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_R1u_0 in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU3nQ_MU4nQ in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MG1I_MG2I in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL4N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_R1u_1 in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL3N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL4N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU3nI_MU4nI in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL4P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL2N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL3N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL3P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL1N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL4P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL2N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL2P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL3P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL1N in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CBRF in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CACL1P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL2P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_CLOU in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MCTL1P in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU3pQ_MU4pQ in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_R2u_0 in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU3pI_MU4pI in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MLAnQ_MLBnQ in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MLAnI_MLBnI in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MTI_MTQ in circuit mixer_iq (0)(1 instance)
+Flattening unmatched subcell mixer_iq_MU1nQ_MU2nQ in circuit mixer_iq (0)(1 instance)
+
+Class mixer_iq (0):  Merged 1315 parallel devices.
+Class mixer_iq (0):  Merged 28 series devices.
+Subcircuit summary:
+Circuit 1: mixer_iq                        |Circuit 2: mixer_iq                        
+-------------------------------------------|-------------------------------------------
+cap_mim_2f0_m4m5_noshield (1040->15)       |cap_mim_2f0_m4m5_noshield (1040->15)       
+nfet_03v3 (328->38)                        |nfet_03v3 (68->38)                         
+ppolyf_u_1k (48->20)                       |ppolyf_u_1k (20)                           
+Number of devices: 73                      |Number of devices: 73                      
+Number of nets: 42                         |Number of nets: 42                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: mixer_iq                        |Circuit 2: mixer_iq                        
+-------------------------------------------|-------------------------------------------
+NB                                         |NB                                         
+L1P                                        |L1P                                        
+L1N                                        |L1N                                        
+L2P                                        |L2P                                        
+L2N                                        |L2N                                        
+L3P                                        |L3P                                        
+L3N                                        |L3N                                        
+L4P                                        |L4P                                        
+L4N                                        |L4N                                        
+VDD                                        |VDD                                        
+RFP                                        |RFP                                        
+RFN                                        |RFN                                        
+VSS                                        |VSS                                        
+IFIP                                       |IFIP                                       
+IFIN                                       |IFIN                                       
+IFQP                                       |IFQP                                       
+IFQN                                       |IFQN                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes mixer_iq and mixer_iq are equivalent.
+
+Final result: Circuits match uniquely.
+.

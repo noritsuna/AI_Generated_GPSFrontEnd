@@ -1,0 +1,23 @@
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+Note: Starting dynamic gmin stepping
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Warning: source stepping failed
+Note: Transient op started
+Note: Transient op finished successfully
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: ** sch_path: /home/noritsuna/gps/xschem/tb_top.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+ Reference value :  0.00000e+00
+No. of Data Rows : 1
+RES idd_total=-0.0620068 vctrl=-4.13626E-08 afcout=1.46277
+Note: Simulation executed from .control section 

@@ -1,0 +1,3 @@
+Error: measure  tq  when(WHEN) : out of interval
+Error: &tq: no such variable.
+RES vin_pp=0.0213899 ipp=0.115123 qpp=0.11512 ti=6.77806E-08 tq=

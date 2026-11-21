@@ -1,0 +1,16 @@
+.subckt vga_fix INP INN NB OUTP OUTN VDD VSS
+XCC1 INP gp cap_mim_2f0_m4m5_noshield c_width=52.2e-6 c_length=52.2e-6 m=1
+XCC2 INN gn cap_mim_2f0_m4m5_noshield c_width=52.2e-6 c_length=52.2e-6 m=1
+XRB1 vcm gp VSS ppolyf_u_1k r_width=1u r_length=100u
+XRB2 vcm gn VSS ppolyf_u_1k r_width=1u r_length=100u
+XRCA vcm VDD VSS ppolyf_u_1k r_width=1u r_length=34u
+XRCB VSS vcm VSS ppolyf_u_1k r_width=1u r_length=25u
+XCCM vcm VSS cap_mim_2f0_m4m5_noshield c_width=30e-6 c_length=30e-6 m=1
+XM1 OUTN gp s1 VSS nfet_03v3 L=0.28u W=40u nf=8  m=2
+XM2 OUTP gn s2 VSS nfet_03v3 L=0.28u W=40u nf=8  m=2
+XMT1 s1 NB VSS VSS nfet_03v3 L=2u W=40u nf=4  m=8
+XMT2 s2 NB VSS VSS nfet_03v3 L=2u W=40u nf=4  m=8
+XRL1 OUTN VDD VSS ppolyf_u_1k r_width=2u r_length=4.23u
+XRL2 OUTP VDD VSS ppolyf_u_1k r_width=2u r_length=4.23u
+XRDF s2 s1 VSS ppolyf_u_1k r_width=10.6u r_length=1u
+.ends

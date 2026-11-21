@@ -1,0 +1,24 @@
+== ss125_3v0_10M  (SCLK 10 MHz, half period 50 ns)
+  frame 1: sent 52A5A5, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 21.9 ns; CS_N fall -> first bit valid 19.4 ns; least margin before the rising edge 28.1 ns
+           control outputs 100 ns after CS_N rises: 2A5A5 (expected 2A5A5) OK, full swing True; SDO -0.02 V 250 ns after CS_N rises
+  frame 2: sent AD5A5A, SDO read AAA5A5 (expected AAA5A5) OK; SCLK fall -> SDO valid max 23.2 ns; CS_N fall -> first bit valid 19.4 ns; least margin before the rising edge 26.8 ns
+           control outputs 100 ns after CS_N rises: 55A5A (expected 55A5A) OK, full swing True; SDO -0.02 V 250 ns after CS_N rises
+  frame 3: sent AD5A5A, SDO read AD5A5A (expected AD5A5A) OK; SCLK fall -> SDO valid max 22.5 ns; CS_N fall -> first bit valid 19.3 ns; least margin before the rising edge 27.5 ns
+           control outputs 100 ns after CS_N rises: 55A5A (expected 55A5A) OK, full swing True; SDO -0.02 V 250 ns after CS_N rises
+  -> PASS
+== tt27_3v3_10M  (SCLK 10 MHz, half period 50 ns)
+  frame 1: sent 52A5A5, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 12.0 ns; CS_N fall -> first bit valid 10.5 ns; least margin before the rising edge 38.0 ns
+           control outputs 100 ns after CS_N rises: 2A5A5 (expected 2A5A5) OK, full swing True; SDO -0.02 V 250 ns after CS_N rises
+  frame 2: sent AD5A5A, SDO read AAA5A5 (expected AAA5A5) OK; SCLK fall -> SDO valid max 12.6 ns; CS_N fall -> first bit valid 10.5 ns; least margin before the rising edge 37.4 ns
+           control outputs 100 ns after CS_N rises: 55A5A (expected 55A5A) OK, full swing True; SDO -0.02 V 250 ns after CS_N rises
+  frame 3: sent AD5A5A, SDO read AD5A5A (expected AD5A5A) OK; SCLK fall -> SDO valid max 12.3 ns; CS_N fall -> first bit valid 10.5 ns; least margin before the rising edge 37.7 ns
+           control outputs 100 ns after CS_N rises: 55A5A (expected 55A5A) OK, full swing True; SDO -0.02 V 250 ns after CS_N rises
+  -> PASS
+== ff_m40_3v465_10M  (SCLK 10 MHz, half period 50 ns)
+  frame 1: sent 52A5A5, SDO read A88000 (expected A88000) OK; SCLK fall -> SDO valid max 7.7 ns; CS_N fall -> first bit valid 6.7 ns; least margin before the rising edge 42.3 ns
+           control outputs 100 ns after CS_N rises: 2A5A5 (expected 2A5A5) OK, full swing True; SDO -0.01 V 250 ns after CS_N rises
+  frame 2: sent AD5A5A, SDO read AAA5A5 (expected AAA5A5) OK; SCLK fall -> SDO valid max 8.1 ns; CS_N fall -> first bit valid 6.7 ns; least margin before the rising edge 41.9 ns
+           control outputs 100 ns after CS_N rises: 55A5A (expected 55A5A) OK, full swing True; SDO -0.01 V 250 ns after CS_N rises
+  frame 3: sent AD5A5A, SDO read AD5A5A (expected AD5A5A) OK; SCLK fall -> SDO valid max 7.9 ns; CS_N fall -> first bit valid 6.7 ns; least margin before the rising edge 42.1 ns
+           control outputs 100 ns after CS_N rises: 55A5A (expected 55A5A) OK, full swing True; SDO -0.01 V 250 ns after CS_N rises
+  -> PASS
